@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Debug</name>
+    <events>
+        <event-block sid="7029130876728904">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7831894569474511" type="Debug">
+                    <param id="0" name="Text">&quot;(W)::&quot;&amp;(LayoutWidth)</param>
+                </action>
+                <action disabled="1" id="1" name="Append text" sid="8193709822747077" type="Debug">
+                    <param id="0" name="Text">&quot;::Space&quot;&amp;Space</param>
+                </action>
+                <action disabled="1" id="1" name="Append text" sid="5446667012364289" type="Debug">
+                    <param id="0" name="Text">&quot;::JumpStrength&quot;&amp;Frog.Platform.JumpStrength</param>
+                </action>
+                <action id="0" name="Set text" sid="6807646680044225" type="Debug">
+                    <param id="0" name="Text">&quot;HighSore&quot;&amp;WebStorage.LocalValue(&quot;HighScore&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

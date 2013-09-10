@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>World_Events</name>
+    <events>
+        <include>FacebookIntegration</include>
+        <include>Collisions</include>
+        <include>PowerUps</include>
+        <include>EnemyEvents</include>
+        <include>SpaceUpdating</include>
+        <include>MainMenu_Events</include>
+        <include>PauseEvents</include>
+        <include>Maintainance</include>
+        <include>Hud</include>
+        <include>Avoiding_Overlaps</include>
+        <include>Debug</include>
+        <variable constant="0" name="Level" sid="8157694739532241" static="0" type="number">1</variable>
+        <variable constant="0" name="PlatformCount" sid="8891307456777305" static="0" type="number">8</variable>
+        <variable constant="0" name="Score" sid="3791746897781893" static="0" type="number">0</variable>
+        <variable constant="0" name="Space" sid="6952989407746437" static="0" type="number">150</variable>
+        <comment>Scroll position</comment>
+        <variable comment="The current scroll Y position" constant="0" name="ScrollTo" sid="9286116069126037" static="0" type="number">1000</variable>
+        <variable comment="The next Y scroll position to create a platform at" constant="0" name="NextPlatform" sid="8926952220695923" static="0" type="number">0</variable>
+        <comment>Creat aLocal storage for HighScore if doesn&apos;t Exist</comment>
+        <event-block sid="1154064317255187">
+            <conditions>
+                <condition id="3" inverted="1" name="Local key exists" sid="4042747786524506" type="WebStorage">
+                    <param id="0" name="Key">&quot;HighScore&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set local value" sid="6233907292069999" type="WebStorage">
+                    <param id="0" name="Key">&quot;HighScore&quot;</param>
+                    <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
+        <event-block sid="8027988881342787">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="5101916299556515" type="Frog">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">ScrollTo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5784248727692922" type="System">
+                    <param id="0" name="Variable">ScrollTo</param>
+                    <param id="1" name="Value">Frog.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>As we are scrolling, if the top of the screen has reached the position of the next platform to create, create it at a  position across the top of the screen.  Then also set another platform to be created at a  distance Space up again,Andadd 1to Platform count</comment>
+                <event-block sid="9463983640359373">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8292115997658322" type="System">
+                            <param id="0" name="First value">NextPlatform</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4298729443434621" type="System">
+                            <param id="0" name="Object to create">Platform</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
+                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="3580822637140741" type="System">
+                            <param id="0" name="Variable">NextPlatform</param>
+                            <param id="1" name="Value">ViewportTop(&quot;Game&quot;) - Space</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9424961447934697" type="System">
+                            <param id="0" name="Variable">NextPlatform</param>
+                            <param id="1" name="Value">ViewportTop(&quot;Game&quot;) - random(Space,Space+50)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2730202072871343" type="System">
+                            <param id="0" name="Variable">PlatformCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6394171220909261" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Always scroll to the current top position the player has reached, but never scroll horizontally.</comment>
+        <event-block sid="2258159055424214">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="111642147066463" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Scroll to position" sid="8978012676236312" type="System">
+                    <param id="0" name="X">400</param>
+                    <param id="1" name="Y">ScrollTo</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
+        <event-block any="1" sid="7676506656518577">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4530073361621929" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="8" name="Compare orientation" sid="2978380399990787" type="Touch">
+                    <param id="0" name="Orientation">2</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Angle">-8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="1556217434151224" type="Frog">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="7710117885839979">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4906884466997051" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="8" name="Compare orientation" sid="7945430957760729" type="Touch">
+                    <param id="0" name="Orientation">2</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Angle">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="3547341664529329" type="Frog">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Instead of updating the machanics periodically,Updating in periods of multiples of level no</comment>
+        <comment>i.for counts eqaul to 20,40,60,80.....means first update at 20 platforms,next after next 40 platforms</comment>
+        <event-block disabled="1" sid="6849186847689877">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6367308290217668" type="System">
+                    <param id="0" name="Variable">PlatformCount</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">20*(Level)</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="6189297425322834" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="1387787054157389" type="System">
+                    <param id="0" name="Variable">Space</param>
+                    <param id="1" name="Value">30*Level</param>
+                </action>
+                <action id="-9" name="Set value" sid="676392580809037" type="System">
+                    <param id="0" name="Variable">PlatformCount</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Add to" sid="2720195857881371" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="8181359378330217" type="Frog">
+                    <param id="0" name="Instance variable">PresentStreangth</param>
+                    <param id="1" name="Value">Frog.Platform.JumpStrength+((Frog.Platform.JumpStrength)*(Level/25))</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="6401714218580329" type="Frog">
+                    <param id="0" name="Jump strength">Frog.Platform.JumpStrength+((Frog.Platform.JumpStrength)*(Level/20))</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>If game over update the high score and go to game over screen </comment>
+        <event-block sid="1227191489607252">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="9892430102433851" type="Frog" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2315097026354592" type="System">
+                    <param id="0" name="Layout">GameOver</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5103049288833851">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7765520577834595" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">WebStorage.LocalValue(&quot;HighScore&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="8160133965171311" type="WebStorage">
+                            <param id="0" name="Key">&quot;HighScore&quot;</param>
+                            <param id="1" name="Value">Score</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1128557884832318" type="GameOverHighScore">
+                            <param id="0" name="Text">&quot;HighSore&quot;&amp;WebStorage.LocalValue(&quot;HighScore&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

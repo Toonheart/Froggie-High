@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Maintainance</name>
+    <events>
+        <comment>Destroy any Objects that go off the bottom of the screen so they don&apos;t keep using up memory and CPU and cause the game to slow down.</comment>
+        <event-block sid="9756505141398553">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="6986746003170794" type="DestroyBelowScreen" />
+                <condition id="-2" name="Compare Y" sid="8333326257212965" type="DestroyBelowScreen">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4622434640967033" type="DestroyBelowScreen" />
+            </actions>
+        </event-block>
+        <event-block sid="5050984831086639">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="7139675086783277" type="Snake" />
+                <condition id="-2" name="Compare Y" sid="4829796065577943" type="Snake">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="813988194235124" type="Snake" />
+            </actions>
+        </event-block>
+        <comment>If the player falls off the bottom of the screen, restart the layout.</comment>
+        <event-block disabled="1" sid="4381792402667575">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="7890071075425409" type="Frog" />
+                <condition id="-2" name="Compare Y" sid="2055093982599874" type="Frog">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="7843227936759012" type="System" />
+                <action id="-21" name="Reset global variables" sid="2868718689028931" type="System" />
+                <action id="-10" name="Set value" sid="2896101773143747" type="Frog">
+                    <param id="0" name="Instance variable">PresentStreangth</param>
+                    <param id="1" name="Value">600</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Wrap the frog Left and right</comment>
+        <event-block sid="4289847182450448">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="1732333497257551" type="Frog">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">-15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="1289519938109904" type="Frog">
+                    <param id="0" name="X">LayoutWidth+14</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106982760968246">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="4828975050113211" type="Frog">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth+15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="1667665631601706" type="Frog">
+                    <param id="0" name="X">-14</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="647087495363938">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="8351874493892204" type="Frog" />
+                <condition id="-4" name="Trigger once while true" sid="3927602043163379" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9033302238135977" type="Frog">
+                    <param id="0" name="Instance variable">FallDistance</param>
+                    <param id="1" name="Value">Frog.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Scroll down platform is falling</comment>
+        <event-block sid="2980384905861738">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="1701042631531711" type="Frog" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3295488476564814">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="5760359379707008" type="Frog" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2416073028987885" type="System">
+                            <param id="0" name="Variable">ScrollTo</param>
+                            <param id="1" name="Value">Frog.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4549755190246868">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="8197649211539554" type="Frog">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Frog.FallDistance+1280</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9174611609371457" type="Frog" />
+                        <action id="-21" name="Reset global variables" sid="6663854778270451" type="System" />
+                        <action id="-26" name="Restart layout" sid="8224304483836043" type="System" />
+                        <action id="-10" name="Set value" sid="3138182421354935" type="Frog">
+                            <param id="0" name="Instance variable">PresentStreangth</param>
+                            <param id="1" name="Value">600</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="5035800982082346" type="System" />
+                        <action id="-2" name="Go to layout" sid="9075905993184427" type="System">
+                            <param id="0" name="Layout">GameOver</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9241095647406034">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1671473214020278" type="Snake">
+                    <param id="0" name="Object">Snake</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6911865529712506" type="Snake" />
+            </actions>
+        </event-block>
+        <event-block sid="8554971264545097">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="FlyingEnemyL" />
+                <condition id="-2" name="Compare Y" sid="8520453531840971" type="FlyingEnemyL">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6516128347584107" type="FlyingEnemyL" />
+            </actions>
+        </event-block>
+        <event-block sid="1811765254708209">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="204624200339994" type="FlyingEnemyL" />
+                <condition id="-1" name="Compare X" sid="6477897804417596" type="FlyingEnemyL">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">ViewportRight(&quot;Game&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3931517544259826" type="FlyingEnemyL" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

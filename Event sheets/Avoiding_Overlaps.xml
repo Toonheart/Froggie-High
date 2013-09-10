@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Avoiding_Overlaps</name>
+    <events>
+        <event-block sid="2154555596991289">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1394209929227866" type="Abstacles">
+                    <param id="0" name="Object">Platform</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2089449854384465" type="Platform" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4900836978202996">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9355051207983267" type="Shield">
+                    <param id="0" name="Object">Platform</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6190671757303056" type="Platform" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="855342016709669">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8318963447136742" type="Spring">
+                    <param id="0" name="Object">Platform</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6192299514764109" type="Platform" />
+            </actions>
+        </event-block>
+        <event-block sid="3294087146970195">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7768000487406191" type="Snail">
+                    <param id="0" name="Object">Spikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7042922920664437" type="Snail" />
+            </actions>
+        </event-block>
+        <event-block sid="4197566094868669">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8104956351523929" type="Shield">
+                    <param id="0" name="Object">Abstacles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9824034814114877" type="Abstacles" />
+            </actions>
+        </event-block>
+        <event-block sid="7839168048069515">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1321998952591682" type="Shield">
+                    <param id="0" name="Object">Abstacles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8426584580498154" type="Abstacles" />
+            </actions>
+        </event-block>
+        <event-block sid="201520782548289">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2530221831765451" type="Snail">
+                    <param id="0" name="Object">Abstacles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3764774402716715" type="Abstacles" />
+            </actions>
+        </event-block>
+        <event-block sid="2153518252162894">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5469542110512395" type="Snail">
+                    <param id="0" name="Object">Shield</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3783651624347147" type="Shield">
+                    <param id="0" name="X">Snail.X-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5228814145679916">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="8981915041685972" type="System">
+                    <param id="0" name="First value">distance(Snail.X,Snail.Y,Platform.x,Platform.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2847106802468323" type="Platform" />
+            </actions>
+        </event-block>
+        <event-block sid="2602165550546392">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="9513387505225372" type="System">
+                    <param id="0" name="First value">distance(Shield.X,Shield.Y,Platform.x,Platform.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6103250360998508" type="Platform" />
+            </actions>
+        </event-block>
+        <event-block sid="9337010956297001">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="6621776932391141" type="System">
+                    <param id="0" name="First value">distance(Spring.X,Spring.Y,Platform.x,Platform.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5586976157969" type="Platform" />
+            </actions>
+        </event-block>
+        <event-block sid="4818674428912407">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1481036674640258" type="BrakableFlore">
+                    <param id="0" name="Object">Abstacles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7079723880710471" type="BrakableFlore" />
+            </actions>
+        </event-block>
+        <event-block sid="3309955794635257">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="344564645604566" type="BrakableFlore">
+                    <param id="0" name="Object">Platform</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1166905001871046" type="BrakableFlore" />
+            </actions>
+        </event-block>
+        <event-block sid="8665158620309603">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7783865071308579" type="BrakableFlore">
+                    <param id="0" name="Object">BrakableFlore</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5617897819634108" type="BrakableFlore" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
