@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>AchievementsEvents</name>
+    <events>
+        <include>GoToMain</include>
+        <event-block sid="9676333653055928">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="731233108122765" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="9593601440604174" type="Dictionary">
+                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveAwardDict&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465613427067798">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8650007665026958" type="Frog">
+                    <param id="0" name="Object">Rocket_Inv</param>
+                </condition>
+                <condition disabled="1" id="-8" name="Compare two values" sid="6015136268000319" type="System">
+                    <param id="0" name="First value">Rocket_ACh.Opacity</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="1573991660107034" type="Dictionary">
+                    <param id="0" name="Key">&quot;Rocket&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set local value" sid="7864084892491218" type="WebStorage">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5465434968886827">
+            <conditions>
+                <condition id="3" name="Has key" sid="7292467749829784" type="Dictionary">
+                    <param id="0" name="Key">&quot;Rocket&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="8497246610617386" type="Rocket_ACh">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="261819276880785">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5978187856153108" type="Frog">
+                    <param id="0" name="Object">Shield</param>
+                </condition>
+                <condition disabled="1" id="-8" name="Compare two values" sid="3536510368969825" type="System">
+                    <param id="0" name="First value">Shield_Ach.Opacity</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="5113879094376377" type="Dictionary">
+                    <param id="0" name="Key">&quot;Shield&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set local value" sid="4985453025737786" type="WebStorage">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4588102742479989">
+            <conditions>
+                <condition id="3" name="Has key" sid="69324470855015" type="Dictionary">
+                    <param id="0" name="Key">&quot;Shield&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="3361063294422423" type="Shield_Ach">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3728393457837184">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6926138437453172" type="Mushroom_Inv">
+                    <param id="0" name="Object">Shield</param>
+                </condition>
+                <condition disabled="1" id="-8" name="Compare two values" sid="3958548545087879" type="System">
+                    <param id="0" name="First value">Mushroom_Ach.Opacity</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="3038611435803738" type="Dictionary">
+                    <param id="0" name="Key">&quot;Mushrum&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set local value" sid="8932443518724093" type="WebStorage">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="384356086291027">
+            <conditions>
+                <condition id="3" name="Has key" sid="3750349488656478" type="Dictionary">
+                    <param id="0" name="Key">&quot;Mushrum&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="8668229504943636" type="Mushroom_Ach">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

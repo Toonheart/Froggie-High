@@ -291,19 +291,6 @@
                     </actions>
                 </event-block>
                 <comment>Jump Automatically</comment>
-                <event-block sid="387515850451129">
-                    <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="8808653658985281" type="Frog" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="8623699106335228" type="Frog">
-                            <param id="0" name="Jump strength">Frog.PresentStreangth</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="6072175728091072" type="Frog">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>On landed on Spring give a double push</comment>
                 <event-block sid="4013199515954371">
                     <conditions>

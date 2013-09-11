@@ -3,13 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>World_Events</name>
     <events>
+        <include>AchievementsEvents</include>
+        <include>JumpEvents</include>
+        <variable constant="0" name="Speed" sid="3992528180255599" static="0" type="number">5</variable>
+        <include>PauseEvents</include>
+        <include>WorldChangerEvents</include>
         <include>FacebookIntegration</include>
         <include>Collisions</include>
         <include>PowerUps</include>
         <include>EnemyEvents</include>
         <include>SpaceUpdating</include>
-        <include>MainMenu_Events</include>
-        <include>PauseEvents</include>
         <include>Maintainance</include>
         <include>Hud</include>
         <include>Avoiding_Overlaps</include>
@@ -18,9 +21,40 @@
         <variable constant="0" name="PlatformCount" sid="8891307456777305" static="0" type="number">8</variable>
         <variable constant="0" name="Score" sid="3791746897781893" static="0" type="number">0</variable>
         <variable constant="0" name="Space" sid="6952989407746437" static="0" type="number">150</variable>
-        <comment>Scroll position</comment>
         <variable comment="The current scroll Y position" constant="0" name="ScrollTo" sid="9286116069126037" static="0" type="number">1000</variable>
         <variable comment="The next Y scroll position to create a platform at" constant="0" name="NextPlatform" sid="8926952220695923" static="0" type="number">0</variable>
+        <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult</comment>
+        <event-block sid="725649038029895">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2237153230058435" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4372566997634415" type="System">
+                    <param id="0" name="Variable">Level</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="9950661535515217" type="System">
+                    <param id="0" name="Variable">PlatformCount</param>
+                    <param id="1" name="Value">8</param>
+                </action>
+                <action id="-9" name="Set value" sid="7090052552551286" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5366015960827999" type="System">
+                    <param id="0" name="Variable">ScrollTo</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-9" name="Set value" sid="5688244833199318" type="System">
+                    <param id="0" name="Variable">Space</param>
+                    <param id="1" name="Value">150</param>
+                </action>
+                <action id="-9" name="Set value" sid="5174044032782846" type="System">
+                    <param id="0" name="Variable">NextPlatform</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Creat aLocal storage for HighScore if doesn&apos;t Exist</comment>
         <event-block sid="1154064317255187">
             <conditions>
@@ -133,36 +167,55 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Instead of updating the machanics periodically,Updating in periods of multiples of level no</comment>
-        <comment>i.for counts eqaul to 20,40,60,80.....means first update at 20 platforms,next after next 40 platforms</comment>
-        <event-block disabled="1" sid="6849186847689877">
+        <comment>Scroll down platform is falling</comment>
+        <event-block sid="4311625384571326">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="6367308290217668" type="System">
-                    <param id="0" name="Variable">PlatformCount</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">20*(Level)</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="6189297425322834" type="System" />
+                <condition behavior="Platform" id="4" name="Is falling" sid="1727249317908522" type="Frog" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8405228927401259">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="5366216360649037" type="Frog" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2987637605377944" type="System">
+                            <param id="0" name="Variable">ScrollTo</param>
+                            <param id="1" name="Value">Frog.Y</param>
+                        </action>
+                        <action id="0" name="Play" sid="1490520897133747" type="Audio">
+                            <param id="0" name="Audio file">Fall</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Falling&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult</comment>
+                <event-block sid="1320523644955166">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="8029975378178967" type="Frog">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">Frog.FallDistance+1280</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8816834240784098" type="Frog" />
+                        <action id="-10" name="Set value" sid="7918925676592821" type="Frog">
+                            <param id="0" name="Instance variable">PresentStreangth</param>
+                            <param id="1" name="Value">600</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9790129650542653">
+            <conditions>
+                <condition id="-22" name="Else" sid="1057387463712813" type="System" />
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="1387787054157389" type="System">
-                    <param id="0" name="Variable">Space</param>
-                    <param id="1" name="Value">30*Level</param>
-                </action>
-                <action id="-9" name="Set value" sid="676392580809037" type="System">
-                    <param id="0" name="Variable">PlatformCount</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Add to" sid="2720195857881371" type="System">
-                    <param id="0" name="Variable">Level</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="8181359378330217" type="Frog">
-                    <param id="0" name="Instance variable">PresentStreangth</param>
-                    <param id="1" name="Value">Frog.Platform.JumpStrength+((Frog.Platform.JumpStrength)*(Level/25))</param>
-                </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="6401714218580329" type="Frog">
-                    <param id="0" name="Jump strength">Frog.Platform.JumpStrength+((Frog.Platform.JumpStrength)*(Level/20))</param>
+                <action id="6" name="Stop" sid="995876654761854" type="Audio">
+                    <param id="0" name="Tag">&quot;Falling&quot;</param>
                 </action>
             </actions>
         </event-block>

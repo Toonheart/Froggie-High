@@ -85,47 +85,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Scroll down platform is falling</comment>
-        <event-block sid="2980384905861738">
-            <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="1701042631531711" type="Frog" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="3295488476564814">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="5760359379707008" type="Frog" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2416073028987885" type="System">
-                            <param id="0" name="Variable">ScrollTo</param>
-                            <param id="1" name="Value">Frog.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4549755190246868">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="8197649211539554" type="Frog">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">Frog.FallDistance+1280</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="9174611609371457" type="Frog" />
-                        <action id="-21" name="Reset global variables" sid="6663854778270451" type="System" />
-                        <action id="-26" name="Restart layout" sid="8224304483836043" type="System" />
-                        <action id="-10" name="Set value" sid="3138182421354935" type="Frog">
-                            <param id="0" name="Instance variable">PresentStreangth</param>
-                            <param id="1" name="Value">600</param>
-                        </action>
-                        <action id="-21" name="Reset global variables" sid="5035800982082346" type="System" />
-                        <action id="-2" name="Go to layout" sid="9075905993184427" type="System">
-                            <param id="0" name="Layout">GameOver</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="9241095647406034">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="1671473214020278" type="Snake">

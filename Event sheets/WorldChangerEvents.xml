@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WorldChangerEvents</name>
+    <events>
+        <event-group description="" sid="8031003060782664" title="Updating the Game world">
+            <sub-events>
+                <event-block sid="3565963650826793">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7325247074620169" type="System">
+                            <param id="0" name="Variable">ActiveWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5459822789286974" type="Background">
+                            <param id="0" name="Animation">&quot;World1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2000480885784628">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5069654032625797" type="System">
+                            <param id="0" name="Variable">ActiveWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1137353010944563" type="Background">
+                            <param id="0" name="Animation">&quot;World2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3217831015446459">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5002588468608595" type="System">
+                            <param id="0" name="Variable">ActiveWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3189090973160822" type="Background">
+                            <param id="0" name="Animation">&quot;World3&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -10,11 +10,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">World</layout>
-        <event-sheet>World_Events</event-sheet>
-        <event-sheet>Maintainance</event-sheet>
+        <layout>World</layout>
+        <layout>Achievements</layout>
+        <layout>MainMenu</layout>
         <event-sheet>SpaceUpdating</event-sheet>
-        <event-sheet>FacebookIntegration</event-sheet>
+        <event-sheet>Maintainance</event-sheet>
+        <event-sheet active="1">Avoiding_Overlaps</event-sheet>
+        <event-sheet>MainMenu_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -23,8 +25,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="0" name="Abstacles" />
+        <family expanded="1" name="Abstacles" />
         <family expanded="0" name="DestroyBelowScreen" />
         <family expanded="1" name="Enemy" />
+        <family expanded="0" name="WorldButtons" />
     </families-expanded>
 </c2uistate>
