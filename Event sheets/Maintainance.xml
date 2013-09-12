@@ -41,7 +41,7 @@
                 <action id="-26" name="Restart layout" sid="7843227936759012" type="System" />
                 <action id="-21" name="Reset global variables" sid="2868718689028931" type="System" />
                 <action id="-10" name="Set value" sid="2896101773143747" type="Frog">
-                    <param id="0" name="Instance variable">PresentStreangth</param>
+                    <param id="0" name="Instance variable">PresentStrength</param>
                     <param id="1" name="Value">600</param>
                 </action>
             </actions>
@@ -117,6 +117,18 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="3931517544259826" type="FlyingEnemyL" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="2346052610093019">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="8532309384794244" type="Background" />
+                <condition id="-2" name="Compare Y" sid="1434606079940587" type="Background">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2417923632392082" type="Background" />
             </actions>
         </event-block>
     </events>

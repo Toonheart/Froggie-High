@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>MainMenu_Events</name>
+    <name>TitleScreen_Events</name>
     <events>
         <variable constant="0" name="ActiveWorld" sid="5439010439631277" static="0" type="number">1</variable>
         <include>Debug</include>
@@ -23,7 +23,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="8668047955106235" type="System">
-                    <param id="0" name="Layout">World</param>
+                    <param id="0" name="Layout">WorldSelector</param>
                 </action>
             </actions>
         </event-block>
@@ -107,76 +107,6 @@
                         <action id="2" name="Set muted" sid="8529787035643944" type="Audio">
                             <param id="0" name="Tag">&quot;Music&quot;</param>
                             <param id="1" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="5945555964400046" title="Activating World Buttons">
-            <sub-events>
-                <event-block sid="456421252279268">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="7917843617068788" type="Touch">
-                            <param id="0" name="Object">WorldOne</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2415741045549583" type="System">
-                            <param id="0" name="Variable">ActiveWorld</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="9957273517015142" type="WorldOne">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="2901253000567468" type="WorldThree">
-                            <param id="0" name="Opacity">50</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="3671976852330464" type="WorldTwo">
-                            <param id="0" name="Opacity">50</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3275173534235432">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="8048840270887401" type="Touch">
-                            <param id="0" name="Object">WorldTwo</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2092410599512029" type="System">
-                            <param id="0" name="Variable">ActiveWorld</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="7952717727536071" type="WorldTwo">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="7262753196094062" type="WorldThree">
-                            <param id="0" name="Opacity">50</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="1157725735509042" type="WorldOne">
-                            <param id="0" name="Opacity">50</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9365360544598513">
-                    <conditions>
-                        <condition id="3" name="On touched object" sid="6463708020763831" type="Touch">
-                            <param id="0" name="Object">WorldThree</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="7783960512340436" type="System">
-                            <param id="0" name="Variable">ActiveWorld</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="4913145415903359" type="WorldThree">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="4456378447899194" type="WorldTwo">
-                            <param id="0" name="Opacity">50</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="3778196360878535" type="WorldOne">
-                            <param id="0" name="Opacity">50</param>
                         </action>
                     </actions>
                 </event-block>

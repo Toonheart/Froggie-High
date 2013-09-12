@@ -20,9 +20,10 @@
         <variable constant="0" name="Level" sid="8157694739532241" static="0" type="number">1</variable>
         <variable constant="0" name="PlatformCount" sid="8891307456777305" static="0" type="number">8</variable>
         <variable constant="0" name="Score" sid="3791746897781893" static="0" type="number">0</variable>
-        <variable constant="0" name="Space" sid="6952989407746437" static="0" type="number">150</variable>
+        <variable constant="0" name="Space" sid="6952989407746437" static="0" type="number">250</variable>
         <variable comment="The current scroll Y position" constant="0" name="ScrollTo" sid="9286116069126037" static="0" type="number">1000</variable>
         <variable comment="The next Y scroll position to create a platform at" constant="0" name="NextPlatform" sid="8926952220695923" static="0" type="number">0</variable>
+        <variable constant="0" name="NextBackground" sid="8302530042271965" static="0" type="number">0</variable>
         <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult</comment>
         <event-block sid="725649038029895">
             <conditions>
@@ -47,10 +48,14 @@
                 </action>
                 <action id="-9" name="Set value" sid="5688244833199318" type="System">
                     <param id="0" name="Variable">Space</param>
-                    <param id="1" name="Value">150</param>
+                    <param id="1" name="Value">250</param>
                 </action>
                 <action id="-9" name="Set value" sid="5174044032782846" type="System">
                     <param id="0" name="Variable">NextPlatform</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5204623375287804" type="System">
+                    <param id="0" name="Variable">NextBackground</param>
                     <param id="1" name="Value">0</param>
                 </action>
             </actions>
@@ -98,13 +103,17 @@
                             <param id="0" name="Object to create">Platform</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
+                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-20</param>
                         </action>
-                        <action disabled="1" id="-9" name="Set value" sid="3580822637140741" type="System">
+                        <action id="-9" name="Set value" sid="3580822637140741" type="System">
                             <param id="0" name="Variable">NextPlatform</param>
                             <param id="1" name="Value">ViewportTop(&quot;Game&quot;) - Space</param>
                         </action>
-                        <action id="-9" name="Set value" sid="9424961447934697" type="System">
+                        <action disabled="1" id="-9" name="Set value" sid="9424961447934697" type="System">
+                            <param id="0" name="Variable">NextPlatform</param>
+                            <param id="1" name="Value">ViewportTop(&quot;Game&quot;) - random(Space,Space+50)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4980368067712113" type="System">
                             <param id="0" name="Variable">NextPlatform</param>
                             <param id="1" name="Value">ViewportTop(&quot;Game&quot;) - random(Space,Space+50)</param>
                         </action>
@@ -115,6 +124,27 @@
                         <action id="-10" name="Add to" sid="6394171220909261" type="System">
                             <param id="0" name="Variable">Score</param>
                             <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="906605637261713">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9561750522562573" type="System">
+                            <param id="0" name="First value">NextBackground</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4725163494700385" type="System">
+                            <param id="0" name="Object to create">Background</param>
+                            <param id="1" name="Layer">&quot;Background&quot;</param>
+                            <param id="2" name="X">400</param>
+                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6756957398712174" type="System">
+                            <param id="0" name="Variable">NextBackground</param>
+                            <param id="1" name="Value">ViewportTop(&quot;Game&quot;)-1280</param>
                         </action>
                     </actions>
                 </event-block>
@@ -202,7 +232,7 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="8816834240784098" type="Frog" />
                         <action id="-10" name="Set value" sid="7918925676592821" type="Frog">
-                            <param id="0" name="Instance variable">PresentStreangth</param>
+                            <param id="0" name="Instance variable">PresentStrength</param>
                             <param id="1" name="Value">600</param>
                         </action>
                     </actions>
@@ -249,6 +279,24 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="3045740220540406">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="6599987798700855" type="System">
+                    <param id="0" name="First value">Background.Y</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">ViewportBottom(&quot;Game&quot;)</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="9418340511660934" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3937411750333347" type="System">
+                    <param id="0" name="Object to create">Background</param>
+                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                    <param id="2" name="X">400</param>
+                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

@@ -11,12 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>World</layout>
-        <layout>Achievements</layout>
-        <layout>MainMenu</layout>
-        <event-sheet>SpaceUpdating</event-sheet>
-        <event-sheet>Maintainance</event-sheet>
-        <event-sheet active="1">Avoiding_Overlaps</event-sheet>
-        <event-sheet>MainMenu_Events</event-sheet>
+        <layout>GameOver</layout>
+        <layout>TitleScreen</layout>
+        <layout>WorldSelector</layout>
+        <event-sheet>WorldSelector_Events</event-sheet>
+        <event-sheet active="1">PowerUps</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,5 +28,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="DestroyBelowScreen" />
         <family expanded="1" name="Enemy" />
         <family expanded="0" name="WorldButtons" />
+        <family expanded="0" name="WorldSelectors" />
     </families-expanded>
 </c2uistate>

@@ -82,6 +82,9 @@
                             <param id="0" name="Pin to">Frog</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="7012171557605094" type="Frog">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="141032170757577">
@@ -89,21 +92,10 @@
                                 <condition id="-1" name="Every tick" sid="3585665314350443" type="System" />
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="11" name="Set enabled" sid="7012171557605094" type="Frog">
-                                    <param id="0" name="State">0</param>
-                                </action>
                                 <action id="-23" name="Move at angle" sid="9604127375808253" type="Frog">
                                     <param id="0" name="Angle">-90</param>
                                     <param id="1" name="Distance">40</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8975129840528356">
-                            <conditions>
-                                <condition id="-3" name="Is on-screen" sid="9723082053418621" type="Enemy" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="5170486708173817" type="Enemy" />
                             </actions>
                         </event-block>
                     </sub-events>
