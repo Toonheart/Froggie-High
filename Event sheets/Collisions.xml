@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collisions</name>
     <events>
-        <event-block sid="1128794562502145">
+        <event-block disabled="1" sid="1128794562502145">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="8164247335662345" type="Frog">
                     <param id="0" name="Object">Enemy</param>
@@ -11,7 +11,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="4918581145483142">
+                <event-block disabled="1" sid="4918581145483142">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="688573155296096" type="Frog">
                             <param id="0" name="Instance variable">SheildStatus</param>
@@ -27,7 +27,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3168038129596062">
+                <event-block disabled="1" sid="3168038129596062">
                     <conditions>
                         <condition id="-22" name="Else" sid="1689369426597879" type="System" />
                     </conditions>
@@ -38,7 +38,7 @@
             </sub-events>
         </event-block>
         <comment>Kill the frog when landed on enemy platform if sheild is not active</comment>
-        <event-block sid="9616499041551387">
+        <event-block disabled="1" sid="9616499041551387">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="9518337180007264" type="Frog">
                     <param id="0" name="Object">Snail</param>
@@ -50,7 +50,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="252874196551774">
+                <event-block disabled="1" sid="252874196551774">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5986736969352667" type="Frog">
                             <param id="0" name="Instance variable">SheildStatus</param>
@@ -59,13 +59,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="325300576756727" type="Frog" />
+                        <action id="-12" name="Subtract from" sid="8625158487098553" type="Frog">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
         <comment>Kill the Enemy if Frog if sheild is active and jumps on it.</comment>
-        <event-block sid="5070315223718897">
+        <event-block disabled="1" sid="5070315223718897">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="3674859376535979" type="Frog">
                     <param id="0" name="Object">Snail</param>
@@ -73,11 +76,11 @@
                 <condition id="2" name="Is playing" sid="6092920533080362" type="Snail">
                     <param id="0" name="Animation">&quot;Active&quot;</param>
                 </condition>
-                <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="39810752264695" type="Frog" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="39810752264695" type="Frog" />
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="202152737275933">
+                <event-block disabled="1" sid="202152737275933">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3963906860715873" type="Frog">
                             <param id="0" name="Instance variable">SheildStatus</param>
@@ -106,7 +109,7 @@
             </sub-events>
         </event-block>
         <comment>If Frog Landed on Spikes kill the frog</comment>
-        <event-block sid="551213224113013">
+        <event-block disabled="1" sid="551213224113013">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="8066993545523013" type="Frog">
                     <param id="0" name="Object">Spikes</param>
@@ -114,7 +117,23 @@
                 <condition behavior="Platform" id="2" name="Is on floor" sid="8737235101750968" type="Frog" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="6542325195763294" type="Frog" />
+                <action id="-12" name="Subtract from" sid="7853315808441206" type="Frog">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="1672483921609498">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4575779822867694" type="Frog">
+                    <param id="0" name="Object">FlyingEnemyL</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="5914160792348693" type="Frog">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
     </events>

@@ -8,14 +8,14 @@
                 <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="1" name="Append text" sid="8193709822747077" type="Debug">
-                    <param id="0" name="Text">&quot;::Space&quot;&amp;Space</param>
-                </action>
-                <action disabled="1" id="1" name="Append text" sid="5446667012364289" type="Debug">
-                    <param id="0" name="Text">&quot;::JumpStrength&quot;&amp;Frog.Platform.JumpStrength</param>
-                </action>
-                <action id="0" name="Set text" sid="6807646680044225" type="Debug">
+                <action disabled="1" id="0" name="Set text" sid="6807646680044225" type="Debug">
                     <param id="0" name="Text">&quot;ActiveWorld&quot;&amp;ActiveWorld</param>
+                </action>
+                <action id="0" name="Set text" sid="8002087447422118" type="Debug">
+                    <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer </param>
+                </action>
+                <action id="1" name="Append text" sid="7667393688923261" type="Debug">
+                    <param id="0" name="Text">&quot;Alpha - &quot;&amp;Touch.Alpha</param>
                 </action>
             </actions>
         </event-block>

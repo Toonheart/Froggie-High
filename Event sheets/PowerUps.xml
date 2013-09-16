@@ -6,7 +6,7 @@
         <event-group description="" sid="1508290019819969" title="Rocket">
             <sub-events>
                 <comment>Spawn rockets normally randomly for every 20-30Sec&apos;s</comment>
-                <event-block sid="3855916967642711">
+                <event-block disabled="1" sid="3855916967642711">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="3655607878365344" type="System">
                             <param id="0" name="Interval (seconds)">31</param>
@@ -36,6 +36,26 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="5442942397373558">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="679066288460733" type="Frog">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="2210529481051198" type="Frog">
+                            <param id="0" name="Object">Rocket</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="Image point">&quot;MushroomPin&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1064465784307698" type="Rocket">
+                            <param id="0" name="Pin to">Frog</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
                 <event-block sid="7812786490129375">
                     <conditions>
@@ -60,6 +80,41 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
+                        <event-block any="1" sid="6562957024535947">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="9903376255314575" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                                <condition id="8" name="Compare orientation" sid="898890634899789" type="Touch">
+                                    <param id="0" name="Orientation">2</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Angle">-8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="8557804143564031" type="Frog">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="7615939102074993">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="2740732267990874" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                                <condition id="8" name="Compare orientation" sid="2065904884537636" type="Touch">
+                                    <param id="0" name="Orientation">2</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Angle">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="7" name="Simulate control" sid="652700636793298" type="Frog">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
@@ -73,17 +128,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="2210529481051198" type="Frog">
-                            <param id="0" name="Object">Rocket</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="Image point">&quot;MushroomPin&quot;</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="1064465784307698" type="Rocket">
-                            <param id="0" name="Pin to">Frog</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
                         <action behavior="Platform" id="11" name="Set enabled" sid="7012171557605094" type="Frog">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="3069056459446161" type="Frog">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -94,7 +143,7 @@
                             <actions>
                                 <action id="-23" name="Move at angle" sid="9604127375808253" type="Frog">
                                     <param id="0" name="Angle">-90</param>
-                                    <param id="1" name="Distance">40</param>
+                                    <param id="1" name="Distance">30</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -113,6 +162,9 @@
                         <action behavior="Platform" id="11" name="Set enabled" sid="6085004724990191" type="Frog">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="1198643266246777" type="Frog">
+                            <param id="0" name="State">0</param>
+                        </action>
                         <action behavior="Pin" id="1" name="Unpin" sid="2099451820407826" type="Rocket" />
                         <action id="-9" name="Destroy" sid="6296803670728335" type="Rocket" />
                     </actions>
@@ -122,7 +174,7 @@
         <event-group description="" sid="4004194865636154" title="Mushroom">
             <sub-events>
                 <comment>Spawn Mushroom_Inv randomly</comment>
-                <event-block sid="7909195125855185">
+                <event-block disabled="1" sid="7909195125855185">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="7542730028738721" type="System">
                             <param id="0" name="Interval (seconds)">29</param>
@@ -156,7 +208,11 @@
                 <event-block sid="4011902002614064">
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="4736833150628064" type="Frog" />
-                        <condition id="-4" name="Trigger once while true" sid="6412872173213795" type="System" />
+                        <condition disabled="1" id="-8" name="Compare two values" sid="48481517849158" type="System">
+                            <param id="0" name="First value">Frog.Y-Frog.FallDistance</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Space</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -175,7 +231,7 @@
                                 </action>
                                 <action id="0" name="Spawn another object" sid="5760997973156327" type="Frog">
                                     <param id="0" name="Object">Mushroom</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
                                     <param id="2" name="Image point">&quot;MushroomPin&quot;</param>
                                 </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="4206746381559833" type="Mushroom">
@@ -184,18 +240,42 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block disabled="1" sid="7799807699857842">
+                            <conditions>
+                                <condition id="-24" name="For Each (ordered)" sid="5282175238703128" type="System">
+                                    <param id="0" name="Object">Platform</param>
+                                    <param id="1" name="Expression">Platform.y&gt;Frog.Y</param>
+                                    <param id="2" name="Order">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1876342360344854">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5103826836184907" type="System">
+                                            <param id="0" name="First value">Platform.X</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Frog.X-100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>De-Activate the mushroom on landed</comment>
                 <event-block sid="1800989727512526">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="8579573545810144" type="Frog" />
+                        <condition behavior="Pin" id="0" name="Is pinned" sid="950905084171321" type="Mushroom" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="3355311423869583" type="Frog">
                             <param id="0" name="Instance variable">MushroomStatus</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="4799857672042042" type="Mushroom" />
                     </actions>
                 </event-block>
                 <comment>Reset the gravity and when mushroom de-Activated</comment>
@@ -206,6 +286,7 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1624974601676791" type="System" />
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="5" name="Set gravity" sid="4918132697054397" type="Frog">
@@ -216,9 +297,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1579389754065093" title="Shield">
+        <event-group description="" disabled="1" sid="1579389754065093" title="Shield">
             <sub-events>
-                <event-block sid="7688469084229928">
+                <event-block disabled="1" sid="7688469084229928">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="8845956592911194" type="System">
                             <param id="0" name="Interval (seconds)">23</param>
@@ -238,7 +319,7 @@
                     </actions>
                 </event-block>
                 <comment>Collecting shield and destroying it</comment>
-                <event-block sid="5209608158508144">
+                <event-block disabled="1" sid="5209608158508144">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9782799726256521" type="Frog">
                             <param id="0" name="Object">Shield</param>
@@ -267,7 +348,7 @@
         <event-group description="" sid="5111261358297281" title="Spring">
             <sub-events>
                 <comment>Create spring flores every random(6,10) sec</comment>
-                <event-block sid="9746320535520464">
+                <event-block disabled="1" sid="9746320535520464">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="5094509639585933" type="System">
                             <param id="0" name="Interval (seconds)">25</param>
@@ -293,21 +374,26 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="4" name="Set jump strength" sid="7065287708182879" type="Frog">
-                            <param id="0" name="Jump strength">2*Frog.Platform.JumpStrength</param>
+                            <param id="0" name="Jump strength">1.5*Frog.Platform.JumpStrength</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9741920131770952">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="1823463986675149" type="Platform">
-                            <param id="0" name="Object">Spring</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="7247220962450536" type="Platform" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="3480455466851614">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4622479591618191" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="8736214433760681" type="System">
+                    <param id="0" name="Object to create">Candy</param>
+                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                    <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
+                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

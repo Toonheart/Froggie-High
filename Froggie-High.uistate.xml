@@ -11,11 +11,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>World</layout>
-        <layout>GameOver</layout>
         <layout>TitleScreen</layout>
-        <layout>WorldSelector</layout>
-        <event-sheet>WorldSelector_Events</event-sheet>
-        <event-sheet active="1">PowerUps</event-sheet>
+        <event-sheet>World_Events</event-sheet>
+        <event-sheet>EnemyEvents</event-sheet>
+        <event-sheet>PowerUps</event-sheet>
+        <event-sheet>BossEvents</event-sheet>
+        <event-sheet>Maintainance</event-sheet>
+        <event-sheet>Avoiding_Overlaps</event-sheet>
+        <event-sheet active="1">Debug</event-sheet>
+        <event-sheet>Collisions</event-sheet>
+        <event-sheet>JumpEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,7 +29,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="Abstacles" />
+        <family expanded="1" name="Obstacles" />
         <family expanded="0" name="DestroyBelowScreen" />
         <family expanded="1" name="Enemy" />
         <family expanded="0" name="WorldButtons" />
