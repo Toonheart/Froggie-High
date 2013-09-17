@@ -5,62 +5,62 @@
     <events>
         <event-block disabled="1" sid="7317551721324325">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="9687820658053842" type="Platform">
+                <condition id="1" name="Is overlapping another object" sid="9687820658053842" type="Flore">
                     <param id="0" name="Object">Spring</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="5880341485229712" type="Platform" />
+                <action id="-9" name="Destroy" sid="5880341485229712" type="Flore" />
             </actions>
         </event-block>
         <event-block disabled="1" sid="2574656725011907">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6810681244714802" type="Shield">
-                    <param id="0" name="Object">Platform</param>
+                    <param id="0" name="Object">Flore</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="5318769878389476" type="Platform" />
+                <action id="-9" name="Destroy" sid="5318769878389476" type="Flore" />
             </actions>
         </event-block>
         <event-block sid="6433879236447056">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="4716132715305213" type="Obstacles">
-                    <param id="0" name="Object">Platform</param>
+                    <param id="0" name="Object">Flore</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="6471246351255929" type="Obstacles">
-                    <param id="0" name="X">Platform.X-200</param>
+                    <param id="0" name="X">FLore.X-200</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="8355677982661826">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="3594629043219511" type="Platform">
+                        <condition id="-1" name="Compare X" sid="3594629043219511" type="Flore">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="X co-ordinate">400</param>
                         </condition>
                         <condition id="1" name="Is overlapping another object" sid="7181418307394273" type="Snail">
-                            <param id="0" name="Object">Platform</param>
+                            <param id="0" name="Object">Flore</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="9431604242006775" type="Obstacles">
-                            <param id="0" name="X">Platform.X+200</param>
+                            <param id="0" name="X">FLore.X+200</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="1188423935722931">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="3879447467785229" type="Platform">
+                        <condition id="-1" name="Compare X" sid="3879447467785229" type="Flore">
                             <param id="0" name="Comparison">5</param>
                             <param id="1" name="X co-ordinate">400</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="8668474208244105" type="Obstacles">
-                            <param id="0" name="X">Platform.X-200</param>
+                            <param id="0" name="X">FLore.X-200</param>
                         </action>
                     </actions>
                 </event-block>
@@ -69,12 +69,12 @@
         <event-block disabled="1" sid="2951509167769348">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="3694966694655229" type="Snail">
-                    <param id="0" name="Object">Platform</param>
+                    <param id="0" name="Object">Flore</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="9178272196212875" type="Snail">
-                    <param id="0" name="X">Platform.x-150</param>
+                    <param id="0" name="X">FLore.x-150</param>
                 </action>
             </actions>
         </event-block>
@@ -82,7 +82,7 @@
             <conditions />
             <actions>
                 <action id="-1" name="Set X" sid="7904873572249931" type="Snail">
-                    <param id="0" name="X">Platform.x-150</param>
+                    <param id="0" name="X">FLore.x-150</param>
                 </action>
             </actions>
         </event-block>
@@ -145,26 +145,26 @@
         <event-block sid="5894243046498301">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="953731547803444" type="Rocket_Inv">
-                    <param id="0" name="Object">BrakableFlore</param>
+                    <param id="0" name="Object">BrokenFlore</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="6279105349215853" type="BrakableFlore" />
+                <action id="-9" name="Destroy" sid="6279105349215853" type="BrokenFlore" />
             </actions>
         </event-block>
         <event-block sid="4651808177345292">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="8540964799425653" type="Rocket_Inv">
-                    <param id="0" name="Object">Platform</param>
+                    <param id="0" name="Object">Flore</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="3772465064572373" type="Platform" />
+                <action id="-9" name="Destroy" sid="3772465064572373" type="Flore" />
             </actions>
         </event-block>
         <event-block sid="4818674428912407">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="1481036674640258" type="BrakableFlore">
+                <condition id="1" name="Is overlapping another object" sid="1481036674640258" type="BrokenFlore">
                     <param id="0" name="Object">Obstacles</param>
                 </condition>
             </conditions>
@@ -174,33 +174,33 @@
         </event-block>
         <event-block sid="3309955794635257">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="344564645604566" type="Platform">
-                    <param id="0" name="Object">BrakableFlore</param>
+                <condition id="1" name="Is overlapping another object" sid="344564645604566" type="Flore">
+                    <param id="0" name="Object">BrokenFlore</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="1166905001871046" type="Platform" />
+                <action id="-9" name="Destroy" sid="1166905001871046" type="Flore" />
             </actions>
         </event-block>
         <event-block disabled="1" sid="8665158620309603">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="7783865071308579" type="BrakableFlore">
-                    <param id="0" name="Object">BrakableFlore</param>
+                <condition id="1" name="Is overlapping another object" sid="7783865071308579" type="BrokenFlore">
+                    <param id="0" name="Object">BrokenFlore</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="5617897819634108" type="BrakableFlore" />
+                <action id="-9" name="Destroy" sid="5617897819634108" type="BrokenFlore" />
             </actions>
         </event-block>
         <event-block sid="6985086595950264">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="1585805454044192" type="Platform">
+                <condition id="1" name="Is overlapping another object" sid="1585805454044192" type="Flore">
                     <param id="0" name="Object">Spikes</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-1" name="Set X" sid="3093763310948091" type="Spikes">
-                    <param id="0" name="X">Platform.X-150</param>
+                    <param id="0" name="X">FLore.X-150</param>
                 </action>
             </actions>
         </event-block>

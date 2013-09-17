@@ -30,14 +30,14 @@
         </event-block>
         <event-block sid="7677198932992921">
             <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="4817895405900044" type="Platform" />
-                <condition id="-2" name="Compare Y" sid="1314203211417815" type="Platform">
+                <condition id="-3" inverted="1" name="Is on-screen" sid="4817895405900044" type="Flore" />
+                <condition id="-2" name="Compare Y" sid="1314203211417815" type="Flore">
                     <param id="0" name="Comparison">4</param>
                     <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="3636769497370544" type="Platform" />
+                <action id="-9" name="Destroy" sid="3636769497370544" type="Flore" />
             </actions>
         </event-block>
         <comment>If the player falls off the bottom of the screen, restart the layout.</comment>
@@ -131,12 +131,21 @@
                 <action id="-9" name="Destroy" sid="3931517544259826" type="FlyingEnemyL" />
             </actions>
         </event-block>
-        <event-block disabled="1" sid="2346052610093019">
+        <comment>Destroy the BrokenPart if drops below the screen</comment>
+        <event-block sid="3747278286816935">
             <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="8532309384794244" type="Background" />
+                <condition id="-3" inverted="1" name="Is on-screen" sid="4809224561637242" type="BrokenPartOne" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7437872998395465" type="BrokenPartOne" />
+                <action id="-9" name="Destroy" sid="5280906409159442" type="BrokenPartTwo" />
+            </actions>
+        </event-block>
+        <event-block sid="2346052610093019">
+            <conditions>
                 <condition id="-2" name="Compare Y" sid="1434606079940587" type="Background">
                     <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)+1280</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Background&quot;)+1280</param>
                 </condition>
             </conditions>
             <actions>

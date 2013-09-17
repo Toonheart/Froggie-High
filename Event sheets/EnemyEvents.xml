@@ -275,7 +275,7 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="8119251612968906" type="System">
-                            <param id="0" name="Object to create">BrakableFlore</param>
+                            <param id="0" name="Object to create">BrokenFlore</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
@@ -286,56 +286,58 @@
                 <event-block sid="2971582518321419">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9548549540568099" type="Frog">
-                            <param id="0" name="Object">BrakableFlore</param>
+                            <param id="0" name="Object">BrokenFlore</param>
                         </condition>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="3581205116937213" type="Frog" />
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2177892804284857">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="8483347292908135" type="BrakableFlore">
-                                    <param id="0" name="Animation">&quot;Broken&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="8050036224610947" type="BrakableFlore" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Set Brakable floor status to  When Frog landed on it for first time</comment>
-                <event-block sid="1320119099258804">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="924608047071109" type="Frog">
-                            <param id="0" name="Object">BrakableFlore</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="8551773264895912" type="Frog" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="6168305873330126">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="1961125210516747" type="BrakableFlore">
-                                    <param id="0" name="Animation">&quot;Strong&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="7849126822264875" type="Frog">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="3497855227129028" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="6061432127696096" type="BrakableFlore">
-                                    <param id="0" name="Animation">&quot;Broken&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="5884298415862442" type="Frog">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2873282795592217" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6226689874058136" type="BrokenFlore">
+                            <param id="0" name="Object">BrokenPartTwo</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Part2&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7457975497322726" type="BrokenFlore">
+                            <param id="0" name="Object">BrokenPartOne</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Part1&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8450168926386172" type="BrokenFlore" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Moving platform</comment>
+        <event-block sid="6785902080902279">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3284366505933919" type="MovingFlore">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LayoutWidth-700</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="6318290771795834" type="MovingFlore">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="753380288131946">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="3632457223310535" type="MovingFlore">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">700</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="4286216273993434" type="MovingFlore">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
