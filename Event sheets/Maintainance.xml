@@ -141,6 +141,18 @@
                 <action id="-9" name="Destroy" sid="5280906409159442" type="BrokenPartTwo" />
             </actions>
         </event-block>
+        <event-block sid="9824397742640384">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Candy" />
+                <condition id="-2" name="Compare Y" sid="4186273584232017" type="Candy">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="532491530161822" type="Candy" />
+            </actions>
+        </event-block>
         <event-block sid="2346052610093019">
             <conditions>
                 <condition id="-2" name="Compare Y" sid="1434606079940587" type="Background">

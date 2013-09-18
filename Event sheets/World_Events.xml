@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>World_Events</name>
     <events>
+        <include>PatternGeneration</include>
         <include>Collectables</include>
         <include>BossEvents</include>
         <include>Health</include>
@@ -19,6 +20,8 @@
         <include>Hud</include>
         <include>Avoiding_Overlaps</include>
         <include>Debug</include>
+        <variable constant="0" name="CenterCandX" sid="3244602125043543" static="0" type="number">400</variable>
+        <variable constant="0" name="CenterCandY" sid="9855469285447576" static="0" type="number">400</variable>
         <variable constant="0" name="Speed" sid="3992528180255599" static="0" type="number">5</variable>
         <variable constant="0" name="Level" sid="8157694739532241" static="0" type="number">1</variable>
         <variable constant="0" name="PlatformCount" sid="8891307456777305" static="0" type="number">8</variable>
@@ -27,6 +30,115 @@
         <variable comment="The current scroll Y position" constant="0" name="ScrollTo" sid="9286116069126037" static="0" type="number">1000</variable>
         <variable comment="The next Y scroll position to create a platform at" constant="0" name="NextPlatform" sid="8926952220695923" static="0" type="number">0</variable>
         <variable constant="0" name="NextBackground" sid="8302530042271965" static="0" type="number">0</variable>
+        <event-block disabled="1" sid="310854457562523">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7651341681003016" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="9914413995227159" type="Square_X">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">CenterCandX-128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="2662648837645522" type="Square_X">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandX</param>
+                </action>
+                <action id="3" name="Set at XY" sid="6480610540788276" type="Square_X">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">CenterCandX+128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="5804071752943962" type="Square_X">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandX</param>
+                </action>
+                <action id="3" name="Set at XY" sid="179260682827738" type="Square_X">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">CenterCandX+128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="6403419051400033" type="Square_X">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">CenterCandX-128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="1778437299948979" type="Square_X">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">CenterCandX+128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="6241751459439762" type="Square_X">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">CenterCandX-128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="4873942955037532" type="Square_X">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandX</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="7298446439580659">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2236000455535065" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="8442779739201504" type="Square_Y">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandY</param>
+                </action>
+                <action id="3" name="Set at XY" sid="2649917647607201" type="Square_Y">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandY-128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="7230351770778015" type="Square_Y">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandY</param>
+                </action>
+                <action id="3" name="Set at XY" sid="2972950447035527" type="Square_Y">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">CenterCandY-128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="2855423849160446" type="Square_Y">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">CenterCandY-128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="873552431345641" type="Square_Y">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">CenterCandY</param>
+                </action>
+                <action id="3" name="Set at XY" sid="1721426593318576" type="Square_Y">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">CenterCandY</param>
+                </action>
+                <action id="3" name="Set at XY" sid="2885870803494105" type="Square_Y">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">CenterCandY+128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="3958093355775169" type="Square_Y">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">CenterCandY+128</param>
+                </action>
+                <action id="3" name="Set at XY" sid="3967661932784317" type="Square_Y">
+                    <param id="0" name="X">2</param>
+                    <param id="1" name="Y">2</param>
+                    <param id="2" name="Value">CenterCandY+128</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult</comment>
         <event-block sid="725649038029895">
             <conditions>
@@ -62,6 +174,9 @@
                     <param id="1" name="Value">0</param>
                 </action>
                 <action behavior="8Direction" id="8" name="Set enabled" sid="2134564595947575" type="Frog">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="7665494366395571" type="Frog">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -307,6 +422,189 @@
                                         <action id="-9" name="Destroy" sid="6987983241956823" type="Flore" />
                                     </actions>
                                 </event-block>
+                                <event-block sid="5002446495326917">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5002652825200755" type="System">
+                                            <param id="0" name="First value">FLore.PresentPlatform%10</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="5877058594836015" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="5350089654571419" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">FLore.X</param>
+                                            <param id="3" name="Y">FLore.Y-50</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="4572247607875955" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Candy.X</param>
+                                            <param id="3" name="Y">Candy.Y-128</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="3507295898034374" type="System">
+                                            <param id="0" name="Object to create">Candy</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Candy.X</param>
+                                            <param id="3" name="Y">Candy.Y+128</param>
+                                        </action>
+                                        <action disabled="1" id="-10" name="Set value" sid="5368754720816577" type="Candy">
+                                            <param id="0" name="Instance variable">CandySelector</param>
+                                            <param id="1" name="Value">round(random(1,2))</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="4014096432962151" type="System">
+                                            <param id="0" name="Variable">CenterCandX</param>
+                                            <param id="1" name="Value">Flore.X</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="7110547423908225" type="System">
+                                            <param id="0" name="Variable">CenterCandX</param>
+                                            <param id="1" name="Value">Flore.Y-300</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="563233724280727" type="Square_X">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandX-128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="6727175417918997" type="Square_X">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandX</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="6916270546782834" type="Square_X">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandX+128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="5238426242393381" type="Square_X">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandX</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="6197911993858265" type="Square_X">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandX+128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="1179175698591802" type="Square_X">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandX-128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="7170705516253846" type="Square_X">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandX+128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="8394539681080041" type="Square_X">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandX-128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="236691129567964" type="Square_X">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandX</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="1890603860936385" type="Square_Y">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="3048162055533826" type="Square_Y">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY-128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="5588893842940795" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="5190621780326439" type="Square_Y">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandY-128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="7190448588736295" type="Square_Y">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandY-128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="5193059214198381" type="Square_Y">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="3876992612351882" type="Square_Y">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="2922776421513589" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandY+128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="7395304013826111" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY+128</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set at XY" sid="8060399124015054" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandY+128</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <variable constant="0" name="NewCandyX" sid="5275072731109017" static="0" type="number">-1</variable>
+                                        <variable constant="0" name="NewCandyY" sid="9106545222775681" static="0" type="number">0</variable>
+                                        <event-block sid="66071083847496">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="6370392587402778" type="System">
+                                                    <param id="0" name="Count">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="1415385927814021" type="System">
+                                                    <param id="0" name="Variable">NewCandyX</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="5181695983172837" type="System">
+                                                    <param id="0" name="Variable">NewCandyY</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="9600628044104133">
+                                                    <conditions>
+                                                        <condition id="-12" name="Repeat" sid="8141412283317786" type="System">
+                                                            <param id="0" name="Count">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="6150737692422054" type="System">
+                                                            <param id="0" name="Object to create">Candy</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">Square_X.At(NewCandyX,NewCandyY)</param>
+                                                            <param id="3" name="Y">Square_Y.At(NewCandyX,NewCandyY)</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="6672626186257367" type="System">
+                                                            <param id="0" name="Variable">NewCandyY</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="2142446994788187">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
                                 <event-block sid="820579559698957">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="1435740820572568" type="System">
@@ -321,13 +619,162 @@
                                             <param id="0" name="Object to create">Candy</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y-150</param>
+                                            <param id="3" name="Y">FLore.Y-300</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="5910505258326678" type="Candy">
+                                        <action disabled="1" id="-10" name="Set value" sid="5910505258326678" type="Candy">
                                             <param id="0" name="Instance variable">CandySelector</param>
                                             <param id="1" name="Value">round(random(1,2))</param>
                                         </action>
+                                        <action id="-9" name="Set value" sid="3698527517353471" type="System">
+                                            <param id="0" name="Variable">CenterCandX</param>
+                                            <param id="1" name="Value">Flore.X</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5389626858982126" type="System">
+                                            <param id="0" name="Variable">CenterCandX</param>
+                                            <param id="1" name="Value">Flore.Y-300</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="4824950940827622" type="Square_X">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandX-128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="3245571926172869" type="Square_X">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandX</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="550967670881557" type="Square_X">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandX+128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="543281723561821" type="Square_X">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandX</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="6725745262266146" type="Square_X">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandX+128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="2072994749460553" type="Square_X">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandX-128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="81492961015231" type="Square_X">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandX+128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="6046531181729213" type="Square_X">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandX-128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="751469965679649" type="Square_X">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandX</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="7688296756298108" type="Square_Y">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="2196421408748522" type="Square_Y">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY-128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="6810537097745039" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="1130307858722299" type="Square_Y">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandY-128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="5311320796185248" type="Square_Y">
+                                            <param id="0" name="X">0</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandY-128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="5925042266152219" type="Square_Y">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="6822214188222789" type="Square_Y">
+                                            <param id="0" name="X">1</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandY</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="460446658320836" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">CenterCandY+128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="4565281325005658" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">CenterCandY+128</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="8643872487165122" type="Square_Y">
+                                            <param id="0" name="X">2</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">CenterCandY+128</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <variable constant="0" name="NewCandyX" sid="1612797057026901" static="0" type="number">-1</variable>
+                                        <variable constant="0" name="NewCandyY" sid="4377693862608919" static="0" type="number">0</variable>
+                                        <event-block sid="9827560066671328">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="1873168376983649" type="System">
+                                                    <param id="0" name="Count">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="3873379003821449" type="System">
+                                                    <param id="0" name="Variable">NewCandyX</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="2626821527234285" type="System">
+                                                    <param id="0" name="Variable">NewCandyY</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="7757944777151209">
+                                                    <conditions>
+                                                        <condition id="-12" name="Repeat" sid="9794166508120553" type="System">
+                                                            <param id="0" name="Count">3</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="4372074196366778" type="System">
+                                                            <param id="0" name="Object to create">Candy</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="X">Square_X.At(NewCandyX,NewCandyY)</param>
+                                                            <param id="3" name="Y">Square_Y.At(NewCandyX,NewCandyY)</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="4524036578872133" type="System">
+                                                            <param id="0" name="Variable">NewCandyY</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="5082440726470287">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="9320512987833998">
                                     <conditions>
@@ -425,9 +872,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2736717241711953">
+        <event-block disabled="1" sid="2736717241711953">
             <conditions>
-                <condition id="8" name="Compare orientation" sid="9707076728803613" type="Touch">
+                <condition disabled="1" id="8" name="Compare orientation" sid="9707076728803613" type="Touch">
                     <param id="0" name="Orientation">0</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Angle">180</param>
@@ -444,7 +891,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6615196949686843">
+        <event-block disabled="1" sid="6615196949686843">
             <conditions>
                 <condition id="8" name="Compare orientation" sid="9017555233632039" type="Touch">
                     <param id="0" name="Orientation">0</param>
@@ -572,7 +1019,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="4793557078824272">
+        <event-block disabled="1" sid="4793557078824272">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="4612214547907601" type="Candy">
                     <param id="0" name="Instance variable">CandySelector</param>
@@ -587,7 +1034,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4666942882692666">
+        <event-block disabled="1" sid="4666942882692666">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="8116433590050557" type="Candy">
                     <param id="0" name="Instance variable">CandySelector</param>
@@ -720,6 +1167,30 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block disabled="1" sid="459762894449259">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="4651366252894043" type="Candy">
+                    <param id="0" name="Object">MarkerTop</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="554890946683528" type="Candy">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="6791787096872238">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="1111853016396945" type="Candy">
+                    <param id="0" name="Object">MarkerBottom</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="8162541628764551" type="Candy">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
