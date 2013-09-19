@@ -3,16 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>EnemyEvents</name>
     <events>
+        <variable constant="0" name="FlyingEnemySelector" sid="495677249703416" static="0" type="number">0</variable>
         <event-group description="" sid="3907414167151629" title="FlyingEnemy">
             <sub-events>
-                <variable constant="0" name="FlyingEnemySpawnX" sid="495677249703416" static="0" type="number">0</variable>
                 <event-group description="" sid="9293068315346784" title="Spawning FlyingEnemies From Left and right">
                     <sub-events>
                         <comment>Create FLying Enimies randomly at Right or left of window Using Veiwport(Note: Use Else instead of comparing two instances)</comment>
                         <event-block sid="84398713707311">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="3199675920209141" type="System">
-                                    <param id="0" name="Interval (seconds)">17</param>
+                                    <param id="0" name="Interval (seconds)">10</param>
                                 </condition>
                                 <condition id="-2" name="Compare Y" sid="272769067344979" type="Frog">
                                     <param id="0" name="Comparison">2</param>
@@ -24,7 +24,7 @@
                                 <event-block sid="2327180398764943">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="2110277357350635" type="System">
-                                            <param id="0" name="Variable">FlyingEnemySpawnX</param>
+                                            <param id="0" name="Variable">FlyingEnemySelector</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
@@ -32,12 +32,12 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="1973146204602317" type="System">
                                             <param id="0" name="Object to create">FlyingEnemyL</param>
-                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="1" name="Layer">&quot;Player&quot;</param>
                                             <param id="2" name="X">ViewportLeft(&quot;Game&quot;)</param>
                                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="805061794274023" type="System">
-                                            <param id="0" name="Variable">FlyingEnemySpawnX</param>
+                                            <param id="0" name="Variable">FlyingEnemySelector</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
@@ -49,12 +49,12 @@
                                     <actions>
                                         <action id="-3" name="Create object" sid="5359722015046308" type="System">
                                             <param id="0" name="Object to create">FlyingEnemyR</param>
-                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                            <param id="1" name="Layer">&quot;Player&quot;</param>
                                             <param id="2" name="X">Viewportright(&quot;Game&quot;)</param>
                                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="5604300551108715" type="System">
-                                            <param id="0" name="Variable">FlyingEnemySpawnX</param>
+                                            <param id="0" name="Variable">FlyingEnemySelector</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
@@ -136,9 +136,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6705292453791023" title="Snakes">
+        <event-group description="" disabled="1" sid="6705292453791023" title="Snakes">
             <sub-events>
-                <event-block sid="5247237180030779">
+                <event-block disabled="1" sid="5247237180030779">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3132895507611574" type="System">
                             <param id="0" name="First value">Score</param>
@@ -149,7 +149,7 @@
                     <actions />
                     <sub-events>
                         <comment>Spawn Snake randomly</comment>
-                        <event-block sid="5561322007635969">
+                        <event-block disabled="1" sid="5561322007635969">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="536808100971547" type="System">
                                     <param id="0" name="Interval (seconds)">19</param>
@@ -170,7 +170,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2165685876081218">
+                <event-block disabled="1" sid="2165685876081218">
                     <conditions>
                         <condition id="-18" name="On created" sid="5582901564059217" type="Snake" />
                     </conditions>
@@ -182,7 +182,7 @@
                 </event-block>
                 <comment>Patrolling</comment>
                 <comment>Note:We can do one thing store x on spawn range(x-20,x=20</comment>
-                <event-block sid="7376744116602369">
+                <event-block disabled="1" sid="7376744116602369">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="7365678012916006" type="Snake">
                             <param id="0" name="Comparison">5</param>
@@ -198,7 +198,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6081545519816418">
+                <event-block disabled="1" sid="6081545519816418">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="8941826234934696" type="Snake">
                             <param id="0" name="Comparison">3</param>
@@ -231,7 +231,7 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="77437064826975" type="System">
-                            <param id="0" name="Object to create">Snail</param>
+                            <param id="0" name="Object to create">ElectroOcto</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
@@ -255,7 +255,7 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="4019331887194022" type="System">
-                            <param id="0" name="Object to create">Spikes</param>
+                            <param id="0" name="Object to create">SpikeOcto</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
@@ -308,6 +308,12 @@
                             <param id="2" name="Image point">&quot;Part1&quot;</param>
                         </action>
                         <action id="-9" name="Destroy" sid="8450168926386172" type="BrokenFlore" />
+                        <action id="-19" name="Rotate counter-clockwise" sid="5186792587023621" type="BrokenPartOne">
+                            <param id="0" name="Degrees">10</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="7455995621438567" type="BrokenPartTwo">
+                            <param id="0" name="Degrees">10</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
