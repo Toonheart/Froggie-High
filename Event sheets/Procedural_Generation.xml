@@ -213,12 +213,13 @@
                                         <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="9615283029555242" type="Flore">
-                                            <param id="0" name="Object">Spring</param>
+                                        <action id="-3" name="Create object" sid="9615283029555242" type="System">
+                                            <param id="0" name="Object to create">Spring</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="Image point">0</param>
+                                            <param id="2" name="X">Flore.X</param>
+                                            <param id="3" name="Y">Flore.Y-96</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="2796877449252215" type="Flore" />
+                                        <action disabled="1" id="-9" name="Destroy" sid="2796877449252215" type="Flore" />
                                     </actions>
                                 </event-block>
                                 <comment>SpikeOcto</comment>
@@ -284,7 +285,7 @@
                                         <condition id="-8" name="Compare two values" sid="3874987527597237" type="System">
                                             <param id="0" name="First value">FLore.PresentPlatform%36</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">49</param>
+                                            <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9866535828008981" type="System" />
                                     </conditions>
@@ -317,7 +318,7 @@
                                             <param id="0" name="Object to create">MarkerBottom</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y-80</param>
+                                            <param id="3" name="Y">FLore.Y-120</param>
                                         </action>
                                         <action id="-3" name="Create object" sid="1831225762208223" type="System">
                                             <param id="0" name="Object to create">Candy</param>
@@ -325,14 +326,11 @@
                                             <param id="2" name="X">FLore.X</param>
                                             <param id="3" name="Y">FLore.Y-160</param>
                                         </action>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2968890845742542" type="Candy">
-                                            <param id="0" name="Control">2</param>
-                                        </action>
                                         <action id="-10" name="Set value" sid="4401157168156063" type="Candy">
                                             <param id="0" name="Instance variable">CandySelector</param>
-                                            <param id="1" name="Value">round(random(1,5))</param>
+                                            <param id="1" name="Value">round(random(1,15))</param>
                                         </action>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="889141435315556" type="Candy">
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2968890845742542" type="Candy">
                                             <param id="0" name="Control">2</param>
                                         </action>
                                     </actions>
@@ -351,7 +349,7 @@
                                             <param id="0" name="Object to create">MovingFlore</param>
                                             <param id="1" name="Layer">&quot;Game&quot;</param>
                                             <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y-150</param>
+                                            <param id="3" name="Y">FLore.Y</param>
                                         </action>
                                         <action behavior="8Direction" id="7" name="Simulate control" sid="9187565567291518" type="MovingFlore">
                                             <param id="0" name="Control">0</param>
@@ -505,10 +503,6 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="2070966277354902" type="Frog" />
-                        <action id="-10" name="Set value" sid="2744638855825927" type="Frog">
-                            <param id="0" name="Instance variable">PresentStrength</param>
-                            <param id="1" name="Value">1000</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -590,7 +584,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="9488474203241745" type="Candy">
-                    <param id="0" name="Animation">&quot;One&quot;</param>
+                    <param id="0" name="Animation">&quot;Plane1&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -605,7 +599,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="5015104679271782" type="Candy">
-                    <param id="0" name="Animation">&quot;Two&quot;</param>
+                    <param id="0" name="Animation">&quot;Plane2&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -620,7 +614,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="8686781286108214" type="Candy">
-                    <param id="0" name="Animation">&quot;Three&quot;</param>
+                    <param id="0" name="Animation">&quot;Plane3&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -635,7 +629,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="2332572281814272" type="Candy">
-                    <param id="0" name="Animation">&quot;Four&quot;</param>
+                    <param id="0" name="Animation">&quot;Twocolor1&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -650,12 +644,12 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="4983386403962164" type="Candy">
-                    <param id="0" name="Animation">&quot;Five&quot;</param>
+                    <param id="0" name="Animation">&quot;TwoColor2&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="4822707392683177">
+        <event-block sid="4822707392683177">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="5833284217624422" type="Candy">
                     <param id="0" name="Instance variable">CandySelector</param>
@@ -665,7 +659,142 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3243221851371194" type="Candy">
-                    <param id="0" name="Animation">&quot;Six&quot;</param>
+                    <param id="0" name="Animation">&quot;TwoColor3&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="823703529404562">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2746461497760412" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4353485519089979" type="Candy">
+                    <param id="0" name="Animation">&quot;Swirl1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5325596768384214">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2886610159713632" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4224030875166544" type="Candy">
+                    <param id="0" name="Animation">&quot;Swirl2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7993651685851106">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3250298220633794" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">9</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1796065640840416" type="Candy">
+                    <param id="0" name="Animation">&quot;Swirl3&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5305374532114167">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3189801938601665" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2646624316035494" type="Candy">
+                    <param id="0" name="Animation">&quot;Wrapper1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3213236655147513">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8352557201483765" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">11</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="575645205964061" type="Candy">
+                    <param id="0" name="Animation">&quot;Wrapper2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8032583616796305">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3423253161111172" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4845061319386085" type="Candy">
+                    <param id="0" name="Animation">&quot;Wrapper3&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3674656715759851">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3776651655249865" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1645957445201231" type="Candy">
+                    <param id="0" name="Animation">&quot;Star1&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5237018859636707">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8312844231482845" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">14</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="4300616205466669" type="Candy">
+                    <param id="0" name="Animation">&quot;Star2&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7644115648611387">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7556285350670032" type="Candy">
+                    <param id="0" name="Instance variable">CandySelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">15</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6381351754105417" type="Candy">
+                    <param id="0" name="Animation">&quot;Star3&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>

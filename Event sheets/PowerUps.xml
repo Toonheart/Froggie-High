@@ -370,11 +370,39 @@
                         <condition id="0" name="On collision with another object" sid="4552949056540236" type="Frog">
                             <param id="0" name="Object">Spring</param>
                         </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="9479770976339634" type="Frog" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="7065287708182879" type="Frog">
+                        <action id="-10" name="Set value" sid="3953728922571401" type="Frog">
+                            <param id="0" name="Instance variable">DoubleJump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" disabled="1" id="4" name="Set jump strength" sid="7065287708182879" type="Frog">
                             <param id="0" name="Jump strength">1.5*Frog.Platform.JumpStrength</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="215280903131925" type="Spring" />
+                    </actions>
+                </event-block>
+                <event-block sid="5103723196897294">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7775351253031619" type="Frog">
+                            <param id="0" name="Instance variable">DoubleJump</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="2180922267744467" type="Frog">
+                            <param id="0" name="Jump strength">2400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7832891512613347">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2851509021784936" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="5955761002386706" type="Frog">
+                            <param id="0" name="Jump strength">1400</param>
                         </action>
                     </actions>
                 </event-block>
