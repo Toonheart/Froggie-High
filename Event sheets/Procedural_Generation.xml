@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Procedural_Generation</name>
     <events>
+        <variable constant="0" name="WorldSection" sid="4980683003653999" static="0" type="number">1</variable>
         <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult</comment>
         <event-block sid="4294993057486781">
             <conditions>
@@ -162,7 +163,7 @@
                             <actions />
                             <sub-events>
                                 <comment>Sheild generation</comment>
-                                <event-block sid="3400785517766716">
+                                <event-block disabled="1" sid="3400785517766716">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8543724869223069" type="System">
                                             <param id="0" name="First value">FLore.PresentPlatform%15</param>
@@ -184,11 +185,16 @@
                                 <event-block sid="5869404266771602">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8043050106848244" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%18</param>
+                                            <param id="0" name="First value">FLore.PresentPlatform%30</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9370997679174675" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="876017431833087" type="System">
+                                            <param id="0" name="Variable">WorldSection</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="9192741440649941" type="System">
@@ -198,7 +204,7 @@
                                             <param id="3" name="Y">Flore.Y</param>
                                         </action>
                                         <action id="9" name="Set scale" sid="3839566862524458" type="Flore">
-                                            <param id="0" name="Scale">0.8</param>
+                                            <param id="0" name="Scale">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -206,11 +212,16 @@
                                 <event-block sid="6616215358450556">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="9832375718913346" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%23</param>
+                                            <param id="0" name="First value">FLore.PresentPlatform%13</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="2331078306766783" type="System">
+                                            <param id="0" name="Variable">WorldSection</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="9615283029555242" type="System">
@@ -226,9 +237,15 @@
                                 <event-block sid="209666610400614">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="3920147378114607" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%31</param>
+                                            <param id="0" name="First value">FLore.PresentPlatform%23</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="9592365084252639" type="System" />
+                                        <condition disabled="1" id="-14" name="Compare variable" sid="6108791845463145" type="System">
+                                            <param id="0" name="Variable">WorldSection</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -246,11 +263,16 @@
                                 <event-block sid="3670183887268469">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8611339085520647" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%41</param>
+                                            <param id="0" name="First value">FLore.PresentPlatform%36</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="2253535649633367" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="6944298204547933" type="System">
+                                            <param id="0" name="Variable">WorldSection</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="5439884585492742" type="Flore">
@@ -270,6 +292,11 @@
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="1194195321343731" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="9139287175137089" type="System">
+                                            <param id="0" name="Variable">WorldSection</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="7074228638122132" type="Flore">
@@ -283,11 +310,16 @@
                                 <event-block sid="5013791727522338">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="3874987527597237" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%36</param>
+                                            <param id="0" name="First value">FLore.PresentPlatform%50</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9866535828008981" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="9364978945037029" type="System">
+                                            <param id="0" name="Variable">WorldSection</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Spawn another object" sid="6948595900750753" type="Flore">
@@ -388,6 +420,26 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Updating world section by Resetting Platformcunt</comment>
+        <event-block sid="5774667726360637">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="131866670385183" type="System">
+                    <param id="0" name="Variable">PlatformCount</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3844461780394388" type="System">
+                    <param id="0" name="Variable">PlatformCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="5984559747419489" type="System">
+                    <param id="0" name="Variable">WorldSection</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Always scroll to the current top position the player has reached, but never scroll horizontally.</comment>
         <event-block sid="1299980061894307">
             <conditions>
@@ -395,7 +447,7 @@
             </conditions>
             <actions>
                 <action id="-7" name="Scroll to position" sid="7104285938714312" type="System">
-                    <param id="0" name="X">400</param>
+                    <param id="0" name="X">LayoutWidth/2</param>
                     <param id="1" name="Y">ScrollTo</param>
                 </action>
             </actions>

@@ -423,5 +423,61 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="6195811873769205" title="Mushroom Animation">
+            <sub-events>
+                <comment>HealthCollector</comment>
+                <event-block sid="2160354328240938">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="9507517024491867" type="HealthCollector" />
+                        <condition id="-6" name="Every X seconds" sid="8119055479481086" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3806568388954418" type="HealthCollector">
+                            <param id="0" name="Instance variable">RotateTowards</param>
+                            <param id="1" name="Value">-(Self.RotateTowards)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="59638913591912">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="3989205578508322" type="HealthCollector" />
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Rotate toward angle" sid="9398706672539598" type="HealthCollector">
+                            <param id="0" name="Degrees">0.1</param>
+                            <param id="1" name="Angle">Self.RotateTowards</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Spring</comment>
+                <event-block sid="2794424069790911">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1345316075981079" type="Spring" />
+                        <condition id="-6" name="Every X seconds" sid="7317104069347061" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7649310514293223" type="Spring">
+                            <param id="0" name="Instance variable">RotateTowards</param>
+                            <param id="1" name="Value">-(Self.RotateTowards)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3621390604308443">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="5142197985240021" type="HealthCollector" />
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Rotate toward angle" sid="8896858440341703" type="Spring">
+                            <param id="0" name="Degrees">0.1</param>
+                            <param id="1" name="Angle">Self.RotateTowards</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
