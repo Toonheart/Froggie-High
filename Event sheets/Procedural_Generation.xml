@@ -38,17 +38,17 @@
                     <param id="0" name="Variable">NextBackground</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="659997937205841" type="Frog">
+                <action behavior="8Direction" id="8" name="Set enabled" sid="659997937205841" type="Froggie">
                     <param id="0" name="State">0</param>
                 </action>
-                <action behavior="Platform" id="11" name="Set enabled" sid="8725485988607973" type="Frog">
+                <action behavior="Platform" id="11" name="Set enabled" sid="8725485988607973" type="Froggie">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="960955531930956">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="4130440275451198" type="Flore">
+                <condition id="-7" name="Compare instance variable" sid="4130440275451198" type="NormalFloor">
                     <param id="0" name="Instance variable">Flip</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Value">1</param>
@@ -56,7 +56,7 @@
                 <condition id="-4" name="Trigger once while true" sid="3113089825936074" type="System" />
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="5706048084309893" type="Flore">
+                <action id="7" name="Set mirrored" sid="5706048084309893" type="NormalFloor">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
@@ -66,7 +66,7 @@
                 <condition id="-22" name="Else" sid="5202965828118392" type="System" />
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="1842206404125091" type="Flore">
+                <action id="7" name="Set mirrored" sid="1842206404125091" type="NormalFloor">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
@@ -88,7 +88,7 @@
         <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
         <event-block sid="7564923252496036">
             <conditions>
-                <condition id="-2" name="Compare Y" sid="6368562698250753" type="Frog">
+                <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                     <param id="0" name="Comparison">2</param>
                     <param id="1" name="Y co-ordinate">ScrollTo</param>
                 </condition>
@@ -96,7 +96,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="1629963605070914" type="System">
                     <param id="0" name="Variable">ScrollTo</param>
-                    <param id="1" name="Value">Frog.Y</param>
+                    <param id="1" name="Value">Froggie.Y</param>
                 </action>
             </actions>
             <sub-events>
@@ -116,19 +116,19 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="4334819017469745" type="System">
-                            <param id="0" name="Object to create">Flore</param>
+                            <param id="0" name="Object to create">NormalFloor</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-20</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2425959312110411" type="Flore">
+                        <action id="-10" name="Set value" sid="2425959312110411" type="NormalFloor">
                             <param id="0" name="Instance variable">PresentPlatform</param>
                             <param id="1" name="Value">PlatformCount</param>
                         </action>
-                        <action id="9" name="Set scale" sid="4112574036787129" type="Flore">
+                        <action id="9" name="Set scale" sid="4112574036787129" type="NormalFloor">
                             <param id="0" name="Scale">random(0.5,1)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7935889078840197" type="Flore">
+                        <action id="-10" name="Set value" sid="7935889078840197" type="NormalFloor">
                             <param id="0" name="Instance variable">Flip</param>
                             <param id="1" name="Value">random(0,2)</param>
                         </action>
@@ -157,7 +157,7 @@
                         <event-block sid="7500555295788574">
                             <conditions>
                                 <condition id="-11" name="For Each" sid="4012553066238802" type="System">
-                                    <param id="0" name="Object">Flore</param>
+                                    <param id="0" name="Object">NormalFloor</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -166,104 +166,114 @@
                                 <event-block disabled="1" sid="3400785517766716">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="8543724869223069" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%15</param>
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%15</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="6275546487668978" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="278094510474658" type="Flore">
+                                        <action id="0" name="Spawn another object" sid="278094510474658" type="NormalFloor">
                                             <param id="0" name="Object">Shield</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="7464862927547873" type="Flore" />
+                                        <action id="-9" name="Destroy" sid="7464862927547873" type="NormalFloor" />
                                     </actions>
                                 </event-block>
                                 <comment>Electro Enemy</comment>
                                 <event-block sid="5869404266771602">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="8043050106848244" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%30</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9370997679174675" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="876017431833087" type="System">
-                                            <param id="0" name="Variable">WorldSection</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="9192741440649941" type="System">
-                                            <param id="0" name="Object to create">ElectroOcto</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Flore.X</param>
-                                            <param id="3" name="Y">Flore.Y</param>
-                                        </action>
-                                        <action id="9" name="Set scale" sid="3839566862524458" type="Flore">
-                                            <param id="0" name="Scale">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Spring Generation</comment>
-                                <event-block sid="6616215358450556">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9832375718913346" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%13</param>
+                                        <condition id="-8" name="Compare two values" sid="650428344985507" type="System">
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%Enemy_ElectroOctoGap</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="2331078306766783" type="System">
+                                        <condition id="-14" name="Compare variable" sid="876017431833087" type="System">
                                             <param id="0" name="Variable">WorldSection</param>
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="9615283029555242" type="System">
-                                            <param id="0" name="Object to create">Spring</param>
+                                        <action id="-3" name="Create object" sid="9192741440649941" type="System">
+                                            <param id="0" name="Object to create">Enemy_ElectroOcto</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Flore.X</param>
-                                            <param id="3" name="Y">Flore.Y-96</param>
+                                            <param id="2" name="X">NormalFloor.X</param>
+                                            <param id="3" name="Y">NormalFloor.Y</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Destroy" sid="2796877449252215" type="Flore" />
+                                        <action id="9" name="Set scale" sid="3839566862524458" type="NormalFloor">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4068328289620632" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
-                                <comment>SpikeOcto</comment>
+                                <comment>HyperJump Mushroom Generation</comment>
+                                <event-block sid="6616215358450556">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="5182937493617939" type="System">
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%Musroom_HyperjumpGap</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="9615283029555242" type="System">
+                                            <param id="0" name="Object to create">Mushroom_HyperJump</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">NormalFloor.X</param>
+                                            <param id="3" name="Y">NormalFloor.Y-96</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Destroy" sid="2796877449252215" type="NormalFloor" />
+                                        <action id="-10" name="Set value" sid="812508345334304" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="7354787636964542" type="NormalFloor">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>SpikyOcto</comment>
                                 <event-block sid="209666610400614">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="3920147378114607" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%23</param>
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%Enymy_SpikyOctoGap</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9592365084252639" type="System" />
-                                        <condition disabled="1" id="-14" name="Compare variable" sid="6108791845463145" type="System">
+                                        <condition id="-14" name="Compare variable" sid="6108791845463145" type="System">
                                             <param id="0" name="Variable">WorldSection</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">2</param>
+                                            <param id="2" name="Value">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="6833049775857547" type="Flore">
-                                            <param id="0" name="Object">SpikeOcto</param>
+                                        <action id="0" name="Spawn another object" sid="6833049775857547" type="NormalFloor">
+                                            <param id="0" name="Object">Enemy_SpikyOcto</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="9" name="Set scale" sid="2588879310930618" type="Flore">
+                                        <action id="9" name="Set scale" sid="2588879310930618" type="NormalFloor">
                                             <param id="0" name="Scale">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1013602849806819" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <comment>Rocket spawn</comment>
                                 <event-block sid="3670183887268469">
                                     <conditions>
-                                        <condition id="-8" name="Compare two values" sid="8611339085520647" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%36</param>
+                                        <condition id="-8" name="Compare two values" sid="2231877963378315" type="System">
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%Mushroom_RainbowGap</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
@@ -271,25 +281,36 @@
                                         <condition id="-14" name="Compare variable" sid="6944298204547933" type="System">
                                             <param id="0" name="Variable">WorldSection</param>
                                             <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">3</param>
+                                            <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="5439884585492742" type="Flore">
-                                            <param id="0" name="Object">Rocket_Inv</param>
+                                        <action id="0" name="Spawn another object" sid="5439884585492742" type="NormalFloor">
+                                            <param id="0" name="Object">Mushroom_Rainbow</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="3389489019650843" type="Flore" />
+                                        <action id="-10" name="Set value" sid="3613395592270264" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="7812736599053993" type="NormalFloor">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
-                                <comment>Broken Flore</comment>
+                                <comment>Broken Floor</comment>
                                 <event-block sid="4472921648787923">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="2196035452296655" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%39</param>
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%BrokenFloorGap</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="6563297785794941" type="System">
+                                            <param id="0" name="First value">PlatformCount</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">100</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="1194195321343731" type="System" />
                                         <condition id="-14" name="Compare variable" sid="9139287175137089" type="System">
@@ -299,78 +320,52 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="7074228638122132" type="Flore">
-                                            <param id="0" name="Object">BrokenFlore</param>
+                                        <action id="0" name="Spawn another object" sid="7074228638122132" type="NormalFloor">
+                                            <param id="0" name="Object">BrokenFloor</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="3617079643035332" type="Flore" />
+                                        <action id="-9" name="Destroy" sid="3617079643035332" type="NormalFloor" />
+                                        <action id="-10" name="Set value" sid="4132074522941632" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="5013791727522338">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="3874987527597237" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%50</param>
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%100</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="9968914978655234" type="System">
+                                            <param id="0" name="First value">WorldSection%2</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9866535828008981" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="9364978945037029" type="System">
-                                            <param id="0" name="Variable">WorldSection</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">4</param>
-                                        </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Spawn another object" sid="6948595900750753" type="Flore">
-                                            <param id="0" name="Object">HealthCollector</param>
+                                        <action id="0" name="Spawn another object" sid="6948595900750753" type="NormalFloor">
+                                            <param id="0" name="Object">Mushroom_Health</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action disabled="1" id="-9" name="Destroy" sid="7755887190943894" type="Flore" />
-                                    </actions>
-                                </event-block>
-                                <event-block sid="9132199170922339">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9505388436923064" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%5</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="6022078112605192" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="9467908992876579" type="System">
-                                            <param id="0" name="Object to create">MarkerTop</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y-240</param>
+                                        <action id="-10" name="Set value" sid="3263821134205995" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="165364313886122" type="System">
-                                            <param id="0" name="Object to create">MarkerBottom</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y-120</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="1831225762208223" type="System">
-                                            <param id="0" name="Object to create">Candy</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y-160</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="4401157168156063" type="Candy">
-                                            <param id="0" name="Instance variable">CandySelector</param>
-                                            <param id="1" name="Value">round(random(1,15))</param>
-                                        </action>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="2968890845742542" type="Candy">
-                                            <param id="0" name="Control">2</param>
+                                        <action disabled="1" id="-9" name="Destroy" sid="7755887190943894" type="NormalFloor" />
+                                        <action id="9" name="Set scale" sid="5810309268313011" type="NormalFloor">
+                                            <param id="0" name="Scale">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="9747001268058117">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="1957492400067428" type="System">
-                                            <param id="0" name="First value">FLore.PresentPlatform%16</param>
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%12</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">0</param>
                                         </condition>
@@ -378,16 +373,371 @@
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="4177732648863923" type="System">
-                                            <param id="0" name="Object to create">MovingFlore</param>
+                                            <param id="0" name="Object to create">MovingFloor</param>
                                             <param id="1" name="Layer">&quot;Game&quot;</param>
-                                            <param id="2" name="X">FLore.X</param>
-                                            <param id="3" name="Y">FLore.Y</param>
+                                            <param id="2" name="X">NormalFloor.X</param>
+                                            <param id="3" name="Y">NormalFloor.Y</param>
                                         </action>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="9187565567291518" type="MovingFlore">
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="9187565567291518" type="MovingFloor">
                                             <param id="0" name="Control">0</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="5403072182692688" type="Flore" />
+                                        <action id="-9" name="Destroy" sid="5403072182692688" type="NormalFloor" />
                                     </actions>
+                                </event-block>
+                                <comment>Generating candies Randomly for every random(2,5) gap.</comment>
+                                <comment>Check If selected Platform no is divisable by 5to2 top to bottom Generate the pattern and skip the below patterns</comment>
+                                <comment>If platform no divisable by no(5to1) generate the same no pattern</comment>
+                                <event-block sid="9132199170922339">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9505388436923064" type="System">
+                                            <param id="0" name="First value">NormalFloor.PresentPlatform%round(random(1,4))</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="6022078112605192" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="4248196051799729" type="NormalFloor">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3575496459101002">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="7992492774246291" type="System">
+                                                    <param id="0" name="First value">NormalFloor.PresentPlatform%4</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="1367205729970308" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="7596884967836583" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="1819693150230476" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-288</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="6221630607753264" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-288</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="4947126884675295" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-288</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="2464071879010137" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="7583196214773485" type="Candy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="8788900200596228" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="7179515651439784" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="9512540027748394" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="2893025639306441" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="6605162683714923" type="Candy">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="4622137965364609" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="6304217692488506" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="4192879360245584" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7094878116335125" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="4240080607812945" type="Candy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="1737067943331578" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+288</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="7289843918331804" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+288</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="6107436916693063" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+288</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8758010949013505" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="797217250355169" type="Candy">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3226175333785027" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9987340829778488">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="2853454391595579" type="System">
+                                                    <param id="0" name="First value">NormalFloor.PresentPlatform%3</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="2090814308947424" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="2943009358772697" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="4098409735084163" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="3121228922530984" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="1650003200703232" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="9164374402440044" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="3836068502705735" type="Candy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="492871418603701" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-192</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="5357934278332217" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-192</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="3916004163984458" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-192</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="709413781873461" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="9901879864339348" type="Candy">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="8655499566818277" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+192</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="2401797708452616" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+192</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="7897011973458871" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+192</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8701843926016699" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="3985813207190025" type="Candy">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3481163038476939" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2219435359507574">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="2823664979830947" type="System">
+                                                    <param id="0" name="First value">NormalFloor.PresentPlatform%2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="8355383041936221" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="2530237718188844" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="5320195016191817" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="5304303837326775" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="5033129540574966" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X-96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="6197421718157845" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="8848125868103052" type="Candy">
+                                                    <param id="0" name="Control">3</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="7798843048067626" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="4981653570263664" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="8247906818921406" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X+96</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="4285115326711538" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="4832816256959256" type="Candy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="9695267706642402" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6457438317176375">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8247996550629271" type="System">
+                                                    <param id="0" name="First value">NormalFloor.PresentPlatform%1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="8809065242098258" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="1637255864879543" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="8629271103047416" type="System">
+                                                    <param id="0" name="Object to create">MarkerTop</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-240</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="2322347510348575" type="System">
+                                                    <param id="0" name="Object to create">MarkerBottom</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-120</param>
+                                                </action>
+                                                <action id="-3" name="Create object" sid="9340966169138581" type="System">
+                                                    <param id="0" name="Object to create">Candy</param>
+                                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                    <param id="2" name="X">NormalFloor.X</param>
+                                                    <param id="3" name="Y">NormalFloor.Y-160</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="5814259959951105" type="Candy">
+                                                    <param id="0" name="Instance variable">CandySelector</param>
+                                                    <param id="1" name="Value">round(random(1,15))</param>
+                                                </action>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="8599022553548719" type="Candy">
+                                                    <param id="0" name="Control">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8480561732595545" type="NormalFloor">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -463,7 +813,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="3608622602086264" type="Frog">
+                <action behavior="Platform" id="7" name="Simulate control" sid="3608622602086264" type="Froggie">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -478,7 +828,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="7536949399285842" type="Frog">
+                <action behavior="Platform" id="7" name="Simulate control" sid="7536949399285842" type="Froggie">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -497,7 +847,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="4199462513212077" type="Frog">
+                <action behavior="Platform" id="7" name="Simulate control" sid="4199462513212077" type="Froggie">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
@@ -516,7 +866,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="2586769890745782" type="Frog">
+                <action behavior="Platform" id="7" name="Simulate control" sid="2586769890745782" type="Froggie">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
@@ -524,18 +874,18 @@
         <comment>Scroll down platform is falling</comment>
         <event-block sid="553760730032873">
             <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="7779786384658105" type="Frog" />
+                <condition behavior="Platform" id="4" name="Is falling" sid="7779786384658105" type="Froggie" />
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="7734334540091797">
                     <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="8324506297743848" type="Frog" />
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8324506297743848" type="Froggie" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="6873142371946226" type="System">
                             <param id="0" name="Variable">ScrollTo</param>
-                            <param id="1" name="Value">Frog.Y</param>
+                            <param id="1" name="Value">Froggie.Y</param>
                         </action>
                         <action id="0" name="Play" sid="5761401325832736" type="Audio">
                             <param id="0" name="Audio file">Fall</param>
@@ -548,13 +898,13 @@
                 <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult</comment>
                 <event-block sid="2008927361079252">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="3845222609764955" type="Frog">
+                        <condition id="-2" name="Compare Y" sid="3845222609764955" type="Froggie">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">Frog.FallDistance+1280</param>
+                            <param id="1" name="Y co-ordinate">Froggie.FallDistance+1280</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="2070966277354902" type="Frog" />
+                        <action id="-9" name="Destroy" sid="2070966277354902" type="Froggie" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -572,7 +922,7 @@
         <comment>If game over update the high score and go to game over screen </comment>
         <event-block sid="8677665189919798">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="9741170479441383" type="Frog" />
+                <condition id="-19" name="On destroyed" sid="9741170479441383" type="Froggie" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="6121838680679106" type="System">
@@ -931,6 +1281,35 @@
             <actions>
                 <action behavior="8Direction" id="7" name="Simulate control" sid="783124032621767" type="Candy">
                     <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description=" if PlatformCount Reaches 500(i.eWorldSection=5),Reset all the gap values" sid="1781802021589589" title="Updating Deficulty" />
+        <event-block sid="330921382092189">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="73206864997253" type="System">
+                    <param id="0" name="Variable">WorldSection</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="914421176439451" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9884147297555697" type="System">
+                    <param id="0" name="Variable">Enemy_ElectroOctoGap</param>
+                    <param id="1" name="Value">26</param>
+                </action>
+                <action id="-9" name="Set value" sid="136392301478351" type="System">
+                    <param id="0" name="Variable">Musroom_HyperjumpGap</param>
+                    <param id="1" name="Value">18</param>
+                </action>
+                <action id="-9" name="Set value" sid="6503282261622032" type="System">
+                    <param id="0" name="Variable">Enymy_SpikyOctoGap</param>
+                    <param id="1" name="Value">16</param>
+                </action>
+                <action id="-9" name="Set value" sid="4905250128378626" type="System">
+                    <param id="0" name="Variable">Mushroom_RainbowGap</param>
+                    <param id="1" name="Value">41</param>
                 </action>
             </actions>
         </event-block>

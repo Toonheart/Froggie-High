@@ -5,7 +5,7 @@
     <events>
         <event-block disabled="1" sid="1128794562502145">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="8164247335662345" type="Frog">
+                <condition id="0" name="On collision with another object" sid="8164247335662345" type="Froggie">
                     <param id="0" name="Object">Enemy</param>
                 </condition>
             </conditions>
@@ -13,7 +13,7 @@
             <sub-events>
                 <event-block disabled="1" sid="4918581145483142">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="688573155296096" type="Frog">
+                        <condition id="-7" name="Compare instance variable" sid="688573155296096" type="Froggie">
                             <param id="0" name="Instance variable">SheildStatus</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -21,7 +21,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8622818551898648" type="Enemy" />
-                        <action id="-10" name="Set value" sid="7032203434646064" type="Frog">
+                        <action id="-10" name="Set value" sid="7032203434646064" type="Froggie">
                             <param id="0" name="Instance variable">SheildStatus</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -32,7 +32,7 @@
                         <condition id="-22" name="Else" sid="1689369426597879" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="3384858930061371" type="Frog" />
+                        <action id="-9" name="Destroy" sid="3384858930061371" type="Froggie" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -40,26 +40,26 @@
         <comment>Kill the frog when landed on enemy platform if sheild is not active</comment>
         <event-block disabled="1" sid="9616499041551387">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="9518337180007264" type="Frog">
-                    <param id="0" name="Object">ElectroOcto</param>
+                <condition id="0" name="On collision with another object" sid="9518337180007264" type="Froggie">
+                    <param id="0" name="Object">Enemy_ElectroOcto</param>
                 </condition>
-                <condition id="2" name="Is playing" sid="3885905329458171" type="ElectroOcto">
+                <condition id="2" name="Is playing" sid="3885905329458171" type="Enemy_ElectroOcto">
                     <param id="0" name="Animation">&quot;Active&quot;</param>
                 </condition>
-                <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="7030001147998511" type="Frog" />
+                <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="7030001147998511" type="Froggie" />
             </conditions>
             <actions />
             <sub-events>
                 <event-block disabled="1" sid="252874196551774">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5986736969352667" type="Frog">
+                        <condition id="-7" name="Compare instance variable" sid="5986736969352667" type="Froggie">
                             <param id="0" name="Instance variable">SheildStatus</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="8625158487098553" type="Frog">
+                        <action id="-12" name="Subtract from" sid="8625158487098553" type="Froggie">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -70,33 +70,33 @@
         <comment>Kill the Enemy if Frog if sheild is active and jumps on it.</comment>
         <event-block disabled="1" sid="5070315223718897">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="3674859376535979" type="Frog">
-                    <param id="0" name="Object">ElectroOcto</param>
+                <condition id="0" name="On collision with another object" sid="3674859376535979" type="Froggie">
+                    <param id="0" name="Object">Enemy_ElectroOcto</param>
                 </condition>
-                <condition id="2" name="Is playing" sid="6092920533080362" type="ElectroOcto">
+                <condition id="2" name="Is playing" sid="6092920533080362" type="Enemy_ElectroOcto">
                     <param id="0" name="Animation">&quot;Active&quot;</param>
                 </condition>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="39810752264695" type="Frog" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="39810752264695" type="Froggie" />
             </conditions>
             <actions />
             <sub-events>
                 <event-block disabled="1" sid="202152737275933">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3963906860715873" type="Frog">
+                        <condition id="-7" name="Compare instance variable" sid="3963906860715873" type="Froggie">
                             <param id="0" name="Instance variable">SheildStatus</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="4985910055500294" type="Frog">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4985910055500294" type="Froggie">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="4" name="Set animation" sid="7482822376142037" type="ElectroOcto">
+                        <action id="4" name="Set animation" sid="7482822376142037" type="Enemy_ElectroOcto">
                             <param id="0" name="Animation">&quot;Destroyed&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="6119678085043918" type="Frog">
+                        <action id="-10" name="Set value" sid="6119678085043918" type="Froggie">
                             <param id="0" name="Instance variable">SheildStatus</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -111,13 +111,13 @@
         <comment>If Frog Landed on Spikes kill the frog</comment>
         <event-block disabled="1" sid="551213224113013">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="8066993545523013" type="Frog">
-                    <param id="0" name="Object">SpikeOcto</param>
+                <condition id="0" name="On collision with another object" sid="8066993545523013" type="Froggie">
+                    <param id="0" name="Object">Enemy_SpikyOcto</param>
                 </condition>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="8737235101750968" type="Frog" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="8737235101750968" type="Froggie" />
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="7853315808441206" type="Frog">
+                <action id="-12" name="Subtract from" sid="7853315808441206" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -125,12 +125,12 @@
         </event-block>
         <event-block disabled="1" sid="1672483921609498">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="4575779822867694" type="Frog">
-                    <param id="0" name="Object">FlyingEnemyL</param>
+                <condition id="0" name="On collision with another object" sid="4575779822867694" type="Froggie">
+                    <param id="0" name="Object">Enemy_FlyingRight</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="5914160792348693" type="Frog">
+                <action id="-12" name="Subtract from" sid="5914160792348693" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -141,13 +141,13 @@
                 <event-block sid="4534341947617387">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3627816815798224" type="System">
-                            <param id="0" name="First value">distance(Frog.X,Frog.Y,SpikeOcto.X,SpikeOcto.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SpikyOcto.X,Enemy_SpikyOcto.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">256</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="7690357125875107" type="SpikeOcto">
+                        <action id="4" name="Set animation" sid="7690357125875107" type="Enemy_SpikyOcto">
                             <param id="0" name="Animation">&quot;SpikesOut&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -156,14 +156,72 @@
                 <event-block sid="8283194850819276">
                     <conditions>
                         <condition id="-8" inverted="1" name="Compare two values" sid="8662847677243667" type="System">
-                            <param id="0" name="First value">distance(Frog.X,Frog.Y,SpikeOcto.X,SpikeOcto.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SpikyOcto.X,Enemy_SpikyOcto.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">256</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9462691201327258" type="SpikeOcto">
+                        <action id="4" name="Set animation" sid="9462691201327258" type="Enemy_SpikyOcto">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1874447134393531" title="Activating ElectroOcto">
+            <sub-events>
+                <event-block sid="1512705190760213">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6207269346798033" type="System">
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_ElectroOcto.X,Enemy_ElectroOcto.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">256</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="164775620908785" type="Enemy_ElectroOcto">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6623681670892233">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7577630412842227" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4933318224028831" type="Enemy_ElectroOcto">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="3549942773088316">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="2930363246621977" type="System">
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SpikyOcto.X,Enemy_SpikyOcto.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">256</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2973473103118223" type="Enemy_ElectroOcto">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2138191632947454">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5331926695398183" type="Froggie">
+                            <param id="0" name="Object">Enemy_ElectroOcto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5826520170179946" type="Enemy_ElectroOcto">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

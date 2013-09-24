@@ -85,20 +85,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ElectroOcto" uid="15">
+                <instance type="Enemy_ElectroOcto" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -108,8 +101,8 @@
                         <width>256</width>
                         <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.546875</hotspotX>
-                        <hotspotY>0.9765625</hotspotY>
+                        <hotspotX>0.46875</hotspotX>
+                        <hotspotY>0.92578125</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -152,7 +145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Rocket_Inv" uid="22">
+                <instance type="Mushroom_Rainbow" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -160,7 +153,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <RotateTowards>0</RotateTowards>
+                        <RotateTowards>-90</RotateTowards>
+                        <Gap>0</Gap>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -177,7 +171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FlyingEnemyL" uid="29">
+                <instance type="Enemy_FlyingRight" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -203,7 +197,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FlyingEnemyR" uid="39">
+                <instance type="Enemy_FlyingLeft" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -250,7 +244,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossOcto" uid="46">
+                <instance type="Enemy_BOSS1" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -295,8 +289,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>354.557495117</x>
-                        <y>249.25</y>
+                        <x>505</x>
+                        <y>239</y>
                         <z>0</z>
                         <width>398</width>
                         <height>147</height>
@@ -307,7 +301,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SpikeOcto" uid="3">
+                <instance type="Enemy_SpikyOcto" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -354,7 +348,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BrokenFlore" uid="12">
+                <instance type="BrokenFloor" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -374,8 +368,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>281</x>
-                        <y>336</y>
+                        <x>297</x>
+                        <y>379</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -386,7 +380,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Rocket" uid="26">
+                <instance type="Unicorn" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -411,7 +405,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HealthCollector" uid="64">
+                <instance type="Mushroom_Health" uid="64">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -436,7 +430,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Spring" uid="20">
+                <instance type="Mushroom_HyperJump" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -461,7 +455,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BrokenPartOne" uid="65">
+                <instance type="BrokenFloor_Part1" uid="65">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -497,7 +491,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BrokenPartTwo" uid="66">
+                <instance type="BrokenFloor_Part2" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -533,7 +527,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MovingFlore" uid="67">
+                <instance type="MovingFloor" uid="67">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -561,8 +555,77 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-222</x>
-                        <y>704</y>
+                        <x>-158</x>
+                        <y>751</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bling" uid="73">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSelection>1</AnimationSelection>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.4</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-141</x>
+                        <y>604</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Musroom_Bling" uid="75">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.4</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-405</x>
+                        <y>790</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>

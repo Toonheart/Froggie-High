@@ -10,9 +10,9 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -23,8 +23,9 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -52,7 +53,7 @@
         <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
     <object-folder expanded="1">
-        <object-type name="Frog" sid="2568297134087841">
+        <object-type name="Froggie" sid="2568297134087841">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="SheildStatus" sid="141413593979582" type="number" />
@@ -88,11 +89,12 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Flore" sid="2006648460391985">
+        <object-type name="NormalFloor" sid="2006648460391985">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Flip" sid="2929393222755371" type="number" />
                 <instance-variable name="PresentPlatform" sid="5321085116625376" type="number" />
+                <instance-variable comment="1=Powerup spawned on platform,0=Idol" name="Status" sid="8422594236264572" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Jumpthru" sid="1992131461425726">
@@ -123,7 +125,7 @@
         <object-type name="Debug" sid="4723934658035419">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Spring" sid="3673829393400018">
+        <object-type name="Mushroom_HyperJump" sid="3673829393400018">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="RotateTowards" sid="6717419788593246" type="number" />
@@ -145,36 +147,28 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ElectroOcto" sid="8030990069696486">
+        <object-type name="Enemy_ElectroOcto" sid="8030990069696486">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="6860708516917746">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5338402835456691" speed="5">
-                    <frame duration="1" hotspotX="0.546875" hotspotY="0.976563">
-                        <collision-poly>
-                            <point x="0.265625" y="0.265625" />
-                            <point x="0.5" y="0.300781" />
-                            <point x="0.757813" y="0.242188" />
-                            <point x="0.980469" y="0.5" />
-                            <point x="0.859375" y="0.859375" />
-                            <point x="0.0898438" y="0.910156" />
-                            <point x="0.0742188" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="13" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5338402835456691" speed="8">
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
+                    <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
                 </animation>
-                <animation framecount="1" loop="0" name="Destroyed" pingpong="0" repeatcount="1" repeatto="0" sid="5465971509966507" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506024">
-                        <collision-poly>
-                            <point x="0.04" y="0.771084" />
-                            <point x="0.989999" y="0.771084" />
-                            <point x="0.98" y="0.975904" />
-                            <point x="0.04" y="0.951807" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="3" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="3222728849908977" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -208,10 +202,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpikeOcto" sid="4754256885085206">
+        <object-type name="Enemy_SpikyOcto" sid="4754256885085206">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7951580381595795" speed="2">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7951580381595795" speed="1">
                     <frame duration="1" hotspotX="0.550781" hotspotY="0.957031">
                         <collision-poly>
                             <point x="0.214844" y="0.214844" />
@@ -253,7 +247,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BrokenFlore" sid="9738418166113583">
+        <object-type name="BrokenFloor" sid="9738418166113583">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Condition" sid="6134222914890784" type="number" />
@@ -385,10 +379,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Rocket_Inv" sid="7388654282171717">
+        <object-type name="Mushroom_Rainbow" sid="7388654282171717">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="RotateTowards" sid="6469058247552404" type="number" />
+                <instance-variable comment="Interval between Rainbow mushrooms - Max 3 per stage" name="Gap" sid="5645147159164049" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4013014788995553" speed="5">
@@ -407,7 +402,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Rocket" sid="3677134661108742">
+        <object-type name="Unicorn" sid="3677134661108742">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="35108253428713">
@@ -431,7 +426,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FlyingEnemyL" sid="1326056781349947">
+        <object-type name="Enemy_FlyingRight" sid="1326056781349947">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="FlyAngle" sid="461791340805239" type="number" />
@@ -463,16 +458,16 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="981822620046338" speed="5">
-                    <frame duration="1" hotspotX="0.502222" hotspotY="0.502222">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155">
                         <collision-poly>
-                            <point x="0.186667" y="0.186667" />
-                            <point x="0.497778" y="0.142222" />
-                            <point x="0.813333" y="0.186667" />
-                            <point x="0.844444" y="0.497778" />
-                            <point x="0.791111" y="0.791111" />
-                            <point x="0.497778" y="0.826667" />
-                            <point x="0.208889" y="0.791111" />
-                            <point x="0.155556" y="0.497778" />
+                            <point x="0.15625" y="0.154639" />
+                            <point x="0.5" y="0" />
+                            <point x="0.84375" y="0.154639" />
+                            <point x="1" y="0.494845" />
+                            <point x="0.84375" y="0.845361" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15625" y="0.845361" />
+                            <point x="0" y="0.494845" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -611,7 +606,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FlyingEnemyR" sid="2821488942453256">
+        <object-type name="Enemy_FlyingLeft" sid="2821488942453256">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="FlyAngle" sid="9344712804363003" type="number" />
@@ -664,7 +659,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="FrogMain" sid="7069786143357697">
+        <object-type name="MainMenu_Froggie" sid="7069786143357697">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2008026346958739" speed="5">
@@ -721,7 +716,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="WorldOne" sid="9294267832891801">
+        <object-type name="Icon_WorldOne" sid="9294267832891801">
             <plugin id="Sprite" />
             <effects>
                 <effect-type name="Grayscale">
@@ -745,7 +740,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="WorldTwo" sid="4285692993695505">
+        <object-type name="Icon_WorldTwo" sid="4285692993695505">
             <plugin id="Sprite" />
             <effects>
                 <effect-type name="Grayscale">
@@ -769,7 +764,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="WorldThree" sid="3883327321757972">
+        <object-type name="Icon_WorldThree" sid="3883327321757972">
             <plugin id="Sprite" />
             <effects>
                 <effect-type name="Grayscale">
@@ -991,16 +986,16 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="1" name="TwoColor1" pingpong="0" repeatcount="1" repeatto="0" sid="6131084055154156" speed="6">
-                    <frame duration="1" hotspotX="-1" hotspotY="-1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.28125" y="0.28125" />
-                            <point x="0.5" y="0.203125" />
-                            <point x="0.71875" y="0.28125" />
-                            <point x="0.820313" y="0.5" />
-                            <point x="0.726563" y="0.726563" />
-                            <point x="0.5" y="0.820313" />
-                            <point x="0.265625" y="0.734375" />
-                            <point x="0.179688" y="0.5" />
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.351563" />
+                            <point x="0.609375" y="0.390625" />
+                            <point x="0.660156" y="0.5" />
+                            <point x="0.613281" y="0.613281" />
+                            <point x="0.5" y="0.660156" />
+                            <point x="0.382813" y="0.617188" />
+                            <point x="0.339844" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1222,7 +1217,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BossOcto" sid="2510711614015844">
+        <object-type name="Enemy_BOSS1" sid="2510711614015844">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="8Direction" sid="6359613209037465">
@@ -1246,7 +1241,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="HealthCollector" sid="828425602295302">
+        <object-type name="Mushroom_Health" sid="828425602295302">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="RotateTowards" sid="5499336879690081" type="number" />
@@ -1268,7 +1263,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BrokenPartOne" sid="2847920424844158">
+        <object-type name="BrokenFloor_Part1" sid="2847920424844158">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="2389271826714326">
@@ -1292,7 +1287,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BrokenPartTwo" sid="9801579586402134">
+        <object-type name="BrokenFloor_Part2" sid="9801579586402134">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="6548141934848071">
@@ -1316,7 +1311,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="MovingFlore" sid="3962374612030437">
+        <object-type name="MovingFloor" sid="3962374612030437">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="8Direction" sid="8668607825342888">
@@ -1418,42 +1413,211 @@
         <object-type global="1" name="Square_Y" sid="9211350458261207">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="Bling" sid="2380749721635889">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="AnimationSelection" sid="1514269292039135" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="9340825800713298">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="One" pingpong="0" repeatcount="1" repeatto="0" sid="6248830506573026" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.519531" y="0.519531" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.738281" y="0.5" />
+                            <point x="0.542969" y="0.542969" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.644531" y="0.355469" />
+                            <point x="0.347656" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Two" pingpong="0" repeatcount="1" repeatto="0" sid="2440694860561369" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.519531" y="0.519531" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.738281" y="0.5" />
+                            <point x="0.542969" y="0.542969" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.644531" y="0.355469" />
+                            <point x="0.347656" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Three" pingpong="0" repeatcount="1" repeatto="0" sid="6635498132241739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.519531" y="0.519531" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.738281" y="0.5" />
+                            <point x="0.542969" y="0.542969" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.644531" y="0.355469" />
+                            <point x="0.347656" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Mushroom" pingpong="0" repeatcount="1" repeatto="0" sid="3780879043021535" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.519531" y="0.519531" />
+                            <point x="0.5" y="0.800781" />
+                            <point x="0.828125" y="0.171875" />
+                            <point x="0.761719" y="0.5" />
+                            <point x="0.773438" y="0.773438" />
+                            <point x="0.5" y="0.863281" />
+                            <point x="0.640625" y="0.359375" />
+                            <point x="0.675781" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Four" pingpong="0" repeatcount="1" repeatto="0" sid="1936860435524949" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.652344" y="0.5" />
+                            <point x="0.355469" y="0.355469" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.457031" y="0.542969" />
+                            <point x="0.261719" y="0.5" />
+                            <point x="0.332031" y="0.332031" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.480469" y="0.519531" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Five" pingpong="0" repeatcount="1" repeatto="0" sid="9111751750966526" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.652344" y="0.5" />
+                            <point x="0.355469" y="0.355469" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.457031" y="0.542969" />
+                            <point x="0.261719" y="0.5" />
+                            <point x="0.332031" y="0.332031" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.480469" y="0.519531" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Six" pingpong="0" repeatcount="1" repeatto="0" sid="8161383488694535" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.652344" y="0.5" />
+                            <point x="0.355469" y="0.355469" />
+                            <point x="0.5" y="0.894531" />
+                            <point x="0.457031" y="0.542969" />
+                            <point x="0.261719" y="0.5" />
+                            <point x="0.332031" y="0.332031" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.480469" y="0.519531" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Musroom_Bling" sid="1559975668588411">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="5924473671511177">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2554076098517026" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.441406" y="0.441406" />
+                            <point x="0.5" y="0.136719" />
+                            <point x="0.675781" y="0.324219" />
+                            <point x="0.738281" y="0.5" />
+                            <point x="0.546875" y="0.546875" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.636719" y="0.363281" />
+                            <point x="0.347656" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="5759613277622181">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9052429081216783" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.648438" y="0.5" />
+                            <point x="0.824219" y="0.824219" />
+                            <point x="0.5" y="0.929688" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.0429688" y="0.5" />
+                            <point x="0.507813" y="0.492188" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="2692449303203157">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2881566788313837" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.492188" y="0.492188" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.796875" y="0.796875" />
+                            <point x="0.5" y="0.929688" />
+                            <point x="0.175781" y="0.824219" />
+                            <point x="0.351563" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
             <members>
-                <member>ElectroOcto</member>
+                <member>Enemy_ElectroOcto</member>
+                <member>Enemy_SpikyOcto</member>
+                <member>Mushroom_HyperJump</member>
                 <member>Shield</member>
-                <member>SpikeOcto</member>
-                <member>Spring</member>
             </members>
         </family>
         <family name="DestroyBelowScreen" plugin-id="Sprite" sid="3491142937482894">
             <members>
-                <member>BrokenFlore</member>
-                <member>ElectroOcto</member>
-                <member>Flore</member>
-                <member>FlyingEnemyL</member>
+                <member>BrokenFloor</member>
+                <member>Enemy_ElectroOcto</member>
+                <member>Enemy_FlyingRight</member>
+                <member>Enemy_SpikyOcto</member>
+                <member>Mushroom_HyperJump</member>
                 <member>Mushroom_Inv</member>
-                <member>Rocket_Inv</member>
+                <member>Mushroom_Rainbow</member>
+                <member>NormalFloor</member>
                 <member>Shield</member>
                 <member>Snake</member>
-                <member>SpikeOcto</member>
-                <member>Spring</member>
             </members>
         </family>
         <family name="Enemy" plugin-id="Sprite" sid="2891136451677008">
             <members>
-                <member>FlyingEnemyL</member>
-                <member>FlyingEnemyR</member>
+                <member>Enemy_FlyingLeft</member>
+                <member>Enemy_FlyingRight</member>
                 <member>Snake</member>
             </members>
         </family>
         <family name="WorldButtons" plugin-id="Sprite" sid="1184630488562264">
             <members>
-                <member>WorldOne</member>
-                <member>WorldThree</member>
-                <member>WorldTwo</member>
+                <member>Icon_WorldOne</member>
+                <member>Icon_WorldThree</member>
+                <member>Icon_WorldTwo</member>
             </members>
             <instance-variables>
                 <instance-variable name="ActiveWorld" sid="5814452950561671" type="number" />
@@ -1461,9 +1625,9 @@
         </family>
         <family name="WorldSelectors" plugin-id="Sprite" sid="7371845644784964">
             <members>
-                <member>WorldOne</member>
-                <member>WorldThree</member>
-                <member>WorldTwo</member>
+                <member>Icon_WorldOne</member>
+                <member>Icon_WorldThree</member>
+                <member>Icon_WorldTwo</member>
             </members>
         </family>
     </families>
@@ -1531,6 +1695,9 @@
     <sounds-folder expanded="1">
         <file name="Jump.ogg" />
         <file name="Fall.ogg" />
+        <file name="collectible.m4a" />
+        <file name="collectible.ogg" />
+        <file name="collectible.wav" />
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1">

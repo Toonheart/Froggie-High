@@ -7,10 +7,10 @@
             <sub-events>
                 <event-block sid="1939084024228619">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="Frog" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="Froggie" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="4278055599244851" type="Frog">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4278055599244851" type="Froggie">
                             <param id="0" name="Control">2</param>
                         </action>
                         <action id="0" name="Play" sid="7638413773604936" type="Audio">
@@ -22,7 +22,7 @@
                         <action id="-16" name="Wait" sid="4155062979572627" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="6430015576508094" type="Frog">
+                        <action id="-10" name="Set value" sid="6430015576508094" type="Froggie">
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -30,8 +30,8 @@
                 </event-block>
                 <event-block disabled="1" sid="8036971572725255">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="5022230964254386" type="Frog" />
-                        <condition id="-7" name="Compare instance variable" sid="7293669868338568" type="Frog">
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="5022230964254386" type="Froggie" />
+                        <condition id="-7" name="Compare instance variable" sid="7293669868338568" type="Froggie">
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -41,23 +41,23 @@
                 </event-block>
                 <event-block disabled="1" sid="573713319970764">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="6437567255083621" type="Frog">
-                            <param id="0" name="Object">Flore</param>
+                        <condition id="0" name="On collision with another object" sid="6437567255083621" type="Froggie">
+                            <param id="0" name="Object">NormalFloor</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="8413348856096198" type="Frog">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8413348856096198" type="Froggie">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="5991398116671374" type="Flore" />
+                        <action id="-9" name="Destroy" sid="5991398116671374" type="NormalFloor" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-block disabled="1" sid="7969804263955908">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="8121499442139454" type="Frog">
-                    <param id="0" name="Object">Flore</param>
+                <condition id="0" name="On collision with another object" sid="8121499442139454" type="Froggie">
+                    <param id="0" name="Object">NormalFloor</param>
                 </condition>
             </conditions>
             <actions>
@@ -65,7 +65,7 @@
                     <param id="0" name="Variable">Speed</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="4518910839707086" type="Flore" />
+                <action id="-9" name="Destroy" sid="4518910839707086" type="NormalFloor" />
             </actions>
         </event-block>
         <event-block disabled="1" sid="5422403866562659">
@@ -91,7 +91,7 @@
                 <condition id="-1" name="Every tick" sid="5688502696569959" type="System" />
             </conditions>
             <actions>
-                <action id="-23" name="Move at angle" sid="8425742186976728" type="Frog">
+                <action id="-23" name="Move at angle" sid="8425742186976728" type="Froggie">
                     <param id="0" name="Angle">-90</param>
                     <param id="1" name="Distance">Speed</param>
                 </action>

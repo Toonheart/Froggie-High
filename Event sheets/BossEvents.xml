@@ -19,54 +19,54 @@
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="9383390635703082" type="System">
-                    <param id="0" name="Object to create">BossOcto</param>
+                    <param id="0" name="Object to create">Enemy_BOSS1</param>
                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                     <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                     <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-300</param>
                 </action>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="3407349173097363" type="BossOcto">
+                <action behavior="8Direction" id="7" name="Simulate control" sid="3407349173097363" type="Enemy_BOSS1">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="5737626010016228">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="1812400275952007" type="BossOcto">
-                    <param id="0" name="Object">Flore</param>
+                <condition id="1" name="Is overlapping another object" sid="1812400275952007" type="Enemy_BOSS1">
+                    <param id="0" name="Object">NormalFloor</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="2373009179598332" type="Flore" />
+                <action id="-9" name="Destroy" sid="2373009179598332" type="NormalFloor" />
             </actions>
         </event-block>
         <event-block sid="902146401947285">
             <conditions>
-                <condition id="-3" name="Is on-screen" sid="4193311722463528" type="BossOcto" />
+                <condition id="-3" name="Is on-screen" sid="4193311722463528" type="Enemy_BOSS1" />
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="117933790335297">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="4606566133497753" type="BossOcto">
+                        <condition id="-1" name="Compare X" sid="4606566133497753" type="Enemy_BOSS1">
                             <param id="0" name="Comparison">5</param>
                             <param id="1" name="X co-ordinate">LayoutWidth-200</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="4271466612051619" type="BossOcto">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4271466612051619" type="Enemy_BOSS1">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="5360986114770431">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="9354759451140063" type="BossOcto">
+                        <condition id="-1" name="Compare X" sid="9354759451140063" type="Enemy_BOSS1">
                             <param id="0" name="Comparison">3</param>
                             <param id="1" name="X co-ordinate">LayoutWidth-600</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="4269561879418003" type="BossOcto">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4269561879418003" type="Enemy_BOSS1">
                             <param id="0" name="Control">1</param>
                         </action>
                     </actions>

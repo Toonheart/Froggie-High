@@ -6,7 +6,7 @@
         <comment>Changing Health count On HUD According the frog Health </comment>
         <event-block sid="2420561091633768">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="3307894226170163" type="Frog">
+                <condition id="-7" name="Compare instance variable" sid="3307894226170163" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">3</param>
@@ -21,7 +21,7 @@
         </event-block>
         <event-block sid="1550426342063134">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="3163629731948561" type="Frog">
+                <condition id="-7" name="Compare instance variable" sid="3163629731948561" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
@@ -36,7 +36,7 @@
         </event-block>
         <event-block sid="4947560937562332">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="6962443323418224" type="Frog">
+                <condition id="-7" name="Compare instance variable" sid="6962443323418224" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
@@ -52,14 +52,14 @@
         <comment>Kill the frog If the health drops to zero</comment>
         <event-block sid="251913442328096">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="5619438663586277" type="Frog">
+                <condition id="-7" name="Compare instance variable" sid="5619438663586277" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="5434361221479001" type="Frog" />
+                <action id="-9" name="Destroy" sid="5434361221479001" type="Froggie" />
             </actions>
         </event-block>
     </events>
