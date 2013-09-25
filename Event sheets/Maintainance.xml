@@ -137,18 +137,6 @@
                 <action id="-9" name="Destroy" sid="5280906409159442" type="BrokenFloor_Part2" />
             </actions>
         </event-block>
-        <event-block sid="9824397742640384">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Candy" />
-                <condition id="-2" name="Compare Y" sid="4186273584232017" type="Candy">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="532491530161822" type="Candy" />
-            </actions>
-        </event-block>
         <event-block sid="2346052610093019">
             <conditions>
                 <condition id="-2" name="Compare Y" sid="1434606079940587" type="Background">
@@ -160,5 +148,57 @@
                 <action id="-9" name="Destroy" sid="2417923632392082" type="Background" />
             </actions>
         </event-block>
+        <event-group description="" sid="9890516275067826" title="Destroying Candies Outside the screen">
+            <sub-events>
+                <event-block sid="9824397742640384">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Candy" />
+                        <condition id="-2" name="Compare Y" sid="4186273584232017" type="Candy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="532491530161822" type="Candy" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="2494037528139455">
+                    <conditions>
+                        <condition id="-1" inverted="1" name="Compare X" sid="7314275532576121" type="Candy">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">ViewportRight(&quot;Gam&quot;)</param>
+                        </condition>
+                        <condition id="-1" inverted="1" name="Compare X" sid="8020286356443435" type="Candy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">ViewportLeft(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6692672336193888" type="Candy" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="9005425711094134">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="3531023132548864" type="Candy">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">128</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4862622713966282" type="Candy" />
+                    </actions>
+                </event-block>
+                <event-block sid="7260606134191501">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Candy">
+                            <param id="0" name="Object">Border</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="221424784066889" type="Candy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

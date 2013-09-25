@@ -8,16 +8,11 @@
                 <event-block sid="1939084024228619">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="Froggie" />
+                        <condition id="-4" name="Trigger once while true" sid="4245657547037535" type="System" />
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="4278055599244851" type="Froggie">
                             <param id="0" name="Control">2</param>
-                        </action>
-                        <action id="0" name="Play" sid="7638413773604936" type="Audio">
-                            <param id="0" name="Audio file">Jump</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;Jump&quot;</param>
                         </action>
                         <action id="-16" name="Wait" sid="4155062979572627" type="System">
                             <param id="0" name="Seconds">0.1</param>
@@ -27,6 +22,44 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="4080972723102314">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7145192900856211" type="System">
+                                    <param id="0" name="First value">Froggie.Platform.JumpStrength</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1400</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7056221036696328" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="4968742021518906" type="Audio">
+                                    <param id="0" name="Audio file">Jump</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;Jump&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9863578900443388">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9557167102313543" type="System">
+                                    <param id="0" name="First value">Froggie.Platform.JumpStrength</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">2400</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3490901665423588" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="4080104947685599" type="Audio">
+                                    <param id="0" name="Audio file">PowerJump</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;PowerJump&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block disabled="1" sid="8036971572725255">
                     <conditions>
