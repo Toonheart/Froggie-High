@@ -12,11 +12,7 @@
                         <event-block sid="84398713707311">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="3199675920209141" type="System">
-                                    <param id="0" name="Interval (seconds)">10</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="272769067344979" type="Froggie">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Y co-ordinate">ScrollTo</param>
+                                    <param id="0" name="Interval (seconds)">random(10,15)</param>
                                 </condition>
                             </conditions>
                             <actions />
@@ -33,8 +29,8 @@
                                         <action id="-3" name="Create object" sid="1973146204602317" type="System">
                                             <param id="0" name="Object to create">Enemy_FlyingRight</param>
                                             <param id="1" name="Layer">&quot;Player&quot;</param>
-                                            <param id="2" name="X">ViewportLeft(&quot;Game&quot;)</param>
-                                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)</param>
+                                            <param id="2" name="X">ViewportLeft(&quot;Game&quot;)+20</param>
+                                            <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;)+640,ViewportTop(&quot;Game&quot;))</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="805061794274023" type="System">
                                             <param id="0" name="Variable">FlyingEnemySelector</param>
@@ -50,8 +46,8 @@
                                         <action id="-3" name="Create object" sid="5359722015046308" type="System">
                                             <param id="0" name="Object to create">Enemy_FlyingLeft</param>
                                             <param id="1" name="Layer">&quot;Player&quot;</param>
-                                            <param id="2" name="X">Viewportright(&quot;Game&quot;)</param>
-                                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)</param>
+                                            <param id="2" name="X">Viewportright(&quot;Game&quot;)-20</param>
+                                            <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;)+640,ViewportTop(&quot;Game&quot;))</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="5604300551108715" type="System">
                                             <param id="0" name="Variable">FlyingEnemySelector</param>
@@ -76,7 +72,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_FlyingRight">
                                     <param id="0" name="Instance variable">FlyAngle</param>
-                                    <param id="1" name="Value">random(-70,70)</param>
+                                    <param id="1" name="Value">-45</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -90,7 +86,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_FlyingLeft">
                                     <param id="0" name="Instance variable">FlyAngle</param>
-                                    <param id="1" name="Value">random(90,270)</param>
+                                    <param id="1" name="Value">225</param>
                                 </action>
                             </actions>
                         </event-block>

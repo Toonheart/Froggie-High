@@ -191,11 +191,21 @@
                 <event-block sid="7260606134191501">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Candy">
-                            <param id="0" name="Object">Border</param>
+                            <param id="0" name="Object">BorderLeft</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="221424784066889" type="Candy" />
+                    </actions>
+                </event-block>
+                <event-block sid="1903254507557019">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Candy">
+                            <param id="0" name="Object">BorderRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2756640994042796" type="Candy" />
                     </actions>
                 </event-block>
             </sub-events>
