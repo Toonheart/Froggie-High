@@ -9,7 +9,7 @@
                 <event-group description="" sid="9293068315346784" title="Spawning FlyingEnemies From Left and right">
                     <sub-events>
                         <comment>Create FLying Enimies randomly at Right or left of window Using Veiwport(Note: Use Else instead of comparing two instances)</comment>
-                        <event-block sid="84398713707311">
+                        <event-block disabled="1" sid="84398713707311">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="3199675920209141" type="System">
                                     <param id="0" name="Interval (seconds)">random(10,15)</param>
@@ -17,7 +17,7 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="2327180398764943">
+                                <event-block disabled="1" sid="2327180398764943">
                                     <conditions>
                                         <condition id="-14" name="Compare variable" sid="2110277357350635" type="System">
                                             <param id="0" name="Variable">FlyingEnemySelector</param>
@@ -38,7 +38,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="1082187690456352">
+                                <event-block disabled="1" sid="1082187690456352">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="568830386538007" type="System" />
                                     </conditions>
