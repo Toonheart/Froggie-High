@@ -916,7 +916,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Plane1" pingpong="0" repeatcount="1" repeatto="0" sid="2991891628574675" speed="5">
+                <animation framecount="1" loop="0" name="Plain1" pingpong="0" repeatcount="1" repeatto="0" sid="2991891628574675" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.28125" y="0.28125" />
@@ -930,7 +930,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Plane2" pingpong="0" repeatcount="1" repeatto="0" sid="290157020401342" speed="5">
+                <animation framecount="1" loop="0" name="Plain2" pingpong="0" repeatcount="1" repeatto="0" sid="290157020401342" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.390625" y="0.390625" />
@@ -944,7 +944,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Plane3" pingpong="0" repeatcount="1" repeatto="0" sid="1451902578009719" speed="5">
+                <animation framecount="1" loop="0" name="Plain3" pingpong="0" repeatcount="1" repeatto="0" sid="1451902578009719" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.390625" y="0.390625" />
@@ -1636,6 +1636,13 @@
                 <member>Icon_WorldTwo</member>
             </members>
         </family>
+        <family name="Floors" plugin-id="Sprite" sid="4146028826729182">
+            <members>
+                <member>BrokenFloor</member>
+                <member>MovingFloor</member>
+                <member>NormalFloor</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>World.xml</layout>
@@ -1650,14 +1657,12 @@
     <event-folder expanded="1">
         <event-sheet>World_Events.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
-        <event-sheet>Avoiding_Overlaps.xml</event-sheet>
-        <event-sheet>Hud.xml</event-sheet>
+        <event-sheet>HUD.xml</event-sheet>
         <event-sheet>Maintainance.xml</event-sheet>
         <event-sheet>PauseEvents.xml</event-sheet>
         <event-sheet>TitleScreen_Events.xml</event-sheet>
         <event-sheet>GameOver_Events.xml</event-sheet>
         <event-sheet>SpaceUpdating.xml</event-sheet>
-        <event-sheet>EnemyEvents.xml</event-sheet>
         <event-sheet>PowerUps.xml</event-sheet>
         <event-sheet>Collisions.xml</event-sheet>
         <event-sheet>FacebookIntegration.xml</event-sheet>
@@ -1668,12 +1673,12 @@
         <event-sheet>JumpEvents.xml</event-sheet>
         <event-sheet>Tuto_Events.xml</event-sheet>
         <event-sheet>WorldSelector_Events.xml</event-sheet>
-        <event-sheet>Health.xml</event-sheet>
-        <event-sheet>BossEvents.xml</event-sheet>
-        <event-sheet>Collectables.xml</event-sheet>
+        <event-sheet>OctoWorld_Enemies.xml</event-sheet>
+        <event-sheet>Collectibles.xml</event-sheet>
         <event-sheet>PatternGeneration.xml</event-sheet>
         <event-sheet>Procedural_Generation.xml</event-sheet>
-        <event-sheet>GrowingButtons.xml</event-sheet>
+        <event-sheet>All_Global_Vars.xml</event-sheet>
+        <event-sheet>Jumpable_Platforms.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">
