@@ -3,44 +3,32 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group collapsed="1" description="" sid="1508290019819969" title="Rocket">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
-                <comment>Spawn rockets normally randomly for every 20-30Sec&apos;s</comment>
-                <event-block disabled="1" sid="3855916967642711">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="3655607878365344" type="System">
-                            <param id="0" name="Interval (seconds)">31</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="1642410340410601" type="System">
-                            <param id="0" name="Object to create">Mushroom_Rainbow</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1244747011497446" type="Froggie">
-                            <param id="0" name="Object">Mushroom_Rainbow</param>
+                            <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="5085709438756086" type="Mushroom_Rainbow">
-                            <param id="0" name="Object">Musroom_Bling</param>
+                        <action id="0" name="Spawn another object" sid="5085709438756086" type="PowerUp_Mushroom_Rainbow">
+                            <param id="0" name="Object">Bling</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-3" name="Create object" sid="279053315669398" type="System">
-                            <param id="0" name="Object to create">Candy</param>
+                            <param id="0" name="Object to create">Collectible_Candy</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="2349543549789312" type="Mushroom_Rainbow" />
+                        <action id="4" name="Set animation" sid="6731642338850634" type="Bling">
+                            <param id="0" name="Animation">&quot;Mushroom&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2349543549789312" type="PowerUp_Mushroom_Rainbow" />
                         <action id="-10" name="Set value" sid="3505180082548866" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
                             <param id="1" name="Value">3</param>
@@ -182,7 +170,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4004194865636154" title="Mushroom">
+        <event-group collapsed="1" description="" disabled="1" sid="4004194865636154" title="UMBRELLA">
             <sub-events>
                 <comment>Spawn Mushroom_Inv randomly</comment>
                 <event-block disabled="1" sid="7909195125855185">
@@ -191,24 +179,12 @@
                             <param id="0" name="Interval (seconds)">29</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="9592113399991136" type="System">
-                            <param id="0" name="Object to create">Mushroom_Inv</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <comment>Collecting mushroom and setting the status</comment>
                 <event-block sid="9301515454978652">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="9839453897096447" type="Froggie">
-                            <param id="0" name="Object">Mushroom_Inv</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
-                        <action id="-9" name="Destroy" sid="9039780309841878" type="Mushroom_Inv" />
                         <action id="-10" name="Set value" sid="3946507190873963" type="Froggie">
                             <param id="0" name="Instance variable">MushroomStatus</param>
                             <param id="1" name="Value">1</param>
@@ -240,22 +216,13 @@
                                 <action behavior="Platform" id="5" name="Set gravity" sid="7038933424782512" type="Froggie">
                                     <param id="0" name="Gravity">100</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="5760997973156327" type="Froggie">
-                                    <param id="0" name="Object">Mushroom</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">&quot;MushroomPin&quot;</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="4206746381559833" type="Mushroom">
-                                    <param id="0" name="Pin to">Froggie</param>
-                                    <param id="1" name="Mode">4</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block disabled="1" sid="7799807699857842">
                             <conditions>
                                 <condition id="-24" name="For Each (ordered)" sid="5282175238703128" type="System">
-                                    <param id="0" name="Object">NormalFloor</param>
-                                    <param id="1" name="Expression">NormalFloor.y&gt;Froggie.Y</param>
+                                    <param id="0" name="Object">Floor_Grass_Normal</param>
+                                    <param id="1" name="Expression">Floor_Grass_Normal.y&gt;Froggie.Y</param>
                                     <param id="2" name="Order">0</param>
                                 </condition>
                             </conditions>
@@ -264,7 +231,7 @@
                                 <event-block sid="1876342360344854">
                                     <conditions>
                                         <condition id="-8" name="Compare two values" sid="5103826836184907" type="System">
-                                            <param id="0" name="First value">NormalFloor.X</param>
+                                            <param id="0" name="First value">Floor_Grass_Normal.X</param>
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Second value">Froggie.X-100</param>
                                         </condition>
@@ -279,14 +246,12 @@
                 <event-block sid="1800989727512526">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="8579573545810144" type="Froggie" />
-                        <condition behavior="Pin" id="0" name="Is pinned" sid="950905084171321" type="Mushroom" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="3355311423869583" type="Froggie">
                             <param id="0" name="Instance variable">MushroomStatus</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="Pin" id="1" name="Unpin" sid="4799857672042042" type="Mushroom" />
                     </actions>
                 </event-block>
                 <comment>Reset the gravity and when mushroom de-Activated</comment>
@@ -303,7 +268,6 @@
                         <action behavior="Platform" id="5" name="Set gravity" sid="4918132697054397" type="Froggie">
                             <param id="0" name="Gravity">1550</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="5458241946182742" type="Mushroom" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -322,7 +286,7 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="7096845711735953" type="System">
-                            <param id="0" name="Object to create">Shield</param>
+                            <param id="0" name="Object to create">PowerUp_Shield</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
                             <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
@@ -333,15 +297,15 @@
                 <event-block disabled="1" sid="5209608158508144">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9782799726256521" type="Froggie">
-                            <param id="0" name="Object">Shield</param>
+                            <param id="0" name="Object">PowerUp_Shield</param>
                         </condition>
-                        <condition id="2" name="Is playing" sid="6417139167550116" type="Shield">
+                        <condition id="2" name="Is playing" sid="6417139167550116" type="PowerUp_Shield">
                             <param id="0" name="Animation">&quot;Active&quot;</param>
                         </condition>
                         <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="9102706431526808" type="Froggie" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="3076748294876619" type="Shield">
+                        <action id="4" name="Set animation" sid="3076748294876619" type="PowerUp_Shield">
                             <param id="0" name="Animation">&quot;Collected&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -358,28 +322,12 @@
         </event-group>
         <event-group collapsed="1" description="" sid="5111261358297281" title="HyperJump">
             <sub-events>
-                <comment>Create spring flores every random(6,10) sec</comment>
-                <event-block disabled="1" sid="9746320535520464">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="5094509639585933" type="System">
-                            <param id="0" name="Interval (seconds)">25</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="32687438852633" type="System">
-                            <param id="0" name="Object to create">Mushroom_HyperJump</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-100</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Jump Automatically</comment>
                 <comment>On landed on Spring give a double push</comment>
                 <event-block sid="4013199515954371">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4552949056540236" type="Froggie">
-                            <param id="0" name="Object">Mushroom_HyperJump</param>
+                            <param id="0" name="Object">PowerUp_Mushroom_HyperJump</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -387,15 +335,16 @@
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="9973943790720769" type="Mushroom_HyperJump">
-                            <param id="0" name="Object">Musroom_Bling</param>
+                        <action id="0" name="Spawn another object" sid="9973943790720769" type="PowerUp_Mushroom_HyperJump">
+                            <param id="0" name="Object">Bling</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action behavior="Platform" disabled="1" id="4" name="Set jump strength" sid="7065287708182879" type="Froggie">
-                            <param id="0" name="Jump strength">1.5*Froggie.Platform.JumpStrength</param>
+                        <action id="4" name="Set animation" sid="5444244577526847" type="Bling">
+                            <param id="0" name="Animation">&quot;Mushroom&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="215280903131925" type="Mushroom_HyperJump" />
+                        <action id="-9" name="Destroy" sid="215280903131925" type="PowerUp_Mushroom_HyperJump" />
                     </actions>
                 </event-block>
                 <event-block sid="5103723196897294">
@@ -424,73 +373,26 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6195811873769205" title="Mushroom Animation">
-            <sub-events>
-                <comment>HealthCollector</comment>
-                <event-block sid="2160354328240938">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="9507517024491867" type="Mushroom_Health" />
-                        <condition id="-6" name="Every X seconds" sid="8119055479481086" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="3806568388954418" type="Mushroom_Health">
-                            <param id="0" name="Instance variable">RotateTowards</param>
-                            <param id="1" name="Value">-(Self.RotateTowards)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="59638913591912">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="3989205578508322" type="Mushroom_Health" />
-                    </conditions>
-                    <actions>
-                        <action id="-20" name="Rotate toward angle" sid="9398706672539598" type="Mushroom_Health">
-                            <param id="0" name="Degrees">0.1</param>
-                            <param id="1" name="Angle">Self.RotateTowards</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Spring</comment>
-                <event-block sid="2794424069790911">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="1345316075981079" type="Mushroom_HyperJump" />
-                        <condition id="-6" name="Every X seconds" sid="7317104069347061" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="7649310514293223" type="Mushroom_HyperJump">
-                            <param id="0" name="Instance variable">RotateTowards</param>
-                            <param id="1" name="Value">-(Self.RotateTowards)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3621390604308443">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="5142197985240021" type="Mushroom_Health" />
-                    </conditions>
-                    <actions>
-                        <action id="-20" name="Rotate toward angle" sid="8896858440341703" type="Mushroom_HyperJump">
-                            <param id="0" name="Degrees">0.1</param>
-                            <param id="1" name="Angle">Self.RotateTowards</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group collapsed="1" description="Adds life to frog" sid="636385349794851" title="Health">
             <sub-events>
                 <comment>Collect the health</comment>
                 <event-block sid="3148595361641771">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3918000906990627" type="Froggie">
-                            <param id="0" name="Object">Mushroom_Health</param>
+                            <param id="0" name="Object">PowerUp_Mushroom_Health</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="5350698917172055" type="Mushroom_Health" />
+                        <action id="0" name="Spawn another object" sid="2550976769791863" type="PowerUp_Mushroom_HyperJump">
+                            <param id="0" name="Object">Bling</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4735269430097472" type="Bling">
+                            <param id="0" name="Animation">&quot;Mushroom&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5350698917172055" type="PowerUp_Mushroom_Health" />
                         <action id="-11" name="Add to" sid="572415547705231" type="Froggie">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>

@@ -5,7 +5,6 @@
     <events>
         <variable constant="0" name="ActiveWorld" sid="5439010439631277" static="0" type="number">1</variable>
         <include>Debug</include>
-        <include>WorldChangerEvents</include>
         <event-block sid="2083380856551319">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="6982001752763213" type="System" />
@@ -14,54 +13,41 @@
                 <action id="-21" name="Reset global variables" sid="5232631761049472" type="System" />
             </actions>
         </event-block>
-        <comment>Start the game</comment>
-        <event-block sid="910480968598155">
-            <conditions>
-                <condition id="3" name="On touched object" sid="8755243658866212" type="Touch">
-                    <param id="0" name="Object">PlayMenu</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="8668047955106235" type="System">
-                    <param id="0" name="Layout">WorldSelector</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Mute the sounds</comment>
-        <event-block sid="8829171707280856">
-            <conditions>
-                <condition id="3" name="On touched object" sid="9040559754784035" type="Touch">
-                    <param id="0" name="Object">SoundMenu</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="2" name="Set muted" sid="7216241902257728" type="Audio">
-                    <param id="0" name="Tag">&quot;Sound&quot;</param>
-                    <param id="1" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="2511712467372221" title="Toggling Music">
+        <event-group collapsed="1" description="" sid="2511712467372221" title="Toggling Music and Sounds">
             <sub-events>
+                <comment>Mute the sounds</comment>
+                <event-block disabled="1" sid="8829171707280856">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9040559754784035" type="Touch">
+                            <param id="0" name="Object">Button_ToggleSound</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="7216241902257728" type="Audio">
+                            <param id="0" name="Tag">&quot;Sound&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Toggle music</comment>
-                <event-block sid="6144716917881393">
+                <event-block collapsed="1" sid="6144716917881393">
                     <conditions>
                         <condition id="3" name="On touched object" sid="271020883865764" type="Touch">
-                            <param id="0" name="Object">MusicMenu</param>
+                            <param id="0" name="Object">Icon_MusicStatus</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="4837016364067963">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9491523304595008" type="MusicMenu">
+                                <condition id="-7" name="Compare instance variable" sid="9491523304595008" type="Icon_MusicStatus">
                                     <param id="0" name="Instance variable">MusicStatus</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="136732194938088" type="MusicMenu">
+                                <action id="-10" name="Set value" sid="136732194938088" type="Icon_MusicStatus">
                                     <param id="0" name="Instance variable">MusicStatus</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -72,7 +58,7 @@
                                 <condition id="-22" name="Else" sid="5043091668666957" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="1860726935375372" type="MusicMenu">
+                                <action id="-10" name="Set value" sid="1860726935375372" type="Icon_MusicStatus">
                                     <param id="0" name="Instance variable">MusicStatus</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -82,14 +68,14 @@
                 </event-block>
                 <event-block sid="5946708679509732">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1023047144409927" type="MusicMenu">
+                        <condition id="-7" name="Compare instance variable" sid="1023047144409927" type="Icon_MusicStatus">
                             <param id="0" name="Instance variable">MusicStatus</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="3933387429613077" type="MusicMenu">
+                        <action id="4" name="Set animation" sid="3933387429613077" type="Icon_MusicStatus">
                             <param id="0" name="Animation">&quot;ON&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -100,7 +86,7 @@
                         <condition id="-22" name="Else" sid="7992733946800835" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="651585813947229" type="MusicMenu">
+                        <action id="4" name="Set animation" sid="651585813947229" type="Icon_MusicStatus">
                             <param id="0" name="Animation">&quot;OFF&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -112,41 +98,81 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="9825124560921165">
-            <conditions>
-                <condition id="3" name="On touched object" sid="2696244038735489" type="Touch">
-                    <param id="0" name="Object">AchievementsMenu</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="597257613569426" type="System">
-                    <param id="0" name="Layout">Achievements</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8652654897151893">
-            <conditions>
-                <condition id="3" name="On touched object" sid="7160328379115061" type="Touch">
-                    <param id="0" name="Object">Store</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="5131802759134465" type="System">
-                    <param id="0" name="Layout">Store</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7435379405183822">
-            <conditions>
-                <condition id="3" name="On touched object" sid="415772797257807" type="Touch">
-                    <param id="0" name="Object">TutoMemu</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="9487610478109179" type="System">
-                    <param id="0" name="Layout">Tuto</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="8428997519920965" title="MENUS">
+            <sub-events>
+                <event-block sid="9825124560921165">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="2696244038735489" type="Touch">
+                            <param id="0" name="Object">Button_Achieves</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="597257613569426" type="System">
+                            <param id="0" name="Layout">Achievements</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Start the game</comment>
+                <event-block sid="910480968598155">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8755243658866212" type="Touch">
+                            <param id="0" name="Object">Button_Play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="8668047955106235" type="System">
+                            <param id="0" name="Layout">WorldSelect</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8652654897151893">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7160328379115061" type="Touch">
+                            <param id="0" name="Object">Icon_Store</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5131802759134465" type="System">
+                            <param id="0" name="Layout">Store</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7435379405183822">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="415772797257807" type="Touch">
+                            <param id="0" name="Object">Button_Tutorial</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="9487610478109179" type="System">
+                            <param id="0" name="Layout">Tutorial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="9791390366890499" title="Preload">
+            <sub-events>
+                <event-block sid="7806788258793513">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4827449629494871" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Preload" sid="8181433549590643" type="Audio">
+                            <param id="0" name="Audio file">Jump</param>
+                        </action>
+                        <action id="4" name="Preload" sid="7732831672242424" type="Audio">
+                            <param id="0" name="Audio file">collectible</param>
+                        </action>
+                        <action id="4" name="Preload" sid="2470601835163825" type="Audio">
+                            <param id="0" name="Audio file">PowerJump</param>
+                        </action>
+                        <action id="4" name="Preload" sid="9783938106038618" type="Audio">
+                            <param id="0" name="Audio file">Fall</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

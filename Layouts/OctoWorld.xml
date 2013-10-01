@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>World</name>
+    <name>OctoWorld</name>
     <sid>1755469767899622</sid>
-    <event-sheet>World_Events</event-sheet>
+    <event-sheet>OctoWorld_Events</event-sheet>
     <size>
         <width>800</width>
         <height>1280</height>
@@ -69,7 +69,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="NormalFloor" uid="9">
+                <instance type="Floor_Grass_Normal" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -77,7 +77,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Flip>0</Flip>
+                        <Mirror>0</Mirror>
                         <PresentPlatform>0</PresentPlatform>
                         <Status>0</Status>
                     </instance-variables>
@@ -103,7 +103,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalFloor" uid="6">
+                <instance type="Floor_Grass_Normal" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -111,7 +111,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Flip>0</Flip>
+                        <Mirror>0</Mirror>
                         <PresentPlatform>0</PresentPlatform>
                         <Status>0</Status>
                     </instance-variables>
@@ -137,7 +137,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalFloor" uid="7">
+                <instance type="Floor_Grass_Normal" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -145,7 +145,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Flip>0</Flip>
+                        <Mirror>0</Mirror>
                         <PresentPlatform>0</PresentPlatform>
                         <Status>0</Status>
                     </instance-variables>
@@ -171,7 +171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalFloor" uid="18">
+                <instance type="Floor_Grass_Normal" uid="18">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -179,7 +179,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Flip>0</Flip>
+                        <Mirror>0</Mirror>
                         <PresentPlatform>0</PresentPlatform>
                         <Status>0</Status>
                     </instance-variables>
@@ -205,7 +205,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalFloor" uid="63">
+                <instance type="Floor_Grass_Normal" uid="63">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -213,7 +213,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Flip>0</Flip>
+                        <Mirror>0</Mirror>
                         <PresentPlatform>0</PresentPlatform>
                         <Status>0</Status>
                     </instance-variables>
@@ -389,7 +389,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Debug" uid="1">
+                <instance type="Text_Debug" uid="1">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -416,7 +416,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ScoreBox" uid="27">
+                <instance type="HUD_Score" uid="27">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -454,7 +454,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PauseButton" uid="16">
+                <instance type="Button_Pause" uid="16">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -476,7 +476,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HealthIndicator" uid="47">
+                <instance type="HUD_HealthIndicator" uid="47">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -509,7 +509,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HealthCount" uid="48">
+                <instance type="HUD_HealthCount" uid="48">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -575,7 +575,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BorderLeft" uid="77">
+                <instance type="Border_Left_ViewPort" uid="77">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -597,7 +597,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BorderRight" uid="4">
+                <instance type="Border_Right_ViewPort" uid="4">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -619,7 +619,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BordderTop" uid="72">
+                <instance type="Border_Top_ViewPort" uid="72">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -641,50 +641,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="78">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>518</x>
-                        <y>436</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="Square_X" uid="70">
-            <properties>
-                <width>10</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-            <instance-variables>
-                <Generate>0</Generate>
-            </instance-variables>
-        </instance>
-        <instance type="Square_Y" uid="71">
-            <properties>
-                <width>10</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

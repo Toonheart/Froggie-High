@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Shield" uid="10">
+                <instance type="PowerUp_Shield" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -56,7 +56,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Shield" uid="11">
+                <instance type="PowerUp_Shield" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -107,7 +107,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Candy" uid="21">
+                <instance type="Collectible_Candy" uid="21">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -145,7 +145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Mushroom_Rainbow" uid="22">
+                <instance type="PowerUp_Mushroom_Rainbow" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -171,7 +171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_FlyingRight" uid="29">
+                <instance type="Enemy_PatrolOcto_Right" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -197,7 +197,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_FlyingLeft" uid="39">
+                <instance type="Enemy_PatrolOcto_Left" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -218,28 +218,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Mushroom_Inv" uid="45">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>61</x>
-                        <y>80</y>
-                        <z>0</z>
-                        <width>59</width>
-                        <height>84</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501149416</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -282,7 +260,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Resume" uid="62">
+                <instance type="Button_Resume" uid="62">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -326,32 +304,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Mushroom" uid="25">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>745</x>
-                        <y>389</y>
-                        <z>0</z>
-                        <width>52</width>
-                        <height>61</height>
-                        <depth>0</depth>
-                        <hotspotX>0.507317066</hotspotX>
-                        <hotspotY>0.995402277</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="BrokenFloor" uid="12">
+                <instance type="Floor_Grass_Broken" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -402,13 +355,13 @@
                         <width>192</width>
                         <height>192</height>
                         <depth>0</depth>
-                        <hotspotX>0.5546875</hotspotX>
-                        <hotspotY>0.7734375</hotspotY>
+                        <hotspotX>0.55400002</hotspotX>
+                        <hotspotY>0.773999989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Mushroom_Health" uid="64">
+                <instance type="PowerUp_Mushroom_Health" uid="64">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -433,7 +386,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Mushroom_HyperJump" uid="20">
+                <instance type="PowerUp_Mushroom_HyperJump" uid="20">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -458,7 +411,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BrokenFloor_Part1" uid="65">
+                <instance type="Floor_Grass_Broken_1" uid="65">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -494,7 +447,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BrokenFloor_Part2" uid="66">
+                <instance type="Floor_Grass_Broken_2" uid="66">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -530,7 +483,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MovingFloor" uid="67">
+                <instance type="Floor_Grass_Moving" uid="67">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -606,40 +559,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Musroom_Bling" uid="75">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0.4</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-405</x>
-                        <y>790</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MarkerTop" uid="2">
+                <instance type="Collectible_Marker_Top" uid="2">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -661,7 +581,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MarkerBottom" uid="76">
+                <instance type="Collectible_Marker_Bottom" uid="76">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

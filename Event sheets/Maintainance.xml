@@ -3,140 +3,79 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <comment>Destroy any Objects that go off the bottom of the screen so they don&apos;t keep using up memory and CPU and cause the game to slow down.</comment>
-        <event-block sid="9756505141398553">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="6986746003170794" type="DestroyBelowScreen" />
-                <condition id="-2" name="Compare Y" sid="8333326257212965" type="DestroyBelowScreen">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="4622434640967033" type="DestroyBelowScreen" />
-            </actions>
-        </event-block>
-        <event-block sid="5050984831086639">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="7139675086783277" type="Snake" />
-                <condition id="-2" name="Compare Y" sid="4829796065577943" type="Snake">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="813988194235124" type="Snake" />
-            </actions>
-        </event-block>
-        <event-block sid="7677198932992921">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="4817895405900044" type="NormalFloor" />
-                <condition id="-2" name="Compare Y" sid="1314203211417815" type="NormalFloor">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="3636769497370544" type="NormalFloor" />
-            </actions>
-        </event-block>
-        <comment>If the player falls off the bottom of the screen, restart the layout.</comment>
-        <event-block disabled="1" sid="4381792402667575">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="7890071075425409" type="Froggie" />
-                <condition id="-2" name="Compare Y" sid="2055093982599874" type="Froggie">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-26" name="Restart layout" sid="7843227936759012" type="System" />
-                <action id="-21" name="Reset global variables" sid="2868718689028931" type="System" />
-            </actions>
-        </event-block>
-        <comment>Wrap the frog Left and right</comment>
-        <event-block sid="4289847182450448">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="1732333497257551" type="Froggie">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">-15</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="1289519938109904" type="Froggie">
-                    <param id="0" name="X">LayoutWidth+14</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="106982760968246">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="4828975050113211" type="Froggie">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">LayoutWidth+15</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="1667665631601706" type="Froggie">
-                    <param id="0" name="X">-14</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="647087495363938">
-            <conditions>
-                <condition behavior="Platform" id="4" name="Is falling" sid="8351874493892204" type="Froggie" />
-                <condition id="-4" name="Trigger once while true" sid="3927602043163379" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="9033302238135977" type="Froggie">
-                    <param id="0" name="Instance variable">FallDistance</param>
-                    <param id="1" name="Value">Froggie.Y</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9241095647406034">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="1671473214020278" type="Snake">
-                    <param id="0" name="Object">Snake</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="6911865529712506" type="Snake" />
-            </actions>
-        </event-block>
-        <event-block sid="8554971264545097">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="Enemy_FlyingRight" />
-                <condition id="-2" name="Compare Y" sid="8520453531840971" type="Enemy_FlyingRight">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="6516128347584107" type="Enemy_FlyingRight" />
-            </actions>
-        </event-block>
-        <event-block sid="1811765254708209">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="204624200339994" type="Enemy_FlyingRight" />
-                <condition id="-1" name="Compare X" sid="6477897804417596" type="Enemy_FlyingRight">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">ViewportRight(&quot;Game&quot;)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="3931517544259826" type="Enemy_FlyingRight" />
-            </actions>
-        </event-block>
-        <comment>Destroy the BrokenPart if drops below the screen</comment>
-        <event-block sid="3747278286816935">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="4809224561637242" type="BrokenFloor_Part1" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="7437872998395465" type="BrokenFloor_Part1" />
-                <action id="-9" name="Destroy" sid="5280906409159442" type="BrokenFloor_Part2" />
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
+            <sub-events>
+                <comment>Destroy The Floors Below the ViewPortBottom</comment>
+                <event-block sid="7677198932992921">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="4817895405900044" type="Floors" />
+                        <condition id="-2" name="Compare Y" sid="1314203211417815" type="Floors">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3636769497370544" type="Floors" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+            <sub-events>
+                <comment>Destroy The Enemy Below the ViewPortBottom</comment>
+                <event-block sid="8554971264545097">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="Enemy" />
+                        <condition id="-2" name="Compare Y" sid="8520453531840971" type="Enemy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6516128347584107" type="Enemy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy">
+            <sub-events>
+                <comment>Destroy The CANDY Below the ViewPortBottom</comment>
+                <event-block sid="9824397742640384">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Collectible_Candy" />
+                        <condition id="-2" name="Compare Y" sid="4186273584232017" type="Collectible_Candy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="532491530161822" type="Collectible_Candy" />
+                    </actions>
+                </event-block>
+                <comment>Destroy The CANDY  if they spawn at coorners </comment>
+                <event-block sid="7260606134191501">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Collectible_Candy">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="221424784066889" type="Collectible_Candy" />
+                    </actions>
+                </event-block>
+                <event-block sid="1903254507557019">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Collectible_Candy">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2756640994042796" type="Collectible_Candy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>TO BE REMOVED WHEN WE MAKE SCROLLING PARALLAX tiles</comment>
         <event-block sid="2346052610093019">
             <conditions>
                 <condition id="-2" name="Compare Y" sid="1434606079940587" type="Background">
@@ -148,67 +87,5 @@
                 <action id="-9" name="Destroy" sid="2417923632392082" type="Background" />
             </actions>
         </event-block>
-        <event-group description="" sid="9890516275067826" title="Destroying Candies Outside the screen">
-            <sub-events>
-                <event-block sid="9824397742640384">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Candy" />
-                        <condition id="-2" name="Compare Y" sid="4186273584232017" type="Candy">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="532491530161822" type="Candy" />
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="2494037528139455">
-                    <conditions>
-                        <condition id="-1" inverted="1" name="Compare X" sid="7314275532576121" type="Candy">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">ViewportRight(&quot;Gam&quot;)</param>
-                        </condition>
-                        <condition id="-1" inverted="1" name="Compare X" sid="8020286356443435" type="Candy">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">ViewportLeft(&quot;Game&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="6692672336193888" type="Candy" />
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="9005425711094134">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="3531023132548864" type="Candy">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">128</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="4862622713966282" type="Candy" />
-                    </actions>
-                </event-block>
-                <event-block sid="7260606134191501">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Candy">
-                            <param id="0" name="Object">BorderLeft</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="221424784066889" type="Candy" />
-                    </actions>
-                </event-block>
-                <event-block sid="1903254507557019">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Candy">
-                            <param id="0" name="Object">BorderRight</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="2756640994042796" type="Candy" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>

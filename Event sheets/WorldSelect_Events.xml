@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>WorldSelector_Events</name>
+    <name>WorldSelect_Events</name>
     <events>
-        <include>WorldChangerEvents</include>
-        <comment>On selecting any worldButton set full Grayscale disabled and set Activeworld Variable accordingly</comment>
-        <event-group description="" sid="7168252757412517" title="Activating World Buttons">
+        <event-group collapsed="1" description="" sid="7168252757412517" title="Activating World Buttons">
             <sub-events>
+                <comment>On selecting any worldButton set full Grayscale disabled and set Activeworld Variable accordingly</comment>
                 <event-block sid="456421252279268">
                     <conditions>
                         <condition id="3" name="On touched object" sid="7917843617068788" type="Touch">
@@ -34,7 +33,7 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="7223816607836358" type="System">
-                            <param id="0" name="Layout">World</param>
+                            <param id="0" name="Layout">OctoWorld</param>
                         </action>
                     </actions>
                 </event-block>
@@ -65,7 +64,7 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="4712587336610191" type="System">
-                            <param id="0" name="Layout">World</param>
+                            <param id="0" name="Layout">OctoWorld</param>
                         </action>
                     </actions>
                 </event-block>
@@ -96,24 +95,28 @@
                             <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="8224439450531113" type="System">
-                            <param id="0" name="Layout">World</param>
+                            <param id="0" name="Layout">OctoWorld</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>Go Back to the Title Menu</comment>
-        <event-block sid="7429165856555494">
-            <conditions>
-                <condition id="3" name="On touched object" sid="4110536254518642" type="Touch">
-                    <param id="0" name="Object">Back</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="9402432211879913" type="System">
-                    <param id="0" name="Layout">TitleScreen</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="4589216467661568" title="UserInputs">
+            <sub-events>
+                <comment>Go Back to the Title Menu</comment>
+                <event-block sid="7429165856555494">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4110536254518642" type="Touch">
+                            <param id="0" name="Object">Button_GoBack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="9402432211879913" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

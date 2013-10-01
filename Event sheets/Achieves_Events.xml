@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>AchievementsEvents</name>
+    <name>Achieves_Events</name>
     <events>
         <include>GoToMain</include>
         <event-block sid="9676333653055928">
@@ -17,10 +17,10 @@
         <event-block sid="465613427067798">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="8650007665026958" type="Froggie">
-                    <param id="0" name="Object">Mushroom_Rainbow</param>
+                    <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
                 </condition>
                 <condition disabled="1" id="-8" name="Compare two values" sid="6015136268000319" type="System">
-                    <param id="0" name="First value">Rocket_ACh.Opacity</param>
+                    <param id="0" name="First value">Achieves_Icon_Rocket.Opacity</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">50</param>
                 </condition>
@@ -43,7 +43,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="8497246610617386" type="Rocket_ACh">
+                <action id="-16" name="Set opacity" sid="8497246610617386" type="Achieves_Icon_Rocket">
                     <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
@@ -51,10 +51,10 @@
         <event-block sid="261819276880785">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="5978187856153108" type="Froggie">
-                    <param id="0" name="Object">Shield</param>
+                    <param id="0" name="Object">PowerUp_Shield</param>
                 </condition>
                 <condition disabled="1" id="-8" name="Compare two values" sid="3536510368969825" type="System">
-                    <param id="0" name="First value">Shield_Ach.Opacity</param>
+                    <param id="0" name="First value">Achieves_Icon_Shield.Opacity</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">50</param>
                 </condition>
@@ -77,18 +77,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="3361063294422423" type="Shield_Ach">
+                <action id="-16" name="Set opacity" sid="3361063294422423" type="Achieves_Icon_Shield">
                     <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="3728393457837184">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="6926138437453172" type="Mushroom_Inv">
-                    <param id="0" name="Object">Shield</param>
-                </condition>
                 <condition disabled="1" id="-8" name="Compare two values" sid="3958548545087879" type="System">
-                    <param id="0" name="First value">Mushroom_Ach.Opacity</param>
+                    <param id="0" name="First value">Achieves_Icon_Mushroom.Opacity</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">50</param>
                 </condition>
@@ -111,7 +108,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-16" name="Set opacity" sid="8668229504943636" type="Mushroom_Ach">
+                <action id="-16" name="Set opacity" sid="8668229504943636" type="Achieves_Icon_Mushroom">
                     <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
