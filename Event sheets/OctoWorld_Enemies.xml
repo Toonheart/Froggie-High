@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>OctoWorld_Enemies</name>
     <events>
-        <event-group collapsed="1" description="WHEN Does The boss spawn" sid="7493372545709674" title="BIGBOSS - Spawn ">
+        <event-group collapsed="1" description="WHEN Does The boss spawn" disabled="1" sid="7493372545709674" title="BIGBOSS - Spawn ">
             <sub-events>
                 <comment>At the end of the game Create Big Boss</comment>
-                <event-block sid="8660250350646193">
+                <event-block disabled="1" sid="8660250350646193">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4306159233890663" type="System">
                             <param id="0" name="First value">NextPlatform</param>
@@ -14,9 +14,9 @@
                             <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="3210150777380035" type="System">
-                            <param id="0" name="Variable">PlatformCount</param>
+                            <param id="0" name="Variable">WorldSection</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="8711683162319378" type="System" />
                     </conditions>
@@ -25,7 +25,7 @@
                             <param id="0" name="Object to create">Enemy_BOSS1</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                            <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-300</param>
+                            <param id="3" name="Y">NextPlatform-400</param>
                         </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="3407349173097363" type="Enemy_BOSS1">
                             <param id="0" name="Control">0</param>
@@ -42,16 +42,18 @@
                         <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_BOSS1">
                             <param id="0" name="Object">Border_Left_ViewPort</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="4002045573354023" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="6869431248789643" type="Enemy_BOSS1">
+                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_BOSS1">
                             <param id="0" name="Instance variable">MoveAngle</param>
                             <param id="1" name="Value">-45</param>
                         </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6111362022213214" type="Enemy_BOSS1">
+                            <param id="0" name="Control">1</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="4933949180757778">
+                <event-block disabled="1" sid="4933949180757778">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_BOSS1">
                             <param id="0" name="Object">Border_Top_ViewPort</param>
@@ -70,16 +72,18 @@
                         <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_BOSS1">
                             <param id="0" name="Object">Border_Right_ViewPort</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="6873519094126602" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="117708901647865" type="Enemy_BOSS1">
+                        <action disabled="1" id="-10" name="Set value" sid="117708901647865" type="Enemy_BOSS1">
                             <param id="0" name="Instance variable">MoveAngle</param>
                             <param id="1" name="Value">180</param>
                         </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6697333913569153" type="Enemy_BOSS1">
+                            <param id="0" name="Control">0</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block sid="902146401947285">
+                <event-block disabled="1" sid="902146401947285">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_BOSS1" />
                     </conditions>

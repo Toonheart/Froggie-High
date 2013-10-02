@@ -373,7 +373,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Adds life to frog" sid="636385349794851" title="Health">
+        <event-group description="Adds life to frog" sid="636385349794851" title="Health">
             <sub-events>
                 <comment>Collect the health</comment>
                 <event-block sid="3148595361641771">
@@ -396,6 +396,15 @@
                         <action id="-11" name="Add to" sid="572415547705231" type="Froggie">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="9734930088711666" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8157582718487653" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="3421178517872285" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
                 </event-block>

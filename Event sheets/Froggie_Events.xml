@@ -95,7 +95,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Controll">
+        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Controll">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -103,13 +103,40 @@
                         <condition id="2" name="Key is down" sid="9277285358068876" type="Keyboard">
                             <param id="0" name="Key">37 (Left arrow)</param>
                         </condition>
-                        <condition id="4" name="Is touching object" sid="6803591501776365" type="Touch">
-                            <param id="0" name="Object">Nav_L</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="1523586248413577" type="Froggie">
                             <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="539577925084524">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="5286654750739296" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="5232956090328499" type="System">
+                            <param id="0" name="First value">Touch.X</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Froggie.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7842417447315114" type="Froggie">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6449015882217566">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="7722670599804897" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="6699500027468567" type="System">
+                            <param id="0" name="First value">Touch.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Froggie.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1058621325996865" type="Froggie">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>
