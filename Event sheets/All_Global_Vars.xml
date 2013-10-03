@@ -3,21 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>All_Global_Vars</name>
     <events>
-        <variable constant="0" name="Enymy_SpikyOctoGap" sid="5219406529368721" static="0" type="number">33</variable>
-        <variable constant="0" name="Enemy_ElectroOctoGap" sid="1232011188178977" static="0" type="number">46</variable>
-        <variable constant="0" name="BrokenFloorGap" sid="493081230935231" static="0" type="number">10</variable>
-        <variable constant="0" name="Mushroom_RainbowGap" sid="6862404617057533" static="0" type="number">85</variable>
+        <variable comment="The Gap between each occurence of Spiky Octopus" constant="0" name="Enemy_SpikyOctoGap" sid="5219406529368721" static="0" type="number">33</variable>
+        <variable comment="The Gap between each occurence of Electro Octopus" constant="0" name="Enemy_ElectroOctoGap" sid="1232011188178977" static="0" type="number">46</variable>
+        <variable comment="The Gap between each occurence of Rainbow Mushrooms" constant="0" name="Mushroom_RainbowGap" sid="6862404617057533" static="0" type="number">85</variable>
         <variable comment="Gap Between HyperJump Musrooms" constant="0" name="Musroom_HyperjumpGap" sid="8981129147792587" static="0" type="number">30</variable>
-        <variable constant="0" name="Speed" sid="5058081722089149" static="0" type="number">5</variable>
-        <variable constant="0" name="Level" sid="4849518318469605" static="0" type="number">1</variable>
-        <variable constant="0" name="PlatformCount" sid="5151529934716775" static="0" type="number">0</variable>
-        <variable constant="0" name="Score" sid="2046370572549844" static="0" type="number">0</variable>
-        <variable constant="0" name="Space" sid="4991749307535029" static="0" type="number">250</variable>
+        <variable comment="The counter for number of floors for every world section" constant="0" name="FloorCount" sid="5151529934716775" static="0" type="number">0</variable>
+        <variable comment="Game score" constant="0" name="Score" sid="2046370572549844" static="0" type="number">0</variable>
+        <variable comment="Gap between Floors" constant="0" name="FloorGap" sid="4991749307535029" static="0" type="number">250</variable>
         <variable constant="0" name="WorldSection" sid="430183257275453" static="0" type="number">1</variable>
         <variable comment="The current scroll Y position" constant="0" name="ScrollTo" sid="7913886634753898" static="0" type="number">1000</variable>
-        <variable comment="The next Y scroll position to create a platform at" constant="0" name="NextPlatform" sid="7787807613387361" static="0" type="number">0</variable>
-        <variable constant="0" name="NextBackground" sid="2732016572135801" static="0" type="number">0</variable>
-        <variable constant="0" name="FlyingEnemySelector" sid="1244555915158312" static="0" type="number">0</variable>
-        <variable constant="0" name="CollectibleAnimMax" sid="164047968966681" static="0" type="number">1</variable>
+        <variable comment="The next Y scroll position for creating new platforms" constant="0" name="NextFloorPosition" sid="7787807613387361" static="0" type="number">0</variable>
+        <variable comment="Next baground Y position for creating" constant="0" name="NextBackground" sid="2732016572135801" static="0" type="number">0</variable>
+        <variable comment="Select one from two sides of Patro Octo" constant="0" name="PatroOctoSelector" sid="1244555915158312" static="0" type="number">0</variable>
+        <variable comment="Max unlocked collectibles" constant="0" name="CollectibleAnimMax" sid="164047968966681" static="0" type="number">0</variable>
     </events>
 </c2eventsheet>

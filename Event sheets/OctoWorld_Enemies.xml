@@ -9,7 +9,7 @@
                 <event-block disabled="1" sid="8660250350646193">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4306159233890663" type="System">
-                            <param id="0" name="First value">NextPlatform</param>
+                            <param id="0" name="First value">NextFloorPosition</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
                         </condition>
@@ -25,7 +25,7 @@
                             <param id="0" name="Object to create">Enemy_BOSS1</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                            <param id="3" name="Y">NextPlatform-400</param>
+                            <param id="3" name="Y">NextFloorPosition-400</param>
                         </action>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="3407349173097363" type="Enemy_BOSS1">
                             <param id="0" name="Control">0</param>
@@ -111,7 +111,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3083155203150226" title="PATRO OCTO - Movement">
+        <event-group description="" sid="3083155203150226" title="PATRO OCTO - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block sid="3875944443072774">
