@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collectibles</name>
     <events>
-        <event-group collapsed="1" description="Diifferent type of candies have different points that adds to score" sid="8130697212533247" title="Candies">
+        <event-group description="Diifferent type of candies have different points that adds to score" sid="8130697212533247" title="Candies">
             <sub-events>
                 <comment>Collect the candies and destroy them and add to score</comment>
                 <event-block collapsed="1" sid="5422309422002292">
@@ -228,5 +228,26 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="1609739636815018">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9803006898030348" type="Froggie">
+                    <param id="0" name="Object">Letterr_collectibleCandy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2972200028933676" type="Letterr_collectibleCandy">
+                    <param id="0" name="Object">Bling</param>
+                    <param id="1" name="Layer">&quot;objects&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="9023644523535083" type="Audio">
+                    <param id="0" name="Audio file">collectible</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">2</param>
+                    <param id="1" name="Tag (optional)">&quot;Collectable&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2665535682055616" type="Letterr_collectibleCandy" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

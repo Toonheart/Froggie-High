@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>GraphicStore</name>
+    <name>GraphicStore1</name>
     <sid>2993026766963485</sid>
     <event-sheet></event-sheet>
     <size>
@@ -232,6 +232,7 @@
                     </properties>
                     <instance-variables>
                         <MoveAngle>-45</MoveAngle>
+                        <Spawn>0</Spawn>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -242,6 +243,16 @@
                                 <directions>Left &amp; right</directions>
                                 <set-angle>No</set-angle>
                                 <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>200</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>

@@ -64,12 +64,11 @@
         </event-group>
         <event-group collapsed="1" description="" sid="8702184364457831" title="Moving Floors">
             <sub-events>
-                <comment>Move the platforms Between 100 to 700 on X axis</comment>
+                <comment>Move the platforms Between 100 top side viewports</comment>
                 <event-block sid="6785902080902279">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="3632457223310535" type="Floor_Grass_Moving">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">LayoutWidth-(LayoutWidth*0.9)</param>
+                        <condition id="1" name="Is overlapping another object" sid="3632457223310535" type="Floor_Grass_Moving">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -80,9 +79,8 @@
                 </event-block>
                 <event-block sid="753380288131946">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="3284366505933919" type="Floor_Grass_Moving">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">LayoutWidth-(LayoutWidth*0.1)</param>
+                        <condition id="1" name="Is overlapping another object" sid="3284366505933919" type="Floor_Grass_Moving">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
                         </condition>
                     </conditions>
                     <actions>
