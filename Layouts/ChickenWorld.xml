@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>World2</name>
+    <name>ChickenWorld</name>
     <sid>4664865905308447</sid>
-    <event-sheet>World2_Events</event-sheet>
+    <event-sheet>ChickenWorld_Events</event-sheet>
     <size>
         <width>800</width>
         <height>1280</height>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Background" uid="82">
+                <instance type="BG1" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -69,7 +69,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Floor_Grass_Normal" uid="86">
+                <instance type="Floor_HeyStack_Normal" uid="120">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -78,7 +78,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -91,87 +91,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>166.6953125</x>
-                        <y>351.37890625</y>
-                        <z>0</z>
-                        <width>230</width>
-                        <height>205</height>
-                        <depth>0</depth>
-                        <hotspotX>0.51171875</hotspotX>
-                        <hotspotY>0.89453125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Floor_Grass_Normal" uid="87">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
-                        <Status>0</Status>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>197</x>
-                        <y>818</y>
-                        <z>0</z>
-                        <width>201</width>
-                        <height>171</height>
-                        <depth>0</depth>
-                        <hotspotX>0.51171875</hotspotX>
-                        <hotspotY>0.89453125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Floor_Grass_Normal" uid="88">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
-                        <Status>0</Status>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>475</x>
-                        <y>1144</y>
+                        <x>136</x>
+                        <y>661</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.51171875</hotspotX>
-                        <hotspotY>0.89453125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Floor_Grass_Normal" uid="89">
+                <instance type="Floor_HeyStack_Normal" uid="86">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -180,7 +112,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -193,19 +125,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>514</x>
-                        <y>145</y>
+                        <x>459</x>
+                        <y>1097</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.51171875</hotspotX>
-                        <hotspotY>0.89453125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Floor_Grass_Normal" uid="90">
+                <instance type="Floor_HeyStack_Normal" uid="87">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -214,7 +146,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -227,14 +159,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1188</x>
-                        <y>378</y>
+                        <x>493</x>
+                        <y>322</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.51171875</hotspotX>
-                        <hotspotY>0.89453125</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -770,11 +702,14 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <FloorCount>1</FloorCount>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>201</x>
-                        <y>36</y>
+                        <x>233</x>
+                        <y>57</y>
                         <z>0</z>
                         <width>443</width>
                         <height>152</height>

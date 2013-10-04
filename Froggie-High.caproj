@@ -21,11 +21,11 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
     </used-behaviors>
@@ -90,7 +90,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Mirror" sid="2929393222755371" type="number" />
-                <instance-variable name="PresentPlatform" sid="5321085116625376" type="number" />
+                <instance-variable name="PresentFloor" sid="5321085116625376" type="number" />
                 <instance-variable comment="1=Powerup spawned on platform,0=Idol" name="Status" sid="8422594236264572" type="number" />
             </instance-variables>
             <behaviors>
@@ -121,6 +121,9 @@
         </object-type>
         <object-type name="Text_Debug" sid="4723934658035419">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="FloorCount" sid="9521941424289682" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="PowerUp_Mushroom_HyperJump" sid="3673829393400018">
             <plugin id="Sprite" />
@@ -156,36 +159,6 @@
                     <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
                     <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
                     <frame duration="1" hotspotX="0.46875" hotspotY="0.925781" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="PowerUp_Shield" sid="4782443792436532">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="3420693702413985">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="7482450219088549" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506024">
-                        <collision-poly>
-                            <point x="0.82" y="0.0120482" />
-                            <point x="0.93" y="0.879518" />
-                            <point x="0.03" y="0.843374" />
-                            <point x="0.13" y="0.0120485" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Collected" pingpong="0" repeatcount="1" repeatto="0" sid="5000064545059883" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506024">
-                        <collision-poly>
-                            <point x="0.0100001" y="0.771084" />
-                            <point x="0.97" y="0.759036" />
-                            <point x="0.98" y="0.975904" />
-                            <point x="0.04" y="0.951807" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -271,7 +244,7 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-        <object-type name="Background" sid="5449088146211033">
+        <object-type name="BG1" sid="5449088146211033">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="CurrentBackground" sid="2310863482212198" type="number" />
@@ -1116,6 +1089,7 @@
             <instance-variables>
                 <instance-variable name="MoveAngle" sid="9876424262753087" type="number" />
                 <instance-variable name="Spawn" sid="4740694916228461" type="number" />
+                <instance-variable name="Health" sid="5849631248269643" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="6359613209037465">
@@ -1807,6 +1781,16 @@
         </object-type>
         <object-type name="Floor_HeyStack_Normal" sid="596439423862754">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Mirror" sid="6385622428394697" type="number" />
+                <instance-variable name="PresentFloor" sid="4337649910411595" type="number" />
+                <instance-variable name="Status" sid="9633491452903762" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="7872761597330785">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8526368480652001" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1826,6 +1810,11 @@
         </object-type>
         <object-type name="Floor_HeyStack_Broken" sid="2511509542663173">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="4750425770267593">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6455254990160628" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -1843,6 +1832,279 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Collectible_Cup" sid="3529911884979913">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2394494894725044" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0866667" y="0.0866667" />
+                            <point x="0.5" y="0.11" />
+                            <point x="0.913333" y="0.0866667" />
+                            <point x="0.66" y="0.5" />
+                            <point x="0.58" y="0.58" />
+                            <point x="0.83" y="0.926667" />
+                            <point x="0.196667" y="0.923333" />
+                            <point x="0.416667" y="0.573333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BG1_House" sid="1382380334942218">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Status" sid="7370795445124616" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5940954910783183" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.328125" />
+                            <point x="0.5" y="0.234375" />
+                            <point x="0.674479" y="0.325521" />
+                            <point x="0.747396" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.617188" />
+                            <point x="0.372396" y="0.627604" />
+                            <point x="0.265625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="8584998610922026">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4771060466000131" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0570313" y="0.285156" />
+                            <point x="0.5" y="0.332031" />
+                            <point x="0.961719" y="0.191406" />
+                            <point x="0.971094" y="0.5" />
+                            <point x="0.944531" y="0.722656" />
+                            <point x="0.5" y="0.757813" />
+                            <point x="0.05" y="0.75" />
+                            <point x="0.025" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_Flu_Chicken" sid="846807893697361">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="901998796087987" speed="7">
+                    <frame duration="1" hotspotX="0.582031" hotspotY="0.792969" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyBoxer_Chicken" sid="124857139800323">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="99492585101939" speed="7">
+                    <frame duration="1" hotspotX="0.597656" hotspotY="0.871094" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Collectible_cake" sid="5085651698070665">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="CakeSelector" sid="3899048142791237" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Plain1" pingpong="0" repeatcount="1" repeatto="0" sid="2135315006230098" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.226563" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Plain2" pingpong="0" repeatcount="1" repeatto="0" sid="3412126095892496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.226563" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Plain3" pingpong="0" repeatcount="1" repeatto="0" sid="1954767578770499" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.226563" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="MultiCOlor1" pingpong="0" repeatcount="1" repeatto="0" sid="2287890900357439" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.128906" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="MultiColor2" pingpong="0" repeatcount="1" repeatto="0" sid="3383988030761383" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.226563" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="MultiColor3" pingpong="0" repeatcount="1" repeatto="0" sid="8490703349110198" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.15625" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Slice1" pingpong="0" repeatcount="1" repeatto="0" sid="594723677984575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.238281" y="0.238281" />
+                            <point x="0.5" y="0.164063" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Slice2" pingpong="0" repeatcount="1" repeatto="0" sid="8027472611483133" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.171875" y="0.171875" />
+                            <point x="0.5" y="0.0429688" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Slice3" pingpong="0" repeatcount="1" repeatto="0" sid="7461128204825543" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.273438" y="0.273438" />
+                            <point x="0.5" y="0.191406" />
+                            <point x="0.734375" y="0.265625" />
+                            <point x="0.820313" y="0.5" />
+                            <point x="0.746094" y="0.746094" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Cup1" pingpong="0" repeatcount="1" repeatto="0" sid="1780075951646353" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.285156" y="0.285156" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.753906" y="0.246094" />
+                            <point x="0.847656" y="0.5" />
+                            <point x="0.765625" y="0.765625" />
+                            <point x="0.5" y="0.902344" />
+                            <point x="0.210938" y="0.789063" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Cup2" pingpong="0" repeatcount="1" repeatto="0" sid="3883498435123063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.109375" y="0.109375" />
+                            <point x="0.5" y="0.140625" />
+                            <point x="0.816406" y="0.183594" />
+                            <point x="0.851563" y="0.5" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.210938" y="0.789063" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Cup3" pingpong="0" repeatcount="1" repeatto="0" sid="7365393736043918" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.230469" y="0.230469" />
+                            <point x="0.5" y="0.175781" />
+                            <point x="0.707031" y="0.292969" />
+                            <point x="0.84375" y="0.5" />
+                            <point x="0.773438" y="0.773438" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="3323195622917366">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4939407489891982" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
@@ -1850,7 +2112,6 @@
                 <member>Enemy_ElectroOcto</member>
                 <member>Enemy_SpikyOcto</member>
                 <member>PowerUp_Mushroom_HyperJump</member>
-                <member>PowerUp_Shield</member>
             </members>
         </family>
         <family name="Enemy" plugin-id="Sprite" sid="2891136451677008">
@@ -1881,14 +2142,18 @@
         <family name="Floors" plugin-id="Sprite" sid="4146028826729182">
             <members>
                 <member>Floor_Grass_Broken</member>
+                <member>Floor_Grass_Broken_1</member>
+                <member>Floor_Grass_Broken_2</member>
                 <member>Floor_Grass_Moving</member>
                 <member>Floor_Grass_Normal</member>
+                <member>Floor_HeyStack_Broken</member>
+                <member>Floor_HeyStack_Normal</member>
             </members>
         </family>
     </families>
     <layout-folder expanded="1">
         <layout>OctoWorld.xml</layout>
-        <layout>World2.xml</layout>
+        <layout>ChickenWorld.xml</layout>
         <layout>TitleScreen.xml</layout>
         <layout>GameOver.xml</layout>
         <layout>Achievements.xml</layout>
@@ -1896,7 +2161,7 @@
         <layout>Tutorial.xml</layout>
         <layout>WorldSelect.xml</layout>
         <layout>GraphicStore1.xml</layout>
-        <layout>Layout 1.xml</layout>
+        <layout>GraphicStore2.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>OctoWorld_Events.xml</event-sheet>
@@ -1916,10 +2181,11 @@
         <event-sheet>WorldSelect_Events.xml</event-sheet>
         <event-sheet>OctoWorld_Enemies.xml</event-sheet>
         <event-sheet>Collectibles.xml</event-sheet>
-        <event-sheet>Procedural_Generation.xml</event-sheet>
+        <event-sheet>Octoworld_Generation.xml</event-sheet>
         <event-sheet>All_Global_Vars.xml</event-sheet>
         <event-sheet>Jumpable_Platforms.xml</event-sheet>
-        <event-sheet>World2_Events.xml</event-sheet>
+        <event-sheet>ChickenWorld_Events.xml</event-sheet>
+        <event-sheet>ChickenWorld_Generation.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">

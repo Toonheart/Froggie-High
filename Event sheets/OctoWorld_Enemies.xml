@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>OctoWorld_Enemies</name>
     <events>
-        <event-group description="Movement pattern of boss " disabled="1" sid="3852672656926211" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " sid="3852672656926211" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
-                <event-block disabled="1" sid="117933790335297">
+                <event-block sid="117933790335297">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_BOSS1">
                             <param id="0" name="Object">Border_Left_ViewPort</param>
@@ -22,7 +22,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="4933949180757778">
+                <event-block sid="4933949180757778">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_BOSS1">
                             <param id="0" name="Object">Border_Top_ViewPort</param>
@@ -30,7 +30,7 @@
                         <condition id="-4" name="Trigger once while true" sid="1149109733597262" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="75269065000108" type="Enemy_BOSS1">
+                        <action disabled="1" id="-10" name="Set value" sid="75269065000108" type="Enemy_BOSS1">
                             <param id="0" name="Instance variable">MoveAngle</param>
                             <param id="1" name="Value">45</param>
                         </action>
@@ -39,7 +39,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="3992018776456346">
+                <event-block sid="3992018776456346">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_BOSS1">
                             <param id="0" name="Object">Border_Right_ViewPort</param>
@@ -47,19 +47,30 @@
                     </conditions>
                     <actions>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="3853311473334431" type="Enemy_BOSS1">
-                            <param id="0" name="Angle">0</param>
+                            <param id="0" name="Angle">180</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="902146401947285">
+                <event-block sid="902146401947285">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_BOSS1" />
                     </conditions>
                     <actions>
-                        <action id="-23" name="Move at angle" sid="2171951229210408" type="Enemy_BOSS1">
-                            <param id="0" name="Angle">Self.MoveAngle</param>
-                            <param id="1" name="Distance">3</param>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_BOSS1">
+                            <param id="0" name="Speed">100</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3865761674978195">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_BOSS1">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_BOSS1" />
                     </actions>
                 </event-block>
             </sub-events>

@@ -15,7 +15,7 @@
     <layers>
         <layer name="Background" sid="6278921859990316">
             <initially-visible>1</initially-visible>
-            <background-color>192,160,255</background-color>
+            <background-color>17,6,61</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>0</x>
@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Background" uid="28">
+                <instance type="BG1" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -40,7 +40,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>401</x>
+                        <x>400</x>
                         <y>1280</y>
                         <z>0</z>
                         <width>800</width>
@@ -48,6 +48,81 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BG1_House" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Status>1</Status>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>647</x>
+                        <y>661</y>
+                        <z>0</z>
+                        <width>384</width>
+                        <height>384</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BG1_House" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Status>1</Status>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>47.500717163</x>
+                        <y>546.500732422</y>
+                        <z>0</z>
+                        <width>330</width>
+                        <height>330</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BG1_House" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Status>1</Status>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>489</x>
+                        <y>566</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>200</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -78,7 +153,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -112,7 +187,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -146,7 +221,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -180,7 +255,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -214,7 +289,7 @@
                     </properties>
                     <instance-variables>
                         <Mirror>0</Mirror>
-                        <PresentPlatform>0</PresentPlatform>
+                        <PresentFloor>0</PresentFloor>
                         <Status>0</Status>
                     </instance-variables>
                     <behavior-instances>
@@ -707,7 +782,7 @@
                                 <max-speed>300</max-speed>
                                 <acceleration>4000</acceleration>
                                 <deceleration>3000</deceleration>
-                                <jump-strength>1400</jump-strength>
+                                <jump-strength>1200</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
@@ -770,6 +845,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <FloorCount>1</FloorCount>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -910,10 +988,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-6</x>
-                        <y>336</y>
+                        <x>-5.999969482</x>
+                        <y>337.628204346</y>
                         <z>0</z>
-                        <width>1282</width>
+                        <width>1288</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.271370411</hotspotX>
@@ -932,7 +1010,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>809</x>
+                        <x>808</x>
                         <y>353</y>
                         <z>0</z>
                         <width>1280</width>
