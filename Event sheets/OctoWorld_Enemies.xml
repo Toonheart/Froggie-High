@@ -8,69 +8,69 @@
                 <comment>Moves in a traingle pattern</comment>
                 <event-block sid="117933790335297">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_BOSS1">
+                        <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_OctoBOSS">
                             <param id="0" name="Object">Border_Left_ViewPort</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_BOSS1">
+                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_OctoBOSS">
                             <param id="0" name="Instance variable">MoveAngle</param>
                             <param id="1" name="Value">-45</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6111362022213214" type="Enemy_BOSS1">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6111362022213214" type="Enemy_OctoBOSS">
                             <param id="0" name="Angle">-45</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="4933949180757778">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_BOSS1">
+                        <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_OctoBOSS">
                             <param id="0" name="Object">Border_Top_ViewPort</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="1149109733597262" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="75269065000108" type="Enemy_BOSS1">
+                        <action disabled="1" id="-10" name="Set value" sid="75269065000108" type="Enemy_OctoBOSS">
                             <param id="0" name="Instance variable">MoveAngle</param>
                             <param id="1" name="Value">45</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8187085850727824" type="Enemy_BOSS1">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8187085850727824" type="Enemy_OctoBOSS">
                             <param id="0" name="Angle">45</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="3992018776456346">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_BOSS1">
+                        <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_OctoBOSS">
                             <param id="0" name="Object">Border_Right_ViewPort</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3853311473334431" type="Enemy_BOSS1">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3853311473334431" type="Enemy_OctoBOSS">
                             <param id="0" name="Angle">180</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="902146401947285">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_BOSS1" />
+                        <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_OctoBOSS" />
                     </conditions>
                     <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_BOSS1">
+                        <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_OctoBOSS">
                             <param id="0" name="Speed">100</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="3865761674978195">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_BOSS1">
+                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_OctoBOSS">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_BOSS1" />
+                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_OctoBOSS" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -80,7 +80,7 @@
                 <comment>Destroy platforms if overlaping-NOT IN USE</comment>
                 <event-block disabled="1" sid="5737626010016228">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="1812400275952007" type="Enemy_BOSS1">
+                        <condition id="1" name="Is overlapping another object" sid="1812400275952007" type="Enemy_OctoBOSS">
                             <param id="0" name="Object">Floor_Grass_Normal</param>
                         </condition>
                     </conditions>
@@ -102,7 +102,7 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_PatrolOcto_Right">
-                            <param id="0" name="Instance variable">FlyAngle</param>
+                            <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">-45</param>
                         </action>
                     </actions>
@@ -116,7 +116,7 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_PatrolOcto_Left">
-                            <param id="0" name="Instance variable">FlyAngle</param>
+                            <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">225</param>
                         </action>
                     </actions>
@@ -134,7 +134,7 @@
                             </conditions>
                             <actions>
                                 <action id="-23" name="Move at angle" sid="6750141553767162" type="Enemy_PatrolOcto_Left">
-                                    <param id="0" name="Angle">Enemy_PatrolOcto_Left.FlyAngle</param>
+                                    <param id="0" name="Angle">Enemy_PatrolOcto_Left.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>
@@ -154,7 +154,7 @@
                             </conditions>
                             <actions>
                                 <action id="-23" name="Move at angle" sid="9530465817258571" type="Enemy_PatrolOcto_Right">
-                                    <param id="0" name="Angle">Enemy_PatrolOcto_Right.FlyAngle</param>
+                                    <param id="0" name="Angle">Enemy_PatrolOcto_Right.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>

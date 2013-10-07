@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <event-group description="" sid="7432947511309844" title="OCTO WORLD">
+        <event-group collapsed="1" description="" sid="7432947511309844" title="OCTO WORLD">
             <sub-events>
-                <event-group collapsed="1" description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
+                <event-group description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
                     <sub-events>
                         <comment>Destroy The Floors Below the ViewPortBottom</comment>
                         <event-block sid="7677198932992921">
@@ -18,6 +18,19 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="3636769497370544" type="Floors" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7667131280623245">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="7491190785985406" type="Floor_Grass_Broken_1" />
+                                <condition id="-2" name="Compare Y" sid="8615215713193035" type="Floor_Grass_Broken_1">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8517352317827825" type="Floor_Grass_Broken_1" />
+                                <action id="-9" name="Destroy" sid="3343360213598023" type="Floor_Grass_Broken_2" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -39,44 +52,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy">
-                    <sub-events>
-                        <comment>Destroy The CANDY Below the ViewPortBottom</comment>
-                        <event-block sid="9824397742640384">
-                            <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Collectible_Candy" />
-                                <condition id="-2" name="Compare Y" sid="4186273584232017" type="Collectible_Candy">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="532491530161822" type="Collectible_Candy" />
-                            </actions>
-                        </event-block>
-                        <comment>Destroy The CANDY  if they spawn at coorners </comment>
-                        <event-block sid="7260606134191501">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Collectible_Candy">
-                                    <param id="0" name="Object">Border_Left_ViewPort</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="221424784066889" type="Collectible_Candy" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="1903254507557019">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Collectible_Candy">
-                                    <param id="0" name="Object">Border_Right_ViewPort</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="2756640994042796" type="Collectible_Candy" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
+                <event-group description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy" />
                 <comment>TO BE REMOVED WHEN WE MAKE SCROLLING PARALLAX tiles</comment>
                 <event-block sid="2346052610093019">
                     <conditions>
@@ -91,6 +67,56 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="555443600129024" title="CHICKEN WORLD" />
+        <event-group collapsed="1" description="" sid="555443600129024" title="CHICKEN WORLD">
+            <sub-events>
+                <comment>Destroy The CANDY Below the ViewPortBottom</comment>
+                <event-block sid="9824397742640384">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Collectible_cake" />
+                        <condition id="-2" name="Compare Y" sid="4186273584232017" type="Collectible_cake">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="532491530161822" type="Collectible_cake" />
+                    </actions>
+                </event-block>
+                <comment>Destroy The CANDY  if they spawn at coorners </comment>
+                <event-block sid="7260606134191501">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Collectible_cake">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="221424784066889" type="Collectible_cake" />
+                    </actions>
+                </event-block>
+                <event-block sid="1903254507557019">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Collectible_cake">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2756640994042796" type="Collectible_cake" />
+                    </actions>
+                </event-block>
+                <event-block sid="1800295377985308">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1889233023303343" type="Floor_HeyStak_Broken1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8907209741656769" type="Floor_HeyStak_Broken1" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="978402502347238" type="Floor_Grass_Broken_1" />
+                        <action id="-9" name="Destroy" sid="1696364017134858" type="Floor_Grass_Broken_2" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

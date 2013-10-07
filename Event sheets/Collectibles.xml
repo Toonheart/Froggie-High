@@ -5,7 +5,6 @@
     <events>
         <event-group description="Diifferent type of candies have different points that adds to score" sid="8130697212533247" title="Candies">
             <sub-events>
-                <comment>Collect the candies and destroy them and add to score</comment>
                 <event-block collapsed="1" sid="5422309422002292">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2686728855045979" type="Froggie">
@@ -28,6 +27,7 @@
                             <param id="0" name="Instance variable">AnimationSelection</param>
                             <param id="1" name="Value">round(random(1,6))</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="8627698947682053" type="Collectible_Candy" />
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="9484324755567507">
@@ -132,6 +132,28 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="1609739636815018">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9803006898030348" type="Froggie">
+                            <param id="0" name="Object">Letterr_collectibleCandy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="2972200028933676" type="Letterr_collectibleCandy">
+                            <param id="0" name="Object">Bling</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="9023644523535083" type="Audio">
+                            <param id="0" name="Audio file">collectible</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">2</param>
+                            <param id="1" name="Tag (optional)">&quot;Collectable&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2665535682055616" type="Letterr_collectibleCandy" />
+                    </actions>
+                </event-block>
+                <comment>Collect the candies and destroy them and add to score</comment>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="Randomly select a different bling  color and shape on collecting" sid="4961301643958524" title="Bling On Collection">
@@ -228,28 +250,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="1609739636815018">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="9803006898030348" type="Froggie">
-                    <param id="0" name="Object">Letterr_collectibleCandy</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="2972200028933676" type="Letterr_collectibleCandy">
-                    <param id="0" name="Object">Bling</param>
-                    <param id="1" name="Layer">&quot;objects&quot;</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="0" name="Play" sid="9023644523535083" type="Audio">
-                    <param id="0" name="Audio file">collectible</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">2</param>
-                    <param id="1" name="Tag (optional)">&quot;Collectable&quot;</param>
-                </action>
-                <action id="-9" name="Destroy" sid="2665535682055616" type="Letterr_collectibleCandy" />
-            </actions>
-        </event-block>
-        <event-group description="" sid="5338454545716284" title="Cakes">
+        <event-group collapsed="1" description="" sid="5338454545716284" title="Cakes">
             <sub-events>
                 <event-block collapsed="1" sid="3134025722176975">
                     <conditions>
@@ -377,6 +378,27 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="8400267674781996">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="154294911823045" type="Froggie">
+                            <param id="0" name="Object">Letter_CollectibleCake</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8905710795562349" type="Letter_CollectibleCake">
+                            <param id="0" name="Object">Bling</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="7005418482560462" type="Audio">
+                            <param id="0" name="Audio file">collectible</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">2</param>
+                            <param id="1" name="Tag (optional)">&quot;Collectable&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="320433301000418" type="Letter_CollectibleCake" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

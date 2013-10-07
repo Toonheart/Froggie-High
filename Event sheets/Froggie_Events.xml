@@ -6,7 +6,7 @@
         <event-group description="" sid="9939025668940154" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
-                <event-block collapsed="1" sid="1939084024228619">
+                <event-block collapsed="1" disabled="1" sid="1939084024228619">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="Froggie" />
                         <condition id="-4" name="Trigger once while true" sid="4245657547037535" type="System" />
@@ -24,7 +24,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="4080972723102314">
+                        <event-block disabled="1" sid="4080972723102314">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="7145192900856211" type="System">
                                     <param id="0" name="First value">Froggie.Platform.JumpStrength</param>
@@ -42,7 +42,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9863578900443388">
+                        <event-block disabled="1" sid="9863578900443388">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9557167102313543" type="System">
                                     <param id="0" name="First value">Froggie.Platform.JumpStrength</param>

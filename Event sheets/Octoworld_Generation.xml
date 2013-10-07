@@ -45,11 +45,11 @@
                             <param id="0" name="Max Speed">LayoutWidth/2</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="385722757207152" type="Letterr_collectibleCandy">
-                            <param id="0" name="Pin to">Letter_collectibleBase</param>
+                            <param id="0" name="Pin to">Letter_collectible_Base</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="3710748260876585" type="Letterr_collectibleCandy">
-                            <param id="0" name="Pin to">Letter_collectibleBase</param>
+                            <param id="0" name="Pin to">Letter_collectible_Base</param>
                             <param id="1" name="Mode">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="2965174115215552" type="System">
@@ -78,7 +78,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -186,7 +186,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="2779729737439997" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="2113342709819654" type="System">
@@ -208,7 +208,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="9875824086460201" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="3083902465781616" type="System">
@@ -230,7 +230,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="5742917751050418" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="8428436238766322" type="System">
@@ -252,7 +252,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="1289227265911196" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="5796599895076167" type="System">
@@ -296,7 +296,7 @@
                                                             <param id="3" name="Y">Collectible_Candy.Y+84</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="1468065413648146" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="1114067782212598" type="System">
@@ -318,7 +318,7 @@
                                                             <param id="3" name="Y">Collectible_Candy.Y+84</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="2764576874878359" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="1926879593501797" type="System">
@@ -340,7 +340,7 @@
                                                             <param id="3" name="Y">Collectible_Candy.Y+84</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="938418687481789" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="6071705251488573" type="System">
@@ -362,7 +362,7 @@
                                                             <param id="3" name="Y">Collectible_Candy.Y+84</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="1237433107906191" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                     </actions>
@@ -638,7 +638,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="2464071879010137" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="7583196214773485" type="Collectible_Candy">
@@ -663,7 +663,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="2893025639306441" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="6605162683714923" type="Collectible_Candy">
@@ -688,7 +688,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="7094878116335125" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="4240080607812945" type="Collectible_Candy">
@@ -713,7 +713,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="8758010949013505" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="797217250355169" type="Collectible_Candy">
@@ -759,7 +759,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="9164374402440044" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="3836068502705735" type="Collectible_Candy">
@@ -784,7 +784,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="709413781873461" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="9901879864339348" type="Collectible_Candy">
@@ -809,7 +809,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="8701843926016699" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="3985813207190025" type="Collectible_Candy">
@@ -855,7 +855,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="6197421718157845" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="8848125868103052" type="Collectible_Candy">
@@ -880,7 +880,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="4285115326711538" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="4832816256959256" type="Collectible_Candy">
@@ -926,7 +926,7 @@
                                                             <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="5814259959951105" type="Collectible_Candy">
-                                                            <param id="0" name="Instance variable">CandySelector</param>
+                                                            <param id="0" name="Instance variable">AnimSelector</param>
                                                             <param id="1" name="Value">round(random(1,CollectibleAnimMax))</param>
                                                         </action>
                                                         <action behavior="8Direction" id="7" name="Simulate control" sid="8599022553548719" type="Collectible_Candy">
@@ -1095,20 +1095,20 @@
                                 <comment>Move the LetterBase along with pinned collectibles</comment>
                                 <event-block sid="9089644234978831">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="3903167724962332" type="Letter_collectibleBase">
+                                        <condition id="-7" name="Compare instance variable" sid="3903167724962332" type="Letter_collectible_Base">
                                             <param id="0" name="Instance variable">Status</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-1" name="Set X" sid="5036543777474383" type="Letter_collectibleBase">
+                                        <action id="-1" name="Set X" sid="5036543777474383" type="Letter_collectible_Base">
                                             <param id="0" name="X">LayoutWidth/3</param>
                                         </action>
-                                        <action id="-2" name="Set Y" sid="1055690578132409" type="Letter_collectibleBase">
+                                        <action id="-2" name="Set Y" sid="1055690578132409" type="Letter_collectible_Base">
                                             <param id="0" name="Y">Floor_Grass_Normal.Y</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="3814730708053899" type="Letter_collectibleBase">
+                                        <action id="-10" name="Set value" sid="3814730708053899" type="Letter_collectible_Base">
                                             <param id="0" name="Instance variable">Status</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -1128,15 +1128,15 @@
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="3025836923098276" type="System">
-                                            <param id="0" name="Object to create">Enemy_BOSS1</param>
+                                            <param id="0" name="Object to create">Enemy_OctoBOSS</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">LayoutWidth/2</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y-800</param>
                                         </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="6660050806739039" type="Enemy_BOSS1">
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="6660050806739039" type="Enemy_OctoBOSS">
                                             <param id="0" name="State">1</param>
                                         </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5290167715648836" type="Enemy_BOSS1">
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5290167715648836" type="Enemy_OctoBOSS">
                                             <param id="0" name="Angle">180</param>
                                         </action>
                                     </actions>
@@ -1220,173 +1220,6 @@
         <event-group collapsed="1" description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
-                <event-block disabled="1" sid="7064512527465575">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="1162877364892506" type="Froggie">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">ScrollTo</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="8483749065135691" type="System">
-                            <param id="0" name="Variable">ScrollTo</param>
-                            <param id="1" name="Value">Froggie.Y</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block collapsed="1" disabled="1" sid="4990037722028275">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="1349992811260449" type="System">
-                                    <param id="0" name="First value">NextFloorPosition</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
-                                </condition>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="7132567069156139" type="System">
-                                    <param id="0" name="Variable">WorldSection</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="3317716729850524" type="System">
-                                    <param id="0" name="Variable">Counter_Floor</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="8207086781140359" type="System">
-                                    <param id="0" name="Object to create">Floor_Grass_Normal</param>
-                                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                                    <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-20</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="1930478522035841" type="Floor_Grass_Normal">
-                                    <param id="0" name="Instance variable">PresentFloor</param>
-                                    <param id="1" name="Value">Counter_Floor</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="5455486171127809" type="Floor_Grass_Normal">
-                                    <param id="0" name="Scale">random(0.5,1)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="3611194205976245" type="Floor_Grass_Normal">
-                                    <param id="0" name="Instance variable">Mirror</param>
-                                    <param id="1" name="Value">random(0,2)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="3377630130257245" type="System">
-                                    <param id="0" name="Variable">NextFloorPosition</param>
-                                    <param id="1" name="Value">ViewportTop(&quot;Game&quot;) - 162</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="4839952808497189" type="System">
-                                    <param id="0" name="Variable">Counter_Floor</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="426110164209995" type="System">
-                                    <param id="0" name="Variable">Score</param>
-                                    <param id="1" name="Value">100</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="5808125959635837">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="3423746833979277" type="System">
-                                            <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%2</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-1" name="Set X" sid="1412316573219292" type="Floor_Grass_Normal">
-                                            <param id="0" name="X">ViewportLeft(&quot;Game&quot;)+128</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="9855110571955708">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="937551946769025" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-1" name="Set X" sid="1777742917789042" type="Floor_Grass_Normal">
-                                            <param id="0" name="X">ViewportRight(&quot;Game&quot;)-128</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <comment>Move the LetterBase along with pinned collectibles</comment>
-                                <event-block disabled="1" sid="5989467567740332">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="9670188815011431" type="Letter_collectibleBase">
-                                            <param id="0" name="Instance variable">Status</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-1" name="Set X" sid="8215655827770062" type="Letter_collectibleBase">
-                                            <param id="0" name="X">LayoutWidth/3</param>
-                                        </action>
-                                        <action id="-2" name="Set Y" sid="2450935867903864" type="Letter_collectibleBase">
-                                            <param id="0" name="Y">Floor_Grass_Normal.Y</param>
-                                        </action>
-                                        <action id="-10" name="Set value" sid="4444604611885434" type="Letter_collectibleBase">
-                                            <param id="0" name="Instance variable">Status</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="8224832886051739" type="System">
-                                            <param id="0" name="Variable">LetterAnim</param>
-                                            <param id="1" name="Value">round(random(1,15))</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="9609505191726676">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9897230321089086" type="System">
-                                            <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">8</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="4170948048446891" type="System">
-                                            <param id="0" name="Object to create">Enemy_BOSS1</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">LayoutWidth/2</param>
-                                            <param id="3" name="Y">Floor_Grass_Normal.Y-800</param>
-                                        </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="3793145134329648" type="Enemy_BOSS1">
-                                            <param id="0" name="State">1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5770029079876071" type="Enemy_BOSS1">
-                                            <param id="0" name="Angle">180</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="7685090345573618">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="9160546482860327" type="System">
-                                            <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Second value">8</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="414469173627073" type="Floor_Grass_Normal">
-                                            <param id="0" name="Scale">1</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="5085648088461756" type="System">
-                                            <param id="0" name="Object to create">Floor_Grass_Normal</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Grass_Normal.X+256</param>
-                                            <param id="3" name="Y">Floor_Grass_Normal.Y</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="2851082804041484" type="System">
-                                            <param id="0" name="Object to create">Floor_Grass_Normal</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Grass_Normal.X+256</param>
-                                            <param id="3" name="Y">Floor_Grass_Normal.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>Generating markers for Letter colletible Base</comment>
                 <event-block sid="2310663934958245">
                     <conditions>
@@ -1397,38 +1230,38 @@
                         <action id="-3" name="Create object" sid="6711399817428676" type="System">
                             <param id="0" name="Object to create">Lettter_markerTop</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">Letter_collectibleBase.X</param>
-                            <param id="3" name="Y">Letter_collectibleBase.Y+20</param>
+                            <param id="2" name="X">Letter_collectible_Base.X</param>
+                            <param id="3" name="Y">Letter_collectible_Base.Y+30</param>
                         </action>
                         <action id="-3" name="Create object" sid="2425106600832009" type="System">
                             <param id="0" name="Object to create">Letter_MarkerBottom</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">Letter_collectibleBase.X</param>
-                            <param id="3" name="Y">Letter_collectibleBase.Y-100</param>
+                            <param id="2" name="X">Letter_collectible_Base.X</param>
+                            <param id="3" name="Y">Letter_collectible_Base.Y-100</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Howering letter collectible base so that all pinned candies will hower.</comment>
                 <event-block sid="7138894586394084">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="8186986026046124" type="Letter_collectibleBase">
+                        <condition id="1" name="Is overlapping another object" sid="8186986026046124" type="Letter_collectible_Base">
                             <param id="0" name="Object">Lettter_markerTop</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="8285620375795087" type="Letter_collectibleBase">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="8285620375795087" type="Letter_collectible_Base">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="9741637906597122">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="4089248464573788" type="Letter_collectibleBase">
+                        <condition id="1" name="Is overlapping another object" sid="4089248464573788" type="Letter_collectible_Base">
                             <param id="0" name="Object">Letter_MarkerBottom</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="6263372395724355" type="Letter_collectibleBase">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6263372395724355" type="Letter_collectible_Base">
                             <param id="0" name="Control">3</param>
                         </action>
                     </actions>
@@ -1714,7 +1547,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6635586928221191" title="CANDY - Animation">
+        <event-group description="" sid="6635586928221191" title="CANDY - Animation">
             <sub-events>
                 <comment>Unlocking NEW candies for every 30 Floors</comment>
                 <event-block sid="1720099121757819">
@@ -1753,14 +1586,14 @@
                 <event-block sid="3199237812027019">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3759233429073472" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="214284016892406" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Plain1&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock30&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1768,14 +1601,14 @@
                 <event-block sid="1447318453048152">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="9115574484329875" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="3265658503987996" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Plain2&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock60&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1783,14 +1616,59 @@
                 <event-block sid="4360834868874739">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8150960925429357" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="8702736855953337" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Plain3&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock90&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5128164966013999">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9708090114629294" type="Collectible_Candy">
+                            <param id="0" name="Instance variable">AnimSelector</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8054640636291526" type="Collectible_Candy">
+                            <param id="0" name="Animation">&quot;Unlock130&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6394414222426314">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6611343265950979" type="Collectible_Candy">
+                            <param id="0" name="Instance variable">AnimSelector</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6465719787440317" type="Collectible_Candy">
+                            <param id="0" name="Animation">&quot;Unlock160&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4577063576742623">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="795994920612782" type="Collectible_Candy">
+                            <param id="0" name="Instance variable">AnimSelector</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5281998187440502" type="Collectible_Candy">
+                            <param id="0" name="Animation">&quot;Unlock190&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1798,14 +1676,14 @@
                 <event-block sid="2668610474978186">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="1276176338204652" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
+                            <param id="2" name="Value">7</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="698105499866737" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Twocolor1&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock230&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1813,14 +1691,14 @@
                 <event-block sid="3998647924122901">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3230979852771157" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">8</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="1573068241352995" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;TwoColor2&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock260&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1828,14 +1706,14 @@
                 <event-block sid="6410522270042011">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="1314800224660658" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
+                            <param id="2" name="Value">9</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="7790896040197626" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;TwoColor3&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock290&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1843,14 +1721,14 @@
                 <event-block sid="4093590190265283">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="9582203783734283" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">7</param>
+                            <param id="2" name="Value">10</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="73235695486731" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Swirl1&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock330&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1858,14 +1736,14 @@
                 <event-block sid="6351685639597525">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="2845974687003741" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">8</param>
+                            <param id="2" name="Value">11</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="3150374612169611" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Swirl2&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock360&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1873,14 +1751,14 @@
                 <event-block sid="7081121521189435">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="772662838465257" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">9</param>
+                            <param id="2" name="Value">12</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="9591311448784187" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Swirl3&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock390&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1888,14 +1766,14 @@
                 <event-block sid="9854867082910402">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="3035595380697308" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">13</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="1863397745867581" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Wrapper1&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock430&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1903,14 +1781,14 @@
                 <event-block sid="5523568547526972">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="9588824845042313" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">11</param>
+                            <param id="2" name="Value">14</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="6752228017473734" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Wrapper2&quot;</param>
+                            <param id="0" name="Animation">&quot;Unlock460&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1918,59 +1796,14 @@
                 <event-block sid="7963526300061254">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="4448600459960925" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">12</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="8631137332313842" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Wrapper3&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8935031630148484">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9725409052930008" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">13</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3073325817782288" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Star1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2451430654597587">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6834658114264033" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">14</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3350456893428186" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Star2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5457779182423558">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="777163675071976" type="Collectible_Candy">
-                            <param id="0" name="Instance variable">CandySelector</param>
+                            <param id="0" name="Instance variable">AnimSelector</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">15</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9728103250412014" type="Collectible_Candy">
-                            <param id="0" name="Animation">&quot;Star3&quot;</param>
+                        <action id="4" name="Set animation" sid="8631137332313842" type="Collectible_Candy">
+                            <param id="0" name="Animation">&quot;Unlock490&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -2038,6 +1871,78 @@
                         <action id="-15" name="Set visible" sid="1197982771035164" type="BG1_House">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Movement pattern of boss " sid="6372788852379151" title="BIGBOSS - Movement">
+            <sub-events>
+                <comment>Moves in a traingle pattern</comment>
+                <event-block sid="117933790335297">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Instance variable">MoveAngle</param>
+                            <param id="1" name="Value">-45</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6111362022213214" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Angle">-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4933949180757778">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Object">Border_Top_ViewPort</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1149109733597262" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-10" name="Set value" sid="75269065000108" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Instance variable">MoveAngle</param>
+                            <param id="1" name="Value">45</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8187085850727824" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Angle">45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3992018776456346">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3853311473334431" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="902146401947285">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_ChickenBOSS" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Speed">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3865761674978195">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_ChickenBOSS" />
                     </actions>
                 </event-block>
             </sub-events>
