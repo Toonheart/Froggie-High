@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <event-group collapsed="1" description="" sid="7432947511309844" title="OCTO WORLD">
+        <event-group description="" sid="7432947511309844" title="OCTO WORLD">
             <sub-events>
                 <event-group description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
                     <sub-events>
@@ -35,7 +35,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+                <event-group description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
                     <sub-events>
                         <comment>Destroy The Enemy Below the ViewPortBottom</comment>
                         <event-block sid="8554971264545097">
@@ -52,7 +52,22 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy" />
+                <event-group description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy">
+                    <sub-events>
+                        <event-block sid="3874415251620764">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="6491244160867309" type="Collectible_Candy" />
+                                <condition id="-2" name="Compare Y" sid="4304784999638456" type="Collectible_Candy">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2027177302348719" type="Collectible_Candy" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <comment>TO BE REMOVED WHEN WE MAKE SCROLLING PARALLAX tiles</comment>
                 <event-block sid="2346052610093019">
                     <conditions>
@@ -69,6 +84,30 @@
         </event-group>
         <event-group collapsed="1" description="" sid="555443600129024" title="CHICKEN WORLD">
             <sub-events>
+                <event-block sid="9255057387519576">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3894738874459854" type="Floors" />
+                        <condition id="-2" name="Compare Y" sid="9380298327534007" type="Floors">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2106642563887095" type="Floors" />
+                    </actions>
+                </event-block>
+                <event-block sid="3012558614423773">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="7915201800507247" type="Enemy" />
+                        <condition id="-2" name="Compare Y" sid="8309181728430907" type="Enemy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6877185628386961" type="Enemy" />
+                    </actions>
+                </event-block>
                 <comment>Destroy The CANDY Below the ViewPortBottom</comment>
                 <event-block sid="9824397742640384">
                     <conditions>
@@ -114,6 +153,22 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="978402502347238" type="Floor_Grass_Broken_1" />
                         <action id="-9" name="Destroy" sid="1696364017134858" type="Floor_Grass_Broken_2" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4573181151284243" title="BG-Objects">
+            <sub-events>
+                <event-block disabled="1" sid="5552606541833517">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="7974753271362877" type="BG_Objects" />
+                        <condition id="-2" name="Compare Y" sid="9662871399193346" type="BG_Objects">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2611145762938071" type="BG_Objects" />
                     </actions>
                 </event-block>
             </sub-events>

@@ -52,40 +52,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_Flu_Chicken" uid="93">
+                <instance type="FluChicken_Feather" uid="95">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>325</x>
-                        <y>580</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.56640625</hotspotX>
-                        <hotspotY>0.796875</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemyBoxer_Chicken" uid="94">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>645</x>
-                        <y>489</y>
+                        <x>1160</x>
+                        <y>301</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -113,40 +102,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Floor_HeyStack_Normal" uid="120">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Mirror>0</Mirror>
-                        <PresentFloor>0</PresentFloor>
-                        <Status>0</Status>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>325</x>
-                        <y>663</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5390625</hotspotX>
-                        <hotspotY>0.71875</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Floor_HeyStack_Normal" uid="86">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -169,14 +124,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>90</x>
-                        <y>575</y>
+                        <x>157</x>
+                        <y>950</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.5390625</hotspotX>
-                        <hotspotY>0.71875</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.6796875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -203,14 +158,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>646</x>
-                        <y>679</y>
+                        <x>597</x>
+                        <y>844</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
                         <depth>0</depth>
-                        <hotspotX>0.5390625</hotspotX>
-                        <hotspotY>0.71875</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.6796875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -232,8 +187,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>126</x>
-                        <y>674</y>
+                        <x>160</x>
+                        <y>1052</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -412,8 +367,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-807</x>
-                        <y>983</y>
+                        <x>-841</x>
+                        <y>971</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -437,8 +392,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-743</x>
-                        <y>828</y>
+                        <x>-816</x>
+                        <y>825</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -512,7 +467,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-536</x>
+                        <x>-493</x>
                         <y>965</y>
                         <z>0</z>
                         <width>128</width>
@@ -587,7 +542,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-603</x>
+                        <x>-530</x>
                         <y>813</y>
                         <z>0</z>
                         <width>128</width>
@@ -662,14 +617,92 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-679</x>
-                        <y>718</y>
+                        <x>-673</x>
+                        <y>752</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Floor_HeyStack_Normal" uid="120">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Mirror>0</Mirror>
+                        <PresentFloor>0</PresentFloor>
+                        <Status>0</Status>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>422</x>
+                        <y>529</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.6796875</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemyBoxer_Chicken" uid="94">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>423</x>
+                        <y>456</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.45703125</hotspotX>
+                        <hotspotY>0.90234375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_Flu_Chicken" uid="93">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1225</x>
+                        <y>467</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.56640625</hotspotX>
+                        <hotspotY>0.796875</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -734,8 +767,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>86</x>
-                        <y>521</y>
+                        <x>172</x>
+                        <y>882</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -969,56 +1002,6 @@
                         <height>31</height>
                         <depth>0</depth>
                         <hotspotX>0.50067842</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Enemy_OctoBOSS" uid="92">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <MoveAngle>-45</MoveAngle>
-                        <Spawn>0</Spawn>
-                        <Health>3</Health>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>300</max-speed>
-                                <acceleration>300</acceleration>
-                                <deceleration>0</deceleration>
-                                <directions>Left &amp; right</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Bullet">
-                            <properties>
-                                <speed>50</speed>
-                                <acceleration>50</acceleration>
-                                <gravity>0</gravity>
-                                <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>No</set-angle>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>563</x>
-                        <y>1024</y>
-                        <z>0</z>
-                        <width>512</width>
-                        <height>512</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

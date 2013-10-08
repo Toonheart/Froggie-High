@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Octoworld_Generation</name>
     <events>
-        <event-group description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="7131796227467265" title="Initializing Global Variables">
+        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="7131796227467265" title="Initializing Global Variables">
             <sub-events>
                 <event-block sid="4294993057486781">
                     <conditions>
@@ -78,7 +78,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -151,7 +151,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block sid="3718600925621546">
+                                        <event-block collapsed="1" sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
@@ -385,11 +385,10 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="9192741440649941" type="System">
-                                                    <param id="0" name="Object to create">Enemy_ElectroOcto</param>
+                                                <action id="0" name="Spawn another object" sid="8048041007881375" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Object">Enemy_ElectroOcto</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                    <param id="3" name="Y">Floor_Grass_Normal.Y</param>
+                                                    <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
                                                 <action id="9" name="Set scale" sid="3839566862524458" type="Floor_Grass_Normal">
                                                     <param id="0" name="Scale">1</param>
@@ -419,7 +418,7 @@
                                                 <action id="0" name="Spawn another object" sid="6833049775857547" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">Enemy_SpikyOcto</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="Image point">0</param>
+                                                    <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
                                                 <action id="9" name="Set scale" sid="2588879310930618" type="Floor_Grass_Normal">
                                                     <param id="0" name="Scale">1</param>
@@ -431,14 +430,14 @@
                                             </actions>
                                         </event-block>
                                         <comment>FLYING OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block sid="4071968505375019">
+                                        <event-block collapsed="1" sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%35</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
-                                                <condition id="-14" name="Compare variable" sid="1886051137588786" type="System">
+                                                <condition disabled="1" id="-14" name="Compare variable" sid="1886051137588786" type="System">
                                                     <param id="0" name="Variable">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">2</param>
@@ -498,11 +497,10 @@
                                                 <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="9615283029555242" type="System">
-                                                    <param id="0" name="Object to create">PowerUp_Mushroom_HyperJump</param>
+                                                <action id="0" name="Spawn another object" sid="5340268812543691" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Object">PowerUp_Mushroom_HyperJump</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                    <param id="3" name="Y">Floor_Grass_Normal.Y-96</param>
+                                                    <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
                                                 <action disabled="1" id="-9" name="Destroy" sid="2796877449252215" type="Floor_Grass_Normal" />
                                                 <action id="-10" name="Set value" sid="812508345334304" type="Floor_Grass_Normal">
@@ -535,11 +533,10 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="7614585420933179" type="System">
-                                                    <param id="0" name="Object to create">PowerUp_Mushroom_Rainbow</param>
+                                                <action id="0" name="Spawn another object" sid="4821846726636839" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                    <param id="3" name="Y">Floor_Grass_Normal.Y-96</param>
+                                                    <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
                                                 <action id="9" name="Set scale" sid="1731358914165957" type="Floor_Grass_Normal">
                                                     <param id="0" name="Scale">1</param>
@@ -571,11 +568,10 @@
                                                 <condition id="-4" name="Trigger once while true" sid="9866535828008981" type="System" />
                                             </conditions>
                                             <actions>
-                                                <action id="-3" name="Create object" sid="7667551967144155" type="System">
-                                                    <param id="0" name="Object to create">PowerUp_Mushroom_Health</param>
+                                                <action id="0" name="Spawn another object" sid="5871022047403519" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Object">PowerUp_Mushroom_Health</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                    <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                    <param id="3" name="Y">Floor_Grass_Normal.Y-96</param>
+                                                    <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="3263821134205995" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
@@ -979,6 +975,43 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <comment>Spawning Clouds</comment>
+                                        <event-block sid="4628942755877858">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="1764955572762596" type="System">
+                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%3</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="3685280880370887" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="6367908475248243" type="System">
+                                                    <param id="0" name="Object to create">BG_Cloud1</param>
+                                                    <param id="1" name="Layer">&quot;Parallax1&quot;</param>
+                                                    <param id="2" name="X">random(LayoutWidth/2-200,LayoutWidth/2+200)</param>
+                                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="1479460364707168">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="8990421787741354" type="System">
+                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%5</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="9993380422751603" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="2033406234310787" type="System">
+                                                    <param id="0" name="Object to create">BG_Cloud2</param>
+                                                    <param id="1" name="Layer">&quot;Parallax2&quot;</param>
+                                                    <param id="2" name="X">random(100,700)</param>
+                                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <comment>MOVING FLOORS.&#x0D;&#x0A;The logic for patrolling behaviour of moving floor is on another event sheet.</comment>
                                         <event-block sid="9747001268058117">
                                             <conditions>
@@ -1150,24 +1183,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="8306498547538229" type="System">
-                                            <param id="0" name="Object to create">Collectible_Cup</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Grass_Normal.X+64</param>
-                                            <param id="3" name="Y">Floor_Grass_Normal.Y-256</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="5383050298813785" type="System">
-                                            <param id="0" name="Object to create">Collectible_Cup</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Grass_Normal.X+64+128</param>
-                                            <param id="3" name="Y">Floor_Grass_Normal.Y-256</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="4012609241864017" type="System">
-                                            <param id="0" name="Object to create">Collectible_Cup</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Grass_Normal.X+64+128+128</param>
-                                            <param id="3" name="Y">Floor_Grass_Normal.Y-256</param>
-                                        </action>
                                         <action id="9" name="Set scale" sid="2732800750180176" type="Floor_Grass_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
@@ -1177,11 +1192,17 @@
                                             <param id="2" name="X">Floor_Grass_Normal.X+256</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
                                         </action>
+                                        <action id="9" name="Set scale" sid="4843604160466461" type="Floor_Grass_Normal">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
                                         <action id="-3" name="Create object" sid="9917228416236487" type="System">
                                             <param id="0" name="Object to create">Floor_Grass_Normal</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X+256</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
+                                        </action>
+                                        <action id="9" name="Set scale" sid="1579469459937502" type="Floor_Grass_Normal">
+                                            <param id="0" name="Scale">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1547,7 +1568,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6635586928221191" title="CANDY - Animation">
+        <event-group collapsed="1" description="" sid="6635586928221191" title="CANDY - Animation">
             <sub-events>
                 <comment>Unlocking NEW candies for every 30 Floors</comment>
                 <event-block sid="1720099121757819">
@@ -1875,10 +1896,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Movement pattern of boss " sid="6372788852379151" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="6372788852379151" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
-                <event-block sid="117933790335297">
+                <event-block disabled="1" sid="117933790335297">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_ChickenBOSS">
                             <param id="0" name="Object">Border_Left_ViewPort</param>
@@ -1894,7 +1915,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4933949180757778">
+                <event-block disabled="1" sid="4933949180757778">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_ChickenBOSS">
                             <param id="0" name="Object">Border_Top_ViewPort</param>
@@ -1911,7 +1932,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3992018776456346">
+                <event-block disabled="1" sid="3992018776456346">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_ChickenBOSS">
                             <param id="0" name="Object">Border_Right_ViewPort</param>
@@ -1923,7 +1944,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="902146401947285">
+                <event-block disabled="1" sid="902146401947285">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_ChickenBOSS" />
                     </conditions>
@@ -1933,7 +1954,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3865761674978195">
+                <event-block disabled="1" sid="3865761674978195">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_ChickenBOSS">
                             <param id="0" name="Instance variable">Health</param>

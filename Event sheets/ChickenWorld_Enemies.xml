@@ -3,15 +3,12 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ChickenWorld_Enemies</name>
     <events>
-        <event-group description="" sid="7465375171751658" title="PATRO OCTO - Movement">
+        <event-group description="" sid="7465375171751658" title="PATRO Chicken - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
-                <event-block sid="3875944443072774">
+                <event-block disabled="1" sid="3875944443072774">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="7855891812073522" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
-                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_PatroChicken_R" />
+                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_PatroChicken_Right" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_PatrolOcto_Right">
@@ -20,11 +17,8 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5350266795687805">
+                <event-block disabled="1" sid="5350266795687805">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="8441749624376523" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
-                        </condition>
                         <condition id="-3" name="Is on-screen" sid="4894410984139619" type="Enemy_PatroChicken_Left" />
                     </conditions>
                     <actions>
@@ -34,14 +28,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5417286064658381">
+                <event-block disabled="1" sid="5417286064658381">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="6205112068656205" type="Enemy_PatroChicken_Left" />
                         <condition id="2" inverted="1" name="Is pause" sid="672101216772371" type="Pause" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="7624699691791019">
+                        <event-block disabled="1" sid="7624699691791019">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="7934311432927382" type="System" />
                             </conditions>
@@ -54,14 +48,14 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="8737799259032536">
+                <event-block disabled="1" sid="8737799259032536">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="1559240088911821" type="Enemy_PatroChicken_Left" />
                         <condition id="2" inverted="1" name="Is pause" sid="6078132388000535" type="Pause" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="6328679369823808">
+                        <event-block disabled="1" sid="6328679369823808">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="3227323828248411" type="System" />
                             </conditions>
@@ -76,7 +70,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Movement pattern of boss " sid="9448927234347467" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " sid="9448927234347467" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
                 <event-block sid="117933790335297">
@@ -145,6 +139,138 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_ChickenBOSS" />
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4323022363455951" title="BoxerChicken-Attack">
+            <sub-events>
+                <event-block sid="7045979661970518">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4812371768257794" type="System">
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,EnemyBoxer_Chicken.X,EnemyBoxer_Chicken.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="901071396260678" type="EnemyBoxer_Chicken">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5393231214758808">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4374947059634369" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8184488862177587" type="EnemyBoxer_Chicken">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Boxer chicken should always face towards the froggie.....</comment>
+                <event-block sid="8251663016725631">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2191481988691802" type="System">
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,EnemyBoxer_Chicken.X,EnemyBoxer_Chicken.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">300</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1384674613614594">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="8312383808141673" type="Froggie">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">EnemyBoxer_Chicken.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="4514081710072042" type="EnemyBoxer_Chicken">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5932318166784108">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="163244624131354" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="3101325436316565" type="EnemyBoxer_Chicken">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="1396073400277782" title="FluChicken-Attack">
+            <sub-events>
+                <event-block sid="1430496973057756">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="965085918764946" type="System">
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Flu_Chicken.X,Enemy_Flu_Chicken.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">256</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_Flu_Chicken">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5116859102284608">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8374202881690389" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_Flu_Chicken">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Flu chicken should always face towards the froggie.....</comment>
+                <event-block collapsed="1" sid="6635825324160266">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5052079842968832" type="System">
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Flu_Chicken.X,Enemy_Flu_Chicken.Y)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">256</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7463846664381672">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="2199371275502027" type="Froggie">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Enemy_Flu_Chicken.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_Flu_Chicken">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5998596779639118">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6883867841065903" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_Flu_Chicken">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
