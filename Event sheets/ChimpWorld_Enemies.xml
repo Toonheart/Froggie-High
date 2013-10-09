@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ChickenWorld_Enemies</name>
+    <name>ChimpWorld_Enemies</name>
     <events>
-        <event-group collapsed="1" description="" sid="7465375171751658" title="PATRO Chicken - Movement">
+        <event-group collapsed="1" description="" sid="9659381547111084" title="PATRO Chicken - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block disabled="1" sid="3875944443072774">
@@ -70,7 +70,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Movement pattern of boss " sid="9448927234347467" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " sid="8590533814477774" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
                 <event-block sid="117933790335297">
@@ -142,7 +142,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1561983884869096" title="BIGBOSS GamePlay">
+        <event-group collapsed="1" description="" sid="1098512604797543" title="BIGBOSS GamePlay">
             <sub-events>
                 <event-block sid="1261691158325619">
                     <conditions>
@@ -198,18 +198,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4323022363455951" title="BoxerChicken-Attack">
+        <event-group description="" sid="1845619134464778" title="Baboon-Attack">
             <sub-events>
                 <event-block sid="7045979661970518">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4812371768257794" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,EnemyBoxer_Chicken.X,EnemyBoxer_Chicken.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Baboon.X,Enemy_Chimp_Baboon.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">300</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="901071396260678" type="EnemyBoxer_Chicken">
+                        <action id="4" name="Set animation" sid="901071396260678" type="Enemy_Chimp_Baboon">
                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -220,7 +220,7 @@
                         <condition id="-22" name="Else" sid="4374947059634369" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="8184488862177587" type="EnemyBoxer_Chicken">
+                        <action id="4" name="Set animation" sid="8184488862177587" type="Enemy_Chimp_Baboon">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -230,9 +230,9 @@
                 <event-block sid="8251663016725631">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2191481988691802" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,EnemyBoxer_Chicken.X,EnemyBoxer_Chicken.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Baboon.X,Enemy_Chimp_Baboon.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">300</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -241,11 +241,11 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="8312383808141673" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">EnemyBoxer_Chicken.X</param>
+                                    <param id="1" name="X co-ordinate">Enemy_Chimp_Baboon.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="4514081710072042" type="EnemyBoxer_Chicken">
+                                <action id="7" name="Set mirrored" sid="4514081710072042" type="Enemy_Chimp_Baboon">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -255,7 +255,7 @@
                                 <condition id="-22" name="Else" sid="163244624131354" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="3101325436316565" type="EnemyBoxer_Chicken">
+                                <action id="7" name="Set mirrored" sid="3101325436316565" type="Enemy_Chimp_Baboon">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -264,18 +264,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1396073400277782" title="FluChicken-Attack">
+        <event-group description="" sid="7118914620272484" title="BASH CHIMP-Attack">
             <sub-events>
                 <event-block sid="1430496973057756">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="965085918764946" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Flu_Chicken.X,Enemy_Flu_Chicken.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Bash.X,Enemy_Chimp_Bash.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">256</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_Flu_Chicken">
+                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_Chimp_Bash">
                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -286,17 +286,17 @@
                         <condition id="-22" name="Else" sid="8374202881690389" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_Flu_Chicken">
+                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_Chimp_Bash">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Flu chicken should always face towards the froggie.....</comment>
-                <event-block collapsed="1" sid="6635825324160266">
+                <event-block sid="6635825324160266">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5052079842968832" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Flu_Chicken.X,Enemy_Flu_Chicken.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Bash.X,Enemy_Chimp_Bash.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">256</param>
                         </condition>
@@ -307,11 +307,11 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="2199371275502027" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_Flu_Chicken.X</param>
+                                    <param id="1" name="X co-ordinate">Enemy_Chimp_Bash.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_Flu_Chicken">
+                                <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_Chimp_Bash">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -321,7 +321,7 @@
                                 <condition id="-22" name="Else" sid="6883867841065903" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_Flu_Chicken">
+                                <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_Chimp_Bash">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>

@@ -10,16 +10,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
+        <layout>ChimpWorld</layout>
+        <layout>GraphicStore3</layout>
+        <layout>OctoWorld</layout>
         <layout>ChickenWorld</layout>
-        <layout active="1">OctoWorld</layout>
-        <layout>GraphicStore1</layout>
-        <layout>GraphicStore2</layout>
-        <event-sheet>ChickenWorld_Generation</event-sheet>
-        <event-sheet>Collectibles</event-sheet>
-        <event-sheet>PowerUps</event-sheet>
-        <event-sheet>ChickenWorld_Enemies</event-sheet>
-        <event-sheet>Octoworld_Generation</event-sheet>
+        <event-sheet>ChimpWorld_Events</event-sheet>
         <event-sheet>Maintainance</event-sheet>
+        <event-sheet>ChimpWorld_Generartion</event-sheet>
+        <event-sheet>ChickenWorld_Generation</event-sheet>
+        <event-sheet>Octoworld_Generation</event-sheet>
+        <event-sheet>ChimpWorld_Enemies</event-sheet>
+        <event-sheet active="1">PowerUps</event-sheet>
+        <event-sheet>Collectibles</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,11 +31,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="1" name="Obstacles" />
-        <family expanded="1" name="Enemy" />
+        <family expanded="0" name="Enemy" />
         <family expanded="1" name="WorldButtons" />
         <family expanded="1" name="WorldSelectors" />
         <family expanded="1" name="Floors" />
         <family expanded="0" name="Collectibles" />
-        <family expanded="0" name="BG_Objects" />
+        <family expanded="0" name="PowerUps" />
+        <family expanded="0" name="BrokenParts" />
     </families-expanded>
 </c2uistate>

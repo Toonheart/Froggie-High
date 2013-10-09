@@ -84,7 +84,7 @@
                                 <condition id="-14" name="Compare variable" sid="7048107559489026" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -129,7 +129,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block sid="3718600925621546">
+                                        <event-block collapsed="1" sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
@@ -408,7 +408,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>FLYING CHICKEN&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block sid="4071968505375019">
+                                        <event-block collapsed="1" sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%5</param>
@@ -571,7 +571,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>GENERATING CANDIES Randomly for every random(1,4) Floorcount gap.&#x0D;&#x0A;Checking if current floor number is divisible by sequence of 4 to 1.&#x0D;&#x0A;Depending on which condition gets true, we decide the number of candies that should be generated on that floor.&#x0D;&#x0A;Else, if it skips all numbers, then that must be a prime platform and our random seed isnt 1.. in which case no candy is available on it.</comment>
-                                        <event-block sid="9132199170922339">
+                                        <event-block collapsed="1" sid="9132199170922339">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="9505388436923064" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%round(random(1,4))</param>
@@ -993,7 +993,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then move the LETTER COLLECTIBLE SET.</comment>
+                        <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then move the LETTER COLLECTIBLE SET.</comment>
                         <event-block sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
@@ -1004,7 +1004,7 @@
                                 <condition id="-14" name="Compare variable" sid="2772437121814374" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="6284013719495923" type="System">
                                     <param id="0" name="Variable">Counter_Floor</param>
@@ -1109,11 +1109,45 @@
                                             <param id="2" name="X">LayoutWidth/2</param>
                                             <param id="3" name="Y">Floor_HeyStack_Normal.Y-800</param>
                                         </action>
+                                        <action id="0" name="Spawn another object" sid="6411334065863229" type="Enemy_ChickenBOSS">
+                                            <param id="0" name="Object">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="Image point">&quot;Basket1&quot;</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="8479639639340535" type="Basket">
+                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="264575343910567" type="Enemy_ChickenBOSS">
+                                            <param id="0" name="Object">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="Image point">&quot;Basket2&quot;</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="4879761938636917" type="Basket">
+                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="7639934472248348" type="Enemy_ChickenBOSS">
+                                            <param id="0" name="Object">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="Image point">&quot;Basket3&quot;</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="19996596609209" type="Basket">
+                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
                                         <action behavior="Bullet" id="5" name="Set enabled" sid="6660050806739039" type="Enemy_ChickenBOSS">
                                             <param id="0" name="State">1</param>
                                         </action>
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="5290167715648836" type="Enemy_ChickenBOSS">
                                             <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="6889041832516013" type="Basket">
+                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8734315008931107" type="HUD_Basket">
+                                            <param id="0" name="Visibility">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1126,24 +1160,6 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="8306498547538229" type="System">
-                                            <param id="0" name="Object to create">Collectible_Cup</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_HeyStack_Normal.X+64</param>
-                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y-256</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="5383050298813785" type="System">
-                                            <param id="0" name="Object to create">Collectible_Cup</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_HeyStack_Normal.X+64+128</param>
-                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y-256</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="4012609241864017" type="System">
-                                            <param id="0" name="Object to create">Collectible_Cup</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_HeyStack_Normal.X+64+128+128</param>
-                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y-256</param>
-                                        </action>
                                         <action id="9" name="Set scale" sid="2732800750180176" type="Floor_HeyStack_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
@@ -1504,7 +1520,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8575014628199341" title="BIG CANDY LETTER SET">
+        <event-group collapsed="1" description="" sid="8575014628199341" title="BIG COLLECTIBLE LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>

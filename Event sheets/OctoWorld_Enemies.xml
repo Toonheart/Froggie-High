@@ -102,9 +102,94 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="934377996312115">
-                    <conditions />
+                <event-block collapsed="1" sid="3401271219530339">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9415166165339287" type="Collectible_Cup" />
+                    </conditions>
                     <actions />
+                    <sub-events>
+                        <event-block sid="7800463093303883">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3026744301692712" type="Froggie">
+                                    <param id="0" name="Object">Collectible_Cup</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="842600423475141" type="Collectible_Cup" />
+                                <action id="-10" name="Add to" sid="1731362129061521" type="System">
+                                    <param id="0" name="Variable">CupsCollected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1989526743951734" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9407515874836614" type="Enemy_OctoBOSS">
+                                    <param id="0" name="Instance variable">CupStatus</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4527843978279767">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="5173123422200193" type="Enemy_OctoBOSS">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2266924267217468" type="Collectible_Cup">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9036681226606851">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7726938606744029" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5512108473757762" type="Collectible_Cup">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="934377996312115">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="3310892476040926" type="System">
+                            <param id="0" name="Object">HUD_Cup</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="8368735524307445" type="HUD_Cup" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1014888929057725">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3469652502613635" type="HUD_Cup">
+                                    <param id="0" name="Instance variable">CupNo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">CupsCollected</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="9836648642252434" type="HUD_Cup">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4046320463723904">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1613783668977542" type="System">
+                            <param id="0" name="Variable">CupsCollected</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9792629402711457" type="Enemy_OctoBOSS" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

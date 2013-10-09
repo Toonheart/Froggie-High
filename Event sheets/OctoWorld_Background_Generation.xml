@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>OctoWorld_Background_Generation</name>
+    <events>
+        <event-group description="" sid="4142508178103976" title="Cloud Generation">
+            <sub-events>
+                <event-block sid="408375433930622">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2528685362638381" type="System">
+                            <param id="0" name="First value">NextFloorPosition</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="3762029008873333" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9732581224703117">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2012105121050813" type="System">
+                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%6</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4653259833226668" type="System" />
+                                <condition id="-14" name="Compare variable" sid="3698283797499848" type="System">
+                                    <param id="0" name="Variable">Counter_Floor</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="7608926159524266" type="System">
+                                    <param id="0" name="Object to create">BG_Cloud2</param>
+                                    <param id="1" name="Layer">&quot;Parallax2&quot;</param>
+                                    <param id="2" name="X">random(20,LayoutWidth-20)</param>
+                                    <param id="3" name="Y">ViewportTop(&quot;Parallax2&quot;)-random(60,80)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="6339011671465296" type="BG_Cloud2">
+                                    <param id="0" name="Scale">random(0.6,1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1941759745088742" type="BG_Cloud2">
+                                    <param id="0" name="Instance variable">Flip</param>
+                                    <param id="1" name="Value">round(random(0,1))</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8112853805025432" type="BG_Cloud2">
+                                    <param id="0" name="Opacity">round(random(70,80))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4467080364933534">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="448330259539956" type="System">
+                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%4</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4369782321255218" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3392377052400495" type="System">
+                                    <param id="0" name="Object to create">BG_Cloud1</param>
+                                    <param id="1" name="Layer">&quot;Parallax1&quot;</param>
+                                    <param id="2" name="X">random(20,LayoutWidth-20)</param>
+                                    <param id="3" name="Y">ViewportTop(&quot;Parallax1&quot;)-random(60,80)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3404233413864542" type="BG_Cloud1">
+                                    <param id="0" name="Scale">random(0.2,0.5)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7397250081119048" type="BG_Cloud1">
+                                    <param id="0" name="Instance variable">Flip</param>
+                                    <param id="1" name="Value">round(random(0,1))</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Set opacity" sid="732325907321962" type="BG_Cloud1">
+                                    <param id="0" name="Opacity">round(random(50,60))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Randomly scaling,Flipping clouds" sid="4727189158465974" title="Clouds Randomization">
+            <sub-events>
+                <event-block sid="5022345252185476">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="9235955776339794" type="BG_Cloud1" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="2786979746714876" type="BG_Cloud1">
+                            <param id="0" name="Scale">Self.scale</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7108405753697464">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="4934841515221444" type="BG_Cloud2" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="9970967181285977" type="BG_Cloud2">
+                            <param id="0" name="Scale">Self.scale</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9850711986581617">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7637751274531276" type="BG_Cloud1">
+                            <param id="0" name="Instance variable">Flip</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="6313376693338748" type="BG_Cloud1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8821582304357364">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4317723622587142" type="BG_Cloud2">
+                            <param id="0" name="Instance variable">Flip</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set flipped" sid="4203581792083436" type="BG_Cloud2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

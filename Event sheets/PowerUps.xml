@@ -18,6 +18,11 @@
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="5360377649197669" type="Bling">
+                            <param id="0" name="Object">Bling</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-3" name="Create object" sid="279053315669398" type="System">
                             <param id="0" name="Object to create">Collectible_Candy</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -303,7 +308,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5111261358297281" title="HyperJump">
+        <event-group description="" sid="5111261358297281" title="HyperJump">
             <sub-events>
                 <comment>Jump Automatically</comment>
                 <comment>On landed on Spring give a double push</comment>
@@ -326,6 +331,11 @@
                         <action id="4" name="Set animation" sid="5444244577526847" type="Bling">
                             <param id="0" name="Animation">&quot;Mushroom&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5450478816410229" type="PowerUp_Mushroom_HyperJump">
+                            <param id="0" name="Object">Bling</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="215280903131925" type="PowerUp_Mushroom_HyperJump" />
                     </actions>
@@ -388,62 +398,6 @@
                         </action>
                         <action id="9" name="Set scale" sid="3421178517872285" type="HUD_HealthIndicator">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="To kill big boss Enemy" sid="2893198732519232" title="Collectible Cups">
-            <sub-events>
-                <event-block collapsed="1" sid="3719948201657679">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="8933545833116985" type="Collectible_Cup" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="3629401117305093">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="3735611726640805" type="Froggie">
-                                    <param id="0" name="Object">Collectible_Cup</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="3030690808920977" type="Collectible_Cup" />
-                                <action id="-12" name="Subtract from" sid="3278954343383506" type="Enemy_OctoBOSS">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="5167671208194808" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5942090972798737" type="Enemy_OctoBOSS">
-                                    <param id="0" name="Instance variable">CupStatus</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="9378415675175708">
-                    <conditions>
-                        <condition id="3" name="Compare frame" sid="6616344129749616" type="Enemy_OctoBOSS">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Number">6</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="7460810547797228" type="Collectible_Cup">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8871837504529961">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="107401814828353" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="1437709637092788" type="Collectible_Cup">
-                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
