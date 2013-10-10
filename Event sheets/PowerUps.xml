@@ -308,7 +308,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5111261358297281" title="HyperJump">
+        <event-group collapsed="1" description="" sid="5111261358297281" title="HyperJump">
             <sub-events>
                 <comment>Jump Automatically</comment>
                 <comment>On landed on Spring give a double push</comment>
@@ -403,5 +403,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="7281787066480177">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9413066180860862" type="Froggie">
+                    <param id="0" name="Object">PowerUps</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="8616483591014319" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">round(random(600,700))</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

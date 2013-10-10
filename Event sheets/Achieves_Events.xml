@@ -3,112 +3,307 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Achieves_Events</name>
     <events>
-        <include>GoToMain</include>
-        <event-block sid="9676333653055928">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="731233108122765" type="System" />
-            </conditions>
-            <actions>
-                <action id="4" name="Load" sid="9593601440604174" type="Dictionary">
-                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveAwardDict&quot;)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="465613427067798">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="8650007665026958" type="Froggie">
-                    <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
-                </condition>
-                <condition disabled="1" id="-8" name="Compare two values" sid="6015136268000319" type="System">
-                    <param id="0" name="First value">Achieves_Icon_Rocket.Opacity</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="1573991660107034" type="Dictionary">
-                    <param id="0" name="Key">&quot;Rocket&quot;</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set local value" sid="7864084892491218" type="WebStorage">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5465434968886827">
-            <conditions>
-                <condition id="3" name="Has key" sid="7292467749829784" type="Dictionary">
-                    <param id="0" name="Key">&quot;Rocket&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="8497246610617386" type="Achieves_Icon_Rocket">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="261819276880785">
-            <conditions>
-                <condition disabled="1" id="-8" name="Compare two values" sid="3536510368969825" type="System">
-                    <param id="0" name="First value">Achieves_Icon_Shield.Opacity</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="5113879094376377" type="Dictionary">
-                    <param id="0" name="Key">&quot;Shield&quot;</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set local value" sid="4985453025737786" type="WebStorage">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="4588102742479989">
-            <conditions>
-                <condition id="3" name="Has key" sid="69324470855015" type="Dictionary">
-                    <param id="0" name="Key">&quot;Shield&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="3361063294422423" type="Achieves_Icon_Shield">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3728393457837184">
-            <conditions>
-                <condition disabled="1" id="-8" name="Compare two values" sid="3958548545087879" type="System">
-                    <param id="0" name="First value">Achieves_Icon_Mushroom.Opacity</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Second value">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="3038611435803738" type="Dictionary">
-                    <param id="0" name="Key">&quot;Mushrum&quot;</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="0" name="Set local value" sid="8932443518724093" type="WebStorage">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="384356086291027">
-            <conditions>
-                <condition id="3" name="Has key" sid="3750349488656478" type="Dictionary">
-                    <param id="0" name="Key">&quot;Mushrum&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Set opacity" sid="8668229504943636" type="Achieves_Icon_Mushroom">
-                    <param id="0" name="Opacity">100</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="7346799539587752" title="Old">
+            <sub-events>
+                <include>GoToMain</include>
+                <event-block sid="2667942979917621">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1448352738111719" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Load" sid="5519543606995326" type="Dictionary">
+                            <param id="0" name="JSON">WebStorage.LocalValue(&quot;SaveAwardDict&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="170700247334185">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6132136916835616" type="Froggie">
+                            <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
+                        </condition>
+                        <condition disabled="1" id="-8" name="Compare two values" sid="7718412743314953" type="System">
+                            <param id="0" name="First value">Achieves_Icon_Rocket.Opacity</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="4313128991774757" type="Dictionary">
+                            <param id="0" name="Key">&quot;Rocket&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="3342584770881795" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                            <param id="1" name="Value">Dictionary.AsJSON</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8365442249943668">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="8689440931943586" type="Dictionary">
+                            <param id="0" name="Key">&quot;Rocket&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="1775416413179471" type="Achieves_Icon_Rocket">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9915914226946534">
+                    <conditions>
+                        <condition disabled="1" id="-8" name="Compare two values" sid="4382650915721688" type="System">
+                            <param id="0" name="First value">Achieves_Icon_Shield.Opacity</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="2722407555577505" type="Dictionary">
+                            <param id="0" name="Key">&quot;Shield&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="5092803082583883" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                            <param id="1" name="Value">Dictionary.AsJSON</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4037807130075615">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="9380216554008966" type="Dictionary">
+                            <param id="0" name="Key">&quot;Shield&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="5416833467977434" type="Achieves_Icon_Shield">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2537349563549788">
+                    <conditions>
+                        <condition disabled="1" id="-8" name="Compare two values" sid="6041913299761353" type="System">
+                            <param id="0" name="First value">Achieves_Icon_Mushroom.Opacity</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="5724003489356822" type="Dictionary">
+                            <param id="0" name="Key">&quot;Mushrum&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="3047868616231983" type="WebStorage">
+                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                            <param id="1" name="Value">Dictionary.AsJSON</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234263049100397">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="2224045907007658" type="Dictionary">
+                            <param id="0" name="Key">&quot;Mushrum&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="9569243110104361" type="Achieves_Icon_Mushroom">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Unlocking the achievements based on scores" sid="5645500636779312" title="GamerLevel Achievements">
+            <sub-events>
+                <event-block sid="2958522917459714">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3252672739820804" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1000</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Local key exists" sid="1014503340244792" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_1000&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="2162420635151357" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_1000&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="550569813913133" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2867297950078902" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;OneThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4487099205185414" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5431685031761831" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;1000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5695470589929902">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8137106184151852" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">5000</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6224710174136399" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_5000&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="6234027838533402" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_5000&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9251843371610048" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;FiveThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8706143502013296" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9688843740814709" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7953002306200432" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;5000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7454438391483779">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5717074078422128" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">10000</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Local key exists" sid="9323586909375501" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_10000&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="5055623941942616" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_10000&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2206453449501089" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6509112421293529" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;TenThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9947492789165984" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2387511518332109" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;10000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9653404060440602">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8243467307828601" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">20000</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Local key exists" sid="282456106665275" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_20000&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="4507004727515074" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_20000&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9493868927486668" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1971417398388209" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;TwentyThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5571479805280623" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1577477755069645" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;20000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="8721255446559304">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4253093542934401" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">30000</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6388208228648004" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_10000&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="2587351441653584" type="WebStorage">
+                            <param id="0" name="Key">&quot;Achievement_30000&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="495598491913505" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7723712374457525" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;ThirtyThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9757505711305687" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9049781287218946" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;30000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6281235086293201" title="Updating Achievements Layout" />
     </events>
 </c2eventsheet>

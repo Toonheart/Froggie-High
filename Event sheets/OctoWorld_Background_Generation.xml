@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>OctoWorld_Background_Generation</name>
     <events>
+        <comment>Generating clouds in two Parallax layers,The big size cloud shold be faster and the smaller </comment>
         <event-group description="" sid="4142508178103976" title="Cloud Generation">
             <sub-events>
                 <event-block sid="408375433930622">
@@ -19,7 +20,7 @@
                         <event-block sid="9732581224703117">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2012105121050813" type="System">
-                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%6</param>
+                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%8</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>
@@ -52,7 +53,7 @@
                         <event-block sid="4467080364933534">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="448330259539956" type="System">
-                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%4</param>
+                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%6</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">0</param>
                                 </condition>

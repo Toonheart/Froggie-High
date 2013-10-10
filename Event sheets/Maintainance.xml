@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <event-group description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+        <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
             <sub-events>
                 <comment>Destroy The Enemy Below the ViewPortBottom</comment>
                 <event-block sid="8554971264545097">
@@ -52,22 +52,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy">
-                    <sub-events>
-                        <event-block sid="3874415251620764">
-                            <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="6491244160867309" type="Collectible_Candy" />
-                                <condition id="-2" name="Compare Y" sid="4304784999638456" type="Collectible_Candy">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="2027177302348719" type="Collectible_Candy" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
+                <event-group description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy" />
                 <comment>TO BE REMOVED WHEN WE MAKE SCROLLING PARALLAX tiles</comment>
                 <event-block sid="2346052610093019">
                     <conditions>
@@ -185,6 +170,71 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="2422699461059462" type="BrokenParts" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4920008378764982" title="ColleCtibles">
+            <sub-events>
+                <comment>Destroy the collectible below the screen,and overlaping the side port markers</comment>
+                <event-block sid="3874415251620764">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="6491244160867309" type="Collectibles" />
+                        <condition id="-2" name="Compare Y" sid="4304784999638456" type="Collectibles">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2027177302348719" type="Collectibles" />
+                    </actions>
+                </event-block>
+                <event-block sid="712740935121874">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="4264545816179027" type="Collectibles">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8025871701785765" type="Collectibles" />
+                    </actions>
+                </event-block>
+                <event-block sid="5227630622827106">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9377608401555692" type="Collectibles">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8894373741140616" type="Collectibles" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="7689727470139722" title="Others">
+            <sub-events>
+                <event-block sid="2296325576407999">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="5177134995901843" type="Rope_Left" />
+                        <condition id="-2" name="Compare Y" sid="3839409468386819" type="Rope_Left">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7910582332377913" type="Rope_Left" />
+                    </actions>
+                </event-block>
+                <event-block sid="7830433935718557">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3753730001015647" type="Rope_Right" />
+                        <condition id="-2" name="Compare Y" sid="9316162411726875" type="Rope_Right">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8192860229737641" type="Rope_Right" />
                     </actions>
                 </event-block>
             </sub-events>

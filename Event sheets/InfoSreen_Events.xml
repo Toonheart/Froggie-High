@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>InfoSreen_Events</name>
+    <events>
+        <event-group collapsed="1" description="If the player is going to collect the POWERUP  for the first time give some info about the power up" sid="6609771894087067" title="POWER UP - INFO">
+            <sub-events>
+                <comment>HYPER JUMP MUSHROOM Info</comment>
+                <event-block sid="2762611365648163">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="5744003213684145" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_PowerUP_HyperJump&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="7635540424057025" type="PowerUp_Mushroom_HyperJump" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="7542972910322012" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1487393806038041" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="407411743535319" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_HyperJump</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="295608931192617" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="1278427658966445" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_PowerUP_HyperJump&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8404608804394986">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="717742177295783" type="Touch">
+                            <param id="0" name="Object">Button_Continue</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2491141127755806" type="InfoSprites" />
+                        <action id="-9" name="Destroy" sid="1524183823396076" type="Button_Continue" />
+                        <action id="1" name="Set pause state" sid="4980521050691837" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>HEALTH MUSHROOM Info</comment>
+                <event-block sid="8565971725453555">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="7310444729587095" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_PowerUp_Health&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="4856011061999719" type="PowerUp_Mushroom_Health" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="9887645347953207" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1959161406039633" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3638448705011606" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_Health</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3969344723569407" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="9305425275039039" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_PowerUp_Health&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>RAINBOW MUSHROOM Info</comment>
+                <event-block sid="9183899886549741">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="7669023751236698" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_PowerUp_Rainbow&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="1432796741520364" type="PowerUp_Mushroom_Rainbow" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="1684113201802031" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5995647527467277" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5961585062272119" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_Rainbow</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1028503483613518" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="3707108310379359" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_PowerUp_Rainbow&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4081383379802565" title="OCTO ENEMY">
+            <sub-events>
+                <event-block sid="161917449876792">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6771723206995931" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_SpikyOcto&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="2680787996457283" type="Enemy_SpikyOcto" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="3235631489188955" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2179414910728561" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2713159715083262" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_OctoEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="3149297581005513" type="InfoSprite_OctoEnemy">
+                            <param id="0" name="Animation">&quot;Spiky&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3805357822620854" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="3939667376850839" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_SpikyOcto&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9792727825006399">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6044317857290491" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_ElectroOcto&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="2939539512607223" type="Enemy_ElectroOcto" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="5647882580579983" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1465805362142157" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="634695969082502" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_OctoEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="8777822669154857" type="InfoSprite_OctoEnemy">
+                            <param id="0" name="Animation">&quot;Electro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2452462502546858" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="5580303444014808" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_ElectroOcto&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4237580313614493">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6194720096987056" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroOcto&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="1200395880138986" type="Enemy_PatrolOcto_Left" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="3990737878513878" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4827100772332895" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6512533784227564" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_OctoEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4862655285180495" type="InfoSprite_OctoEnemy">
+                            <param id="0" name="Animation">&quot;Patro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2038811949477475" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="2113427604061929" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroOcto&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8660759863301183">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="162572187724761" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroOcto&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="9641731399683697" type="Enemy_PatrolOcto_Right" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="4942667688661294" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5409671774612128" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2477547494861839" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_OctoEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5306406928144525" type="InfoSprite_OctoEnemy">
+                            <param id="0" name="Animation">&quot;Patro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7684650729810589" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="4142011576994728" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroOcto&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8931145864238593" title="CHICKEN ENEMY">
+            <sub-events>
+                <event-block sid="616638112179787">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="9545746900627856" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BoxerChicken&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="6319295945260734" type="EnemyBoxer_Chicken" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="5795251953766567" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4729782253561773" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7837766392829363" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChickenEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6764593359246778" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Boxer&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6686043810935961" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="2155362266507579" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BoxerChicken&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5508287909071612">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="3749469437187065" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_FluChicken&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="9674625183356248" type="Enemy_Flu_Chicken" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="8710581826433018" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5899808410336883" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4409910610351309" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChickenEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="385941464177848" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Flu&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="413236768910427" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="5242711388355324" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_FluChicken&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1525613726573546">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="2470356901524135" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChicken&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="7478841244397926" type="Enemy_PatroChicken_Left" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="9645989233857902" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3734770344709123" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4074743701665344" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChickenEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="613998286319049" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Patro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3431967386423822" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="9018512965468223" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChicken&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2458068643464688">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="5547893789933935" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChicken&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="8378635308508686" type="Enemy_PatroChicken_Right" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="6635994098295278" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6449976470871915" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1144007980056154" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChickenEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2939922697052393" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Patro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="879525237791238" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="7148596273069256" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChicken&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6544316666393837" title="CHIMP ENEMY">
+            <sub-events>
+                <event-block sid="8047397121042634">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="7878222190413213" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BaboonChimp&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="8810265113340869" type="Enemy_Chimp_Baboon" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="765230819665263" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8008672572088763" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3620077191748837" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChimpEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5198134949785304" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Baboon&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6137457556238894" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="1042789953184762" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BaboonChimp&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8429654726867237">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6198775311595254" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BashChimp&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="7521806416751957" type="Enemy_Chimp_Bash" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="860134149500622" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3418299145100682" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9662581867228824" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChimpEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6278069822992565" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Bash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3695013992278719" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="5742605898852125" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BashChimp&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1345501418754425">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="142442885964686" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BashChimp&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="7358725553569046" type="Enemy_Chimp_Baboon" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="5345648457879391" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1941956520422802" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8943275430982416" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChimpEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7564391068276651" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Bash&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1216958009347565" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="9683438684906049" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_BashChimp&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2566895871969884">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="9062333587321045" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChimp&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="6419582370258201" type="Enemy_Chimp_Patro_Left" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="6976924917743743" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9045239207880225" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2427004637374417" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChimpEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5963675608876226" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Patro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8608223699397265" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="5459356630219548" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChimp&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5282184185004293">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="6849177046945965" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChimp&quot;</param>
+                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="7584769294511728" type="Enemy_Chimp_Patro_Right" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="8350796085636703" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1895928965668146" type="System">
+                            <param id="0" name="Object to create">Info_Scroll</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8191893384602374" type="Info_Scroll">
+                            <param id="0" name="Object">InfoSprite_ChimpEnemy</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;InfoSprite&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7322557300991258" type="InfoSprite_ChickenEnemy">
+                            <param id="0" name="Animation">&quot;Patro&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8189015837134851" type="Info_Scroll">
+                            <param id="0" name="Object">Button_Continue</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">&quot;Continue&quot;</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="6818534684929386" type="WebStorage">
+                            <param id="0" name="Key">&quot;Info_Enemy_PatroChimp&quot;</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

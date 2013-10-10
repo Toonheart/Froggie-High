@@ -44,11 +44,11 @@
                         <action behavior="8Direction" id="4" name="Set max speed" sid="6813752826377235" type="Collectible_Candy">
                             <param id="0" name="Max Speed">LayoutWidth/2</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="385722757207152" type="Letterr_collectibleCandy">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="385722757207152" type="Letter_collectibleCandy">
                             <param id="0" name="Pin to">Letter_collectible_Base</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="3710748260876585" type="Letterr_collectibleCandy">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3710748260876585" type="Letter_collectibleCandy">
                             <param id="0" name="Pin to">Letter_collectible_Base</param>
                             <param id="1" name="Mode">0</param>
                         </action>
@@ -78,10 +78,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block collapsed="1" sid="7564923252496036">
+                <event-block sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -106,7 +106,7 @@
                                 <condition id="-14" name="Compare variable" sid="7048107559489026" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -114,7 +114,7 @@
                                     <param id="0" name="Object to create">Floor_Grass_Normal</param>
                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                     <param id="2" name="X">random((LayoutWidth/2)-200,(LayoutWidth/2)+200)</param>
-                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-20</param>
+                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-128</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="2425959312110411" type="Floor_Grass_Normal">
                                     <param id="0" name="Instance variable">PresentFloor</param>
@@ -385,13 +385,13 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="9" name="Set scale" sid="3839566862524458" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Scale">1</param>
+                                                </action>
                                                 <action id="0" name="Spawn another object" sid="8048041007881375" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">Enemy_ElectroOcto</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="Image point">&quot;PowerUp&quot;</param>
-                                                </action>
-                                                <action id="9" name="Set scale" sid="3839566862524458" type="Floor_Grass_Normal">
-                                                    <param id="0" name="Scale">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="4068328289620632" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
@@ -415,13 +415,13 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="9" name="Set scale" sid="2588879310930618" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Scale">1</param>
+                                                </action>
                                                 <action id="0" name="Spawn another object" sid="6833049775857547" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">Enemy_SpikyOcto</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="Image point">&quot;PowerUp&quot;</param>
-                                                </action>
-                                                <action id="9" name="Set scale" sid="2588879310930618" type="Floor_Grass_Normal">
-                                                    <param id="0" name="Scale">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="1013602849806819" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
@@ -497,6 +497,9 @@
                                                 <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
                                             </conditions>
                                             <actions>
+                                                <action id="9" name="Set scale" sid="7354787636964542" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Scale">1</param>
+                                                </action>
                                                 <action id="0" name="Spawn another object" sid="5340268812543691" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">PowerUp_Mushroom_HyperJump</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -506,9 +509,6 @@
                                                 <action id="-10" name="Set value" sid="812508345334304" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="9" name="Set scale" sid="7354787636964542" type="Floor_Grass_Normal">
-                                                    <param id="0" name="Scale">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -529,17 +529,17 @@
                                                 <condition id="-14" name="Compare variable" sid="6944298204547933" type="System">
                                                     <param id="0" name="Variable">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">3</param>
+                                                    <param id="2" name="Value">2</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
+                                                <action id="9" name="Set scale" sid="1731358914165957" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Scale">1</param>
+                                                </action>
                                                 <action id="0" name="Spawn another object" sid="4821846726636839" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="Image point">&quot;PowerUp&quot;</param>
-                                                </action>
-                                                <action id="9" name="Set scale" sid="1731358914165957" type="Floor_Grass_Normal">
-                                                    <param id="0" name="Scale">1</param>
                                                 </action>
                                                 <action id="-10" name="Set value" sid="3613395592270264" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
@@ -568,6 +568,9 @@
                                                 <condition id="-4" name="Trigger once while true" sid="9866535828008981" type="System" />
                                             </conditions>
                                             <actions>
+                                                <action id="9" name="Set scale" sid="7790380335799573" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Scale">1</param>
+                                                </action>
                                                 <action id="0" name="Spawn another object" sid="5871022047403519" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">PowerUp_Mushroom_Health</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -576,9 +579,6 @@
                                                 <action id="-10" name="Set value" sid="3263821134205995" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="9" name="Set scale" sid="7790380335799573" type="Floor_Grass_Normal">
-                                                    <param id="0" name="Scale">1</param>
                                                 </action>
                                                 <action disabled="1" id="-9" name="Destroy" sid="7755887190943894" type="Floor_Grass_Normal" />
                                             </actions>
@@ -619,19 +619,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-288</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="6221630607753264" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-288</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="4947126884675295" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-288</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="2464071879010137" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -644,19 +644,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="7179515651439784" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="9512540027748394" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="2893025639306441" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -669,19 +669,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="6304217692488506" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="4192879360245584" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="7094878116335125" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -694,19 +694,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+288</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="7289843918331804" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+288</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="6107436916693063" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+288</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="8758010949013505" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -740,19 +740,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="3121228922530984" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="1650003200703232" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="9164374402440044" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -765,19 +765,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-192</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="5357934278332217" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-192</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="3916004163984458" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-192</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="709413781873461" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -790,19 +790,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+192</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="2401797708452616" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+192</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="7897011973458871" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+192</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="8701843926016699" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -836,19 +836,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="5304303837326775" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="5033129540574966" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X-96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="6197421718157845" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -861,19 +861,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="4981653570263664" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="8247906818921406" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X+96</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="4285115326711538" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -907,19 +907,19 @@
                                                             <param id="0" name="Object to create">Collectible_Marker_Top</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-240</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-208</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="2322347510348575" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-120</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-88</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="9340966169138581" type="System">
                                                             <param id="0" name="Object to create">Collectible_Candy</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
-                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-160</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y-128</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="5814259959951105" type="Collectible_Candy">
                                                             <param id="0" name="Instance variable">AnimSelector</param>
@@ -975,29 +975,6 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <comment>Spawning Clouds</comment>
-                                        <event-block disabled="1" sid="4628942755877858">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="1764955572762596" type="System">
-                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%round(random(3,8))</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">0</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="3685280880370887" type="System" />
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                        <event-block disabled="1" sid="1479460364707168">
-                                            <conditions>
-                                                <condition id="-8" name="Compare two values" sid="8990421787741354" type="System">
-                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%round(random(2,5))</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">0</param>
-                                                </condition>
-                                                <condition id="-4" name="Trigger once while true" sid="9993380422751603" type="System" />
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
                                         <comment>MOVING FLOORS.&#x0D;&#x0A;The logic for patrolling behaviour of moving floor is on another event sheet.</comment>
                                         <event-block sid="9747001268058117">
                                             <conditions>
@@ -1037,7 +1014,7 @@
                             </sub-events>
                         </event-block>
                         <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
-                        <event-block sid="8573108025996764">
+                        <event-block collapsed="1" sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -1047,7 +1024,7 @@
                                 <condition id="-14" name="Compare variable" sid="2772437121814374" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">6</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="6284013719495923" type="System">
                                     <param id="0" name="Variable">Counter_Floor</param>
@@ -1066,7 +1043,7 @@
                                     <param id="0" name="Instance variable">PresentFloor</param>
                                     <param id="1" name="Value">Counter_Floor</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="2060813474132128" type="Floor_Grass_Normal">
+                                <action disabled="1" id="9" name="Set scale" sid="2060813474132128" type="Floor_Grass_Normal">
                                     <param id="0" name="Scale">random(0.5,1)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="8752222035474975" type="Floor_Grass_Normal">
@@ -1233,7 +1210,7 @@
                 <comment>Generating markers for Letter colletible Base</comment>
                 <event-block sid="2310663934958245">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="9565885498479511" type="Letterr_collectibleCandy" />
+                        <condition id="-3" name="Is on-screen" sid="9565885498479511" type="Letter_collectibleCandy" />
                         <condition id="-4" name="Trigger once while true" sid="3693541116523184" type="System" />
                     </conditions>
                     <actions>
@@ -1286,7 +1263,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5026725869973801" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="5026725869973801" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Plane1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1301,7 +1278,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="4104598262245849" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="4104598262245849" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Plane2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1316,7 +1293,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="7880830284074811" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="7880830284074811" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Plane3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1331,7 +1308,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="3799148265325921" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="3799148265325921" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Twocolor1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1346,7 +1323,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9816554672608735" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="9816554672608735" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Twocolor2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1361,7 +1338,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5680736041595537" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="5680736041595537" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Twocolor3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1376,7 +1353,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="6261708485815009" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="6261708485815009" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Star1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1391,7 +1368,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="6580267466979597" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="6580267466979597" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Star2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1406,7 +1383,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="6689338918102675" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="6689338918102675" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Star3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1421,7 +1398,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="7296654106024051" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="7296654106024051" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Wrapper1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1436,7 +1413,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="6586257586643999" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="6586257586643999" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Wrapper2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1451,7 +1428,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="6177959570436094" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="6177959570436094" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Wrapper3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1466,7 +1443,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5496530462695626" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="5496530462695626" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Swirl1&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1481,7 +1458,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9629802039181309" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="9629802039181309" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Swirl2&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1496,7 +1473,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="7044028345206507" type="Letterr_collectibleCandy">
+                        <action id="4" name="Set animation" sid="7044028345206507" type="Letter_collectibleCandy">
                             <param id="0" name="Animation">&quot;Swirl3&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1504,7 +1481,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group collapsed="1" description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>

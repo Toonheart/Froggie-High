@@ -56,7 +56,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="9273741993217367" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="9273741993217367" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -408,7 +408,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>FLYING CHICKEN&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block collapsed="1" sid="4071968505375019">
+                                        <event-block sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_Wooden_Normal.PresentFloor%5</param>
@@ -434,12 +434,17 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="6099253772183661" type="System">
-                                                            <param id="0" name="Object to create">Enemy_PatroChicken_Right</param>
+                                                            <param id="0" name="Object to create">Rope_Right</param>
                                                             <param id="1" name="Layer">&quot;Player&quot;</param>
-                                                            <param id="2" name="X">ViewportLeft(&quot;Game&quot;)+20</param>
-                                                            <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;)+ViewportTop(&quot;Game&quot;))+400</param>
+                                                            <param id="2" name="X">ViewportLeft(&quot;Game&quot;)</param>
+                                                            <param id="3" name="Y">random(ViewportTop(&quot;game&quot;)+200,ViewportTop(&quot;Game&quot;)+400)</param>
                                                         </action>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8836510275358888" type="Enemy_PatroChicken_Right">
+                                                        <action id="0" name="Spawn another object" sid="5990998452292373" type="Rope_Right">
+                                                            <param id="0" name="Object">Enemy_Chimp_Patro_Right</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8836510275358888" type="Enemy_Chimp_Patro_Right">
                                                             <param id="0" name="Angle">-45</param>
                                                         </action>
                                                         <action id="-9" name="Set value" sid="5684280266188508" type="System">
@@ -453,13 +458,24 @@
                                                         <condition id="-22" name="Else" sid="5563903738148103" type="System" />
                                                     </conditions>
                                                     <actions>
-                                                        <action id="-3" name="Create object" sid="5978068724442354" type="System">
-                                                            <param id="0" name="Object to create">Enemy_PatroChicken_Left</param>
+                                                        <action id="-3" name="Create object" sid="4957475669277865" type="System">
+                                                            <param id="0" name="Object to create">Rope_Left</param>
+                                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                                            <param id="2" name="X">Viewportright(&quot;Game&quot;)</param>
+                                                            <param id="3" name="Y">random(ViewportTop(&quot;game&quot;)+200,ViewportTop(&quot;Game&quot;)+400)</param>
+                                                        </action>
+                                                        <action id="0" name="Spawn another object" sid="8840674215679411" type="Rope_Left">
+                                                            <param id="0" name="Object">Enemy_Chimp_Patro_Left</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                                            <param id="2" name="Image point">0</param>
+                                                        </action>
+                                                        <action disabled="1" id="-3" name="Create object" sid="5978068724442354" type="System">
+                                                            <param id="0" name="Object to create">Enemy_Chimp_Patro_Left</param>
                                                             <param id="1" name="Layer">&quot;Player&quot;</param>
                                                             <param id="2" name="X">Viewportright(&quot;Game&quot;)-20</param>
                                                             <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;),ViewportTop(&quot;Game&quot;))+400</param>
                                                         </action>
-                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="156490339713205" type="Enemy_PatroChicken_Left">
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="156490339713205" type="Enemy_Chimp_Patro_Left">
                                                             <param id="0" name="Angle">225</param>
                                                         </action>
                                                         <action id="-9" name="Set value" sid="1658125572964881" type="System">
