@@ -65,12 +65,12 @@
                 <comment>Creat aLocal storage for HighScore if doesn&apos;t Exist</comment>
                 <event-block sid="1047586958962689">
                     <conditions>
-                        <condition id="3" inverted="1" name="Local key exists" sid="8864381827096966" type="WebStorage">
+                        <condition id="3" inverted="1" name="Local key exists" sid="8864381827096966" type="WebStr_Common">
                             <param id="0" name="Key">&quot;HighScore&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set local value" sid="9340786745321412" type="WebStorage">
+                        <action id="0" name="Set local value" sid="9340786745321412" type="WebStr_Common">
                             <param id="0" name="Key">&quot;HighScore&quot;</param>
                             <param id="1" name="Value">&quot;0&quot;</param>
                         </action>

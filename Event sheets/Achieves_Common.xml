@@ -2,5 +2,297 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Achieves_Common</name>
-    <events />
+    <events>
+        <comment>Set keys for All achievements with value &quot;0&quot;(lock) which further used to unlock the achivements.</comment>
+        <event-block sid="1123425348485791">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2055178262696614" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="2064293740370073" type="AJAX">
+                    <param id="0" name="Tag">&quot;AchievesUnlock&quot;</param>
+                    <param id="1" name="File">achieves.json</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="7385774679543233">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="690522987997663" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_1K&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="1567930994072871" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_1k&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="4777801686012487">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="131714979625944" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_5K&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="926302045828202" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_5K&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="9068141581245219">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="7687385435027771" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_10K&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="6508124516455739" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_10K&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="4783162033203102">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="6051817809973315" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_20K&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9399083160640631" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_20K&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="5988143920263093">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="9788602568565961" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_30K&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="2660083465907333" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_30K&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7729669900617467">
+            <conditions>
+                <condition id="0" name="On completed" sid="4474498792214921" type="AJAX">
+                    <param id="0" name="Tag">&quot;AchievesUnlock&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="102009031986135" type="Dict_Achieve_Unlock">
+                    <param id="0" name="JSON">&quot;achieves.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="Unlocking the achievements based on scores" sid="38067475632089" title="GamerLevel Achievements">
+            <sub-events>
+                <event-block sid="2958522917459714">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3252672739820804" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">1000</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="3548995395286666" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_1K&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="2162420635151357" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_1K&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="550569813913133" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2867297950078902" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;OneThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4487099205185414" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5431685031761831" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;1000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5695470589929902">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8137106184151852" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">5000</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="6545119792497905" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_5K&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="9348708586701167" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_5K&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9251843371610048" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;FiveThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8706143502013296" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9688843740814709" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7953002306200432" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;5000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7454438391483779">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5717074078422128" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">10000</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="238414518060065" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_10K&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="7808769377677928" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_10K&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2206453449501089" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6509112421293529" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;TenThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9947492789165984" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2387511518332109" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;10000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9653404060440602">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8243467307828601" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">20000</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="5775778350052286" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_20K&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="1042889018974423" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_20K&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9493868927486668" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1971417398388209" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;TwentyThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5571479805280623" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1577477755069645" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;20000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment></comment>
+                <event-block sid="8721255446559304">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4253093542934401" type="System">
+                            <param id="0" name="First value">Score</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">30000</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="4726600384821814" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_30K&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="8619949081784049" type="Dict_Achieve_Unlock">
+                            <param id="0" name="Key">&quot;Achieve_Score_30K&quot;</param>
+                            <param id="1" name="Value">&quot;1&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="495598491913505" type="System">
+                            <param id="0" name="Object to create">HUD_Achieves</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">ViewportTop(&quot;HUD&quot;)+128</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7723712374457525" type="HUD_Achieves">
+                            <param id="0" name="Animation">&quot;ThirtyThousand&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="9757505711305687" type="System">
+                            <param id="0" name="Object to create">HUD_AchievesText</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">HUD_Achieves.X</param>
+                            <param id="3" name="Y">HUD_Achieves.Y+128</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9049781287218946" type="HUD_AchievesText">
+                            <param id="0" name="Text">&quot;Achievement Unlocked&quot;&amp;newline&amp;&quot;30000Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>

@@ -14,16 +14,34 @@
                 <action id="0" name="Set text" sid="8002087447422118" type="Text_Debug">
                     <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer </param>
                 </action>
-                <action id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
                     <param id="0" name="Text"> newline &amp;&quot;Section  - &quot; &amp;WorldSection  &amp; newline</param>
                 </action>
-                <action id="1" name="Append text" sid="68665449264838" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="68665449264838" type="Text_Debug">
                     <param id="0" name="Text">&quot;max - &quot; &amp;CollectibleAnimMax &amp; newline</param>
                 </action>
-                <action id="1" name="Append text" sid="1873892544537227" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="1873892544537227" type="Text_Debug">
                     <param id="0" name="Text">&quot;PlatformCOunt  - &quot; &amp; Counter_Floor </param>
                 </action>
+                <action disabled="1" id="0" name="Set text" sid="817040328946467" type="Text_Debug">
+                    <param id="0" name="Text">&quot;Key &quot;&amp;Dict_Achieve_Unlock.Get(&quot;Achieve_Score_1K&quot;)&#x0D;&#x0A;&#x0D;&#x0A;&amp; newline&#x0D;&#x0A;</param>
+                </action>
+                <action id="0" name="Set text" sid="3077760656554698" type="Text_Debug">
+                    <param id="0" name="Text">&quot;Median : &quot;&amp;Dev_Cur_Alpha&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;Alpha : &quot; &amp;Touch.Alpha</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block disabled="1" sid="1522511495324201">
+                    <conditions>
+                        <condition id="4" name="Is empty" sid="8731047913518099" type="Dict_Achieve_Unlock" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="4884686467422952" type="Text_Debug">
+                            <param id="0" name="Text">&quot;YES&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

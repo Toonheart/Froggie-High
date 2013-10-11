@@ -10,8 +10,9 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -22,11 +23,11 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
     </used-behaviors>
@@ -437,7 +438,7 @@
         <object-type name="Audio" sid="3315908373687968">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="WebStorage" sid="2202632177604303">
+        <object-type name="WebStr_Common" sid="2202632177604303">
             <plugin id="WebStorage" />
         </object-type>
         <object-type name="Text_GameOverScore" sid="4317545328302635">
@@ -2842,16 +2843,20 @@
         <object-type name="Enemy_Chimp_Bash" sid="4965720412040207">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7341591219077903" speed="4">
+                <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7341591219077903" speed="6">
+                    <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
+                    <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
+                    <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
+                    <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                     <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                     <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                     <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                     <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                     <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                 </animation>
-                <animation framecount="2" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="3118677306679107" speed="2">
-                    <frame duration="1" hotspotX="0.769531" hotspotY="0.880859" />
-                    <frame duration="1" hotspotX="0.769531" hotspotY="0.880859" />
+                <animation framecount="2" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="3118677306679107" speed="4">
+                    <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
+                    <frame duration="1" hotspotX="0.662109" hotspotY="0.867188" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2864,7 +2869,7 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4769707889991174" speed="5">
-                    <frame duration="1" hotspotX="0.652344" hotspotY="0.0664063">
+                    <frame duration="1" hotspotX="0.691406" hotspotY="0.179688">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -2872,7 +2877,7 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.652344" hotspotY="0.0664063">
+                    <frame duration="1" hotspotX="0.691406" hotspotY="0.179688">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -2880,7 +2885,7 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.652344" hotspotY="0.0664063">
+                    <frame duration="1" hotspotX="0.691406" hotspotY="0.179688">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -2888,7 +2893,7 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.652344" hotspotY="0.0664063">
+                    <frame duration="1" hotspotX="0.691406" hotspotY="0.179688">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -2896,7 +2901,7 @@
                             <point x="1" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.652344" hotspotY="0.0664063">
+                    <frame duration="1" hotspotX="0.691406" hotspotY="0.179688">
                         <collision-poly>
                             <point x="1" y="1" />
                             <point x="0" y="1" />
@@ -2914,14 +2919,16 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1273224304400368" speed="5">
-                    <frame duration="1" hotspotX="0.00127389" hotspotY="0.971499">
+                    <frame duration="1" hotspotX="0.0122222" hotspotY="0.961081">
                         <collision-poly>
-                            <point x="0.486624" y="0.473358" />
-                            <point x="0.499363" y="0.459727" />
-                            <point x="0.984713" y="0.0148699" />
-                            <point x="0.499363" y="0.513011" />
-                            <point x="0.499363" y="0.511772" />
-                            <point x="0.458599" y="0.49938" />
+                            <point x="0.43" y="0.418378" />
+                            <point x="0.5" y="0.464865" />
+                            <point x="1" y="0" />
+                            <point x="0.578889" y="0.499459" />
+                            <point x="0.5" y="0.513514" />
+                            <point x="0.5" y="0.513514" />
+                            <point x="0" y="1" />
+                            <point x="0.394444" y="0.499459" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2931,14 +2938,16 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2131481204686684" speed="5">
-                    <frame duration="1" hotspotX="1" hotspotY="0.998761">
+                    <frame duration="1" hotspotX="0.981111" hotspotY="0.953514">
                         <collision-poly>
-                            <point x="0.541401" y="0.49938" />
-                            <point x="0.500637" y="0.511772" />
-                            <point x="0.500637" y="0.513011" />
-                            <point x="0.0152866" y="0.0148699" />
-                            <point x="0.500637" y="0.459727" />
-                            <point x="0.513376" y="0.473358" />
+                            <point x="0.605556" y="0.499459" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.513514" />
+                            <point x="0.5" y="0.513514" />
+                            <point x="0.421111" y="0.499459" />
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.464865" />
+                            <point x="0.57" y="0.418378" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -2953,11 +2962,11 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8603245119217755" speed="5">
-                    <frame duration="1" hotspotX="0.345703" hotspotY="0.0703125" />
-                    <frame duration="1" hotspotX="0.345703" hotspotY="0.0703125" />
-                    <frame duration="1" hotspotX="0.345703" hotspotY="0.0703125" />
-                    <frame duration="1" hotspotX="0.345703" hotspotY="0.0703125" />
-                    <frame duration="1" hotspotX="0.345703" hotspotY="0.0703125" />
+                    <frame duration="1" hotspotX="0.320313" hotspotY="0.179688" />
+                    <frame duration="1" hotspotX="0.320313" hotspotY="0.179688" />
+                    <frame duration="1" hotspotX="0.320313" hotspotY="0.179688" />
+                    <frame duration="1" hotspotX="0.320313" hotspotY="0.179688" />
+                    <frame duration="1" hotspotX="0.320313" hotspotY="0.179688" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -3136,51 +3145,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Achieve_Level10" sid="1688893304250477">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505342262082974" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.166667" y="0.166667" />
-                            <point x="0.5" y="0.025" />
-                            <point x="0.833333" y="0.166667" />
-                            <point x="0.975" y="0.5" />
-                            <point x="0.833333" y="0.833333" />
-                            <point x="0.5" y="0.975" />
-                            <point x="0.166667" y="0.833333" />
-                            <point x="0.025" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Achieve_Level20" sid="9455207908087763">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4948547383910036" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.203125" y="0.203125" />
-                            <point x="0.796875" y="0.203125" />
-                            <point x="0.886719" y="0.5" />
-                            <point x="0.847656" y="0.847656" />
-                            <point x="0.5" y="0.984375" />
-                            <point x="0.15625" y="0.84375" />
-                            <point x="0.117188" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="3862253692535982">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8052406426358163" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="HUD_AchievesText" sid="9527889693334482">
             <plugin id="Text" />
             <behaviors>
@@ -3228,6 +3192,309 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Patro" pingpong="0" repeatcount="1" repeatto="0" sid="6475116057681722" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_Achieves" sid="9518004416054495">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Score30" pingpong="0" repeatcount="1" repeatto="0" sid="8551268983295952" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.225" y="0.144385" />
+                            <point x="0.5" y="0.114973" />
+                            <point x="0.775" y="0.144385" />
+                            <point x="0.945833" y="0.5" />
+                            <point x="0.766667" y="0.850267" />
+                            <point x="0.5" y="0.890374" />
+                            <point x="0.245833" y="0.842246" />
+                            <point x="0.0583333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Score5" pingpong="0" repeatcount="1" repeatto="0" sid="7043521846948693" speed="5">
+                    <frame duration="1" hotspotX="-1" hotspotY="-1">
+                        <collision-poly>
+                            <point x="0.166667" y="0.166667" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.833333" y="0.166667" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.833333" y="0.833333" />
+                            <point x="0.5" y="0.975" />
+                            <point x="0.166667" y="0.833333" />
+                            <point x="0.025" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Score1" pingpong="0" repeatcount="1" repeatto="0" sid="7334343377107131" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.796875" y="0.203125" />
+                            <point x="0.886719" y="0.5" />
+                            <point x="0.847656" y="0.847656" />
+                            <point x="0.5" y="0.984375" />
+                            <point x="0.15625" y="0.84375" />
+                            <point x="0.117188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Score20" pingpong="0" repeatcount="1" repeatto="0" sid="2893530248746488" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.214844" y="0.214844" />
+                            <point x="0.5" y="0.0820313" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.886719" y="0.5" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.246094" y="0.753906" />
+                            <point x="0.109375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Score10" pingpong="0" repeatcount="1" repeatto="0" sid="3547025584438712" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.166667" y="0.166667" />
+                            <point x="0.5" y="0.025" />
+                            <point x="0.833333" y="0.166667" />
+                            <point x="0.975" y="0.5" />
+                            <point x="0.833333" y="0.833333" />
+                            <point x="0.5" y="0.975" />
+                            <point x="0.166667" y="0.833333" />
+                            <point x="0.025" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Dict_Achieve_Unlock" sid="8500483093292604">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="AJAX" sid="8185981044135368">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="Collectible_Fruit" sid="4935186262467203">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="AnimSelector" sid="1702791053234554" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="9936321602256111">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Unlock30" pingpong="0" repeatcount="1" repeatto="0" sid="2202327820973189" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.460938" y="0.460938" />
+                            <point x="0.5" y="0.414063" />
+                            <point x="0.675781" y="0.324219" />
+                            <point x="0.628906" y="0.5" />
+                            <point x="0.570313" y="0.570313" />
+                            <point x="0.5" y="0.617188" />
+                            <point x="0.367188" y="0.632813" />
+                            <point x="0.410156" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock60" pingpong="0" repeatcount="1" repeatto="0" sid="9583505416107766" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507813">
+                        <collision-poly>
+                            <point x="0.394531" y="0.394531" />
+                            <point x="0.5" y="0.324219" />
+                            <point x="0.589844" y="0.410156" />
+                            <point x="0.636719" y="0.5" />
+                            <point x="0.605469" y="0.605469" />
+                            <point x="0.5" y="0.664063" />
+                            <point x="0.382813" y="0.617188" />
+                            <point x="0.367188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock90" pingpong="0" repeatcount="1" repeatto="0" sid="7992605998914126" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.433594" y="0.433594" />
+                            <point x="0.5" y="0.269531" />
+                            <point x="0.585938" y="0.414063" />
+                            <point x="0.585938" y="0.5" />
+                            <point x="0.613281" y="0.613281" />
+                            <point x="0.5" y="0.710938" />
+                            <point x="0.351563" y="0.648438" />
+                            <point x="0.371094" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock130" pingpong="0" repeatcount="1" repeatto="0" sid="9566555150514061" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507813">
+                        <collision-poly>
+                            <point x="0.378906" y="0.378906" />
+                            <point x="0.5" y="0.386719" />
+                            <point x="0.613281" y="0.386719" />
+                            <point x="0.660156" y="0.5" />
+                            <point x="0.613281" y="0.613281" />
+                            <point x="0.5" y="0.609375" />
+                            <point x="0.367188" y="0.632813" />
+                            <point x="0.351563" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock160" pingpong="0" repeatcount="1" repeatto="0" sid="4906870712653261" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.269531" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.699219" y="0.5" />
+                            <point x="0.632813" y="0.632813" />
+                            <point x="0.5" y="0.671875" />
+                            <point x="0.363281" y="0.636719" />
+                            <point x="0.304688" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock190" pingpong="0" repeatcount="1" repeatto="0" sid="1693317585341681" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.320313" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.695313" y="0.5" />
+                            <point x="0.601563" y="0.601563" />
+                            <point x="0.5" y="0.636719" />
+                            <point x="0.359375" y="0.640625" />
+                            <point x="0.402344" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock230" pingpong="0" repeatcount="1" repeatto="0" sid="7659865677324689" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.402344" y="0.402344" />
+                            <point x="0.5" y="0.363281" />
+                            <point x="0.601563" y="0.398438" />
+                            <point x="0.660156" y="0.5" />
+                            <point x="0.660156" y="0.660156" />
+                            <point x="0.5" y="0.691406" />
+                            <point x="0.367188" y="0.632813" />
+                            <point x="0.277344" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock260" pingpong="0" repeatcount="1" repeatto="0" sid="4276153327862288" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.460938" y="0.460938" />
+                            <point x="0.5" y="0.445313" />
+                            <point x="0.578125" y="0.421875" />
+                            <point x="0.691406" y="0.5" />
+                            <point x="0.613281" y="0.613281" />
+                            <point x="0.5" y="0.648438" />
+                            <point x="0.378906" y="0.621094" />
+                            <point x="0.34375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock290" pingpong="0" repeatcount="1" repeatto="0" sid="5828380333626884" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.40625" y="0.40625" />
+                            <point x="0.5" y="0.320313" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.695313" y="0.5" />
+                            <point x="0.597656" y="0.597656" />
+                            <point x="0.5" y="0.636719" />
+                            <point x="0.359375" y="0.640625" />
+                            <point x="0.402344" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock330" pingpong="0" repeatcount="1" repeatto="0" sid="8276977427790133" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.269531" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.699219" y="0.5" />
+                            <point x="0.632813" y="0.632813" />
+                            <point x="0.5" y="0.671875" />
+                            <point x="0.363281" y="0.636719" />
+                            <point x="0.304688" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unllock360" pingpong="0" repeatcount="1" repeatto="0" sid="5165082291388179" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.328125" />
+                            <point x="0.5" y="0.28125" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.621094" y="0.5" />
+                            <point x="0.617188" y="0.617188" />
+                            <point x="0.5" y="0.730469" />
+                            <point x="0.367188" y="0.632813" />
+                            <point x="0.367188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock390" pingpong="0" repeatcount="1" repeatto="0" sid="8022062933820477" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.398438" y="0.398438" />
+                            <point x="0.5" y="0.304688" />
+                            <point x="0.617188" y="0.382813" />
+                            <point x="0.695313" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.734375" />
+                            <point x="0.351563" y="0.648438" />
+                            <point x="0.332031" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock430" pingpong="0" repeatcount="1" repeatto="0" sid="6456482463008178" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.421875" y="0.421875" />
+                            <point x="0.5" y="0.386719" />
+                            <point x="0.625" y="0.375" />
+                            <point x="0.628906" y="0.5" />
+                            <point x="0.589844" y="0.589844" />
+                            <point x="0.5" y="0.636719" />
+                            <point x="0.371094" y="0.628906" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock460" pingpong="0" repeatcount="1" repeatto="0" sid="4149247047104364" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.390625" y="0.390625" />
+                            <point x="0.5" y="0.34375" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.671875" />
+                            <point x="0.378906" y="0.621094" />
+                            <point x="0.335938" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock490" pingpong="0" repeatcount="1" repeatto="0" sid="4023107732821465" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.492188">
+                        <collision-poly>
+                            <point x="0.394531" y="0.394531" />
+                            <point x="0.5" y="0.335938" />
+                            <point x="0.632813" y="0.367188" />
+                            <point x="0.707031" y="0.5" />
+                            <point x="0.613281" y="0.613281" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.332031" y="0.667969" />
+                            <point x="0.351563" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -3288,6 +3555,7 @@
             <members>
                 <member>Collectible_cake</member>
                 <member>Collectible_Candy</member>
+                <member>Collectible_Fruit</member>
                 <member>Collectible_Marker_Bottom</member>
                 <member>Collectible_Marker_Top</member>
                 <member>Letter_collectible_Base</member>
@@ -3394,7 +3662,8 @@
                 <doppler-factor>1</doppler-factor>
             </properties>
         </global-instance>
-        <global-instance type="WebStorage" uid="34" />
+        <global-instance type="WebStr_Common" uid="34" />
+        <global-instance type="AJAX" uid="202" />
     </global-instances>
     <sounds-folder expanded="1">
         <file name="Jump.ogg" />
@@ -3420,5 +3689,6 @@
         <file name="weirdmoj-webfont.svg" />
         <file name="weirdmoj-webfont.ttf" />
         <file name="weirdmoj-webfont.woff" />
+        <file name="achieves.json" />
     </files-folder>
 </c2project>
