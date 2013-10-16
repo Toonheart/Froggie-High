@@ -4,16 +4,11 @@
     <name>Achieves_Common</name>
     <events>
         <comment>Set keys for All achievements with value &quot;0&quot;(lock) which further used to unlock the achivements.</comment>
-        <event-block sid="1123425348485791">
+        <event-block disabled="1" sid="1123425348485791">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2055178262696614" type="System" />
             </conditions>
-            <actions>
-                <action id="1" name="Request project file" sid="2064293740370073" type="AJAX">
-                    <param id="0" name="Tag">&quot;AchievesUnlock&quot;</param>
-                    <param id="1" name="File">achieves.json</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block disabled="1" sid="7385774679543233">
                     <conditions>
@@ -82,12 +77,8 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="7729669900617467">
-            <conditions>
-                <condition id="0" name="On completed" sid="4474498792214921" type="AJAX">
-                    <param id="0" name="Tag">&quot;AchievesUnlock&quot;</param>
-                </condition>
-            </conditions>
+        <event-block disabled="1" sid="7729669900617467">
+            <conditions />
             <actions>
                 <action id="4" name="Load" sid="102009031986135" type="Dict_Achieve_Unlock">
                     <param id="0" name="JSON">&quot;achieves.json&quot;</param>

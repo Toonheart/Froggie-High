@@ -222,7 +222,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL">
+        <event-group description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL">
             <sub-events>
                 <event-block sid="6325441995628482">
                     <conditions>
@@ -236,7 +236,7 @@
                     </actions>
                 </event-block>
                 <comment>Scroll down if the froggie is dropping</comment>
-                <event-block collapsed="1" sid="8875596772007714">
+                <event-block sid="8875596772007714">
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="2598144020044228" type="Froggie" />
                     </conditions>
@@ -277,37 +277,6 @@
         </event-group>
         <event-group collapsed="1" description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="38727983774057" title="FROGGIE - Destroy">
             <sub-events>
-                <comment>If game over update the high score and go to game over screen </comment>
-                <event-block sid="2672838447852315">
-                    <conditions>
-                        <condition id="-19" name="On destroyed" sid="8345042425130933" type="Froggie" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="6839467783704338" type="System">
-                            <param id="0" name="Layout">GameOver</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="5302910424567309">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7500246863238942" type="System">
-                                    <param id="0" name="First value">Score</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set local value" sid="8296641771131084" type="WebStr_Common">
-                                    <param id="0" name="Key">&quot;HighScore&quot;</param>
-                                    <param id="1" name="Value">Score</param>
-                                </action>
-                                <action id="0" name="Set text" sid="8021233202836042" type="Text_GameOverHighScore">
-                                    <param id="0" name="Text">&quot;HighSore&quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <comment>capture the fall point to ensure froggie is falling long distane</comment>
                 <event-block sid="8529980524343526">
                     <conditions>

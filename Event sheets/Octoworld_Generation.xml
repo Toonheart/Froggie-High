@@ -78,10 +78,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block sid="7564923252496036">
+                <event-block collapsed="1" sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -96,7 +96,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block sid="5773070796798144">
+                        <event-block collapsed="1" sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -551,11 +551,16 @@
                                         <event-block sid="5013791727522338">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="3874987527597237" type="System">
-                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%100</param>
+                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%5</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
-                                                <condition id="-8" name="Compare two values" sid="9968914978655234" type="System">
+                                                <condition id="-8" name="Compare two values" sid="4105374181876478" type="System">
+                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">10</param>
+                                                </condition>
+                                                <condition disabled="1" id="-8" name="Compare two values" sid="9968914978655234" type="System">
                                                     <param id="0" name="First value">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Second value">1</param>

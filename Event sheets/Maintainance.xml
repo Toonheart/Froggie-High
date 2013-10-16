@@ -211,7 +211,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7689727470139722" title="Others">
+        <event-group description="" sid="7689727470139722" title="Others">
             <sub-events>
                 <event-block sid="2296325576407999">
                     <conditions>
@@ -235,6 +235,14 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8192860229737641" type="Rope_Right" />
+                    </actions>
+                </event-block>
+                <event-block sid="6747057118500362">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3427273309212774" type="Music_Notes" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8325032422525069" type="Music_Notes" />
                     </actions>
                 </event-block>
             </sub-events>

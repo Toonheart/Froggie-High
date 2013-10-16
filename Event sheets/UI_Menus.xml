@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UI_Menus</name>
+    <events>
+        <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
+            <sub-events>
+                <comment>Create all PauseMenus On UI BG on paused</comment>
+                <event-block sid="9130341376091132">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4312977658208201" type="Touch">
+                            <param id="0" name="Object">Button_Pause</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="3324010327334437" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2426767881858159" type="BG_UI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5987226639409127" type="BG_UI">
+                            <param id="0" name="Object">Icon_Paused</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Info&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1634638647712104" type="BG_UI">
+                            <param id="0" name="Object">Button_Resume</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Resume&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1877325527170248" type="BG_UI">
+                            <param id="0" name="Object">Button_Level</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;level&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="1730743046229098" type="BG_UI">
+                            <param id="0" name="Object">Icon_Store</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Store&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5000394163884179" type="BG_UI">
+                            <param id="0" name="Object">Button_Twitter_Pause</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;TwitterPause&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7871444616516552" type="BG_UI">
+                            <param id="0" name="Object">Icon_MusicStatus</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Music&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6502678366641663" type="BG_UI">
+                            <param id="0" name="Object">Text_UI_Score</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;ScorePause&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="3943785681081579" type="Text_UI_Score">
+                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8877509783165272" type="Text_UI_Score">
+                            <param id="0" name="Text">&quot;&quot;&amp;Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9981650100327995">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6146939189294523" type="Touch">
+                            <param id="0" name="Object">Button_Resume</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1739330693445624" type="Button_Resume">
+                            <param id="0" name="Animation">&quot;Zoom&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7990868197373683" type="Button_Resume">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4975689834339824" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="1" name="Set pause state" sid="4898001006657319" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4650519145208102" type="BG_UI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="554724397699924" type="UI_PauseMenus" />
+                        <action id="-9" name="Destroy" sid="1254430870689172" type="Text_UI_Score" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7132109060416404" title="GameOver">
+            <sub-events>
+                <comment>If game over update the high score And Show the GameOver menus on UI BG</comment>
+                <event-block sid="3207011321876616">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="2826568762651674" type="Froggie" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="5310209983033614" type="Pause">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7322417849557446" type="BG_UI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="3029165520377063" type="BG_UI">
+                            <param id="0" name="Object">Icon_GameOver</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Info&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2741035536032526" type="BG_UI">
+                            <param id="0" name="Object">Buttton_SaveMe</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;SaveMe&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="49314330374948" type="BG_UI">
+                            <param id="0" name="Object">Button_GiveUp</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;GiveUp&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5179726700495217" type="BG_UI">
+                            <param id="0" name="Object">Button_Twitter_GO</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5654505546953236" type="BG_UI">
+                            <param id="0" name="Object">Button_FB_GO</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;FBGO&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7032160034163147" type="BG_UI">
+                            <param id="0" name="Object">Text_UI_HighScore</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9717784995611331" type="BG_UI">
+                            <param id="0" name="Object">Text_UI_Score</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;ScoreGO&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="3459797187567149" type="Text_UI_Score">
+                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9865127229694788" type="Text_UI_Score">
+                            <param id="0" name="Text">&quot;Score : &quot;&amp;Score</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="8634563371949207" type="Text_UI_HighScore">
+                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3772174221896916" type="Text_UI_HighScore">
+                            <param id="0" name="Text">&quot;HighSore : &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1567962560337559">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6392301659137057" type="System">
+                                    <param id="0" name="First value">Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="1084335789631969" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;HighScore&quot;</param>
+                                    <param id="1" name="Value">Score</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="7144206406129503" type="Text_UI_HighScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2008178232381947" type="Text_UI_HighScore">
+                                    <param id="0" name="Text">&quot;HighSore : &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+            <sub-events>
+                <comment>Go to levels screen</comment>
+                <event-block sid="6869339118007532">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3220467566770835" type="Touch">
+                            <param id="0" name="Object">Button_Level</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2359899692976981" type="System">
+                            <param id="0" name="Layout">WorldSelect</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1265948641350977">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="1075856283837724" type="Touch">
+                            <param id="0" name="Object">Button_GiveUp</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5724595724347802" type="System">
+                            <param id="0" name="Layout">TitleScreen</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

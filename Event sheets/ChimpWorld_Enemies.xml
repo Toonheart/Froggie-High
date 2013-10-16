@@ -70,10 +70,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Movement pattern of boss " sid="8590533814477774" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="8590533814477774" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
-                <event-block sid="117933790335297">
+                <event-block disabled="1" sid="117933790335297">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_ChickenBOSS">
                             <param id="0" name="Object">Border_Left_ViewPort</param>
@@ -89,7 +89,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4933949180757778">
+                <event-block disabled="1" sid="4933949180757778">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_ChickenBOSS">
                             <param id="0" name="Object">Border_Top_ViewPort</param>
@@ -106,7 +106,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3992018776456346">
+                <event-block disabled="1" sid="3992018776456346">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_ChickenBOSS">
                             <param id="0" name="Object">Border_Right_ViewPort</param>
@@ -118,7 +118,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="902146401947285">
+                <event-block disabled="1" sid="902146401947285">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_ChickenBOSS" />
                     </conditions>
@@ -128,7 +128,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3865761674978195">
+                <event-block disabled="1" sid="3865761674978195">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_ChickenBOSS">
                             <param id="0" name="Instance variable">Health</param>
@@ -142,7 +142,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1098512604797543" title="BIGBOSS GamePlay">
+        <event-group description="" sid="1098512604797543" title="BIGBOSS GamePlay">
             <sub-events>
                 <event-block sid="1261691158325619">
                     <conditions>
@@ -193,12 +193,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8318293374345379" type="Enemy_ChickenBOSS" />
+                        <action id="-9" name="Destroy" sid="8318293374345379" type="Enemy_ChimpBoss" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1845619134464778" title="Baboon-Attack">
+        <event-group collapsed="1" description="" sid="1845619134464778" title="Baboon-Attack">
             <sub-events>
                 <event-block sid="7045979661970518">
                     <conditions>

@@ -550,16 +550,16 @@
                                         <event-block sid="5013791727522338">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="3874987527597237" type="System">
-                                                    <param id="0" name="First value">Floor_Wooden_Normal.PresentFloor%100</param>
+                                                    <param id="0" name="First value">Floor_Wooden_Normal.PresentFloor%5</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
                                                 <condition id="-8" name="Compare two values" sid="3566838782257373" type="System">
                                                     <param id="0" name="First value">Floor_Wooden_Normal.PresentFloor</param>
                                                     <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">90</param>
+                                                    <param id="2" name="Second value">10</param>
                                                 </condition>
-                                                <condition id="-8" name="Compare two values" sid="9968914978655234" type="System">
+                                                <condition disabled="1" id="-8" name="Compare two values" sid="9968914978655234" type="System">
                                                     <param id="0" name="First value">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Second value">1</param>
@@ -1117,52 +1117,70 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">8</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="4258434462625896" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="3025836923098276" type="System">
-                                            <param id="0" name="Object to create">Enemy_ChickenBOSS</param>
+                                            <param id="0" name="Object to create">Floor_Rock</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">LayoutWidth/2</param>
-                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-800</param>
+                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-400</param>
                                         </action>
-                                        <action id="0" name="Spawn another object" sid="6411334065863229" type="Enemy_ChickenBOSS">
-                                            <param id="0" name="Object">Basket</param>
+                                        <action id="-3" name="Create object" sid="4449419786557057" type="System">
+                                            <param id="0" name="Object to create">Basket</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="Image point">&quot;Basket1&quot;</param>
+                                            <param id="2" name="X">Floor_Rock.X</param>
+                                            <param id="3" name="Y">Floor_Rock.Y-600</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="8479639639340535" type="Basket">
-                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                        <action id="0" name="Spawn another object" sid="264575343910567" type="Enemy_ChickenBOSS">
-                                            <param id="0" name="Object">Basket</param>
+                                        <action id="-3" name="Create object" sid="7497629304482618" type="System">
+                                            <param id="0" name="Object to create">Enemy_ChimpBoss</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="Image point">&quot;Basket2&quot;</param>
+                                            <param id="2" name="X">Floor_Rock.X</param>
+                                            <param id="3" name="Y">Floor_Rock.Y</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="4879761938636917" type="Basket">
-                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                        <action id="0" name="Spawn another object" sid="7639934472248348" type="Enemy_ChickenBOSS">
-                                            <param id="0" name="Object">Basket</param>
+                                        <action id="-3" name="Create object" sid="8773364244451108" type="System">
+                                            <param id="0" name="Object to create">Enemy_ChimpBoss</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="Image point">&quot;Basket3&quot;</param>
+                                            <param id="2" name="X">Floor_Rock.X</param>
+                                            <param id="3" name="Y">Floor_Rock.Y</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="19996596609209" type="Basket">
-                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
-                                            <param id="1" name="Mode">0</param>
+                                        <action id="-3" name="Create object" sid="1636158991834193" type="System">
+                                            <param id="0" name="Object to create">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Enemy_ChimpBoss.X-256</param>
+                                            <param id="3" name="Y">Enemy_ChimpBOSS.Y</param>
                                         </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="6660050806739039" type="Enemy_ChickenBOSS">
-                                            <param id="0" name="State">1</param>
+                                        <action id="-3" name="Create object" sid="7126215092011727" type="System">
+                                            <param id="0" name="Object to create">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Enemy_ChimpBoss.X+256</param>
+                                            <param id="3" name="Y">Enemy_ChimpBOSS.Y</param>
                                         </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5290167715648836" type="Enemy_ChickenBOSS">
-                                            <param id="0" name="Angle">180</param>
+                                        <action disabled="1" id="-3" name="Create object" sid="7515870185485454" type="System">
+                                            <param id="0" name="Object to create">Floor_Rock</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">LayoutWidth/2-300</param>
+                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-300</param>
                                         </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="6889041832516013" type="Basket">
-                                            <param id="0" name="Pin to">Enemy_ChickenBOSS</param>
-                                            <param id="1" name="Mode">0</param>
+                                        <action disabled="1" id="-3" name="Create object" sid="9166662044821214" type="System">
+                                            <param id="0" name="Object to create">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Floor_Rock.X</param>
+                                            <param id="3" name="Y">Floor_Rock.Y-128</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="8734315008931107" type="HUD_Basket">
+                                        <action disabled="1" id="-3" name="Create object" sid="5865073288073625" type="System">
+                                            <param id="0" name="Object to create">Floor_Rock</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">LayoutWidth/2+300</param>
+                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-300</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="8434645191320802" type="System">
+                                            <param id="0" name="Object to create">Basket</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">Floor_Rock.X</param>
+                                            <param id="3" name="Y">Floor_Rock.Y-128</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6389730527080877" type="HUD_Basket">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                     </actions>
@@ -1816,7 +1834,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8502310837892881" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group collapsed="1" description="" sid="8502310837892881" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>
