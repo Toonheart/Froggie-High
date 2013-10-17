@@ -27,12 +27,12 @@
                         <action id="0" name="Spawn another object" sid="1634638647712104" type="BG_UI">
                             <param id="0" name="Object">Button_Resume</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Resume&quot;</param>
+                            <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="1877325527170248" type="BG_UI">
                             <param id="0" name="Object">Button_Level</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;level&quot;</param>
+                            <param id="2" name="Image point">&quot;Levels&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="1730743046229098" type="BG_UI">
                             <param id="0" name="Object">Icon_Store</param>
@@ -42,24 +42,29 @@
                         <action id="0" name="Spawn another object" sid="5000394163884179" type="BG_UI">
                             <param id="0" name="Object">Button_Twitter_Pause</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;TwitterPause&quot;</param>
+                            <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="7871444616516552" type="BG_UI">
                             <param id="0" name="Object">Icon_MusicStatus</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;Music&quot;</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="7309891760302689" type="BG_UI">
+                            <param id="0" name="Object">Button_FB_GO</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;FBGO&quot;</param>
+                        </action>
                         <action id="0" name="Spawn another object" sid="6502678366641663" type="BG_UI">
                             <param id="0" name="Object">Text_UI_Score</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;ScorePause&quot;</param>
+                            <param id="2" name="Image point">&quot;Score&quot;</param>
                         </action>
                         <action id="5" name="Set web font" sid="3943785681081579" type="Text_UI_Score">
                             <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                             <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="8877509783165272" type="Text_UI_Score">
-                            <param id="0" name="Text">&quot;&quot;&amp;Score</param>
+                            <param id="0" name="Text">Score</param>
                         </action>
                     </actions>
                 </event-block>
@@ -70,18 +75,24 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="1" name="Set pause state" sid="4898001006657319" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
                         <action id="4" name="Set animation" sid="1739330693445624" type="Button_Resume">
                             <param id="0" name="Animation">&quot;Zoom&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="9" name="Set scale" sid="7990868197373683" type="Button_Resume">
-                            <param id="0" name="Scale">1.05</param>
+                            <param id="0" name="Scale">1.02</param>
                         </action>
                         <action id="-16" name="Wait" sid="4975689834339824" type="System">
-                            <param id="0" name="Seconds">0.2</param>
+                            <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="1" name="Set pause state" sid="4898001006657319" type="Pause">
-                            <param id="0" name="State">1</param>
+                        <action id="9" name="Set scale" sid="6073774777527252" type="Button_Resume">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2777488145759031" type="System">
+                            <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="4650519145208102" type="BG_UI">
                             <param id="0" name="Visibility">0</param>
@@ -139,21 +150,21 @@
                         <action id="0" name="Spawn another object" sid="9717784995611331" type="BG_UI">
                             <param id="0" name="Object">Text_UI_Score</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;ScoreGO&quot;</param>
+                            <param id="2" name="Image point">&quot;Score&quot;</param>
                         </action>
                         <action id="5" name="Set web font" sid="3459797187567149" type="Text_UI_Score">
                             <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                             <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="9865127229694788" type="Text_UI_Score">
-                            <param id="0" name="Text">&quot;Score : &quot;&amp;Score</param>
+                            <param id="0" name="Text">Score</param>
                         </action>
                         <action id="5" name="Set web font" sid="8634563371949207" type="Text_UI_HighScore">
                             <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                             <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="3772174221896916" type="Text_UI_HighScore">
-                            <param id="0" name="Text">&quot;HighSore : &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                            <param id="0" name="Text">&quot;HighScore : &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -183,17 +194,33 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
-                <event-block sid="6869339118007532">
+                <event-block sid="7442582905420583">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="3220467566770835" type="Touch">
+                        <condition id="3" name="On touched object" sid="6691330274554967" type="Touch">
                             <param id="0" name="Object">Button_Level</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="2359899692976981" type="System">
+                        <action id="1" name="Set pause state" sid="5426704075339099" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7205386742671256" type="Button_Level">
+                            <param id="0" name="Animation">&quot;Zoom&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7086122872398246" type="Button_Level">
+                            <param id="0" name="Scale">1.02</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7607672659146245" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="3992330450914081" type="Button_Level">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="7018579104035809" type="System">
                             <param id="0" name="Layout">WorldSelect</param>
                         </action>
                     </actions>
@@ -205,6 +232,22 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="1" name="Set pause state" sid="5035131641587234" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="56459348496437" type="Button_GiveUp">
+                            <param id="0" name="Animation">&quot;Zoom&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="4940916314776715" type="Button_GiveUp">
+                            <param id="0" name="Scale">1.02</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2424379142613537" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="9155939951724567" type="Button_GiveUp">
+                            <param id="0" name="Scale">1</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="5724595724347802" type="System">
                             <param id="0" name="Layout">TitleScreen</param>
                         </action>

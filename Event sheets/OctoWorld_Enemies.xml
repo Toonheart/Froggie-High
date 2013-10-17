@@ -186,9 +186,14 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">3</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8076436631108778" type="System" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="9792629402711457" type="Enemy_OctoBOSS" />
+                        <action id="2" name="Set at X" sid="2542653739772214" type="WorldSelector">
+                            <param id="0" name="X">CurrentWorld</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

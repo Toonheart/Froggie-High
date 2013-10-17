@@ -11,7 +11,7 @@
                 <action disabled="1" id="0" name="Set text" sid="6807646680044225" type="Text_Debug">
                     <param id="0" name="Text">&quot;ActiveWorld&quot;&amp;ActiveWorld</param>
                 </action>
-                <action disabled="1" id="0" name="Set text" sid="8002087447422118" type="Text_Debug">
+                <action id="0" name="Set text" sid="8002087447422118" type="Text_Debug">
                     <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer </param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
@@ -29,8 +29,11 @@
                 <action disabled="1" id="0" name="Set text" sid="3077760656554698" type="Text_Debug">
                     <param id="0" name="Text">&quot;Median : &quot;&amp;Dev_Cur_Alpha&#x0D;&#x0A;&amp;newline&amp;&#x0D;&#x0A;&quot;Alpha : &quot; &amp;Touch.Alpha</param>
                 </action>
-                <action id="0" name="Set text" sid="4162696731673111" type="Text_Debug">
-                    <param id="0" name="Text">&quot;Count&quot; &amp;Text_UI_Score.Count</param>
+                <action disabled="1" id="0" name="Set text" sid="4162696731673111" type="Text_Debug">
+                    <param id="0" name="Text">CurrentWorld &amp;newline</param>
+                </action>
+                <action disabled="1" id="1" name="Append text" sid="113922387394745" type="Text_Debug">
+                    <param id="0" name="Text">&quot;Highes- &quot; &amp;HighestUnlockedWorld</param>
                 </action>
             </actions>
             <sub-events>
@@ -45,6 +48,26 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="7631388466706263">
+            <conditions>
+                <condition id="2" name="Is pause" sid="5984874953799865" type="Pause" />
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="9681041693654102" type="Text_Debug">
+                    <param id="0" name="Text">&quot;Paused&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6793225760989614">
+            <conditions>
+                <condition id="-22" name="Else" sid="7952141492559869" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="9850596805957432" type="Text_Debug">
+                    <param id="0" name="Text">&quot;Resume&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
