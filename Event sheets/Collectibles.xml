@@ -135,7 +135,7 @@
                 <comment>Collect the candies and destroy them and add to score</comment>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Randomly select a different bling  color and shape on collecting" sid="4961301643958524" title="Bling On Collection">
+        <event-group description="Randomly select a different bling  color and shape on collecting" sid="4961301643958524" title="Bling On Collection">
             <sub-events>
                 <event-block sid="3760023859493917">
                     <conditions>
@@ -227,6 +227,24 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-group description="" sid="8928161239373487" title="MultiBlings">
+                    <sub-events>
+                        <event-block sid="3613603390882016">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3645472506386668" type="Froggie">
+                                    <param id="0" name="Object">PowerUps</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="6155167831084999" type="PowerUps">
+                                    <param id="0" name="Object">Multi_Blings</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="Diifferent type of cakes have different points that adds to score" sid="5338454545716284" title="Cakes">
