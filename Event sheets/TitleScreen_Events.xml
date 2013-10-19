@@ -14,7 +14,7 @@
                 <action id="-21" name="Reset global variables" sid="5232631761049472" type="System" />
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="2511712467372221" title="Toggling Music and Sounds">
+        <event-group description="" sid="2511712467372221" title="Toggling Music and Sounds">
             <sub-events>
                 <comment>Mute the sounds</comment>
                 <event-block disabled="1" sid="8829171707280856">
@@ -57,6 +57,23 @@
                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="6985502192737945" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="2462184001483791" type="Audio">
+                                    <param id="0" name="Tag">&quot;Music&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1633914869402644" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1.05</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7406552242845562" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4291476964641937" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2899044703111809">
@@ -68,11 +85,15 @@
                                     <param id="0" name="Instance variable">MusicStatus</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="321580963472999" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;ON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="5946708679509732">
+                <event-block disabled="1" sid="5946708679509732">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="1023047144409927" type="Icon_MusicStatus">
                             <param id="0" name="Instance variable">MusicStatus</param>
@@ -87,7 +108,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1984903675219441">
+                <event-block disabled="1" sid="1984903675219441">
                     <conditions>
                         <condition id="-22" name="Else" sid="7992733946800835" type="System" />
                     </conditions>
@@ -100,11 +121,20 @@
                             <param id="0" name="Tag">&quot;Music&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
+                        <action id="9" name="Set scale" sid="6509802606095603" type="Icon_MusicStatus">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9192417021953486" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7437332583163722" type="Icon_MusicStatus">
+                            <param id="0" name="Scale">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8428997519920965" title="MENUS">
+        <event-group collapsed="1" description="" sid="8428997519920965" title="MENUS">
             <sub-events>
                 <event-block sid="9825124560921165">
                     <conditions>
@@ -210,6 +240,33 @@
                             <param id="0" name="Layout">Tutorial</param>
                         </action>
                         <action id="9" name="Set scale" sid="8770709399119982" type="Button_Tutorial">
+                            <param id="0" name="Scale">105</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5421736394422418">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6058109478953171" type="Touch">
+                            <param id="0" name="Object">Icon_AboutUs</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="926105028226451" type="Icon_AboutUs">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2523456598109046" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="694244283414953" type="Icon_AboutUs">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5941962914950496" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="8763115358248017" type="System">
+                            <param id="0" name="Layout">Tutorial</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="6018062805555714" type="Icon_AboutUs">
                             <param id="0" name="Scale">105</param>
                         </action>
                     </actions>

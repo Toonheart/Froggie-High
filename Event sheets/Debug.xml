@@ -12,7 +12,7 @@
                     <param id="0" name="Text">&quot;ActiveWorld&quot;&amp;ActiveWorld</param>
                 </action>
                 <action id="0" name="Set text" sid="8002087447422118" type="Text_Debug">
-                    <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer </param>
+                    <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer  &amp;newline</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
                     <param id="0" name="Text"> newline &amp;&quot;Section  - &quot; &amp;WorldSection  &amp; newline</param>
@@ -34,6 +34,18 @@
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="113922387394745" type="Text_Debug">
                     <param id="0" name="Text">&quot;Highes- &quot; &amp;HighestUnlockedWorld</param>
+                </action>
+                <action disabled="1" id="1" name="Append text" sid="9686554299048188" type="Text_Debug">
+                    <param id="0" name="Text">&quot;DA  : &quot; &amp; Dev_Cur_Alpha &amp;newline</param>
+                </action>
+                <action disabled="1" id="1" name="Append text" sid="2248840793359101" type="Text_Debug">
+                    <param id="0" name="Text">&quot;CA  : &quot; &amp; Touch.Alpha &amp;newline</param>
+                </action>
+                <action id="1" name="Append text" sid="9445063819817035" type="Text_Debug">
+                    <param id="0" name="Text">&quot;DG  : &quot; &amp; Dev_Cur_Gamma &amp;newline</param>
+                </action>
+                <action id="1" name="Append text" sid="7079116175487342" type="Text_Debug">
+                    <param id="0" name="Text">&quot;CG  : &quot; &amp; Touch.Gamma &amp;newline</param>
                 </action>
             </actions>
             <sub-events>
