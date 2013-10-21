@@ -198,44 +198,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="4739382745556057">
-                    <conditions>
-                        <condition disabled="1" id="8" name="Compare orientation" sid="605520886948989" type="Touch">
-                            <param id="0" name="Orientation">0</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Angle">180</param>
-                        </condition>
-                        <condition id="8" name="Compare orientation" sid="9454943549796187" type="Touch">
-                            <param id="0" name="Orientation">0</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Angle">50</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="6014206983482891" type="Froggie">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block disabled="1" sid="2157044752913789">
-                    <conditions>
-                        <condition id="8" name="Compare orientation" sid="881992891650632" type="Touch">
-                            <param id="0" name="Orientation">0</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Angle">180</param>
-                        </condition>
-                        <condition id="8" name="Compare orientation" sid="8960193139231427" type="Touch">
-                            <param id="0" name="Orientation">0</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Angle">360</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="4766479697172752" type="Froggie">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL">
@@ -347,16 +309,15 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" disabled="1" sid="6632129886773868" title="Using Alpha">
+                <event-group description="" sid="6632129886773868" title="Using Alpha">
                     <sub-events>
-                        <event-block disabled="1" sid="1873678705597537">
+                        <event-block sid="1873678705597537">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="5192709439086989" type="System">
                                     <param id="0" name="First value">Touch.Alpha</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">Dev_Cur_Alpha+60</param>
+                                    <param id="2" name="Second value">Dev_Cur_Alpha+50</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="2574774492250807" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="1748589312785962" type="System">
@@ -365,14 +326,13 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="2005423338340443">
+                        <event-block sid="2005423338340443">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="8971714471874913" type="System">
                                     <param id="0" name="First value">Touch.Alpha</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">Dev_Cur_Alpha-60</param>
+                                    <param id="2" name="Second value">Dev_Cur_Alpha-50</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="8552778725115963" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="8930272471480502" type="System">
@@ -381,17 +341,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="3038433683460826">
+                        <event-block sid="3038433683460826">
                             <conditions>
                                 <condition id="8" name="Compare orientation" sid="2898976830251814" type="Touch">
                                     <param id="0" name="Orientation">0</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha+10</param>
-                                </condition>
-                                <condition id="8" name="Compare orientation" sid="5455019398953229" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha+55</param>
+                                    <param id="2" name="Angle">Dev_Cur_Alpha+4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -407,17 +362,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="2651019747752834">
+                        <event-block sid="2651019747752834">
                             <conditions>
                                 <condition id="8" name="Compare orientation" sid="1830939848065649" type="Touch">
                                     <param id="0" name="Orientation">0</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha-10</param>
-                                </condition>
-                                <condition id="8" name="Compare orientation" sid="1627292030906786" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha-55</param>
+                                    <param id="2" name="Angle">Dev_Cur_Alpha-4</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -433,54 +383,17 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="338309567813027">
-                            <conditions>
-                                <condition id="8" name="Compare orientation" sid="7064477889319403" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="2274029525096572" type="Froggie">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="5885285874341948" type="System">
-                                    <param id="0" name="Variable">Dev_Cur_Alpha</param>
-                                    <param id="1" name="Value">Touch.Alpha-2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="7178833829536137">
-                            <conditions>
-                                <condition disabled="1" id="8" name="Compare orientation" sid="9167330901717908" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" disabled="1" id="7" name="Simulate control" sid="3814645715706827" type="Froggie">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="1129547170118377" type="System">
-                                    <param id="0" name="Variable">Dev_Cur_Alpha</param>
-                                    <param id="1" name="Value">Touch.Alpha+2</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" disabled="1" sid="802353540468122" title="Using Gamma">
+                <event-group collapsed="1" description="" disabled="1" sid="802353540468122" title="Using Gamma">
                     <sub-events>
                         <event-block disabled="1" sid="38567936999712">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4150705798449818" type="System">
                                     <param id="0" name="First value">Touch.Gamma</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">Dev_Cur_Gamma-40</param>
+                                    <param id="2" name="Second value">Dev_Cur_Gamma-90</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="3879886444151121" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="5426912126203091" type="System">
@@ -494,9 +407,8 @@
                                 <condition id="-8" name="Compare two values" sid="5644774347959504" type="System">
                                     <param id="0" name="First value">Touch.Gamma</param>
                                     <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">Dev_Cur_Gamma+40</param>
+                                    <param id="2" name="Second value">Dev_Cur_Gamma+90</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="7068908910986076" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="7856645300640959" type="System">
@@ -529,7 +441,7 @@
                         <event-block disabled="1" sid="8378877677067597">
                             <conditions>
                                 <condition id="8" name="Compare orientation" sid="6417058457752415" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
+                                    <param id="0" name="Orientation">2</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Angle">Dev_Cur_Gamma+8</param>
                                 </condition>
