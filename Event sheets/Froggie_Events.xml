@@ -138,10 +138,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="1394128653897004" title="FROGGIE - Left/Right Controll">
+        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Controll">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
-                <event-block any="1" disabled="1" sid="8686609532871634">
+                <event-block any="1" sid="8686609532871634">
                     <conditions>
                         <condition id="2" name="Key is down" sid="9277285358068876" type="Keyboard">
                             <param id="0" name="Key">37 (Left arrow)</param>
@@ -153,7 +153,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="539577925084524">
+                <event-block sid="539577925084524">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="5286654750739296" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="5232956090328499" type="System">
@@ -168,7 +168,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="6449015882217566">
+                <event-block sid="6449015882217566">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="7722670599804897" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="6699500027468567" type="System">
@@ -183,7 +183,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block any="1" disabled="1" sid="6646598826796567">
+                <event-block any="1" sid="6646598826796567">
                     <conditions>
                         <condition id="2" name="Key is down" sid="6582624944891302" type="Keyboard">
                             <param id="0" name="Key">39 (Right arrow)</param>
@@ -316,13 +316,17 @@
                                 <condition id="-8" name="Compare two values" sid="5192709439086989" type="System">
                                     <param id="0" name="First value">Touch.Alpha</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Second value">Dev_Cur_Alpha+50</param>
+                                    <param id="2" name="Second value">Dev_Cur_Alpha+40</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="1748589312785962" type="System">
                                     <param id="0" name="Variable">Dev_Cur_Alpha</param>
                                     <param id="1" name="Value">Touch.Alpha</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6835795655452365" type="System">
+                                    <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                                    <param id="1" name="Value">Touch.Gamma</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -331,13 +335,17 @@
                                 <condition id="-8" name="Compare two values" sid="8971714471874913" type="System">
                                     <param id="0" name="First value">Touch.Alpha</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">Dev_Cur_Alpha-50</param>
+                                    <param id="2" name="Second value">Dev_Cur_Alpha-40</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="8930272471480502" type="System">
                                     <param id="0" name="Variable">Dev_Cur_Alpha</param>
                                     <param id="1" name="Value">Touch.Alpha</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6967529499633348" type="System">
+                                    <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                                    <param id="1" name="Value">Touch.Gamma</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -346,7 +354,7 @@
                                 <condition id="8" name="Compare orientation" sid="2898976830251814" type="Touch">
                                     <param id="0" name="Orientation">0</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha+4</param>
+                                    <param id="2" name="Angle">Dev_Cur_Alpha+6</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -367,7 +375,7 @@
                                 <condition id="8" name="Compare orientation" sid="1830939848065649" type="Touch">
                                     <param id="0" name="Orientation">0</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha-4</param>
+                                    <param id="2" name="Angle">Dev_Cur_Alpha-6</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -385,9 +393,9 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" disabled="1" sid="802353540468122" title="Using Gamma">
+                <event-group description="" sid="802353540468122" title="Using Gamma">
                     <sub-events>
-                        <event-block disabled="1" sid="38567936999712">
+                        <event-block sid="38567936999712">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4150705798449818" type="System">
                                     <param id="0" name="First value">Touch.Gamma</param>
@@ -402,7 +410,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="7176658698772164">
+                        <event-block sid="7176658698772164">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="5644774347959504" type="System">
                                     <param id="0" name="First value">Touch.Gamma</param>
@@ -417,12 +425,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="507519204279511">
+                        <event-block sid="507519204279511">
                             <conditions>
                                 <condition id="8" name="Compare orientation" sid="1629767180884292" type="Touch">
                                     <param id="0" name="Orientation">2</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">Dev_Cur_Gamma-8</param>
+                                    <param id="2" name="Angle">Dev_Cur_Gamma-10</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -438,12 +446,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block disabled="1" sid="8378877677067597">
+                        <event-block sid="8378877677067597">
                             <conditions>
                                 <condition id="8" name="Compare orientation" sid="6417058457752415" type="Touch">
                                     <param id="0" name="Orientation">2</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">Dev_Cur_Gamma+8</param>
+                                    <param id="2" name="Angle">Dev_Cur_Gamma+10</param>
                                 </condition>
                             </conditions>
                             <actions>
