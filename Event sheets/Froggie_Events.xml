@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Froggie_Events</name>
     <events>
-        <event-group description="" sid="9939025668940154" title="FROGGIE JUMP">
+        <event-group collapsed="1" description="" sid="9939025668940154" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
                 <event-block collapsed="1" sid="1939084024228619">
@@ -138,7 +138,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Controll">
+        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Controll">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -150,6 +150,9 @@
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="1523586248413577" type="Froggie">
                             <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="1787438547482109" type="Froggie">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -166,6 +169,9 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="7842417447315114" type="Froggie">
                             <param id="0" name="Control">0</param>
                         </action>
+                        <action id="7" name="Set mirrored" sid="9692139860538567" type="Froggie">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6449015882217566">
@@ -181,6 +187,9 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="1058621325996865" type="Froggie">
                             <param id="0" name="Control">1</param>
                         </action>
+                        <action id="7" name="Set mirrored" sid="9651185388909339" type="Froggie">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block any="1" sid="6646598826796567">
@@ -195,6 +204,9 @@
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="7524824379443688" type="Froggie">
                             <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="1536906451308973" type="Froggie">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -294,6 +306,7 @@
         </event-group>
         <event-group description="" sid="8254297641577714" title="Giro-Events">
             <sub-events>
+                <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
                 <event-block sid="9509104835207651">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="9024011385766129" type="System" />
@@ -311,6 +324,7 @@
                 </event-block>
                 <event-group description="" sid="6632129886773868" title="Using Alpha">
                     <sub-events>
+                        <comment>Reset the Medians if there is a big change in oriantation of Device</comment>
                         <event-block sid="1873678705597537">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="5192709439086989" type="System">
@@ -349,47 +363,147 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3038433683460826">
+                        <comment>simulate left and right controlls by comparing current alpha with median Except the median is in between 356-6 </comment>
+                        <event-block sid="8734367776000234">
                             <conditions>
-                                <condition id="8" name="Compare orientation" sid="2898976830251814" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha+6</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="3313148163049128" type="Froggie">
-                                    <param id="0" name="Control">0</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="3430952642401653" type="System">
-                                    <param id="0" name="Variable">Dev_Cur_Alpha</param>
-                                    <param id="1" name="Value">Touch.Alpha-15</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="3499139565112732" type="Froggie">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2651019747752834">
-                            <conditions>
-                                <condition id="8" name="Compare orientation" sid="1830939848065649" type="Touch">
-                                    <param id="0" name="Orientation">0</param>
+                                <condition id="-8" name="Compare two values" sid="6837614911845303" type="System">
+                                    <param id="0" name="First value">Dev_Cur_Alpha</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">Dev_Cur_Alpha-6</param>
+                                    <param id="2" name="Second value">354</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="1746632662517693" type="System">
+                                    <param id="0" name="First value">Dev_Cur_Alpha</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">6</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="7445806069834887" type="Froggie">
-                                    <param id="0" name="Control">1</param>
-                                </action>
-                                <action disabled="1" id="-9" name="Set value" sid="110384156157976" type="System">
-                                    <param id="0" name="Variable">Dev_Cur_Alpha</param>
-                                    <param id="1" name="Value">Touch.Alpha+15</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="1659650203640201" type="Froggie">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <comment>Reset the Gamma Median if there is a big change in oriantation of Device</comment>
+                                <event-block sid="3038433683460826">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="2898976830251814" type="Touch">
+                                            <param id="0" name="Orientation">0</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Angle">Dev_Cur_Alpha+6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="3313148163049128" type="Froggie">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="3430952642401653" type="System">
+                                            <param id="0" name="Variable">Dev_Cur_Alpha</param>
+                                            <param id="1" name="Value">Touch.Alpha-15</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="3499139565112732" type="Froggie">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2651019747752834">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="1830939848065649" type="Touch">
+                                            <param id="0" name="Orientation">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Angle">Dev_Cur_Alpha-6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7445806069834887" type="Froggie">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="110384156157976" type="System">
+                                            <param id="0" name="Variable">Dev_Cur_Alpha</param>
+                                            <param id="1" name="Value">Touch.Alpha+15</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="1659650203640201" type="Froggie">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>Special cases wher the comparision of median changes by altering median around 360</comment>
+                        <event-block sid="4751581798947572">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6630126004547906" type="System">
+                                    <param id="0" name="First value">Dev_Cur_Alpha</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="1139153078836371">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="7640643108301388" type="Touch">
+                                            <param id="0" name="Orientation">0</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Angle">340</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="5816601134741149" type="Froggie">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="8789445072409638">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="6937982263567982" type="Touch">
+                                            <param id="0" name="Orientation">0</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Angle">Dev_Cur_Alpha+6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7900974160748085" type="Froggie">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4129762863618757">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2656612979721753" type="System">
+                                    <param id="0" name="First value">Dev_Cur_Alpha</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">356</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="6692411449235084">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="6853442647891442" type="Touch">
+                                            <param id="0" name="Orientation">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Angle">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="4203349581758151" type="Froggie">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="4052010445691322">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="18275595429081" type="Touch">
+                                            <param id="0" name="Orientation">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Angle">Dev_Cur_Alpha-6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="5406717509526428" type="Froggie">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
@@ -425,6 +539,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>simulate left and right controlls by comparing current Gamma with median.</comment>
                         <event-block sid="507519204279511">
                             <conditions>
                                 <condition id="8" name="Compare orientation" sid="1629767180884292" type="Touch">

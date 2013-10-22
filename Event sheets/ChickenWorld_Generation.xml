@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>ChickenWorld_Generation</name>
     <events>
-        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="1964323426106172" title="Initializing Global Variables">
+        <event-group description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="1964323426106172" title="Initializing Global Variables">
             <sub-events>
                 <event-block sid="4294993057486781">
                     <conditions>
@@ -51,6 +51,10 @@
                         <action id="-9" name="Set value" sid="2965174115215552" type="System">
                             <param id="0" name="Variable">CollectibleAnimMax</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="2636177104465185" type="System">
+                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

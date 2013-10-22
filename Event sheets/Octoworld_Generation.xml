@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Octoworld_Generation</name>
     <events>
-        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="7131796227467265" title="Initializing Global Variables">
+        <event-group description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="7131796227467265" title="Initializing Global Variables">
             <sub-events>
                 <event-block sid="4294993057486781">
                     <conditions>
@@ -56,6 +56,10 @@
                             <param id="0" name="Variable">CollectibleAnimMax</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-4" name="Set layer visible" sid="6213354101456957" type="System">
+                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -78,7 +82,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">

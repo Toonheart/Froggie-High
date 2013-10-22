@@ -18,28 +18,54 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="420459411779005" title="Updating WorldSelector Icons">
+        <event-group description="" sid="420459411779005" title="Updating WorldSelector Icons">
             <sub-events>
                 <comment>Unlock the world butoon by comparing with highestunlocked var</comment>
-                <event-block collapsed="1" sid="4495431190039732">
+                <event-block sid="9895106162001461">
                     <conditions>
-                        <condition id="-11" name="For Each" sid="5194284781898129" type="System">
+                        <condition id="-11" name="For Each" sid="7294783922506778" type="System">
                             <param id="0" name="Object">Icon_WorldSelector</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="2214273007320149">
+                        <event-block sid="6260559045833407">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6595387418685825" type="Icon_WorldSelector">
+                                <condition id="-7" name="Compare instance variable" sid="4759045658087113" type="Icon_WorldSelector">
                                     <param id="0" name="Instance variable">World</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">HighestUnlockedWorld</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="1571510822913344" type="Icon_WorldSelector">
+                                <action id="4" name="Set animation" sid="3381227321555703" type="Icon_WorldSelector">
                                     <param id="0" name="Animation">&quot;Unlocked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Updating Path Line</comment>
+                <event-block sid="4495431190039732">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5194284781898129" type="System">
+                            <param id="0" name="Object">PathLine</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2214273007320149">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6595387418685825" type="PathLine">
+                                    <param id="0" name="Instance variable">Updater</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">HighestUnlockedWorld</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1571510822913344" type="PathLine">
+                                    <param id="0" name="Animation">&quot;Trailed&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -456,18 +482,36 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
+        <event-group description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
             <sub-events>
                 <event-block sid="8215350323428247">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="7283238741444715" type="Touch">
                             <param id="0" name="Object">Marker_ScrollDown</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="3884955097474512" type="System">
+                            <param id="0" name="First value">scrolly</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">1280</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-7" name="Scroll to position" sid="5580283052545769" type="System">
                             <param id="0" name="X">scrollx</param>
                             <param id="1" name="Y">scrolly+10</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="4201415529871015" type="Marker_ScrollDown">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4845292091159949">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4210803987636333" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="1097058020764135" type="Marker_ScrollDown">
+                            <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -476,11 +520,29 @@
                         <condition id="4" name="Is touching object" sid="7325661722761574" type="Touch">
                             <param id="0" name="Object">MarkerScrollUp</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="7418493368668625" type="System">
+                            <param id="0" name="First value">scrolly</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">640</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-7" name="Scroll to position" sid="4279200671450283" type="System">
                             <param id="0" name="X">scrollx</param>
                             <param id="1" name="Y">scrolly-10</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="3090331598210032" type="MarkerScrollUp">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4382291347701783">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6727309735732646" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="9355319386891034" type="MarkerScrollUp">
+                            <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
                 </event-block>
