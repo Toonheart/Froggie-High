@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Achieves_Events</name>
     <events>
-        <event-group collapsed="1" description="" sid="7346799539587752" title="Old">
+        <event-group description="" sid="7346799539587752" title="Old">
             <sub-events>
                 <include>GoToMain</include>
                 <event-block sid="2667942979917621">
@@ -16,110 +16,275 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="170700247334185">
+            </sub-events>
+        </event-group>
+        <event-block sid="1647090413057468">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6967692617282471" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1000</param>
+                </condition>
+                <condition id="3" inverted="1" name="Has key" sid="725101195217499" type="Dictionary">
+                    <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="3978047512550378" type="Dictionary">
+                    <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set local value" sid="1670386271021133" type="WebStr_Common">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5159499156264398">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1714489024349494" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5000</param>
+                </condition>
+                <condition id="3" inverted="1" name="Has key" sid="962563297017976" type="Dictionary">
+                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="546226833903212" type="Dictionary">
+                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set local value" sid="161779108231957" type="WebStr_Common">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3012211399318667">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3147711848711205" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10000</param>
+                </condition>
+                <condition id="3" inverted="1" name="Has key" sid="6306688658822115" type="Dictionary">
+                    <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="5820153561762397" type="Dictionary">
+                    <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set local value" sid="3059648426275881" type="WebStr_Common">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8435123028737408">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="183409449675969" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">20000</param>
+                </condition>
+                <condition id="3" inverted="1" name="Has key" sid="7296002399323933" type="Dictionary">
+                    <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="5903172801140368" type="Dictionary">
+                    <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set local value" sid="5493312307236821" type="WebStr_Common">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2074194161663689">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4772019291088433" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">30000</param>
+                </condition>
+                <condition id="3" inverted="1" name="Has key" sid="7129925408825726" type="Dictionary">
+                    <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="4517227713951102" type="Dictionary">
+                    <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set local value" sid="8340845857607355" type="WebStr_Common">
+                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                    <param id="1" name="Value">Dictionary.AsJSON</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8465829803485575">
+            <conditions>
+                <condition id="3" name="Has key" sid="8804983830826344" type="Dictionary">
+                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="381114544147916" type="Achieve">
+                    <param id="0" name="Animation">&quot;1k&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9557051157705004">
+            <conditions>
+                <condition id="-11" name="For Each" sid="2289664981112667" type="System">
+                    <param id="0" name="Object">Achieve</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1917180896630139">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="6132136916835616" type="Froggie">
-                            <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
-                        </condition>
-                        <condition disabled="1" id="-8" name="Compare two values" sid="7718412743314953" type="System">
-                            <param id="0" name="First value">Achieves_Icon_Rocket.Opacity</param>
+                        <condition id="-7" name="Compare instance variable" sid="8166649224588044" type="Achieve">
+                            <param id="0" name="Instance variable">AchievementNo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">50</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="3" name="Has key" sid="1029550978638966" type="Dictionary">
+                            <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="4313128991774757" type="Dictionary">
-                            <param id="0" name="Key">&quot;Rocket&quot;</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="4" name="Set animation" sid="9459727273306525" type="Achieve">
+                            <param id="0" name="Animation">&quot;1k&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Set local value" sid="3342584770881795" type="WebStr_Common">
-                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                            <param id="1" name="Value">Dictionary.AsJSON</param>
+                        <action id="-3" name="Create object" sid="571745950871273" type="System">
+                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Achieve.X+256</param>
+                            <param id="3" name="Y">Achieve.Y</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8365442249943668">
-                    <conditions>
-                        <condition id="3" name="Has key" sid="8689440931943586" type="Dictionary">
-                            <param id="0" name="Key">&quot;Rocket&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="1775416413179471" type="Achieves_Icon_Rocket">
-                            <param id="0" name="Opacity">100</param>
+                        <action id="0" name="Set text" sid="8889098890713997" type="Text_Acheive_Discr">
+                            <param id="0" name="Text">&quot;Got 1000 Score&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9915914226946534">
+                <event-block sid="8671061332826922">
                     <conditions>
-                        <condition disabled="1" id="-8" name="Compare two values" sid="4382650915721688" type="System">
-                            <param id="0" name="First value">Achieves_Icon_Shield.Opacity</param>
+                        <condition id="-7" name="Compare instance variable" sid="8400514669326216" type="Achieve">
+                            <param id="0" name="Instance variable">AchievementNo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">50</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="3" name="Has key" sid="4944726067875743" type="Dictionary">
+                            <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="2722407555577505" type="Dictionary">
-                            <param id="0" name="Key">&quot;Shield&quot;</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="4" name="Set animation" sid="7419419898088146" type="Achieve">
+                            <param id="0" name="Animation">&quot;5k&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Set local value" sid="5092803082583883" type="WebStr_Common">
-                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                            <param id="1" name="Value">Dictionary.AsJSON</param>
+                        <action id="-3" name="Create object" sid="2652242098653955" type="System">
+                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Achieve.X+256</param>
+                            <param id="3" name="Y">Achieve.Y</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4037807130075615">
-                    <conditions>
-                        <condition id="3" name="Has key" sid="9380216554008966" type="Dictionary">
-                            <param id="0" name="Key">&quot;Shield&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Set opacity" sid="5416833467977434" type="Achieves_Icon_Shield">
-                            <param id="0" name="Opacity">100</param>
+                        <action id="0" name="Set text" sid="8131815125356109" type="Text_Acheive_Discr">
+                            <param id="0" name="Text">&quot;Got 5000 Score&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2537349563549788">
+                <event-block sid="6991844472499529">
                     <conditions>
-                        <condition disabled="1" id="-8" name="Compare two values" sid="6041913299761353" type="System">
-                            <param id="0" name="First value">Achieves_Icon_Mushroom.Opacity</param>
+                        <condition id="-7" name="Compare instance variable" sid="7030831481700798" type="Achieve">
+                            <param id="0" name="Instance variable">AchievementNo</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">50</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="3" name="Has key" sid="5398830182641683" type="Dictionary">
+                            <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="5724003489356822" type="Dictionary">
-                            <param id="0" name="Key">&quot;Mushrum&quot;</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="4" name="Set animation" sid="7589898875809961" type="Achieve">
+                            <param id="0" name="Animation">&quot;10k&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="0" name="Set local value" sid="3047868616231983" type="WebStr_Common">
-                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                            <param id="1" name="Value">Dictionary.AsJSON</param>
+                        <action id="-3" name="Create object" sid="6284086158541392" type="System">
+                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Achieve.X+256</param>
+                            <param id="3" name="Y">Achieve.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9354622883386239" type="Text_Acheive_Discr">
+                            <param id="0" name="Text">&quot;Got 10000 Score&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="234263049100397">
+                <event-block sid="7795902537526572">
                     <conditions>
-                        <condition id="3" name="Has key" sid="2224045907007658" type="Dictionary">
-                            <param id="0" name="Key">&quot;Mushrum&quot;</param>
+                        <condition id="-7" name="Compare instance variable" sid="3775027624165854" type="Achieve">
+                            <param id="0" name="Instance variable">AchievementNo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="3" name="Has key" sid="9509106491441312" type="Dictionary">
+                            <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="9569243110104361" type="Achieves_Icon_Mushroom">
-                            <param id="0" name="Opacity">100</param>
+                        <action id="4" name="Set animation" sid="1649602863870254" type="Achieve">
+                            <param id="0" name="Animation">&quot;20k&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1451720245954157" type="System">
+                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Achieve.X+256</param>
+                            <param id="3" name="Y">Achieve.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4035638532684802" type="Text_Acheive_Discr">
+                            <param id="0" name="Text">&quot;Got 20000 Score&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4801425784630407">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8299604537467202" type="Achieve">
+                            <param id="0" name="Instance variable">AchievementNo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="3" name="Has key" sid="29883947815465" type="Dictionary">
+                            <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4886753240658492" type="Achieve">
+                            <param id="0" name="Animation">&quot;30k&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4442129976355266" type="System">
+                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Achieve.X+256</param>
+                            <param id="3" name="Y">Achieve.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2482702672079947" type="Text_Acheive_Discr">
+                            <param id="0" name="Text">&quot;Got 30000 Score&quot;</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-group>
-        <event-group description="" sid="6281235086293201" title="Updating Achievements Layout" />
-        <event-block sid="1387439650197578">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="6419873225561545" type="System" />
-            </conditions>
-            <actions />
         </event-block>
     </events>
 </c2eventsheet>

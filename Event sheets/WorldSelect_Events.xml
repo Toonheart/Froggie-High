@@ -18,7 +18,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="420459411779005" title="Updating WorldSelector Icons">
+        <event-group collapsed="1" description="" sid="420459411779005" title="Updating WorldSelector Icons">
             <sub-events>
                 <comment>Unlock the world butoon by comparing with highestunlocked var</comment>
                 <event-block sid="9895106162001461">
@@ -344,7 +344,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4589216467661568" title="UserInputs">
+        <event-group description="" sid="4589216467661568" title="UserInputs">
             <sub-events>
                 <comment>Go Back to the Title Menu</comment>
                 <event-block sid="7429165856555494">
@@ -354,6 +354,18 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="9" name="Set scale" sid="9289259513380166" type="Button_GoBack">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5130742095895383" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="9291705466792448" type="Button_GoBack">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6487134942751285" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="9402432211879913" type="System">
                             <param id="0" name="Layout">Title_Screen</param>
                         </action>
