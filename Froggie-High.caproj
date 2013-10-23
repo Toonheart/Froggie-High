@@ -12,7 +12,9 @@
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -23,12 +25,12 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
     </used-behaviors>
     <used-effects />
@@ -4014,7 +4016,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6649257855834541" speed="12">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6649257855834541" speed="18">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.32375" y="0.10875" />
                         <image-point name="Imagepoint 2" x="0.73625" y="0.09375" />
@@ -4283,23 +4285,25 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4643981589746903" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.08125" y="0.445205" />
-                            <point x="0.91625" y="0.458904" />
-                            <point x="0.96625" y="0.5" />
-                            <point x="0.91875" y="0.554795" />
-                            <point x="0.085" y="0.534247" />
-                            <point x="0.03" y="0.5" />
+                            <point x="0.138889" y="0.445205" />
+                            <point x="0.5" y="0.431507" />
+                            <point x="0.858974" y="0.452055" />
+                            <point x="0.980769" y="0.5" />
+                            <point x="0.858974" y="0.547945" />
+                            <point x="0.145299" y="0.534247" />
+                            <point x="0.017094" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Trailed" pingpong="0" repeatcount="1" repeatto="0" sid="674210683540873" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.5" y="0.780822" />
-                            <point x="0.89875" y="0.5" />
-                            <point x="0.89875" y="0.445205" />
-                            <point x="0.5" y="0.869863" />
-                            <point x="0.1375" y="0.5" />
+                            <point x="0.153846" y="0.493151" />
+                            <point x="0.5" y="0.424658" />
+                            <point x="0.903846" y="0.308219" />
+                            <point x="0.967949" y="0.5" />
+                            <point x="0.136752" y="0.561644" />
+                            <point x="0.132479" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4438,6 +4442,45 @@
         </object-type>
         <object-type name="Text_Acheive_Discr" sid="859131284521484">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Button_Next" sid="8098240141398237">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9765496501546718" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.333333" y="0.333333" />
+                            <point x="0.5" y="0.313559" />
+                            <point x="0.669492" y="0.330508" />
+                            <point x="0.932203" y="0.5" />
+                            <point x="0.672316" y="0.672316" />
+                            <point x="0.5" y="0.70904" />
+                            <point x="0.327684" y="0.672316" />
+                            <point x="0.112994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Zoom" pingpong="0" repeatcount="1" repeatto="0" sid="1322965299602413" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.333333" y="0.333333" />
+                            <point x="0.5" y="0.313559" />
+                            <point x="0.669492" y="0.330508" />
+                            <point x="0.932203" y="0.5" />
+                            <point x="0.672316" y="0.672316" />
+                            <point x="0.5" y="0.70904" />
+                            <point x="0.327684" y="0.672316" />
+                            <point x="0.112994" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Facebook" sid="1052340058302493">
+            <plugin id="Facebook" />
+        </object-type>
+        <object-type name="Browser" sid="8457409479207109">
+            <plugin id="Browser" />
         </object-type>
     </object-folder>
     <families>
@@ -4608,6 +4651,13 @@
             </properties>
         </global-instance>
         <global-instance type="WebStr_Common" uid="34" />
+        <global-instance type="Facebook" uid="246">
+            <properties>
+                <app-id></app-id>
+                <app-secret></app-secret>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="247" />
     </global-instances>
     <sounds-folder expanded="1">
         <file name="Jump.ogg" />

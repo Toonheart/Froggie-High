@@ -169,7 +169,7 @@
                             <param id="2" name="Image point">&quot;FBGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="7032160034163147" type="BG_UI">
-                            <param id="0" name="Object">Buttton_SaveMe</param>
+                            <param id="0" name="Object">Text_UI_HighScore</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
                         </action>
@@ -177,11 +177,6 @@
                             <param id="0" name="Object">Icon_BragThis</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;Brag&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Spawn another object" sid="1415188800345719" type="BG_UI">
-                            <param id="0" name="Object">Text_UI_HighScore</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="9717784995611331" type="BG_UI">
                             <param id="0" name="Object">Text_UI_Score</param>
@@ -194,13 +189,6 @@
                         </action>
                         <action id="0" name="Set text" sid="9865127229694788" type="Text_UI_Score">
                             <param id="0" name="Text">Score</param>
-                        </action>
-                        <action id="5" name="Set web font" sid="8634563371949207" type="Text_UI_HighScore">
-                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
-                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="3772174221896916" type="Text_UI_HighScore">
-                            <param id="0" name="Text">&quot;: &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -222,7 +210,21 @@
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="2008178232381947" type="Text_UI_HighScore">
-                                    <param id="0" name="Text">&quot; : &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                    <param id="0" name="Text">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3032095033578511">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5107721129524282" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set web font" sid="9668363203244745" type="Text_UI_HighScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2938726753151736" type="Text_UI_HighScore">
+                                    <param id="0" name="Text">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -348,6 +350,38 @@
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-26" name="Restart layout" sid="9396102042557026" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="9302971943032001">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="6322097935595088" type="Touch">
+                            <param id="0" name="Object">Button_Next</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="5314608472242173" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4549398451047275" type="Button_Next">
+                            <param id="0" name="Animation">&quot;Zoom&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5751231736505514" type="Button_Next">
+                            <param id="0" name="Scale">1.02</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5623964360810581" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="2045971161912213" type="Button_Next">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="7175070159721509" type="System">
+                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1469788841747346" type="System">
+                            <param id="0" name="Layout">WorldSelect</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="1265948641350977">
@@ -548,7 +582,7 @@
                             <param id="2" name="Image point">&quot;Info&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="6522681451953325" type="BG_UI">
-                            <param id="0" name="Object">Button_GiveUp</param>
+                            <param id="0" name="Object">Button_Next</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;GiveUp&quot;</param>
                         </action>
@@ -579,14 +613,45 @@
                         <action disabled="1" id="0" name="Set text" sid="38528459287583" type="Text_UI_Score">
                             <param id="0" name="Text">Score</param>
                         </action>
-                        <action id="5" name="Set web font" sid="7567870339991121" type="Text_UI_HighScore">
-                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
-                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="5726854664691671" type="Text_UI_HighScore">
-                            <param id="0" name="Text">&quot;HighScore : &quot;&amp;WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1126260088519751">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5741426839107281" type="System">
+                                    <param id="0" name="First value">Score</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set local value" sid="9830981980798203" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;HighScore&quot;</param>
+                                    <param id="1" name="Value">Score</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="9956585656591833" type="Text_UI_HighScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9361953636787779" type="Text_UI_HighScore">
+                                    <param id="0" name="Text">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2165020148870163">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2970732637096077" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set web font" sid="3785188706241007" type="Text_UI_HighScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4596496180075544" type="Text_UI_HighScore">
+                                    <param id="0" name="Text">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Count the score after completing the world</comment>
                 <event-block collapsed="1" sid="729778303536131">

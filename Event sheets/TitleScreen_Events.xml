@@ -279,6 +279,31 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="8765352032032566">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9596495389755246" type="Touch">
+                            <param id="0" name="Object">Button_FB_Title</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="3848052126521152" type="Button_FB_Title">
+                            <param id="0" name="Scale">1.08</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4954994600545204" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="784539667292442" type="Button_FB_Title">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2854160397505834" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="8" name="Open URL in new window" sid="5396642003081553" type="Browser">
+                            <param id="0" name="URL">&quot;https://www.facebook.com/bakaTheHungriestFrog&quot;</param>
+                            <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="9791390366890499" title="Preload">
