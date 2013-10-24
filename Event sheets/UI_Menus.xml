@@ -124,7 +124,7 @@
         <event-group description="" sid="7132109060416404" title="GameOver">
             <sub-events>
                 <comment>If game over update the high score And Show the GameOver menus on UI BG</comment>
-                <event-block sid="3207011321876616">
+                <event-block collapsed="1" sid="3207011321876616">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="2826568762651674" type="Froggie" />
                     </conditions>
@@ -177,6 +177,16 @@
                             <param id="0" name="Object">Icon_BragThis</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;Brag&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5618039646774813" type="BG_UI">
+                            <param id="0" name="Object">Icon_Score</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;ScoreSprite&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="9556833796785549" type="BG_UI">
+                            <param id="0" name="Object">Icon_HighScore</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;HighScoreSprite&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="9717784995611331" type="BG_UI">
                             <param id="0" name="Object">Text_UI_Score</param>

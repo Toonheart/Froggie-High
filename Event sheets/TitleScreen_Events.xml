@@ -6,15 +6,63 @@
         <include>Maintainance</include>
         <variable constant="0" name="ActiveWorld" sid="5439010439631277" static="0" type="number">1</variable>
         <include>Debug</include>
+        <comment>Resetting all Global var&apos;s collectible counts to zero </comment>
         <event-block sid="2083380856551319">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="6982001752763213" type="System" />
             </conditions>
             <actions>
                 <action id="-21" name="Reset global variables" sid="5232631761049472" type="System" />
+                <action id="4" name="Load" sid="1150433313231279" type="Dict_Achieves">
+                    <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
+                </action>
+                <action id="0" name="Add key" sid="3523034147995968" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;PlainCandy&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="8527766407648704" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;TwoColour&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="2259142416241023" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;StarCandy&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="4288789978577171" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;SwirlCandy&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="3536386730615975" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;Wrapper&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="755046027435555" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;Star&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="4383410279461163" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;CupCakeMulti&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="3389611316522175" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;CupCakePlain&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="4239110789816529" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;MultiCake&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="8554392337854188" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;MultiToppingCake&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Add key" sid="7831253699883403" type="Dict_CollectibleCounter">
+                    <param id="0" name="Key">&quot;PlainCake&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
-        <event-group description="" sid="2511712467372221" title="Toggling Music and Sounds">
+        <event-group collapsed="1" description="" sid="2511712467372221" title="Toggling Music and Sounds">
             <sub-events>
                 <comment>Mute the sounds</comment>
                 <event-block disabled="1" sid="8829171707280856">
@@ -134,7 +182,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8428997519920965" title="MENUS">
+        <event-group collapsed="1" description="" sid="8428997519920965" title="MENUS">
             <sub-events>
                 <event-block sid="9825124560921165">
                     <conditions>

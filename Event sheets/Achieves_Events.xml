@@ -3,7 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Achieves_Events</name>
     <events>
-        <event-group description="" sid="7346799539587752" title="Old">
+        <include>Debug</include>
+        <include>Achieves_Common</include>
+        <event-block sid="4885785248355738">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7882550967151613" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="1694188428645599" type="Dict_Achieves">
+                    <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="7346799539587752" title="Old">
             <sub-events>
                 <include>GoToMain</include>
                 <event-block sid="2667942979917621">
@@ -11,282 +23,14 @@
                         <condition id="-2" name="On start of layout" sid="1448352738111719" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Load" sid="5519543606995326" type="Dictionary">
+                        <action id="4" name="Load" sid="5519543606995326" type="Dict_Achieves">
                             <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="1647090413057468">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="6967692617282471" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">1000</param>
-                </condition>
-                <condition id="3" inverted="1" name="Has key" sid="725101195217499" type="Dictionary">
-                    <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="3978047512550378" type="Dictionary">
-                    <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Set local value" sid="1670386271021133" type="WebStr_Common">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5159499156264398">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="1714489024349494" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">5000</param>
-                </condition>
-                <condition id="3" inverted="1" name="Has key" sid="962563297017976" type="Dictionary">
-                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="546226833903212" type="Dictionary">
-                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Set local value" sid="161779108231957" type="WebStr_Common">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3012211399318667">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="3147711848711205" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">10000</param>
-                </condition>
-                <condition id="3" inverted="1" name="Has key" sid="6306688658822115" type="Dictionary">
-                    <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="5820153561762397" type="Dictionary">
-                    <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Set local value" sid="3059648426275881" type="WebStr_Common">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8435123028737408">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="183409449675969" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">20000</param>
-                </condition>
-                <condition id="3" inverted="1" name="Has key" sid="7296002399323933" type="Dictionary">
-                    <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="5903172801140368" type="Dictionary">
-                    <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Set local value" sid="5493312307236821" type="WebStr_Common">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2074194161663689">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="4772019291088433" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">30000</param>
-                </condition>
-                <condition id="3" inverted="1" name="Has key" sid="7129925408825726" type="Dictionary">
-                    <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="4517227713951102" type="Dictionary">
-                    <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Set local value" sid="8340845857607355" type="WebStr_Common">
-                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
-                    <param id="1" name="Value">Dictionary.AsJSON</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="8465829803485575">
-            <conditions>
-                <condition id="3" name="Has key" sid="8804983830826344" type="Dictionary">
-                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="381114544147916" type="Achieve">
-                    <param id="0" name="Animation">&quot;1k&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9557051157705004">
-            <conditions>
-                <condition id="-11" name="For Each" sid="2289664981112667" type="System">
-                    <param id="0" name="Object">Achieve</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="1917180896630139">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8166649224588044" type="Achieve">
-                            <param id="0" name="Instance variable">AchievementNo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                        <condition id="3" name="Has key" sid="1029550978638966" type="Dictionary">
-                            <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9459727273306525" type="Achieve">
-                            <param id="0" name="Animation">&quot;1k&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="571745950871273" type="System">
-                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Achieve.X+256</param>
-                            <param id="3" name="Y">Achieve.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8889098890713997" type="Text_Acheive_Discr">
-                            <param id="0" name="Text">&quot;Got 1000 Score&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8671061332826922">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8400514669326216" type="Achieve">
-                            <param id="0" name="Instance variable">AchievementNo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition id="3" name="Has key" sid="4944726067875743" type="Dictionary">
-                            <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7419419898088146" type="Achieve">
-                            <param id="0" name="Animation">&quot;5k&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="2652242098653955" type="System">
-                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Achieve.X+256</param>
-                            <param id="3" name="Y">Achieve.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8131815125356109" type="Text_Acheive_Discr">
-                            <param id="0" name="Text">&quot;Achievement2&quot; &amp;newline &amp;&quot;Got 5000 Score&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6991844472499529">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7030831481700798" type="Achieve">
-                            <param id="0" name="Instance variable">AchievementNo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                        <condition id="3" name="Has key" sid="5398830182641683" type="Dictionary">
-                            <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7589898875809961" type="Achieve">
-                            <param id="0" name="Animation">&quot;10k&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="6284086158541392" type="System">
-                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Achieve.X+256</param>
-                            <param id="3" name="Y">Achieve.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="9354622883386239" type="Text_Acheive_Discr">
-                            <param id="0" name="Text">&quot;Achievement3&quot; &amp;newline &amp;&quot;Got 10000 Score&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7795902537526572">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3775027624165854" type="Achieve">
-                            <param id="0" name="Instance variable">AchievementNo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                        <condition id="3" name="Has key" sid="9509106491441312" type="Dictionary">
-                            <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1649602863870254" type="Achieve">
-                            <param id="0" name="Animation">&quot;20k&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="1451720245954157" type="System">
-                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Achieve.X+256</param>
-                            <param id="3" name="Y">Achieve.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="4035638532684802" type="Text_Acheive_Discr">
-                            <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 20000 Score&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4801425784630407">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8299604537467202" type="Achieve">
-                            <param id="0" name="Instance variable">AchievementNo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                        <condition id="3" name="Has key" sid="29883947815465" type="Dictionary">
-                            <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="4886753240658492" type="Achieve">
-                            <param id="0" name="Animation">&quot;30k&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="4442129976355266" type="System">
-                            <param id="0" name="Object to create">Text_Acheive_Discr</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Achieve.X+256</param>
-                            <param id="3" name="Y">Achieve.Y</param>
-                        </action>
-                        <action id="0" name="Set text" sid="2482702672079947" type="Text_Acheive_Discr">
-                            <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 30000 Score&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-group description="Scrolling down and Up" sid="5396902482078132" title="Screen Scrooling">
+        <event-group collapsed="1" description="Scrolling down and Up" sid="5396902482078132" title="Screen Scrolling">
             <sub-events>
                 <event-block sid="8215350323428247">
                     <conditions>
@@ -296,7 +40,7 @@
                         <condition id="-8" name="Compare two values" sid="3884955097474512" type="System">
                             <param id="0" name="First value">scrolly</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">1280</param>
+                            <param id="2" name="Second value">NextAchiveY-400</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -351,6 +95,535 @@
                             <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3621656727098334" title="Placing All Achievements">
+            <sub-events>
+                <event-block sid="9589427937693765">
+                    <conditions>
+                        <condition id="-10" name="For" sid="5801390840076834" type="System">
+                            <param id="0" name="Name">&quot;AchievementGen&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">TotalAchievments</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="4470759367107939" type="System">
+                            <param id="0" name="First value">TotalAchievments</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="919981041522471" type="System">
+                            <param id="0" name="Object to create">Achieve</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">128</param>
+                            <param id="3" name="Y">NextAchiveY</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="165012742090375" type="Achieve">
+                            <param id="0" name="Instance variable">AchievementNo</param>
+                            <param id="1" name="Value">TotalAchievments</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5965244689627652" type="System">
+                            <param id="0" name="Variable">NextAchiveY</param>
+                            <param id="1" name="Value">256</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6378747472394764" type="System">
+                            <param id="0" name="Variable">TotalAchievments</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7138786324349483" title="Updating Achievements Layout">
+            <sub-events>
+                <event-block sid="9557051157705004">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2289664981112667" type="System">
+                            <param id="0" name="Object">Achieve</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Score Achivements</comment>
+                        <event-block sid="1917180896630139">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8166649224588044" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="1029550978638966" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;1_Achieve1k&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7449271994406116" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9459727273306525" type="Achieve">
+                                    <param id="0" name="Animation">&quot;1k&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="571745950871273" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8889098890713997" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Got 1000 Score&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8671061332826922">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8400514669326216" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="4944726067875743" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;2_Achieve5k&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4757177452383541" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7419419898088146" type="Achieve">
+                                    <param id="0" name="Animation">&quot;5k&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="2652242098653955" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8131815125356109" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement2&quot; &amp;newline &amp;&quot;Got 5000 Score&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6991844472499529">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7030831481700798" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="5398830182641683" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;3_Achieve10k&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2036937241484296" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7589898875809961" type="Achieve">
+                                    <param id="0" name="Animation">&quot;10k&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6284086158541392" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9354622883386239" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement3&quot; &amp;newline &amp;&quot;Got 10000 Score&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7795902537526572">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3775027624165854" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="9509106491441312" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;4_Achieve20k&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="6869411193938328" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1649602863870254" type="Achieve">
+                                    <param id="0" name="Animation">&quot;20k&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1451720245954157" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4035638532684802" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 20000 Score&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4801425784630407">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8299604537467202" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="29883947815465" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3761594060979011" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4886753240658492" type="Achieve">
+                                    <param id="0" name="Animation">&quot;30k&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4442129976355266" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2482702672079947" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 30000 Score&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3893070776190218">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8752738271832736" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="9495109681839502" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;5_Achieve30k&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="1426103497994245" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1362124233640646" type="Achieve">
+                                    <param id="0" name="Animation">&quot;30k&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4954566954565344" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2710042246397312" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 30000 Score&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134894603958057">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1200205178336856" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="7771025786929478" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;6_AchieveHyperJump&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4238834384616037" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9570600736613631" type="Achieve">
+                                    <param id="0" name="Animation">&quot;HyperJump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="331321605708139" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4166081758018528" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement6&quot; &amp;newline &amp;&quot;Collected HyperJump Mushroom&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7424882611442077">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9988593273768795" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="4246339063270004" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;7_AchieveRainbow&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9484528983245621" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4755301500639689" type="Achieve">
+                                    <param id="0" name="Animation">&quot;Rainbow&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="3213013426389749" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7003931015748232" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement7&quot; &amp;newline &amp;&quot;Rainbow Mushroom collected&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9253649268869197">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5687863937429349" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="1673413078324417" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;8_AchieveHealth&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="104582108727178" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9871051964016949" type="Achieve">
+                                    <param id="0" name="Animation">&quot;Health&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1545504904472853" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9788307345341961" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement8&quot; &amp;newline &amp;&quot;Health Mushroom collected&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="18124472787139">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2627270429600479" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="4755703652518404" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;9_PlainCandy&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2530050753058609" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="169052337863241" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="777484594188213" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8832810631454003" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement9&quot; &amp;newline &amp;&quot;PlainCandy&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3988882402894057">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4529113405947676" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="4867072621656432" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;10_TwoColor&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9224324903783491" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3324164889605434" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8885217454130942" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9333087852354332" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement10&quot; &amp;newline &amp;&quot;TwoColor&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2809205132306556">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="858650113666602" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">11</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="3215801583648136" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;11_Swirl&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8592973666340594" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4098419279596084" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="727372753263368" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9373486471997979" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement11&quot; &amp;newline &amp;&quot;Swirl&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8600824914455477">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2207553211230767" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">12</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="7853215202708928" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;12_Wrapper&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="1686850707286829" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9283534986914669" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8088816378294977" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3029916298681797" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement12&quot; &amp;newline &amp;&quot;Wrapper&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1056967932645334">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3880845071637304" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">13</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="2029539684474874" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;13_Star&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4005215082146286" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8983913420494344" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4015749067587359" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="268789226096632" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5316079829239827">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1043294049723843" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">14</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="1413502259453536" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;14_PlainCake&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2862765394232139" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8239491539964507" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9471369804934433" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3610729340602344" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8798626111212234">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5903311067540243" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">15</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="6495878999498935" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;15_CupCakePlain&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4600252605480503" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9553795287562729" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4413789105148326" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="1121285590617923" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="604700041506237">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="144971281473096" type="Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">16</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="7901622397220871" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;16_MultiCake&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="6711654475819997" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8575600001616846" type="Achieve">
+                                    <param id="0" name="Animation">&quot;PlainCandy&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4244316933752243" type="System">
+                                    <param id="0" name="Object to create">Text_Acheive_Discr</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Achieve.X+256</param>
+                                    <param id="3" name="Y">Achieve.Y</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5759102406858864" type="Text_Acheive_Discr">
+                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
