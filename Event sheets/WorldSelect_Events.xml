@@ -21,7 +21,7 @@
         <event-group collapsed="1" description="" sid="420459411779005" title="Updating WorldSelector Icons">
             <sub-events>
                 <comment>Unlock the world butoon by comparing with highestunlocked var</comment>
-                <event-block sid="9895106162001461">
+                <event-block collapsed="1" sid="9895106162001461">
                     <conditions>
                         <condition id="-11" name="For Each" sid="7294783922506778" type="System">
                             <param id="0" name="Object">Icon_WorldSelector</param>
@@ -47,7 +47,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Updating Path Line</comment>
-                <event-block sid="4495431190039732">
+                <event-block collapsed="1" sid="4495431190039732">
                     <conditions>
                         <condition id="-11" name="For Each" sid="5194284781898129" type="System">
                             <param id="0" name="Object">PathLine</param>
@@ -209,70 +209,101 @@
                 <comment>On selecting world Buttons go to the world if it is unlocked and set currentworld to associated world(instance var)</comment>
                 <event-block collapsed="1" sid="4128880818065891">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="6205326351807124" type="Touch">
+                        <condition id="4" name="Is touching object" sid="6205326351807124" type="Touch">
                             <param id="0" name="Object">Icon_WorldSelector</param>
                         </condition>
                         <condition id="2" name="Is playing" sid="939561814347286" type="Icon_WorldSelector">
                             <param id="0" name="Animation">&quot;Unlocked&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="9" name="Set scale" sid="3114949949532127" type="Icon_WorldSelector">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                    </actions>
                     <sub-events>
-                        <event-block sid="6919860062332719">
+                        <event-block sid="6642381109295459">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6077414825540564" type="Icon_WorldSelector">
-                                    <param id="0" name="Instance variable">World</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="11" name="On Nth touch end" sid="3393897593528499" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="9644325342531337" type="System">
-                                    <param id="0" name="Layout">OctoWorld</param>
+                                <action id="9" name="Set scale" sid="3827418208912941" type="Icon_WorldSelector">
+                                    <param id="0" name="Scale">1</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="5353933920340196" type="System">
-                                    <param id="0" name="Variable">CurrentWorld</param>
-                                    <param id="1" name="Value">Icon_WorldSelector.World</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7628200158145182">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7149223357736832" type="Icon_WorldSelector">
-                                    <param id="0" name="Instance variable">World</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="909565784658185" type="System">
-                                    <param id="0" name="Layout">ChickenWorld</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="5489846973588791" type="System">
-                                    <param id="0" name="Variable">CurrentWorld</param>
-                                    <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                <action id="-16" name="Wait" sid="7973798418866618" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="8855664736416105">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="5428715393656807" type="Icon_WorldSelector">
-                                    <param id="0" name="Instance variable">World</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="1903585811408791" type="System">
-                                    <param id="0" name="Layout">ChimpWorld</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="5244906805273949" type="System">
-                                    <param id="0" name="Variable">CurrentWorld</param>
-                                    <param id="1" name="Value">Icon_WorldSelector.World</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="6919860062332719">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6077414825540564" type="Icon_WorldSelector">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="9644325342531337" type="System">
+                                            <param id="0" name="Layout">OctoWorld</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5353933920340196" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7628200158145182">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7149223357736832" type="Icon_WorldSelector">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="909565784658185" type="System">
+                                            <param id="0" name="Layout">ChickenWorld</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5489846973588791" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8855664736416105">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5428715393656807" type="Icon_WorldSelector">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="1903585811408791" type="System">
+                                            <param id="0" name="Layout">ChimpWorld</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5244906805273949" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="6724726815922627">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8547286384446262" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="7055076978441169" type="Icon_WorldSelector">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -349,7 +380,7 @@
                 <comment>Go Back to the Title Menu</comment>
                 <event-block sid="7429165856555494">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="4110536254518642" type="Touch">
+                        <condition id="4" name="Is touching object" sid="4110536254518642" type="Touch">
                             <param id="0" name="Object">Button_GoBack</param>
                         </condition>
                     </conditions>
@@ -357,17 +388,32 @@
                         <action id="9" name="Set scale" sid="9289259513380166" type="Button_GoBack">
                             <param id="0" name="Scale">1.05</param>
                         </action>
-                        <action id="-16" name="Wait" sid="5130742095895383" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="9291705466792448" type="Button_GoBack">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9083691199967713">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="6198332402005201" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="9291705466792448" type="Button_GoBack">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="9402432211879913" type="System">
+                                    <param id="0" name="Layout">Title_Screen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1709504904994231">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3667471542466549" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="4396891920368273" type="Button_GoBack">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="6487134942751285" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="9402432211879913" type="System">
-                            <param id="0" name="Layout">Title_Screen</param>
                         </action>
                     </actions>
                 </event-block>
@@ -494,7 +540,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
+        <event-group collapsed="1" description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
             <sub-events>
                 <event-block collapsed="1" sid="8279651189686509">
                     <conditions>
@@ -567,7 +613,7 @@
                         <condition id="-8" name="Compare two values" sid="7418493368668625" type="System">
                             <param id="0" name="First value">scrolly</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">640</param>
+                            <param id="2" name="Second value">-1700</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -579,6 +625,12 @@
                             <param id="0" name="Scale">1.2</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1387184822967008">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="4382291347701783">
                     <conditions>

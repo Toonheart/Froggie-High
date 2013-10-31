@@ -3,120 +3,172 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Menus</name>
     <events>
-        <event-group collapsed="1" description="" sid="5376503122712939" title="PAUSE/RESUME">
+        <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
             <sub-events>
                 <comment>Create all PauseMenus On UI BG on paused</comment>
                 <event-block sid="9130341376091132">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="4312977658208201" type="Touch">
+                        <condition id="4" name="Is touching object" sid="4312977658208201" type="Touch">
                             <param id="0" name="Object">Button_Pause</param>
                         </condition>
+                        <condition id="-3" name="Is on-screen" sid="9245464008905668" type="Froggie" />
                     </conditions>
                     <actions>
-                        <action id="1" name="Set pause state" sid="3324010327334437" type="Pause">
-                            <param id="0" name="State">0</param>
+                        <action id="9" name="Set scale" sid="8489209832117487" type="Button_Pause">
+                            <param id="0" name="Scale">1.05</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="5592681339438707" type="System">
-                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
-                            <param id="1" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2426767881858159" type="BG_UI">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="5987226639409127" type="BG_UI">
-                            <param id="0" name="Object">Icon_Paused</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Info&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="1634638647712104" type="BG_UI">
-                            <param id="0" name="Object">Button_Resume</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="1877325527170248" type="BG_UI">
-                            <param id="0" name="Object">Button_Level</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Levels&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="1730743046229098" type="BG_UI">
-                            <param id="0" name="Object">Icon_Store</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Store&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="5000394163884179" type="BG_UI">
-                            <param id="0" name="Object">Button_Twitter_Pause</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="7871444616516552" type="BG_UI">
-                            <param id="0" name="Object">Icon_MusicStatus</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Music&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="7309891760302689" type="BG_UI">
-                            <param id="0" name="Object">Button_FB_GO</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;FBGO&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="2495006025753533" type="BG_UI">
-                            <param id="0" name="Object">Icon_Restart</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Restart&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="6502678366641663" type="BG_UI">
-                            <param id="0" name="Object">Text_UI_Score</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Score&quot;</param>
-                        </action>
-                        <action id="5" name="Set web font" sid="3943785681081579" type="Text_UI_Score">
-                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
-                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
-                        </action>
-                        <action id="0" name="Set text" sid="8877509783165272" type="Text_UI_Score">
-                            <param id="0" name="Text">Score</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="793804990777777" type="BG_UI">
-                            <param id="0" name="Object">Icon_BragThis</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;Brag&quot;</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9295178516513207">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="3773053200120423" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="8802718069342266" type="Button_Pause">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="1" name="Set pause state" sid="3324010327334437" type="Pause">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="5592681339438707" type="System">
+                                    <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2426767881858159" type="BG_UI">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="5987226639409127" type="BG_UI">
+                                    <param id="0" name="Object">Icon_Paused</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Info&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="1634638647712104" type="BG_UI">
+                                    <param id="0" name="Object">Button_Resume</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="1877325527170248" type="BG_UI">
+                                    <param id="0" name="Object">Button_Level</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Levels&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="1730743046229098" type="BG_UI">
+                                    <param id="0" name="Object">Icon_Store</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Store&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="5000394163884179" type="BG_UI">
+                                    <param id="0" name="Object">Button_Twitter_Pause</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="7871444616516552" type="BG_UI">
+                                    <param id="0" name="Object">Icon_MusicStatus</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Music&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="7309891760302689" type="BG_UI">
+                                    <param id="0" name="Object">Button_FB_GO</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;FBGO&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="2495006025753533" type="BG_UI">
+                                    <param id="0" name="Object">Icon_Restart</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Restart&quot;</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="6502678366641663" type="BG_UI">
+                                    <param id="0" name="Object">Text_UI_Score</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Score&quot;</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="3943785681081579" type="Text_UI_Score">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8877509783165272" type="Text_UI_Score">
+                                    <param id="0" name="Text">Score</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="793804990777777" type="BG_UI">
+                                    <param id="0" name="Object">Icon_BragThis</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">&quot;Brag&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1927312112712001">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7303198672669097" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="5448878257869507" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="8357318855717562" type="Button_Pause">
+                            <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="9981650100327995">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="6146939189294523" type="Touch">
+                        <condition id="4" name="Is touching object" sid="6146939189294523" type="Touch">
                             <param id="0" name="Object">Button_Resume</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set pause state" sid="4898001006657319" type="Pause">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="3274535295306461" type="System">
-                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="1739330693445624" type="Button_Resume">
+                        <action id="4" name="Set animation" sid="8502317816328509" type="Button_Resume">
                             <param id="0" name="Animation">&quot;Zoom&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="7990868197373683" type="Button_Resume">
-                            <param id="0" name="Scale">1.02</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="4975689834339824" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
                         <action id="9" name="Set scale" sid="6073774777527252" type="Button_Resume">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1971440221183081">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7477116231816963" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set pause state" sid="4898001006657319" type="Pause">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="3274535295306461" type="System">
+                                    <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4975689834339824" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2777488145759031" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4650519145208102" type="BG_UI">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="554724397699924" type="UI_PauseMenus" />
+                                <action id="-9" name="Destroy" sid="1254430870689172" type="Text_UI_Score" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4455260222915225">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="385720018362943" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="4606121658521004" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1739330693445624" type="Button_Resume">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7990868197373683" type="Button_Resume">
                             <param id="0" name="Scale">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="2777488145759031" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4650519145208102" type="BG_UI">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="554724397699924" type="UI_PauseMenus" />
-                        <action id="-9" name="Destroy" sid="1254430870689172" type="Text_UI_Score" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -200,6 +252,9 @@
                         <action id="0" name="Set text" sid="9865127229694788" type="Text_UI_Score">
                             <param id="0" name="Text">Score</param>
                         </action>
+                        <action id="4" name="Set font color" sid="8188734965790529" type="Text_UI_Score">
+                            <param id="0" name="Color">rgb(180, 0, 0)</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1567962560337559">
@@ -247,71 +302,110 @@
                 <comment>Go to levels screen</comment>
                 <event-block sid="7442582905420583">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="6691330274554967" type="Touch">
+                        <condition id="4" name="Is touching object" sid="6691330274554967" type="Touch">
                             <param id="0" name="Object">Button_Level</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set pause state" sid="5426704075339099" type="Pause">
-                            <param id="0" name="State">1</param>
-                        </action>
                         <action id="4" name="Set animation" sid="7205386742671256" type="Button_Level">
                             <param id="0" name="Animation">&quot;Zoom&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="9" name="Set scale" sid="7086122872398246" type="Button_Level">
-                            <param id="0" name="Scale">1.02</param>
+                            <param id="0" name="Scale">1.05</param>
                         </action>
-                        <action id="-16" name="Wait" sid="7607672659146245" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="3992330450914081" type="Button_Level">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5448182459685045">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="4851044553504109" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set pause state" sid="5426704075339099" type="Pause">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5867214908574813" type="Button_Level">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="9981111128936156" type="System">
+                                    <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="4811696736124943" type="System">
+                                    <param id="0" name="Layout">WorldSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="543410383832949">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7321094369739218" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="2970707058369747" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="4098545835646768" type="Button_Level">
                             <param id="0" name="Scale">1</param>
                         </action>
-                        <action id="-4" name="Set layer visible" sid="1710962369539576" type="System">
-                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="7018579104035809" type="System">
-                            <param id="0" name="Layout">WorldSelect</param>
+                        <action id="4" name="Set animation" sid="7184652488596078" type="Button_Level">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="6807635970574474">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="3213043101680489" type="Touch">
+                        <condition id="4" name="Is touching object" sid="3213043101680489" type="Touch">
                             <param id="0" name="Object">Icon_Store</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="9" name="Set scale" sid="2044602662344289" type="Icon_Store">
+                        <action id="9" name="Set scale" sid="2044602662344289" type="Icon_Store">
                             <param id="0" name="Scale">1.05</param>
                         </action>
-                        <action disabled="1" id="-16" name="Wait" sid="1957562034864919" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action disabled="1" id="9" name="Set scale" sid="2794053662059739" type="Icon_Store">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8416629380635128">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="9554597796937028" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="2794053662059739" type="Icon_Store">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="145259257594898" type="System">
+                                    <param id="0" name="Layout">Store</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="9408781168766516" type="Icon_Store">
+                                    <param id="0" name="Object">FullVersion</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="7318115213890538" type="FullVersion">
+                                    <param id="0" name="Angle">-20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6072965558724112">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1285565742675344" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="2325595756162403" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="9611915201335601" type="Icon_Store">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action disabled="1" id="-16" name="Wait" sid="8001128654279434" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action disabled="1" id="-2" name="Go to layout" sid="145259257594898" type="System">
-                            <param id="0" name="Layout">Store</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="9408781168766516" type="Icon_Store">
-                            <param id="0" name="Object">FullVersion</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="7318115213890538" type="FullVersion">
-                            <param id="0" name="Angle">-20</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="5411855955152589">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="736063994034212" type="Touch">
+                        <condition id="4" name="Is touching object" sid="736063994034212" type="Touch">
                             <param id="0" name="Object">Button_Achieves</param>
                         </condition>
                     </conditions>
@@ -322,56 +416,94 @@
                         <action disabled="1" id="-16" name="Wait" sid="3019181017356301" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="9515836573777155" type="Button_Achieves">
-                            <param id="0" name="Scale">1</param>
-                        </action>
                         <action disabled="1" id="-16" name="Wait" sid="1534262590586211" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="1853851968703894" type="System">
-                            <param id="0" name="Layout">Achievements</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1102373239180808">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="9256251748527906" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="9515836573777155" type="Button_Achieves">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="1853851968703894" type="System">
+                                    <param id="0" name="Layout">Achievements</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="164691881703456">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8407168604709963" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="8971545414132248" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="2608879118891551" type="Button_Achieves">
+                            <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="966311176288386">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="4909214928226794" type="Touch">
+                        <condition id="4" name="Is touching object" sid="4909214928226794" type="Touch">
                             <param id="0" name="Object">Icon_Restart</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set pause state" sid="5840035171673408" type="Pause">
-                            <param id="0" name="State">1</param>
-                        </action>
                         <action id="9" name="Set scale" sid="8075372934335395" type="Icon_Restart">
                             <param id="0" name="Scale">1.05</param>
                         </action>
-                        <action id="-16" name="Wait" sid="1000678212409775" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="5248001533974465" type="Icon_Restart">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7795575871079369">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="5210925803148603" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set pause state" sid="5840035171673408" type="Pause">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5248001533974465" type="Icon_Restart">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7762794991122137" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="9149077805970749" type="System">
+                                    <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="9396102042557026" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2551393729997618">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3953936347768032" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="835712309085697" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="593440909479498" type="Icon_Restart">
                             <param id="0" name="Scale">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="7762794991122137" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="9149077805970749" type="System">
-                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="9396102042557026" type="System" />
                     </actions>
                 </event-block>
                 <event-block sid="9302971943032001">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="6322097935595088" type="Touch">
+                        <condition id="4" name="Is touching object" sid="6322097935595088" type="Touch">
                             <param id="0" name="Object">Button_Next</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set pause state" sid="5314608472242173" type="Pause">
-                            <param id="0" name="State">1</param>
-                        </action>
                         <action id="4" name="Set animation" sid="4549398451047275" type="Button_Next">
                             <param id="0" name="Animation">&quot;Zoom&quot;</param>
                             <param id="1" name="From">1</param>
@@ -379,50 +511,105 @@
                         <action id="9" name="Set scale" sid="5751231736505514" type="Button_Next">
                             <param id="0" name="Scale">1.02</param>
                         </action>
-                        <action id="-16" name="Wait" sid="5623964360810581" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8063131081750411">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7320067488077047" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set pause state" sid="5314608472242173" type="Pause">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2045971161912213" type="Button_Next">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5583746828578715" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="7175070159721509" type="System">
+                                    <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="1469788841747346" type="System">
+                                    <param id="0" name="Layout">WorldSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9401467825037187">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="985129927046507" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="9899222730158933" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6782586393810949" type="Button_Next">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="2045971161912213" type="Button_Next">
+                        <action id="9" name="Set scale" sid="4302695270715707" type="Button_Next">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="7175070159721509" type="System">
-                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="1469788841747346" type="System">
-                            <param id="0" name="Layout">WorldSelect</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="1265948641350977">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="1075856283837724" type="Touch">
+                        <condition id="4" name="Is touching object" sid="1075856283837724" type="Touch">
                             <param id="0" name="Object">Button_GiveUp</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Set pause state" sid="5035131641587234" type="Pause">
-                            <param id="0" name="State">1</param>
-                        </action>
                         <action id="4" name="Set animation" sid="56459348496437" type="Button_GiveUp">
                             <param id="0" name="Animation">&quot;Zoom&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="9" name="Set scale" sid="4940916314776715" type="Button_GiveUp">
-                            <param id="0" name="Scale">1.02</param>
+                            <param id="0" name="Scale">1.05</param>
                         </action>
-                        <action id="-16" name="Wait" sid="2424379142613537" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1587753006883143">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="6720895286078416" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set pause state" sid="5035131641587234" type="Pause">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="9155939951724567" type="Button_GiveUp">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2213571656122138" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="5458976464841555" type="System">
+                                    <param id="0" name="Layer">&quot;TopBlack&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="5724595724347802" type="System">
+                                    <param id="0" name="Layout">WorldSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5889557820181454">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7537148797138119" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="9780803547898144" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8455476853125696" type="Button_GiveUp">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="9155939951724567" type="Button_GiveUp">
+                        <action id="9" name="Set scale" sid="3833417133635158" type="Button_GiveUp">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-4" name="Set layer visible" sid="5458976464841555" type="System">
-                            <param id="0" name="Layer">&quot;TopBlack&quot;</param>
-                            <param id="1" name="Visibility">0</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="5724595724347802" type="System">
-                            <param id="0" name="Layout">WorldSelect</param>
                         </action>
                     </actions>
                 </event-block>
@@ -565,9 +752,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="94626115810902" title="Hurray">
+        <event-group description="" sid="94626115810902" title="Hurray">
             <sub-events>
-                <event-block sid="7613431958839366">
+                <event-block collapsed="1" sid="7613431958839366">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="3382363433989823" type="EnemyBoss" />
                     </conditions>
@@ -623,6 +810,11 @@
                         <action disabled="1" id="0" name="Set text" sid="38528459287583" type="Text_UI_Score">
                             <param id="0" name="Text">Score</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="2900510219666626" type="BG_UI">
+                            <param id="0" name="Object">Icon_BragThis</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Brag&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1126260088519751">
@@ -650,6 +842,7 @@
                         <event-block sid="2165020148870163">
                             <conditions>
                                 <condition id="-22" name="Else" sid="2970732637096077" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="4794024624765615" type="System" />
                             </conditions>
                             <actions>
                                 <action id="5" name="Set web font" sid="3785188706241007" type="Text_UI_HighScore">
@@ -664,7 +857,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Count the score after completing the world</comment>
-                <event-block collapsed="1" sid="729778303536131">
+                <event-block sid="729778303536131">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="4159560383588031" type="Icon_Hurray" />
                         <condition id="-8" name="Compare two values" sid="2332875835491273" type="System">
@@ -684,10 +877,6 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="4651952293387289">
-                            <conditions />
-                            <actions />
-                        </event-block>
                         <event-block sid="6866915650698865">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="1695922392854543" type="System">
@@ -716,12 +905,18 @@
                             <param id="2" name="Value">Score</param>
                         </condition>
                         <condition id="-3" name="Is on-screen" sid="1128838719478295" type="Icon_Hurray" />
+                        <condition id="-4" name="Trigger once while true" sid="222746682320291" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="6133846279463209" type="BG_UI">
                             <param id="0" name="Object">Text_Bonus</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;SaveMe&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5037850948140871" type="BG_UI">
+                            <param id="0" name="Object">Icon_Bonus</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;Bonus&quot;</param>
                         </action>
                         <action id="5" name="Set web font" sid="255556406721989" type="Text_Bonus">
                             <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -735,11 +930,7 @@
                 <event-block sid="6842962147385747">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="3978615422540154" type="Icon_Hurray" />
-                        <condition id="-14" name="Compare variable" sid="2365014967906673" type="System">
-                            <param id="0" name="Variable">ScoreCounter</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">Score</param>
-                        </condition>
+                        <condition id="-3" name="Is on-screen" sid="2365014967906673" type="Text_Bonus" />
                         <condition id="-1" name="Every tick" sid="3981294344679529" type="System" />
                         <condition id="-14" name="Compare variable" sid="8563273330076998" type="System">
                             <param id="0" name="Variable">ScoreCounter</param>
@@ -748,9 +939,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="1531791045020979" type="System">
-                            <param id="0" name="Seconds">0.5</param>
-                        </action>
                         <action id="-10" name="Add to" sid="7678486569233141" type="System">
                             <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Value">103</param>

@@ -182,11 +182,11 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8428997519920965" title="MENUS">
+        <event-group description="" sid="8428997519920965" title="MENUS">
             <sub-events>
                 <event-block sid="9825124560921165">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="2696244038735489" type="Touch">
+                        <condition id="4" name="Is touching object" sid="2696244038735489" type="Touch">
                             <param id="0" name="Object">Button_Achieves</param>
                         </condition>
                     </conditions>
@@ -194,24 +194,43 @@
                         <action id="9" name="Set scale" sid="8904085002005759" type="Button_Achieves">
                             <param id="0" name="Scale">1.08</param>
                         </action>
-                        <action id="-16" name="Wait" sid="9076835364847228" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="379790370466049" type="Button_Achieves">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="831442558966723">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7750356766931841" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="379790370466049" type="Button_Achieves">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5683508900121103" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="597257613569426" type="System">
+                                    <param id="0" name="Layout">Achievements</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3582685514552824">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1848760168113029" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="6225667958450071" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="6230335506204785" type="Button_Achieves">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="5683508900121103" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="597257613569426" type="System">
-                            <param id="0" name="Layout">Achievements</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Start the game</comment>
                 <event-block sid="910480968598155">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="8755243658866212" type="Touch">
+                        <condition id="4" name="Is touching object" sid="8755243658866212" type="Touch">
                             <param id="0" name="Object">Button_Play</param>
                         </condition>
                     </conditions>
@@ -223,23 +242,42 @@
                         <action id="9" name="Set scale" sid="9127890437948547" type="Button_Play">
                             <param id="0" name="Scale">1.08</param>
                         </action>
-                        <action id="-16" name="Wait" sid="7664969589653344" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4633319203774342">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="1281287784352907" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="6567786049742736" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="8668047955106235" type="System">
+                                    <param id="0" name="Layout">WorldSelect</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1125131377730702">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8799286098318332" type="System" />
+                    </conditions>
+                    <actions>
                         <action id="9" name="Set scale" sid="2741339698546035" type="Button_Play">
                             <param id="0" name="Scale">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="6567786049742736" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="8668047955106235" type="System">
-                            <param id="0" name="Layout">WorldSelect</param>
+                        <action id="4" name="Set animation" sid="5621595784480553" type="Button_Play">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="8652654897151893">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="7160328379115061" type="Touch">
+                        <condition id="4" name="Is touching object" sid="7160328379115061" type="Touch">
                             <param id="0" name="Object">Icon_Store</param>
                         </condition>
                     </conditions>
@@ -247,31 +285,47 @@
                         <action id="9" name="Set scale" sid="9199300538866235" type="Icon_Store">
                             <param id="0" name="Scale">1.08</param>
                         </action>
-                        <action id="-16" name="Wait" sid="1648595763909465" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="3188799185701212" type="Icon_Store">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7830096618347774">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="701668571404028" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="3188799185701212" type="Icon_Store">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5275261111999835" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="99830309218189" type="Icon_Store">
+                                    <param id="0" name="Object">FullVersion</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="5318490044230543" type="FullVersion">
+                                    <param id="0" name="Angle">-20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7837768355270281">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2123304317858689" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="6810925142843186" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="6418450280239969" type="Icon_Store">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="5275261111999835" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="99830309218189" type="Icon_Store">
-                            <param id="0" name="Object">FullVersion</param>
-                            <param id="1" name="Layer">&quot;HUD&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="5318490044230543" type="FullVersion">
-                            <param id="0" name="Angle">-20</param>
-                        </action>
-                        <action disabled="1" id="-2" name="Go to layout" sid="5131802759134465" type="System">
-                            <param id="0" name="Layout">Store</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="7435379405183822">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="415772797257807" type="Touch">
+                        <condition id="4" name="Is touching object" sid="415772797257807" type="Touch">
                             <param id="0" name="Object">Button_Tutorial</param>
                         </condition>
                     </conditions>
@@ -283,53 +337,93 @@
                         <action id="9" name="Set scale" sid="4283873058798843" type="Button_Tutorial">
                             <param id="0" name="Scale">1.08</param>
                         </action>
-                        <action id="-16" name="Wait" sid="5543697872780915" type="System">
-                            <param id="0" name="Seconds">0.1</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4648117715127027">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7356076514738411" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5878997939458288" type="Button_Tutorial">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2346937364571061" type="Button_Tutorial">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="406054970893698" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="9487610478109179" type="System">
+                                    <param id="0" name="Layout">Tutorial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9227691811457433">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9367234957943738" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="9888586282141462" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3347201239515065" type="Button_Tutorial">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="2346937364571061" type="Button_Tutorial">
+                        <action id="9" name="Set scale" sid="3356652728816968" type="Button_Tutorial">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="406054970893698" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="9487610478109179" type="System">
-                            <param id="0" name="Layout">Tutorial</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="8770709399119982" type="Button_Tutorial">
-                            <param id="0" name="Scale">105</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5421736394422418">
+                <event-block sid="8242160810997495">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="6058109478953171" type="Touch">
+                        <condition id="4" name="Is touching object" sid="9114885342623939" type="Touch">
                             <param id="0" name="Object">Icon_AboutUs</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="9" name="Set scale" sid="926105028226451" type="Icon_AboutUs">
+                        <action id="9" name="Set scale" sid="834186289439781" type="Icon_AboutUs">
                             <param id="0" name="Scale">1.08</param>
                         </action>
-                        <action id="-16" name="Wait" sid="2523456598109046" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="694244283414953" type="Icon_AboutUs">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6535038858552659">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7311146236391027" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="3738698190379798" type="Icon_AboutUs">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5610065112752251" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="4253188206117377" type="System">
+                                    <param id="0" name="Layout">Tutorial</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4659730926239011">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3193956283743385" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="555842058129668" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="6124637853658062" type="Icon_AboutUs">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="5941962914950496" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="8763115358248017" type="System">
-                            <param id="0" name="Layout">Tutorial</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="6018062805555714" type="Icon_AboutUs">
-                            <param id="0" name="Scale">105</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="8765352032032566">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="9596495389755246" type="Touch">
+                        <condition id="4" name="Is touching object" sid="9596495389755246" type="Touch">
                             <param id="0" name="Object">Button_FB_Title</param>
                         </condition>
                     </conditions>
@@ -337,18 +431,37 @@
                         <action id="9" name="Set scale" sid="3848052126521152" type="Button_FB_Title">
                             <param id="0" name="Scale">1.08</param>
                         </action>
-                        <action id="-16" name="Wait" sid="4954994600545204" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="9" name="Set scale" sid="784539667292442" type="Button_FB_Title">
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1462628851609351">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="2278671829036101" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="784539667292442" type="Button_FB_Title">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2854160397505834" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="8" name="Open URL in new window" sid="5396642003081553" type="Browser">
+                                    <param id="0" name="URL">&quot;https://www.facebook.com/bakaTheHungriestFrog&quot;</param>
+                                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1035226726645946">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8322372089054778" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="6122498043413871" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="1809840627444316" type="Button_FB_Title">
                             <param id="0" name="Scale">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="2854160397505834" type="System">
-                            <param id="0" name="Seconds">0.1</param>
-                        </action>
-                        <action id="8" name="Open URL in new window" sid="5396642003081553" type="Browser">
-                            <param id="0" name="URL">&quot;https://www.facebook.com/bakaTheHungriestFrog&quot;</param>
-                            <param id="1" name="Tag">&quot;NewWindow&quot;</param>
                         </action>
                     </actions>
                 </event-block>

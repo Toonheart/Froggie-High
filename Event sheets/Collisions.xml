@@ -4,7 +4,7 @@
     <name>Collisions</name>
     <events>
         <comment>Kill the frog when landed on enemy platform if sheild is not active</comment>
-        <event-block disabled="1" sid="9616499041551387">
+        <event-block collapsed="1" disabled="1" sid="9616499041551387">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="9518337180007264" type="Froggie">
                     <param id="0" name="Object">Enemy_ElectroOcto</param>
@@ -40,7 +40,7 @@
             </sub-events>
         </event-block>
         <comment>Kill the Enemy if Frog if sheild is active and jumps on it.</comment>
-        <event-block disabled="1" sid="5070315223718897">
+        <event-block collapsed="1" disabled="1" sid="5070315223718897">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="3674859376535979" type="Froggie">
                     <param id="0" name="Object">Enemy_ElectroOcto</param>
