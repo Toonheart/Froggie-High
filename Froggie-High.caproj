@@ -10,9 +10,10 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -20,16 +21,15 @@
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
     </used-behaviors>
@@ -49,7 +49,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Hide address bar">No</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
@@ -660,13 +660,14 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6327279662969462" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.20625" y="0.20625" />
-                            <point x="0.5" y="0.13125" />
-                            <point x="0.74375" y="0.25625" />
-                            <point x="0.8625" y="0.5" />
-                            <point x="0.75625" y="0.75625" />
-                            <point x="0.5" y="0.95625" />
-                            <point x="0.21875" y="0.78125" />
+                            <point x="0.1375" y="0.1375" />
+                            <point x="0.5" y="0.19375" />
+                            <point x="0.9" y="0.1" />
+                            <point x="0.55625" y="0.5" />
+                            <point x="0.5375" y="0.5375" />
+                            <point x="0.5" y="0.9125" />
+                            <point x="0.46875" y="0.53125" />
+                            <point x="0.45625" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -3595,12 +3596,12 @@
                         <image-point name="FBGO" x="0.1" y="0.898438" />
                         <image-point name="TwitterGO" x="0.9" y="0.898438" />
                         <image-point name="Score" x="0.5" y="0.289063" />
-                        <image-point name="HighScoreGO" x="0.5" y="0.402344" />
+                        <image-point name="HighScoreGO" x="0.5" y="0.396875" />
                         <image-point name="Brag" x="0.5" y="0.898438" />
                         <image-point name="Restart" x="0.5" y="0.742188" />
                         <image-point name="ScoreSprite" x="0.3125" y="0.304688" />
                         <image-point name="HighScoreSprite" x="0.3125" y="0.445313" />
-                        <image-point name="Bonus" x="0.375" y="0.628906" />
+                        <image-point name="Bonus" x="0.3375" y="0.5" />
                         <collision-poly>
                             <point x="0.19" y="0.11875" />
                             <point x="0.5" y="0.0234375" />
@@ -3615,7 +3616,7 @@
                 <animation framecount="1" loop="0" name="GO" pingpong="0" repeatcount="1" repeatto="0" sid="2738028346238781" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Info" x="0.5" y="0.15625" />
-                        <image-point name="Resume" x="0.5" y="0.429688" />
+                        <image-point name="Resume" x="0.5" y="0.46875" />
                         <image-point name="Levels" x="0.5" y="0.585938" />
                         <image-point name="Store" x="0.3125" y="0.742188" />
                         <image-point name="Music" x="0.6875" y="0.742188" />
@@ -3624,11 +3625,11 @@
                         <image-point name="FBGO" x="0.1" y="0.898438" />
                         <image-point name="TwitterGO" x="0.9" y="0.898438" />
                         <image-point name="Score" x="0.5" y="0.289063" />
-                        <image-point name="HighScoreGO" x="0.5" y="0.402344" />
+                        <image-point name="HighScoreGO" x="0.5" y="0.394531" />
                         <image-point name="Brag" x="0.5" y="0.898438" />
                         <image-point name="ScoreSprite" x="0.3125" y="0.304688" />
                         <image-point name="HighScoreSprite" x="0.3125" y="0.445313" />
-                        <image-point name="Bonus" x="0.25" y="0.5" />
+                        <image-point name="Bonus" x="0.3375" y="0.5" />
                         <image-point name="SaveMe" x="0.5" y="0.628906" />
                         <collision-poly>
                             <point x="0.19" y="0.11875" />
@@ -4343,11 +4344,12 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="702891039752963" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.5" y="0.190476" />
-                            <point x="0.785156" y="0.654762" />
-                            <point x="0.320313" y="0.5" />
-                            <point x="0.5" y="0.785714" />
-                            <point x="0.3125" y="0.5" />
+                            <point x="0.1875" y="0.571429" />
+                            <point x="0.5" y="0.321429" />
+                            <point x="0.8125" y="0.571429" />
+                            <point x="0.90625" y="0.714286" />
+                            <point x="0.5" y="0.869048" />
+                            <point x="0.09375" y="0.714286" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4579,16 +4581,16 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6131974727692192" speed="5">
-                    <frame duration="1" hotspotX="0.554688" hotspotY="0.789063">
+                    <frame duration="1" hotspotX="0.557292" hotspotY="0.791667">
                         <collision-poly>
-                            <point x="0.292969" y="0.292969" />
-                            <point x="0.5" y="0.222656" />
-                            <point x="0.691406" y="0.308594" />
-                            <point x="0.847656" y="0.5" />
-                            <point x="0.714844" y="0.714844" />
-                            <point x="0.5" y="0.914063" />
-                            <point x="0.246094" y="0.753906" />
-                            <point x="0.320313" y="0.5" />
+                            <point x="0.223958" y="0.223958" />
+                            <point x="0.5" y="0.203125" />
+                            <point x="0.744792" y="0.255208" />
+                            <point x="0.802083" y="0.5" />
+                            <point x="0.614583" y="0.614583" />
+                            <point x="0.5" y="0.875" />
+                            <point x="0.395833" y="0.604167" />
+                            <point x="0.177083" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4598,15 +4600,16 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6107265562298281" speed="5">
-                    <frame duration="1" hotspotX="0.449219" hotspotY="0.820313">
+                    <frame duration="1" hotspotX="0.575" hotspotY="0.81875">
                         <collision-poly>
-                            <point x="0.179688" y="0.179688" />
-                            <point x="0.5" y="0.191406" />
-                            <point x="0.835938" y="0.164063" />
-                            <point x="0.757813" y="0.5" />
-                            <point x="0.621094" y="0.621094" />
-                            <point x="0.5" y="0.847656" />
-                            <point x="0.132813" y="0.867188" />
+                            <point x="0.73125" y="0.5" />
+                            <point x="0.675" y="0.675" />
+                            <point x="0.5" y="0.525" />
+                            <point x="0.475" y="0.525" />
+                            <point x="0.38125" y="0.5" />
+                            <point x="0.18125" y="0.18125" />
+                            <point x="0.5" y="0.10625" />
+                            <point x="0.80625" y="0.19375" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4616,15 +4619,109 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8191536401732842" speed="5">
-                    <frame duration="1" hotspotX="0.507813" hotspotY="0.640625">
+                    <frame duration="1" hotspotX="0.5125" hotspotY="0.5375">
                         <collision-poly>
-                            <point x="0.5" y="0.242188" />
-                            <point x="0.667969" y="0.332031" />
-                            <point x="0.773438" y="0.5" />
-                            <point x="0.746094" y="0.746094" />
-                            <point x="0.5" y="0.878906" />
-                            <point x="0.273438" y="0.726563" />
-                            <point x="0.347656" y="0.5" />
+                            <point x="0.375" y="0.375" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.6875" y="0.3125" />
+                            <point x="0.7375" y="0.5" />
+                            <point x="0.7125" y="0.7125" />
+                            <point x="0.5" y="0.85625" />
+                            <point x="0.2375" y="0.7625" />
+                            <point x="0.29375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Achieve_Bling" sid="7953147362787136">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7015424024035801">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="3" loop="1" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="6124870960412842" speed="18">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.1125" y="0.1125" />
+                            <point x="0.5" y="0.01625" />
+                            <point x="0.8675" y="0.1325" />
+                            <point x="0.96375" y="0.5" />
+                            <point x="0.865" y="0.865" />
+                            <point x="0.5" y="0.9675" />
+                            <point x="0.1275" y="0.8725" />
+                            <point x="0.01125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="Green" pingpong="0" repeatcount="1" repeatto="0" sid="158821838961104" speed="18">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28875" y="0.28875" />
+                            <point x="0.5" y="0.21" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.75125" y="0.5" />
+                            <point x="0.69" y="0.69" />
+                            <point x="0.5" y="0.77375" />
+                            <point x="0.29375" y="0.70625" />
+                            <point x="0.22875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="1" name="Blue" pingpong="0" repeatcount="1" repeatto="0" sid="40712408741848" speed="18">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28875" y="0.28875" />
+                            <point x="0.5" y="0.21" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.75125" y="0.5" />
+                            <point x="0.69" y="0.69" />
+                            <point x="0.5" y="0.77375" />
+                            <point x="0.29375" y="0.70625" />
+                            <point x="0.22875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="1" name="Pink" pingpong="0" repeatcount="1" repeatto="0" sid="8055455438655373" speed="18">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.28875" y="0.28875" />
+                            <point x="0.5" y="0.21" />
+                            <point x="0.7" y="0.3" />
+                            <point x="0.75125" y="0.5" />
+                            <point x="0.69" y="0.69" />
+                            <point x="0.5" y="0.77375" />
+                            <point x="0.29375" y="0.70625" />
+                            <point x="0.22875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Achieve_Unlocked" sid="1229849929325188">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4656303290959817" speed="5">
+                    <frame duration="1" hotspotX="0.501188" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.401425" y="0.630597" />
+                            <point x="0.498812" y="0.182836" />
+                            <point x="0.598575" y="0.630597" />
+                            <point x="0.496437" y="0.5" />
+                            <point x="0.888361" y="0.824627" />
+                            <point x="0.498812" y="0.880597" />
+                            <point x="0.106888" y="0.83209" />
+                            <point x="0.470309" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

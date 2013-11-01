@@ -60,10 +60,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block collapsed="1" sid="7564923252496036">
+                <event-block sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -133,7 +133,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block collapsed="1" sid="3718600925621546">
+                                        <event-block sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
@@ -380,8 +380,39 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="3625702778023664">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="1533921437007067" type="System">
+                                                            <param id="0" name="First value">Floor_HeyStack_Normal.X</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">LayoutWidth/2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="7203012432671983" type="System">
+                                                            <param id="0" name="Object to create">Floor_HeyStack_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_HeyStack_Normal.X+round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="3449006185395966">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="2290008271358025" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="5213327764215951" type="System">
+                                                            <param id="0" name="Object to create">Floor_HeyStack_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_HeyStack_Normal.X-round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
-                                        <comment>FLU CHICKEN&#x0D;&#x0A;Gets unlocked after Worldsection 1.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
                                         <event-block sid="209666610400614">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="3920147378114607" type="System">
@@ -410,6 +441,38 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="6742884223954176">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="406600826044314" type="System">
+                                                            <param id="0" name="First value">Floor_HeyStack_Normal.X</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">LayoutWidth/2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="4814625561292481" type="System">
+                                                            <param id="0" name="Object to create">Floor_HeyStack_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_HeyStack_Normal.X+round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="4957702500763359">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="725478010170037" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="7091721573226047" type="System">
+                                                            <param id="0" name="Object to create">Floor_HeyStack_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_HeyStack_Normal.X-round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_HeyStack_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>FLYING CHICKEN&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
                                         <event-block collapsed="1" sid="4071968505375019">

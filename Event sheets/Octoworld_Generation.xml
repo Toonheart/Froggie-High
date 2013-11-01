@@ -100,7 +100,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block collapsed="1" sid="5773070796798144">
+                        <event-block sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -155,7 +155,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block collapsed="1" sid="3718600925621546">
+                                        <event-block sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
@@ -382,7 +382,7 @@
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="9370997679174675" type="System" />
-                                                <condition id="-14" name="Compare variable" sid="876017431833087" type="System">
+                                                <condition disabled="1" id="-14" name="Compare variable" sid="876017431833087" type="System">
                                                     <param id="0" name="Variable">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">3</param>
@@ -402,6 +402,38 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="7537401899355694">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="9459969847707005" type="System">
+                                                            <param id="0" name="First value">Floor_Grass_Normal.X</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">LayoutWidth/2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="3800044738121302" type="System">
+                                                            <param id="0" name="Object to create">Floor_Grass_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_Grass_Normal.X+round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="6770655325415498">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="1865618592644887" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="3193365864855485" type="System">
+                                                            <param id="0" name="Object to create">Floor_Grass_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_Grass_Normal.X-round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>SPIKY OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 1.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
                                         <event-block sid="209666610400614">
@@ -412,7 +444,7 @@
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="9592365084252639" type="System" />
-                                                <condition id="-14" name="Compare variable" sid="6108791845463145" type="System">
+                                                <condition disabled="1" id="-14" name="Compare variable" sid="6108791845463145" type="System">
                                                     <param id="0" name="Variable">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">1</param>
@@ -432,6 +464,38 @@
                                                     <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="7560773748404379">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="6834278876170456" type="System">
+                                                            <param id="0" name="First value">Floor_Grass_Normal.X</param>
+                                                            <param id="1" name="Comparison">3</param>
+                                                            <param id="2" name="Second value">LayoutWidth/2</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="8136068981628474" type="System">
+                                                            <param id="0" name="Object to create">Floor_Grass_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_Grass_Normal.X+round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="426285232785105">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="5081844441142538" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="4235434143554659" type="System">
+                                                            <param id="0" name="Object to create">Floor_Grass_Normal</param>
+                                                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                                                            <param id="2" name="X">Floor_Grass_Normal.X-round(random(250,300))</param>
+                                                            <param id="3" name="Y">Floor_Grass_Normal.Y</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                         <comment>FLYING OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
                                         <event-block collapsed="1" sid="4071968505375019">
