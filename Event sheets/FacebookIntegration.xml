@@ -4,5 +4,21 @@
     <name>FacebookIntegration</name>
     <events>
         <variable constant="0" name="FriendsInvited" sid="7162945182702447" static="0" type="number">0</variable>
+        <event-block sid="9878360806596289">
+            <conditions>
+                <condition id="3" name="On touched object" sid="1840592808902658" type="Touch">
+                    <param id="0" name="Object">Button_FB_Brag</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Prompt to share link" sid="6468736542507832" type="Facebook">
+                    <param id="0" name="URL">&quot;http://www.facebook.com&quot;</param>
+                    <param id="1" name="Name">&quot;&quot;</param>
+                    <param id="2" name="Caption">&quot;&quot;</param>
+                    <param id="3" name="Description">&quot;&quot;</param>
+                    <param id="4" name="Picture URL (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

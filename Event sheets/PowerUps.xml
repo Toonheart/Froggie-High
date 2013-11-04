@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
@@ -165,9 +165,6 @@
                     <actions>
                         <action behavior="Platform" id="11" name="Set enabled" sid="6085004724990191" type="Froggie">
                             <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="1198643266246777" type="Froggie">
-                            <param id="0" name="State">0</param>
                         </action>
                         <action behavior="Pin" id="1" name="Unpin" sid="2099451820407826" type="Unicorn" />
                         <action id="-9" name="Destroy" sid="6296803670728335" type="Unicorn" />

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Menus</name>
     <events>
+        <include>FacebookIntegration</include>
         <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
             <sub-events>
                 <comment>Create all PauseMenus On UI BG on paused</comment>
@@ -60,7 +61,7 @@
                                     <param id="2" name="Image point">&quot;Store&quot;</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="5000394163884179" type="BG_UI">
-                                    <param id="0" name="Object">Button_Twitter_Pause</param>
+                                    <param id="0" name="Object">Button_Twitter_Brag</param>
                                     <param id="1" name="Layer">&quot;UI&quot;</param>
                                     <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
                                 </action>
@@ -70,7 +71,7 @@
                                     <param id="2" name="Image point">&quot;Music&quot;</param>
                                 </action>
                                 <action id="0" name="Spawn another object" sid="7309891760302689" type="BG_UI">
-                                    <param id="0" name="Object">Button_FB_GO</param>
+                                    <param id="0" name="Object">Button_FB_Brag</param>
                                     <param id="1" name="Layer">&quot;UI&quot;</param>
                                     <param id="2" name="Image point">&quot;FBGO&quot;</param>
                                 </action>
@@ -211,12 +212,12 @@
                             <param id="2" name="Image point">&quot;GiveUp&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="5179726700495217" type="BG_UI">
-                            <param id="0" name="Object">Button_Twitter_GO</param>
+                            <param id="0" name="Object">Button_Twitter_Brag</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="5654505546953236" type="BG_UI">
-                            <param id="0" name="Object">Button_FB_GO</param>
+                            <param id="0" name="Object">Button_FB_Brag</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;FBGO&quot;</param>
                         </action>
@@ -754,7 +755,7 @@
         </event-group>
         <event-group description="" sid="94626115810902" title="Hurray">
             <sub-events>
-                <event-block collapsed="1" sid="7613431958839366">
+                <event-block sid="7613431958839366">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="3382363433989823" type="EnemyBoss" />
                     </conditions>
@@ -784,19 +785,14 @@
                             <param id="2" name="Image point">&quot;GiveUp&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="7980613019484455" type="BG_UI">
-                            <param id="0" name="Object">Button_Twitter_GO</param>
+                            <param id="0" name="Object">Button_Twitter_Brag</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;TwitterGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="6244462046611351" type="BG_UI">
-                            <param id="0" name="Object">Button_FB_GO</param>
+                            <param id="0" name="Object">Button_FB_Brag</param>
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;FBGO&quot;</param>
-                        </action>
-                        <action id="0" name="Spawn another object" sid="6435696259350436" type="BG_UI">
-                            <param id="0" name="Object">Text_UI_HighScore</param>
-                            <param id="1" name="Layer">&quot;UI&quot;</param>
-                            <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="1852862215965915" type="BG_UI">
                             <param id="0" name="Object">Text_UI_Score</param>
@@ -815,12 +811,21 @@
                             <param id="1" name="Layer">&quot;UI&quot;</param>
                             <param id="2" name="Image point">&quot;Brag&quot;</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="4809672724884393" type="BG_UI">
+                            <param id="0" name="Object">Icon_Score</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;ScoreSprite&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9234890854933428" type="System">
+                            <param id="0" name="Variable">Bonus_Random</param>
+                            <param id="1" name="Value">round(random(3000,5000))</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1126260088519751">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="5741426839107281" type="System">
-                                    <param id="0" name="First value">Score</param>
+                                    <param id="0" name="First value">Score+Bonus_Random</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Second value">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
                                 </condition>
@@ -828,14 +833,7 @@
                             <actions>
                                 <action id="0" name="Set local value" sid="9830981980798203" type="WebStr_Common">
                                     <param id="0" name="Key">&quot;HighScore&quot;</param>
-                                    <param id="1" name="Value">Score</param>
-                                </action>
-                                <action id="5" name="Set web font" sid="9956585656591833" type="Text_UI_HighScore">
-                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
-                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
-                                </action>
-                                <action id="0" name="Set text" sid="9361953636787779" type="Text_UI_HighScore">
-                                    <param id="0" name="Text">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                                    <param id="1" name="Value">Score+Bonus_Random</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -857,7 +855,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Count the score after completing the world</comment>
-                <event-block collapsed="1" sid="729778303536131">
+                <event-block sid="729778303536131">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="4159560383588031" type="Icon_Hurray" />
                         <condition id="-8" name="Compare two values" sid="2332875835491273" type="System">
@@ -923,7 +921,24 @@
                             <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                         </action>
                         <action id="0" name="Set text" sid="6330204852473644" type="Text_Bonus">
-                            <param id="0" name="Text">5000</param>
+                            <param id="0" name="Text">Bonus_Random</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="4083690433812468" type="BG_UI">
+                            <param id="0" name="Object">Text_UI_HighScore</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;HighScoreGO&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="8547736637127007" type="Text_UI_HighScore">
+                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4060185747761151" type="Text_UI_HighScore">
+                            <param id="0" name="Text">WebStr_Common.LocalValue(&quot;HighScore&quot;)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6699372323043622" type="BG_UI">
+                            <param id="0" name="Object">Icon_HighScore</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;HighScoreSprite&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -935,7 +950,7 @@
                         <condition id="-14" name="Compare variable" sid="8563273330076998" type="System">
                             <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">Score+5000</param>
+                            <param id="2" name="Value">Score+Bonus_Random</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -947,6 +962,26 @@
                             <param id="0" name="Text">ScoreCounter</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="619148688735063">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7171626125013394" type="System">
+                                    <param id="0" name="Variable">ScoreCounter</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">Score+Bonus_Random</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3058531080529267" type="Text_UI_Score">
+                                    <param id="0" name="Text">Score+Bonus_Random</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8219445484840305" type="System">
+                                    <param id="0" name="Variable">ScoreCounter</param>
+                                    <param id="1" name="Value">Score</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

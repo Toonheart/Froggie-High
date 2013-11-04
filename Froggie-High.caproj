@@ -10,10 +10,10 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -25,13 +25,13 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -588,31 +588,19 @@
                 <instance-variable name="PatroAngle" sid="9344712804363003" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6578169094361236" speed="1">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.308594" y="0.308594" />
-                            <point x="0.5" y="0.136719" />
-                            <point x="0.707031" y="0.292969" />
-                            <point x="0.863281" y="0.5" />
-                            <point x="0.699219" y="0.699219" />
-                            <point x="0.5" y="0.863281" />
-                            <point x="0.3125" y="0.6875" />
-                            <point x="0.203125" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.308594" y="0.308594" />
-                            <point x="0.5" y="0.136719" />
-                            <point x="0.707031" y="0.292969" />
-                            <point x="0.839844" y="0.5" />
-                            <point x="0.75" y="0.75" />
-                            <point x="0.5" y="0.839844" />
-                            <point x="0.304688" y="0.695313" />
-                            <point x="0.203125" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6578169094361236" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -3599,9 +3587,9 @@
                         <image-point name="HighScoreGO" x="0.5" y="0.396875" />
                         <image-point name="Brag" x="0.5" y="0.898438" />
                         <image-point name="Restart" x="0.5" y="0.742188" />
-                        <image-point name="ScoreSprite" x="0.3125" y="0.304688" />
-                        <image-point name="HighScoreSprite" x="0.3125" y="0.445313" />
-                        <image-point name="Bonus" x="0.3375" y="0.5" />
+                        <image-point name="ScoreSprite" x="0.3125" y="0.316406" />
+                        <image-point name="HighScoreSprite" x="0.3125" y="0.4375" />
+                        <image-point name="Bonus" x="0.3125" y="0.5" />
                         <collision-poly>
                             <point x="0.19" y="0.11875" />
                             <point x="0.5" y="0.0234375" />
@@ -3627,9 +3615,9 @@
                         <image-point name="Score" x="0.5" y="0.289063" />
                         <image-point name="HighScoreGO" x="0.5" y="0.394531" />
                         <image-point name="Brag" x="0.5" y="0.898438" />
-                        <image-point name="ScoreSprite" x="0.3125" y="0.304688" />
-                        <image-point name="HighScoreSprite" x="0.3125" y="0.445313" />
-                        <image-point name="Bonus" x="0.3375" y="0.5" />
+                        <image-point name="ScoreSprite" x="0.3125" y="0.316406" />
+                        <image-point name="HighScoreSprite" x="0.3125" y="0.4375" />
+                        <image-point name="Bonus" x="0.3125" y="0.5" />
                         <image-point name="SaveMe" x="0.5" y="0.628906" />
                         <collision-poly>
                             <point x="0.19" y="0.11875" />
@@ -3729,7 +3717,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Button_FB_GO" sid="4548689393209995">
+        <object-type name="Button_FB_Brag" sid="4548689393209995">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2558640946554316" speed="5">
@@ -3748,7 +3736,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Button_Twitter_GO" sid="2575565338406053">
+        <object-type name="Button_Twitter_Brag" sid="2575565338406053">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4375031178034311" speed="5">
@@ -4770,9 +4758,6 @@
                 <member>Collectible_Fruit</member>
                 <member>Collectible_Marker_Bottom</member>
                 <member>Collectible_Marker_Top</member>
-                <member>Letter_collectible_Base</member>
-                <member>Letter_CollectibleCake</member>
-                <member>Letter_collectibleCandy</member>
             </members>
         </family>
         <family name="PowerUps" plugin-id="Sprite" sid="3063915391822131">
@@ -4794,7 +4779,7 @@
         </family>
         <family name="UI_PauseMenus" plugin-id="Sprite" sid="6499054618273576">
             <members>
-                <member>Button_FB_GO</member>
+                <member>Button_FB_Brag</member>
                 <member>Button_Level</member>
                 <member>Button_Resume</member>
                 <member>Button_Twitter_Pause</member>
@@ -4808,9 +4793,9 @@
         </family>
         <family name="UI_GO_Menus" plugin-id="Sprite" sid="5495111665024845">
             <members>
-                <member>Button_FB_GO</member>
+                <member>Button_FB_Brag</member>
                 <member>Button_GiveUp</member>
-                <member>Button_Twitter_GO</member>
+                <member>Button_Twitter_Brag</member>
                 <member>Buttton_SaveMe</member>
                 <member>Icon_BragThis</member>
                 <member>Icon_GameOver</member>

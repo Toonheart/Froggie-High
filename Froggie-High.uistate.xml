@@ -10,13 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>ChimpWorld</layout>
-        <layout>GraphicStore_Common</layout>
-        <layout>WorldSelect</layout>
-        <layout active="1">OctoWorld</layout>
-        <layout>ChickenWorld</layout>
-        <event-sheet>Achieves_Common</event-sheet>
-        <event-sheet>WorldSelect_Events</event-sheet>
+        <layout>OctoWorld</layout>
+        <event-sheet>Octoworld_Generation</event-sheet>
+        <event-sheet active="1">Froggie_Events</event-sheet>
+        <event-sheet>Debug</event-sheet>
+        <event-sheet>OctoWorld_Events</event-sheet>
+        <event-sheet>PowerUps</event-sheet>
         <event-sheet>UI_Menus</event-sheet>
     </open-tabs>
     <properties>
@@ -27,11 +26,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1">
         <family expanded="1" name="Obstacles" />
-        <family expanded="0" name="Enemy" />
+        <family expanded="1" name="Enemy" />
         <family expanded="1" name="Floors" />
-        <family expanded="0" name="Collectibles" />
+        <family expanded="1" name="Collectibles" />
         <family expanded="1" name="PowerUps" />
-        <family expanded="0" name="BrokenParts" />
+        <family expanded="1" name="BrokenParts" />
         <family expanded="0" name="UI_PauseMenus" />
         <family expanded="1" name="UI_GO_Menus" />
         <family expanded="0" name="EnemyBoss" />

@@ -34,7 +34,7 @@
                             <param id="0" name="Variable">NextBackground</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="659997937205841" type="Froggie">
+                        <action behavior="8Direction" disabled="1" id="8" name="Set enabled" sid="659997937205841" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="5337244040904821" type="System">
@@ -45,10 +45,6 @@
                             <param id="0" name="Max Speed">LayoutWidth/2</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="385722757207152" type="Letter_collectibleCandy">
-                            <param id="0" name="Pin to">Letter_collectible_Base</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="3710748260876585" type="Letter_collectibleCandy">
                             <param id="0" name="Pin to">Letter_collectible_Base</param>
                             <param id="1" name="Mode">0</param>
                         </action>
@@ -85,7 +81,7 @@
         <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block sid="7564923252496036">
+                <event-block collapsed="1" sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -100,7 +96,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block sid="5773070796798144">
+                        <event-block collapsed="1" sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -498,7 +494,7 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>FLYING OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block collapsed="1" sid="4071968505375019">
+                                        <event-block sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%35</param>
@@ -1087,7 +1083,7 @@
                             </sub-events>
                         </event-block>
                         <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
-                        <event-block collapsed="1" sid="8573108025996764">
+                        <event-block sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -1277,13 +1273,13 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
+        <event-group description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>
                 <event-block sid="2310663934958245">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="9565885498479511" type="Letter_collectibleCandy" />
+                        <condition id="-3" name="Is on-screen" sid="9565885498479511" type="Letter_collectible_Base" />
                         <condition id="-4" name="Trigger once while true" sid="3693541116523184" type="System" />
                     </conditions>
                     <actions>

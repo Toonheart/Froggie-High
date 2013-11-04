@@ -34,7 +34,7 @@
                             <param id="0" name="Variable">NextBackground</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="659997937205841" type="Froggie">
+                        <action behavior="8Direction" disabled="1" id="8" name="Set enabled" sid="659997937205841" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="5337244040904821" type="System">
@@ -60,10 +60,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="9273741993217367" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="9273741993217367" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block sid="7564923252496036">
+                <event-block collapsed="1" sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -1625,7 +1625,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5743624539732353" title="BIG Collectible LETTER SET">
+        <event-group description="" sid="5743624539732353" title="BIG Collectible LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>
