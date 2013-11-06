@@ -27,7 +27,12 @@
                             <param id="0" name="Instance variable">AnimationSelection</param>
                             <param id="1" name="Value">round(random(1,6))</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="8627698947682053" type="Collectible_Candy" />
+                        <action id="-3" name="Create object" sid="345618811543727" type="System">
+                            <param id="0" name="Object to create">Text_ScoreNote</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Collectible_Candy.X</param>
+                            <param id="3" name="Y">Collectible_Candy.Y-128</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="9484324755567507">
@@ -54,11 +59,6 @@
                                 <action id="1" name="Set key" sid="3534541559922466" type="Dict_CollectibleCounter">
                                     <param id="0" name="Key">&quot;PlainCandy&quot;</param>
                                     <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;PlainCandy&quot;)+1</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="280934916790403" type="Collectible_Candy">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="4828022178077944" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -95,11 +95,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="5401779264165181" type="Collectible_Candy">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="7484073399969726" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -134,11 +129,6 @@
                                 <action id="-10" name="Add to" sid="8310445749495878" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="6548510358963286" type="Collectible_Candy">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="9853121351377822" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -175,11 +165,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="6943980528230183" type="Collectible_Candy">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="2772748965114025" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -215,11 +200,6 @@
                                 <action id="-10" name="Add to" sid="2924311908926076" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="9171757781323622" type="Collectible_Candy">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="9826176672414896" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -405,7 +385,12 @@
                             <param id="0" name="Instance variable">AnimationSelection</param>
                             <param id="1" name="Value">round(random(1,6))</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="3305589898148006" type="Collectible_cake" />
+                        <action id="-3" name="Create object" sid="1973690750787993" type="System">
+                            <param id="0" name="Object to create">Text_ScoreNote</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Collectible_cake.X</param>
+                            <param id="3" name="Y">Collectible_cake.Y-128</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="4231230678585604">
@@ -432,11 +417,6 @@
                                 <action id="-10" name="Add to" sid="9258792380360091" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="2886934486617194" type="Collectible_cake">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="5139658353394146" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -473,11 +453,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="9232275934888767" type="Collectible_cake">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="195562028038864" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -512,11 +487,6 @@
                                 <action id="-10" name="Add to" sid="9204917833533896" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="2405893392121551" type="Collectible_cake">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="3319905367951687" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -553,11 +523,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="3704658290034703" type="Collectible_cake">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="4438635063031144" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -592,11 +557,6 @@
                                 <action id="-10" name="Add to" sid="9762250626246354" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="4710447498229664" type="Collectible_cake">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="5522331790208953" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -687,6 +647,12 @@
                             <param id="1" name="Value">round(random(1,6))</param>
                         </action>
                         <action id="-9" name="Destroy" sid="3305589898148006" type="Collectible_Fruit" />
+                        <action id="-3" name="Create object" sid="1255321821554613" type="System">
+                            <param id="0" name="Object to create">Text_ScoreNote</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Collectible_Fruit.X</param>
+                            <param id="3" name="Y">Collectible_Fruit.Y-128</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="4231230678585604">
@@ -709,11 +675,6 @@
                                 <action id="-10" name="Add to" sid="1578567819852053" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="5848905222407586" type="Collectible_Fruit">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="1592894714254936" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -746,11 +707,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="7345825072591346" type="Collectible_Fruit">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="5529620362412773" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -781,11 +737,6 @@
                                 <action id="-10" name="Add to" sid="6737221926574321" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="6397040115804094" type="Collectible_Fruit">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="6892031399532001" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
@@ -818,11 +769,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="5590807713152076" type="Collectible_Fruit">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="6609891509660478" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -853,11 +799,6 @@
                                 <action id="-10" name="Add to" sid="2365700324905489" type="System">
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="4086917622715177" type="Collectible_Fruit">
-                                    <param id="0" name="Object">Text_ScoreNote</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="5" name="Set web font" sid="4661097600480662" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>

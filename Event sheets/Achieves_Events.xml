@@ -30,26 +30,24 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Scrolling down and Up" sid="5396902482078132" title="Screen Scrolling">
+        <event-group description="Scrolling down and Up" sid="5396902482078132" title="Screen Scrolling">
             <sub-events>
                 <event-block sid="8215350323428247">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="7283238741444715" type="Touch">
                             <param id="0" name="Object">Marker_ScrollDown</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="3884955097474512" type="System">
-                            <param id="0" name="First value">scrolly</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">NextAchiveY-400</param>
+                        <condition id="-2" name="Compare Y" sid="8229588077389517" type="TouchFollowMe">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">NextAchiveY-410</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-7" name="Scroll to position" sid="5580283052545769" type="System">
-                            <param id="0" name="X">scrollx</param>
-                            <param id="1" name="Y">scrolly+10</param>
-                        </action>
                         <action id="9" name="Set scale" sid="4201415529871015" type="Marker_ScrollDown">
                             <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="8839563940811719" type="TouchFollowMe">
+                            <param id="0" name="Y">Self.Y+10</param>
                         </action>
                     </actions>
                 </event-block>
@@ -69,16 +67,14 @@
                         <condition id="4" name="Is touching object" sid="7325661722761574" type="Touch">
                             <param id="0" name="Object">MarkerScrollUp</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="7418493368668625" type="System">
-                            <param id="0" name="First value">scrolly</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">640</param>
+                        <condition id="-2" name="Compare Y" sid="6854929353681145" type="TouchFollowMe">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">410</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-7" name="Scroll to position" sid="4279200671450283" type="System">
-                            <param id="0" name="X">scrollx</param>
-                            <param id="1" name="Y">scrolly-10</param>
+                        <action id="-2" name="Set Y" sid="1776832971827744" type="TouchFollowMe">
+                            <param id="0" name="Y">Self.Y-10</param>
                         </action>
                         <action id="9" name="Set scale" sid="3090331598210032" type="MarkerScrollUp">
                             <param id="0" name="Scale">1.2</param>
@@ -98,7 +94,132 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3621656727098334" title="Placing All Achievements">
+        <event-group description="" sid="2854410810668988" title="SwipeScroll">
+            <sub-events>
+                <event-block sid="7292333214088898">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="3400862732132276" type="TouchFollowMe">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">400</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="7960850545635186" type="TouchFollowMe">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">NextAchiveY-400</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="8786313851465215" type="Touch">
+                            <param id="0" name="Object">MarkerScrollUp</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="381429405767294" type="Touch">
+                            <param id="0" name="Object">Marker_ScrollDown</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1089">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="1090" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1096">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1097" type="TouchFollowMe">
+                                            <param id="0" name="Instance variable">DiffY</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="1098" type="TouchFollowMe">
+                                            <param id="0" name="Y">lerp(self.Y,self.Y-self.DiffY,4*dt)</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="1099" type="TouchFollowMe">
+                                            <param id="0" name="Instance variable">DiffY</param>
+                                            <param id="1" name="Value">self.DiffY/100</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1627028587488191">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="4774123568280338" type="TouchFollowMe">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">400</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="1973479338243894" type="TouchFollowMe">
+                                                    <param id="0" name="Y">400</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6648623592908205">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="1202171945069606" type="TouchFollowMe">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">NextAchiveY-400</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="6522671861139986" type="TouchFollowMe">
+                                                    <param id="0" name="Y">NextAchiveY-400</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1100">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="1101" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="8960799574132628" type="Touch">
+                            <param id="0" name="Object">MarkerScrollUp</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="4337873034287413" type="Touch">
+                            <param id="0" name="Object">Marker_ScrollDown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-10" name="Set value" sid="1103" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">PrevTouchY</param>
+                            <param id="1" name="Value">self.CurTouchY</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1105" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1107" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">DiffY</param>
+                            <param id="1" name="Value">self.CurTouchY-self.PrevTouchY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1108">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="1109" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="571884403375503" type="Touch">
+                            <param id="0" name="Object">MarkerScrollUp</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="7587594870759357" type="Touch">
+                            <param id="0" name="Object">Marker_ScrollDown</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1111" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">PrevTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1113" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3621656727098334" title="Placing All Achievements">
             <sub-events>
                 <event-block sid="9589427937693765">
                     <conditions>
@@ -138,7 +259,7 @@
         </event-group>
         <event-group description="" sid="7138786324349483" title="Updating Achievements Layout">
             <sub-events>
-                <event-block sid="9557051157705004">
+                <event-block collapsed="1" sid="9557051157705004">
                     <conditions>
                         <condition id="-11" name="For Each" sid="2289664981112667" type="System">
                             <param id="0" name="Object">Achieve</param>

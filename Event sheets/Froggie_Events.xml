@@ -438,7 +438,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="4129762863618757">
+                        <event-block collapsed="1" sid="4129762863618757">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2656612979721753" type="System">
                                     <param id="0" name="First value">Dev_Cur_Alpha</param>
@@ -620,6 +620,19 @@
                             <param id="1" name="Value">Touch.Gamma+15</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9016308965115279">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="225724964353371" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9418372931617869" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8378877677067597">
                     <conditions>
@@ -633,6 +646,10 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="7095421189853041" type="Froggie">
                             <param id="0" name="Control">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="705788387865943" type="Froggie">
+                            <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="7" name="Set mirrored" sid="7778222150877363" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
@@ -641,6 +658,19 @@
                             <param id="1" name="Value">Touch.Gamma-15</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1757868920449305">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="2768836607309779" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1028572980614579" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
