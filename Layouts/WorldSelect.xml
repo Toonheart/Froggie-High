@@ -616,6 +616,39 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TouchFollowMe" uid="267">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <PrevTouchX>0</PrevTouchX>
+                        <PrevTouchY>0</PrevTouchY>
+                        <CurTouchX>0</CurTouchX>
+                        <CurTouchY>0</CurTouchY>
+                        <DiffX>0</DiffX>
+                        <DiffY>0</DiffY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>640</y>
+                        <z>0</z>
+                        <width>61.232650757</width>
+                        <height>61.232650757</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

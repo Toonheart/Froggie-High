@@ -298,7 +298,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
                 <event-block sid="7442582905420583">
@@ -860,7 +860,7 @@
                         <condition id="-3" name="Is on-screen" sid="4159560383588031" type="Icon_Hurray" />
                         <condition id="-8" name="Compare two values" sid="2332875835491273" type="System">
                             <param id="0" name="First value">ScoreCounter</param>
-                            <param id="1" name="Comparison">3</param>
+                            <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">Score</param>
                         </condition>
                         <condition id="-1" name="Every tick" sid="3358978400674713" type="System" />
@@ -879,8 +879,13 @@
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="1695922392854543" type="System">
                                     <param id="0" name="Variable">ScoreCounter</param>
-                                    <param id="1" name="Comparison">5</param>
+                                    <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">Score</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7479259598963227" type="System">
+                                    <param id="0" name="Variable">ScoreCounter</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">Score+Bonus_Random</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -946,12 +951,12 @@
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="3978615422540154" type="Icon_Hurray" />
                         <condition id="-3" name="Is on-screen" sid="2365014967906673" type="Text_Bonus" />
-                        <condition id="-1" name="Every tick" sid="3981294344679529" type="System" />
                         <condition id="-14" name="Compare variable" sid="8563273330076998" type="System">
                             <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">Score+Bonus_Random</param>
                         </condition>
+                        <condition id="-1" name="Every tick" sid="3981294344679529" type="System" />
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="7678486569233141" type="System">
@@ -967,9 +972,10 @@
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="7171626125013394" type="System">
                                     <param id="0" name="Variable">ScoreCounter</param>
-                                    <param id="1" name="Comparison">5</param>
+                                    <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">Score+Bonus_Random</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5130767332088809" type="System" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="3058531080529267" type="Text_UI_Score">
@@ -977,7 +983,7 @@
                                 </action>
                                 <action id="-9" name="Set value" sid="8219445484840305" type="System">
                                     <param id="0" name="Variable">ScoreCounter</param>
-                                    <param id="1" name="Value">Score</param>
+                                    <param id="1" name="Value">Score+Bonus_Random</param>
                                 </action>
                             </actions>
                         </event-block>

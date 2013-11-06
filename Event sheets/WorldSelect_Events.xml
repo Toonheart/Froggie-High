@@ -654,5 +654,130 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="5530850457891574" title="TouchScroll">
+            <sub-events>
+                <event-block sid="7292333214088898">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="3400862732132276" type="TouchFollowMe">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">-1700</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="7960850545635186" type="TouchFollowMe">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">2560</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1089">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="1090" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="1092">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1093" type="TouchFollowMe">
+                                            <param id="0" name="Instance variable">DiffX</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="1094" type="TouchFollowMe">
+                                            <param id="0" name="X">lerp(self.X,self.X-self.DiffX,0.35)</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="1095" type="TouchFollowMe">
+                                            <param id="0" name="Instance variable">DiffX</param>
+                                            <param id="1" name="Value">self.DiffX/50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1096">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1097" type="TouchFollowMe">
+                                            <param id="0" name="Instance variable">DiffY</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="1098" type="TouchFollowMe">
+                                            <param id="0" name="Y">lerp(self.Y,self.Y-self.DiffY,4*dt)</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="1099" type="TouchFollowMe">
+                                            <param id="0" name="Instance variable">DiffY</param>
+                                            <param id="1" name="Value">self.DiffY/100</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="1627028587488191">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="4774123568280338" type="TouchFollowMe">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="Y co-ordinate">-1700</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="1973479338243894" type="TouchFollowMe">
+                                                    <param id="0" name="Y">-1700</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6648623592908205">
+                                            <conditions>
+                                                <condition id="-2" name="Compare Y" sid="1202171945069606" type="TouchFollowMe">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="Y co-ordinate">2560</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Set Y" sid="6522671861139986" type="TouchFollowMe">
+                                                    <param id="0" name="Y">2560</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1100">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="1101" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-10" name="Set value" sid="1103" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">PrevTouchY</param>
+                            <param id="1" name="Value">self.CurTouchY</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1105" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1107" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">DiffY</param>
+                            <param id="1" name="Value">self.CurTouchY-self.PrevTouchY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1108">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="1109" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="1111" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">PrevTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1113" type="TouchFollowMe">
+                            <param id="0" name="Instance variable">CurTouchY</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

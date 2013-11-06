@@ -10,9 +10,9 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -26,12 +26,13 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -4714,6 +4715,35 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="TouchFollowMe" sid="2299877395822788">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PrevTouchX" sid="9957213314228514" type="number" />
+                <instance-variable name="PrevTouchY" sid="9964767629374374" type="number" />
+                <instance-variable name="CurTouchX" sid="5984115020419584" type="number" />
+                <instance-variable name="CurTouchY" sid="5860185509203723" type="number" />
+                <instance-variable name="DiffX" sid="9490142448969713" type="number" />
+                <instance-variable name="DiffY" sid="1827859155568786" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="9768999880285581">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4196535015905668" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_ScoreNote" sid="4766538136423387">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="9520367750279622">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families>
