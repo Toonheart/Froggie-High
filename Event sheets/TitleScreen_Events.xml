@@ -62,7 +62,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="2511712467372221" title="Toggling Music and Sounds">
+        <event-group description="" sid="2511712467372221" title="Toggling Music and Sounds">
             <sub-events>
                 <comment>Mute the sounds</comment>
                 <event-block disabled="1" sid="8829171707280856">
@@ -122,6 +122,10 @@
                                 <action id="9" name="Set scale" sid="4291476964641937" type="Icon_MusicStatus">
                                     <param id="0" name="Scale">1</param>
                                 </action>
+                                <action id="4" name="Set animation" sid="4602996373712604" type="Title_Music">
+                                    <param id="0" name="Animation">&quot;Off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2899044703111809">
@@ -135,6 +139,10 @@
                                 </action>
                                 <action id="4" name="Set animation" sid="321580963472999" type="Icon_MusicStatus">
                                     <param id="0" name="Animation">&quot;ON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="124134744080624" type="Title_Music">
+                                    <param id="0" name="Animation">&quot;On&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>

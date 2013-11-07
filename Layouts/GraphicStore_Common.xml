@@ -679,11 +679,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-294.249816895</x>
-                        <y>1358.91809082</y>
+                        <x>-250.829071045</x>
+                        <y>1373.165527344</y>
                         <z>0</z>
-                        <width>384.499664307</width>
-                        <height>126.163955688</height>
+                        <width>297.65814209</width>
+                        <height>97.669082642</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -691,26 +691,29 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text_Acheive_Discr" uid="242">
+                <instance type="Text_Achieve_Discr" uid="242">
                     <properties>
                         <text>Ach_Descr</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-48,400,0</font>
-                        <color>18,128,0</color>
+                        <color>0,18,128</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <instance-variables>
+                        <AhievementNo>0</AhievementNo>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-628</x>
-                        <y>603</y>
+                        <x>-574</x>
+                        <y>741</y>
                         <z>0</z>
-                        <width>527</width>
-                        <height>331</height>
+                        <width>475</width>
+                        <height>227</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -740,7 +743,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Achieve" uid="53">
+                <instance type="Icon_Achieve" uid="53">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -754,10 +757,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-44</x>
-                        <y>1384</y>
+                        <y>1441</y>
                         <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
+                        <width>192</width>
+                        <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -844,7 +847,7 @@
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <fade-out-time>3</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -881,7 +884,7 @@
                             <properties>
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
+                                <wait-time>0.5</wait-time>
                                 <fade-out-time>1</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
@@ -895,6 +898,61 @@
                         <z>0</z>
                         <width>451</width>
                         <height>156</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AwardsTextBG" uid="49">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-425</x>
+                        <y>1536</y>
+                        <z>0</z>
+                        <width>775</width>
+                        <height>227</height>
+                        <depth>0</depth>
+                        <hotspotX>0.148387089</hotspotX>
+                        <hotspotY>0.50220263</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EnemySmoke" uid="278">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1000</x>
+                        <y>1441</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

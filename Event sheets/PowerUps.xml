@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
@@ -90,11 +90,6 @@
                                 <condition id="2" name="Key is down" sid="9903376255314575" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
                                 </condition>
-                                <condition id="8" name="Compare orientation" sid="898890634899789" type="Touch">
-                                    <param id="0" name="Orientation">2</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Angle">-8</param>
-                                </condition>
                             </conditions>
                             <actions>
                                 <action behavior="8Direction" id="7" name="Simulate control" sid="8557804143564031" type="Froggie">
@@ -106,11 +101,6 @@
                             <conditions>
                                 <condition id="2" name="Key is down" sid="2740732267990874" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
-                                </condition>
-                                <condition id="8" name="Compare orientation" sid="2065904884537636" type="Touch">
-                                    <param id="0" name="Orientation">2</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Angle">8</param>
                                 </condition>
                             </conditions>
                             <actions>
