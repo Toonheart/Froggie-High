@@ -38,9 +38,6 @@
                             <param id="0" name="Variable">WorldSection</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="6813752826377235" type="Collectible_Candy">
-                            <param id="0" name="Max Speed">LayoutWidth/2</param>
-                        </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="3710748260876585" type="Letter_CollectibleCake">
                             <param id="0" name="Pin to">Letter_collectible_Base</param>
                             <param id="1" name="Mode">0</param>
@@ -58,10 +55,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block collapsed="1" sid="7564923252496036">
+                <event-block sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -76,7 +73,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block collapsed="1" sid="5773070796798144">
+                        <event-block sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -122,7 +119,7 @@
                             </actions>
                             <sub-events>
                                 <comment>A lot of stuff happens in this section of Code.&#x0D;&#x0A;- BIG COLLECTIBLE GENERATION SET that occurs at floor counts 90 to 100 or end of each worldsection.&#x0D;&#x0A;- ALL ENEMIES and POWERUP Collectibles&#x0D;&#x0A;- LOGIC for randomizing the number of candies that come in as normal collectibles on regular floors.&#x0D;&#x0A;- Types of FLOORS - Broken, Moving</comment>
-                                <event-block collapsed="1" sid="7500555295788574">
+                                <event-block sid="7500555295788574">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="4012553066238802" type="System">
                                             <param id="0" name="Object">Floor_HeyStack_Normal</param>
@@ -131,7 +128,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block sid="3718600925621546">
+                                        <event-block collapsed="1" sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
@@ -363,6 +360,11 @@
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">3</param>
                                                 </condition>
+                                                <condition id="-8" name="Compare two values" sid="6814569903058517" type="System">
+                                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="6782070107427502" type="Floor_HeyStack_Normal">
@@ -424,6 +426,11 @@
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Value">1</param>
                                                 </condition>
+                                                <condition id="-8" name="Compare two values" sid="7574048668239763" type="System">
+                                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="6833049775857547" type="Floor_HeyStack_Normal">
@@ -437,6 +444,9 @@
                                                 <action id="-10" name="Set value" sid="1013602849806819" type="Floor_HeyStack_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="9165122487060048" type="Text_Debug">
+                                                    <param id="0" name="Text">Floor_HeyStack_Normal.PresentFloor</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -473,7 +483,7 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>FLYING CHICKEN&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block collapsed="1" sid="4071968505375019">
+                                        <event-block sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%5</param>
@@ -486,6 +496,16 @@
                                                     <param id="2" name="Value">2</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="5024683921627828" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="1617163552284561" type="Floor_HeyStack_Normal">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="7060563238834415" type="System">
+                                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -544,6 +564,11 @@
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="8510356731936868" type="System" />
+                                                <condition id="-7" name="Compare instance variable" sid="7415368536703476" type="Floor_HeyStack_Normal">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="7437300063668144" type="Floor_HeyStack_Normal">
@@ -569,7 +594,7 @@
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="2253535649633367" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="1487937069902912" type="Floor_Grass_Normal">
+                                                <condition id="-7" name="Compare instance variable" sid="1487937069902912" type="Floor_HeyStack_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">0</param>
@@ -613,7 +638,7 @@
                                                     <param id="1" name="Comparison">4</param>
                                                     <param id="2" name="Second value">1</param>
                                                 </condition>
-                                                <condition id="-7" name="Compare instance variable" sid="3527063830262902" type="Floor_Grass_Normal">
+                                                <condition id="-7" name="Compare instance variable" sid="3527063830262902" type="Floor_HeyStack_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Value">0</param>
@@ -776,12 +801,12 @@
                                                 <event-block sid="9987340829778488">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="2853454391595579" type="System">
-                                                            <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%3</param>
+                                                            <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%3</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">0</param>
                                                         </condition>
                                                         <condition id="-4" name="Trigger once while true" sid="2090814308947424" type="System" />
-                                                        <condition id="-7" name="Compare instance variable" sid="2943009358772697" type="Floor_Grass_Normal">
+                                                        <condition id="-7" name="Compare instance variable" sid="2943009358772697" type="Floor_HeyStack_Normal">
                                                             <param id="0" name="Instance variable">Status</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">0</param>
@@ -948,7 +973,7 @@
                                                             <param id="2" name="Second value">0</param>
                                                         </condition>
                                                         <condition id="-4" name="Trigger once while true" sid="8809065242098258" type="System" />
-                                                        <condition id="-7" name="Compare instance variable" sid="1637255864879543" type="Floor_Grass_Normal">
+                                                        <condition id="-7" name="Compare instance variable" sid="1637255864879543" type="Floor_HeyStack_Normal">
                                                             <param id="0" name="Instance variable">Status</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Value">0</param>
@@ -1059,7 +1084,7 @@
                             </sub-events>
                         </event-block>
                         <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then move the LETTER COLLECTIBLE SET.</comment>
-                        <event-block sid="8573108025996764">
+                        <event-block collapsed="1" sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>

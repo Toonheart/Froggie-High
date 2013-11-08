@@ -158,7 +158,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7367913264664048">
+                <event-block collapsed="1" sid="7367913264664048">
                     <conditions>
                         <condition id="-11" name="For Each" sid="1255610897545131" type="System">
                             <param id="0" name="Object">HUD_Basket</param>
@@ -335,5 +335,50 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4177662279602175">
+            <conditions>
+                <condition id="2" name="Is playing" sid="9213990671151974" type="Enemy_Chimp_Baboon">
+                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="9010259134165294" type="Enemy_Chimp_Baboon">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">5</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="6465041020232148" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8334964721019399">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="8597282016762763" type="Enemy_Chimp_Baboon" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1039289713780892" type="Enemy_Chimp_Baboon">
+                            <param id="0" name="Object">Weapon_Baboon</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Weapon&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3140499951119559" type="Weapon_Baboon">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7329544272594133">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="9774495276389758" type="Enemy_Chimp_Baboon" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3217260493340581" type="Enemy_Chimp_Baboon">
+                            <param id="0" name="Object">Weapon_Baboon</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Weapon&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3249455613570569" type="Weapon_Baboon">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

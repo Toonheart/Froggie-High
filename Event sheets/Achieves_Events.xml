@@ -219,7 +219,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3621656727098334" title="Placing All Achievements">
+        <event-group description="" sid="3621656727098334" title="Placing All Achievements">
             <sub-events>
                 <event-block sid="9589427937693765">
                     <conditions>
@@ -231,7 +231,7 @@
                         <condition id="-8" name="Compare two values" sid="4470759367107939" type="System">
                             <param id="0" name="First value">TotalAchievments</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">20</param>
+                            <param id="2" name="Second value">18</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -274,10 +274,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7138786324349483" title="Updating Achievements Layout">
+        <event-group collapsed="1" description="" sid="7138786324349483" title="Updating Achievements Layout">
             <sub-events>
                 <comment>Achievement - TEXT INFO</comment>
-                <event-block sid="5152506674536002">
+                <event-block collapsed="1" sid="5152506674536002">
                     <conditions>
                         <condition id="-11" name="For Each" sid="4503274557271853" type="System">
                             <param id="0" name="Object">Text_Achieve_Discr</param>
@@ -511,7 +511,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8786152185242285" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement14&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                    <param id="0" name="Text">&quot;Achievement14&quot; &amp;newline &amp;&quot;PlainCake&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -526,7 +526,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="788504775959311" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement15&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                    <param id="0" name="Text">&quot;Achievement15&quot; &amp;newline &amp;&quot;CupCakePlain&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -541,7 +541,37 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="4142641687072944" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement16&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                    <param id="0" name="Text">&quot;Achievement16&quot; &amp;newline &amp;&quot;MultiCake&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7934825319642715">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9729158626452741" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">17</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5005346065299404" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="4576124557962568" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement17&quot; &amp;newline &amp;&quot;CupCakeMult&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2305871912527686">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="845728301018831" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">18</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8129512649173066" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9547880836382758" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement18&quot; &amp;newline &amp;&quot;MultiToppingCake&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -574,15 +604,6 @@
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-3" name="Create object" sid="571745950871273" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="8889098890713997" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Got 1000 Score&quot;</param>
-                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="8671061332826922">
@@ -598,15 +619,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="4757177452383541" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="2652242098653955" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="8131815125356109" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement2&quot; &amp;newline &amp;&quot;Got 5000 Score&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="2658314572485655" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -626,15 +638,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="2036937241484296" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="6284086158541392" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="9354622883386239" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement3&quot; &amp;newline &amp;&quot;Got 10000 Score&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="602527967097609" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -654,15 +657,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="6869411193938328" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="1451720245954157" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="4035638532684802" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 20000 Score&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="851070956951624" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -682,15 +676,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="3761594060979011" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="4442129976355266" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="2482702672079947" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 30000 Score&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="236090383343304" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -710,15 +695,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="1426103497994245" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="4954566954565344" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action id="0" name="Set text" sid="2710042246397312" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement5&quot; &amp;newline &amp;&quot;Got 30000 Score&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="3491652218582821" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -738,15 +714,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="4238834384616037" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="331321605708139" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="4166081758018528" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement6&quot; &amp;newline &amp;&quot;Collected HyperJump Mushroom&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="7775161024775256" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -766,15 +733,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="9484528983245621" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="3213013426389749" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="7003931015748232" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement7&quot; &amp;newline &amp;&quot;Rainbow Mushroom collected&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="8650553826120866" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -794,15 +752,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="104582108727178" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="1545504904472853" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="9788307345341961" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement8&quot; &amp;newline &amp;&quot;Health Mushroom collected&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="5014815884712478" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -822,15 +771,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="2530050753058609" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="777484594188213" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="8832810631454003" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement9&quot; &amp;newline &amp;&quot;PlainCandy&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="7577453624710177" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -850,15 +790,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="9224324903783491" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="8885217454130942" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="9333087852354332" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement10&quot; &amp;newline &amp;&quot;TwoColor&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="3666361544330837" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -878,15 +809,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="8592973666340594" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="727372753263368" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="9373486471997979" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement11&quot; &amp;newline &amp;&quot;Swirl&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="5691147783634645" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -906,15 +828,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="1686850707286829" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="8088816378294977" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="3029916298681797" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement12&quot; &amp;newline &amp;&quot;Wrapper&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="4229827120329881" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -934,15 +847,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="4005215082146286" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="4015749067587359" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="268789226096632" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="6805273070484723" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -962,15 +866,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="2862765394232139" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="9471369804934433" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="3610729340602344" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="2918582408061389" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -990,15 +885,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="4600252605480503" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="4413789105148326" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="1121285590617923" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="5043889462531105" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
@@ -1018,16 +904,45 @@
                                 <condition id="-4" name="Trigger once while true" sid="6711654475819997" type="System" />
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-3" name="Create object" sid="4244316933752243" type="System">
-                                    <param id="0" name="Object to create">Text_Achieve_Discr</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">Icon_Achieve.X+256</param>
-                                    <param id="3" name="Y">Icon_Achieve.Y</param>
-                                </action>
-                                <action disabled="1" id="0" name="Set text" sid="5759102406858864" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Star&quot;</param>
-                                </action>
                                 <action id="4" name="Set animation" sid="695659410852535" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5082716851323298">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7075073166282254" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">17</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="9117070183523537" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;17_CupCakeMult&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9341056234202607" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2846222414551346" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5956757824589057">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="237750314380965" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">18</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="4888475042853587" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;18_MultiToppingCake&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2138633955044017" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3694517633186312" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>

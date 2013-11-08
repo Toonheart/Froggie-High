@@ -4,7 +4,7 @@
     <name>Debug</name>
     <events>
         <comment>DISABLED - to see art without debug. -Krish. 8 nov 2013. 0132am</comment>
-        <event-block disabled="1" sid="7029130876728904">
+        <event-block sid="7029130876728904">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
             </conditions>
@@ -36,20 +36,23 @@
                 <action disabled="1" id="1" name="Append text" sid="113922387394745" type="Text_Debug">
                     <param id="0" name="Text">&quot;Highes- &quot; &amp;HighestUnlockedWorld</param>
                 </action>
-                <action id="1" name="Append text" sid="9686554299048188" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="9686554299048188" type="Text_Debug">
                     <param id="0" name="Text">&quot;DA  : &quot; &amp; Dev_Cur_Alpha &amp;newline</param>
                 </action>
-                <action id="1" name="Append text" sid="2248840793359101" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="2248840793359101" type="Text_Debug">
                     <param id="0" name="Text">&quot;CA  : &quot; &amp; Touch.Alpha &amp;newline</param>
                 </action>
-                <action id="1" name="Append text" sid="9445063819817035" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="9445063819817035" type="Text_Debug">
                     <param id="0" name="Text">&quot;DG  : &quot; &amp; Dev_Cur_Gamma &amp;newline</param>
                 </action>
-                <action id="1" name="Append text" sid="7079116175487342" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="7079116175487342" type="Text_Debug">
                     <param id="0" name="Text">&quot;CG  : &quot; &amp; Touch.Gamma &amp;newline</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="5994740072370158" type="Text_Debug">
                     <param id="0" name="Text">&quot;ID : &quot; &amp;Touch.TouchID</param>
+                </action>
+                <action id="1" name="Append text" sid="5014803770893823" type="Text_Debug">
+                    <param id="0" name="Text">ComboCounter</param>
                 </action>
             </actions>
         </event-block>

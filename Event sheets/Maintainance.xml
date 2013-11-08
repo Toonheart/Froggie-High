@@ -179,34 +179,34 @@
                 <comment>Destroy the collectible below the screen,and overlaping the side port markers</comment>
                 <event-block sid="3874415251620764">
                     <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="6491244160867309" type="Collectibles" />
-                        <condition id="-2" name="Compare Y" sid="4304784999638456" type="Collectibles">
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="6491244160867309" type="CollStuff" />
+                        <condition id="-2" name="Compare Y" sid="4304784999638456" type="CollStuff">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="2027177302348719" type="Collectibles" />
+                        <action id="-9" name="Destroy" sid="2027177302348719" type="CollStuff" />
                     </actions>
                 </event-block>
                 <event-block sid="712740935121874">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="4264545816179027" type="Collectibles">
+                        <condition id="1" name="Is overlapping another object" sid="4264545816179027" type="CollStuff">
                             <param id="0" name="Object">Border_Left_ViewPort</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8025871701785765" type="Collectibles" />
+                        <action id="-9" name="Destroy" sid="8025871701785765" type="CollStuff" />
                     </actions>
                 </event-block>
                 <event-block sid="5227630622827106">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="9377608401555692" type="Collectibles">
+                        <condition id="1" name="Is overlapping another object" sid="9377608401555692" type="CollStuff">
                             <param id="0" name="Object">Border_Right_ViewPort</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8894373741140616" type="Collectibles" />
+                        <action id="-9" name="Destroy" sid="8894373741140616" type="CollStuff" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -247,5 +247,13 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="461862690270841">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="1980471791033806" type="Weapon_Baboon" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="263074818267037" type="Weapon_Baboon" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

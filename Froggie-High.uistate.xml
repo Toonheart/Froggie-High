@@ -10,15 +10,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>GraphicStore_Common</layout>
-        <layout>Achievements</layout>
-        <layout>WorldSelect</layout>
-        <layout>ChickenWorld</layout>
         <layout>OctoWorld</layout>
-        <layout active="1">ChimpWorld</layout>
-        <event-sheet>Achieves_Events</event-sheet>
+        <layout>ChimpWorld</layout>
+        <layout active="1">WorldSelect</layout>
         <event-sheet>Debug</event-sheet>
-        <event-sheet>HUD</event-sheet>
+        <event-sheet>OctoWorld_Events</event-sheet>
+        <event-sheet>Collectibles</event-sheet>
+        <event-sheet>All_Global_Vars</event-sheet>
+        <event-sheet>Achieves_Common</event-sheet>
+        <event-sheet>ChimpWorld_Enemies</event-sheet>
+        <event-sheet>Collisions</event-sheet>
+        <event-sheet>Achieves_Events</event-sheet>
+        <event-sheet>WorldSelect_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,11 +33,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="Obstacles" />
         <family expanded="1" name="Enemy" />
         <family expanded="1" name="Floors" />
-        <family expanded="1" name="Collectibles" />
+        <family expanded="1" name="CollStuff" />
         <family expanded="1" name="PowerUps" />
         <family expanded="1" name="BrokenParts" />
         <family expanded="1" name="UI_PauseMenus" />
         <family expanded="1" name="UI_GO_Menus" />
         <family expanded="0" name="EnemyBoss" />
+        <family expanded="1" name="AllCollectibles" />
     </families-expanded>
 </c2uistate>

@@ -3,9 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collectibles</name>
     <events>
-        <event-group description="Diifferent type of candies have different points that adds to score" sid="8130697212533247" title="Candies">
+        <event-group collapsed="1" description="Diifferent type of candies have different points that adds to score" sid="8130697212533247" title="Candies">
             <sub-events>
-                <event-block sid="5422309422002292">
+                <event-block collapsed="1" sid="5422309422002292">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2686728855045979" type="Froggie">
                             <param id="0" name="Object">Collectible_Candy</param>
@@ -32,6 +32,10 @@
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="X">Collectible_Candy.X</param>
                             <param id="3" name="Y">Collectible_Candy.Y-128</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2102743042022269" type="System">
+                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -361,9 +365,9 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="Diifferent type of cakes have different points that adds to score" sid="5338454545716284" title="Cakes">
+        <event-group collapsed="1" description="Diifferent type of cakes have different points that adds to score" sid="5338454545716284" title="Cakes">
             <sub-events>
-                <event-block sid="3235691306114199">
+                <event-block collapsed="1" sid="3235691306114199">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9081603629538004" type="Froggie">
                             <param id="0" name="Object">Collectible_cake</param>
@@ -391,6 +395,10 @@
                             <param id="2" name="X">Collectible_cake.X</param>
                             <param id="3" name="Y">Collectible_cake.Y-128</param>
                         </action>
+                        <action id="-10" name="Add to" sid="6130268730105063" type="System">
+                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block any="1" sid="4231230678585604">
@@ -406,7 +414,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="1" name="Set key" sid="6112937852002408" type="Dict_CollectibleCounter">
+                                <action id="1" name="Set key" sid="6112937852002408" type="Dict_CollectibleCounter">
                                     <param id="0" name="Key">&quot;PlainCake&quot;</param>
                                     <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;PlainCake&quot;)+1</param>
                                 </action>
@@ -441,7 +449,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="1" name="Set key" sid="5000499526436839" type="Dict_CollectibleCounter">
+                                <action id="1" name="Set key" sid="5000499526436839" type="Dict_CollectibleCounter">
                                     <param id="0" name="Key">&quot;CupCakePlain&quot;</param>
                                     <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;CupCakePlain&quot;)+1</param>
                                 </action>
@@ -476,7 +484,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="1" name="Set key" sid="1892922627545959" type="Dict_CollectibleCounter">
+                                <action id="1" name="Set key" sid="1892922627545959" type="Dict_CollectibleCounter">
                                     <param id="0" name="Key">&quot;MultiCake&quot;</param>
                                     <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;MultiCake&quot;)+1</param>
                                 </action>
@@ -511,7 +519,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="1" name="Set key" sid="3988673493687188" type="Dict_CollectibleCounter">
+                                <action id="1" name="Set key" sid="3988673493687188" type="Dict_CollectibleCounter">
                                     <param id="0" name="Key">&quot;CupCakeMulti&quot;</param>
                                     <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;CupCakeMulti&quot;)+1</param>
                                 </action>
@@ -546,7 +554,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="1" name="Set key" sid="3576549336306467" type="Dict_CollectibleCounter">
+                                <action id="1" name="Set key" sid="3576549336306467" type="Dict_CollectibleCounter">
                                     <param id="0" name="Key">&quot;MultiToppingCake&quot;</param>
                                     <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;MultiToppingCake&quot;)+1</param>
                                 </action>
@@ -622,9 +630,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Diifferent type of cakes have different points that adds to score" sid="8644953612790632" title="Fruits">
+        <event-group collapsed="1" description="Diifferent type of cakes have different points that adds to score" sid="8644953612790632" title="Fruits">
             <sub-events>
-                <event-block sid="3235691306114199">
+                <event-block collapsed="1" sid="3235691306114199">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9081603629538004" type="Froggie">
                             <param id="0" name="Object">Collectible_Fruit</param>
@@ -652,6 +660,10 @@
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="X">Collectible_Fruit.X</param>
                             <param id="3" name="Y">Collectible_Fruit.Y-128</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2236161639284272" type="System">
+                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -811,6 +823,42 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="7568849958904767" title="Combo Score">
+            <sub-events>
+                <event-block sid="8222775376401732">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="186274792098563" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1304794850390261" type="System">
+                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7426409859277544">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3109527486695417" type="System">
+                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4445268323273994" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="7455804910885828" type="Achieve_Unlocked">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6626218604579251" type="Achieve_Unlocked">
+                            <param id="0" name="Animation">&quot;Combo&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

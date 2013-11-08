@@ -91,8 +91,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>152</x>
-                        <y>862</y>
+                        <x>628</x>
+                        <y>1037</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -125,8 +125,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>408</x>
-                        <y>705</y>
+                        <x>381</x>
+                        <y>389</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -159,8 +159,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>412</x>
-                        <y>309</y>
+                        <x>305</x>
+                        <y>591</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -248,8 +248,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>400</x>
-                        <y>657</y>
+                        <x>373</x>
+                        <y>341</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -270,8 +270,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>411</x>
-                        <y>279</y>
+                        <x>304</x>
+                        <y>561</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -630,8 +630,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>165</x>
-                        <y>726</y>
+                        <x>633</x>
+                        <y>894</y>
                         <z>0</z>
                         <width>192</width>
                         <height>192</height>
@@ -650,8 +650,8 @@
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -726,8 +726,8 @@
                         <x>400</x>
                         <y>79</y>
                         <z>0</z>
-                        <width>271</width>
-                        <height>103</height>
+                        <width>299</width>
+                        <height>141</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -986,6 +986,39 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Achieve_Unlocked" uid="266">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>409</x>
+                        <y>162</y>
+                        <z>0</z>
+                        <width>650</width>
+                        <height>238</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501538455</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="BG_UI" uid="62">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1034,39 +1067,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Achieve_Unlocked" uid="266">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>3</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>409</x>
-                        <y>162</y>
-                        <z>0</z>
-                        <width>650</width>
-                        <height>238</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501538455</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

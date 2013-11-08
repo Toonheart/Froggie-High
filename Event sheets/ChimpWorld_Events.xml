@@ -16,5 +16,16 @@
         <include>Maintainance</include>
         <include>HUD</include>
         <include>Debug</include>
+        <event-block sid="7537097035904325">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7950169752451796" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4327376152342262" type="System">
+                    <param id="0" name="Variable">CurrentWorld</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
