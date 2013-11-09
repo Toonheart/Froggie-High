@@ -612,7 +612,7 @@
                     </properties>
                     <instance-variables>
                         <SheildStatus>0</SheildStatus>
-                        <FallDistance>0</FallDistance>
+                        <FallDistance>800</FallDistance>
                         <MushroomStatus>0</MushroomStatus>
                         <RocketCountDown>0</RocketCountDown>
                         <Health>3</Health>
@@ -914,7 +914,7 @@
                             <properties>
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
+                                <wait-time>0.75</wait-time>
                                 <fade-out-time>1</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
@@ -926,8 +926,8 @@
                         <x>1000</x>
                         <y>1441</y>
                         <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
+                        <width>384</width>
+                        <height>384</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -956,6 +956,66 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DeadNote" uid="284">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0.75</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1377</x>
+                        <y>182</y>
+                        <z>0</z>
+                        <width>650</width>
+                        <height>238</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text_ComboScore" uid="285">
+                    <properties>
+                        <text>ComboScore</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-96,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-1130</x>
+                        <y>426</y>
+                        <z>0</z>
+                        <width>565</width>
+                        <height>194</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

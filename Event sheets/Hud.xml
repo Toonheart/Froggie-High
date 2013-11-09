@@ -43,7 +43,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6749503892136342" title="Health">
+        <event-group description="" sid="6749503892136342" title="Health">
             <sub-events>
                 <comment>Changing Health count On HUD According the frog Health </comment>
                 <event-block sid="8251371410616138">
@@ -92,19 +92,6 @@
                             <param id="0" name="Animation">&quot;One&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                    </actions>
-                </event-block>
-                <comment>Kill the frog If the health drops to zero</comment>
-                <event-block sid="2344456623876436">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8020102245602382" type="Froggie">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="8619985330779758" type="Froggie" />
                     </actions>
                 </event-block>
                 <comment>Limit Health to max</comment>

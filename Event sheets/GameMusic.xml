@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameMusic</name>
+    <events>
+        <event-block sid="6135181673922402">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="1204299549328711" type="System" />
+                <condition id="4" inverted="1" name="Is any playing" sid="7689775774668685" type="Audio" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4655664275980007">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6261871733600383" type="System">
+                            <param id="0" name="Variable">CurrentWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="9252796565836941" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 5</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;GameTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6356684492458707">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4271490269246607" type="System">
+                            <param id="0" name="Variable">CurrentWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="2179934117278039" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 5</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;GameTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1861995386305895">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1349262090182918" type="System">
+                            <param id="0" name="Variable">CurrentWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="4809968438805032" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 5</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;GameTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2315977305583803">
+            <conditions>
+                <condition id="0" name="On ended" sid="1777453825721071" type="Audio">
+                    <param id="0" name="Tag">&quot;GameTrack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="8793301221178924" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Play" sid="1969328591669128" type="Audio">
+                    <param id="0" name="Audio file">MattOglseby - 5</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;GameTrack&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

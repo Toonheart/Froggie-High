@@ -44,7 +44,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="420459411779005" title="Updating WorldSelector Icons">
+        <event-group description="" sid="420459411779005" title="Updating WorldSelector Icons">
             <sub-events>
                 <comment>Unlock the world butoon by comparing with highestunlocked var</comment>
                 <event-block collapsed="1" sid="9895106162001461">
@@ -99,7 +99,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Updating World status </comment>
-                <event-block sid="7411055268363587">
+                <event-block collapsed="1" sid="7411055268363587">
                     <conditions>
                         <condition id="-11" name="For Each" sid="717895481332878" type="System">
                             <param id="0" name="Object">Icon_WorldStatus</param>
@@ -112,7 +112,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="3134027176522623">
+                        <event-block collapsed="1" sid="3134027176522623">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7275921469237513" type="Icon_WorldStatus">
                                     <param id="0" name="Instance variable">World</param>
@@ -134,6 +134,7 @@
                                         <action id="5" name="Set frame" sid="3883892432095779" type="Icon_WorldStatus">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
+                                        <action id="-24" name="Move to top" sid="4567852285670519" type="Icon_WorldStatus" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="5885095322977752">
@@ -175,6 +176,7 @@
                                         <action id="5" name="Set frame" sid="7316819167345075" type="Icon_WorldStatus">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
+                                        <action id="-24" name="Move to top" sid="6987678512674063" type="Icon_WorldStatus" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="9048353953124739">
@@ -216,6 +218,7 @@
                                         <action id="5" name="Set frame" sid="3548323400695946" type="Icon_WorldStatus">
                                             <param id="0" name="Frame number">1</param>
                                         </action>
+                                        <action id="-24" name="Move to top" sid="4445990071889986" type="Icon_WorldStatus" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="387943215516912">
@@ -233,7 +236,7 @@
                     </sub-events>
                 </event-block>
                 <comment>On selecting world Buttons go to the world if it is unlocked and set currentworld to associated world(instance var)</comment>
-                <event-block sid="4128880818065891">
+                <event-block collapsed="1" sid="4128880818065891">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="6205326351807124" type="Touch">
                             <param id="0" name="Object">Icon_WorldSelector</param>
@@ -339,7 +342,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
+        <event-group collapsed="1" description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
             <sub-events>
                 <event-block sid="2688740518192219">
                     <conditions>
@@ -802,6 +805,78 @@
                         <action id="-10" name="Set value" sid="1113" type="TouchFollowMe">
                             <param id="0" name="Instance variable">CurTouchY</param>
                             <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="6845799870494255" title="Music">
+                    <sub-events>
+                        <event-block sid="5159794451362993">
+                            <conditions>
+                                <condition id="-25" name="On loader layout complete" sid="8579461553822715" type="System" />
+                                <condition id="4" inverted="1" name="Is any playing" sid="422114081908787" type="Audio" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="6957710405404112" type="Audio">
+                                    <param id="0" name="Audio file">MattOglseby - 3</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3931836590950011">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="8134165733620178" type="Audio">
+                                    <param id="0" name="Tag">&quot;TitleTrack&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="2077965801917495" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="5709472721019134" type="Audio">
+                                    <param id="0" name="Audio file">MattOglseby - 3</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1088466164061474" title="Music2">
+            <sub-events>
+                <event-block sid="5159794451362993">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="8579461553822715" type="System" />
+                        <condition id="4" inverted="1" name="Is any playing" sid="422114081908787" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="6957710405404112" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3931836590950011">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="8134165733620178" type="Audio">
+                            <param id="0" name="Tag">&quot;TitleTrack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="2077965801917495" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Play" sid="5709472721019134" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
                         </action>
                     </actions>
                 </event-block>

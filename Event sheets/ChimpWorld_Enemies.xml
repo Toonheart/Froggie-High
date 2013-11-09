@@ -142,7 +142,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1098512604797543" title="BIGBOSS GamePlay">
+        <event-group description="" sid="1098512604797543" title="BIGBOSS GamePlay">
             <sub-events>
                 <event-block sid="1261691158325619">
                     <conditions>
@@ -200,6 +200,28 @@
                             <param id="1" name="Value">2</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="7561615127104607">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="2931848604870676" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;30_KillBossChimp&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="5824141980286073" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;30_KillBossChimp&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="288891507785291" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7155509479388222" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

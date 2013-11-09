@@ -57,7 +57,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="300444843168263" title="Unlocking Achievements">
+        <event-group collapsed="1" description="" sid="300444843168263" title="Unlocking Achievements">
             <sub-events>
                 <event-group collapsed="1" description="" sid="5924061775148714" title="Score Achievements">
                     <sub-events>
@@ -209,6 +209,9 @@
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="8836522120489545" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="3267968543404434">
@@ -228,6 +231,9 @@
                                 <action id="0" name="Set local value" sid="6108629874582341" type="WebStr_Common">
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3063026430375846" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -249,11 +255,14 @@
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="3868419319404914" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="9947272689397631" title="Collectible Awards">
+                <event-group collapsed="1" description="" sid="9947272689397631" title="Collectible Achievements">
                     <sub-events>
                         <event-block sid="661054833241598">
                             <conditions>
@@ -517,53 +526,37 @@
             <actions>
                 <action behavior="Fade" id="0" name="Restart fade" sid="7474938191933023" type="Achieve_Unlocked" />
                 <action id="-3" name="Create object" sid="6802137084962005" type="System">
-                    <param id="0" name="Object to create">Achieve_Bling</param>
+                    <param id="0" name="Object to create">Multi_Blings</param>
                     <param id="1" name="Layer">&quot;Blings&quot;</param>
                     <param id="2" name="X">150</param>
                     <param id="3" name="Y">200</param>
-                </action>
-                <action id="4" name="Set animation" sid="6738876286587731" type="Achieve_Bling">
-                    <param id="0" name="Animation">&quot;Gold&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="4099569336706229" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-3" name="Create object" sid="4216062377415562" type="System">
-                    <param id="0" name="Object to create">Achieve_Bling</param>
+                    <param id="0" name="Object to create">Multi_Blings</param>
                     <param id="1" name="Layer">&quot;Blings&quot;</param>
                     <param id="2" name="X">750</param>
                     <param id="3" name="Y">400</param>
-                </action>
-                <action id="4" name="Set animation" sid="3251742799007838" type="Achieve_Bling">
-                    <param id="0" name="Animation">&quot;Gold&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="999962455086637" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-3" name="Create object" sid="535352493842485" type="System">
-                    <param id="0" name="Object to create">Achieve_Bling</param>
+                    <param id="0" name="Object to create">Multi_Blings</param>
                     <param id="1" name="Layer">&quot;Blings&quot;</param>
                     <param id="2" name="X">150</param>
                     <param id="3" name="Y">800</param>
-                </action>
-                <action id="4" name="Set animation" sid="9349278818693668" type="Achieve_Bling">
-                    <param id="0" name="Animation">&quot;Gold&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="2171423592406746" type="System">
                     <param id="0" name="Seconds">0.1</param>
                 </action>
                 <action id="-3" name="Create object" sid="275314278622529" type="System">
-                    <param id="0" name="Object to create">Achieve_Bling</param>
+                    <param id="0" name="Object to create">Multi_Blings</param>
                     <param id="1" name="Layer">&quot;Blings&quot;</param>
                     <param id="2" name="X">750</param>
                     <param id="3" name="Y">1000</param>
-                </action>
-                <action id="4" name="Set animation" sid="307993295373461" type="Achieve_Bling">
-                    <param id="0" name="Animation">&quot;Gold&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="9790893493721632" type="System">
                     <param id="0" name="Seconds">2.5</param>

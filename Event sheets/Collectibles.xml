@@ -395,7 +395,7 @@
                             <param id="2" name="X">Collectible_cake.X</param>
                             <param id="3" name="Y">Collectible_cake.Y-128</param>
                         </action>
-                        <action id="-10" name="Add to" sid="6130268730105063" type="System">
+                        <action id="-10" name="Add to" sid="4773929394922413" type="System">
                             <param id="0" name="Variable">ComboCounter</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -605,6 +605,10 @@
                             <param id="0" name="Variable">Score</param>
                             <param id="1" name="Value">round(random(600,750))</param>
                         </action>
+                        <action id="-10" name="Add to" sid="9294195579346983" type="System">
+                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4079239585765511">
@@ -661,7 +665,7 @@
                             <param id="2" name="X">Collectible_Fruit.X</param>
                             <param id="3" name="Y">Collectible_Fruit.Y-128</param>
                         </action>
-                        <action id="-10" name="Add to" sid="2236161639284272" type="System">
+                        <action id="-10" name="Add to" sid="8192709707901308" type="System">
                             <param id="0" name="Variable">ComboCounter</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -826,7 +830,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7568849958904767" title="Combo Score">
+        <event-group description="" sid="7568849958904767" title="Combo Score">
             <sub-events>
                 <event-block sid="8222775376401732">
                     <conditions>
@@ -857,6 +861,23 @@
                         <action id="4" name="Set animation" sid="6626218604579251" type="Achieve_Unlocked">
                             <param id="0" name="Animation">&quot;Combo&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="948806031713257" type="System">
+                            <param id="0" name="Object to create">Text_ComboScore</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Achieve_Unlocked.X</param>
+                            <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="5057435271817255" type="Text_ComboScore">
+                            <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1536533301099375" type="Text_ComboScore">
+                            <param id="0" name="Text">&quot;+1000&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="798462402416475" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1000</param>
                         </action>
                     </actions>
                 </event-block>

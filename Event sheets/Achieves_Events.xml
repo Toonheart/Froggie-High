@@ -219,7 +219,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3621656727098334" title="Placing All Achievements">
+        <event-group collapsed="1" description="" sid="3621656727098334" title="Placing All Achievements">
             <sub-events>
                 <event-block sid="9589427937693765">
                     <conditions>
@@ -231,7 +231,7 @@
                         <condition id="-8" name="Compare two values" sid="4470759367107939" type="System">
                             <param id="0" name="First value">TotalAchievments</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">18</param>
+                            <param id="2" name="Second value">30</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -274,10 +274,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7138786324349483" title="Updating Achievements Layout">
+        <event-group description="" sid="7138786324349483" title="Updating Achievements Layout">
             <sub-events>
                 <comment>Achievement - TEXT INFO</comment>
-                <event-block collapsed="1" sid="5152506674536002">
+                <event-block sid="5152506674536002">
                     <conditions>
                         <condition id="-11" name="For Each" sid="4503274557271853" type="System">
                             <param id="0" name="Object">Text_Achieve_Discr</param>
@@ -575,10 +575,190 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="7820299640453261">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8768142218287234" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7391135888405195" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2271032540082491" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement19&quot; &amp;newline &amp;&quot;Killed Spiky Octo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2925424284453113">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1739611449161854" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8618025657216749" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6610253898024387" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement20&quot; &amp;newline &amp;&quot;Killed Electro Octo&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9102774644875121">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6072322794972298" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">21</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2245457554385794" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1127609435250884" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement21&quot; &amp;newline &amp;&quot;Killed Flying Octo &quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5070641521845065">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8662995765662432" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">22</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3211206205746506" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="7785968575801859" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement22&quot; &amp;newline &amp;&quot;Killed Octo Boss&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="808690709866498">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6176050352686978" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">23</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7969825733731661" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="8340447052156932" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement23&quot; &amp;newline &amp;&quot;Killed Flu Chicken&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2967891332782902">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4374263381845499" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">24</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9606540865166341" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9575918383059919" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement24&quot; &amp;newline &amp;&quot;Killed Boxer Chicken&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2613271825161419">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8538615852839464" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="6998086222406732" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="813273456661635" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement25&quot; &amp;newline &amp;&quot;Killed Flying Chicken&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3465964042246415">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4412433440786976" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">26</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7805992868599589" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="7851182269263643" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement26&quot; &amp;newline &amp;&quot;Killed Chicken Boss&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4759961267584258">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5098647396078411" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">27</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="403605471135441" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="356351763158582" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement27&quot; &amp;newline &amp;&quot;Killed Bash Chimp&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3303696427125632">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8862338640991557" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">28</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="1699254504306299" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3525105563218269" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement28&quot; &amp;newline &amp;&quot;Killed BaboonChimp&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3621446999604666">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5647833886127396" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">29</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="1439981391493199" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="7169284216135054" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement29&quot; &amp;newline &amp;&quot;Killed Wine Chimp&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8783499515822626">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7387876289055371" type="Text_Achieve_Discr">
+                                    <param id="0" name="Instance variable">AhievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="846055454233894" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2119138613992964" type="Text_Achieve_Discr">
+                                    <param id="0" name="Text">&quot;Achievement30&quot; &amp;newline &amp;&quot;Killed Chimp Boss&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Achievement - ICON CHANGE</comment>
-                <event-block collapsed="1" sid="9557051157705004">
+                <event-block sid="9557051157705004">
                     <conditions>
                         <condition id="-11" name="For Each" sid="2289664981112667" type="System">
                             <param id="0" name="Object">Icon_Achieve</param>
@@ -943,6 +1123,234 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="3694517633186312" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3120450665574417">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7903577397088468" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">19</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="2479793308647321" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;19_KillSpiky&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9995930401033007" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3533326998816017" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="505962138885931">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2021822276002944" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">20</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="8176488837253492" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;20_KillElectro&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4168770174735041" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5279330077154825" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2886379160388082">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5844736625595246" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">21</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="7558132390302782" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7253868468061659" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9523636030344854" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1546106692613944">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6893059240740649" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">22</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="9496793565170395" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;22_KillOctoBoss&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4196948771021571" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1116619766462389" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7804407936890071">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7021258745866043" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">23</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="4197815603865213" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;23_KillFlu&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8940268511392215" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1466561353443714" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6325244837197278">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2662721237057724" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">24</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="1261892738559875" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;24_KillBoxer&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3211782063297549" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1924489683399581" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9874572759031276">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8254050356534482" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="443794246276989" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="819195066261432" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8419443939208384" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4347073617895986">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5131713286398079" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">26</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="7530745797724376" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;26_KillBossChicken&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7714273567624937" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9358171566862425" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1897341460151658">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8095219949641935" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">27</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="8204801319258564" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;27_KillBashChimp&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7190163963550462" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5951817061095305" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6882753202316782">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1518309349208238" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">28</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="6671741003725746" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;28_KillBaboonChimp&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3981642188493533" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8269891187602504" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3164597659046779">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3762378427339877" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">29</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="7902402892028123" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2654792373237619" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5682361476342572" type="Icon_Achieve">
+                                    <param id="0" name="Animation">&quot;Unlock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1232377462071336">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1317784501184291" type="Icon_Achieve">
+                                    <param id="0" name="Instance variable">AchievementNo</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">30</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="1302918762837633" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;30_KillBossChimp&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9798171819370011" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="9531165400595856" type="Icon_Achieve">
                                     <param id="0" name="Animation">&quot;Unlock&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>

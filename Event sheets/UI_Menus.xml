@@ -174,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7132109060416404" title="GameOver">
+        <event-group description="" sid="7132109060416404" title="GameOver">
             <sub-events>
                 <comment>If game over update the high score And Show the GameOver menus on UI BG</comment>
                 <event-block collapsed="1" sid="3207011321876616">
@@ -182,6 +182,15 @@
                         <condition id="-19" name="On destroyed" sid="2826568762651674" type="Froggie" />
                     </conditions>
                     <actions>
+                        <action id="-3" name="Create object" sid="3522969028237936" type="System">
+                            <param id="0" name="Object to create">DeadNote</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">LayoutWidth/2</param>
+                            <param id="3" name="Y">LayoutHeight/2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6581878696703203" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
                         <action id="1" name="Set pause state" sid="5310209983033614" type="Pause">
                             <param id="0" name="State">0</param>
                         </action>
@@ -298,11 +307,11 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block collapsed="1" sid="7072163675841096">
+        <event-block sid="7072163675841096">
             <conditions>
                 <condition id="-3" name="Is on-screen" sid="7792526774992635" type="Icon_GameOver" />
                 <condition id="-8" name="Compare two values" sid="2321791546872243" type="System">
-                    <param id="0" name="First value">ComboCounter</param>
+                    <param id="0" name="First value">ScoreCounter</param>
                     <param id="1" name="Comparison">2</param>
                     <param id="2" name="Second value">Score</param>
                 </condition>
@@ -310,18 +319,18 @@
             </conditions>
             <actions>
                 <action id="-10" name="Add to" sid="7525669331092303" type="System">
-                    <param id="0" name="Variable">ComboCounter</param>
+                    <param id="0" name="Variable">ScoreCounter</param>
                     <param id="1" name="Value">103</param>
                 </action>
                 <action id="0" name="Set text" sid="6892111858282506" type="Text_UI_Score">
-                    <param id="0" name="Text">ComboCounter</param>
+                    <param id="0" name="Text">ScoreCounter</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block sid="7855380680621618">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="9685755427550748" type="System">
-                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">Score</param>
                         </condition>
@@ -331,14 +340,14 @@
                             <param id="0" name="Text">Score</param>
                         </action>
                         <action id="-9" name="Set value" sid="3933344604561711" type="System">
-                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Value">Score</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
                 <event-block sid="7442582905420583">
@@ -858,6 +867,11 @@
                             <param id="0" name="Variable">Bonus_Random</param>
                             <param id="1" name="Value">round(random(3000,5000))</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="4608886481067399" type="BG_UI">
+                            <param id="0" name="Object">Icon_Restart</param>
+                            <param id="1" name="Layer">&quot;UI&quot;</param>
+                            <param id="2" name="Image point">&quot;RestartGO&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1126260088519751">
@@ -897,7 +911,7 @@
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="4159560383588031" type="Icon_Hurray" />
                         <condition id="-8" name="Compare two values" sid="2332875835491273" type="System">
-                            <param id="0" name="First value">ComboCounter</param>
+                            <param id="0" name="First value">ScoreCounter</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">Score</param>
                         </condition>
@@ -905,23 +919,23 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="227280825394246" type="System">
-                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Value">103</param>
                         </action>
                         <action id="0" name="Set text" sid="3477623010264054" type="Text_UI_Score">
-                            <param id="0" name="Text">ComboCounter</param>
+                            <param id="0" name="Text">ScoreCounter</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="6866915650698865">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="1695922392854543" type="System">
-                                    <param id="0" name="Variable">ComboCounter</param>
+                                    <param id="0" name="Variable">ScoreCounter</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">Score</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="7479259598963227" type="System">
-                                    <param id="0" name="Variable">ComboCounter</param>
+                                    <param id="0" name="Variable">ScoreCounter</param>
                                     <param id="1" name="Comparison">2</param>
                                     <param id="2" name="Value">Score+Bonus_Random</param>
                                 </condition>
@@ -931,7 +945,7 @@
                                     <param id="0" name="Text">Score</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="4301169596936204" type="System">
-                                    <param id="0" name="Variable">ComboCounter</param>
+                                    <param id="0" name="Variable">ScoreCounter</param>
                                     <param id="1" name="Value">Score</param>
                                 </action>
                             </actions>
@@ -941,7 +955,7 @@
                 <event-block sid="6865985307856133">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="7532519985192713" type="System">
-                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">Score</param>
                         </condition>
@@ -990,7 +1004,7 @@
                         <condition id="-3" name="Is on-screen" sid="3978615422540154" type="Icon_Hurray" />
                         <condition id="-3" name="Is on-screen" sid="2365014967906673" type="Text_Bonus" />
                         <condition id="-14" name="Compare variable" sid="8563273330076998" type="System">
-                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">Score+Bonus_Random</param>
                         </condition>
@@ -998,18 +1012,18 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="7678486569233141" type="System">
-                            <param id="0" name="Variable">ComboCounter</param>
+                            <param id="0" name="Variable">ScoreCounter</param>
                             <param id="1" name="Value">103</param>
                         </action>
                         <action id="0" name="Set text" sid="1523814629173178" type="Text_UI_Score">
-                            <param id="0" name="Text">ComboCounter</param>
+                            <param id="0" name="Text">ScoreCounter</param>
                         </action>
                     </actions>
                     <sub-events>
                         <event-block sid="619148688735063">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="7171626125013394" type="System">
-                                    <param id="0" name="Variable">ComboCounter</param>
+                                    <param id="0" name="Variable">ScoreCounter</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">Score+Bonus_Random</param>
                                 </condition>
@@ -1020,7 +1034,7 @@
                                     <param id="0" name="Text">Score+Bonus_Random</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="8219445484840305" type="System">
-                                    <param id="0" name="Variable">ComboCounter</param>
+                                    <param id="0" name="Variable">ScoreCounter</param>
                                     <param id="1" name="Value">Score+Bonus_Random</param>
                                 </action>
                             </actions>

@@ -62,8 +62,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="9791390366890499" title="Preload">
+        <event-group description="" sid="9791390366890499" title="Preload">
             <sub-events>
+                <comment>All Preloads</comment>
                 <event-block sid="7806788258793513">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="4827449629494871" type="System" />
@@ -80,6 +81,12 @@
                         </action>
                         <action id="4" name="Preload" sid="9783938106038618" type="Audio">
                             <param id="0" name="Audio file">Fall</param>
+                        </action>
+                        <action id="4" name="Preload" sid="4371835633631875" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 3</param>
+                        </action>
+                        <action id="4" name="Preload" sid="1556732378400516" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -498,19 +505,58 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9795845940454458" title="EFFECTS" />
-        <event-block sid="6987384477758637">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="3010749064071534" type="System">
-                    <param id="0" name="Interval (seconds)">5</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="8044844419182837" type="Title_Logo_Froggie">
-                    <param id="0" name="Animation">&quot;Wave&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group collapsed="1" description="" sid="9795845940454458" title="EFFECTS">
+            <sub-events>
+                <event-block sid="6987384477758637">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="3010749064071534" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8044844419182837" type="Title_Logo_Froggie">
+                            <param id="0" name="Animation">&quot;Wave&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7616304892806737" title="Music">
+            <sub-events>
+                <event-block sid="5159794451362993">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="8579461553822715" type="System" />
+                        <condition id="4" inverted="1" name="Is any playing" sid="422114081908787" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="6957710405404112" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3931836590950011">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="8134165733620178" type="Audio">
+                            <param id="0" name="Tag">&quot;TitleTrack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="2077965801917495" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Play" sid="5709472721019134" type="Audio">
+                            <param id="0" name="Audio file">MattOglseby - 3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

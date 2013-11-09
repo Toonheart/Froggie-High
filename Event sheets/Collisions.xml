@@ -5,6 +5,96 @@
     <events>
         <event-group collapsed="1" description="" sid="909091857750047" title="Octo World Enemies">
             <sub-events>
+                <comment>If Frog Landed on Spikes kill the frog</comment>
+                <event-block collapsed="1" sid="9786835711709051">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3961149837030682" type="Froggie">
+                            <param id="0" name="Object">Enemy_SpikyOcto</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="8609944873332064" type="Froggie" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block collapsed="1" sid="7354485668556846">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="2874374546102879" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="4233324794793811" type="Enemy_SpikyOcto">
+                                    <param id="0" name="Object">EnemySmoke</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6217850841746604" type="Enemy_SpikyOcto" />
+                                <action id="-3" name="Create object" sid="3546362861056362" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="2673665626228634" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8685484418000663" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3098446557502467" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="2609857967692078">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="7489025571106321" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;19_KillSpiky&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="1804443639563518" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;19_KillSpiky&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="4273705622547601" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8923073728358459" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1117018186742664">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="270165413818577" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8634931368682401" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="1235122757518133" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3229170120615386" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1824167017197059" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4151936681723182" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <comment>Kill the frog when landed on enemy platform if sheild is not active</comment>
                 <event-block collapsed="1" sid="580751372277348">
                     <conditions>
@@ -15,7 +105,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="8644181953438045">
+                        <event-block collapsed="1" sid="8644181953438045">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="4359633870364442" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -28,7 +118,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="8973176275304723" type="Enemy_ElectroOcto" />
+                                <action id="-3" name="Create object" sid="9147156504256191" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="8859782628801421" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3277194728299529" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="2602553830052207" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="5174511582114776">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="7425298949578294" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;20_KillElectro&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9334323325113152" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;20_KillElectro&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="6504299586139073" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3799176899322398" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6999956239811167">
                             <conditions>
@@ -39,7 +168,7 @@
                                     <param id="0" name="Animation">&quot;Shocked&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="9312688898153779" type="Froggie">
+                                <action id="-12" name="Subtract from" sid="9312688898153779" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -57,93 +186,6 @@
                     </sub-events>
                 </event-block>
                 <comment>Kill the Enemy if Frog if sheild is active and jumps on it.</comment>
-                <event-block collapsed="1" disabled="1" sid="6654258961778437">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1632197675873842" type="Froggie">
-                            <param id="0" name="Object">Enemy_ElectroOcto</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="9598967259890814" type="Enemy_ElectroOcto">
-                            <param id="0" name="Animation">&quot;Active&quot;</param>
-                        </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="6230205638160735" type="Froggie" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="2022027802792933">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1010118734920538" type="Froggie">
-                                    <param id="0" name="Instance variable">SheildStatus</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="1295418604746805" type="Froggie">
-                                    <param id="0" name="Control">2</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="9781305244211855" type="Enemy_ElectroOcto">
-                                    <param id="0" name="Animation">&quot;Destroyed&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2915624408839043" type="Froggie">
-                                    <param id="0" name="Instance variable">SheildStatus</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>If Frog Landed on Spikes kill the frog</comment>
-                <event-block collapsed="1" sid="9786835711709051">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="3961149837030682" type="Froggie">
-                            <param id="0" name="Object">Enemy_SpikyOcto</param>
-                        </condition>
-                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="8609944873332064" type="Froggie" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7354485668556846">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="2874374546102879" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="4233324794793811" type="Enemy_SpikyOcto">
-                                    <param id="0" name="Object">EnemySmoke</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="6217850841746604" type="Enemy_SpikyOcto" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="1117018186742664">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="270165413818577" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="8634931368682401" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="1235122757518133" type="Froggie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="3229170120615386" type="HUD_HealthIndicator">
-                                    <param id="0" name="Scale">1.2</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="1824167017197059" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="4151936681723182" type="HUD_HealthIndicator">
-                                    <param id="0" name="Scale">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block collapsed="1" sid="6496677790872877">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2021413235568107" type="Froggie">
@@ -152,7 +194,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9323176089460651">
+                        <event-block collapsed="1" sid="9323176089460651">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="4973868009197947" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -165,7 +207,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="3392336421353369" type="Enemy_PatrolOcto_Left" />
+                                <action id="-3" name="Create object" sid="1677867715394939" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="130834155525717" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7201943747753047" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3412360953644795" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="381798580052758">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="3244990694756951" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="1615867294576252" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="5442199983840545" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4451989231159433" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6972465305974262">
                             <conditions>
@@ -205,7 +286,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="6427055915495978">
+                        <event-block collapsed="1" sid="6427055915495978">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="2280394151969842" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -218,7 +299,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="6978302170193287" type="Enemy_PatrolOcto_Right" />
+                                <action id="-3" name="Create object" sid="5173090467265252" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="2023048511389082" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8876780898356539" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="1338731697058028" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="4839018122011522">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="4343610820796822" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="289380745222693" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="5721240821481605" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6987046180113935" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="2825244825774401">
                             <conditions>
@@ -248,58 +368,8 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6397730328085739" title="Chicken World Enemies">
+        <event-group description="" sid="6397730328085739" title="Chicken World Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="3088645526915661">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
-                            <param id="0" name="Object">EnemyBoxer_Chicken</param>
-                        </condition>
-                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="5899642832739426" type="Froggie" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9031370393196009">
-                            <conditions>
-                                <condition id="2" name="Is playing" sid="4815786559191798" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="3234630518858357" type="EnemyBoxer_Chicken">
-                                    <param id="0" name="Object">EnemySmoke</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="3721116049318687" type="EnemyBoxer_Chicken" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="8052135461005291">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="4761028513079052" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="5099861288754855" type="Froggie">
-                                    <param id="0" name="Animation">&quot;JawBreak&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="9300524770226392" type="Froggie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="8912446392793578" type="HUD_HealthIndicator">
-                                    <param id="0" name="Scale">1.2</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="726484684134273" type="System">
-                                    <param id="0" name="Seconds">0.1</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="4519819726955957" type="HUD_HealthIndicator">
-                                    <param id="0" name="Scale">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block collapsed="1" sid="7020705298719823">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1561724124942272" type="Froggie">
@@ -309,7 +379,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5503750609885069">
+                        <event-block collapsed="1" sid="5503750609885069">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="1488177362079437" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -322,7 +392,59 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1487062574869348" type="Enemy_Flu_Chicken" />
+                                <action id="-3" name="Create object" sid="4517796654807401" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="4659808297867502" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7239182992158434" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="9010463033948801" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="219567635960776">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="1897437925257976" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;23_KillFlu&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="4766915445433769" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;23_KillFlu&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="9374792028461654" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="8886171481118834" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="8827752153196607" type="System">
+                                            <param id="0" name="Object to create">Text_ScoreNote</param>
+                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                            <param id="2" name="X">Froggie.X</param>
+                                            <param id="3" name="Y">Froggie.Y-128</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="3213733490194865" type="Text_ScoreNote">
+                                            <param id="0" name="Text">&quot;+1000&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="2766123398649708" type="System">
+                                            <param id="0" name="Variable">Score</param>
+                                            <param id="1" name="Value">1000</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="480987907092414">
                             <conditions>
@@ -350,6 +472,95 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block collapsed="1" sid="3088645526915661">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
+                            <param id="0" name="Object">EnemyBoxer_Chicken</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="5899642832739426" type="Froggie" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block collapsed="1" sid="9031370393196009">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="4815786559191798" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3234630518858357" type="EnemyBoxer_Chicken">
+                                    <param id="0" name="Object">EnemySmoke</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="3721116049318687" type="EnemyBoxer_Chicken" />
+                                <action id="-3" name="Create object" sid="3958303628020851" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="2620431632812708" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2189907918661697" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="9448964737139951" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3919740113735868">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="9275684644969998" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;24_KillBoxer&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="4593929875133715" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;24_KillBoxer&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="5187744473084065" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3089876056872691" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8052135461005291">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4761028513079052" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5099861288754855" type="Froggie">
+                                    <param id="0" name="Animation">&quot;JawBreak&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="-12" name="Subtract from" sid="9300524770226392" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="8912446392793578" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="726484684134273" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4519819726955957" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block collapsed="1" sid="9805787308421112">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3022495366874511" type="Froggie">
@@ -358,7 +569,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="7896714923736151">
+                        <event-block collapsed="1" sid="7896714923736151">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="1245728625116237" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -371,7 +582,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1288995330327802" type="Enemy_PatroChicken_Left" />
+                                <action id="-3" name="Create object" sid="8556854307278258" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="8185173357595988" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9747029039708398" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="2297908350474781" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="5037709860640411">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="6501525587134361" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="761579552983383" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="8352730264230795" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4135239293103496" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6152590351094441">
                             <conditions>
@@ -407,7 +657,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="2846836458748547">
+                        <event-block collapsed="1" sid="2846836458748547">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="7164654271445879" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -420,7 +670,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="3304090914986992" type="Enemy_PatroChicken_Right" />
+                                <action id="-3" name="Create object" sid="6809667453104891" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="8193075869984397" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7652200365546595" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4894666143017789" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="7230162084133645">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="9912138884600486" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="3628185516261341" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="8832786625551036" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="816388837608232" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="7849425819618202">
                             <conditions>
@@ -450,7 +739,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7889971496850357" title="Chimp World Enemies">
+        <event-group description="" sid="7889971496850357" title="Chimp World Enemies">
             <sub-events>
                 <event-block collapsed="1" sid="3088645526915661">
                     <conditions>
@@ -461,7 +750,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9031370393196009">
+                        <event-block collapsed="1" sid="9031370393196009">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="4815786559191798" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -474,7 +763,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="3721116049318687" type="Enemy_Chimp_Bash" />
+                                <action id="-3" name="Create object" sid="3612732570102173" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="195954660163055" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5986475861721834" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="5515368801004929" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="8066462974878054">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="974103558722248" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;27_KillBashChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="7777209889458988" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;27_KillBashChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="4156431023061553" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2338224490244325" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="8052135461005291">
                             <conditions>
@@ -511,7 +839,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5503750609885069">
+                        <event-block collapsed="1" sid="5503750609885069">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="1488177362079437" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -524,7 +852,50 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1487062574869348" type="Enemy_Chimp_Baboon" />
+                                <action id="-3" name="Create object" sid="1924948909454452" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="9837499376163107" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8896813165306648" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4841116522587799" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="7594596840870709">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                                <event-block sid="2635640942274059">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="3806447801061456" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;28_KillBaboonChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="1527248584315825" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;28_KillBaboonChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="5929244168927219" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9524234154193729" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -536,7 +907,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="7896714923736151">
+                        <event-block collapsed="1" sid="7896714923736151">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="1245728625116237" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -549,7 +920,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1288995330327802" type="Enemy_Chimp_Patro_Left" />
+                                <action id="-3" name="Create object" sid="6225864477903037" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="4631166693841647" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="713530431467707" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="3726164181151192" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="2092404209530556">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="5837520362372586" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="7897006110140305" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="6057732836645669" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9081639805196518" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="6152590351094441">
                             <conditions>
@@ -585,7 +995,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9430209530090265">
+                        <event-block collapsed="1" sid="9430209530090265">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="6830953416657131" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -598,7 +1008,46 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1352528045611919" type="Enemy_Chimp_Patro_Right" />
+                                <action id="-3" name="Create object" sid="265035504930942" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="8579961154649255" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6666670097783734" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="6720222580506003" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="4821882675130076">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="6130232655431725" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9052185733007051" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="7515243106569785" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="463750899997555" type="Achieve_Unlocked">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="7443558414530456">
                             <conditions>
@@ -637,6 +1086,9 @@
                             <param id="0" name="Object">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5376627524295212" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">0.6</param>
                         </action>
                         <action id="-9" name="Destroy" sid="5457773939072316" type="Weapon_Baboon" />
                         <action id="4" name="Set animation" sid="8701401887686112" type="Froggie">

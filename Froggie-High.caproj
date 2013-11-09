@@ -10,6 +10,9 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -17,22 +20,19 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -91,7 +91,7 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-                <animation framecount="2" loop="1" name="Die" pingpong="0" repeatcount="1" repeatto="0" sid="5615008323139831" speed="2">
+                <animation framecount="2" loop="1" name="Die" pingpong="0" repeatcount="1" repeatto="0" sid="5615008323139831" speed="1">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.34375" y="0.34375" />
@@ -3573,7 +3573,7 @@
                         <image-point name="Levels" x="0.5" y="0.585938" />
                         <image-point name="Store" x="0.3125" y="0.742188" />
                         <image-point name="Music" x="0.6875" y="0.742188" />
-                        <image-point name="RestartGO" x="0.5" y="0.585938" />
+                        <image-point name="RestartGO" x="0.5" y="0.589844" />
                         <image-point name="GiveUp" x="0.5" y="0.726563" />
                         <image-point name="FBGO" x="0.1" y="0.898438" />
                         <image-point name="TwitterGO" x="0.9" y="0.898438" />
@@ -3785,14 +3785,10 @@
                 <animation framecount="1" loop="0" name="Locked" pingpong="0" repeatcount="1" repeatto="0" sid="1012764257910982" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.203125" y="0.203125" />
-                            <point x="0.5" y="0.113281" />
-                            <point x="0.738281" y="0.261719" />
-                            <point x="0.824219" y="0.5" />
-                            <point x="0.832031" y="0.832031" />
-                            <point x="0.5" y="0.96875" />
-                            <point x="0.265625" y="0.734375" />
-                            <point x="0.15625" y="0.5" />
+                            <point x="0.0195313" y="0.00390625" />
+                            <point x="0.898438" y="0" />
+                            <point x="0.910156" y="0.996094" />
+                            <point x="0.00390625" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4691,7 +4687,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4388338383153325" speed="2">
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4388338383153325" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -4754,6 +4750,33 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="DeadNote" sid="4314087221735094">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="6907665139466507">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="14212848526943" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.938462" y="0.5" />
+                            <point x="0.912308" y="0.760504" />
+                            <point x="0.5" y="0.701681" />
+                            <point x="0.0892308" y="0.756303" />
+                            <point x="0.0615385" y="0.5" />
+                            <point x="0.0907692" y="0.247899" />
+                            <point x="0.5" y="0.327731" />
+                            <point x="0.907692" y="0.252101" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text_ComboScore" sid="3450721039957654">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
@@ -4906,6 +4929,7 @@
         <event-sheet>Achieves_Common.xml</event-sheet>
         <event-sheet>UI_Menus.xml</event-sheet>
         <event-sheet>About.xml</event-sheet>
+        <event-sheet>GameMusic.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">
@@ -4948,7 +4972,12 @@
         <file name="PowerJump.ogg" />
         <file name="PowerJump.wav" />
     </sounds-folder>
-    <music-folder expanded="1" />
+    <music-folder expanded="1">
+        <file name="MattOglseby - 3.m4a" />
+        <file name="MattOglseby - 3.ogg" />
+        <file name="MattOglseby - 5.m4a" />
+        <file name="MattOglseby - 5.ogg" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
