@@ -60,9 +60,19 @@
                     <param id="0" name="Key">&quot;PlainCake&quot;</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="5" name="Set web font" sid="1223267778750716" type="Text_NewsFeed">
+                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="3" name="Set font size" sid="2945654400656639" type="Text_NewsFeed">
+                    <param id="0" name="Size (pt)">65</param>
+                </action>
+                <action id="0" name="Set text" sid="595825856917162" type="Text_NewsFeed">
+                    <param id="0" name="Text">&quot;Launching&quot; &amp;newline &amp;  &quot;This December!&quot;</param>
+                </action>
             </actions>
         </event-block>
-        <event-group description="" sid="9791390366890499" title="Preload">
+        <event-group collapsed="1" description="" sid="9791390366890499" title="Preload">
             <sub-events>
                 <comment>All Preloads</comment>
                 <event-block sid="7806788258793513">
@@ -220,7 +230,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8428997519920965" title="MENUS">
+        <event-group description="" sid="8428997519920965" title="MENUS">
             <sub-events>
                 <event-block sid="9825124560921165">
                     <conditions>
@@ -394,7 +404,7 @@
                                 <action id="-16" name="Wait" sid="406054970893698" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="9487610478109179" type="System">
+                                <action disabled="1" id="-2" name="Go to layout" sid="9487610478109179" type="System">
                                     <param id="0" name="Layout">Tutorial</param>
                                 </action>
                             </actions>

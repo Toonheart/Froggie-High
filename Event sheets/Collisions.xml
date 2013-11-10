@@ -105,7 +105,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="8644181953438045">
+                        <event-block sid="8644181953438045">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="4359633870364442" type="Froggie">
                                     <param id="0" name="Animation">&quot;Wrap&quot;</param>
@@ -254,12 +254,8 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5618279254797601" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
+                                    <param id="0" name="Animation">&quot;Kicked&quot;</param>
                                     <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="9330378126516079" type="Froggie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-12" name="Subtract from" sid="47905498861716" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
@@ -345,6 +341,14 @@
                                 <condition id="-22" name="Else" sid="5044889869075365" type="System" />
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="9983089119858758" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Kicked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="4928115187713245" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="9" name="Set scale" sid="1433715455493138" type="HUD_HealthIndicator">
                                     <param id="0" name="Scale">1.2</param>
                                 </action>
@@ -354,21 +358,13 @@
                                 <action id="9" name="Set scale" sid="497734650836636" type="HUD_HealthIndicator">
                                     <param id="0" name="Scale">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="9983089119858758" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="4928115187713245" type="Froggie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6397730328085739" title="Chicken World Enemies">
+        <event-group collapsed="1" description="" sid="6397730328085739" title="Chicken World Enemies">
             <sub-events>
                 <event-block collapsed="1" sid="7020705298719823">
                     <conditions>
@@ -452,10 +448,10 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="7676985648833245" type="Froggie">
-                                    <param id="0" name="Animation">&quot;JawBreak&quot;</param>
+                                    <param id="0" name="Animation">&quot;Sick&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="6893663282722482" type="Froggie">
+                                <action id="-12" name="Subtract from" sid="6893663282722482" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -544,7 +540,7 @@
                                     <param id="0" name="Animation">&quot;JawBreak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="9300524770226392" type="Froggie">
+                                <action id="-12" name="Subtract from" sid="9300524770226392" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -629,10 +625,10 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6947628963669015" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
+                                    <param id="0" name="Animation">&quot;Kicked&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="3747986334797818" type="Froggie">
+                                <action id="-12" name="Subtract from" sid="3747986334797818" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -716,6 +712,14 @@
                                 <condition id="-22" name="Else" sid="8516157630293646" type="System" />
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="2314583276080543" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Kicked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="5660740058018467" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="9" name="Set scale" sid="9033312120502971" type="HUD_HealthIndicator">
                                     <param id="0" name="Scale">1.2</param>
                                 </action>
@@ -724,14 +728,6 @@
                                 </action>
                                 <action id="9" name="Set scale" sid="1146074959287912" type="HUD_HealthIndicator">
                                     <param id="0" name="Scale">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="2314583276080543" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="5660740058018467" type="Froggie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -813,7 +809,7 @@
                                     <param id="0" name="Animation">&quot;JawBreak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="9300524770226392" type="Froggie">
+                                <action id="-12" name="Subtract from" sid="9300524770226392" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -897,6 +893,30 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="5295139944222333">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5520380914618959" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8951716782808769" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Kicked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="7241804789786912" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2004139490724225" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6733573242501921" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3137959685280746" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block collapsed="1" sid="9805787308421112">
@@ -967,10 +987,10 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6947628963669015" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
+                                    <param id="0" name="Animation">&quot;HeadBump&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="3747986334797818" type="Froggie">
+                                <action id="-12" name="Subtract from" sid="3747986334797818" type="Froggie">
                                     <param id="0" name="Instance variable">Health</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
@@ -1054,6 +1074,14 @@
                                 <condition id="-22" name="Else" sid="9151804150978978" type="System" />
                             </conditions>
                             <actions>
+                                <action id="4" name="Set animation" sid="5051692795201875" type="Froggie">
+                                    <param id="0" name="Animation">&quot;HeadBump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="1837273897550955" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="9" name="Set scale" sid="320621426957659" type="HUD_HealthIndicator">
                                     <param id="0" name="Scale">1.2</param>
                                 </action>
@@ -1062,14 +1090,6 @@
                                 </action>
                                 <action id="9" name="Set scale" sid="8487157898505292" type="HUD_HealthIndicator">
                                     <param id="0" name="Scale">1</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="5051692795201875" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Pinched&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action disabled="1" id="-12" name="Subtract from" sid="1837273897550955" type="Froggie">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1091,11 +1111,11 @@
                             <param id="0" name="Scale">0.6</param>
                         </action>
                         <action id="-9" name="Destroy" sid="5457773939072316" type="Weapon_Baboon" />
-                        <action id="4" name="Set animation" sid="8701401887686112" type="Froggie">
-                            <param id="0" name="Animation">&quot;Pinched&quot;</param>
+                        <action id="4" name="Set animation" sid="6779778421161383" type="Froggie">
+                            <param id="0" name="Animation">&quot;Sick&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action disabled="1" id="-12" name="Subtract from" sid="3134976020127543" type="Froggie">
+                        <action id="-12" name="Subtract from" sid="3134976020127543" type="Froggie">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">1</param>
                         </action>
