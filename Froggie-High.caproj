@@ -10,10 +10,10 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>13900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -25,12 +25,12 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -4791,6 +4791,91 @@
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
+        </object-type>
+        <object-type name="World1_BG_Terrain1" sid="2779651619716441">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9038854256932496" speed="5">
+                    <frame duration="1" hotspotX="0.500626" hotspotY="0.500595">
+                        <collision-poly>
+                            <point x="0.379224" y="0.360285" />
+                            <point x="0.499374" y="0.19025" />
+                            <point x="0.949937" y="0.0475624" />
+                            <point x="1" y="0.499405" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.499405" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="World1_BG_Grass3" sid="1083606410505008">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8838052776436758" speed="5">
+                    <frame duration="1" hotspotX="0.500626" hotspotY="0.501114">
+                        <collision-poly>
+                            <point x="0.0713392" y="0.126949" />
+                            <point x="0.499374" y="0.385301" />
+                            <point x="0.978723" y="0.0378619" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.498886" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="World1_BG_Grass2" sid="7151168942070781">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8951541263939528" speed="5">
+                    <frame duration="1" hotspotX="0.500626" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0112641" y="0.0384615" />
+                            <point x="0.499374" y="0.162393" />
+                            <point x="0.937422" y="0.213675" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="World1_BG_Grass1" sid="6712680198569662">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6768340529607377" speed="5">
+                    <frame duration="1" hotspotX="0.500626" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0175219" y="0.101449" />
+                            <point x="0.984981" y="0.0869565" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="World1_BG_Terrain2" sid="4584623695441385">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3179816161638149" speed="5">
+                    <frame duration="1" hotspotX="0.500626" hotspotY="0.500829">
+                        <collision-poly>
+                            <point x="0.0350438" y="0.0464345" />
+                            <point x="0.499374" y="0.419569" />
+                            <point x="0.581977" y="0.553897" />
+                            <point x="0.545682" y="0.499171" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.499171" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
