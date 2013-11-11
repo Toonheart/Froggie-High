@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
@@ -52,7 +52,7 @@
                         <action id="0" name="Spawn another object" sid="2210529481051198" type="Froggie">
                             <param id="0" name="Object">Unicorn</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
-                            <param id="2" name="Image point">&quot;MushroomPin&quot;</param>
+                            <param id="2" name="Image point">&quot;Origin&quot;</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="1064465784307698" type="Unicorn">
                             <param id="0" name="Pin to">Froggie</param>
@@ -82,6 +82,9 @@
                                     <param id="0" name="Instance variable">RocketCountDown</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="3915188178252408" type="Froggie">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
@@ -110,6 +113,17 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="9092273943339367">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6773341585238204" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="8904641203497135" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="8365567231212128" type="Froggie">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
                 <comment>Pin Rocket and move some distance everytick</comment>

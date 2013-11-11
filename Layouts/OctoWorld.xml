@@ -13,46 +13,23 @@
     </margins>
     <unbounded-scrolling>1</unbounded-scrolling>
     <layers>
-        <layer name="Background_2" sid="8621462747919117">
+        <layer name="BG_Color" sid="8621462747919117">
             <initially-visible>1</initially-visible>
             <background-color>228,214,250</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>0</x>
-                <y>0.1</y>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="World1_BG_Terrain1" uid="286">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>400</x>
-                        <y>870</y>
-                        <z>0</z>
-                        <width>799</width>
-                        <height>841</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.500594556</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
-        <layer name="Background_1" sid="8264025845659367">
+        <layer name="BG_Parallax1" sid="8264025845659367">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -65,33 +42,10 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="World1_BG_Terrain2" uid="294">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>400</x>
-                        <y>978</y>
-                        <z>0</z>
-                        <width>799</width>
-                        <height>603</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.50082916</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
-        <layer name="Background" sid="6278921859990316">
+        <layer name="BG_Parallax2" sid="6278921859990316">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -118,8 +72,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1276</x>
-                        <y>1269</y>
+                        <x>1357</x>
+                        <y>1773</y>
                         <z>0</z>
                         <width>800</width>
                         <height>1280</height>
@@ -355,10 +309,54 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="World1_BG_FarTerrain" uid="286">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>724</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>928</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501250029</hotspotX>
+                        <hotspotY>0.501077592</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="World1_BG_Mist" uid="290">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>398</x>
+                        <y>521</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>447</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501118541</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Parallax2" sid="1452959224926005">
+        <layer name="BG_Parallax3" sid="1452959224926005">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -372,7 +370,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="World1_BG_Grass2" uid="290">
+                <instance type="World1_BG_NearTerrain" uid="294">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -382,19 +380,75 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>403.024536133</x>
-                        <y>1325.157592773</y>
+                        <x>406</x>
+                        <y>847</y>
                         <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
+                        <width>800</width>
+                        <height>681</height>
                         <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
+                        <hotspotX>0.501250029</hotspotX>
+                        <hotspotY>0.50073421</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="BG_Parallax4" sid="2763881509995885">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0.2</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="World1_BG_FarGrass" uid="7">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>458</x>
+                        <y>967</y>
+                        <z>0</z>
+                        <width>691</width>
+                        <height>618</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5007236</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="World1_BG_Grass1" uid="291">
+            </instances>
+            <effects />
+        </layer>
+        <layer name="BG_Parallax5" sid="7189818492147661">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0.4</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="World1_BG_NearGrass" uid="287">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -404,388 +458,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>403.024536133</x>
-                        <y>1405.157592773</y>
+                        <x>280</x>
+                        <y>1033</y>
                         <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
+                        <width>557</width>
+                        <height>491</height>
                         <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="292">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>406.024536133</x>
-                        <y>1507.157592773</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="293">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>406.024536133</x>
-                        <y>1626.157592773</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="7">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>413</x>
-                        <y>1745</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="295">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>413</x>
-                        <y>1825</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="296">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>1927</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="297">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>2046</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="298">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>2157</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="299">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>2276</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="300">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>420</x>
-                        <y>2395</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="301">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>423</x>
-                        <y>2475</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="302">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>422</x>
-                        <y>2577</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="303">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>421</x>
-                        <y>2696</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="304">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>2807</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="305">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>416</x>
-                        <y>2926</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="306">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>420</x>
-                        <y>3045</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass1" uid="307">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>423</x>
-                        <y>3125</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>159.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="308">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>422</x>
-                        <y>3227</y>
-                        <z>0</z>
-                        <width>873.043579102</width>
-                        <height>255.684844971</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.500897646</hotspotX>
+                        <hotspotY>0.501018345</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1508,13 +1188,29 @@
             <instances />
             <effects />
         </layer>
-        <layer name="FrontParallax" sid="4639506166200594">
+        <layer name="FrontParallax1" sid="4639506166200594">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
                 <x>0</x>
-                <y>0.7</y>
+                <y>0.2</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="FrontParallax2" sid="9118597876795916">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0.3</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
@@ -1522,7 +1218,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="World1_BG_Grass3" uid="287">
+                <instance type="World1_BG_NearWave" uid="288">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1532,41 +1228,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>408.935760498</x>
-                        <y>1071.11328125</y>
+                        <x>398</x>
+                        <y>1190</y>
                         <z>0</z>
-                        <width>860.282409668</width>
-                        <height>483.437774658</height>
+                        <width>800</width>
+                        <height>182</height>
                         <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
-                        <hotspotY>0.501113594</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="World1_BG_Grass2" uid="288">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>405.65612793</x>
-                        <y>1156.456054688</y>
-                        <z>0</z>
-                        <width>843.743835449</width>
-                        <height>259.143890381</height>
-                        <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="World1_BG_Grass1" uid="289">
+                <instance type="World1_BG_FarWave" uid="295">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1576,13 +1250,57 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>405.65612793</x>
-                        <y>1204.456054688</y>
+                        <x>421</x>
+                        <y>1281</y>
                         <z>0</z>
-                        <width>843.743835449</width>
-                        <height>163.143890381</height>
+                        <width>882.835510254</width>
+                        <height>320.027893066</height>
                         <depth>0</depth>
-                        <hotspotX>0.500625789</hotspotX>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="World1_BG_NearWave" uid="296">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>407</x>
+                        <y>1395</y>
+                        <z>0</z>
+                        <width>872</width>
+                        <height>233</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="World1_BG_FarWave" uid="289">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>401</x>
+                        <y>1133</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>290</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ChickenWorld_BG_Generatiom</name>
+    <events>
+        <event-group collapsed="1" description="" sid="4227218786294189" title="Background Generation">
+            <sub-events>
+                <event-block sid="9632641390554401">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3008782886882944" type="System">
+                            <param id="0" name="First value">NextFloorPosition</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">ViewportTop(&quot;Game&quot;)</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="9150647397211439" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>stars and Flares</comment>
+                        <event-block sid="2128438922224961">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9348596279497835" type="System">
+                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3547037201247953" type="System" />
+                                <condition disabled="1" id="-14" name="Compare variable" sid="8023676907447859" type="System">
+                                    <param id="0" name="Variable">Counter_Floor</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8372866206759418" type="System">
+                                    <param id="0" name="Object to create">World2_BG_ObjectsP1</param>
+                                    <param id="1" name="Layer">&quot;BG_Parallax1&quot;</param>
+                                    <param id="2" name="X">random(100,LayoutWidth-100)</param>
+                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-random(60,80)</param>
+                                </action>
+                                <action disabled="1" id="4" name="Set animation" sid="7846707961686539" type="World2_BG_ObjectsP1">
+                                    <param id="0" name="Animation">&quot;Flares&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5964422690194609" type="World2_BG_ObjectsP1">
+                                    <param id="0" name="Scale">random(0.6,1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="382575215161672" type="World2_BG_ObjectsP1">
+                                    <param id="0" name="Instance variable">Flip</param>
+                                    <param id="1" name="Value">round(random(0,1))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Circles and spirals</comment>
+                        <event-block sid="5951639066909631">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8694684510631161" type="System">
+                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4743295414865796" type="System" />
+                                <condition id="-14" name="Compare variable" sid="3005803050173506" type="System">
+                                    <param id="0" name="Variable">Counter_Floor</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="2168908580855322" type="System">
+                                    <param id="0" name="Object to create">World2_BG_ObjectsP2</param>
+                                    <param id="1" name="Layer">&quot;BG_Parallax2&quot;</param>
+                                    <param id="2" name="X">random(100,LayoutWidth-100)</param>
+                                    <param id="3" name="Y">ViewportTop(&quot;Game&quot;)-random(80,120)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4863473117009826" type="World2_BG_ObjectsP2">
+                                    <param id="0" name="Scale">random(0.6,1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7057776492284571" type="World2_BG_ObjectsP2">
+                                    <param id="0" name="Instance variable">Flip</param>
+                                    <param id="1" name="Value">round(random(0,1))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Randomly scaling,Flipping " sid="6902039273997215" title="Bacground randamization">
+            <sub-events>
+                <event-block sid="9850711986581617">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7637751274531276" type="World2_BG_ObjectsP2">
+                            <param id="0" name="Instance variable">Flip</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="6313376693338748" type="World2_BG_ObjectsP2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8821582304357364">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4317723622587142" type="World2_BG_ObjectsP1">
+                            <param id="0" name="Instance variable">Flip</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="4203581792083436" type="World2_BG_ObjectsP1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4151169084350578">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7821048725960853" type="System">
+                            <param id="0" name="First value">WorldSection%2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7186043212959627" type="World2_BG_ObjectsP1">
+                            <param id="0" name="Animation">&quot;Flares&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2541983344141675">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7824888729190718" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8928916830282137" type="World2_BG_ObjectsP1">
+                            <param id="0" name="Animation">&quot;Stars&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9270478863307566">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3562675816580146" type="System">
+                            <param id="0" name="First value">WorldSection%2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8640172099020879" type="World2_BG_ObjectsP2">
+                            <param id="0" name="Animation">&quot;Circle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9283893884628452">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2542519674676029" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9756929152189253" type="World2_BG_ObjectsP2">
+                            <param id="0" name="Animation">&quot;Spiral&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
