@@ -36,7 +36,7 @@
                         <action id="-9" name="Destroy" sid="2349543549789312" type="PowerUp_Mushroom_Rainbow" />
                         <action id="-10" name="Set value" sid="3505180082548866" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
-                            <param id="1" name="Value">3</param>
+                            <param id="1" name="Value">6</param>
                         </action>
                     </actions>
                 </event-block>
@@ -45,7 +45,7 @@
                         <condition id="-7" name="Compare instance variable" sid="679066288460733" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
+                            <param id="2" name="Value">6</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -58,10 +58,15 @@
                             <param id="0" name="Pin to">Froggie</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="4281736587911986" type="Achieve_Unlocked">
+                            <param id="0" name="Object">Unicorn_Ride</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
-                <event-block sid="7812786490129375">
+                <event-block collapsed="1" sid="7812786490129375">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8055733803766058" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -127,7 +132,7 @@
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
                 <comment>Pin Rocket and move some distance everytick</comment>
-                <event-block sid="5775586601852508">
+                <event-block collapsed="1" sid="5775586601852508">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="468487929353543" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -138,9 +143,6 @@
                     <actions>
                         <action behavior="Platform" id="11" name="Set enabled" sid="7012171557605094" type="Froggie">
                             <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="3069056459446161" type="Froggie">
-                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -165,12 +167,18 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4494758848503557" type="System" />
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="11" name="Set enabled" sid="6085004724990191" type="Froggie">
                             <param id="0" name="State">1</param>
                         </action>
                         <action behavior="Pin" id="1" name="Unpin" sid="2099451820407826" type="Unicorn" />
+                        <action id="0" name="Spawn another object" sid="917504160293503" type="Unicorn">
+                            <param id="0" name="Object">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="6296803670728335" type="Unicorn" />
                     </actions>
                 </event-block>

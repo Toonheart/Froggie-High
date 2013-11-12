@@ -51,11 +51,19 @@
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-21" name="Reset global variables" sid="1304413984562333" type="System" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="463226628146205" type="GiftRays">
+                            <param id="0" name="Pin to">Gift_Base</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="7583831521557141" type="Collectible_GiftBox">
+                            <param id="0" name="Pin to">Gift_Base</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -520,7 +528,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="6099253772183661" type="System">
                                                             <param id="0" name="Object to create">Enemy_PatroChicken_Right</param>
-                                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">ViewportLeft(&quot;Game&quot;)+20</param>
                                                             <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;)+ViewportTop(&quot;Game&quot;))+400</param>
                                                         </action>
@@ -540,7 +548,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="5978068724442354" type="System">
                                                             <param id="0" name="Object to create">Enemy_PatroChicken_Left</param>
-                                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Viewportright(&quot;Game&quot;)-20</param>
                                                             <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;),ViewportTop(&quot;Game&quot;))+400</param>
                                                         </action>
@@ -1216,13 +1224,13 @@
                                         <action id="9" name="Set scale" sid="1773140614418566" type="Floor_HeyStack_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="4483500125616982" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="4483500125616982" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_HeyStack_Normal.X</param>
                                             <param id="3" name="Y">Floor_HeyStack_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="828647662353446" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="828647662353446" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_HeyStack_Normal.X</param>
@@ -1237,13 +1245,17 @@
                                         <action id="9" name="Set scale" sid="8419476502970965" type="Floor_HeyStack_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="3346711446172913" type="System">
+                                        <action id="-3" name="Set position" sid="9129715136175289" type="Gift_Base">
+                                            <param id="0" name="X">Floor_HeyStack_Normal.X</param>
+                                            <param id="1" name="Y">Floor_HeyStack_Normal.Y-600</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="3346711446172913" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_HeyStack_Normal.X</param>
                                             <param id="3" name="Y">Floor_HeyStack_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="995138273797074" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="995138273797074" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_HeyStack_Normal.X</param>
@@ -1255,13 +1267,13 @@
                                             <param id="2" name="X">Floor_HeyStack_Normal.X+256</param>
                                             <param id="3" name="Y">Floor_HeyStack_Normal.Y</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="520715500704778" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="520715500704778" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_HeyStack_Normal.X</param>
                                             <param id="3" name="Y">Floor_HeyStack_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="879264937062559" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="879264937062559" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_HeyStack_Normal.X</param>

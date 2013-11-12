@@ -57,6 +57,14 @@
                             <param id="0" name="Layer">&quot;TopBlack&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4257009360462523" type="GiftRays">
+                            <param id="0" name="Pin to">Gift_Base</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1216923904478791" type="Collectible_GiftBox">
+                            <param id="0" name="Pin to">Gift_Base</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -97,7 +105,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block collapsed="1" sid="5773070796798144">
+                        <event-block sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -107,7 +115,7 @@
                                 <condition id="-14" name="Compare variable" sid="7048107559489026" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -522,7 +530,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="6099253772183661" type="System">
                                                             <param id="0" name="Object to create">Enemy_PatrolOcto_Right</param>
-                                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">ViewportLeft(&quot;Game&quot;)+20</param>
                                                             <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;)+640,ViewportTop(&quot;Game&quot;))</param>
                                                         </action>
@@ -539,7 +547,7 @@
                                                     <actions>
                                                         <action id="-3" name="Create object" sid="5978068724442354" type="System">
                                                             <param id="0" name="Object to create">Enemy_PatrolOcto_Left</param>
-                                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                             <param id="2" name="X">Viewportright(&quot;Game&quot;)-20</param>
                                                             <param id="3" name="Y">random(ViewportTop(&quot;Game&quot;)+640,ViewportTop(&quot;Game&quot;))</param>
                                                         </action>
@@ -1084,7 +1092,7 @@
                             </sub-events>
                         </event-block>
                         <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
-                        <event-block collapsed="1" sid="8573108025996764">
+                        <event-block sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -1094,7 +1102,7 @@
                                 <condition id="-14" name="Compare variable" sid="2772437121814374" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="6284013719495923" type="System">
                                     <param id="0" name="Variable">Counter_Floor</param>
@@ -1222,13 +1230,13 @@
                                         <action id="9" name="Set scale" sid="2732800750180176" type="Floor_Grass_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="1135512971040626" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="1135512971040626" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="8651265383365638" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="8651265383365638" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
@@ -1243,17 +1251,21 @@
                                         <action id="9" name="Set scale" sid="4843604160466461" type="Floor_Grass_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="2146855307112603" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="2146855307112603" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="6701631062326041" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="6701631062326041" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y-600</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="3446719155424056" type="Gift_Base">
+                                            <param id="0" name="X">Floor_Grass_Normal.X</param>
+                                            <param id="1" name="Y">Floor_Grass_Normal.Y-600</param>
                                         </action>
                                         <action id="-3" name="Create object" sid="9917228416236487" type="System">
                                             <param id="0" name="Object to create">Floor_Grass_Normal</param>
@@ -1261,13 +1273,13 @@
                                             <param id="2" name="X">Floor_Grass_Normal.X+256</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="7707782236643166" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="7707782236643166" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="8111976967298925" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="8111976967298925" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Grass_Normal.X</param>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Froggie_Events</name>
     <events>
-        <event-group collapsed="1" description="" sid="9939025668940154" title="FROGGIE JUMP">
+        <event-group description="" sid="9939025668940154" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
                 <event-block collapsed="1" sid="1939084024228619">
@@ -218,7 +218,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL">
+        <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL">
             <sub-events>
                 <event-block sid="6325441995628482">
                     <conditions>
@@ -301,7 +301,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="38727983774057" title="FROGGIE - Destroy">
+        <event-group collapsed="1" description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="38727983774057" title="FROGGIE - Destroy">
             <sub-events>
                 <comment>capture the fall point to ensure froggie is falling long distane</comment>
                 <event-block sid="8529980524343526">

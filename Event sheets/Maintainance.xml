@@ -20,9 +20,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7432947511309844" title="OCTO WORLD">
+        <event-group description="" sid="7432947511309844" title="OCTO WORLD">
             <sub-events>
-                <event-group collapsed="1" description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
+                <event-group description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
                     <sub-events>
                         <comment>Destroy The Floors Below the ViewPortBottom</comment>
                         <event-block sid="7677198932992921">
@@ -58,7 +58,7 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="1434606079940587" type="BG1">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Background&quot;)+1280</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Background&quot;)+2000</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -174,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4920008378764982" title="ColleCtibles">
+        <event-group description="" sid="4920008378764982" title="ColleCtibles">
             <sub-events>
                 <comment>Destroy the collectible below the screen,and overlaping the side port markers</comment>
                 <event-block sid="3874415251620764">
@@ -211,8 +211,16 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7689727470139722" title="Others">
+        <event-group description="" sid="7689727470139722" title="Others">
             <sub-events>
+                <event-block sid="461862690270841">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1980471791033806" type="Weapon_Baboon" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="263074818267037" type="Weapon_Baboon" />
+                    </actions>
+                </event-block>
                 <event-block sid="2296325576407999">
                     <conditions>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="5177134995901843" type="Rope_Left" />
@@ -247,13 +255,21 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="461862690270841">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="1980471791033806" type="Weapon_Baboon" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="263074818267037" type="Weapon_Baboon" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="7525587723564034" title="Background Objects">
+            <sub-events>
+                <event-block sid="554422739994701">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="9641525689230906" type="BG_FrontObjects">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+2000</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="4977708491194544" type="BG_FrontObjects" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4024103182970469" type="BG_FrontObjects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

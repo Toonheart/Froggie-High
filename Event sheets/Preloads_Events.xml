@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Preloads_Events</name>
+    <events>
+        <event-block sid="6786898918201818">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3557076738408311" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="8700997783747368" type="Audio">
+                    <param id="0" name="Audio file">collectible</param>
+                </action>
+                <action id="4" name="Preload" sid="1145157658865889" type="Audio">
+                    <param id="0" name="Audio file">Fall</param>
+                </action>
+                <action id="4" name="Preload" sid="4281029158551738" type="Audio">
+                    <param id="0" name="Audio file">Jump</param>
+                </action>
+                <action id="4" name="Preload" sid="5486098985116331" type="Audio">
+                    <param id="0" name="Audio file">EMPTY [High quality]</param>
+                </action>
+                <action id="4" name="Preload" sid="2431905805193977" type="Audio">
+                    <param id="0" name="Audio file">PowerJump</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8015340791628458">
+            <conditions>
+                <condition id="1" name="Preloads complete" sid="8712290213473799" type="Audio" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3243813741448408" type="System">
+                    <param id="0" name="Layout">Title_Screen</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

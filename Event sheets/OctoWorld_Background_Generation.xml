@@ -4,7 +4,7 @@
     <name>OctoWorld_Background_Generation</name>
     <events>
         <comment>Generating clouds in two Parallax layers,The big size cloud shold be faster and the smaller </comment>
-        <event-group collapsed="1" description="" disabled="1" sid="4142508178103976" title="Cloud Generation">
+        <event-group description="" disabled="1" sid="4142508178103976" title="Cloud Generation">
             <sub-events>
                 <event-block disabled="1" sid="408375433930622">
                     <conditions>
@@ -179,6 +179,9 @@
                                 <action id="-10" name="Set value" sid="382575215161672" type="World1_BG_ObjectsP1">
                                     <param id="0" name="Instance variable">Flip</param>
                                     <param id="1" name="Value">round(random(0,1))</param>
+                                </action>
+                                <action id="1" name="Append text" sid="2622986214067811" type="Text_Debug">
+                                    <param id="0" name="Text">&quot;hhvhl hbhfb hbfbf &quot;</param>
                                 </action>
                             </actions>
                         </event-block>

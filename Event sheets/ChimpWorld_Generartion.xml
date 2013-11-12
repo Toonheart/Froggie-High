@@ -57,6 +57,14 @@
                             <param id="1" name="Visibility">0</param>
                         </action>
                         <action id="-21" name="Reset global variables" sid="1492650394172914" type="System" />
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3043893674263989" type="GiftRays">
+                            <param id="0" name="Pin to">Gift_Base</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4488213589218787" type="Collectible_GiftBox">
+                            <param id="0" name="Pin to">Gift_Base</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -482,7 +490,7 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>FLYING CHICKEN&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block collapsed="1" sid="4071968505375019">
+                                        <event-block sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_Wooden_Normal.PresentFloor%5</param>
@@ -1221,62 +1229,20 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Second value">8</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="4258434462625896" type="System" />
+                                        <condition disabled="1" id="-4" name="Trigger once while true" sid="4258434462625896" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Create object" sid="3025836923098276" type="System">
+                                        <action id="-3" name="Create object" sid="2187971985007625" type="System">
+                                            <param id="0" name="Object to create">Enemy_ChimpBoss</param>
+                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                            <param id="2" name="X">LayoutWidth/2</param>
+                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-800</param>
+                                        </action>
+                                        <action disabled="1" id="-3" name="Create object" sid="3025836923098276" type="System">
                                             <param id="0" name="Object to create">Floor_Rock</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">LayoutWidth/2</param>
                                             <param id="3" name="Y">Floor_Wooden_Normal.Y-400</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="4449419786557057" type="System">
-                                            <param id="0" name="Object to create">Basket</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Rock.X</param>
-                                            <param id="3" name="Y">Floor_Rock.Y-600</param>
-                                        </action>
-                                        <action id="-3" name="Create object" sid="7497629304482618" type="System">
-                                            <param id="0" name="Object to create">Enemy_ChimpBoss</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Rock.X</param>
-                                            <param id="3" name="Y">Floor_Rock.Y</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="1636158991834193" type="System">
-                                            <param id="0" name="Object to create">Basket</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Enemy_ChimpBoss.X-256</param>
-                                            <param id="3" name="Y">Enemy_ChimpBOSS.Y</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="7126215092011727" type="System">
-                                            <param id="0" name="Object to create">Basket</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Enemy_ChimpBoss.X+256</param>
-                                            <param id="3" name="Y">Enemy_ChimpBOSS.Y</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="7515870185485454" type="System">
-                                            <param id="0" name="Object to create">Floor_Rock</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">LayoutWidth/2-300</param>
-                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-300</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="9166662044821214" type="System">
-                                            <param id="0" name="Object to create">Basket</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Rock.X</param>
-                                            <param id="3" name="Y">Floor_Rock.Y-128</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="5865073288073625" type="System">
-                                            <param id="0" name="Object to create">Floor_Rock</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">LayoutWidth/2+300</param>
-                                            <param id="3" name="Y">Floor_Wooden_Normal.Y-300</param>
-                                        </action>
-                                        <action disabled="1" id="-3" name="Create object" sid="8434645191320802" type="System">
-                                            <param id="0" name="Object to create">Basket</param>
-                                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                            <param id="2" name="X">Floor_Rock.X</param>
-                                            <param id="3" name="Y">Floor_Rock.Y-128</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="6389730527080877" type="HUD_Basket">
                                             <param id="0" name="Visibility">1</param>
@@ -1295,13 +1261,13 @@
                                         <action id="9" name="Set scale" sid="4077494814908786" type="Floor_Wooden_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="4783026184886624" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="4783026184886624" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Wooden_Normal.X</param>
                                             <param id="3" name="Y">Floor_Wooden_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="5146225541303949" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="5146225541303949" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Wooden_Normal.X</param>
@@ -1313,16 +1279,20 @@
                                             <param id="2" name="X">Floor_Wooden_Normal.X+256</param>
                                             <param id="3" name="Y">Floor_Wooden_Normal.Y</param>
                                         </action>
+                                        <action id="-3" name="Set position" sid="5918460789874535" type="Gift_Base">
+                                            <param id="0" name="X">Floor_Wooden_Normal.X</param>
+                                            <param id="1" name="Y">Floor_Wooden_Normal.Y-600</param>
+                                        </action>
                                         <action id="9" name="Set scale" sid="7443817535281447" type="Floor_Wooden_Normal">
                                             <param id="0" name="Scale">1</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="3057102311377794" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="3057102311377794" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Wooden_Normal.X</param>
                                             <param id="3" name="Y">Floor_Wooden_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="7773935833434112" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="7773935833434112" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Wooden_Normal.X</param>
@@ -1334,13 +1304,13 @@
                                             <param id="2" name="X">Floor_Wooden_Normal.X+256</param>
                                             <param id="3" name="Y">Floor_Wooden_Normal.Y</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="2599948839663381" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="2599948839663381" type="System">
                                             <param id="0" name="Object to create">GiftRays</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Wooden_Normal.X</param>
                                             <param id="3" name="Y">Floor_Wooden_Normal.Y-600</param>
                                         </action>
-                                        <action id="-3" name="Create object" sid="5986531481705026" type="System">
+                                        <action disabled="1" id="-3" name="Create object" sid="5986531481705026" type="System">
                                             <param id="0" name="Object to create">Collectible_GiftBox</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">Floor_Wooden_Normal.X</param>

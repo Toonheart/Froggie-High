@@ -167,6 +167,18 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5375268433599084">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="2794655719009716" type="Collectible_GiftBox">
+                                    <param id="0" name="Object">GiftRays</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5491846303721714" type="GiftRays" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="934377996312115">
                     <conditions>
@@ -203,11 +215,40 @@
                         <condition id="-4" name="Trigger once while true" sid="8076436631108778" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="9792629402711457" type="Enemy_OctoBOSS" />
-                        <action id="2" name="Set at X" sid="2542653739772214" type="WorldSelector">
-                            <param id="0" name="X">CurrentWorld</param>
-                            <param id="1" name="Value">2</param>
+                        <action id="-15" name="Set visible" sid="2433113884465409" type="Enemy_OctoBOSS">
+                            <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-3" name="Create object" sid="802109659876656" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_OctoBOSS.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_OctoBOSS.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8823282435365821" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6709094115307681" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2594269518184418" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_OctoBOSS.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_OctoBOSS.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5636620243884119" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8976889711673579" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_OctoBOSS.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_OctoBOSS.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7188953766196968" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6113139526267585" type="Enemy_OctoBOSS" />
                     </actions>
                     <sub-events>
                         <event-block sid="910844068256306">
@@ -368,7 +409,7 @@
                         <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
                             <param id="0" name="Instance variable">Scale</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">0.5</param>
+                            <param id="2" name="Value">0.8</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
                     </conditions>
@@ -395,7 +436,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="8363539136310204">
+                <event-block sid="8363539136310204">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
                         <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
@@ -423,7 +464,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
                                             <param id="0" name="Instance variable">Scale</param>
-                                            <param id="1" name="Value">Self.Scale-0.01</param>
+                                            <param id="1" name="Value">Self.Scale-0.002</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -438,7 +479,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
                                             <param id="0" name="Instance variable">Scale</param>
-                                            <param id="1" name="Value">Self.Scale+0.01</param>
+                                            <param id="1" name="Value">Self.Scale+0.002</param>
                                         </action>
                                     </actions>
                                 </event-block>

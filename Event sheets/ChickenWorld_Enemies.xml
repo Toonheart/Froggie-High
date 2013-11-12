@@ -143,7 +143,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1561983884869096" title="BIGBOSS GamePlay">
+        <event-group description="" sid="1561983884869096" title="BIGBOSS GamePlay">
             <sub-events>
                 <event-block sid="1261691158325619">
                     <conditions>
@@ -158,6 +158,18 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5997232568493248">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="6020572507286845" type="Collectible_GiftBox">
+                                    <param id="0" name="Object">GiftRays</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2406937322542175" type="GiftRays" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7367913264664048">
                     <conditions>
@@ -195,11 +207,44 @@
                         <condition id="-4" name="Trigger once while true" sid="3551535672498017" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8318293374345379" type="Enemy_ChickenBOSS" />
+                        <action id="-15" name="Set visible" sid="9173328616902905" type="Enemy_ChickenBOSS">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="2" name="Set at X" sid="8703432952296814" type="WorldSelector">
                             <param id="0" name="X">CurrentWorld</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action id="-3" name="Create object" sid="8369431179103069" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_ChickenBOSS.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_ChickenBOSS.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1126909910877397" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6108246086705763" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="7577540607280318" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_ChickenBOSS.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_ChickenBOSS.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7742152401652893" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4216679964126034" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_ChickenBOSS.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_ChickenBOSS.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2115965269645893" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8318293374345379" type="Enemy_ChickenBOSS" />
                     </actions>
                     <sub-events>
                         <event-block sid="5681418863455218">
@@ -354,18 +399,105 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-group description="" sid="5132141397659628" title="GiftBox Effects">
+                            <sub-events>
+                                <event-block sid="4779730656366491">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
+                                            <param id="0" name="Instance variable">Scale</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0.8</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="532585220994859" type="GiftRays">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1794108938290715">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8298210424733968" type="GiftRays">
+                                            <param id="0" name="Instance variable">Scale</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="8026352037039498" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7576871854633069" type="GiftRays">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8363539136310204">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
+                                        <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3612076594567225">
+                                            <conditions>
+                                                <condition id="-1" name="Every tick" sid="9074974841573255" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="9" name="Set scale" sid="5931095776999492" type="GiftRays">
+                                                    <param id="0" name="Scale">Self.Scale</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="7381684971212141">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="60461347689043" type="GiftRays">
+                                                            <param id="0" name="Instance variable">Direction</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
+                                                            <param id="0" name="Instance variable">Scale</param>
+                                                            <param id="1" name="Value">Self.Scale-0.002</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="6758912167083795">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="4158155634027162" type="GiftRays">
+                                                            <param id="0" name="Instance variable">Direction</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
+                                                            <param id="0" name="Instance variable">Scale</param>
+                                                            <param id="1" name="Value">Self.Scale+0.002</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6082901197171621" title="GiftBox Effects">
+        <event-group collapsed="1" description="" sid="8610502038597154" title="GiftBox Effects3">
             <sub-events>
                 <event-block sid="4779730656366491">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
                             <param id="0" name="Instance variable">Scale</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">0.5</param>
+                            <param id="2" name="Value">0.8</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
                     </conditions>
@@ -395,7 +527,7 @@
                 <event-block sid="8363539136310204">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
-                        <condition id="2" inverted="1" name="Is pause" sid="259743199139188" type="Pause" />
+                        <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -420,7 +552,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
                                             <param id="0" name="Instance variable">Scale</param>
-                                            <param id="1" name="Value">Self.Scale-0.01</param>
+                                            <param id="1" name="Value">Self.Scale-0.002</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -435,7 +567,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
                                             <param id="0" name="Instance variable">Scale</param>
-                                            <param id="1" name="Value">Self.Scale+0.01</param>
+                                            <param id="1" name="Value">Self.Scale+0.002</param>
                                         </action>
                                     </actions>
                                 </event-block>
