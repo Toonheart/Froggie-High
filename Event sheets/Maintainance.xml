@@ -22,7 +22,7 @@
         </event-group>
         <event-group description="" sid="7432947511309844" title="OCTO WORLD">
             <sub-events>
-                <event-group description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
+                <event-group collapsed="1" description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
                     <sub-events>
                         <comment>Destroy The Floors Below the ViewPortBottom</comment>
                         <event-block sid="7677198932992921">
@@ -211,7 +211,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7689727470139722" title="Others">
+        <event-group collapsed="1" description="" sid="7689727470139722" title="Others">
             <sub-events>
                 <event-block sid="461862690270841">
                     <conditions>
@@ -255,18 +255,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7525587723564034" title="Background Objects">
+        <event-group collapsed="1" description="" sid="7525587723564034" title="Background Objects">
             <sub-events>
                 <event-block sid="554422739994701">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="9641525689230906" type="BG_FrontObjects">
+                        <condition id="-2" name="Compare Y" sid="9641525689230906" type="BG_Objects">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+2000</param>
                         </condition>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="4977708491194544" type="BG_FrontObjects" />
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="4977708491194544" type="BG_Objects" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="4024103182970469" type="BG_FrontObjects" />
+                        <action id="-9" name="Destroy" sid="4024103182970469" type="BG_Objects" />
                     </actions>
                 </event-block>
             </sub-events>

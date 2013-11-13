@@ -81,5 +81,65 @@
                 </action>
             </actions>
         </event-block>
+        <event-block disabled="1" sid="8532817111904654">
+            <conditions>
+                <condition id="3" name="On touched object" sid="6212094658322046" type="Touch">
+                    <param id="0" name="Object">Button_Resume</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="6083137000285752" type="Audio">
+                    <param id="0" name="Audio file">Play_Resume</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;Play_Resume&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7077469224024924">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9767190511917265" type="Froggie">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="623522945468226" type="Audio">
+                    <param id="0" name="Audio file">Oops</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;Oops&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7247909107315936">
+            <conditions>
+                <condition id="2" name="Is playing" sid="2080192312817294" type="Froggie">
+                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="8449657435360597" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="7633368967357046" type="Audio">
+                    <param id="0" name="Audio file">onKicked</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;OnKicked&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9091791499266296">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="6958394672130703" type="EnemySmoke" />
+                <condition id="-4" name="Trigger once while true" sid="8796512426307942" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="6045381667835879" type="Audio">
+                    <param id="0" name="Audio file">EnemyDestroyed</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;EnemyDestroyed&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

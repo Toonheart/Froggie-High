@@ -12,13 +12,17 @@
                 <action id="1" name="Set pause state" sid="3825860280640311" type="Pause">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="0" name="Set local value" sid="6071361289610755" type="WebStr_Common">
+                    <param id="0" name="Key">&quot;CompletedWorlds&quot;</param>
+                    <param id="1" name="Value">3</param>
+                </action>
                 <action id="-9" name="Set value" sid="6385980345719624" type="System">
                     <param id="0" name="Variable">HighestUnlockedWorld</param>
                     <param id="1" name="Value">int(WebStr_Common.LocalValue(&quot;CompletedWorlds&quot;))+1</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="8485229288091562">
+                <event-block collapsed="1" sid="8485229288091562">
                     <conditions>
                         <condition id="-11" name="For Each" sid="8268411806846829" type="System">
                             <param id="0" name="Object">Icon_WorldSelector</param>
@@ -342,7 +346,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
+        <event-group description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
             <sub-events>
                 <event-block sid="2688740518192219">
                     <conditions>
@@ -410,7 +414,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4589216467661568" title="UserInputs">
+        <event-group collapsed="1" description="" sid="4589216467661568" title="UserInputs">
             <sub-events>
                 <comment>Go Back to the Title Menu</comment>
                 <event-block sid="7429165856555494">
@@ -878,6 +882,53 @@
                     </conditions>
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="5512903013775095" type="StoryBoard" />
+                        <action id="-16" name="Wait" sid="8848778986039634" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5459999374475783" type="StoryBoard" />
+                        <action id="-9" name="Set value" sid="6855977790227232" type="System">
+                            <param id="0" name="Variable">StoryBoard</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="56170690142136">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5519355590187815" type="System">
+                            <param id="0" name="Variable">StoryBoard</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1857053395438046" type="StoryBoard">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9526902634945319">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7447110876859926" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6600795157458144" type="StoryBoard">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2384005063761986" title="BAD FIX for Pause BUG">
+            <sub-events>
+                <event-block sid="9253924194358869">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="5323479991226167" type="BG1_Levels" />
+                        <condition id="2" name="Is pause" sid="1243309310176123" type="Pause" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set pause state" sid="996177089556749" type="Pause">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

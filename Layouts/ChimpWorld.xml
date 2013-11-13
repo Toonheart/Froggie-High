@@ -15,24 +15,8 @@
     <layers>
         <layer name="BG_Color" sid="3445490271220465">
             <initially-visible>1</initially-visible>
-            <background-color>17,6,61</background-color>
+            <background-color>20,75,184</background-color>
             <transparent>0</transparent>
-            <parallax>
-                <x>0</x>
-                <y>0</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="BG_Parallax1" sid="151478131931259">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
             <parallax>
                 <x>0</x>
                 <y>0</y>
@@ -68,6 +52,22 @@
             </instances>
             <effects />
         </layer>
+        <layer name="BG_Parallax1" sid="151478131931259">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0.3</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
         <layer name="BG_Parallax2" sid="5006143771641686">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -92,14 +92,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>398</x>
-                        <y>924</y>
+                        <x>412.521484375</x>
+                        <y>1048.016845703</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>928</height>
+                        <width>827.04296875</width>
+                        <height>455.907409668</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.5011338</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -131,14 +131,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>361</x>
-                        <y>1041</y>
+                        <x>407.471191406</x>
+                        <y>992.038574219</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>681</height>
+                        <width>831.903808594</width>
+                        <height>560.83404541</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.50073421</hotspotY>
+                        <hotspotX>0.500624239</hotspotX>
+                        <hotspotY>0.501851857</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -260,8 +260,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>628</x>
-                        <y>1037</y>
+                        <x>525</x>
+                        <y>722</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -294,8 +294,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>653</x>
-                        <y>424</y>
+                        <x>598</x>
+                        <y>127</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -328,8 +328,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>255</x>
-                        <y>691</y>
+                        <x>170</x>
+                        <y>341</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -357,6 +357,35 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="GiftRays" uid="338">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Scale>1</Scale>
+                        <Direction>0</Direction>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-958.571411133</x>
+                        <y>1099.571411133</y>
+                        <z>0</z>
+                        <width>360</width>
+                        <height>360</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
                 <instance type="Letter_MarkerBottom" uid="154">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -417,8 +446,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>649</x>
-                        <y>398</y>
+                        <x>1356</x>
+                        <y>652</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -439,8 +468,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>263</x>
-                        <y>671</y>
+                        <x>1325</x>
+                        <y>353</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -477,36 +506,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-485</x>
-                        <y>807</y>
+                        <x>-815</x>
+                        <y>447</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Letter_CollectibleCake" uid="156">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-624</x>
-                        <y>598</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -527,8 +531,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-603</x>
-                        <y>476</y>
+                        <x>-1003</x>
+                        <y>377</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -552,8 +556,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-604</x>
-                        <y>319</y>
+                        <x>-923</x>
+                        <y>227</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -577,8 +581,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-579</x>
-                        <y>173</y>
+                        <x>-815</x>
+                        <y>90</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -602,58 +606,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-414</x>
-                        <y>342</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Letter_CollectibleCake" uid="161">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-287</x>
-                        <y>726</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Letter_CollectibleCake" uid="164">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-487</x>
-                        <y>473</y>
+                        <x>-708</x>
+                        <y>219</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
@@ -677,90 +631,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-301</x>
-                        <y>211</y>
+                        <x>-617</x>
+                        <y>377</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Letter_CollectibleCake" uid="167">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-639</x>
-                        <y>723</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Letter_CollectibleCake" uid="168">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-410</x>
-                        <y>602</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="PowerUp_Mushroom_Rainbow" uid="313">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <RotateTowards>-90</RotateTowards>
-                        <Gap>0</Gap>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>258</x>
-                        <y>486</y>
-                        <z>0</z>
-                        <width>192</width>
-                        <height>192</height>
-                        <depth>0</depth>
-                        <hotspotX>0.546875</hotspotX>
-                        <hotspotY>0.786458313</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -920,35 +798,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GiftRays" uid="338">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Scale>1</Scale>
-                        <Direction>0</Direction>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-958.571411133</x>
-                        <y>1099.571411133</y>
-                        <z>0</z>
-                        <width>360</width>
-                        <height>360</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -1009,8 +858,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>647</x>
-                        <y>897</y>
+                        <x>529</x>
+                        <y>511</y>
                         <z>0</z>
                         <width>192</width>
                         <height>192</height>
@@ -1081,10 +930,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>402</x>
-                        <y>1264</y>
+                        <y>1134</y>
                         <z>0</z>
                         <width>800</width>
-                        <height>290</height>
+                        <height>296</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1092,7 +941,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="World3_BG_NearWave" uid="312">
+                <instance type="World3_BG_NearRocks" uid="312">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1103,10 +952,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>396</x>
-                        <y>1335</y>
+                        <y>1155</y>
                         <z>0</z>
                         <width>800</width>
-                        <height>182</height>
+                        <height>252</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1336,14 +1185,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
-                        <y>54</y>
+                        <x>329.592468262</x>
+                        <y>228.375793457</y>
                         <z>0</z>
-                        <width>112</width>
-                        <height>125</height>
+                        <width>86.500289917</width>
+                        <height>93.629737854</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502512574</hotspotX>
+                        <hotspotY>0.502590656</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
                     </world>
@@ -1361,14 +1210,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>432</x>
-                        <y>55</y>
+                        <x>409.592468262</x>
+                        <y>229.375793457</y>
                         <z>0</z>
-                        <width>112</width>
-                        <height>125</height>
+                        <width>86.500289917</width>
+                        <height>93.629737854</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502512574</hotspotX>
+                        <hotspotY>0.502590656</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
                     </world>
@@ -1386,14 +1235,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>511</x>
-                        <y>51</y>
+                        <x>488.592468262</x>
+                        <y>230.375793457</y>
                         <z>0</z>
-                        <width>112</width>
-                        <height>125</height>
+                        <width>86.500289917</width>
+                        <height>93.629737854</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.502512574</hotspotX>
+                        <hotspotY>0.502590656</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
                     </world>

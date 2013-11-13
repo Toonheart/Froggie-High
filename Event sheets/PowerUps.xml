@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
@@ -36,7 +36,7 @@
                         <action id="-9" name="Destroy" sid="2349543549789312" type="PowerUp_Mushroom_Rainbow" />
                         <action id="-10" name="Set value" sid="3505180082548866" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
-                            <param id="1" name="Value">6</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -45,7 +45,7 @@
                         <condition id="-7" name="Compare instance variable" sid="679066288460733" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -66,7 +66,7 @@
                     </actions>
                 </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
-                <event-block collapsed="1" sid="7812786490129375">
+                <event-block sid="7812786490129375">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8055733803766058" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>

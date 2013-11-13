@@ -51,14 +51,33 @@
                 <action disabled="1" id="1" name="Append text" sid="5994740072370158" type="Text_Debug">
                     <param id="0" name="Text">&quot;ID : &quot; &amp;Touch.TouchID</param>
                 </action>
-                <action id="1" name="Append text" sid="5014803770893823" type="Text_Debug">
-                    <param id="0" name="Text">WorldSection</param>
-                </action>
                 <action id="-10" name="Set value" sid="9918760989040105" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">3</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="5341037647722931">
+                    <conditions>
+                        <condition id="2" name="Is pause" sid="1361205577830358" type="Pause" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="5014803770893823" type="Text_Debug">
+                            <param id="0" name="Text">&quot;paused&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1517845617528507">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7958949060633736" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="6107444727785404" type="Text_Debug">
+                            <param id="0" name="Text">&quot;Not paused&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

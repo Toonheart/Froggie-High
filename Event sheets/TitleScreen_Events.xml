@@ -293,6 +293,10 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-9" name="Set value" sid="3224189616758098" type="System">
+                                    <param id="0" name="Variable">StoryBoard</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="6567786049742736" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
@@ -446,7 +450,7 @@
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
                                 <action id="-2" name="Go to layout" sid="4253188206117377" type="System">
-                                    <param id="0" name="Layout">Tutorial</param>
+                                    <param id="0" name="Layout">About</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -526,7 +530,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" disabled="1" sid="7616304892806737" title="Music">
+        <event-group description="" sid="7616304892806737" title="Music">
             <sub-events>
                 <event-block disabled="1" sid="5159794451362993">
                     <conditions>
@@ -557,6 +561,21 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7977210907687133">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="3246083402168882" type="Touch">
+                            <param id="0" name="Object">Button_Play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="1569037560125212" type="Audio">
+                            <param id="0" name="Audio file">Play_Resume</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;Play_Resume&quot;</param>
                         </action>
                     </actions>
                 </event-block>
