@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
@@ -37,6 +37,15 @@
                         <action id="-10" name="Set value" sid="3505180082548866" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
                             <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8625727458429487" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="0" name="Play" sid="8143363312192652" type="Audio">
+                            <param id="0" name="Audio file">unicorn</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>

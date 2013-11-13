@@ -4,7 +4,7 @@
     <name>Debug</name>
     <events>
         <comment>DISABLED - to see art without debug. -Krish. 8 nov 2013. 0132am</comment>
-        <event-block sid="7029130876728904">
+        <event-block disabled="1" sid="7029130876728904">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
             </conditions>
@@ -57,7 +57,7 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="5341037647722931">
+                <event-block disabled="1" sid="5341037647722931">
                     <conditions>
                         <condition id="2" name="Is pause" sid="1361205577830358" type="Pause" />
                     </conditions>
@@ -67,7 +67,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1517845617528507">
+                <event-block disabled="1" sid="1517845617528507">
                     <conditions>
                         <condition id="-22" name="Else" sid="7958949060633736" type="System" />
                     </conditions>
@@ -78,6 +78,16 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="7569239882636774">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5215253270181343" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="105082270891284" type="Text_Debug">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
