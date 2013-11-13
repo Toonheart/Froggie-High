@@ -82,9 +82,15 @@
                 <action id="4" name="Preload" sid="6224565070316861" type="Audio">
                     <param id="0" name="Audio file">unicorn</param>
                 </action>
+                <action id="-16" name="Wait" sid="3630993366404322" type="System">
+                    <param id="0" name="Seconds">5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="7571003531282229" type="System">
+                    <param id="0" name="Layout">Title_Screen</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="8015340791628458">
+        <event-block disabled="1" sid="8015340791628458">
             <conditions>
                 <condition id="1" name="Preloads complete" sid="8712290213473799" type="Audio" />
             </conditions>
