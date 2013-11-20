@@ -4,7 +4,7 @@
     <name>Debug</name>
     <events>
         <comment>DISABLED - to see art without debug. -Krish. 8 nov 2013. 0132am</comment>
-        <event-block disabled="1" sid="7029130876728904">
+        <event-block sid="7029130876728904">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
             </conditions>
@@ -15,8 +15,8 @@
                 <action id="0" name="Set text" sid="8002087447422118" type="Text_Debug">
                     <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer  &amp;newline</param>
                 </action>
-                <action disabled="1" id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
-                    <param id="0" name="Text"> newline &amp;&quot;Section  - &quot; &amp;WorldSection  &amp; newline</param>
+                <action id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
+                    <param id="0" name="Text"> newline &amp;Counter_Floor</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="68665449264838" type="Text_Debug">
                     <param id="0" name="Text">&quot;max - &quot; &amp;CollectibleAnimMax &amp; newline</param>
@@ -51,13 +51,13 @@
                 <action disabled="1" id="1" name="Append text" sid="5994740072370158" type="Text_Debug">
                     <param id="0" name="Text">&quot;ID : &quot; &amp;Touch.TouchID</param>
                 </action>
-                <action id="-10" name="Set value" sid="9918760989040105" type="Froggie">
+                <action disabled="1" id="-10" name="Set value" sid="9918760989040105" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">3</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block disabled="1" sid="5341037647722931">
+                <event-block sid="5341037647722931">
                     <conditions>
                         <condition id="2" name="Is pause" sid="1361205577830358" type="Pause" />
                     </conditions>
@@ -67,7 +67,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="1517845617528507">
+                <event-block sid="1517845617528507">
                     <conditions>
                         <condition id="-22" name="Else" sid="7958949060633736" type="System" />
                     </conditions>
