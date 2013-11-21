@@ -6,7 +6,7 @@
         <event-group collapsed="1" description="" sid="909091857750047" title="Octo World Enemies">
             <sub-events>
                 <comment>If Frog Landed on Spikes kill the frog</comment>
-                <event-block collapsed="1" sid="9786835711709051">
+                <event-block sid="9786835711709051">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3961149837030682" type="Froggie">
                             <param id="0" name="Object">Enemy_SpikyOcto</param>
@@ -15,10 +15,19 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="7354485668556846">
+                        <event-block any="1" sid="7354485668556846">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="2874374546102879" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="1371080788158457" type="Froggie">
+                                    <param id="0" name="Animation">&quot;sage&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="5288943485032157" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="8328814544021703" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -108,7 +117,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Kill the frog when landed on enemy platform if sheild is not active</comment>
-                <event-block collapsed="1" sid="580751372277348">
+                <event-block sid="580751372277348">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4573938008467164" type="Froggie">
                             <param id="0" name="Object">Enemy_ElectroOcto</param>
@@ -117,10 +126,19 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="8644181953438045">
+                        <event-block any="1" sid="8644181953438045">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="4359633870364442" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="2" name="Is playing" sid="7999136114658064" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="8416199969662705" type="Froggie">
+                                    <param id="0" name="Animation">&quot;sage&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="434089270445686" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="4144789294332484" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -210,7 +228,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Kill the Enemy if Frog if sheild is active and jumps on it.</comment>
-                <event-block collapsed="1" sid="6496677790872877">
+                <event-block sid="6496677790872877">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2021413235568107" type="Froggie">
                             <param id="0" name="Object">Enemy_PatrolOcto_Left</param>
@@ -218,10 +236,19 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="9323176089460651">
+                        <event-block any="1" sid="9323176089460651">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="4973868009197947" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="2" name="Is playing" sid="1601534476371756" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="8065111776500142" type="Froggie">
+                                    <param id="0" name="Animation">&quot;sage&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="4190166713223658" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="6219982153279916" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -310,7 +337,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="6168979495239226">
+                <event-block sid="6168979495239226">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="960270709439572" type="Froggie">
                             <param id="0" name="Object">Enemy_PatrolOcto_Right</param>
@@ -318,10 +345,19 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="6427055915495978">
+                        <event-block any="1" sid="6427055915495978">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="2280394151969842" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="2" name="Is playing" sid="5662668699175824" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="2050383211429904" type="Froggie">
+                                    <param id="0" name="Animation">&quot;sage&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="409752901623748" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="2321059279073882" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>

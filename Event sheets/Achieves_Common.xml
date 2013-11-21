@@ -3,63 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Achieves_Common</name>
     <events>
-        <event-block sid="5213616180916701">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="7806903062355496" type="System" />
-            </conditions>
-            <actions>
-                <action id="4" name="Load" sid="8657857436249431" type="Dict_Achieves">
-                    <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
-                </action>
-                <action id="0" name="Add key" sid="8564046999916464" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;PlainCandy&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="331102680182975" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;TwoColour&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="4947377092310315" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;StarCandy&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="9872014602259859" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;SwirlCandy&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="5576614152932342" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;Wrapper&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="5276492174084716" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;Star&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="4265947802601284" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;PlainCake&quot;</param>
-                    <param id="1" name="Value">90</param>
-                </action>
-                <action id="0" name="Add key" sid="4088055415870907" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;CupCakePlain&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="8446289764945803" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;MultiCake&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="7217759649169952" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;CupCakeMult&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Add key" sid="1266177019802816" type="Dict_CollectibleCounter">
-                    <param id="0" name="Key">&quot;MultiToppingCake&quot;</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="300444843168263" title="Unlocking Achievements">
             <sub-events>
-                <event-group description="" sid="5924061775148714" title="Score Achievements">
+                <event-group collapsed="1" description="" sid="5924061775148714" title="Score Achievements">
                     <sub-events>
                         <comment>Unlocking Score achievements Using Dictionary and web storage</comment>
                         <event-block sid="1647090413057468">
@@ -189,7 +135,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="840341933820909" title="PowerUp Achievements">
+                <event-group collapsed="1" description="" sid="840341933820909" title="PowerUp Achievements">
                     <sub-events>
                         <event-block sid="7465021016206787">
                             <conditions>
@@ -262,9 +208,9 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="" sid="9947272689397631" title="Collectible Achievements">
+                <event-group collapsed="1" description="" disabled="1" sid="9947272689397631" title="Collectible Achievements">
                     <sub-events>
-                        <event-block sid="661054833241598">
+                        <event-block disabled="1" sid="661054833241598">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="7831852502586293" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;PlainCandy&quot;)</param>
@@ -289,7 +235,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8747617005227705">
+                        <event-block disabled="1" sid="8747617005227705">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1875808847754368" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;TwoColor&quot;)</param>
@@ -314,7 +260,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8416293386739898">
+                        <event-block disabled="1" sid="8416293386739898">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2881294853632656" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;Swirl&quot;)</param>
@@ -339,7 +285,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3012436157568629">
+                        <event-block disabled="1" sid="3012436157568629">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2160273103118032" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;Wrapper&quot;)</param>
@@ -364,7 +310,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6612027430553532">
+                        <event-block disabled="1" sid="6612027430553532">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4368845991159677" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;Wrapper&quot;)</param>
@@ -389,7 +335,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4577722618243625">
+                        <event-block disabled="1" sid="4577722618243625">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="869234748701332" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;PlainCake&quot;)</param>
@@ -414,7 +360,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="260902610697117">
+                        <event-block disabled="1" sid="260902610697117">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1896459385236379" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;CupCakePlain&quot;)</param>
@@ -439,7 +385,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3482959700435737">
+                        <event-block disabled="1" sid="3482959700435737">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4566739740514644" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;MultiCake&quot;)</param>
@@ -464,7 +410,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5126253907824487">
+                        <event-block disabled="1" sid="5126253907824487">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="28789879581102" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;CupCakeMult&quot;)</param>
@@ -489,7 +435,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8871224637488484">
+                        <event-block disabled="1" sid="8871224637488484">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1956409775823204" type="System">
                                     <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;MultiToppingCake&quot;)</param>
@@ -570,5 +516,34 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="404178271924051" title="Collectible-Unlocked">
+            <sub-events>
+                <event-block disabled="1" sid="8762506653956238">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3427554489489568" type="System">
+                            <param id="0" name="First value">Dict_CollectibleCounter.Get(&quot;PlainCandy&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">100</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Has key" sid="9428673456030112" type="Dict_Achieves">
+                            <param id="0" name="Key">&quot;9_PlainCandy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="4318495353547872" type="Dict_Achieves">
+                            <param id="0" name="Key">&quot;9_PlainCandy&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="4781605778395627" type="WebStr_Common">
+                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6400024224789809" type="Achieve_Unlocked">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

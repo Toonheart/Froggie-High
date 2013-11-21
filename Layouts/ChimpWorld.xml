@@ -829,6 +829,7 @@
                         <RocketCountDown>0</RocketCountDown>
                         <Health>3</Health>
                         <DoubleJump>0</DoubleJump>
+                        <CurrentPowerup>0</CurrentPowerup>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -836,7 +837,7 @@
                                 <max-speed>450</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>1000</deceleration>
-                                <jump-strength>1200</jump-strength>
+                                <jump-strength>1400</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
@@ -845,7 +846,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>600</max-speed>
+                                <max-speed>450</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>1000</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -1257,7 +1258,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>63</x>
+                        <x>50</x>
                         <y>700</y>
                         <z>0</z>
                         <width>256</width>
@@ -1279,8 +1280,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>67</x>
-                        <y>1190</y>
+                        <x>50</x>
+                        <y>1160</y>
                         <z>0</z>
                         <width>96</width>
                         <height>96</height>

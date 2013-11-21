@@ -5,7 +5,7 @@
     <events>
         <event-group collapsed="1" description="Diifferent type of candies have different points that adds to score" sid="8130697212533247" title="Candies">
             <sub-events>
-                <event-block sid="5422309422002292">
+                <event-block collapsed="1" sid="5422309422002292">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2686728855045979" type="Froggie">
                             <param id="0" name="Object">Collectible_Candy</param>
@@ -60,10 +60,6 @@
                                     <param id="0" name="Variable">Score</param>
                                     <param id="1" name="Value">CollectiblScore_Dyn</param>
                                 </action>
-                                <action id="1" name="Set key" sid="3534541559922466" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;PlainCandy&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;PlainCandy&quot;)+1</param>
-                                </action>
                                 <action id="5" name="Set web font" sid="4828022178077944" type="Text_ScoreNote">
                                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -87,10 +83,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="7235702547342584" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;TwoColor&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;TwoColor&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="9806970262565667" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(130,180))</param>
@@ -122,10 +114,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="8375355914731718" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;SwirlCandy&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;SwirlCandy&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="1092133006702176" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(200,250))</param>
@@ -157,10 +145,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="9943748344257299" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;Wrapper&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;Wrapper&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="3724927791864352" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(300,400))</param>
@@ -193,10 +177,6 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="521040950788326" type="Collectible_Candy" />
-                                <action id="1" name="Set key" sid="4333758342362784" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;Star&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;Star&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="2092154549278902" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(500,600))</param>
@@ -414,10 +394,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="6112937852002408" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;PlainCake&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;PlainCake&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="2894267090721541" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(70,100))</param>
@@ -449,10 +425,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="5000499526436839" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;CupCakePlain&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;CupCakePlain&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="2207463829135092" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(130,180))</param>
@@ -484,10 +456,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="1892922627545959" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;MultiCake&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;MultiCake&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="7312898044249191" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(200,250))</param>
@@ -519,10 +487,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="3988673493687188" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;CupCakeMulti&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;CupCakeMulti&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="2395372871882271" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(300,400))</param>
@@ -554,10 +518,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="1" name="Set key" sid="3576549336306467" type="Dict_CollectibleCounter">
-                                    <param id="0" name="Key">&quot;MultiToppingCake&quot;</param>
-                                    <param id="1" name="Value">Dict_CollectibleCounter.Get(&quot;MultiToppingCake&quot;)+1</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="518808508774644" type="System">
                                     <param id="0" name="Variable">CollectiblScore_Dyn</param>
                                     <param id="1" name="Value">round(random(500,600))</param>
@@ -634,7 +594,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Diifferent type of cakes have different points that adds to score" sid="8644953612790632" title="Fruits">
+        <event-group description="Diifferent type of cakes have different points that adds to score" sid="8644953612790632" title="Fruits">
             <sub-events>
                 <event-block sid="3235691306114199">
                     <conditions>

@@ -106,7 +106,7 @@
                                     <param id="1" name="Value">Counter_Floor</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="4112574036787129" type="Floor_HeyStack_Normal">
-                                    <param id="0" name="Scale">random(0.65,1)</param>
+                                    <param id="0" name="Scale">random(0.8,1)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7935889078840197" type="Floor_HeyStack_Normal">
                                     <param id="0" name="Instance variable">Mirror</param>
@@ -136,7 +136,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block collapsed="1" sid="3718600925621546">
+                                        <event-block sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
@@ -205,8 +205,8 @@
                                                         <action id="-3" name="Create object" sid="7300415580023023" type="System">
                                                             <param id="0" name="Object to create">Collectible_Marker_Bottom</param>
                                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                                            <param id="2" name="X">Collectible_Candy.X</param>
-                                                            <param id="3" name="Y">Collectible_Candy.Y+44</param>
+                                                            <param id="2" name="X">Collectible_cake.X</param>
+                                                            <param id="3" name="Y">Collectible_cake.Y+44</param>
                                                         </action>
                                                         <action id="-3" name="Create object" sid="487548081404228" type="System">
                                                             <param id="0" name="Object to create">Collectible_cake</param>
@@ -373,6 +373,11 @@
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
+                                                <condition id="-21" name="Is between values" sid="6854490821337301" type="System">
+                                                    <param id="0" name="Value">Floor_HeyStack_Normal.PresentFloor</param>
+                                                    <param id="1" name="Lower bound">1</param>
+                                                    <param id="2" name="Upper bound">89</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="6782070107427502" type="Floor_HeyStack_Normal">
@@ -438,6 +443,11 @@
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-21" name="Is between values" sid="265600694650204" type="System">
+                                                    <param id="0" name="Value">Floor_HeyStack_Normal.PresentFloor</param>
+                                                    <param id="1" name="Lower bound">1</param>
+                                                    <param id="2" name="Upper bound">89</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -514,6 +524,11 @@
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
+                                                <condition id="-21" name="Is between values" sid="8451944344550968" type="System">
+                                                    <param id="0" name="Value">Floor_HeyStack_Normal.PresentFloor</param>
+                                                    <param id="1" name="Lower bound">1</param>
+                                                    <param id="2" name="Upper bound">89</param>
+                                                </condition>
                                             </conditions>
                                             <actions />
                                             <sub-events>
@@ -567,7 +582,7 @@
                                         <event-block sid="3670183887268469">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="2231877963378315" type="System">
-                                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%Mushroom_RainbowGap</param>
+                                                    <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor%55</param>
                                                     <param id="1" name="Comparison">0</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
@@ -580,7 +595,7 @@
                                                 <condition id="-14" name="Compare variable" sid="6944298204547933" type="System">
                                                     <param id="0" name="Variable">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">3</param>
+                                                    <param id="2" name="Value">2</param>
                                                 </condition>
                                                 <condition id="-8" name="Compare two values" sid="1438257752930935" type="System">
                                                     <param id="0" name="First value">Floor_HeyStack_Normal.PresentFloor</param>

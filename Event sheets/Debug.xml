@@ -12,11 +12,14 @@
                 <action disabled="1" id="0" name="Set text" sid="6807646680044225" type="Text_Debug">
                     <param id="0" name="Text">&quot;ActiveWorld&quot;&amp;ActiveWorld</param>
                 </action>
-                <action id="0" name="Set text" sid="8002087447422118" type="Text_Debug">
-                    <param id="0" name="Text">&quot;FPS  - &quot; &amp; fps &amp; &quot;render &quot; &amp; renderer  &amp;newline</param>
+                <action id="0" name="Set text" sid="429350303701982" type="Text_Debug">
+                    <param id="0" name="Text">&quot;DEBUG BUILD-21/11/2013&quot;</param>
+                </action>
+                <action id="1" name="Append text" sid="8002087447422118" type="Text_Debug">
+                    <param id="0" name="Text">newline&amp;&quot;FPS  - &quot; &amp; fps&amp;newline &amp; &quot;render : &quot; &amp; renderer  </param>
                 </action>
                 <action id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
-                    <param id="0" name="Text"> newline &amp;Counter_Floor</param>
+                    <param id="0" name="Text"> newline &amp;&quot;PlatformCount : &quot;&amp;Counter_Floor</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="68665449264838" type="Text_Debug">
                     <param id="0" name="Text">&quot;max - &quot; &amp;CollectibleAnimMax &amp; newline</param>
@@ -48,8 +51,8 @@
                 <action disabled="1" id="1" name="Append text" sid="7079116175487342" type="Text_Debug">
                     <param id="0" name="Text">&quot;CG  : &quot; &amp; Touch.Gamma &amp;newline</param>
                 </action>
-                <action disabled="1" id="1" name="Append text" sid="5994740072370158" type="Text_Debug">
-                    <param id="0" name="Text">&quot;ID : &quot; &amp;Touch.TouchID</param>
+                <action id="1" name="Append text" sid="5994740072370158" type="Text_Debug">
+                    <param id="0" name="Text">newline&amp;&quot;DiffY : &quot; &amp;TouchFollowMe.DiffY</param>
                 </action>
                 <action disabled="1" id="-10" name="Set value" sid="9918760989040105" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
@@ -57,7 +60,7 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="5341037647722931">
+                <event-block disabled="1" sid="5341037647722931">
                     <conditions>
                         <condition id="2" name="Is pause" sid="1361205577830358" type="Pause" />
                     </conditions>
@@ -67,7 +70,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1517845617528507">
+                <event-block disabled="1" sid="1517845617528507">
                     <conditions>
                         <condition id="-22" name="Else" sid="7958949060633736" type="System" />
                     </conditions>
@@ -79,7 +82,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="7569239882636774">
+        <event-block disabled="1" sid="7569239882636774">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="5215253270181343" type="System" />
             </conditions>

@@ -115,7 +115,7 @@
                                 <condition id="-14" name="Compare variable" sid="7048107559489026" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">5</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -397,6 +397,11 @@
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
+                                                <condition id="-21" name="Is between values" sid="8103214573858567" type="System">
+                                                    <param id="0" name="Value">Floor_Grass_Normal.PresentFloor</param>
+                                                    <param id="1" name="Lower bound">1</param>
+                                                    <param id="2" name="Upper bound">89</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="9" name="Set scale" sid="3839566862524458" type="Floor_Grass_Normal">
@@ -464,6 +469,11 @@
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">0</param>
                                                 </condition>
+                                                <condition id="-21" name="Is between values" sid="3192468975382273" type="System">
+                                                    <param id="0" name="Value">Floor_Grass_Normal.PresentFloor</param>
+                                                    <param id="1" name="Lower bound">1</param>
+                                                    <param id="2" name="Upper bound">89</param>
+                                                </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="9" name="Set scale" sid="2588879310930618" type="Floor_Grass_Normal">
@@ -530,6 +540,11 @@
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
                                                     <param id="1" name="Comparison">1</param>
                                                     <param id="2" name="Second value">0</param>
+                                                </condition>
+                                                <condition id="-21" name="Is between values" sid="8525282375098568" type="System">
+                                                    <param id="0" name="Value">Floor_Grass_Normal.PresentFloor</param>
+                                                    <param id="1" name="Lower bound">1</param>
+                                                    <param id="2" name="Upper bound">89</param>
                                                 </condition>
                                             </conditions>
                                             <actions />
@@ -614,9 +629,9 @@
                                         <event-block sid="3670183887268469">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="2231877963378315" type="System">
-                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%Mushroom_RainbowGap</param>
+                                                    <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%55</param>
                                                     <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Second value">55</param>
+                                                    <param id="2" name="Second value">0</param>
                                                 </condition>
                                                 <condition id="-4" name="Trigger once while true" sid="2253535649633367" type="System" />
                                                 <condition id="-7" name="Compare instance variable" sid="1487937069902912" type="Floor_Grass_Normal">
@@ -683,6 +698,10 @@
                                                 <action id="-10" name="Set value" sid="812508345334304" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="658576542649359" type="PowerUp_Mushroom_HyperJump">
+                                                    <param id="0" name="Instance variable">AnimSelctor</param>
+                                                    <param id="1" name="Value">round(random(1,4))</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -1127,7 +1146,7 @@
                                 <condition id="-14" name="Compare variable" sid="2772437121814374" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">6</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="6284013719495923" type="System">
                                     <param id="0" name="Variable">Counter_Floor</param>

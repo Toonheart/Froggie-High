@@ -38,6 +38,11 @@
                                 <condition id="2" name="Is playing" sid="1975684498933365" type="Froggie">
                                     <param id="0" name="Animation">&quot;Fall&quot;</param>
                                 </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2417952458858468" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="3788448471258535" type="Froggie">
@@ -69,7 +74,7 @@
                                 <condition id="-8" name="Compare two values" sid="9557167102313543" type="System">
                                     <param id="0" name="First value">Froggie.Platform.JumpStrength</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">2400</param>
+                                    <param id="2" name="Second value">2600</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="3490901665423588" type="System" />
                             </conditions>
@@ -119,6 +124,11 @@
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="9129367831480912" type="Froggie" />
                         <condition id="-4" name="Trigger once while true" sid="7013072353780702" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="8803742751374254" type="Icon_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="9883960452786343" type="Froggie">
@@ -160,7 +170,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
+        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -178,7 +188,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="539577925084524">
+                <event-block disabled="1" sid="539577925084524">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="5286654750739296" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="5232956090328499" type="System">
@@ -196,7 +206,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6449015882217566">
+                <event-block disabled="1" sid="6449015882217566">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="7722670599804897" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="6699500027468567" type="System">
@@ -460,7 +470,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8254297641577714" title="Gyro-Events">
+        <event-group description="" sid="8254297641577714" title="Gyro-Events">
             <sub-events>
                 <comment>Reset the Medians if there is a big change in oriantation of Device</comment>
                 <event-block sid="1873678705597537">
@@ -509,10 +519,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" sid="6632129886773868" title="Using Alpha">
+                <event-group description="" sid="6632129886773868" title="Using Alpha">
                     <sub-events>
                         <comment>simulate left and right controlls by comparing current alpha with median Except the median is in between 356-6 </comment>
-                        <event-block collapsed="1" sid="8734367776000234">
+                        <event-block sid="8734367776000234">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="6837614911845303" type="System">
                                     <param id="0" name="First value">Dev_Cur_Alpha</param>
@@ -540,6 +550,9 @@
                                         <action disabled="1" id="-9" name="Set value" sid="3430952642401653" type="System">
                                             <param id="0" name="Variable">Dev_Cur_Alpha</param>
                                             <param id="1" name="Value">Touch.Alpha-15</param>
+                                        </action>
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="9204495507660997" type="Froggie">
+                                            <param id="0" name="Control">0</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="3499139565112732" type="Froggie">
                                             <param id="0" name="State">1</param>
@@ -745,7 +758,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5491308683275742" title="Using Gamma And 8Dir">
+        <event-group description="" sid="5491308683275742" title="Using Gamma And 8Dir">
             <sub-events>
                 <event-block sid="38567936999712">
                     <conditions>
@@ -778,7 +791,7 @@
                     </actions>
                 </event-block>
                 <comment>simulate left and right controlls by comparing current Gamma with median.</comment>
-                <event-block collapsed="1" sid="507519204279511">
+                <event-block sid="507519204279511">
                     <conditions>
                         <condition id="8" name="Compare orientation" sid="1629767180884292" type="Touch">
                             <param id="0" name="Orientation">2</param>

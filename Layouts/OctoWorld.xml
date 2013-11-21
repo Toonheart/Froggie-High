@@ -95,8 +95,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1604</x>
-                        <y>632</y>
+                        <x>1669</x>
+                        <y>951</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -120,8 +120,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1896</x>
-                        <y>727</y>
+                        <x>1943</x>
+                        <y>951</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -753,8 +753,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1491</x>
-                        <y>228</y>
+                        <x>446</x>
+                        <y>206</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -778,8 +778,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1145</x>
-                        <y>854</y>
+                        <x>-1162</x>
+                        <y>888</y>
                         <z>0</z>
                         <width>199</width>
                         <height>193</height>
@@ -832,8 +832,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-705</x>
-                        <y>957</y>
+                        <x>-718</x>
+                        <y>918</y>
                         <z>0</z>
                         <width>199</width>
                         <height>193</height>
@@ -886,8 +886,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-943</x>
-                        <y>670</y>
+                        <x>-934</x>
+                        <y>717</y>
                         <z>0</z>
                         <width>199</width>
                         <height>193</height>
@@ -995,6 +995,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PowerUp_Mushroom_HyperJump" uid="132">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <RotateTowards>-90</RotateTowards>
+                        <AnimSelctor>1</AnimSelctor>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>672</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1026,6 +1052,7 @@
                         <RocketCountDown>0</RocketCountDown>
                         <Health>3</Health>
                         <DoubleJump>0</DoubleJump>
+                        <CurrentPowerup>0</CurrentPowerup>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1033,7 +1060,7 @@
                                 <max-speed>450</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>1000</deceleration>
-                                <jump-strength>1200</jump-strength>
+                                <jump-strength>1400</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>No</default-controls>
@@ -1042,7 +1069,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>800</max-speed>
+                                <max-speed>450</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>1000</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -1055,8 +1082,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>673</x>
-                        <y>490</y>
+                        <x>682</x>
+                        <y>554</y>
                         <z>0</z>
                         <width>192</width>
                         <height>192</height>
@@ -1520,8 +1547,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>40</x>
-                        <y>670</y>
+                        <x>50</x>
+                        <y>700</y>
                         <z>0</z>
                         <width>256</width>
                         <height>1000</height>
@@ -1542,11 +1569,37 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>44</x>
+                        <x>50</x>
                         <y>1160</y>
                         <z>0</z>
                         <width>96</width>
                         <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Icon_Attack" uid="131">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Status>0</Status>
+                        <CounDownTimer>5</CounDownTimer>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>641</x>
+                        <y>1118</y>
+                        <z>0</z>
+                        <width>384</width>
+                        <height>384</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
