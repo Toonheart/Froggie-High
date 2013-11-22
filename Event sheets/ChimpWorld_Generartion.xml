@@ -65,6 +65,9 @@
                             <param id="0" name="Pin to">Gift_Base</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="4" name="Load" sid="8472492325842839" type="Dict_Achieves">
+                            <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -705,6 +708,10 @@
                                                 </action>
                                                 <action id="9" name="Set scale" sid="7354787636964542" type="Floor_Wooden_Normal">
                                                     <param id="0" name="Scale">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="9239959016351438" type="PowerUp_Mushroom_HyperJump">
+                                                    <param id="0" name="Instance variable">AnimSelctor</param>
+                                                    <param id="1" name="Value">round(random(1,4))</param>
                                                 </action>
                                             </actions>
                                         </event-block>

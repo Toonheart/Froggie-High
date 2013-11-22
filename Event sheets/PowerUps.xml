@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
@@ -417,7 +417,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="5103723196897294">
+                <event-block sid="5103723196897294">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7775351253031619" type="Froggie">
                             <param id="0" name="Instance variable">DoubleJump</param>
@@ -429,11 +429,16 @@
                         <action behavior="Platform" id="4" name="Set jump strength" sid="2180922267744467" type="Froggie">
                             <param id="0" name="Jump strength">2600</param>
                         </action>
+                        <action id="4" name="Set animation" sid="3600135981806152" type="Froggie">
+                            <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="7832891512613347">
+                <event-block sid="7832891512613347">
                     <conditions>
                         <condition id="-22" name="Else" sid="2851509021784936" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="2105512407297857" type="System" />
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="4" name="Set jump strength" sid="5955761002386706" type="Froggie">
@@ -443,7 +448,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Adds life to frog" sid="636385349794851" title="Health">
+        <event-group description="Adds life to frog" sid="636385349794851" title="Health">
             <sub-events>
                 <comment>Collect the health</comment>
                 <event-block sid="3148595361641771">
@@ -503,9 +508,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="7823920697448265" title="ActivatingPowerUps">
+        <event-group description="" sid="7823920697448265" title="ActivatingPowerUps">
             <sub-events>
-                <event-block collapsed="1" sid="2238419359858149">
+                <event-block sid="2238419359858149">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="9349854587783746" type="Touch">
                             <param id="0" name="Object">Icon_Attack</param>
@@ -537,15 +542,24 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6815858088436617">
+                        <event-block disabled="1" sid="6815858088436617">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="6207815688994005" type="Icon_Attack">
                                     <param id="0" name="Animation">&quot;Shoe&quot;</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3463787331771224" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="1990527666811685" type="Froggie">
                                     <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4651276767359437" type="Froggie">
+                                    <param id="0" name="Instance variable">DoubleJump</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9950857243397758" type="Icon_Attack">
+                                    <param id="0" name="Animation">&quot;default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -633,9 +647,90 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="3318593047337292">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="5142871100973854" type="Touch">
+                            <param id="0" name="Object">Icon_Attack</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="8780927593032934" type="Icon_Attack">
+                            <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="9294501744561475" type="Froggie">
+                            <param id="0" name="Instance variable">DoubleJump</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9905374148898142" type="Icon_Attack">
+                            <param id="0" name="Animation">&quot;default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6455958504725814" title="PowerUpAnimation">
+        <event-block disabled="1" sid="7596391756828956">
+            <conditions>
+                <condition id="2" name="Is playing" sid="5201794250043326" type="Froggie">
+                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9644096974856488" type="Icon_Attack">
+                    <param id="0" name="Instance variable">Status</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="252142485396512">
+            <conditions>
+                <condition id="-22" name="Else" sid="3370929592878642" type="System" />
+                <condition id="-4" name="Trigger once while true" sid="3732799963025536" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6821085635034833" type="Icon_Attack">
+                    <param id="0" name="Instance variable">Status</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5535811351894709">
+            <conditions>
+                <condition id="2" name="Is playing" sid="1911248268642474" type="Froggie">
+                    <param id="0" name="Animation">&quot;Sage&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="3348691782116873" type="Froggie">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3738384080502289">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="5982073403821061" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="6349473334492642" type="Froggie">
+                            <param id="0" name="Angle">-90</param>
+                            <param id="1" name="Distance">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8192067721655108">
+            <conditions>
+                <condition id="-22" name="Else" sid="5276231815871933" type="System" />
+                <condition id="-4" name="Trigger once while true" sid="487568248864657" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="4911263490077893" type="Froggie">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="6455958504725814" title="PowerUpAnimation">
             <sub-events>
                 <event-block sid="5729629430778387">
                     <conditions>

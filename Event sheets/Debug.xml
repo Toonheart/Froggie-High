@@ -49,14 +49,14 @@
                     <param id="0" name="Text">&quot;DG  : &quot; &amp; Dev_Cur_Gamma &amp;newline</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="7079116175487342" type="Text_Debug">
-                    <param id="0" name="Text">&quot;CG  : &quot; &amp; Touch.Gamma &amp;newline</param>
-                </action>
-                <action id="1" name="Append text" sid="5994740072370158" type="Text_Debug">
-                    <param id="0" name="Text">newline&amp;&quot;DiffY : &quot; &amp;TouchFollowMe.DiffY</param>
+                    <param id="0" name="Text">newline&amp;&quot;AnimMax : &quot; &amp; CollectibleAnimMax</param>
                 </action>
                 <action disabled="1" id="-10" name="Set value" sid="9918760989040105" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">3</param>
+                </action>
+                <action id="1" name="Append text" sid="6107444727785404" type="Text_Debug">
+                    <param id="0" name="Text">newline&amp;Froggie.Health</param>
                 </action>
             </actions>
             <sub-events>
@@ -70,13 +70,15 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="1517845617528507">
+                <event-block sid="1517845617528507">
                     <conditions>
-                        <condition id="-22" name="Else" sid="7958949060633736" type="System" />
+                        <condition id="3" name="Has key" sid="1116575935098125" type="Dict_Achieves">
+                            <param id="0" name="Key">&quot;33_BySpiky&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="1" name="Append text" sid="6107444727785404" type="Text_Debug">
-                            <param id="0" name="Text">&quot;Not paused&quot;</param>
+                        <action id="1" name="Append text" sid="4744623172343954" type="Text_Debug">
+                            <param id="0" name="Text">&quot;Y&quot;</param>
                         </action>
                     </actions>
                 </event-block>

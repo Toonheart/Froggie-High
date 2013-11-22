@@ -6,7 +6,7 @@
         <event-group collapsed="1" description="" sid="909091857750047" title="Octo World Enemies">
             <sub-events>
                 <comment>If Frog Landed on Spikes kill the frog</comment>
-                <event-block sid="9786835711709051">
+                <event-block collapsed="1" sid="9786835711709051">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3961149837030682" type="Froggie">
                             <param id="0" name="Object">Enemy_SpikyOcto</param>
@@ -15,19 +15,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block any="1" sid="7354485668556846">
+                        <event-block sid="5419642133772251">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="2874374546102879" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
+                                <condition id="3" inverted="1" name="Has key" sid="2461040462413872" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;33_BySpiky&quot;</param>
                                 </condition>
-                                <condition id="2" name="Is playing" sid="1371080788158457" type="Froggie">
-                                    <param id="0" name="Animation">&quot;sage&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="610470884578789" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
-                                <condition id="2" name="Is playing" sid="5288943485032157" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="8794657843311433" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="2" name="Is playing" sid="8328814544021703" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="100188823393396" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;33_BySpiky&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="8256914417263893" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="762558778254594" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" collapsed="1" sid="7354485668556846">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4542055871652909" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -59,12 +82,12 @@
                                 <event-block sid="2609857967692078">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="7489025571106321" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;19_KillSpiky&quot;</param>
+                                            <param id="0" name="Key">&quot;21_KillSpiky&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="1804443639563518" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;19_KillSpiky&quot;</param>
+                                            <param id="0" name="Key">&quot;21_KillSpiky&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="4273705622547601" type="WebStr_Common">
@@ -80,7 +103,7 @@
                         </event-block>
                         <event-block sid="1117018186742664">
                             <conditions>
-                                <condition id="-22" name="Else" sid="270165413818577" type="System" />
+                                <condition id="-22" name="Else" sid="9375780645860452" type="System" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8634931368682401" type="Froggie">
@@ -117,7 +140,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Kill the frog when landed on enemy platform if sheild is not active</comment>
-                <event-block sid="580751372277348">
+                <event-block collapsed="1" sid="580751372277348">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4573938008467164" type="Froggie">
                             <param id="0" name="Object">Enemy_ElectroOcto</param>
@@ -126,19 +149,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="7567011217391683">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6703315792310677" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has key" sid="3120447288357361" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;34_ByElectro&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="621606136346363" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="7243060463176815" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;34_ByElectro&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="9722304917891232" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4980175811298673" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block any="1" sid="8644181953438045">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="7999136114658064" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="8416199969662705" type="Froggie">
-                                    <param id="0" name="Animation">&quot;sage&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="434089270445686" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="4144789294332484" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="1777538890798052" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -170,12 +216,12 @@
                                 <event-block sid="5174511582114776">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="7425298949578294" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;20_KillElectro&quot;</param>
+                                            <param id="0" name="Key">&quot;22_KillElectro&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="9334323325113152" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;20_KillElectro&quot;</param>
+                                            <param id="0" name="Key">&quot;22_KillElectro&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="6504299586139073" type="WebStr_Common">
@@ -228,7 +274,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Kill the Enemy if Frog if sheild is active and jumps on it.</comment>
-                <event-block sid="6496677790872877">
+                <event-block collapsed="1" sid="6496677790872877">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2021413235568107" type="Froggie">
                             <param id="0" name="Object">Enemy_PatrolOcto_Left</param>
@@ -236,19 +282,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="3964200437270988">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="9024972557496779" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;35_ByFlyOcto&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5903376313066034" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6404935253474298" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="8340411937270127" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;35_ByFlyOcto&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="3106001663356969" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9297032274244743" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block any="1" sid="9323176089460651">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="1601534476371756" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="8065111776500142" type="Froggie">
-                                    <param id="0" name="Animation">&quot;sage&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="4190166713223658" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="6219982153279916" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="9854223366403851" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -280,12 +349,12 @@
                                 <event-block sid="381798580052758">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="3244990694756951" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                            <param id="0" name="Key">&quot;23_KillFlyOcto&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="1615867294576252" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                            <param id="0" name="Key">&quot;23_KillFlyOcto&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="5442199983840545" type="WebStr_Common">
@@ -345,19 +414,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="611028528818201">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="1525416189181258" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;35_ByFlyOcto&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9108041620520032" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7498398990359382" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="8553640567764828" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;35_ByFlyOcto&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="2457555785433688" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="851380909827521" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block any="1" sid="6427055915495978">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="5662668699175824" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Boxing&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="2050383211429904" type="Froggie">
-                                    <param id="0" name="Animation">&quot;sage&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="409752901623748" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
-                                </condition>
-                                <condition id="2" name="Is playing" sid="2321059279073882" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Karate&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="7048284228965251" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -389,12 +481,12 @@
                                 <event-block sid="4839018122011522">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="4343610820796822" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                            <param id="0" name="Key">&quot;23_KillFlyOcto&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="289380745222693" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;21_KillFlyOcto&quot;</param>
+                                            <param id="0" name="Key">&quot;23_KillFlyOcto&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="5721240821481605" type="WebStr_Common">
@@ -448,7 +540,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6397730328085739" title="Chicken World Enemies">
+        <event-group description="" sid="6397730328085739" title="Chicken World Enemies">
             <sub-events>
                 <event-block collapsed="1" sid="7020705298719823">
                     <conditions>
@@ -459,10 +551,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="5503750609885069">
+                        <event-block sid="9358810168076286">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="1488177362079437" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="2353125729963947" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has key" sid="6863703484368853" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;37_ByFlu&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7386666301028644" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="276349067938944" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;37_ByFlu&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="1705362336248912" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2873688087927389" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5503750609885069">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5169048479311009" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -494,12 +618,12 @@
                                 <event-block sid="219567635960776">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="1897437925257976" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;23_KillFlu&quot;</param>
+                                            <param id="0" name="Key">&quot;25_KillFlu&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="4766915445433769" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;23_KillFlu&quot;</param>
+                                            <param id="0" name="Key">&quot;25_KillFlu&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="9374792028461654" type="WebStr_Common">
@@ -564,7 +688,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3088645526915661">
+                <event-block sid="3088645526915661">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
                             <param id="0" name="Object">EnemyBoxer_Chicken</param>
@@ -573,10 +697,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="9031370393196009">
+                        <event-block sid="6844022509966747">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="4815786559191798" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="3" inverted="1" name="Has key" sid="291616406501639" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;38_ByBoxer&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9693147159579346" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8025837618609594" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="2938467795355379" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;38_ByBoxer&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="883096969517744" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9115825247503808" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9031370393196009">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2276051657404295" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -608,12 +764,12 @@
                                 <event-block sid="3919740113735868">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="9275684644969998" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;24_KillBoxer&quot;</param>
+                                            <param id="0" name="Key">&quot;26_KillBoxer&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="4593929875133715" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;24_KillBoxer&quot;</param>
+                                            <param id="0" name="Key">&quot;26_KillBoxer&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="5187744473084065" type="WebStr_Common">
@@ -673,10 +829,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="7896714923736151">
+                        <event-block sid="6140073823272363">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="1245728625116237" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="5204673277334948" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has key" sid="334459723756852" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;39_ByFlyingChicken&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2539083748275569" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="8985872366798342" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;39_ByFlyingChicken&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="4859419749419298" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4691493103231925" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7896714923736151">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4094831433904666" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -708,12 +896,12 @@
                                 <event-block sid="5037709860640411">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="6501525587134361" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                            <param id="0" name="Key">&quot;27_KillFlyingChicken&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="761579552983383" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                            <param id="0" name="Key">&quot;27_KillFlyingChicken&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="8352730264230795" type="WebStr_Common">
@@ -765,7 +953,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3390121730289171">
+                <event-block sid="3390121730289171">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2652465807405978" type="Froggie">
                             <param id="0" name="Object">Enemy_PatroChicken_Right</param>
@@ -773,10 +961,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="2846836458748547">
+                        <event-block sid="4436717492448775">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="7164654271445879" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="5327162993084579" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has key" sid="7026441295671257" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;39_ByFlyingChicken&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8013401071179951" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="7479115850585184" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;39_ByFlyingChicken&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="8838809372212026" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3459149325089637" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2846836458748547">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1043050929154073" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -808,12 +1028,12 @@
                                 <event-block sid="7230162084133645">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="9912138884600486" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                            <param id="0" name="Key">&quot;27_KillFlyingChicken&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="3628185516261341" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;25_KillFlyingChicken&quot;</param>
+                                            <param id="0" name="Key">&quot;27_KillFlyingChicken&quot; </param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="8832786625551036" type="WebStr_Common">
@@ -867,9 +1087,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7889971496850357" title="Chimp World Enemies">
+        <event-group description="" sid="7889971496850357" title="Chimp World Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="3088645526915661">
+                <event-block sid="3088645526915661">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
                             <param id="0" name="Object">Enemy_Chimp_Bash</param>
@@ -878,10 +1098,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block collapsed="1" sid="9031370393196009">
+                        <event-block sid="3373779993121181">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="4815786559191798" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="3" inverted="1" name="Has key" sid="6618493518184106" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8214275921377426" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="800146715231906" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="4647414478269644" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="7217710492477129" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2983439361211286" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9031370393196009">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6434604922383498" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -913,12 +1165,12 @@
                                 <event-block sid="8066462974878054">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="974103558722248" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;27_KillBashChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;29_KillBashChimp&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="7777209889458988" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;27_KillBashChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;29_KillBashChimp&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="4156431023061553" type="WebStr_Common">
@@ -970,7 +1222,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7020705298719823">
+                <event-block sid="7020705298719823">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1561724124942272" type="Froggie">
                             <param id="0" name="Object">Enemy_Chimp_Baboon</param>
@@ -979,10 +1231,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="7390371203619935">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="4538088096806949" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;42_ByBaboonChimp&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5177171944899116" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4847901237746566" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="5796786407092691" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;42_ByBaboonChimp&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="2861628742210644" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4800348909606637" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block collapsed="1" sid="5503750609885069">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="1488177362079437" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="7542413159649352" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1018,12 +1302,12 @@
                                 <event-block sid="2635640942274059">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="3806447801061456" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;28_KillBaboonChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;30_KillBaboonChimp&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="1527248584315825" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;28_KillBaboonChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;30_KillBaboonChimp&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="5929244168927219" type="WebStr_Common">
@@ -1083,10 +1367,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="7022975171527132">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="8913493576111803" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;44_ByFlyingChimp&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5583848488162488" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3903770498733155" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="6625364322803467" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="9756648040065713" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5715253248563312" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block collapsed="1" sid="7896714923736151">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="1245728625116237" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="5217670192723155" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1118,12 +1434,12 @@
                                 <event-block sid="2092404209530556">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="5837520362372586" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;31_KillFlyingChimp&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="7897006110140305" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;31_KillFlyingChimp&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="6057732836645669" type="WebStr_Common">
@@ -1183,10 +1499,42 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="1387541142462276">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="3386186586976541" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;44_ByFlyingChimp&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3725689466310735" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8901656313101736" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="2050539629790138" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="591212198688273" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8053202349975948" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="9430209530090265">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="6830953416657131" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
+                                <condition id="-7" name="Compare instance variable" sid="8549773844317592" type="Icon_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1218,12 +1566,12 @@
                                 <event-block sid="4821882675130076">
                                     <conditions>
                                         <condition id="3" inverted="1" name="Has key" sid="6130232655431725" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;31_KillFlyingChimp&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="9052185733007051" type="Dict_Achieves">
-                                            <param id="0" name="Key">&quot;29_KillFlyingChimp&quot;</param>
+                                            <param id="0" name="Key">&quot;31_KillFlyingChimp&quot;</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action id="0" name="Set local value" sid="7515243106569785" type="WebStr_Common">
@@ -1284,7 +1632,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3390121730289171">
+                <event-block collapsed="1" sid="3390121730289171">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2652465807405978" type="Froggie">
                             <param id="0" name="Object">Weapon_Baboon</param>
@@ -1327,6 +1675,33 @@
                             <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="6743847157451763">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="9855011120514499" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1017299320331748" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="9366011215862514" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set local value" sid="3164141238242934" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9088767493148067" type="Achieve_Unlocked">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
