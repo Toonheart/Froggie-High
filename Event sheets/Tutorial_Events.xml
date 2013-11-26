@@ -4,5 +4,34 @@
     <name>Tutorial_Events</name>
     <events>
         <include>GoToMain</include>
+        <event-block sid="6473033177778355">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="8523330748378477" type="Touch">
+                    <param id="0" name="Object">Button_GoBack</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="9008577679028267" type="Button_GoBack">
+                    <param id="0" name="Scale">1.05</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2140817243560372">
+                    <conditions>
+                        <condition id="11" name="On Nth touch end" sid="2626630345334465" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="5100284904999322" type="Button_GoBack">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="5793910647039279" type="System">
+                            <param id="0" name="Layout">Title_Screen</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

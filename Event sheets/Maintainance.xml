@@ -211,7 +211,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7689727470139722" title="Others">
+        <event-group description="" sid="7689727470139722" title="Others">
             <sub-events>
                 <event-block sid="461862690270841">
                     <conditions>
@@ -251,6 +251,18 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8325032422525069" type="Music_Notes" />
+                    </actions>
+                </event-block>
+                <event-block sid="6717136731847781">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="7329016707108629" type="InGameTuto">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+2000</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="6611661725271829" type="InGameTuto" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7041793571842302" type="InGameTuto" />
                     </actions>
                 </event-block>
             </sub-events>

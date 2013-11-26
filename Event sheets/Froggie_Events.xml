@@ -139,7 +139,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
+        <event-group description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
             <sub-events>
                 <comment>Wrap the frog Left and right</comment>
                 <event-block sid="4289847182450448">
@@ -472,6 +472,22 @@
         </event-group>
         <event-group description="" sid="8254297641577714" title="Gyro-Events">
             <sub-events>
+                <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
+                <event-block sid="9509104835207651">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="9024011385766129" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9144256543571633" type="System">
+                            <param id="0" name="Variable">Dev_Cur_Alpha</param>
+                            <param id="1" name="Value">Touch.Alpha</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="733190857999236" type="System">
+                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                            <param id="1" name="Value">Touch.Gamma</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <comment>Reset the Medians if there is a big change in oriantation of Device</comment>
                 <event-block sid="1873678705597537">
                     <conditions>
@@ -500,22 +516,6 @@
                         <action id="-9" name="Set value" sid="8930272471480502" type="System">
                             <param id="0" name="Variable">Dev_Cur_Alpha</param>
                             <param id="1" name="Value">Touch.Alpha</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
-                <event-block sid="9509104835207651">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="9024011385766129" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="9144256543571633" type="System">
-                            <param id="0" name="Variable">Dev_Cur_Alpha</param>
-                            <param id="1" name="Value">Touch.Alpha</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="733190857999236" type="System">
-                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
-                            <param id="1" name="Value">Touch.Gamma</param>
                         </action>
                     </actions>
                 </event-block>
@@ -677,8 +677,85 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="802353540468122" title="Using Gamma">
+                <event-group description="" sid="802353540468122" title="Using Gamma">
                     <sub-events>
+                        <event-group description="" sid="5491308683275742" title="Using Gamma And 8Dir">
+                            <sub-events>
+                                <event-block sid="38567936999712">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4150705798449818" type="System">
+                                            <param id="0" name="First value">Touch.Gamma</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">Dev_Cur_Gamma-90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5426912126203091" type="System">
+                                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                                            <param id="1" name="Value">Touch.Gamma</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7176658698772164">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5644774347959504" type="System">
+                                            <param id="0" name="First value">Touch.Gamma</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">Dev_Cur_Gamma+90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="7856645300640959" type="System">
+                                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                                            <param id="1" name="Value">Touch.Gamma</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>simulate left and right controlls by comparing current Gamma with median.</comment>
+                                <event-block sid="507519204279511">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="1629767180884292" type="Touch">
+                                            <param id="0" name="Orientation">2</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Angle">Dev_Cur_Gamma-20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5866288092254024" type="Froggie">
+                                            <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="8725725652536002" type="Froggie">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="3341389640420842" type="System">
+                                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                                            <param id="1" name="Value">Touch.Gamma+15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8378877677067597">
+                                    <conditions>
+                                        <condition id="8" name="Compare orientation" sid="6417058457752415" type="Touch">
+                                            <param id="0" name="Orientation">2</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Angle">Dev_Cur_Gamma+20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="7095421189853041" type="Froggie">
+                                            <param id="0" name="Control">1</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="7778222150877363" type="Froggie">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action disabled="1" id="-9" name="Set value" sid="1238857330133397" type="System">
+                                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
+                                            <param id="1" name="Value">Touch.Gamma-15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
                         <event-block sid="38567936999712">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="4150705798449818" type="System">
@@ -758,116 +835,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5491308683275742" title="Using Gamma And 8Dir">
-            <sub-events>
-                <event-block sid="38567936999712">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="4150705798449818" type="System">
-                            <param id="0" name="First value">Touch.Gamma</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">Dev_Cur_Gamma-90</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="5426912126203091" type="System">
-                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
-                            <param id="1" name="Value">Touch.Gamma</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7176658698772164">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="5644774347959504" type="System">
-                            <param id="0" name="First value">Touch.Gamma</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">Dev_Cur_Gamma+90</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="7856645300640959" type="System">
-                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
-                            <param id="1" name="Value">Touch.Gamma</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>simulate left and right controlls by comparing current Gamma with median.</comment>
-                <event-block sid="507519204279511">
-                    <conditions>
-                        <condition id="8" name="Compare orientation" sid="1629767180884292" type="Touch">
-                            <param id="0" name="Orientation">2</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Angle">Dev_Cur_Gamma-20</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="5866288092254024" type="Froggie">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="8725725652536002" type="Froggie">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="3341389640420842" type="System">
-                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
-                            <param id="1" name="Value">Touch.Gamma+15</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="9016308965115279">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="6330299912761802" type="Froggie">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">Froggie.FallDistance+1000</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="9418372931617869" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="8378877677067597">
-                    <conditions>
-                        <condition id="8" name="Compare orientation" sid="6417058457752415" type="Touch">
-                            <param id="0" name="Orientation">2</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Angle">Dev_Cur_Gamma+20</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="7095421189853041" type="Froggie">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="7778222150877363" type="Froggie">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action disabled="1" id="-9" name="Set value" sid="1238857330133397" type="System">
-                            <param id="0" name="Variable">Dev_Cur_Gamma</param>
-                            <param id="1" name="Value">Touch.Gamma-15</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="6739926667793243">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="4413760940753104" type="Froggie">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">Froggie.FallDistance+1000</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="3608854153648935" type="Froggie">
-                                    <param id="0" name="Animation">&quot;Wrap&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="5847387225002302" title="Progress Bar Events">
+        <event-group collapsed="1" description="" sid="3997877377301353" title="Progress Bar Events">
             <sub-events>
                 <event-block sid="7242449783354925">
                     <conditions>

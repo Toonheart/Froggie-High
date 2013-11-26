@@ -5,6 +5,42 @@
     <events>
         <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
+                <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
+                    <sub-events>
+                        <event-block sid="4620973072520894">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6564776076645543" type="System">
+                                    <param id="0" name="Variable">HighestUnlockedWorld</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5199975880613439" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1985751571488059" type="System">
+                                    <param id="0" name="Variable">RideAnimeMax</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8164295321698022">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2149915466012401" type="System">
+                                    <param id="0" name="Variable">HighestUnlockedWorld</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7812044774194009" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3239533844869524" type="System">
+                                    <param id="0" name="Variable">RideAnimeMax</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <comment>Collect the Rocket and launch it setting CountDown</comment>
                 <event-block sid="6167765548791564">
                     <conditions>
@@ -63,6 +99,10 @@
                             <param id="0" name="Object">Unicorn</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="Image point">&quot;Origin&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9358790590472574" type="Unicorn">
+                            <param id="0" name="Instance variable">AnimMax</param>
+                            <param id="1" name="Value">round(random(1,RideAnimeMax))</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="1064465784307698" type="Unicorn">
                             <param id="0" name="Pin to">Froggie</param>
@@ -190,6 +230,51 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="6296803670728335" type="Unicorn" />
+                    </actions>
+                </event-block>
+                <event-block sid="1700924953659933">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1534092651718361" type="Unicorn">
+                            <param id="0" name="Instance variable">AnimMax</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7979543592302177" type="Unicorn">
+                            <param id="0" name="Animation">&quot;Plane&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9863735933041862">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5878326752694798" type="Unicorn">
+                            <param id="0" name="Instance variable">AnimMax</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5909832940402189" type="Unicorn">
+                            <param id="0" name="Animation">&quot;Unicorn&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1945389267847181">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9371943279053384" type="Unicorn">
+                            <param id="0" name="Instance variable">AnimMax</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7062161303316856" type="Unicorn">
+                            <param id="0" name="Animation">&quot;Seabird&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -588,6 +673,10 @@
                                     <param id="0" name="Animation">&quot;Sage&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="5118497342989195" type="Froggie">
+                                    <param id="0" name="Instance variable">SageCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2148564898354903">
@@ -699,10 +788,19 @@
                 <condition id="2" name="Is playing" sid="1911248268642474" type="Froggie">
                     <param id="0" name="Animation">&quot;Sage&quot;</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="7356698113638848" type="Froggie">
+                    <param id="0" name="Instance variable">SageCount</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Platform" id="11" name="Set enabled" sid="3348691782116873" type="Froggie">
                     <param id="0" name="State">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="2863075582742212" type="Button_Attack">
+                    <param id="0" name="Instance variable">Status</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
             <sub-events>
@@ -717,9 +815,60 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4099460328197874">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="2154945327702443" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4395399810163941" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="9488496284390016" type="Froggie">
+                            <param id="0" name="Instance variable">SageCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="8192067721655108">
+        <event-block sid="4992567075357401">
+            <conditions>
+                <condition id="-22" name="Else" sid="9253166957405891" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2529675145348594" type="Froggie">
+                    <param id="0" name="Instance variable">SageCount</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3822754903888872">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6412397967607832" type="Froggie">
+                    <param id="0" name="Instance variable">SageCount</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="8614460968604056" type="Froggie">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="469940439221058" type="Button_Attack">
+                    <param id="0" name="Instance variable">Status</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1410313492140421" type="Froggie">
+                    <param id="0" name="Instance variable">SageCount</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8192067721655108">
             <conditions>
                 <condition id="-22" name="Else" sid="5276231815871933" type="System" />
                 <condition id="-4" name="Trigger once while true" sid="487568248864657" type="System" />

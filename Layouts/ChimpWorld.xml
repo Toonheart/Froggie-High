@@ -824,6 +824,54 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PowerUp_Mushroom_Rainbow" uid="144">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <RotateTowards>-90</RotateTowards>
+                        <Gap>0</Gap>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>997</x>
+                        <y>514</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0.546875</hotspotX>
+                        <hotspotY>0.786458313</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="InGameTuto" uid="156">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>-311</y>
+                        <z>0</z>
+                        <width>500</width>
+                        <height>500</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -856,6 +904,7 @@
                         <Health>3</Health>
                         <DoubleJump>0</DoubleJump>
                         <CurrentPowerup>0</CurrentPowerup>
+                        <SageCount>0</SageCount>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1332,11 +1381,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>676</x>
-                        <y>1146</y>
+                        <x>642</x>
+                        <y>1113</y>
                         <z>0</z>
-                        <width>288</width>
-                        <height>288</height>
+                        <width>384</width>
+                        <height>384</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
