@@ -2,7 +2,7 @@
 <c2project>
     <name>Baka</name>
     <description>A froggie under effects of Esctasy!</description>
-    <version>0.25</version>
+    <version>0.251</version>
     <author>Toonheart Studios</author>
     <author-email>krish@toonheart.com</author-email>
     <author-website>www.toonheart.com</author-website>
@@ -10,11 +10,11 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -6751,10 +6751,24 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Story" sid="9563291942350686">
+        <object-type name="Story1" sid="9563291942350686">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="6926395672339005">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682452433405063" speed="5">
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682452433405063" speed="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -6949,7 +6963,7 @@
         <event-sheet>SplashScreen_Events.xml</event-sheet>
         <event-sheet>Preloads_Events.xml</event-sheet>
         <event-sheet>Gyro_Events.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>StoryBoadrdEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">

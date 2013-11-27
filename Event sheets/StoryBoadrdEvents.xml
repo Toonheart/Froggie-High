@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StoryBoadrdEvents</name>
+    <events>
+        <variable constant="0" name="ScrollLX" sid="1302515590558257" static="0" type="number">400</variable>
+        <event-block sid="1840337952571113">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="7786466704390558" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9413782445117994" type="System">
+                    <param id="0" name="Layout">WorldSelect</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1623098573627041">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6674754730621693" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-1" name="Set X" sid="2340814388153147" type="Story1">
+                    <param id="0" name="X">Story1.X-2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="404431609177298">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="8348872034748946" type="Story1">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">9</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="2807232155095822" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="656716293434854" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="868419092606503" type="System">
+                    <param id="0" name="Layout">WorldSelect</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
