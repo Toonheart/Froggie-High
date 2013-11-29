@@ -12,7 +12,7 @@
             </conditions>
             <actions>
                 <action id="9" name="Set scale" sid="9008577679028267" type="Button_GoBack">
-                    <param id="0" name="Scale">1.05</param>
+                    <param id="0" name="Scale">1.08</param>
                 </action>
             </actions>
             <sub-events>
@@ -25,6 +25,9 @@
                     <actions>
                         <action id="9" name="Set scale" sid="5100284904999322" type="Button_GoBack">
                             <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5834264638604344" type="System">
+                            <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="5793910647039279" type="System">
                             <param id="0" name="Layout">Title_Screen</param>

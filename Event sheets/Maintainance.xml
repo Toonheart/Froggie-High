@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+        <event-group description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
             <sub-events>
                 <comment>Destroy The Enemy Below the ViewPortBottom</comment>
                 <event-block sid="8554971264545097">
@@ -20,9 +20,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7432947511309844" title="OCTO WORLD">
+        <event-group description="" sid="7432947511309844" title="OCTO WORLD">
             <sub-events>
-                <event-group collapsed="1" description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
+                <event-group description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
                     <sub-events>
                         <comment>Destroy The Floors Below the ViewPortBottom</comment>
                         <event-block sid="7677198932992921">
@@ -67,7 +67,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="555443600129024" title="CHICKEN WORLD">
+        <event-group description="" sid="555443600129024" title="CHICKEN WORLD">
             <sub-events>
                 <event-group collapsed="1" description="" sid="4573181151284243" title="BG-Objects">
                     <sub-events>
@@ -158,7 +158,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8363342877812608" title="BrokenParts">
+        <event-group description="" sid="8363342877812608" title="BrokenParts">
             <sub-events>
                 <event-block sid="3889299973164307">
                     <conditions>
@@ -174,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4920008378764982" title="ColleCtibles">
+        <event-group description="" sid="4920008378764982" title="ColleCtibles">
             <sub-events>
                 <comment>Destroy the collectible below the screen,and overlaping the side port markers</comment>
                 <event-block sid="3874415251620764">
@@ -257,7 +257,7 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="7329016707108629" type="InGameTuto">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+2000</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
                         </condition>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="6611661725271829" type="InGameTuto" />
                     </conditions>
@@ -273,7 +273,7 @@
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="9641525689230906" type="BG_Objects">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+2000</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+500</param>
                         </condition>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="4977708491194544" type="BG_Objects" />
                     </conditions>
@@ -283,7 +283,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6811292128185962" title="PowerUp">
+        <event-group collapsed="1" description="" sid="6811292128185962" title="PowerUp">
             <sub-events>
                 <event-block sid="1854685202982629">
                     <conditions>

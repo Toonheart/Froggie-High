@@ -199,7 +199,7 @@
                 <comment>Collect the candies and destroy them and add to score</comment>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Randomly select a different bling  color and shape on collecting" sid="4961301643958524" title="Bling On Collection">
+        <event-group description="Randomly select a different bling  color and shape on collecting" sid="4961301643958524" title="Bling On Collection">
             <sub-events>
                 <event-block sid="3760023859493917">
                     <conditions>
@@ -314,26 +314,26 @@
                                 <action id="-16" name="Wait" sid="5615821808380381" type="System">
                                     <param id="0" name="Seconds">0.4</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="3676802918041554" type="Froggie">
+                                <action disabled="1" id="0" name="Spawn another object" sid="3676802918041554" type="Froggie">
                                     <param id="0" name="Object">Multi_Blings</param>
                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="0" name="Play" sid="5000584622177174" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="5000584622177174" type="Audio">
                                     <param id="0" name="Audio file">collectible</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">2</param>
                                     <param id="1" name="Tag (optional)">&quot;Collectable&quot;</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="3263451445873509" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="3263451445873509" type="System">
                                     <param id="0" name="Seconds">0.4</param>
                                 </action>
-                                <action id="0" name="Spawn another object" sid="5370525983914493" type="Froggie">
+                                <action disabled="1" id="0" name="Spawn another object" sid="5370525983914493" type="Froggie">
                                     <param id="0" name="Object">Multi_Blings</param>
                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="0" name="Play" sid="9645184810642321" type="Audio">
+                                <action disabled="1" id="0" name="Play" sid="9645184810642321" type="Audio">
                                     <param id="0" name="Audio file">collectible</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">2</param>
@@ -594,7 +594,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Diifferent type of cakes have different points that adds to score" sid="8644953612790632" title="Fruits">
+        <event-group collapsed="1" description="Diifferent type of cakes have different points that adds to score" sid="8644953612790632" title="Fruits">
             <sub-events>
                 <event-block sid="3235691306114199">
                     <conditions>

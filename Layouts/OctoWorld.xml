@@ -40,8 +40,8 @@
                         <x>400</x>
                         <y>640</y>
                         <z>0</z>
-                        <width>800</width>
-                        <height>1280</height>
+                        <width>810</width>
+                        <height>1296</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -721,50 +721,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy_ElectroOcto" uid="276">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1444</x>
-                        <y>498</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.53125</hotspotX>
-                        <hotspotY>0.703125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Enemy_SpikyOcto" uid="277">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>446</x>
-                        <y>206</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.52734375</hotspotX>
-                        <hotspotY>0.67578125</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Collectible_GiftBox" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -995,32 +951,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PowerUp_Mushroom_HyperJump" uid="132">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <RotateTowards>-90</RotateTowards>
-                        <AnimSelctor>1</AnimSelctor>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>672</x>
-                        <y>344</y>
-                        <z>0</z>
-                        <width>256</width>
-                        <height>256</height>
-                        <depth>0</depth>
-                        <hotspotX>0.48828125</hotspotX>
-                        <hotspotY>0.7890625</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="InGameTuto" uid="146">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1031,11 +961,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>414</x>
-                        <y>-362</y>
+                        <x>308</x>
+                        <y>181</y>
                         <z>0</z>
-                        <width>500</width>
-                        <height>500</height>
+                        <width>256</width>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1284,8 +1214,8 @@
                         <x>400</x>
                         <y>88</y>
                         <z>0</z>
-                        <width>801</width>
-                        <height>209</height>
+                        <width>805</width>
+                        <height>215</height>
                         <depth>0</depth>
                         <hotspotX>0.500624239</hotspotX>
                         <hotspotY>0.502392352</hotspotY>
@@ -1613,7 +1543,9 @@
                     </properties>
                     <instance-variables>
                         <Status>0</Status>
-                        <CounDownTimer>5</CounDownTimer>
+                        <CountDownTimer>5</CountDownTimer>
+                        <ScaleToggle>0</ScaleToggle>
+                        <ScaleCount>0</ScaleCount>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

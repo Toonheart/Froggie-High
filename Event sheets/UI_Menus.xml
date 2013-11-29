@@ -7,7 +7,7 @@
         <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
             <sub-events>
                 <comment>Create all PauseMenus On UI BG on paused</comment>
-                <event-block sid="9130341376091132">
+                <event-block collapsed="1" sid="9130341376091132">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="4312977658208201" type="Touch">
                             <param id="0" name="Object">Button_Pause</param>
@@ -190,7 +190,7 @@
         <event-group description="" sid="7132109060416404" title="GameOver">
             <sub-events>
                 <comment>If game over update the high score And Show the GameOver menus on UI BG</comment>
-                <event-block sid="3207011321876616">
+                <event-block collapsed="1" sid="3207011321876616">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="2826568762651674" type="Froggie" />
                     </conditions>
@@ -384,6 +384,9 @@
                         <action id="9" name="Set scale" sid="7086122872398246" type="Button_Level">
                             <param id="0" name="Scale">1.05</param>
                         </action>
+                        <action id="-13" name="Set time scale" sid="1632138403244172" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="5448182459685045">
@@ -558,6 +561,9 @@
                                 </action>
                                 <action id="-26" name="Restart layout" sid="9396102042557026" type="System" />
                                 <action id="-21" name="Reset global variables" sid="7302841383722023" type="System" />
+                                <action id="-13" name="Set time scale" sid="9150244522984916" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -667,6 +673,9 @@
                                     <param id="0" name="Layer">&quot;TopBlack&quot;</param>
                                     <param id="1" name="Visibility">0</param>
                                 </action>
+                                <action id="-13" name="Set time scale" sid="8210284382237022" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="5724595724347802" type="System">
                                     <param id="0" name="Layout">WorldSelect</param>
                                 </action>
@@ -705,6 +714,66 @@
                             <param id="0" name="Angle">-20</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="6702212103063958">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="6679281615155605" type="Touch">
+                            <param id="0" name="Object">Button_FB_Brag</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="5398988500691736" type="Button_FB_Brag">
+                            <param id="0" name="Scale">1.08</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="20607473383056">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="3398213647051203" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="5107075520531486" type="Button_FB_Brag">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="8" name="Open URL in new window" sid="1907665911412022" type="Browser">
+                                    <param id="0" name="URL">&quot;https://www.facebook.com/HungryBaka&quot;</param>
+                                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7508321853785117">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="2299357777584286" type="Touch">
+                            <param id="0" name="Object">Button_Twitter_Brag</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="679111058899166" type="Button_Twitter_Brag">
+                            <param id="0" name="Scale">1.08</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="291658482310607">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7274189697040546" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="6707229111924388" type="Button_Twitter_Brag">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="8" name="Open URL in new window" sid="8482302589588511" type="Browser">
+                                    <param id="0" name="URL">&quot;https://www.twiiter.com/Toonheart&quot;</param>
+                                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-group collapsed="1" description="" sid="8162040209001448" title="Toggling Music and Sounds">
                     <sub-events>
