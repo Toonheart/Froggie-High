@@ -15,10 +15,11 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="7346799539587752" title="Old">
+        <event-group description="" sid="7346799539587752" title="Old">
             <sub-events>
                 <include>GoToMain</include>
-                <event-block sid="2667942979917621">
+                <comment>NOTE RAMESH - Found this duplicate of above code. Disabled it. Remove if not required.. including the include statement above.</comment>
+                <event-block disabled="1" sid="2667942979917621">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="1448352738111719" type="System" />
                     </conditions>
@@ -219,7 +220,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3621656727098334" title="Placing All Achievements">
+        <event-group collapsed="1" description="" sid="3621656727098334" title="Placing All Achievements">
             <sub-events>
                 <event-block sid="9589427937693765">
                     <conditions>
@@ -274,7 +275,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7138786324349483" title="Updating Achievements Layout">
+        <event-group collapsed="1" description="" sid="7138786324349483" title="Updating Achievements Layout - Text and Icons">
             <sub-events>
                 <comment>Achievement - TEXT INFO</comment>
                 <event-block sid="5152506674536002">
@@ -301,7 +302,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="595744930905395" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Foodie Level - 1000&quot; &amp;newline &amp;&quot;Eatz food worth 1000&quot;</param>
+                                    <param id="0" name="Text">&quot;Eatz 1000 !&quot; &amp; newline &amp; &quot;1000 points of Food&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -316,7 +317,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="1417769849565801" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Foodie Level - 5000&quot; &amp;newline &amp;&quot;Eatz food worth 5000&quot;</param>
+                                    <param id="0" name="Text">&quot;Eatz 5000 !&quot; &amp; newline &amp; &quot;5000 points of Food&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -331,7 +332,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="2381363023185246" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Foodie Level - 10000&quot; &amp;newline &amp;&quot;Eatz food worth 10000&quot;</param>
+                                    <param id="0" name="Text">&quot;Eatz 10000 !&quot; &amp; newline &amp; &quot;10000 points of Food&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -346,7 +347,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="5076997313351641" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Foodie Level - 20000&quot; &amp;newline &amp;&quot;Eatz food worth 20000&quot;</param>
+                                    <param id="0" name="Text">&quot;Eatz 20000 !&quot; &amp; newline &amp; &quot;20000 points of Food&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -361,7 +362,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="520254781553472" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Foodie Level - 30000&quot; &amp;newline &amp;&quot;Eatz food worth 30000&quot;</param>
+                                    <param id="0" name="Text">&quot;Eatz 30000 !&quot; &amp; newline &amp; &quot;30000 points of Food&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -376,7 +377,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8262830825167846" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Special Food - HyperJump&quot; &amp;newline &amp;&quot;Eatz hyperjumping mushroom&quot;</param>
+                                    <param id="0" name="Text">&quot;Power Hunger&quot; &amp;newline &amp;&quot;Eatz HyperJump Food&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -391,7 +392,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="7727289949878141" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;New Friend - Unicorn &quot; &amp;newline &amp;&quot;Eatz Summoning mushroom&quot;</param>
+                                    <param id="0" name="Text">&quot;Unicorn Rider !&quot; &amp;newline &amp;&quot;Ridez a Unicorn&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -406,7 +407,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="11747177438853" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Special Food - Health&quot; &amp;newline &amp;&quot;Eatz healthy&quot;</param>
+                                    <param id="0" name="Text">&quot;Baka Livez Longer !&quot; &amp;newline &amp;&quot;Collectz Hearts&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -421,7 +422,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="599563688423847" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Gamer Level - Cool&quot; &amp;newline &amp;&quot;Unlocked Two color candy&quot;</param>
+                                    <param id="0" name="Text">&quot;Multi Color Candy !&quot; &amp;newline &amp;&quot;Unlocked new Candy&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -436,7 +437,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8955623948603492" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Gamer Level - Cool&quot; &amp;newline &amp;&quot;Unlocked Swirl candy&quot;</param>
+                                    <param id="0" name="Text">&quot;Swirl Pops !&quot; &amp;newline &amp;&quot;Unlocked Swirl candy&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -451,7 +452,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="7779713070020735" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Gamer Level - Cool&quot; &amp;newline &amp;&quot;Unlocked Wrapper candy&quot;</param>
+                                    <param id="0" name="Text">&quot;Wrapped Lollies !&quot; &amp;newline &amp;&quot;Unlocked new lollies&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -466,7 +467,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8450410623386441" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement12&quot; &amp;newline &amp;&quot;Star&quot;</param>
+                                    <param id="0" name="Text">&quot;Star Eater&quot; &amp;newline &amp;&quot;Unlocked Star Chews&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -481,7 +482,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="4466392096803347" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement13&quot; &amp;newline &amp;&quot;Cupcakeplain&quot;</param>
+                                    <param id="0" name="Text">&quot;Cupcake Lover !&quot; &amp;newline &amp;&quot;More Cupcakes&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -496,7 +497,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8786152185242285" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement14&quot; &amp;newline &amp;&quot;MultyCake&quot;</param>
+                                    <param id="0" name="Text">&quot;Pastry Yumz !&quot; &amp;newline &amp;&quot;Unlocked pastry&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -511,7 +512,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="788504775959311" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement15&quot; &amp;newline &amp;&quot;CupCakeMulty&quot;</param>
+                                    <param id="0" name="Text">&quot;CupCake Delights !&quot; &amp;newline &amp;&quot;More Toppings&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -526,7 +527,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="4142641687072944" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement16&quot; &amp;newline &amp;&quot;MultiTopping&quot;</param>
+                                    <param id="0" name="Text">&quot;Pastry Delights&quot; &amp;newline &amp;&quot;MultiTopping Pastries&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -541,7 +542,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="4576124557962568" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement17&quot; &amp;newline &amp;&quot;Unlocked Cherries&quot;</param>
+                                    <param id="0" name="Text">&quot;Cherry Love !&quot; &amp;newline &amp;&quot;New fruit Eatz&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -556,7 +557,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="9547880836382758" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement18&quot; &amp;newline &amp;&quot;vUnlocked wartermelon&quot;</param>
+                                    <param id="0" name="Text">&quot;Melon Gulpz&quot; &amp;newline &amp;&quot;You hungry?&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -571,7 +572,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="5493500514174298" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement18&quot; &amp;newline &amp;&quot;vUnlocked Apple&quot;</param>
+                                    <param id="0" name="Text">&quot;Apple a Day !&quot; &amp;newline &amp;&quot;Eatz apples&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -586,7 +587,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="2280816073216524" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement18&quot; &amp;newline &amp;&quot;vUnlocked Strawberry&quot;</param>
+                                    <param id="0" name="Text">&quot;Strawberriez !&quot; &amp;newline &amp;&quot;You Romantic?&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -601,7 +602,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="2271032540082491" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement19&quot; &amp;newline &amp;&quot;Killed Spiky Octo&quot;</param>
+                                    <param id="0" name="Text">&quot;Spiky Octo Fighter&quot; &amp;newline &amp;&quot;K.O. Spiky Octopus&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -616,7 +617,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="6610253898024387" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement20&quot; &amp;newline &amp;&quot;Killed Electro Octo&quot;</param>
+                                    <param id="0" name="Text">&quot;Electro Immune&quot; &amp;newline &amp;&quot;K.O. electric Octopus&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -631,7 +632,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="1127609435250884" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement21&quot; &amp;newline &amp;&quot;Killed Flying Octo &quot;</param>
+                                    <param id="0" name="Text">&quot;Super Baka&quot; &amp;newline &amp;&quot;K.O. flying Octopus&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -646,7 +647,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="7785968575801859" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement22&quot; &amp;newline &amp;&quot;Killed Octo Boss&quot;</param>
+                                    <param id="0" name="Text">&quot;Octo Cutz&quot; &amp;newline &amp;&quot;K.O. Boss Octopus&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -661,7 +662,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8340447052156932" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement23&quot; &amp;newline &amp;&quot;Killed Flu Chicken&quot;</param>
+                                    <param id="0" name="Text">&quot;Baka no Flu&quot; &amp;newline &amp;&quot;K.O. Flu Chicken&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -676,7 +677,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="9575918383059919" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement24&quot; &amp;newline &amp;&quot;Killed Boxer Chicken&quot;</param>
+                                    <param id="0" name="Text">&quot;Boxer Puncherz&quot; &amp;newline &amp;&quot;K.O. Boxer Chicken&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -691,7 +692,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="813273456661635" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement25&quot; &amp;newline &amp;&quot;Killed Flying Chicken&quot;</param>
+                                    <param id="0" name="Text">&quot;Skin Yaaa&quot; &amp;newline &amp;&quot;K.O. dressed Chicken&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -706,7 +707,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="7851182269263643" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement26&quot; &amp;newline &amp;&quot;Killed Chicken Boss&quot;</param>
+                                    <param id="0" name="Text">&quot;Chicken Outz&quot; &amp;newline &amp;&quot;K.O. Boss Chicken&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -721,7 +722,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="356351763158582" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement27&quot; &amp;newline &amp;&quot;Killed Bash Chimp&quot;</param>
+                                    <param id="0" name="Text">&quot;Whoop Yaaa&quot; &amp;newline &amp;&quot;K.O. Bashing Chimp&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -736,7 +737,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="3525105563218269" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement28&quot; &amp;newline &amp;&quot;Killed BaboonChimp&quot;</param>
+                                    <param id="0" name="Text">&quot;No Red Bumz&quot; &amp;newline &amp;&quot;K.O. Baboon&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -751,7 +752,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="7169284216135054" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement29&quot; &amp;newline &amp;&quot;Killed Wine Chimp&quot;</param>
+                                    <param id="0" name="Text">&quot;No Swingz&quot; &amp;newline &amp;&quot;K.O. Swinging Chimp&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -766,7 +767,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="2119138613992964" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement30&quot; &amp;newline &amp;&quot;Killed Chimp Boss&quot;</param>
+                                    <param id="0" name="Text">&quot;Chimp Take Down !&quot; &amp;newline &amp;&quot;K.O Boss Chimp&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -781,7 +782,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="6582760007870306" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement19&quot; &amp;newline &amp;&quot;Got Killed by Spiky Octo&quot;</param>
+                                    <param id="0" name="Text">&quot;Spike Pwned&quot; &amp;newline &amp;&quot;Killed by Spiky Octo &quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -796,7 +797,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="4224200897634228" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement20&quot; &amp;newline &amp;&quot;Got Killed by Electro Octo&quot;</param>
+                                    <param id="0" name="Text">&quot;Electric Shocked&quot; &amp;newline &amp;&quot;Killed by Electro Octo&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -811,7 +812,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8592005250150721" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement21&quot; &amp;newline &amp;&quot;Got Killed by Flying Octo &quot;</param>
+                                    <param id="0" name="Text">&quot;Flying Pwned&quot; &amp;newline &amp;&quot;Killed by Flying Octo&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -826,7 +827,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8409784284487932" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement22&quot; &amp;newline &amp;&quot;Got Killed byOcto Boss&quot;</param>
+                                    <param id="0" name="Text">&quot;Tentacle Pwned&quot; &amp;newline &amp;&quot;Killed by Octo Boss&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -841,7 +842,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="141571814771801" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement23&quot; &amp;newline &amp;&quot;Got Killed by Flu Chicken&quot;</param>
+                                    <param id="0" name="Text">&quot;Flu Infection&quot; &amp;newline &amp;&quot;Killed by Bird Flu&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -856,7 +857,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="1725993657483692" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement24&quot; &amp;newline &amp;&quot;Got Killed  by Boxer Chicken&quot;</param>
+                                    <param id="0" name="Text">&quot;Knock Out !&quot; &amp;newline &amp;&quot;Killed by Boxer Bird&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -871,7 +872,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="9784720080623525" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement25&quot; &amp;newline &amp;&quot;Got Killed by Flying Chicken&quot;</param>
+                                    <param id="0" name="Text">&quot;Hacked Out !&quot; &amp;newline &amp;&quot;Axed by flying Hen&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -886,7 +887,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8345279301369812" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement26&quot; &amp;newline &amp;&quot;Got Killed by Chicken Boss&quot;</param>
+                                    <param id="0" name="Text">&quot;Chick Wins&quot; &amp;newline &amp;&quot;Killed by Boss Chicken&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -901,7 +902,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="91837473040847" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement27&quot; &amp;newline &amp;&quot;Got Killed by Bash Chimp&quot;</param>
+                                    <param id="0" name="Text">&quot;Bashed Out&quot; &amp;newline &amp;&quot;Pummeled by Chimp&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -916,7 +917,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="223326533015258" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement28&quot; &amp;newline &amp;&quot;Got Killed by BaboonChimp&quot;</param>
+                                    <param id="0" name="Text">&quot;Babooned&quot; &amp;newline &amp;&quot;Killed by Baboon&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -931,7 +932,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="8251721064211267" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement29&quot; &amp;newline &amp;&quot;Got Killed by baboon weapon&quot;</param>
+                                    <param id="0" name="Text">&quot;Dirty Undies&quot; &amp;newline &amp;&quot;Hit by Smelly laundry&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -946,7 +947,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="5317818414151726" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement29&quot; &amp;newline &amp;&quot;Killed Wine Chimp&quot;</param>
+                                    <param id="0" name="Text">&quot;Spanner Knockout&quot; &amp;newline &amp;&quot;Hit by a Spanner&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -961,7 +962,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Set text" sid="6324665759769177" type="Text_Achieve_Discr">
-                                    <param id="0" name="Text">&quot;Achievement30&quot; &amp;newline &amp;&quot;Killed Chimp Boss&quot;</param>
+                                    <param id="0" name="Text">&quot;Monkey Wins !&quot; &amp;newline &amp;&quot;Killed Boss Chimp&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1858,25 +1859,6 @@
         </event-group>
         <event-group collapsed="1" description="" sid="3615368328432203" title="UserInputs">
             <sub-events>
-                <event-block sid="3852573621145789">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3387662585398103" type="Icon_Achieve">
-                            <param id="0" name="Instance variable">AchievementNo</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">44</param>
-                        </condition>
-                        <condition id="3" name="Has key" sid="6648578150837141" type="Dict_Achieves">
-                            <param id="0" name="Key">&quot;44_ByFlyingChimp&quot;</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="7787655117778241" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="190504694877304" type="Icon_Achieve">
-                            <param id="0" name="Animation">&quot;Unlock&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <comment>Go Back to the Title Menu</comment>
                 <event-block sid="7429165856555494">
                     <conditions>

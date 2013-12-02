@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Froggie_Events</name>
     <events>
-        <event-group description="" sid="9939025668940154" title="FROGGIE JUMP">
+        <event-group collapsed="1" description="" sid="9939025668940154" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
                 <event-block sid="1939084024228619">
@@ -139,7 +139,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
+        <event-group collapsed="1" description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
             <sub-events>
                 <comment>Wrap the frog Left and right</comment>
                 <event-block sid="4289847182450448">
@@ -170,7 +170,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
+        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -241,7 +241,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL">
+        <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL and FALL">
             <sub-events>
                 <event-block sid="6325441995628482">
                     <conditions>
@@ -470,7 +470,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8254297641577714" title="Gyro-Events">
+        <event-group collapsed="1" description="" sid="8254297641577714" title="Gyro-Events">
             <sub-events>
                 <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
                 <event-block sid="9509104835207651">
