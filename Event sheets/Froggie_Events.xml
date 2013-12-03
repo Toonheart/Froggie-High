@@ -6,7 +6,7 @@
         <event-group collapsed="1" description="" sid="9939025668940154" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
-                <event-block sid="1939084024228619">
+                <event-block collapsed="1" sid="1939084024228619">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="Froggie" />
                         <condition id="-4" name="Trigger once while true" sid="4245657547037535" type="System" />
@@ -95,7 +95,7 @@
                                 <action id="0" name="Play" sid="8557450027523407" type="Audio">
                                     <param id="0" name="Audio file">normalJump</param>
                                     <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
+                                    <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;NormalJump&quot;</param>
                                 </action>
                             </actions>
@@ -470,7 +470,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8254297641577714" title="Gyro-Events">
+        <event-group description="" sid="8254297641577714" title="Gyro-Events">
             <sub-events>
                 <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
                 <event-block sid="9509104835207651">
@@ -835,7 +835,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3997877377301353" title="Progress Bar Events">
+        <event-group description="" sid="3997877377301353" title="Progress Bar Events">
             <sub-events>
                 <event-block sid="7242449783354925">
                     <conditions>

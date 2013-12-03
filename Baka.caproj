@@ -11,8 +11,8 @@
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -26,11 +26,11 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -441,7 +441,7 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="3" loop="0" name="Shoe" pingpong="0" repeatcount="1" repeatto="0" sid="5818111390240151" speed="5">
+                    <animation framecount="3" loop="1" name="Shoe" pingpong="0" repeatcount="1" repeatto="0" sid="5818111390240151" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -496,13 +496,27 @@
                 <instance-variable name="FloorCount" sid="9521941424289682" type="number" />
             </instance-variables>
         </object-type>
-        <object-type name="PowerUp_Mushroom_HyperJump" sid="3673829393400018">
+        <object-type name="PowerUp_Multiple" sid="3673829393400018">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="RotateTowards" sid="6717419788593246" type="number" />
                 <instance-variable name="AnimSelctor" sid="4829201331516059" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Karate" pingpong="0" repeatcount="1" repeatto="0" sid="4620926686404407" speed="5">
+                    <frame duration="1" hotspotX="0.494792" hotspotY="0.901042">
+                        <collision-poly>
+                            <point x="0.21875" y="0.21875" />
+                            <point x="0.5" y="0.291667" />
+                            <point x="0.791667" y="0.208333" />
+                            <point x="0.682292" y="0.5" />
+                            <point x="0.651042" y="0.651042" />
+                            <point x="0.5" y="0.703125" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.322917" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
                 <animation framecount="1" loop="0" name="Sage" pingpong="0" repeatcount="1" repeatto="0" sid="8167416719489079" speed="5">
                     <frame duration="1" hotspotX="0.489583" hotspotY="0.791667">
                         <collision-poly>
@@ -541,20 +555,6 @@
                             <point x="0.5" y="0.833333" />
                             <point x="0.302083" y="0.697917" />
                             <point x="0.182292" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Karate" pingpong="0" repeatcount="1" repeatto="0" sid="4620926686404407" speed="5">
-                    <frame duration="1" hotspotX="0.494792" hotspotY="0.901042">
-                        <collision-poly>
-                            <point x="0.21875" y="0.21875" />
-                            <point x="0.5" y="0.291667" />
-                            <point x="0.791667" y="0.208333" />
-                            <point x="0.682292" y="0.5" />
-                            <point x="0.651042" y="0.651042" />
-                            <point x="0.5" y="0.703125" />
-                            <point x="0.3125" y="0.6875" />
-                            <point x="0.322917" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -987,7 +987,17 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="2008026346958739" speed="2">
-                    <frame duration="1" hotspotX="0.496094" hotspotY="0.498047" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.302734" y="0.302734" />
+                            <point x="0.5" y="0.316406" />
+                            <point x="0.751953" y="0.248047" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.960938" />
+                            <point x="0.291016" y="0.708984" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -5567,14 +5577,13 @@
                 <animation framecount="1" loop="0" name="Wohoo" pingpong="0" repeatcount="1" repeatto="0" sid="2395711368002048" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.143333" y="0.413462" />
-                            <point x="0.5" y="0.336538" />
-                            <point x="0.833333" y="0.480769" />
-                            <point x="0.961667" y="0.5" />
-                            <point x="0.84" y="0.538462" />
-                            <point x="0.5" y="0.745192" />
-                            <point x="0.0883333" y="0.745192" />
-                            <point x="0.0733333" y="0.5" />
+                            <point x="0.352308" y="0.590206" />
+                            <point x="0.5" y="0.548969" />
+                            <point x="0.652308" y="0.582474" />
+                            <point x="0.955385" y="0.5" />
+                            <point x="0.895385" y="0.824742" />
+                            <point x="0.106154" y="0.822165" />
+                            <point x="0.893846" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5595,14 +5604,14 @@
                 <animation framecount="1" loop="0" name="Combo" pingpong="0" repeatcount="1" repeatto="0" sid="7337300606386936" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0892308" y="0.243697" />
-                            <point x="0.5" y="0.390756" />
-                            <point x="0.909231" y="0.247899" />
-                            <point x="0.938462" y="0.5" />
-                            <point x="0.910769" y="0.756303" />
-                            <point x="0.5" y="0.768908" />
-                            <point x="0.0938462" y="0.743697" />
-                            <point x="0.0553846" y="0.5" />
+                            <point x="0.36" y="0.603093" />
+                            <point x="0.5" y="0.608247" />
+                            <point x="0.623077" y="0.631443" />
+                            <point x="0.936923" y="0.5" />
+                            <point x="0.895385" y="0.824742" />
+                            <point x="0.5" y="0.842784" />
+                            <point x="0.101538" y="0.829897" />
+                            <point x="0.893846" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5720,7 +5729,8 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4388338383153325" speed="3">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4388338383153325" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -6794,13 +6804,108 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Icon_TizenAchieve" sid="3959770528463487">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3692983780002962" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.699219" y="0.699219" />
+                            <point x="0.5" y="0.789063" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IOSAchieve" sid="6534855851847995">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9466421866819713" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.699219" y="0.699219" />
+                            <point x="0.5" y="0.789063" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_AndroidAchieve" sid="7860075744377928">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9993915595381597" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.699219" y="0.699219" />
+                            <point x="0.5" y="0.789063" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_WindowsAchieve" sid="427615222639618">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2168941988947257" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.699219" y="0.699219" />
+                            <point x="0.5" y="0.789063" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_BBmAchieve" sid="9125312884917162">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9232108961800435" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.699219" y="0.699219" />
+                            <point x="0.5" y="0.789063" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
             <members>
                 <member>Enemy_ElectroOcto</member>
                 <member>Enemy_SpikyOcto</member>
-                <member>PowerUp_Mushroom_HyperJump</member>
+                <member>PowerUp_Multiple</member>
             </members>
         </family>
         <family name="Enemy" plugin-id="Sprite" sid="2891136451677008">
@@ -6827,6 +6932,7 @@
                 <member>Floor_HeyStack_Broken</member>
                 <member>Floor_HeyStack_Normal</member>
                 <member>Floor_HeyStak_Moving</member>
+                <member>Floor_Wooden_Moving</member>
                 <member>Floor_Wooden_Normal</member>
             </members>
         </family>
@@ -6841,8 +6947,8 @@
         </family>
         <family name="PowerUps" plugin-id="Sprite" sid="3063915391822131">
             <members>
+                <member>PowerUp_Multiple</member>
                 <member>PowerUp_Mushroom_Health</member>
-                <member>PowerUp_Mushroom_HyperJump</member>
                 <member>PowerUp_Mushroom_Rainbow</member>
             </members>
         </family>
@@ -6924,6 +7030,20 @@
                 <member>World3_BG_ObjectsP2</member>
             </members>
         </family>
+        <family name="ButtonsCommonSound" plugin-id="Sprite" sid="2497445738369922">
+            <members>
+                <member>Button_FB_Brag</member>
+                <member>Button_FB_Title</member>
+                <member>Button_GiveUp</member>
+                <member>Button_GoBack</member>
+                <member>Button_Level</member>
+                <member>Button_Pause</member>
+                <member>Button_Tutorial</member>
+                <member>Button_Twitter_Brag</member>
+                <member>Button_Twitter_Pause</member>
+                <member>Buttton_SaveMe</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>OctoWorld.xml</layout>
@@ -6934,11 +7054,11 @@
         <layout>Achievements.xml</layout>
         <layout>Store.xml</layout>
         <layout>Tutorial.xml</layout>
-        <layout>GraphicStore2.xml</layout>
         <layout>WorldSelect.xml</layout>
         <layout>GraphicStore1.xml</layout>
         <layout>GraphicStore3.xml</layout>
         <layout>GraphicStore_Common.xml</layout>
+        <layout>GraphicStore2.xml</layout>
         <layout>About.xml</layout>
         <layout>GraphicStoreBG.xml</layout>
         <layout>SplashScreen.xml</layout>
@@ -6951,7 +7071,6 @@
         <event-sheet>HUD.xml</event-sheet>
         <event-sheet>Maintainance.xml</event-sheet>
         <event-sheet>TitleScreen_Events.xml</event-sheet>
-        <event-sheet>GameOver_Events.xml</event-sheet>
         <event-sheet>PowerUps.xml</event-sheet>
         <event-sheet>Collisions.xml</event-sheet>
         <event-sheet>FacebookIntegration.xml</event-sheet>
@@ -6985,6 +7104,7 @@
         <event-sheet>Preloads_Events.xml</event-sheet>
         <event-sheet>Gyro_Events.xml</event-sheet>
         <event-sheet>StoryBoardEvents.xml</event-sheet>
+        <event-sheet>SoundsCommon.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">
@@ -7045,6 +7165,12 @@
         <file name="unicorn.m4a" />
         <file name="unicorn.ogg" />
         <file name="unicorn.wav" />
+        <file name="GenericButtonClick.m4a" />
+        <file name="GenericButtonClick.ogg" />
+        <file name="GenericButtonClick.wav" />
+        <file name="ShoeJump.m4a" />
+        <file name="ShoeJump.ogg" />
+        <file name="ShoeJump.wav" />
     </sounds-folder>
     <music-folder expanded="1">
         <file name="EMPTY [High quality].ogg" />

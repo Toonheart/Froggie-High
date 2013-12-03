@@ -3,179 +3,25 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <event-group description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+        <event-group collapsed="1" description="" sid="3764998761705823" title="ColleCtibles">
             <sub-events>
-                <comment>Destroy The Enemy Below the ViewPortBottom</comment>
-                <event-block sid="8554971264545097">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="Enemy" />
-                        <condition id="-2" name="Compare Y" sid="8520453531840971" type="Enemy">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="6516128347584107" type="Enemy" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="7432947511309844" title="OCTO WORLD">
-            <sub-events>
-                <event-group description="Destroy the floors below the viewportbottom" sid="1655299708245977" title="Destroying Floors">
+                <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
                     <sub-events>
-                        <comment>Destroy The Floors Below the ViewPortBottom</comment>
-                        <event-block sid="7677198932992921">
+                        <comment>Destroy The Enemy Below the ViewPortBottom</comment>
+                        <event-block sid="8554971264545097">
                             <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="4817895405900044" type="Floors" />
-                                <condition id="-2" name="Compare Y" sid="1314203211417815" type="Floors">
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="Enemy" />
+                                <condition id="-2" name="Compare Y" sid="8520453531840971" type="Enemy">
                                     <param id="0" name="Comparison">4</param>
                                     <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="3636769497370544" type="Floors" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="7667131280623245">
-                            <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="7491190785985406" type="Floor_Grass_Broken_1" />
-                                <condition id="-2" name="Compare Y" sid="8615215713193035" type="Floor_Grass_Broken_1">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="8517352317827825" type="Floor_Grass_Broken_1" />
-                                <action id="-9" name="Destroy" sid="3343360213598023" type="Floor_Grass_Broken_2" />
+                                <action id="-9" name="Destroy" sid="6516128347584107" type="Enemy" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group description="Destroy the candies below the screen and aloso Overlapping sides" sid="9890516275067826" title="CANDY - Destroy" />
-                <comment>TO BE REMOVED WHEN WE MAKE SCROLLING PARALLAX tiles</comment>
-                <event-block sid="2346052610093019">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="1434606079940587" type="BG1">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Background&quot;)+2000</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="2417923632392082" type="BG1" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="555443600129024" title="CHICKEN WORLD">
-            <sub-events>
-                <event-group collapsed="1" description="" sid="4573181151284243" title="BG-Objects">
-                    <sub-events>
-                        <event-block sid="6446648705144649">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="1032233525900632" type="BG_Cloud2">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Parallax2&quot;)</param>
-                                </condition>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="7559244736208933" type="BG_Cloud2" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="8256538938154084" type="BG_Cloud2" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="1700155083897719">
-                            <conditions>
-                                <condition id="-2" name="Compare Y" sid="1745210016321543" type="BG_Cloud1">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Parallax1&quot;)</param>
-                                </condition>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="2576656266356364" type="BG_Cloud1" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="1224843388087023" type="BG_Cloud1" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-block sid="9255057387519576">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="3894738874459854" type="Floors" />
-                        <condition id="-2" name="Compare Y" sid="9380298327534007" type="Floors">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="2106642563887095" type="Floors" />
-                    </actions>
-                </event-block>
-                <comment>Destroy The CANDY Below the ViewPortBottom</comment>
-                <event-block sid="9824397742640384">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Collectible_cake" />
-                        <condition id="-2" name="Compare Y" sid="4186273584232017" type="Collectible_cake">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="532491530161822" type="Collectible_cake" />
-                    </actions>
-                </event-block>
-                <comment>Destroy The CANDY  if they spawn at coorners </comment>
-                <event-block sid="7260606134191501">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Collectible_cake">
-                            <param id="0" name="Object">Border_Left_ViewPort</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="221424784066889" type="Collectible_cake" />
-                    </actions>
-                </event-block>
-                <event-block sid="1903254507557019">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Collectible_cake">
-                            <param id="0" name="Object">Border_Right_ViewPort</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="2756640994042796" type="Collectible_cake" />
-                    </actions>
-                </event-block>
-                <event-block sid="1800295377985308">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="1889233023303343" type="Floor_HeyStak_Broken1">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                        </condition>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="8907209741656769" type="Floor_HeyStak_Broken1" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="978402502347238" type="Floor_Grass_Broken_1" />
-                        <action id="-9" name="Destroy" sid="1696364017134858" type="Floor_Grass_Broken_2" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="8363342877812608" title="BrokenParts">
-            <sub-events>
-                <event-block sid="3889299973164307">
-                    <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="8917878540726556" type="BrokenParts" />
-                        <condition id="-2" name="Compare Y" sid="2522268557800145" type="BrokenParts">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="2422699461059462" type="BrokenParts" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="4920008378764982" title="ColleCtibles">
-            <sub-events>
                 <comment>Destroy the collectible below the screen,and overlaping the side port markers</comment>
                 <event-block sid="3874415251620764">
                     <conditions>
@@ -211,7 +57,108 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7689727470139722" title="Others">
+        <event-group collapsed="1" description="" sid="5454558581852329" title="BrokenParts">
+            <sub-events>
+                <event-block sid="3889299973164307">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8917878540726556" type="BrokenParts" />
+                        <condition id="-2" name="Compare Y" sid="2522268557800145" type="BrokenParts">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2422699461059462" type="BrokenParts" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="Destroying the floors below viewportbottom" sid="7435241601970631" title="Floors - Destroy">
+            <sub-events>
+                <event-block sid="1543279581143428">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1551472805355536" type="Floors" />
+                        <condition id="-2" name="Compare Y" sid="2916147339120867" type="Floors">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9745643467417231" type="Floors" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="5729217750058048" title="Background Objects">
+            <sub-events>
+                <event-block sid="554422739994701">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="9641525689230906" type="BG_Objects">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="4977708491194544" type="BG_Objects" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4024103182970469" type="BG_Objects" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="3860574400366636">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6736678543243755" type="BG_Objects">
+                            <param id="0" name="Object">Border_Bottom_ViewPort</param>
+                        </condition>
+                        <condition disabled="1" id="-3" inverted="1" name="Is on-screen" sid="9042828082801045" type="BG_Objects" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2273726593879544" type="BG_Objects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="6080021250574902" title="PowerUp">
+            <sub-events>
+                <event-block sid="1854685202982629">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="211572889199896" type="PowerUps">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="7221372458813254" type="BG_Objects" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3861483175428005" type="BG_Objects" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="6879707152961998" title="Broken Parts">
+            <sub-events>
+                <event-block sid="1543279581143428">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1551472805355536" type="BrokenParts" />
+                        <condition id="-2" name="Compare Y" sid="2916147339120867" type="BrokenParts">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9745643467417231" type="BrokenParts" />
+                    </actions>
+                </event-block>
+                <event-block sid="6073718053858237">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="903936474708948" type="BrokenParts">
+                            <param id="0" name="Object">Floors</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4849758098781548" type="BrokenParts" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="2135377953536701" title="Others">
             <sub-events>
                 <event-block sid="461862690270841">
                     <conditions>
@@ -219,6 +166,18 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="263074818267037" type="Weapon_Baboon" />
+                    </actions>
+                </event-block>
+                <event-block sid="530935685686383">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="9426444073310874" type="FluChicken_Feather" />
+                        <condition id="-2" name="Compare Y" sid="4818305413800922" type="FluChicken_Feather">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5651869390126409" type="FluChicken_Feather" />
                     </actions>
                 </event-block>
                 <event-block sid="2296325576407999">
@@ -267,34 +226,139 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7525587723564034" title="Background Objects">
+        <event-group collapsed="1" description="" disabled="1" sid="7432947511309844" title="OCTO WORLD">
             <sub-events>
-                <event-block sid="554422739994701">
+                <event-group description="Destroy the floors below the viewportbottom" disabled="1" sid="1655299708245977" title="Destroying Floors">
+                    <sub-events>
+                        <comment>Destroy The Floors Below the ViewPortBottom</comment>
+                        <event-block disabled="1" sid="7677198932992921">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="4817895405900044" type="Floors" />
+                                <condition id="-2" name="Compare Y" sid="1314203211417815" type="Floors">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="3636769497370544" type="Floors" />
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="7667131280623245">
+                            <conditions>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="7491190785985406" type="Floor_Grass_Broken_1" />
+                                <condition id="-2" name="Compare Y" sid="8615215713193035" type="Floor_Grass_Broken_1">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8517352317827825" type="Floor_Grass_Broken_1" />
+                                <action id="-9" name="Destroy" sid="3343360213598023" type="Floor_Grass_Broken_2" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <comment>TO BE REMOVED WHEN WE MAKE SCROLLING PARALLAX tiles</comment>
+                <event-block disabled="1" sid="2346052610093019">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="9641525689230906" type="BG_Objects">
+                        <condition id="-2" name="Compare Y" sid="1434606079940587" type="BG1">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+500</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Background&quot;)+2000</param>
                         </condition>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="4977708491194544" type="BG_Objects" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="4024103182970469" type="BG_Objects" />
+                        <action id="-9" name="Destroy" sid="2417923632392082" type="BG1" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6811292128185962" title="PowerUp">
+        <event-group collapsed="1" description="" disabled="1" sid="555443600129024" title="CHICKEN WORLD">
             <sub-events>
-                <event-block sid="1854685202982629">
+                <event-group collapsed="1" description="" disabled="1" sid="4573181151284243" title="BG-Objects">
+                    <sub-events>
+                        <event-block disabled="1" sid="6446648705144649">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1032233525900632" type="BG_Cloud2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Parallax2&quot;)</param>
+                                </condition>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="7559244736208933" type="BG_Cloud2" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="8256538938154084" type="BG_Cloud2" />
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="1700155083897719">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1745210016321543" type="BG_Cloud1">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Parallax1&quot;)</param>
+                                </condition>
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="2576656266356364" type="BG_Cloud1" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1224843388087023" type="BG_Cloud1" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block disabled="1" sid="9255057387519576">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="211572889199896" type="PowerUps">
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="3894738874459854" type="Floors" />
+                        <condition id="-2" name="Compare Y" sid="9380298327534007" type="Floors">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;BG_Color&quot;)+2000</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
                         </condition>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="7221372458813254" type="BG_Objects" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="3861483175428005" type="BG_Objects" />
+                        <action id="-9" name="Destroy" sid="2106642563887095" type="Floors" />
+                    </actions>
+                </event-block>
+                <comment>Destroy The CANDY Below the ViewPortBottom</comment>
+                <event-block disabled="1" sid="9824397742640384">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1121853118405155" type="Collectible_cake" />
+                        <condition id="-2" name="Compare Y" sid="4186273584232017" type="Collectible_cake">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Player&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="532491530161822" type="Collectible_cake" />
+                    </actions>
+                </event-block>
+                <comment>Destroy The CANDY  if they spawn at coorners </comment>
+                <event-block disabled="1" sid="7260606134191501">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9559935353100949" type="Collectible_cake">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="221424784066889" type="Collectible_cake" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="1903254507557019">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2532656865914234" type="Collectible_cake">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2756640994042796" type="Collectible_cake" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="1800295377985308">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1889233023303343" type="Floor_HeyStak_Broken1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8907209741656769" type="Floor_HeyStak_Broken1" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="978402502347238" type="Floor_Grass_Broken_1" />
+                        <action id="-9" name="Destroy" sid="1696364017134858" type="Floor_Grass_Broken_2" />
                     </actions>
                 </event-block>
             </sub-events>

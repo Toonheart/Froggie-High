@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SoundsCommon</name>
+    <events>
+        <comment>This EventSheet is Included in PowerUps Sheet instead of including in all worlds directly</comment>
+        <event-group description="Sounds When frog attacks to kill enemies" sid="391325680861428" title="Froggie Attack Sounds">
+            <sub-events>
+                <comment>Karrate Kick</comment>
+                <event-block sid="7226177082741639">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="8854071426961121" type="Froggie">
+                            <param id="0" name="Animation">&quot;Karate&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Play Sound When Frog is kicking</comment>
+                        <event-block sid="781364352352027">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="5938128615267336" type="Froggie">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5327465034942822" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="78397376562434" type="Audio">
+                                    <param id="0" name="Audio file">onKicked</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Kick&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Shoe Power Sound</comment>
+                <event-block sid="3098227065354524">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="7456549009352931" type="Froggie">
+                            <param id="0" name="Animation">&quot;shoe&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5822556107763883" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="2393529689802077" type="Audio">
+                            <param id="0" name="Audio file">ShoeJump</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Shoe&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9504437837776345">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="6677953032110858" type="Froggie">
+                            <param id="0" name="Animation">&quot;shoe&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="937548796758247">
+                            <conditions>
+                                <condition id="0" name="On ended" sid="413632792583617" type="Audio">
+                                    <param id="0" name="Tag">&quot;Shoe&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="7220103070907357" type="Audio">
+                                    <param id="0" name="Audio file">ShoeJump</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Shoe&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5928005562516469">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4664525048606995" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="5957099251322415" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="8398212812837261" type="Audio">
+                            <param id="0" name="Tag">&quot;Shoe&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5614155188866451" title="Buttons">
+            <sub-events>
+                <event-block disabled="1" sid="9318705002108405">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="2623156943774314" type="Touch">
+                            <param id="0" name="Object">ButtonsCommonSound</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="7938950013875876">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="8714577139123011" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="1250658452653995" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -4,10 +4,10 @@
     <name>UI_Menus</name>
     <events>
         <include>FacebookIntegration</include>
-        <event-group collapsed="1" description="" sid="5376503122712939" title="PAUSE/RESUME">
+        <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
             <sub-events>
                 <comment>Create all PauseMenus On UI BG on paused</comment>
-                <event-block collapsed="1" sid="9130341376091132">
+                <event-block sid="9130341376091132">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="4312977658208201" type="Touch">
                             <param id="0" name="Object">Button_Pause</param>
@@ -36,6 +36,12 @@
                                 <action id="-4" name="Set layer visible" sid="5592681339438707" type="System">
                                     <param id="0" name="Layer">&quot;TopBlack&quot;</param>
                                     <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="2656951390988599" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="2426767881858159" type="BG_UI">
                                     <param id="0" name="Visibility">1</param>
@@ -367,10 +373,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
-                <event-block sid="7442582905420583">
+                <event-block collapsed="1" sid="7442582905420583">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="6691330274554967" type="Touch">
                             <param id="0" name="Object">Button_Level</param>
@@ -407,6 +413,12 @@
                                 </action>
                                 <action id="-9" name="Destroy" sid="817019083873584" type="UI_PauseMenus" />
                                 <action id="-9" name="Destroy" sid="7448841543118793" type="Text_UI_Score" />
+                                <action id="0" name="Play" sid="337385943565377" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="6698653432654918" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
@@ -463,6 +475,12 @@
                                     <param id="1" name="Layer">&quot;UI&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
+                                <action id="0" name="Play" sid="921095633483364" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
                                 <action id="-8" name="Set angle" sid="7318115213890538" type="FullVersion">
                                     <param id="0" name="Angle">-20</param>
                                 </action>
@@ -482,7 +500,7 @@
                     </actions>
                 </event-block>
                 <comment>What is this doing here?  Is there a button achieves on any of the UI?</comment>
-                <event-block collapsed="1" sid="5411855955152589">
+                <event-block sid="5411855955152589">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="736063994034212" type="Touch">
                             <param id="0" name="Object">Button_Achieves</param>
@@ -504,6 +522,12 @@
                                 <action id="9" name="Set scale" sid="9515836573777155" type="Button_Achieves">
                                     <param id="0" name="Scale">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="8508827536711007" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
                                 <action id="-2" name="Go to layout" sid="1853851968703894" type="System">
                                     <param id="0" name="Layout">Achievements</param>
                                 </action>
@@ -523,7 +547,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block collapsed="1" sid="966311176288386">
+                <event-block sid="966311176288386">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="4909214928226794" type="Touch">
                             <param id="0" name="Object">Icon_Restart</param>
@@ -550,6 +574,12 @@
                                 </action>
                                 <action id="-13" name="Set time scale" sid="9150244522984916" type="System">
                                     <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="4552206334928672" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="7762794991122137" type="System">
                                     <param id="0" name="Seconds">0.1</param>
@@ -665,6 +695,12 @@
                                 <action id="9" name="Set scale" sid="9155939951724567" type="Button_GiveUp">
                                     <param id="0" name="Scale">1</param>
                                 </action>
+                                <action id="0" name="Play" sid="3549081359712105" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
                                 <action id="-13" name="Set time scale" sid="7032349293937932" type="System">
                                     <param id="0" name="Time scale">1</param>
                                 </action>
@@ -715,6 +751,12 @@
                         <action id="-8" name="Set angle" sid="3203167545619036" type="FullVersion">
                             <param id="0" name="Angle">-20</param>
                         </action>
+                        <action id="0" name="Play" sid="4267912632447219" type="Audio">
+                            <param id="0" name="Audio file">GenericButtonClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6702212103063958">
@@ -738,6 +780,12 @@
                             <actions>
                                 <action id="9" name="Set scale" sid="5107075520531486" type="Button_FB_Brag">
                                     <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="3900458606805067" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
                                 </action>
                                 <action id="8" name="Open URL in new window" sid="1907665911412022" type="Browser">
                                     <param id="0" name="URL">&quot;https://www.facebook.com/HungryBaka&quot;</param>
@@ -768,6 +816,12 @@
                             <actions>
                                 <action id="9" name="Set scale" sid="6707229111924388" type="Button_Twitter_Brag">
                                     <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="5065645879701398" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
                                 </action>
                                 <action id="8" name="Open URL in new window" sid="8482302589588511" type="Browser">
                                     <param id="0" name="URL">&quot;https://www.twiiter.com/Toonheart&quot;</param>
@@ -800,7 +854,14 @@
                                     <param id="0" name="Object">Icon_MusicStatus</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Play" sid="5643988681858763" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="4837016364067963">
                                     <conditions>

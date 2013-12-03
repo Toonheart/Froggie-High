@@ -3,7 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PowerUps</name>
     <events>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <include>SoundsCommon</include>
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -412,14 +413,13 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5111261358297281" title="HyperJump">
+        <event-group description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
             <sub-events>
-                <comment>Jump Automatically</comment>
-                <comment>On landed on Spring give a double push</comment>
+                <comment>Collect the powerup show Power on Attack button</comment>
                 <event-block sid="4013199515954371">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4552949056540236" type="Froggie">
-                            <param id="0" name="Object">PowerUp_Mushroom_HyperJump</param>
+                            <param id="0" name="Object">PowerUp_Multiple</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -427,7 +427,7 @@
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Spawn another object" sid="9973943790720769" type="PowerUp_Mushroom_HyperJump">
+                        <action disabled="1" id="0" name="Spawn another object" sid="9973943790720769" type="PowerUp_Multiple">
                             <param id="0" name="Object">Bling</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">0</param>
@@ -436,12 +436,12 @@
                             <param id="0" name="Animation">&quot;Mushroom&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action disabled="1" id="0" name="Spawn another object" sid="5450478816410229" type="PowerUp_Mushroom_HyperJump">
+                        <action disabled="1" id="0" name="Spawn another object" sid="5450478816410229" type="PowerUp_Multiple">
                             <param id="0" name="Object">Bling</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="215280903131925" type="PowerUp_Mushroom_HyperJump" />
+                        <action id="-9" name="Destroy" sid="215280903131925" type="PowerUp_Multiple" />
                         <action disabled="1" id="-10" name="Set value" sid="3528893632837721" type="Froggie">
                             <param id="0" name="Instance variable">CurrentPowerup</param>
                             <param id="1" name="Value">1</param>
@@ -450,7 +450,7 @@
                     <sub-events>
                         <event-block sid="7384909323447169">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="1900124101165098" type="PowerUp_Mushroom_HyperJump">
+                                <condition id="2" name="Is playing" sid="1900124101165098" type="PowerUp_Multiple">
                                     <param id="0" name="Animation">&quot;Shoes&quot;</param>
                                 </condition>
                             </conditions>
@@ -484,7 +484,7 @@
                         </event-block>
                         <event-block sid="9630334886358882">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="6001059093019427" type="PowerUp_Mushroom_HyperJump">
+                                <condition id="2" name="Is playing" sid="6001059093019427" type="PowerUp_Multiple">
                                     <param id="0" name="Animation">&quot;Karate&quot;</param>
                                 </condition>
                             </conditions>
@@ -518,7 +518,7 @@
                         </event-block>
                         <event-block sid="7770437179835274">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="5084647209237032" type="PowerUp_Mushroom_HyperJump">
+                                <condition id="2" name="Is playing" sid="5084647209237032" type="PowerUp_Multiple">
                                     <param id="0" name="Animation">&quot;Boxing&quot;</param>
                                 </condition>
                             </conditions>
@@ -552,7 +552,7 @@
                         </event-block>
                         <event-block sid="3922337019237654">
                             <conditions>
-                                <condition id="2" name="Is playing" sid="2414710001238658" type="PowerUp_Mushroom_HyperJump">
+                                <condition id="2" name="Is playing" sid="2414710001238658" type="PowerUp_Multiple">
                                     <param id="0" name="Animation">&quot;Sage&quot;</param>
                                 </condition>
                             </conditions>
@@ -586,6 +586,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Doublejump by increaing the jump strength for one jump</comment>
                 <event-block sid="5103723196897294">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7775351253031619" type="Froggie">
@@ -648,7 +649,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="2550976769791863" type="PowerUp_Mushroom_HyperJump">
+                        <action id="0" name="Spawn another object" sid="2550976769791863" type="PowerUp_Multiple">
                             <param id="0" name="Object">Bling</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">0</param>
@@ -683,24 +684,26 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7281787066480177">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9413066180860862" type="Froggie">
+                            <param id="0" name="Object">PowerUps</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="8616483591014319" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">round(random(600,700))</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="7281787066480177">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="9413066180860862" type="Froggie">
-                    <param id="0" name="Object">PowerUps</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="8616483591014319" type="System">
-                    <param id="0" name="Variable">Score</param>
-                    <param id="1" name="Value">round(random(600,700))</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="7823920697448265" title="ActivatingPowerUps">
+        <event-group collapsed="1" description="Using Attack Button" sid="7823920697448265" title="ActivatingPowerUps">
             <sub-events>
-                <event-block sid="2238419359858149">
+                <comment>Activate the available power when touching the Attack Button</comment>
+                <comment>Destroy the power at the end of touch or if the powerup time exceeds</comment>
+                <event-block collapsed="1" sid="2238419359858149">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="9349854587783746" type="Touch">
                             <param id="0" name="Object">Button_Attack</param>
@@ -815,7 +818,8 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7497402750660566">
+                        <comment>Zoom effect for Attack button when player using the power</comment>
+                        <event-block collapsed="1" sid="7497402750660566">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5139230834913364" type="Button_Attack">
                                     <param id="0" name="Instance variable">ScaleCount</param>
@@ -869,6 +873,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Destroying the power after Time exceeded</comment>
                 <event-block sid="7530116143033854">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="4397682010052437" type="Button_Attack">
@@ -913,141 +918,120 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-block disabled="1" sid="7596391756828956">
-            <conditions>
-                <condition id="2" name="Is playing" sid="5201794250043326" type="Froggie">
-                    <param id="0" name="Animation">&quot;Shoe&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="9644096974856488" type="Button_Attack">
-                    <param id="0" name="Instance variable">Status</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="252142485396512">
-            <conditions>
-                <condition id="-22" name="Else" sid="3370929592878642" type="System" />
-                <condition id="-4" name="Trigger once while true" sid="3732799963025536" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="6821085635034833" type="Button_Attack">
-                    <param id="0" name="Instance variable">Status</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5535811351894709">
-            <conditions>
-                <condition id="2" name="Is playing" sid="1911248268642474" type="Froggie">
-                    <param id="0" name="Animation">&quot;Sage&quot;</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="7356698113638848" type="Froggie">
-                    <param id="0" name="Instance variable">SageCount</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="11" name="Set enabled" sid="3348691782116873" type="Froggie">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="2863075582742212" type="Button_Attack">
-                    <param id="0" name="Instance variable">Status</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="3738384080502289">
+                <comment>While Sage power is using Just disable the Platform behaviour and move froggie in upward direction</comment>
+                <event-block collapsed="1" sid="5535811351894709">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="5982073403821061" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-23" name="Move at angle" sid="6349473334492642" type="Froggie">
-                            <param id="0" name="Angle">-90</param>
-                            <param id="1" name="Distance">20</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4099460328197874">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="2154945327702443" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
+                        <condition id="2" name="Is playing" sid="1911248268642474" type="Froggie">
+                            <param id="0" name="Animation">&quot;Sage&quot;</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="4395399810163941" type="Button_Attack">
-                            <param id="0" name="Instance variable">Status</param>
-                            <param id="1" name="Comparison">0</param>
+                        <condition id="-7" name="Compare instance variable" sid="7356698113638848" type="Froggie">
+                            <param id="0" name="Instance variable">SageCount</param>
+                            <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="9488496284390016" type="Froggie">
-                            <param id="0" name="Instance variable">SageCount</param>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="3348691782116873" type="Froggie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2863075582742212" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3738384080502289">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="5982073403821061" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="6349473334492642" type="Froggie">
+                                    <param id="0" name="Angle">-90</param>
+                                    <param id="1" name="Distance">1200*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4099460328197874">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="2154945327702443" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4395399810163941" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="9488496284390016" type="Froggie">
+                                    <param id="0" name="Instance variable">SageCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4992567075357401">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9253166957405891" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2529675145348594" type="Froggie">
+                            <param id="0" name="Instance variable">SageCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3822754903888872">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6412397967607832" type="Froggie">
+                            <param id="0" name="Instance variable">SageCount</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="8614460968604056" type="Froggie">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="469940439221058" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1410313492140421" type="Froggie">
+                            <param id="0" name="Instance variable">SageCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When frog is falling to death destroy the power up frog has to avoid frog to use power such as sage </comment>
+                <event-block sid="3374864716247779">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="190919181934572" type="Froggie">
+                            <param id="0" name="Animation">&quot;FallToDeath&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2491575495038934" type="Button_Attack">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="4992567075357401">
-            <conditions>
-                <condition id="-22" name="Else" sid="9253166957405891" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="2529675145348594" type="Froggie">
-                    <param id="0" name="Instance variable">SageCount</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3822754903888872">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="6412397967607832" type="Froggie">
-                    <param id="0" name="Instance variable">SageCount</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">5</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="11" name="Set enabled" sid="8614460968604056" type="Froggie">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="469940439221058" type="Button_Attack">
-                    <param id="0" name="Instance variable">Status</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="1410313492140421" type="Froggie">
-                    <param id="0" name="Instance variable">SageCount</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="8192067721655108">
-            <conditions>
-                <condition id="-22" name="Else" sid="5276231815871933" type="System" />
-                <condition id="-4" name="Trigger once while true" sid="487568248864657" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="11" name="Set enabled" sid="4911263490077893" type="Froggie">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group description="" sid="6455958504725814" title="PowerUpAnimation">
+        </event-group>
+        <event-group collapsed="1" description="randomizing the power ups" sid="6455958504725814" title="PowerUpAnimation">
             <sub-events>
                 <event-block sid="5729629430778387">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2731514568699714" type="PowerUp_Mushroom_HyperJump">
+                        <condition id="-7" name="Compare instance variable" sid="2731514568699714" type="PowerUp_Multiple">
                             <param id="0" name="Instance variable">AnimSelctor</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5737256922790527" type="PowerUp_Mushroom_HyperJump">
+                        <action id="4" name="Set animation" sid="5737256922790527" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Shoes&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1055,14 +1039,14 @@
                 </event-block>
                 <event-block sid="611821273227091">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2368612449018134" type="PowerUp_Mushroom_HyperJump">
+                        <condition id="-7" name="Compare instance variable" sid="2368612449018134" type="PowerUp_Multiple">
                             <param id="0" name="Instance variable">AnimSelctor</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5422214633888889" type="PowerUp_Mushroom_HyperJump">
+                        <action id="4" name="Set animation" sid="5422214633888889" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Karate&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1070,14 +1054,14 @@
                 </event-block>
                 <event-block sid="5060130912243952">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1412480725141001" type="PowerUp_Mushroom_HyperJump">
+                        <condition id="-7" name="Compare instance variable" sid="1412480725141001" type="PowerUp_Multiple">
                             <param id="0" name="Instance variable">AnimSelctor</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="3834128790468509" type="PowerUp_Mushroom_HyperJump">
+                        <action id="4" name="Set animation" sid="3834128790468509" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Boxing&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1085,14 +1069,14 @@
                 </event-block>
                 <event-block sid="8551630020748781">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="645368887653957" type="PowerUp_Mushroom_HyperJump">
+                        <condition id="-7" name="Compare instance variable" sid="645368887653957" type="PowerUp_Multiple">
                             <param id="0" name="Instance variable">AnimSelctor</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="2865190470274079" type="PowerUp_Mushroom_HyperJump">
+                        <action id="4" name="Set animation" sid="2865190470274079" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Sage&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -1100,18 +1084,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="3374864716247779">
-            <conditions>
-                <condition id="2" name="Is playing" sid="190919181934572" type="Froggie">
-                    <param id="0" name="Animation">&quot;FallToDeath&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="2491575495038934" type="Button_Attack">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

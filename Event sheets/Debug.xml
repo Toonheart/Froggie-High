@@ -4,7 +4,7 @@
     <name>Debug</name>
     <events>
         <comment>DISABLED - to see art without debug. -Krish. 8 nov 2013. 0132am</comment>
-        <event-block sid="7029130876728904">
+        <event-block collapsed="1" disabled="1" sid="7029130876728904">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
             </conditions>
@@ -18,7 +18,7 @@
                 <action id="1" name="Append text" sid="8002087447422118" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;FPS  - &quot; &amp; fps&amp;newline &amp; &quot;render : &quot; &amp; renderer  </param>
                 </action>
-                <action id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
                     <param id="0" name="Text"> newline &amp;&quot;PlatformCount : &quot;&amp;Counter_Floor</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="68665449264838" type="Text_Debug">
@@ -58,6 +58,9 @@
                 <action id="1" name="Append text" sid="6107444727785404" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;Touch.Alpha-Touch.Alpha/dt</param>
                 </action>
+                <action id="1" name="Append text" sid="8920375832249686" type="Text_Debug">
+                    <param id="0" name="Text">newline&amp;BG1_House.Y</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block disabled="1" sid="5341037647722931">
@@ -70,7 +73,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1517845617528507">
+                <event-block disabled="1" sid="1517845617528507">
                     <conditions>
                         <condition id="3" name="Has key" sid="1116575935098125" type="Dict_Achieves">
                             <param id="0" name="Key">&quot;33_BySpiky&quot;</param>
@@ -84,7 +87,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="7569239882636774">
+        <event-block sid="7569239882636774">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="5215253270181343" type="System" />
             </conditions>

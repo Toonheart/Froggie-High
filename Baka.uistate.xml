@@ -11,9 +11,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>OctoWorld</layout>
-        <layout active="1">Title_Screen</layout>
-        <event-sheet>OctoWorld_Events</event-sheet>
+        <layout>Title_Screen</layout>
+        <event-sheet>Debug</event-sheet>
+        <event-sheet>SoundsCommon</event-sheet>
+        <event-sheet>Maintainance</event-sheet>
         <event-sheet>UI_Menus</event-sheet>
+        <event-sheet active="1">WorldSelect_Events</event-sheet>
+        <event-sheet>Preloads_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -33,5 +37,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="EnemyBoss" />
         <family expanded="1" name="AllCollectibles" />
         <family expanded="1" name="BG_Objects" />
+        <family expanded="1" name="ButtonsCommonSound" />
     </families-expanded>
 </c2uistate>
