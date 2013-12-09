@@ -492,6 +492,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Request a Facebook Login with publish_actions permission</comment>
                 <event-block sid="8765352032032566">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="9596495389755246" type="Touch">
@@ -523,11 +524,30 @@
                                 <action id="-16" name="Wait" sid="2854160397505834" type="System">
                                     <param id="0" name="Seconds">0.1</param>
                                 </action>
-                                <action disabled="1" id="8" name="Open URL in new window" sid="5396642003081553" type="Browser">
-                                    <param id="0" name="URL">&quot;https://www.facebook.com/HungryBaka&quot;</param>
-                                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                                <action id="1" name="Login Dialog" sid="1494833716101171" type="FacebookComplete">
+                                    <param id="0" name="Response Type">0</param>
+                                    <param id="1" name="Redirect URL">&quot;https://www.facebook.com/connect/login_success.html&quot;</param>
+                                    <param id="2" name="Permissions">&quot;publish_actions&quot;</param>
+                                    <param id="3" name="State">&quot;&quot;</param>
+                                    <param id="4" name="Display Type">0</param>
+                                </action>
+                                <action disabled="1" id="12" name="Login Pop-up" sid="4745160914806153" type="FacebookComplete">
+                                    <param id="0" name="Permissions">&quot;publish_actions&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="2941765768258941">
+                                    <conditions>
+                                        <condition id="0" name="Is ready" sid="2774652869518966" type="Facebook" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Log in" sid="3246558149726411" type="Facebook">
+                                            <param id="0" name="Stream permission">1</param>
+                                            <param id="1" name="Action permission">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -591,9 +611,56 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Request a Facebook Login with publish_actions permission. This needs to change depending on the news text available</comment>
+                <event-block sid="5435559081605638">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="4711591301929053" type="Touch">
+                            <param id="0" name="Object">Text_NewsFeed</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5879006084507756">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="8725580440990497" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="8344859540030071" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4974096080342171" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action disabled="1" id="1" name="Login Dialog" sid="429648757198496" type="FacebookComplete">
+                                    <param id="0" name="Response Type">0</param>
+                                    <param id="1" name="Redirect URL">&quot;https://games.toonheart.com/baka026&quot;</param>
+                                    <param id="2" name="Permissions">&quot;publish_actions&quot;</param>
+                                    <param id="3" name="State">&quot;&quot;</param>
+                                    <param id="4" name="Display Type">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8012582677969204">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9792620246525206" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="9901403748537552" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1591137374940473" type="Text_NewsFeed">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9795845940454458" title="EFFECTS">
+        <event-group collapsed="1" description="" sid="9795845940454458" title="EFFECTS">
             <sub-events>
                 <event-block sid="6987384477758637">
                     <conditions>
@@ -610,7 +677,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7616304892806737" title="Music">
+        <event-group collapsed="1" description="" sid="7616304892806737" title="Music">
             <sub-events>
                 <event-block disabled="1" sid="5159794451362993">
                     <conditions>

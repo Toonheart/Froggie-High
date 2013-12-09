@@ -10,10 +10,11 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -25,10 +26,10 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -6899,6 +6900,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="FacebookComplete" sid="334894350309312">
+            <plugin id="FBComplete" />
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
@@ -7132,11 +7136,22 @@
         <global-instance type="WebStr_Common" uid="34" />
         <global-instance type="Facebook" uid="246">
             <properties>
-                <app-id></app-id>
+                <app-id>535353619893033</app-id>
                 <app-secret></app-secret>
             </properties>
         </global-instance>
         <global-instance type="Browser" uid="247" />
+        <global-instance type="FacebookComplete" uid="82">
+            <properties>
+                <application-id>535353619893033</application-id>
+                <enable-cookies>No</enable-cookies>
+                <enable-logging>Yes</enable-logging>
+                <fetch-fresh-status>Yes</fetch-fresh-status>
+                <xfbml>No</xfbml>
+                <authresponse>Yes</authresponse>
+                <frictionless-requests>No</frictionless-requests>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1">
         <file name="Jump.ogg" />

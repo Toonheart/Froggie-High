@@ -3,22 +3,81 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FacebookIntegration</name>
     <events>
-        <variable constant="0" name="FriendsInvited" sid="7162945182702447" static="0" type="number">0</variable>
-        <event-block sid="9878360806596289">
-            <conditions>
-                <condition id="3" name="On touched object" sid="1840592808902658" type="Touch">
-                    <param id="0" name="Object">Button_FB_Brag</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="6" name="Prompt to share link" sid="6468736542507832" type="Facebook">
-                    <param id="0" name="URL">&quot;http://www.facebook.com&quot;</param>
-                    <param id="1" name="Name">&quot;&quot;</param>
-                    <param id="2" name="Caption">&quot;&quot;</param>
-                    <param id="3" name="Description">&quot;&quot;</param>
-                    <param id="4" name="Picture URL (optional)">&quot;&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="2788713794690347" title="Login &amp; Get Info">
+            <sub-events>
+                <comment>Maintenance - Login Status Update</comment>
+                <event-block sid="4934476802169279">
+                    <conditions>
+                        <condition id="4" name="On API Loaded" sid="8752539554765978" type="FacebookComplete" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Update Status" sid="1901316560293751" type="FacebookComplete" />
+                    </actions>
+                </event-block>
+                <comment>On User Logged In, Populate Data</comment>
+                <event-block sid="5148574017191225">
+                    <conditions>
+                        <condition id="1" name="On App User Logged In" sid="5149024815208163" type="FacebookComplete" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Update Basic User Info" sid="2036660262268283" type="FacebookComplete" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7943632914164391" title="Brag Actions">
+            <sub-events>
+                <event-block sid="6207617797194304">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="5547216172093948" type="Touch">
+                            <param id="0" name="Object">Button_FB_Brag</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="4619308026114301" type="Button_FB_Brag">
+                            <param id="0" name="Scale">1.08</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3029575622838058">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="7994028571044997" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="5925268705454343" type="Button_FB_Brag">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="2157675165920491" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
+                                <action id="5" name="Post Story" sid="3523083191486308" type="FacebookComplete">
+                                    <param id="0" name="From">FacebookComplete.UserFirstName</param>
+                                    <param id="1" name="To">&quot;&quot;</param>
+                                    <param id="2" name="Message">&quot;Huaaa.... I helped Baka eatz &quot; &amp; Score &amp; &quot;worth of Food!&quot;</param>
+                                    <param id="3" name="Sound Source">&quot;&quot;</param>
+                                    <param id="4" name="Picture">&quot;https://games.toonheart.com/baka026/loading-logo.png&quot;</param>
+                                    <param id="5" name=" Name">&quot;Baka&quot;</param>
+                                    <param id="6" name="Link Caption">&quot;The World&apos;s Hungriest Frog&quot;</param>
+                                    <param id="7" name="Link Description">&quot;Help Cute Baka eat Cakes!&quot;</param>
+                                    <param id="8" name="Link">&quot;https://facebook.com/HungryBaka&quot;</param>
+                                    <param id="9" name="Reference">&quot;Score_Brag&quot;</param>
+                                </action>
+                                <action id="5" name="Prompt to share this app" sid="837821125369181" type="Facebook">
+                                    <param id="0" name="Name">&quot;Baka&quot;</param>
+                                    <param id="1" name="Caption">&quot;The World&apos;s Hungriest Frog&quot;</param>
+                                    <param id="2" name="Description">&quot;Adventure of a Frog eating Candies, Cakes, Pastries!&quot;</param>
+                                    <param id="3" name="Picture URL (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
