@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CommonUlnlocks</name>
+    <events>
+        <event-group description="" disabled="1" sid="5319738048492233" title="Unlocking Powerups">
+            <sub-events>
+                <comment>Set PowerUpanimmax to the no of current world so that no of powerups unlocked in that world.</comment>
+                <event-block disabled="1" sid="1832645273982928">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="4087023096324029" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5956197599654027" type="System">
+                            <param id="0" name="Variable">PowerUpAnimMax</param>
+                            <param id="1" name="Value">CurrentWorld</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

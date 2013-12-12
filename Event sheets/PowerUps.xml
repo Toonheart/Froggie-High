@@ -413,10 +413,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
+        <event-group collapsed="1" description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
             <sub-events>
                 <comment>Collect the powerup show Power on Attack button</comment>
-                <event-block sid="4013199515954371">
+                <event-block collapsed="1" sid="4013199515954371">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4552949056540236" type="Froggie">
                             <param id="0" name="Object">PowerUp_Multiple</param>
@@ -1020,7 +1020,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="randomizing the power ups" sid="6455958504725814" title="PowerUpAnimation">
+        <event-group description="Showing Unlocked PowerUps according to the PowerupAnimMax depending on currentworld" sid="6455958504725814" title="PowerUpAnimation">
             <sub-events>
                 <event-block sid="5729629430778387">
                     <conditions>
@@ -1031,8 +1031,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5737256922790527" type="PowerUp_Multiple">
-                            <param id="0" name="Animation">&quot;Shoes&quot;</param>
+                        <action id="4" name="Set animation" sid="3834128790468509" type="PowerUp_Multiple">
+                            <param id="0" name="Animation">&quot;Boxing&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -1061,8 +1061,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="3834128790468509" type="PowerUp_Multiple">
-                            <param id="0" name="Animation">&quot;Boxing&quot;</param>
+                        <action id="4" name="Set animation" sid="5737256922790527" type="PowerUp_Multiple">
+                            <param id="0" name="Animation">&quot;Shoes&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

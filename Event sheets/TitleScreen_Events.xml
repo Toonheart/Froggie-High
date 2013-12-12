@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>TitleScreen_Events</name>
     <events>
+        <include>SoundsCommon</include>
         <include>Maintainance</include>
         <variable constant="0" name="ActiveWorld" sid="5439010439631277" static="0" type="number">1</variable>
         <include>Debug</include>
@@ -72,7 +73,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="9791390366890499" title="Preload">
+        <event-group collapsed="1" description="" sid="9791390366890499" title="Preload">
             <sub-events>
                 <comment>All Preloads</comment>
                 <event-block sid="7806788258793513">
@@ -96,7 +97,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2511712467372221" title="Toggling Music and Sounds">
+        <event-group collapsed="1" description="" sid="2511712467372221" title="Toggling Music and Sounds">
             <sub-events>
                 <comment>Mute the sounds</comment>
                 <event-block disabled="1" sid="8829171707280856">
@@ -677,7 +678,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7616304892806737" title="Music">
+        <event-group description="" sid="7616304892806737" title="Music">
             <sub-events>
                 <event-block disabled="1" sid="5159794451362993">
                     <conditions>

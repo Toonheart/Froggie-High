@@ -15,7 +15,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="Scrolling down and Up" sid="5396902482078132" title="Screen Scrolling">
+        <event-group collapsed="1" description="Scrolling down and Up Using Marker Icons" sid="5396902482078132" title="Screen Scrolling">
             <sub-events>
                 <event-block sid="8215350323428247">
                     <conditions>
@@ -291,7 +291,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7138786324349483" title="Updating Achievements Layout - Text and Icons">
+        <event-group description="" sid="7138786324349483" title="Updating Achievements Layout - Text and Icons">
             <sub-events>
                 <comment>Achievement - TEXT INFO</comment>
                 <event-block collapsed="1" sid="5152506674536002">
@@ -1904,7 +1904,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3615368328432203" title="UserInputs">
+        <event-group description="" sid="3615368328432203" title="UserInputs">
             <sub-events>
                 <comment>Go Back to the Title Menu</comment>
                 <event-block sid="7429165856555494">
@@ -1926,6 +1926,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="6252751533813525" type="Audio">
+                                    <param id="0" name="Audio file">GenericButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                                </action>
                                 <action id="9" name="Set scale" sid="9291705466792448" type="Button_GoBack">
                                     <param id="0" name="Scale">1</param>
                                 </action>

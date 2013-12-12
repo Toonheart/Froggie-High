@@ -4,10 +4,10 @@
     <name>SoundsCommon</name>
     <events>
         <comment>This EventSheet is Included in PowerUps Sheet instead of including in all worlds directly</comment>
-        <event-group description="Sounds When frog attacks to kill enemies" sid="391325680861428" title="Froggie Attack Sounds">
+        <event-group collapsed="1" description="Sounds When frog attacks to kill enemies" sid="391325680861428" title="Froggie Attack Sounds">
             <sub-events>
                 <comment>Karrate Kick</comment>
-                <event-block sid="7226177082741639">
+                <event-block collapsed="1" sid="7226177082741639">
                     <conditions>
                         <condition id="2" name="Is playing" sid="8854071426961121" type="Froggie">
                             <param id="0" name="Animation">&quot;Karate&quot;</param>
@@ -52,7 +52,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9504437837776345">
+                <event-block collapsed="1" sid="9504437837776345">
                     <conditions>
                         <condition id="2" name="Is playing" sid="6677953032110858" type="Froggie">
                             <param id="0" name="Animation">&quot;shoe&quot;</param>
@@ -90,7 +90,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5614155188866451" title="Buttons">
+        <event-group collapsed="1" description="" sid="5614155188866451" title="Buttons">
             <sub-events>
                 <event-block disabled="1" sid="9318705002108405">
                     <conditions>
@@ -114,6 +114,97 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7565199085067424" title="BG Music">
+            <sub-events>
+                <event-block disabled="1" sid="650863745138605">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="6412097584979642" type="System" />
+                        <condition id="4" inverted="1" name="Is any playing" sid="1492664923453563" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="4360927684690019" type="Audio">
+                            <param id="0" name="Audio file">EMPTY [High quality]</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="72108679918237">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="3798432924535981" type="Audio">
+                            <param id="0" name="Tag">&quot;TitleTrack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="7608807805207276" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Play" sid="410581674999141" type="Audio">
+                            <param id="0" name="Audio file">EMPTY [High quality]</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;TitleTrack&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2831714050054173">
+                    <conditions>
+                        <condition id="-25" name="On loader layout complete" sid="6869644294602297" type="System" />
+                        <condition id="4" inverted="1" name="Is any playing" sid="6960388154338047" type="Audio" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="4927454216604665" type="Audio">
+                            <param id="0" name="Audio file">bakaSample5</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="23957955654995">
+                    <conditions>
+                        <condition id="0" name="On ended" sid="9390557961133995" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="6374032205250108" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="0" name="Play" sid="7590921005744093" type="Audio">
+                            <param id="0" name="Audio file">bakaSample5</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="215533422769401">
+                    <conditions>
+                        <condition id="2" name="Is pause" sid="2055066858133231" type="Pause" />
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="1051375319362375" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4396586987554234">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7204194197364839" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="5551925344480014" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="22" name="Set paused" sid="4726804036833761" type="Audio">
+                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
