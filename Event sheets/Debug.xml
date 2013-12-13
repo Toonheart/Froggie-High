@@ -92,23 +92,18 @@
                 <condition id="-2" name="On start of layout" sid="5215253270181343" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="698636433677001" type="Text_Debug">
-                    <param id="0" name="Text">CurrentWorld</param>
+                <action id="0" name="Set text" sid="105082270891284" type="Text_Debug">
+                    <param id="0" name="Text">Browser.UserAgent</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="5045967840973394">
+        <event-block disabled="1" sid="5045967840973394">
             <conditions>
-                <condition id="-1" name="Every tick" sid="4271126580549566" type="System" />
+                <condition id="-32" name="Is on platform" sid="4271126580549566" type="System">
+                    <param id="0" name="Platform">5</param>
+                </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="105082270891284" type="Text_Debug">
-                    <param id="0" name="Text">CurrentWorld</param>
-                </action>
-                <action id="1" name="Append text" sid="2550065140799623" type="Text_Debug">
-                    <param id="0" name="Text">newline&amp;PowerUpAnimMax</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
