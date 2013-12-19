@@ -134,9 +134,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6371561856665009" title="Background Generation">
+        <event-group description="" disabled="1" sid="6371561856665009" title="Background Generation">
             <sub-events>
-                <event-block sid="9632641390554401">
+                <event-block disabled="1" sid="9632641390554401">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3008782886882944" type="System">
                             <param id="0" name="First value">NextFloorPosition</param>
@@ -148,7 +148,7 @@
                     <actions />
                     <sub-events>
                         <comment>stars and Flares</comment>
-                        <event-block sid="2128438922224961">
+                        <event-block disabled="1" sid="2128438922224961">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9348596279497835" type="System">
                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%2</param>
@@ -183,7 +183,7 @@
                             </actions>
                         </event-block>
                         <comment>Circles and spirals</comment>
-                        <event-block sid="5951639066909631">
+                        <event-block disabled="1" sid="5951639066909631">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="8694684510631161" type="System">
                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%3</param>
@@ -217,9 +217,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Randomly scaling,Flipping " sid="168504894506969" title="Bacground randamization">
+        <event-group description="Randomly scaling,Flipping " disabled="1" sid="168504894506969" title="Bacground randamization">
             <sub-events>
-                <event-block sid="9850711986581617">
+                <event-block disabled="1" sid="9850711986581617">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="7637751274531276" type="World1_BG_ObjectsP2">
                             <param id="0" name="Instance variable">Flip</param>
@@ -233,7 +233,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8821582304357364">
+                <event-block disabled="1" sid="8821582304357364">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="4317723622587142" type="World1_BG_ObjectsP1">
                             <param id="0" name="Instance variable">Flip</param>
@@ -247,7 +247,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4151169084350578">
+                <event-block disabled="1" sid="4151169084350578">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="7821048725960853" type="System">
                             <param id="0" name="First value">WorldSection%2</param>
@@ -262,7 +262,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2541983344141675">
+                <event-block disabled="1" sid="2541983344141675">
                     <conditions>
                         <condition id="-22" name="Else" sid="7824888729190718" type="System" />
                     </conditions>
@@ -273,7 +273,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9270478863307566">
+                <event-block disabled="1" sid="9270478863307566">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3562675816580146" type="System">
                             <param id="0" name="First value">WorldSection%2</param>
@@ -288,7 +288,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9283893884628452">
+                <event-block disabled="1" sid="9283893884628452">
                     <conditions>
                         <condition id="-22" name="Else" sid="2542519674676029" type="System" />
                     </conditions>
