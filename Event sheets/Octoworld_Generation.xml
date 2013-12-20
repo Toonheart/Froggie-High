@@ -68,6 +68,10 @@
                         <action id="4" name="Load" sid="689415574872478" type="Dict_Achieves">
                             <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="714348723460213" type="Froggie">
+                            <param id="0" name="Pin to">PlayerBox</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -90,7 +94,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">

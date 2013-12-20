@@ -10,10 +10,10 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
@@ -26,8 +26,8 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -75,6 +75,9 @@
                 </behavior-type>
                 <behavior-type name="8Direction" sid="7163033021322758">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="9549236902619429">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
@@ -6955,6 +6958,26 @@
         <object-type name="FacebookComplete" sid="334894350309312">
             <plugin id="FBComplete" />
         </object-type>
+        <object-type name="PlayerBox" sid="5945653205354279">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="DoubleJump" sid="970460713919169" type="number" />
+                <instance-variable name="FallDistance" sid="2361814341404547" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="7084740395041619">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="2065871687191577">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6168358032422585" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
@@ -7162,6 +7185,7 @@
         <event-sheet>StoryBoardEvents.xml</event-sheet>
         <event-sheet>SoundsCommon.xml</event-sheet>
         <event-sheet>CommonUlnlocks.xml</event-sheet>
+        <event-sheet>FroggieEventsBackUp.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">
@@ -7245,6 +7269,8 @@
         <file name="EMPTY [High quality].m4a" />
         <file name="bakaSample5.m4a" />
         <file name="bakaSample5.ogg" />
+        <file name="BAKA Track 01.ogg" />
+        <file name="BAKA Track 01~1.m4a" />
     </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="1" name="Icons">

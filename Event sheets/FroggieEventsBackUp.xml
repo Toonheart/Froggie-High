@@ -1,24 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Froggie_Events</name>
+    <name>FroggieEventsBackUp</name>
     <events>
-        <event-group collapsed="1" description="" sid="9939025668940154" title="FROGGIE JUMP">
+        <event-group description="" sid="4754292321783101" title="BACK UP EVENTS" />
+        <event-group collapsed="1" description="" sid="1883344863878613" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
                 <event-block collapsed="1" sid="1939084024228619">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="PlayerBox" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="Froggie" />
                         <condition id="-4" name="Trigger once while true" sid="4245657547037535" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="4278055599244851" type="PlayerBox">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4278055599244851" type="Froggie">
                             <param id="0" name="Control">2</param>
                         </action>
                         <action id="-16" name="Wait" sid="4155062979572627" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="6430015576508094" type="PlayerBox">
+                        <action id="-10" name="Set value" sid="6430015576508094" type="Froggie">
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Value">0</param>
                         </action>
@@ -54,7 +55,7 @@
                         <event-block disabled="1" sid="4080972723102314">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="7145192900856211" type="System">
-                                    <param id="0" name="First value">PlayerBox.Platform.JumpStrength</param>
+                                    <param id="0" name="First value">Froggie.Platform.JumpStrength</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">1200</param>
                                 </condition>
@@ -72,7 +73,7 @@
                         <event-block sid="9863578900443388">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9557167102313543" type="System">
-                                    <param id="0" name="First value">PlayerBox.Platform.JumpStrength</param>
+                                    <param id="0" name="First value">Froggie.Platform.JumpStrength</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">2600</param>
                                 </condition>
@@ -102,7 +103,7 @@
                         </event-block>
                         <event-block disabled="1" sid="655247224662935">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="8178085656830751" type="PlayerBox">
+                                <condition id="0" name="On collision with another object" sid="8178085656830751" type="Froggie">
                                     <param id="0" name="Object">Floor_HeyStack_Normal</param>
                                 </condition>
                             </conditions>
@@ -122,7 +123,7 @@
                 </event-block>
                 <event-block sid="8932928189052382">
                     <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="9129367831480912" type="PlayerBox" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="9129367831480912" type="Froggie" />
                         <condition id="-4" name="Trigger once while true" sid="7013072353780702" type="System" />
                         <condition id="-7" name="Compare instance variable" sid="8803742751374254" type="Button_Attack">
                             <param id="0" name="Instance variable">Status</param>
@@ -139,38 +140,38 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
+        <event-group collapsed="1" description="Wrap around the layout" sid="840972513099815" title="FROGGIE - Wrapping around ">
             <sub-events>
                 <comment>Wrap the frog Left and right</comment>
                 <event-block sid="4289847182450448">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="1732333497257551" type="PlayerBox">
+                        <condition id="-1" name="Compare X" sid="1732333497257551" type="Froggie">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="X co-ordinate">-15</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="1289519938109904" type="PlayerBox">
+                        <action id="-1" name="Set X" sid="1289519938109904" type="Froggie">
                             <param id="0" name="X">LayoutWidth+14</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="106982760968246">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="4828975050113211" type="PlayerBox">
+                        <condition id="-1" name="Compare X" sid="4828975050113211" type="Froggie">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="X co-ordinate">LayoutWidth+15</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="1667665631601706" type="PlayerBox">
+                        <action id="-1" name="Set X" sid="1667665631601706" type="Froggie">
                             <param id="0" name="X">-14</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
+        <event-group collapsed="1" description="" sid="5938095754650911" title="FROGGIE - Left/Right Control">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -180,10 +181,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="1523586248413577" type="PlayerBox">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1523586248413577" type="Froggie">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="1787438547482109" type="PlayerBox">
+                        <action id="7" name="Set mirrored" sid="1787438547482109" type="Froggie">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -194,14 +195,14 @@
                         <condition id="-8" name="Compare two values" sid="5232956090328499" type="System">
                             <param id="0" name="First value">Touch.X</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">PlayerBox.X</param>
+                            <param id="2" name="Second value">Froggie.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7842417447315114" type="PlayerBox">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7842417447315114" type="Froggie">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="9692139860538567" type="PlayerBox">
+                        <action id="7" name="Set mirrored" sid="9692139860538567" type="Froggie">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -212,14 +213,14 @@
                         <condition id="-8" name="Compare two values" sid="6699500027468567" type="System">
                             <param id="0" name="First value">Touch.X</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">PlayerBox.X</param>
+                            <param id="2" name="Second value">Froggie.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="1058621325996865" type="PlayerBox">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1058621325996865" type="Froggie">
                             <param id="0" name="Control">1</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="9651185388909339" type="PlayerBox">
+                        <action id="7" name="Set mirrored" sid="9651185388909339" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -231,17 +232,17 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7524824379443688" type="PlayerBox">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7524824379443688" type="Froggie">
                             <param id="0" name="Control">1</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="1536906451308973" type="PlayerBox">
+                        <action id="7" name="Set mirrored" sid="1536906451308973" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="1798349744354641" title="SCROLL and FALL">
+        <event-group collapsed="1" description="Always scroll to the current top position the player has reached, but never scroll horizontally." sid="6952026198618307" title="SCROLL and FALL">
             <sub-events>
                 <event-block sid="6325441995628482">
                     <conditions>
@@ -257,16 +258,16 @@
                 <comment>Scroll down if the froggie is dropping</comment>
                 <event-block sid="8875596772007714">
                     <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="2598144020044228" type="PlayerBox" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="2598144020044228" type="Froggie" />
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="1916611199770553">
                             <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="8978206875520692" type="PlayerBox" />
+                                <condition id="-3" inverted="1" name="Is on-screen" sid="8978206875520692" type="Froggie" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="8528469785885377" type="PlayerBox">
+                                <action id="4" name="Set animation" sid="8528469785885377" type="Froggie">
                                     <param id="0" name="Animation">&quot;FallToDeath&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -288,9 +289,9 @@
                         <comment>Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult.&#x0D;&#x0A;WHAT is this COMMENT?  Doesnt make sense with underlying CODE :) ???</comment>
                         <event-block sid="3664907805686409">
                             <conditions>
-                                <condition id="-2" name="Compare Y" sid="3974289724973874" type="PlayerBox">
+                                <condition id="-2" name="Compare Y" sid="3974289724973874" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">PlayerBox.FallDistance+2000</param>
+                                    <param id="1" name="Y co-ordinate">Froggie.FallDistance+2000</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -303,16 +304,15 @@
                                     <param id="2" name="Image point">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="1023683695412448" type="Froggie" />
-                                <action id="-9" name="Destroy" sid="6395839553371455" type="PlayerBox" />
                             </actions>
                         </event-block>
                         <event-block sid="2033884450017144">
                             <conditions>
-                                <condition id="-2" name="Compare Y" sid="7289700087868991" type="PlayerBox">
+                                <condition id="-2" name="Compare Y" sid="7289700087868991" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">PlayerBox.FallDistance+800</param>
+                                    <param id="1" name="Y co-ordinate">Froggie.FallDistance+800</param>
                                 </condition>
-                                <condition behavior="Platform" id="4" name="Is falling" sid="4428731538120546" type="PlayerBox" />
+                                <condition behavior="Platform" id="4" name="Is falling" sid="4428731538120546" type="Froggie" />
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="4730236229628709" type="Froggie">
@@ -325,18 +325,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="38727983774057" title="FROGGIE - Destroy">
+        <event-group collapsed="1" description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="3468821448769665" title="FROGGIE - Destroy">
             <sub-events>
                 <comment>capture the fall point to ensure froggie is falling long distane</comment>
                 <event-block sid="8529980524343526">
                     <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="9777138599657736" type="PlayerBox" />
+                        <condition behavior="Platform" id="4" name="Is falling" sid="9777138599657736" type="Froggie" />
                         <condition id="-4" name="Trigger once while true" sid="8315480927409911" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="4197757987844203" type="PlayerBox">
+                        <action id="-10" name="Set value" sid="4197757987844203" type="Froggie">
                             <param id="0" name="Instance variable">FallDistance</param>
-                            <param id="1" name="Value">PlayerBox.Y</param>
+                            <param id="1" name="Value">Froggie.Y</param>
                         </action>
                     </actions>
                 </event-block>
@@ -471,7 +471,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8254297641577714" title="Gyro-Events">
+        <event-group collapsed="1" description="" sid="4007806481849661" title="Gyro-Events">
             <sub-events>
                 <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
                 <event-block sid="9509104835207651">
@@ -552,10 +552,10 @@
                                             <param id="0" name="Variable">Dev_Cur_Alpha</param>
                                             <param id="1" name="Value">Touch.Alpha-15</param>
                                         </action>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="9204495507660997" type="PlayerBox">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="9204495507660997" type="Froggie">
                                             <param id="0" name="Control">0</param>
                                         </action>
-                                        <action id="7" name="Set mirrored" sid="3499139565112732" type="PlayerBox">
+                                        <action id="7" name="Set mirrored" sid="3499139565112732" type="Froggie">
                                             <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
@@ -569,14 +569,14 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="2530030822309795" type="PlayerBox">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="2530030822309795" type="Froggie">
                                             <param id="0" name="Control">1</param>
                                         </action>
                                         <action disabled="1" id="-9" name="Set value" sid="110384156157976" type="System">
                                             <param id="0" name="Variable">Dev_Cur_Alpha</param>
                                             <param id="1" name="Value">Touch.Alpha+15</param>
                                         </action>
-                                        <action id="7" name="Set mirrored" sid="1659650203640201" type="PlayerBox">
+                                        <action id="7" name="Set mirrored" sid="1659650203640201" type="Froggie">
                                             <param id="0" name="State">0</param>
                                         </action>
                                     </actions>
@@ -603,10 +603,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="4736516292688" type="PlayerBox">
+                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="4736516292688" type="Froggie">
                                             <param id="0" name="Speed">0</param>
                                         </action>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="5816601134741149" type="PlayerBox">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="5816601134741149" type="Froggie">
                                             <param id="0" name="Control">1</param>
                                         </action>
                                     </actions>
@@ -620,10 +620,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="5211589006526994" type="PlayerBox">
+                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="5211589006526994" type="Froggie">
                                             <param id="0" name="Speed">0</param>
                                         </action>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="7900974160748085" type="PlayerBox">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="7900974160748085" type="Froggie">
                                             <param id="0" name="Control">0</param>
                                         </action>
                                     </actions>
@@ -649,10 +649,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="8538560283218848" type="PlayerBox">
+                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="8538560283218848" type="Froggie">
                                             <param id="0" name="Speed">0</param>
                                         </action>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="4203349581758151" type="PlayerBox">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="4203349581758151" type="Froggie">
                                             <param id="0" name="Control">0</param>
                                         </action>
                                     </actions>
@@ -666,10 +666,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="5709894446910813" type="PlayerBox">
+                                        <action behavior="8Direction" disabled="1" id="3" name="Set speed" sid="5709894446910813" type="Froggie">
                                             <param id="0" name="Speed">0</param>
                                         </action>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="5406717509526428" type="PlayerBox">
+                                        <action behavior="Platform" id="7" name="Simulate control" sid="5406717509526428" type="Froggie">
                                             <param id="0" name="Control">1</param>
                                         </action>
                                     </actions>
@@ -678,9 +678,9 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="802353540468122" title="Using Gamma">
+                <event-group description="" sid="802353540468122" title="Using Gamma">
                     <sub-events>
-                        <event-group collapsed="1" description="" sid="5491308683275742" title="Using Gamma And 8Dir">
+                        <event-group description="" sid="5491308683275742" title="Using Gamma And 8Dir">
                             <sub-events>
                                 <event-block sid="38567936999712">
                                     <conditions>
@@ -722,7 +722,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5866288092254024" type="PlayerBox">
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="5866288092254024" type="Froggie">
                                             <param id="0" name="Control">0</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="8725725652536002" type="Froggie">
@@ -743,7 +743,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" id="7" name="Simulate control" sid="7095421189853041" type="PlayerBox">
+                                        <action behavior="8Direction" id="7" name="Simulate control" sid="7095421189853041" type="Froggie">
                                             <param id="0" name="Control">1</param>
                                         </action>
                                         <action id="7" name="Set mirrored" sid="7778222150877363" type="Froggie">
@@ -802,7 +802,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="5866288092254024" type="PlayerBox">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="5866288092254024" type="Froggie">
                                     <param id="0" name="Control">0</param>
                                 </action>
                                 <action id="7" name="Set mirrored" sid="8725725652536002" type="Froggie">
@@ -824,7 +824,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Platform" id="7" name="Simulate control" sid="7095421189853041" type="PlayerBox">
+                                <action behavior="Platform" id="7" name="Simulate control" sid="7095421189853041" type="Froggie">
                                     <param id="0" name="Control">1</param>
                                 </action>
                                 <action id="7" name="Set mirrored" sid="7778222150877363" type="Froggie">
@@ -836,7 +836,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3997877377301353" title="Progress Bar Events">
+        <event-group collapsed="1" description="" sid="3196416850157985" title="Progress Bar Events">
             <sub-events>
                 <event-block sid="7242449783354925">
                     <conditions>
