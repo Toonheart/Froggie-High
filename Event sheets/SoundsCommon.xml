@@ -117,7 +117,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7565199085067424" title="BG Music">
+        <event-group description="" sid="7565199085067424" title="BG Music">
             <sub-events>
                 <event-block disabled="1" sid="650863745138605">
                     <conditions>
@@ -151,45 +151,45 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2831714050054173">
+                <event-block sid="6392252862926775">
                     <conditions>
-                        <condition id="-25" name="On loader layout complete" sid="6869644294602297" type="System" />
-                        <condition id="4" inverted="1" name="Is any playing" sid="6960388154338047" type="Audio" />
+                        <condition id="-2" name="On start of layout" sid="1356005941296528" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="4927454216604665" type="Audio">
-                            <param id="0" name="Audio file">BAKA Track 01</param>
+                        <action id="0" name="Play" sid="1397979790942839" type="Audio">
+                            <param id="0" name="Audio file">BAKA Track 2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;BgMusic&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="23957955654995">
+                <event-block sid="7989452565033306">
                     <conditions>
-                        <condition id="0" name="On ended" sid="9390557961133995" type="Audio">
-                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                        <condition id="0" name="On ended" sid="247774944471677" type="Audio">
+                            <param id="0" name="Tag">&quot;BgMusic&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="6374032205250108" type="System">
+                        <action id="-16" name="Wait" sid="2671149008780209" type="System">
                             <param id="0" name="Seconds">2</param>
                         </action>
-                        <action id="0" name="Play" sid="7590921005744093" type="Audio">
-                            <param id="0" name="Audio file">BAKA Track 01</param>
+                        <action id="0" name="Play" sid="9144293367415752" type="Audio">
+                            <param id="0" name="Audio file">BAKA Track 2</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;BG&quot;</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;BgMusic&quot;</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="215533422769401">
                     <conditions>
                         <condition id="2" name="Is pause" sid="2055066858133231" type="Pause" />
+                        <condition id="-4" name="Trigger once while true" sid="2815216047394878" type="System" />
                     </conditions>
                     <actions>
                         <action id="22" name="Set paused" sid="1051375319362375" type="Audio">
-                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                            <param id="0" name="Tag">&quot;BgMusic&quot;</param>
                             <param id="1" name="State">0</param>
                         </action>
                     </actions>
@@ -201,7 +201,7 @@
                     </conditions>
                     <actions>
                         <action id="22" name="Set paused" sid="4726804036833761" type="Audio">
-                            <param id="0" name="Tag">&quot;BG&quot;</param>
+                            <param id="0" name="Tag">&quot;BgMusic&quot;</param>
                             <param id="1" name="State">1</param>
                         </action>
                     </actions>

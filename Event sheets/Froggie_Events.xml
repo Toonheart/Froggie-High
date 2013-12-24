@@ -22,6 +22,10 @@
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="2884293042277709" type="PlayerBox">
+                            <param id="0" name="Instance variable">DoubleJump</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action disabled="1" id="9" name="Set scale" sid="8282301924710367" type="Floor_HeyStack_Normal">
                             <param id="0" name="Scale">0.8</param>
                         </action>
@@ -170,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
+        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -183,7 +187,7 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="1523586248413577" type="PlayerBox">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="1787438547482109" type="PlayerBox">
+                        <action id="7" name="Set mirrored" sid="1787438547482109" type="Froggie">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -234,7 +238,7 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="7524824379443688" type="PlayerBox">
                             <param id="0" name="Control">1</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="1536906451308973" type="PlayerBox">
+                        <action id="7" name="Set mirrored" sid="1536906451308973" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -304,6 +308,10 @@
                                 </action>
                                 <action id="-9" name="Destroy" sid="1023683695412448" type="Froggie" />
                                 <action id="-9" name="Destroy" sid="6395839553371455" type="PlayerBox" />
+                                <action id="22" name="Set paused" sid="1125764329841655" type="Audio">
+                                    <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="2033884450017144">
@@ -325,7 +333,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="38727983774057" title="FROGGIE - Destroy">
+        <event-group description="On froggie destrroyred go to the game over screen by setting score value at web storage." sid="38727983774057" title="FROGGIE - Destroy">
             <sub-events>
                 <comment>capture the fall point to ensure froggie is falling long distane</comment>
                 <event-block sid="8529980524343526">
@@ -351,6 +359,12 @@
                     </conditions>
                     <actions>
                         <action id="-13" name="Set time scale" sid="5499286480959817" type="System">
+                            <param id="0" name="Time scale">0.5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4389352291123373" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="1258900547025847" type="System">
                             <param id="0" name="Time scale">1</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="4970284053325438" type="Froggie">

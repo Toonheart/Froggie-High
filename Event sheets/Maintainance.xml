@@ -73,7 +73,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Destroying the floors below viewportbottom" sid="7435241601970631" title="Floors - Destroy">
+        <event-group description="Destroying the floors below viewportbottom" sid="7435241601970631" title="Floors - Destroy">
             <sub-events>
                 <event-block sid="1543279581143428">
                     <conditions>
@@ -116,18 +116,66 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6080021250574902" title="PowerUp">
+        <event-group description="" sid="6080021250574902" title="PowerUp">
             <sub-events>
                 <event-block sid="1854685202982629">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="211572889199896" type="PowerUps">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Objects&quot;)</param>
                         </condition>
                         <condition id="-3" inverted="1" name="Is on-screen" sid="7221372458813254" type="BG_Objects" />
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="3861483175428005" type="BG_Objects" />
+                    </actions>
+                </event-block>
+                <event-block sid="5726398134360016">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="5548121385279443" type="PowerUp_Multiple">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Objects&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="9940784644428522" type="PowerUp_Multiple" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1789507914579516" type="PowerUp_Multiple" />
+                    </actions>
+                </event-block>
+                <event-block sid="3565661332868367">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="3773006716549046" type="PowerUp_Mushroom_Rainbow">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Objects&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="563196162934096" type="PowerUp_Mushroom_Rainbow" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4238603231555793" type="PowerUp_Mushroom_Rainbow" />
+                    </actions>
+                </event-block>
+                <event-block sid="3627394463364618">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="8331441956577989" type="PowerUp_Mushroom_Health">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Objects&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="8228553209686181" type="PowerUp_Mushroom_Health" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1318678805684542" type="PowerUp_Mushroom_Health" />
+                    </actions>
+                </event-block>
+                <event-block sid="2206385122063458">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="1834942635760566" type="Weapon_Baboon">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Objects&quot;)</param>
+                        </condition>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="2177543242601931" type="Weapon_Baboon" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7117564834304627" type="Weapon_Baboon" />
                     </actions>
                 </event-block>
             </sub-events>

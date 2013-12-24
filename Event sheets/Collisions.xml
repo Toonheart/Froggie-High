@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Collisions</name>
     <events>
-        <event-group collapsed="1" description="" sid="909091857750047" title="Octo World Enemies">
+        <event-group description="" sid="909091857750047" title="Octo World Enemies">
             <sub-events>
                 <comment>If Frog Landed on Spikes kill the frog</comment>
                 <event-block collapsed="1" sid="9786835711709051">
@@ -532,7 +532,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="6168979495239226">
+                <event-block collapsed="1" sid="6168979495239226">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="960270709439572" type="Froggie">
                             <param id="0" name="Object">Enemy_PatrolOcto_Right</param>
@@ -710,7 +710,7 @@
         </event-group>
         <event-group collapsed="1" description="" sid="6397730328085739" title="Chicken World Enemies">
             <sub-events>
-                <event-block sid="7020705298719823">
+                <event-block collapsed="1" sid="7020705298719823">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1561724124942272" type="Froggie">
                             <param id="0" name="Object">Enemy_Flu_Chicken</param>
@@ -898,7 +898,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3088645526915661">
+                <event-block collapsed="1" sid="3088645526915661">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
                             <param id="0" name="Object">EnemyBoxer_Chicken</param>
@@ -1073,7 +1073,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="9805787308421112">
+                <event-block collapsed="1" sid="9805787308421112">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3022495366874511" type="Froggie">
                             <param id="0" name="Object">Enemy_PatroChicken_Left</param>
@@ -1247,7 +1247,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="3390121730289171">
+                <event-block collapsed="1" sid="3390121730289171">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2652465807405978" type="Froggie">
                             <param id="0" name="Object">Enemy_PatroChicken_Right</param>
@@ -2251,5 +2251,13 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4519634016169378">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1929793401282871" type="Froggie">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

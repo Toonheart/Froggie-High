@@ -10,24 +10,24 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -1698,20 +1698,6 @@
                             <point x="0.5" y="0.894531" />
                             <point x="0.644531" y="0.355469" />
                             <point x="0.347656" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="PowerUp" pingpong="0" repeatcount="1" repeatto="0" sid="3780879043021535" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.519531" y="0.519531" />
-                            <point x="0.5" y="0.800781" />
-                            <point x="0.828125" y="0.171875" />
-                            <point x="0.761719" y="0.5" />
-                            <point x="0.773438" y="0.773438" />
-                            <point x="0.5" y="0.863281" />
-                            <point x="0.640625" y="0.359375" />
-                            <point x="0.675781" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5729,7 +5715,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4388338383153325" speed="3">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4388338383153325" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -7010,9 +6996,12 @@
                 <member>Floor_Grass_Normal</member>
                 <member>Floor_HeyStack_Broken</member>
                 <member>Floor_HeyStack_Normal</member>
+                <member>Floor_HeyStak_Broken1</member>
                 <member>Floor_HeyStak_Moving</member>
+                <member>Floor_Wooden_Broken</member>
                 <member>Floor_Wooden_Moving</member>
                 <member>Floor_Wooden_Normal</member>
+                <member>FloorHeyStak_Broken2</member>
             </members>
         </family>
         <family name="CollStuff" plugin-id="Sprite" sid="8943463889419125">
@@ -7267,10 +7256,8 @@
     <music-folder expanded="1">
         <file name="EMPTY [High quality].ogg" />
         <file name="EMPTY [High quality].m4a" />
-        <file name="bakaSample5.m4a" />
-        <file name="bakaSample5.ogg" />
-        <file name="BAKA Track 01.ogg" />
-        <file name="BAKA Track 01~1.m4a" />
+        <file name="BAKA Track 2.m4a" />
+        <file name="BAKA Track 2.ogg" />
     </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="1" name="Icons">

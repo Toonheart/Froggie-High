@@ -413,7 +413,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
+        <event-group description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
             <sub-events>
                 <comment>Collect the powerup show Power on Attack button</comment>
                 <event-block collapsed="1" sid="4013199515954371">
@@ -589,14 +589,14 @@
                 <comment>Doublejump by increaing the jump strength for one jump</comment>
                 <event-block sid="5103723196897294">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7775351253031619" type="Froggie">
+                        <condition id="-7" name="Compare instance variable" sid="7775351253031619" type="PlayerBox">
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="2180922267744467" type="Froggie">
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="2180922267744467" type="PlayerBox">
                             <param id="0" name="Jump strength">2600</param>
                         </action>
                         <action id="4" name="Set animation" sid="3600135981806152" type="Froggie">
@@ -632,7 +632,7 @@
                         <condition id="-4" name="Trigger once while true" sid="2105512407297857" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="4" name="Set jump strength" sid="5955761002386706" type="Froggie">
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="5955761002386706" type="PlayerBox">
                             <param id="0" name="Jump strength">1400</param>
                         </action>
                     </actions>
@@ -699,7 +699,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Using Attack Button" sid="7823920697448265" title="ActivatingPowerUps">
+        <event-group description="Using Attack Button" sid="7823920697448265" title="ActivatingPowerUps">
             <sub-events>
                 <comment>Activate the available power when touching the Attack Button</comment>
                 <comment>Destroy the power at the end of touch or if the powerup time exceeds</comment>
@@ -908,7 +908,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="9294501744561475" type="Froggie">
+                        <action id="-10" name="Set value" sid="9294501744561475" type="PlayerBox">
                             <param id="0" name="Instance variable">DoubleJump</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -919,7 +919,7 @@
                     </actions>
                 </event-block>
                 <comment>While Sage power is using Just disable the Platform behaviour and move froggie in upward direction</comment>
-                <event-block collapsed="1" sid="5535811351894709">
+                <event-block sid="5535811351894709">
                     <conditions>
                         <condition id="2" name="Is playing" sid="1911248268642474" type="Froggie">
                             <param id="0" name="Animation">&quot;Sage&quot;</param>
