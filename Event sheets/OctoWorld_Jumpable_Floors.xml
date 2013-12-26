@@ -3,18 +3,18 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>OctoWorld_Jumpable_Floors</name>
     <events>
-        <event-group collapsed="1" description="" sid="2908095678628983" title="Breakable Floors">
+        <event-group description="" sid="2908095678628983" title="Breakable Floors">
             <sub-events>
                 <comment>When Frog jumps on breakable floor second time Destroy it</comment>
                 <event-block sid="2971582518321419">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="9548549540568099" type="Froggie">
+                        <condition id="0" name="On collision with another object" sid="9548549540568099" type="PlayerBox">
                             <param id="0" name="Object">Floor_Grass_Broken</param>
                         </condition>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="3581205116937213" type="Froggie" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="3581205116937213" type="PlayerBox" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="5884298415862442" type="Froggie">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="5884298415862442" type="PlayerBox">
                             <param id="0" name="Control">2</param>
                         </action>
                         <action id="-16" name="Wait" sid="2873282795592217" type="System">

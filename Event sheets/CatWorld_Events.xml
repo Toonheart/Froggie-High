@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CatWorld_Events</name>
+    <events>
+        <include>CatWorld_Generartion</include>
+        <include>Gyro_Events</include>
+        <include>GameMusic</include>
+        <include>WorldSelect_Events</include>
+        <include>UI_Menus</include>
+        <include>Achieves_Common</include>
+        <include>OctoWorld_Background_Generation</include>
+        <include>OctoWorld_Jumpable_Floors</include>
+        <include>Collectibles</include>
+        <include>OctoWorld_Enemies</include>
+        <include>Froggie_Events</include>
+        <include>FacebookIntegration</include>
+        <include>Collisions</include>
+        <include>PowerUps</include>
+        <include>Maintainance</include>
+        <include>HUD</include>
+        <include>Debug</include>
+        <event-block sid="7767949690329751">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="207612517348156" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4384955166329405" type="System">
+                    <param id="0" name="Variable">CurrentWorld</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="4213199874848819" type="System">
+                    <param id="0" name="Variable">PowerUpAnimMax</param>
+                    <param id="1" name="Value">CurrentWorld</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
