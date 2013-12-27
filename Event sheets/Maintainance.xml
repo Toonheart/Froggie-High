@@ -3,25 +3,25 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
+        <event-group description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+            <sub-events>
+                <comment>Destroy The Enemy Below the ViewPortBottom</comment>
+                <event-block sid="8554971264545097">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="Enemy" />
+                        <condition id="-2" name="Compare Y" sid="8520453531840971" type="Enemy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6516128347584107" type="Enemy" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="" sid="3764998761705823" title="ColleCtibles">
             <sub-events>
-                <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
-                    <sub-events>
-                        <comment>Destroy The Enemy Below the ViewPortBottom</comment>
-                        <event-block sid="8554971264545097">
-                            <conditions>
-                                <condition id="-3" inverted="1" name="Is on-screen" sid="780078537712513" type="Enemy" />
-                                <condition id="-2" name="Compare Y" sid="8520453531840971" type="Enemy">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="6516128347584107" type="Enemy" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
                 <comment>Destroy the collectible below the screen,and overlaping the side port markers</comment>
                 <event-block sid="3874415251620764">
                     <conditions>
@@ -55,6 +55,30 @@
                         <action id="-9" name="Destroy" sid="8894373741140616" type="CollStuff" />
                     </actions>
                 </event-block>
+                <event-block sid="9546803383187002">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1067320986018075" type="Collectible_Marker_Bottom" />
+                        <condition id="-2" name="Compare Y" sid="5583903219142666" type="Collectible_Marker_Bottom">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3648077016208161" type="Collectible_Marker_Bottom" />
+                    </actions>
+                </event-block>
+                <event-block sid="2840196763594947">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1237668152825701" type="Collectible_Marker_Top" />
+                        <condition id="-2" name="Compare Y" sid="8234275270847359" type="Collectible_Marker_Top">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">ViewportBottom(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6871737592188203" type="Collectible_Marker_Top" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="5454558581852329" title="BrokenParts">
@@ -73,7 +97,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Destroying the floors below viewportbottom" sid="7435241601970631" title="Floors - Destroy">
+        <event-group collapsed="1" description="Destroying the floors below viewportbottom" sid="7435241601970631" title="Floors - Destroy">
             <sub-events>
                 <event-block sid="1543279581143428">
                     <conditions>
@@ -89,7 +113,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5729217750058048" title="Background Objects">
+        <event-group description="" sid="5729217750058048" title="Background Objects">
             <sub-events>
                 <event-block sid="554422739994701">
                     <conditions>
@@ -116,7 +140,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6080021250574902" title="PowerUp">
+        <event-group collapsed="1" description="" sid="6080021250574902" title="PowerUp">
             <sub-events>
                 <event-block sid="1854685202982629">
                     <conditions>
@@ -180,7 +204,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6879707152961998" title="Broken Parts">
+        <event-group description="" sid="6879707152961998" title="Broken Parts">
             <sub-events>
                 <event-block sid="1543279581143428">
                     <conditions>
@@ -206,14 +230,14 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2135377953536701" title="Others">
+        <event-group description="" sid="2135377953536701" title="Others">
             <sub-events>
                 <event-block sid="461862690270841">
                     <conditions>
-                        <condition id="-3" inverted="1" name="Is on-screen" sid="1980471791033806" type="Weapon_Baboon" />
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="1980471791033806" type="Bullets" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="263074818267037" type="Weapon_Baboon" />
+                        <action id="-9" name="Destroy" sid="263074818267037" type="Bullets" />
                     </actions>
                 </event-block>
                 <event-block sid="530935685686383">

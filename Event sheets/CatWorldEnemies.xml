@@ -1,80 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>OctoWorld_Enemies</name>
+    <name>CatWorldEnemies</name>
     <events>
-        <event-group collapsed="1" description="Movement pattern of boss " sid="3852672656926211" title="BIGBOSS - Movement">
-            <sub-events>
-                <comment>Moves in a traingle pattern</comment>
-                <event-block sid="117933790335297">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_OctoBOSS">
-                            <param id="0" name="Object">Border_Left_ViewPort</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_OctoBOSS">
-                            <param id="0" name="Instance variable">MoveAngle</param>
-                            <param id="1" name="Value">-45</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6111362022213214" type="Enemy_OctoBOSS">
-                            <param id="0" name="Angle">-45</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4933949180757778">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_OctoBOSS">
-                            <param id="0" name="Object">Border_Top_ViewPort</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="75269065000108" type="Enemy_OctoBOSS">
-                            <param id="0" name="Instance variable">MoveAngle</param>
-                            <param id="1" name="Value">45</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8187085850727824" type="Enemy_OctoBOSS">
-                            <param id="0" name="Angle">45</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3992018776456346">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_OctoBOSS">
-                            <param id="0" name="Object">Border_Right_ViewPort</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3853311473334431" type="Enemy_OctoBOSS">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="902146401947285">
-                    <conditions>
-                        <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_OctoBOSS" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_OctoBOSS">
-                            <param id="0" name="Speed">100</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3865761674978195">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_OctoBOSS">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_OctoBOSS" />
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="" sid="5805986509246056" title="BIGBOSS - GamePlay">
+        <event-group collapsed="1" description="" sid="5021562054976515" title="BIGBOSS - GamePlay">
             <sub-events>
                 <comment>CUP EVENTS</comment>
                 <event-block disabled="1" sid="3933338559808256">
@@ -205,7 +134,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4046320463723904">
+                <event-block collapsed="1" sid="4046320463723904">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="1613783668977542" type="System">
                             <param id="0" name="Variable">CupsCollected</param>
@@ -215,14 +144,14 @@
                         <condition id="-4" name="Trigger once while true" sid="8076436631108778" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="2433113884465409" type="Enemy_OctoBOSS">
+                        <action id="-15" name="Set visible" sid="2433113884465409" type="CatWorldBoss">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-3" name="Create object" sid="802109659876656" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">Enemy_OctoBOSS.X-(random(-200,200))</param>
-                            <param id="3" name="Y">Enemy_OctoBOSS.Y-(random(-200,200))</param>
+                            <param id="2" name="X">CatWorldBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">CatWorldBoss.Y-(random(-200,200))</param>
                         </action>
                         <action id="-16" name="Wait" sid="8823282435365821" type="System">
                             <param id="0" name="Seconds">0.2</param>
@@ -233,8 +162,8 @@
                         <action id="-3" name="Create object" sid="2594269518184418" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">Enemy_OctoBOSS.X-(random(-200,200))</param>
-                            <param id="3" name="Y">Enemy_OctoBOSS.Y-(random(-200,200))</param>
+                            <param id="2" name="X">CatWorldBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">CatWorldBoss.Y-(random(-200,200))</param>
                         </action>
                         <action id="-16" name="Wait" sid="5636620243884119" type="System">
                             <param id="0" name="Seconds">0.2</param>
@@ -242,13 +171,13 @@
                         <action id="-3" name="Create object" sid="8976889711673579" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">Enemy_OctoBOSS.X-(random(-200,200))</param>
-                            <param id="3" name="Y">Enemy_OctoBOSS.Y-(random(-200,200))</param>
+                            <param id="2" name="X">CatWorldBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">CatWorldBoss.Y-(random(-200,200))</param>
                         </action>
                         <action id="-16" name="Wait" sid="7188953766196968" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="6113139526267585" type="Enemy_OctoBOSS" />
+                        <action id="-9" name="Destroy" sid="6113139526267585" type="CatWorldBoss" />
                     </actions>
                     <sub-events>
                         <event-block sid="910844068256306">
@@ -275,15 +204,15 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3083155203150226" title="PATRO OCTO - Movement">
+        <event-group collapsed="1" description="" sid="8032745456789861" title="Flying Enemy - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block sid="3875944443072774">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_PatrolOcto_Right" />
+                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_FlyingCatRight" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_PatrolOcto_Right">
+                        <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_FlyingCatRight">
                             <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">-45</param>
                         </action>
@@ -291,10 +220,10 @@
                 </event-block>
                 <event-block sid="5350266795687805">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="4894410984139619" type="Enemy_PatrolOcto_Left" />
+                        <condition id="-3" name="Is on-screen" sid="4894410984139619" type="Enemy_FlyingCatLeft" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_PatrolOcto_Left">
+                        <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_FlyingCatLeft">
                             <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">225</param>
                         </action>
@@ -302,7 +231,7 @@
                 </event-block>
                 <event-block sid="5417286064658381">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="6205112068656205" type="Enemy_PatrolOcto_Left" />
+                        <condition id="-3" name="Is on-screen" sid="6205112068656205" type="Enemy_FlyingCatLeft" />
                         <condition id="2" inverted="1" name="Is pause" sid="672101216772371" type="Pause" />
                     </conditions>
                     <actions />
@@ -312,17 +241,17 @@
                                 <condition id="-1" name="Every tick" sid="7934311432927382" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="6750141553767162" type="Enemy_PatrolOcto_Left">
-                                    <param id="0" name="Angle">Enemy_PatrolOcto_Left.PatroAngle</param>
+                                <action id="-23" name="Move at angle" sid="6750141553767162" type="Enemy_FlyingCatLeft">
+                                    <param id="0" name="Angle">Enemy_FlyingCatLeft.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="8737799259032536">
+                <event-block sid="8737799259032536">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="Enemy_PatrolOcto_Right" />
+                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="Enemy_FlyingCatRight" />
                         <condition id="2" inverted="1" name="Is pause" sid="6078132388000535" type="Pause" />
                     </conditions>
                     <actions />
@@ -332,29 +261,67 @@
                                 <condition id="-1" name="Every tick" sid="3227323828248411" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="9530465817258571" type="Enemy_PatrolOcto_Right">
-                                    <param id="0" name="Angle">Enemy_PatrolOcto_Right.PatroAngle</param>
+                                <action id="-23" name="Move at angle" sid="9530465817258571" type="Enemy_FlyingCatRight">
+                                    <param id="0" name="Angle">Enemy_FlyingCatRight.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="9271651653379959">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="9031834453506095" type="Enemy_FlyingCatRight">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6519387213643594" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3544831490916642" type="Enemy_FlyingCatRight">
+                            <param id="0" name="Object">PumpkinBomb</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Pumpkin&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8403235048885889" type="PumpkinBomb">
+                            <param id="0" name="Angle">45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2080336560736686">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="5364305408711735" type="Enemy_FlyingCatLeft">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="379353820776501" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3259080624195106" type="Enemy_FlyingCatLeft">
+                            <param id="0" name="Object">PumpkinBomb</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Pumpkin&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4643838762194192" type="PumpkinBomb">
+                            <param id="0" name="Angle">135</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5054597810806465" title="SPIKY OCTO - Attack">
+        <event-group description="" sid="4187828375929926" title="Grumpy Cat - Attack">
             <sub-events>
                 <event-block sid="4534341947617387">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3627816815798224" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SpikyOcto.X,Enemy_SpikyOcto.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_GrumpyCat.X,Enemy_GrumpyCat.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">256</param>
+                            <param id="2" name="Second value">384</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="7690357125875107" type="Enemy_SpikyOcto">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                        <action id="4" name="Set animation" sid="7690357125875107" type="Enemy_GrumpyCat">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -364,45 +331,231 @@
                         <condition id="-22" name="Else" sid="1159039309157624" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9462691201327258" type="Enemy_SpikyOcto">
+                        <action id="4" name="Set animation" sid="9462691201327258" type="Enemy_GrumpyCat">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6204794956551559">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="9462230109550912" type="Froggie">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Enemy_GrumpyCat.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="4433346344535338" type="Enemy_GrumpyCat">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5071743281560843">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5920956212030582" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="7365344389476905" type="Enemy_GrumpyCat">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4233382324787765">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="9889739510480131" type="Lazer" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8566755966728674">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="5927451862637497" type="Froggie">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Enemy_GrumpyCat.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5299882873212176" type="Lazer">
+                                    <param id="0" name="Angle">-25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2992303648537643">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4991175349873941" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6011153700543285" type="Lazer">
+                                    <param id="0" name="Angle">245</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6349478330014878">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="7662087036420168" type="Enemy_GrumpyCat">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3953545317805031">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="6366167740727654" type="Enemy_GrumpyCat">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">4</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9038477378157" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="1346978979948372" type="Enemy_GrumpyCat">
+                                    <param id="0" name="Object">GrumpyEyes</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">&quot;Lazer&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="688410215652475" type="System">
+                                    <param id="0" name="Seconds">5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6125818806555179" type="GrumpyEyes" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="9569782986813337">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="6788866370902191" type="GrumpyEyes" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8515852314068813">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="2277346141620658" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="1254915125598054" type="GrumpyEyes">
+                                    <param id="0" name="Angle">GrumpyEyes.MoveAngle</param>
+                                    <param id="1" name="Distance">200*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="733312017830818">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="5629967185867331" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6356393187941397" type="GrumpyEyes">
+                                    <param id="0" name="Instance variable">MoveAngle</param>
+                                    <param id="1" name="Value">-round(random(60,120))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2401629025696886" title="ELECTRO OCTO - Attack">
+        <event-group collapsed="1" description="" sid="3423969531762384" title="Mad Cat - Attack">
             <sub-events>
                 <event-block sid="1512705190760213">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="6207269346798033" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_ElectroOcto.X,Enemy_ElectroOcto.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_MadCat.X,Enemy_MadCat.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">256</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="164775620908785" type="Enemy_ElectroOcto">
+                        <action id="4" name="Set animation" sid="164775620908785" type="Enemy_MadCat">
                             <param id="0" name="Animation">&quot;Active&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1810999922138018">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="6641514001939375" type="System">
+                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="7068562159589731" type="Enemy_MadCat">
+                                    <param id="0" name="Object">Lazer</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">&quot;Bullet&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6623681670892233">
                     <conditions>
                         <condition id="-22" name="Else" sid="7577630412842227" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5826520170179946" type="Enemy_ElectroOcto">
+                        <action id="4" name="Set animation" sid="5826520170179946" type="Enemy_MadCat">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="3233392463674394">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="4737725836230946" type="Froggie">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Enemy_MadCat.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="5364451190271467" type="Enemy_MadCat">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5960397555207904">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1080375187457252" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="471412453638293" type="Enemy_MadCat">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2272892313011566">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="8712932996258098" type="Lazer" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6895266632311749">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="4703981469761988" type="Froggie">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Enemy_MadCat.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3540730336724869" type="Lazer">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4320375147294866">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="112662868740706" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4396427960117346" type="Lazer">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6326829394498091" title="GiftBox Effects">
+        <event-group collapsed="1" description="" sid="5492692584129924" title="GiftBox Effects">
             <sub-events>
                 <event-block sid="4779730656366491">
                     <conditions>

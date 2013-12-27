@@ -540,7 +540,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3386262635135382" title="LetterCollectibles">
+        <event-group description="" sid="3386262635135382" title="LetterCollectibles">
             <sub-events>
                 <event-block sid="9385379531105649">
                     <conditions>
@@ -592,11 +592,32 @@
                         <action id="-9" name="Destroy" sid="9116175853436149" type="Letter_CollectibleCake" />
                     </actions>
                 </event-block>
+                <event-block sid="3227354142556741">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3961141360656905" type="Froggie">
+                            <param id="0" name="Object">LetterCollectibleCatworld</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4949765374040869" type="LetterCollectibleCatworld">
+                            <param id="0" name="Object">Bling</param>
+                            <param id="1" name="Layer">&quot;objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="9610501880223815" type="Audio">
+                            <param id="0" name="Audio file">collectible</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">2</param>
+                            <param id="1" name="Tag (optional)">&quot;Collectable&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5565615288909114" type="LetterCollectibleCatworld" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Diifferent type of cakes have different points that adds to score" sid="2357590979763978" title="CatWorld-Collectibles">
+        <event-group collapsed="1" description="Diifferent type of cakes have different points that adds to score" sid="2357590979763978" title="CatWorld-Collectibles">
             <sub-events>
-                <event-block sid="3235691306114199">
+                <event-block collapsed="1" sid="3235691306114199">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9081603629538004" type="Froggie">
                             <param id="0" name="Object">Collectible_Catworld</param>
