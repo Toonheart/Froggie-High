@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CrocWorld_Events</name>
+    <events>
+        <include>CrocWorld_JumpableFloors</include>
+        <include>CrockWorld_Enemies</include>
+        <include>CrocWorld_Generation</include>
+        <include>Gyro_Events</include>
+        <include>GameMusic</include>
+        <include>WorldSelect_Events</include>
+        <include>UI_Menus</include>
+        <include>Achieves_Common</include>
+        <include>OctoWorld_Background_Generation</include>
+        <include>Collectibles</include>
+        <include>Froggie_Events</include>
+        <include>FacebookIntegration</include>
+        <include>Collisions</include>
+        <include>PowerUps</include>
+        <include>Maintainance</include>
+        <include>HUD</include>
+        <include>Debug</include>
+        <event-block sid="4078303473146698">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2563104717466865" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3237533571659663" type="System">
+                    <param id="0" name="Variable">CurrentWorld</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="1801379800586936" type="System">
+                    <param id="0" name="Variable">PowerUpAnimMax</param>
+                    <param id="1" name="Value">CurrentWorld</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
