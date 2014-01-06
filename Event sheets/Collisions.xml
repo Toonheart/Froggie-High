@@ -3249,11 +3249,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="9449588041096066" type="Dict_Achieves">
+                                <action disabled="1" id="0" name="Add key" sid="9449588041096066" type="Dict_Achieves">
                                     <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="0" name="Set local value" sid="5064576030289316" type="WebStr_Common">
+                                <action disabled="1" id="0" name="Set local value" sid="5064576030289316" type="WebStr_Common">
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
                                 </action>
@@ -3424,11 +3424,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="605023079173323" type="Dict_Achieves">
+                                <action disabled="1" id="0" name="Add key" sid="605023079173323" type="Dict_Achieves">
                                     <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="0" name="Set local value" sid="4163720586840933" type="WebStr_Common">
+                                <action disabled="1" id="0" name="Set local value" sid="4163720586840933" type="WebStr_Common">
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
                                 </action>
@@ -3598,11 +3598,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="7386121456378508" type="Dict_Achieves">
+                                <action disabled="1" id="0" name="Add key" sid="7386121456378508" type="Dict_Achieves">
                                     <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="0" name="Set local value" sid="696769769303017" type="WebStr_Common">
+                                <action disabled="1" id="0" name="Set local value" sid="696769769303017" type="WebStr_Common">
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
                                 </action>
@@ -3772,11 +3772,11 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Add key" sid="9149825359993063" type="Dict_Achieves">
+                                <action disabled="1" id="0" name="Add key" sid="9149825359993063" type="Dict_Achieves">
                                     <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="0" name="Set local value" sid="2465902278361215" type="WebStr_Common">
+                                <action disabled="1" id="0" name="Set local value" sid="2465902278361215" type="WebStr_Common">
                                     <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
                                     <param id="1" name="Value">Dict_Achieves.AsJSON</param>
                                 </action>
@@ -3920,6 +3920,21 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Hit man shots the enemies" sid="1155038130030058" title="Hitman Attack">
+            <sub-events>
+                <event-block sid="491444830754185">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4764292894862001" type="Bullet_Hitman">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3329821634247147" type="Enemy" />
+                        <action id="-9" name="Destroy" sid="4062675925769845" type="Bullet_Hitman" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

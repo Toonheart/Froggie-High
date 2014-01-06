@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CatWorldEnemies</name>
     <events>
-        <event-group collapsed="1" description="" sid="5021562054976515" title="BIGBOSS - GamePlay">
+        <event-group description="" sid="5021562054976515" title="BIGBOSS - GamePlay">
             <sub-events>
                 <comment>CUP EVENTS</comment>
                 <event-block disabled="1" sid="3933338559808256">
@@ -31,7 +31,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="3401271219530339">
+                <event-block collapsed="1" disabled="1" sid="3401271219530339">
                     <conditions>
                         <condition id="-9" name="Is visible" sid="9415166165339287" type="Collectible_GiftBox" />
                     </conditions>
@@ -83,7 +83,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1356040382048035">
+                <event-block collapsed="1" sid="1356040382048035">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5013445569127713" type="Froggie">
                             <param id="0" name="Object">Collectible_GiftBox</param>
