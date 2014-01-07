@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CrockWorld_Enemies</name>
     <events>
-        <event-group description="" sid="4760330761174463" title="BIGBOSS - GamePlay">
+        <event-group collapsed="1" description="" sid="4760330761174463" title="BIGBOSS - GamePlay">
             <sub-events>
                 <comment>CUP EVENTS</comment>
                 <event-block disabled="1" sid="3933338559808256">
@@ -204,7 +204,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7372799591681234" title="Flying Enemy - Movement">
+        <event-group collapsed="1" description="" sid="7372799591681234" title="Flying Enemy - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block sid="3875944443072774">
@@ -309,14 +309,14 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1992645915073419" title="Grumpy Cat - Attack">
+        <event-group description="" sid="1992645915073419" title="Iguna - Attack">
             <sub-events>
                 <event-block sid="4534341947617387">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3627816815798224" type="System">
                             <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_CrocWorldIguna.X,Enemy_CrocWorldIguna.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">384</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -362,7 +362,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4887125742975979" title="Mad Cat - Attack">
+        <event-group description="" sid="4887125742975979" title="Chamelian - Attack">
             <sub-events>
                 <event-block sid="1512705190760213">
                     <conditions>
@@ -412,6 +412,29 @@
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <comment>Increase the opacity of chamelian  gradually if it is on screen which is set to zero in generation logic</comment>
+                <event-block sid="7891435986301533">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="5725293070126099" type="Enemy_CrocWorldChamelian" />
+                        <condition id="-10" name="Compare opacity" sid="7275053239619243" type="Enemy_CrocWorldChamelian">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8444315670115772">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="1065161443082079" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="9198958888017393" type="Enemy_CrocWorldChamelian">
+                                    <param id="0" name="Opacity">Self.Opacity+20*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

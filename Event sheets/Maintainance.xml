@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Maintainance</name>
     <events>
-        <event-group description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
+        <event-group collapsed="1" description="Destroy the enemies below the viewportbottom" sid="6163786894956073" title="ENEMY - Destroy">
             <sub-events>
                 <comment>Destroy The Enemy Below the ViewPortBottom</comment>
                 <event-block sid="8554971264545097">
@@ -113,7 +113,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5729217750058048" title="Background Objects">
+        <event-group collapsed="1" description="" sid="5729217750058048" title="Background Objects">
             <sub-events>
                 <event-block sid="554422739994701">
                     <conditions>
@@ -204,7 +204,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6879707152961998" title="Broken Parts">
+        <event-group collapsed="1" description="" sid="6879707152961998" title="Broken Parts">
             <sub-events>
                 <event-block sid="1543279581143428">
                     <conditions>
@@ -230,7 +230,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2135377953536701" title="Others">
+        <event-group collapsed="1" description="" sid="2135377953536701" title="Others">
             <sub-events>
                 <event-block sid="461862690270841">
                     <conditions>
@@ -431,6 +431,32 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="978402502347238" type="Floor_Grass_Broken_1" />
                         <action id="-9" name="Destroy" sid="1696364017134858" type="Floor_Grass_Broken_2" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="7133108859657799" title="Flying Enemies">
+            <sub-events>
+                <event-block sid="5830737013687515">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="3968553303935359" type="FlyingLeftEnemy">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">ViewportLeft(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3465220850995103" type="FlyingLeftEnemy" />
+                    </actions>
+                </event-block>
+                <event-block sid="2193389854222682">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="2663032238207517" type="FlyingRightEnemy">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">ViewportRight(&quot;Game&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4223964504792943" type="FlyingRightEnemy" />
                     </actions>
                 </event-block>
             </sub-events>

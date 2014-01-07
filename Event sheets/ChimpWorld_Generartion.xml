@@ -1148,6 +1148,10 @@
                                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                                     <param id="2" name="Image point">0</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="4448640326886661" type="Floor_Wooden_Normal">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
                                                 <action id="-9" name="Destroy" sid="3617079643035332" type="Floor_Wooden_Normal" />
                                             </actions>
                                         </event-block>
@@ -1173,13 +1177,13 @@
                                                     <param id="2" name="X">Floor_Wooden_Normal.X</param>
                                                     <param id="3" name="Y">Floor_Wooden_Normal.Y</param>
                                                 </action>
+                                                <action id="-9" name="Destroy" sid="5403072182692688" type="Floor_Wooden_Normal" />
                                                 <action behavior="8Direction" id="3" name="Set speed" sid="8030786956859862" type="Floor_Wooden_Moving">
                                                     <param id="0" name="Speed">random(150,200)</param>
                                                 </action>
                                                 <action behavior="8Direction" id="7" name="Simulate control" sid="9187565567291518" type="Floor_Wooden_Moving">
                                                     <param id="0" name="Control">0</param>
                                                 </action>
-                                                <action id="-9" name="Destroy" sid="5403072182692688" type="Floor_Wooden_Normal" />
                                             </actions>
                                         </event-block>
                                     </sub-events>

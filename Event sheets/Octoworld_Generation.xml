@@ -94,7 +94,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -1170,6 +1170,10 @@
                                                     <param id="0" name="Control">0</param>
                                                 </action>
                                                 <action id="-9" name="Destroy" sid="5403072182692688" type="Floor_Grass_Normal" />
+                                                <action id="-10" name="Set value" sid="4974635670702009" type="Floor_Grass_Normal">
+                                                    <param id="0" name="Instance variable">Status</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>

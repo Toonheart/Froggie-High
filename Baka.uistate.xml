@@ -11,13 +11,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>CrocWorld</layout>
-        <layout active="1">GraphicStore5</layout>
         <layout>CatWorld</layout>
-        <event-sheet>CrocWorld_Events</event-sheet>
-        <event-sheet>Collisions</event-sheet>
-        <event-sheet>CrocWorld_Generation</event-sheet>
-        <event-sheet>CrockWorld_Enemies</event-sheet>
+        <layout>WorldSelect</layout>
+        <layout>GraphicStore5</layout>
+        <layout>OctoWorld</layout>
         <event-sheet>PowerUps</event-sheet>
+        <event-sheet>Maintainance</event-sheet>
+        <event-sheet>WorldSelect_Events</event-sheet>
+        <event-sheet active="1">CrockWorld_Enemies</event-sheet>
+        <event-sheet>Debug</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -39,5 +41,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="0" name="BG_Objects" />
         <family expanded="0" name="ButtonsCommonSound" />
         <family expanded="0" name="Bullets" />
+        <family expanded="0" name="FlyingLeftEnemy" />
+        <family expanded="0" name="FlyingRightEnemy" />
     </families-expanded>
 </c2uistate>

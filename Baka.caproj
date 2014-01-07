@@ -11,24 +11,24 @@
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -7250,7 +7250,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="5" loop="1" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="2264665348131119" speed="5">
+                <animation framecount="5" loop="1" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="2264665348131119" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.867188">
                         <image-point name="lazer" x="0.355469" y="0.386719" />
                         <collision-poly>
@@ -8360,14 +8360,14 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8687065770692233" speed="5">
-                    <frame duration="1" hotspotX="0.652344" hotspotY="0.382813">
+                    <frame duration="1" hotspotX="0.703125" hotspotY="0.363281">
                         <collision-poly>
                             <point x="0.394531" y="0.394531" />
-                            <point x="0.5" y="0.425781" />
-                            <point x="0.542969" y="0.457031" />
-                            <point x="0.535156" y="0.5" />
-                            <point x="0.527344" y="0.527344" />
-                            <point x="0.5" y="0.675781" />
+                            <point x="0.5" y="0.441406" />
+                            <point x="0.535156" y="0.464844" />
+                            <point x="0.601563" y="0.5" />
+                            <point x="0.582031" y="0.582031" />
+                            <point x="0.5" y="0.746094" />
                             <point x="0.238281" y="0.761719" />
                             <point x="0.046875" y="0.5" />
                         </collision-poly>
@@ -8384,16 +8384,16 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1332435300091424" speed="5">
-                    <frame duration="1" hotspotX="0.371094" hotspotY="0.417969">
+                    <frame duration="1" hotspotX="0.359375" hotspotY="0.359375">
                         <collision-poly>
-                            <point x="0.449219" y="0.449219" />
+                            <point x="0.425781" y="0.425781" />
                             <point x="0.5" y="0.386719" />
                             <point x="0.621094" y="0.378906" />
                             <point x="0.925781" y="0.5" />
                             <point x="0.707031" y="0.707031" />
-                            <point x="0.5" y="0.746094" />
-                            <point x="0.453125" y="0.546875" />
-                            <point x="0.4375" y="0.5" />
+                            <point x="0.5" y="0.707031" />
+                            <point x="0.417969" y="0.582031" />
+                            <point x="0.414063" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -8634,6 +8634,24 @@
                 <member>Lazer</member>
                 <member>PumpkinBomb</member>
                 <member>Weapon_Baboon</member>
+            </members>
+        </family>
+        <family name="FlyingLeftEnemy" plugin-id="Sprite" sid="7644323388599212">
+            <members>
+                <member>Enemy_Chimp_Patro_Left</member>
+                <member>Enemy_CrocWorldFlyingLeft</member>
+                <member>Enemy_FlyingCatLeft</member>
+                <member>Enemy_PatroChicken_Left</member>
+                <member>Enemy_PatrolOcto_Left</member>
+            </members>
+        </family>
+        <family name="FlyingRightEnemy" plugin-id="Sprite" sid="5339183211895597">
+            <members>
+                <member>Enemy_Chimp_Patro_Right</member>
+                <member>Enemy_CrocWorldFlyingRight</member>
+                <member>Enemy_FlyingCatRight</member>
+                <member>Enemy_PatroChicken_Right</member>
+                <member>Enemy_PatrolOcto_Right</member>
             </members>
         </family>
     </families>

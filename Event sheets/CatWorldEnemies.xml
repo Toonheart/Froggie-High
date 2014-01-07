@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CatWorldEnemies</name>
     <events>
-        <event-group description="" sid="5021562054976515" title="BIGBOSS - GamePlay">
+        <event-group collapsed="1" description="" sid="5021562054976515" title="BIGBOSS - GamePlay">
             <sub-events>
                 <comment>CUP EVENTS</comment>
                 <event-block disabled="1" sid="3933338559808256">
@@ -309,14 +309,15 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4187828375929926" title="Grumpy Cat - Attack">
+        <event-group description="" sid="4187828375929926" title="Grumpy Cat - Attack">
             <sub-events>
+                <comment>Active when froggie is in range </comment>
                 <event-block sid="4534341947617387">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3627816815798224" type="System">
                             <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_GrumpyCat.X,Enemy_GrumpyCat.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">384</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -360,37 +361,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4233382324787765">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="9889739510480131" type="Lazer" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="8566755966728674">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="5927451862637497" type="Froggie">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_GrumpyCat.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5299882873212176" type="Lazer">
-                                    <param id="0" name="Angle">-25</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2992303648537643">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="4991175349873941" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6011153700543285" type="Lazer">
-                                    <param id="0" name="Angle">245</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
+                <comment>Grumpy cat shoots with eyes</comment>
                 <event-block sid="6349478330014878">
                     <conditions>
                         <condition id="2" name="Is playing" sid="7662087036420168" type="Enemy_GrumpyCat">
@@ -403,7 +374,7 @@
                             <conditions>
                                 <condition id="3" name="Compare frame" sid="6366167740727654" type="Enemy_GrumpyCat">
                                     <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">4</param>
+                                    <param id="1" name="Number">3</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="9038477378157" type="System" />
                             </conditions>
@@ -414,13 +385,14 @@
                                     <param id="2" name="Image point">&quot;Lazer&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="688410215652475" type="System">
-                                    <param id="0" name="Seconds">5</param>
+                                    <param id="0" name="Seconds">4</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="6125818806555179" type="GrumpyEyes" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Move grummpy eyes upwards randomly changing the angle of movement</comment>
                 <event-block collapsed="1" sid="9569782986813337">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="6788866370902191" type="GrumpyEyes" />

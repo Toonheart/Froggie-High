@@ -4,7 +4,7 @@
     <name>PowerUps</name>
     <events>
         <include>SoundsCommon</include>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -117,7 +117,7 @@
                     </actions>
                 </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
-                <event-block sid="7812786490129375">
+                <event-block collapsed="1" sid="7812786490129375">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8055733803766058" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -188,7 +188,7 @@
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
                 <comment>Pin Rocket and move some distance everytick</comment>
-                <event-block sid="5775586601852508">
+                <event-block collapsed="1" sid="5775586601852508">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="468487929353543" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -209,7 +209,7 @@
                             <actions>
                                 <action id="-23" name="Move at angle" sid="9604127375808253" type="PlayerBox">
                                     <param id="0" name="Angle">-90</param>
-                                    <param id="1" name="Distance">650*dt</param>
+                                    <param id="1" name="Distance">1000*dt</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -418,10 +418,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
+        <event-group collapsed="1" description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
             <sub-events>
                 <comment>Collecting the powerups and showing that Power on Attack button (zoom in effects to grab the atention of the player)</comment>
-                <event-block sid="4013199515954371">
+                <event-block collapsed="1" sid="4013199515954371">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4552949056540236" type="Froggie">
                             <param id="0" name="Object">PowerUp_Multiple</param>
@@ -1183,7 +1183,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Hitman Shoots bullets" sid="9493343708180783" title="HitMan Bullet">
+        <event-group collapsed="1" description="Hitman Shoots bullets" sid="9493343708180783" title="HitMan Bullet">
             <sub-events>
                 <comment>When Hitman animation is playing always set the froggie not mirrored otheerwise the bullets directions changes since the imagepoints becomes mirrored</comment>
                 <event-block sid="5611418648548572">

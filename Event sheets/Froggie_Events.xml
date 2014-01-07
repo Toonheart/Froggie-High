@@ -143,19 +143,19 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
+        <event-group description="Wrap around the layout" sid="9884032770399377" title="FROGGIE - Wrapping around ">
             <sub-events>
                 <comment>Wrap the frog Left and right</comment>
                 <event-block sid="4289847182450448">
                     <conditions>
                         <condition id="-1" name="Compare X" sid="1732333497257551" type="PlayerBox">
                             <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">-15</param>
+                            <param id="1" name="X co-ordinate">30</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="1289519938109904" type="PlayerBox">
-                            <param id="0" name="X">LayoutWidth+14</param>
+                            <param id="0" name="X">LayoutWidth-31</param>
                         </action>
                     </actions>
                 </event-block>
@@ -163,12 +163,12 @@
                     <conditions>
                         <condition id="-1" name="Compare X" sid="4828975050113211" type="PlayerBox">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">LayoutWidth+15</param>
+                            <param id="1" name="X co-ordinate">LayoutWidth-30</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-1" name="Set X" sid="1667665631601706" type="PlayerBox">
-                            <param id="0" name="X">-14</param>
+                            <param id="0" name="X">31</param>
                         </action>
                     </actions>
                 </event-block>
@@ -485,7 +485,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8254297641577714" title="Gyro-Events">
+        <event-group collapsed="1" description="" sid="8254297641577714" title="Gyro-Events">
             <sub-events>
                 <comment>Set Median Values for Alpha and Beta Using global var as Median</comment>
                 <event-block sid="9509104835207651">
@@ -534,7 +534,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group description="" sid="6632129886773868" title="Using Alpha">
+                <event-group collapsed="1" description="" sid="6632129886773868" title="Using Alpha">
                     <sub-events>
                         <comment>simulate left and right controlls by comparing current alpha with median Except the median is in between 356-6 </comment>
                         <event-block collapsed="1" sid="8734367776000234">
@@ -644,7 +644,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="4129762863618757">
+                        <event-block sid="4129762863618757">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2656612979721753" type="System">
                                     <param id="0" name="First value">Dev_Cur_Alpha</param>
@@ -848,8 +848,8 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <comment>Enable 8 direction controll when sage power is using to controll left and right controll</comment>
-                <event-block any="1" sid="7182173331657858">
+                <comment>Enable 8 direction controll when sage power is using or flying to controll left and right controll</comment>
+                <event-block any="1" collapsed="1" sid="7182173331657858">
                     <conditions>
                         <condition id="2" name="Is playing" sid="2032465094852903" type="Froggie">
                             <param id="0" name="Animation">&quot;Sage&quot;</param>
