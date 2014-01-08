@@ -10,14 +10,14 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
@@ -26,12 +26,12 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -8462,6 +8462,524 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Floor_NormalTurtle" sid="4669640073312836">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Status" sid="3718582654735228" type="number" />
+                <instance-variable name="Mirror" sid="4185468625714041" type="number" />
+                <instance-variable name="PresentFloor" sid="6157987602438574" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="1429694280901508">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1699488013687375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.179688" y="0.34375" />
+                            <point x="0.191406" y="0.445313" />
+                            <point x="0.554688" y="0.445313" />
+                            <point x="0.96875" y="0.429688" />
+                            <point x="0.972656" y="0.539063" />
+                            <point x="0.0703125" y="0.5625" />
+                            <point x="0.0742188" y="0.351563" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Floor_MovingTurtle" sid="4389915401833933">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="3203394918952534">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="5540239723254449">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8551693265391292" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164063" y="0.339844" />
+                            <point x="0.175781" y="0.4375" />
+                            <point x="0.964844" y="0.449219" />
+                            <point x="0.972656" y="0.539063" />
+                            <point x="0.0625" y="0.558594" />
+                            <point x="0.0546875" y="0.34375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Floor_BrokenTurtle" sid="3728817189049904">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="6126662842853397">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1239773138252552" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.519531" y="0.480469" />
+                            <point x="0.886719" y="0.5" />
+                            <point x="0.578125" y="0.578125" />
+                            <point x="0.5" y="0.582031" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.0898438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Collectible_TurtleWorld" sid="6904860211893373">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="AnimSelector" sid="1141898908130549" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="2874540770612505">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Unlock30" pingpong="0" repeatcount="1" repeatto="0" sid="9916708915518539" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.339844" y="0.339844" />
+                            <point x="0.5" y="0.320313" />
+                            <point x="0.648438" y="0.351563" />
+                            <point x="0.828125" y="0.5" />
+                            <point x="0.835938" y="0.835938" />
+                            <point x="0.5" y="0.949219" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0.144531" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock60" pingpong="0" repeatcount="1" repeatto="0" sid="1697360177934048" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.542969">
+                        <collision-poly>
+                            <point x="0.242188" y="0.242188" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.738281" y="0.261719" />
+                            <point x="0.867188" y="0.5" />
+                            <point x="0.84375" y="0.84375" />
+                            <point x="0.5" y="0.949219" />
+                            <point x="0.148438" y="0.851563" />
+                            <point x="0.132813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock90" pingpong="0" repeatcount="1" repeatto="0" sid="4076197300791948" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.246094" y="0.246094" />
+                            <point x="0.5" y="0.117188" />
+                            <point x="0.886719" y="0.113281" />
+                            <point x="0.847656" y="0.5" />
+                            <point x="0.761719" y="0.761719" />
+                            <point x="0.5" y="0.855469" />
+                            <point x="0.289063" y="0.710938" />
+                            <point x="0.179688" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock130" pingpong="0" repeatcount="1" repeatto="0" sid="9630285181822467" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0859375" y="0.0859375" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.710938" y="0.289063" />
+                            <point x="0.90625" y="0.5" />
+                            <point x="0.933594" y="0.933594" />
+                            <point x="0.5" y="0.824219" />
+                            <point x="0.152344" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock160" pingpong="0" repeatcount="1" repeatto="0" sid="9084835083717047" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.269531" y="0.269531" />
+                            <point x="0.5" y="0.199219" />
+                            <point x="0.738281" y="0.261719" />
+                            <point x="0.910156" y="0.5" />
+                            <point x="0.714844" y="0.714844" />
+                            <point x="0.5" y="0.867188" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.0664063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock190" pingpong="0" repeatcount="1" repeatto="0" sid="6901500250804796" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.292969" />
+                            <point x="0.699219" y="0.300781" />
+                            <point x="0.707031" y="0.5" />
+                            <point x="0.675781" y="0.675781" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.324219" y="0.675781" />
+                            <point x="0.289063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock230" pingpong="0" repeatcount="1" repeatto="0" sid="3201474257027657" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.292969" />
+                            <point x="0.699219" y="0.300781" />
+                            <point x="0.707031" y="0.5" />
+                            <point x="0.675781" y="0.675781" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.324219" y="0.675781" />
+                            <point x="0.289063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock260" pingpong="0" repeatcount="1" repeatto="0" sid="8448653756719064" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.292969" />
+                            <point x="0.699219" y="0.300781" />
+                            <point x="0.707031" y="0.5" />
+                            <point x="0.675781" y="0.675781" />
+                            <point x="0.5" y="0.976563" />
+                            <point x="0.324219" y="0.675781" />
+                            <point x="0.289063" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock290" pingpong="0" repeatcount="1" repeatto="0" sid="6613935737596608" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.382813" y="0.382813" />
+                            <point x="0.5" y="0.148438" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.980469" />
+                            <point x="0.34375" y="0.65625" />
+                            <point x="0.339844" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock330" pingpong="0" repeatcount="1" repeatto="0" sid="4008609225325418" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.382813" y="0.382813" />
+                            <point x="0.5" y="0.148438" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.980469" />
+                            <point x="0.34375" y="0.65625" />
+                            <point x="0.339844" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock360" pingpong="0" repeatcount="1" repeatto="0" sid="5617004508487983" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.382813" y="0.382813" />
+                            <point x="0.5" y="0.148438" />
+                            <point x="0.671875" y="0.5" />
+                            <point x="0.671875" y="0.671875" />
+                            <point x="0.5" y="0.980469" />
+                            <point x="0.34375" y="0.65625" />
+                            <point x="0.339844" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock390" pingpong="0" repeatcount="1" repeatto="0" sid="687539129608248" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.199219" y="0.199219" />
+                            <point x="0.5" y="0.09375" />
+                            <point x="0.765625" y="0.234375" />
+                            <point x="0.855469" y="0.5" />
+                            <point x="0.796875" y="0.796875" />
+                            <point x="0.5" y="0.757813" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.140625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Floor_TurtleBroken1" sid="6444282561352561">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="4410614377318167">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8810952061733756" speed="5">
+                    <frame duration="1" hotspotX="0.535156" hotspotY="0.472656">
+                        <collision-poly>
+                            <point x="0.480469" y="0.480469" />
+                            <point x="0.492188" y="0.507813" />
+                            <point x="0.492188" y="0.5" />
+                            <point x="0.488281" y="0.488281" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.0898438" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Floor_TurtleBroken2" sid="5078295814006652">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="553549716693473">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2488569483191079" speed="5">
+                    <frame duration="1" hotspotX="0.417969" hotspotY="0.460938">
+                        <collision-poly>
+                            <point x="0.488281" y="0.488281" />
+                            <point x="0.5" y="0.480469" />
+                            <point x="0.519531" y="0.480469" />
+                            <point x="0.886719" y="0.5" />
+                            <point x="0.578125" y="0.578125" />
+                            <point x="0.5" y="0.582031" />
+                            <point x="0.480469" y="0.519531" />
+                            <point x="0.480469" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_TurtleRaplh" sid="9036030483690683">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4304792535226773" speed="5">
+                    <frame duration="1" hotspotX="0.773438" hotspotY="0.886719">
+                        <collision-poly>
+                            <point x="0.21875" y="0.4375" />
+                            <point x="0.6875" y="0.320313" />
+                            <point x="1" y="0.890625" />
+                            <point x="0.515625" y="0.929688" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.773438" hotspotY="0.886719">
+                        <collision-poly>
+                            <point x="0.21875" y="0.4375" />
+                            <point x="0.6875" y="0.320313" />
+                            <point x="1" y="0.890625" />
+                            <point x="0.515625" y="0.929688" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.773438" hotspotY="0.886719">
+                        <collision-poly>
+                            <point x="0.21875" y="0.4375" />
+                            <point x="0.6875" y="0.320313" />
+                            <point x="1" y="0.890625" />
+                            <point x="0.515625" y="0.929688" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.773438" hotspotY="0.886719">
+                        <image-point name="Weapon1" x="0.375" y="0.658203" />
+                        <image-point name="Wepon2" x="0.314453" y="0.583984" />
+                        <collision-poly>
+                            <point x="0.21875" y="0.4375" />
+                            <point x="0.6875" y="0.320313" />
+                            <point x="1" y="0.890625" />
+                            <point x="0.515625" y="0.929688" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ememy_TurtleMicheal" sid="4817653213795462">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="646416717775635" speed="4">
+                    <frame duration="1" hotspotX="0.439453" hotspotY="0.804688">
+                        <collision-poly>
+                            <point x="0.4375" y="0.125" />
+                            <point x="0.765625" y="0.179688" />
+                            <point x="0.71875" y="0.804688" />
+                            <point x="0.15625" y="0.835938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.439453" hotspotY="0.804688">
+                        <collision-poly>
+                            <point x="0.4375" y="0.125" />
+                            <point x="0.765625" y="0.179688" />
+                            <point x="0.71875" y="0.804688" />
+                            <point x="0.15625" y="0.835938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.439453" hotspotY="0.804688">
+                        <collision-poly>
+                            <point x="0.140625" y="0.359375" />
+                            <point x="0.304688" y="0.078125" />
+                            <point x="0.71875" y="0.804688" />
+                            <point x="0.15625" y="0.835938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.439453" hotspotY="0.804688">
+                        <collision-poly>
+                            <point x="0.0546875" y="0.375" />
+                            <point x="0.335938" y="0.351563" />
+                            <point x="0.71875" y="0.804688" />
+                            <point x="0.15625" y="0.835938" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.439453" hotspotY="0.804688">
+                        <image-point name="Weapon" x="0.0644531" y="0.599609" />
+                        <collision-poly>
+                            <point x="0.03125" y="0.433594" />
+                            <point x="0.257813" y="0.367188" />
+                            <point x="0.71875" y="0.804688" />
+                            <point x="0.15625" y="0.835938" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Weapon_MichealTurtle" sid="4023498588549474">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8514208623656387" speed="10">
+                    <frame duration="1" hotspotX="0.945313" hotspotY="0.503906">
+                        <collision-poly>
+                            <point x="0.539063" y="0.492188" />
+                            <point x="0.921875" y="0.4375" />
+                            <point x="0.914063" y="0.53125" />
+                            <point x="0.617188" y="0.632813" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.945313" hotspotY="0.503906">
+                        <collision-poly>
+                            <point x="0.390625" y="0.476563" />
+                            <point x="0.921875" y="0.4375" />
+                            <point x="0.914063" y="0.53125" />
+                            <point x="0.421875" y="0.609375" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.945313" hotspotY="0.503906">
+                        <collision-poly>
+                            <point x="0.195313" y="0.46875" />
+                            <point x="0.921875" y="0.4375" />
+                            <point x="0.914063" y="0.53125" />
+                            <point x="0.273438" y="0.632813" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.945313" hotspotY="0.503906">
+                        <collision-poly>
+                            <point x="0.09375" y="0.453125" />
+                            <point x="0.921875" y="0.4375" />
+                            <point x="0.914063" y="0.53125" />
+                            <point x="0.09375" y="0.664063" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Weapon_TurtleRalph" sid="7498561939588037">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5606954139595236">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8724274592064165" speed="5">
+                    <frame duration="1" hotspotX="0.953125" hotspotY="0.484375">
+                        <collision-poly>
+                            <point x="0.942708" y="0.5" />
+                            <point x="0.526042" y="0.526042" />
+                            <point x="0.5" y="0.671875" />
+                            <point x="0.322917" y="0.677083" />
+                            <point x="0.0364583" y="0.5" />
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.546875" y="0.453125" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_TurtleBoss" sid="7285274867969948">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9672412945440029" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_TurtleFlyingLeft" sid="3736404828836569">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PatroAngle" sid="2284791543231581" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3770554971073413" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyTurtleFlyingRight" sid="2905618049050516">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="PatroAngle" sid="3646417720594624" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6863510939421401" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
@@ -8473,11 +8991,13 @@
         </family>
         <family name="Enemy" plugin-id="Sprite" sid="2891136451677008">
             <members>
+                <member>Ememy_TurtleMicheal</member>
                 <member>Enemy_Chimp_Baboon</member>
                 <member>Enemy_Chimp_Bash</member>
                 <member>Enemy_Chimp_Patro_Left</member>
                 <member>Enemy_Chimp_Patro_Right</member>
                 <member>Enemy_CrocWorldChamelian</member>
+                <member>Enemy_CrocWorldFlyingLeft</member>
                 <member>Enemy_CrocWorldFlyingRight</member>
                 <member>Enemy_CrocWorldIguna</member>
                 <member>Enemy_ElectroOcto</member>
@@ -8491,7 +9011,10 @@
                 <member>Enemy_PatrolOcto_Left</member>
                 <member>Enemy_PatrolOcto_Right</member>
                 <member>Enemy_SpikyOcto</member>
+                <member>Enemy_TurtleFlyingLeft</member>
+                <member>Enemy_TurtleRaplh</member>
                 <member>EnemyBoxer_Chicken</member>
+                <member>EnemyTurtleFlyingRight</member>
             </members>
         </family>
         <family name="Floors" plugin-id="Sprite" sid="4146028826729182">
@@ -8499,6 +9022,7 @@
                 <member>Floor_Box_Broken</member>
                 <member>Floor_Box_Moving</member>
                 <member>Floor_Box_Normal</member>
+                <member>Floor_BrokenTurtle</member>
                 <member>FLoor_CrocWorldBroken</member>
                 <member>Floor_CrocWorldMoving</member>
                 <member>FLoor_CrocWorldNormal</member>
@@ -8508,6 +9032,8 @@
                 <member>Floor_HeyStack_Broken</member>
                 <member>Floor_HeyStack_Normal</member>
                 <member>Floor_HeyStak_Moving</member>
+                <member>Floor_MovingTurtle</member>
+                <member>Floor_NormalTurtle</member>
                 <member>Floor_Wooden_Broken</member>
                 <member>Floor_Wooden_Moving</member>
                 <member>Floor_Wooden_Normal</member>
@@ -8522,6 +9048,7 @@
                 <member>Collectible_Fruit</member>
                 <member>Collectible_Marker_Bottom</member>
                 <member>Collectible_Marker_Top</member>
+                <member>Collectible_TurtleWorld</member>
             </members>
         </family>
         <family name="PowerUps" plugin-id="Sprite" sid="3063915391822131">
@@ -8540,6 +9067,8 @@
                 <member>Floor_Grass_Broken_1</member>
                 <member>Floor_Grass_Broken_2</member>
                 <member>Floor_HeyStak_Broken1</member>
+                <member>Floor_TurtleBroken1</member>
+                <member>Floor_TurtleBroken2</member>
                 <member>Floor_Wooden_Broken1</member>
                 <member>Floor_Wooden_Broken2</member>
                 <member>FloorHeyStak_Broken2</member>
@@ -8634,6 +9163,7 @@
                 <member>Lazer</member>
                 <member>PumpkinBomb</member>
                 <member>Weapon_Baboon</member>
+                <member>Weapon_TurtleRalph</member>
             </members>
         </family>
         <family name="FlyingLeftEnemy" plugin-id="Sprite" sid="7644323388599212">
@@ -8643,6 +9173,7 @@
                 <member>Enemy_FlyingCatLeft</member>
                 <member>Enemy_PatroChicken_Left</member>
                 <member>Enemy_PatrolOcto_Left</member>
+                <member>EnemyTurtleFlyingRight</member>
             </members>
         </family>
         <family name="FlyingRightEnemy" plugin-id="Sprite" sid="5339183211895597">
@@ -8652,6 +9183,7 @@
                 <member>Enemy_FlyingCatRight</member>
                 <member>Enemy_PatroChicken_Right</member>
                 <member>Enemy_PatrolOcto_Right</member>
+                <member>EnemyTurtleFlyingRight</member>
             </members>
         </family>
     </families>
@@ -8661,6 +9193,7 @@
         <layout>CrocWorld.xml</layout>
         <layout>ChickenWorld.xml</layout>
         <layout>ChimpWorld.xml</layout>
+        <layout>TurtleWorld.xml</layout>
         <layout>Title_Screen.xml</layout>
         <layout>GameOver.xml</layout>
         <layout>Achievements.xml</layout>
@@ -8678,12 +9211,13 @@
         <layout>StoryBoard.xml</layout>
         <layout>GraphicStore4.xml</layout>
         <layout>GraphicStore5.xml</layout>
+        <layout>GraphicStore6.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>OctoWorld_Events.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>HUD.xml</event-sheet>
-        <event-sheet>Maintainance.xml</event-sheet>
+        <event-sheet>Maintanence.xml</event-sheet>
         <event-sheet>TitleScreen_Events.xml</event-sheet>
         <event-sheet>PowerUps.xml</event-sheet>
         <event-sheet>Collisions.xml</event-sheet>
@@ -8729,6 +9263,10 @@
         <event-sheet>CrocWorld_Generation.xml</event-sheet>
         <event-sheet>CrockWorld_Enemies.xml</event-sheet>
         <event-sheet>CrocWorld_JumpableFloors.xml</event-sheet>
+        <event-sheet>TurtleWorld_Events.xml</event-sheet>
+        <event-sheet>TurtleWold_generation.xml</event-sheet>
+        <event-sheet>TurtleWorld_JumpableFloors.xml</event-sheet>
+        <event-sheet>TurtleWorld_Enemies.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">

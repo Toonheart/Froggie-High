@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ChimpWorld_Events</name>
+    <name>TurtleWorld_Events</name>
     <events>
+        <include>TurtleWorld_Enemies</include>
+        <include>TurtleWorld_JumpableFloors</include>
+        <include>TurtleWold_generation</include>
         <include>ChimpWorld_BG_Generation</include>
         <include>GameMusic</include>
         <include>WorldSelect_Events</include>
         <include>UI_Menus</include>
-        <include>ChimpWorld_Enemies</include>
-        <include>ChimpWorld_JumpableFloors</include>
-        <include>ChimpWorld_Generartion</include>
         <include>Collectibles</include>
         <include>Froggie_Events</include>
         <include>FacebookIntegration</include>
@@ -18,16 +18,17 @@
         <include>Maintanence</include>
         <include>HUD</include>
         <include>Debug</include>
-        <event-block sid="7537097035904325">
+        <comment>Set the  max Unlocked power up</comment>
+        <event-block sid="5364424189508679">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="7950169752451796" type="System" />
+                <condition id="-2" name="On start of layout" sid="5621755260687382" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="4327376152342262" type="System">
+                <action id="-9" name="Set value" sid="5950011296701499" type="System">
                     <param id="0" name="Variable">CurrentWorld</param>
-                    <param id="1" name="Value">3</param>
+                    <param id="1" name="Value">6</param>
                 </action>
-                <action id="-9" name="Set value" sid="2940395176041792" type="System">
+                <action id="-9" name="Set value" sid="6241182187858932" type="System">
                     <param id="0" name="Variable">PowerUpAnimMax</param>
                     <param id="1" name="Value">CurrentWorld</param>
                 </action>

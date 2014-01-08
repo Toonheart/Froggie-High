@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TurtleWorld_Enemies</name>
+    <events>
+        <event-group collapsed="1" description="Movement pattern of boss " sid="8623538331146993" title="BIGBOSS - Movement">
+            <sub-events>
+                <comment>Moves in a traingle pattern</comment>
+                <event-block sid="117933790335297">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="4606566133497753" type="Enemy_OctoBOSS">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_OctoBOSS">
+                            <param id="0" name="Instance variable">MoveAngle</param>
+                            <param id="1" name="Value">-45</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6111362022213214" type="Enemy_OctoBOSS">
+                            <param id="0" name="Angle">-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4933949180757778">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_OctoBOSS">
+                            <param id="0" name="Object">Border_Top_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-10" name="Set value" sid="75269065000108" type="Enemy_OctoBOSS">
+                            <param id="0" name="Instance variable">MoveAngle</param>
+                            <param id="1" name="Value">45</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8187085850727824" type="Enemy_OctoBOSS">
+                            <param id="0" name="Angle">45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3992018776456346">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="419015833826762" type="Enemy_OctoBOSS">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3853311473334431" type="Enemy_OctoBOSS">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="902146401947285">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="3150286360367711" type="Enemy_OctoBOSS" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_OctoBOSS">
+                            <param id="0" name="Speed">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3865761674978195">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_OctoBOSS">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_OctoBOSS" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="5629463810633983" title="BIGBOSS - GamePlay">
+            <sub-events>
+                <comment>CUP EVENTS</comment>
+                <event-block sid="1356040382048035">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5013445569127713" type="Froggie">
+                            <param id="0" name="Object">Collectible_GiftBox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="2558176543355033" type="Collectible_GiftBox" />
+                        <action id="-10" name="Add to" sid="2141186645294136" type="System">
+                            <param id="0" name="Variable">CupsCollected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5375268433599084">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="2794655719009716" type="Collectible_GiftBox">
+                                    <param id="0" name="Object">GiftRays</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5491846303721714" type="GiftRays" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="934377996312115">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="3310892476040926" type="System">
+                            <param id="0" name="Object">HUD_Cup</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="8368735524307445" type="HUD_Cup" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1014888929057725">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3469652502613635" type="HUD_Cup">
+                                    <param id="0" name="Instance variable">CupNo</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">CupsCollected</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="9836648642252434" type="HUD_Cup">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4046320463723904">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1613783668977542" type="System">
+                            <param id="0" name="Variable">CupsCollected</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8076436631108778" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2433113884465409" type="Enemy_TurtleBoss">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="802109659876656" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_TurtleBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_TurtleBoss.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8823282435365821" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6709094115307681" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2594269518184418" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_TurtleBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_TurtleBoss.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5636620243884119" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8976889711673579" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">Enemy_TurtleBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_TurtleBoss.Y-(random(-200,200))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7188953766196968" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6113139526267585" type="Enemy_TurtleBoss" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2136875255300473" title="Flying Turtle - Movement">
+            <sub-events>
+                <comment>Move the enemy Diagonally from both angles</comment>
+                <event-block sid="3875944443072774">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="EnemyTurtleFlyingRight" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="8351720853642246" type="EnemyTurtleFlyingRight">
+                            <param id="0" name="Instance variable">PatroAngle</param>
+                            <param id="1" name="Value">-45</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5350266795687805">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="4894410984139619" type="Enemy_TurtleFlyingLeft" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_TurtleFlyingLeft">
+                            <param id="0" name="Instance variable">PatroAngle</param>
+                            <param id="1" name="Value">225</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5417286064658381">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="6205112068656205" type="Enemy_TurtleFlyingLeft" />
+                        <condition id="2" inverted="1" name="Is pause" sid="672101216772371" type="Pause" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7624699691791019">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="7934311432927382" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="6750141553767162" type="Enemy_TurtleFlyingLeft">
+                                    <param id="0" name="Angle">Enemy_TurtleFlyingLeft.PatroAngle</param>
+                                    <param id="1" name="Distance">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="8737799259032536">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="EnemyTurtleFlyingRight" />
+                        <condition id="2" inverted="1" name="Is pause" sid="6078132388000535" type="Pause" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6328679369823808">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="3227323828248411" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="9530465817258571" type="EnemyTurtleFlyingRight">
+                                    <param id="0" name="Angle">EnemyTurtleFlyingRight.PatroAngle</param>
+                                    <param id="1" name="Distance">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="1836431402925865" title="Ralph Turtle - Attack">
+            <sub-events>
+                <comment>Spawn two weapons on 3 frame and set different speeds for each weopn</comment>
+                <event-block sid="2381713685612305">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="1532148227269555" type="Enemy_TurtleRaplh">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="3565921901943169" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1432490923758703" type="Enemy_TurtleRaplh">
+                            <param id="0" name="Object">Weapon_TurtleRalph</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="9698961154483805" type="Weapon_TurtleRalph">
+                            <param id="0" name="Speed">400</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5621534802469995" type="Enemy_TurtleRaplh">
+                            <param id="0" name="Object">Weapon_TurtleRalph</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="3806648719332866" type="Weapon_TurtleRalph">
+                            <param id="0" name="Speed">450</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>turn enemy to the froggie</comment>
+                <event-block sid="181210192089306">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="3453017911542422" type="Enemy_TurtleRaplh" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5879702196971113">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="9452011311002485" type="Froggie">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Enemy_TurtleRaplh.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="3122545665319054" type="Enemy_TurtleRaplh">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8123060810289271">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5223268470824614" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="9040584135384812" type="Enemy_TurtleRaplh">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="441845568538334">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="6577858245339003" type="Weapon_TurtleRalph" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9863707034120536">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="1230681472022782" type="Enemy_TurtleRaplh" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9471533445742697" type="Weapon_TurtleRalph">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3213904291070295" title="Micheal - Attack">
+            <sub-events>
+                <event-block sid="6623681670892233">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="8917109672403171" type="Ememy_TurtleMicheal">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5128426183458779" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="7328184840719814" type="Ememy_TurtleMicheal">
+                            <param id="0" name="Object">Weapon_MichealTurtle</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>turn enemy to the froggie</comment>
+                <event-block sid="2260347644091128">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="1818982509700392" type="Ememy_TurtleMicheal" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5082735737635956">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="5299154061818348" type="Froggie">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Ememy_TurtleMicheal.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="1892473505634879" type="Ememy_TurtleMicheal">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3734743458327651">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2199658895728925" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="9146805670200648" type="Ememy_TurtleMicheal">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1603815096304884">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="3405310474477983" type="Weapon_MichealTurtle" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5998602840326773">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="1474577142657149" type="Ememy_TurtleMicheal" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="9659047093112398" type="Weapon_MichealTurtle">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="1503723218223571" title="GiftBox Effects">
+            <sub-events>
+                <event-block sid="4779730656366491">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
+                            <param id="0" name="Instance variable">Scale</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0.8</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="532585220994859" type="GiftRays">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1794108938290715">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8298210424733968" type="GiftRays">
+                            <param id="0" name="Instance variable">Scale</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8026352037039498" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7576871854633069" type="GiftRays">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8363539136310204">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
+                        <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3612076594567225">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="9074974841573255" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="5931095776999492" type="GiftRays">
+                                    <param id="0" name="Scale">Self.Scale</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7381684971212141">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="60461347689043" type="GiftRays">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
+                                            <param id="0" name="Instance variable">Scale</param>
+                                            <param id="1" name="Value">Self.Scale-0.002</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6758912167083795">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4158155634027162" type="GiftRays">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
+                                            <param id="0" name="Instance variable">Scale</param>
+                                            <param id="1" name="Value">Self.Scale+0.002</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="6776799280550655">
+            <conditions>
+                <condition id="5" name="On any finished" sid="448581907237865" type="Weapon_MichealTurtle" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2034823628078402" type="Weapon_MichealTurtle" />
+                <action id="3" name="Start" sid="8503868558593577" type="Ememy_TurtleMicheal">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
