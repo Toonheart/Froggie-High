@@ -117,9 +117,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" disabled="1" sid="7565199085067424" title="BG Music">
+        <event-group collapsed="1" description="" sid="7565199085067424" title="BG Music">
             <sub-events>
-                <event-block disabled="1" sid="650863745138605">
+                <event-block sid="650863745138605">
                     <conditions>
                         <condition id="-25" name="On loader layout complete" sid="6412097584979642" type="System" />
                         <condition id="4" inverted="1" name="Is any playing" sid="1492664923453563" type="Audio" />
@@ -133,7 +133,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="72108679918237">
+                <event-block sid="72108679918237">
                     <conditions>
                         <condition id="0" name="On ended" sid="3798432924535981" type="Audio">
                             <param id="0" name="Tag">&quot;TitleTrack&quot;</param>
@@ -151,7 +151,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="6392252862926775">
+                <event-block sid="6392252862926775">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="1356005941296528" type="System" />
                     </conditions>
@@ -164,7 +164,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="7989452565033306">
+                <event-block sid="7989452565033306">
                     <conditions>
                         <condition id="0" name="On ended" sid="247774944471677" type="Audio">
                             <param id="0" name="Tag">&quot;BgMusic&quot;</param>
@@ -182,7 +182,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="215533422769401">
+                <event-block sid="215533422769401">
                     <conditions>
                         <condition id="2" name="Is pause" sid="2055066858133231" type="Pause" />
                     </conditions>
@@ -193,7 +193,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="4396586987554234">
+                <event-block sid="4396586987554234">
                     <conditions>
                         <condition id="-22" name="Else" sid="7204194197364839" type="System" />
                         <condition id="-4" name="Trigger once while true" sid="5551925344480014" type="System" />
@@ -204,6 +204,146 @@
                             <param id="1" name="State">1</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4854783928994917" title="Music Togling">
+            <sub-events>
+                <event-block sid="2402940057333264">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3114401256978203" type="System">
+                            <param id="0" name="First value">MusicTogle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="470360076900188" type="Audio">
+                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="446622944394017" type="Icon_MusicStatus">
+                            <param id="0" name="Animation">&quot;ON&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="352130188245949">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5959210495821545" type="System">
+                            <param id="0" name="First value">MusicTogle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4193972468282086" type="Icon_MusicStatus">
+                            <param id="0" name="Animation">&quot;OFF&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="2" name="Set muted" sid="2463893731989223" type="Audio">
+                            <param id="0" name="Tag">&quot;BGMusic&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9876838162219658" title="Toggling Music and Sounds">
+            <sub-events>
+                <comment>Mute the sounds</comment>
+                <event-block disabled="1" sid="8829171707280856">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="9040559754784035" type="Touch">
+                            <param id="0" name="Object">Button_ToggleSound</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="7216241902257728" type="Audio">
+                            <param id="0" name="Tag">&quot;Sound&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Toggle music</comment>
+                <event-block sid="6144716917881393">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="271020883865764" type="Touch">
+                            <param id="0" name="Object">Icon_MusicStatus</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="8698694371780626" type="Audio">
+                            <param id="0" name="Audio file">GenericButtonClick</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Button&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4837016364067963">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="9491523304595008" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;ON&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3021334774236605" type="Icon_MusicStatus">
+                                    <param id="0" name="Object">Music_Notes</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="342617633310186" type="System">
+                                    <param id="0" name="Variable">MusicTogle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1633914869402644" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1.08</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7406552242845562" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4291476964641937" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4602996373712604" type="Title_Music">
+                                    <param id="0" name="Animation">&quot;Off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4601422357842825">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="4632394319870848" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="2528738156633908" type="Icon_MusicStatus">
+                                    <param id="0" name="Object">Music_Notes</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5341717225820165" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4900997372409299" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1.08</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="9849712553931415" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4992011476674665" type="Title_Music">
+                                    <param id="0" name="Animation">&quot;ON&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1813852491297055" type="System">
+                                    <param id="0" name="Variable">MusicTogle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

@@ -97,7 +97,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2511712467372221" title="Toggling Music and Sounds">
+        <event-group description="" disabled="1" sid="2511712467372221" title="Toggling Music and Sounds">
             <sub-events>
                 <comment>Mute the sounds</comment>
                 <event-block disabled="1" sid="8829171707280856">
@@ -114,7 +114,7 @@
                     </actions>
                 </event-block>
                 <comment>Toggle music</comment>
-                <event-block sid="6144716917881393">
+                <event-block disabled="1" sid="6144716917881393">
                     <conditions>
                         <condition id="3" name="On touched object" sid="271020883865764" type="Touch">
                             <param id="0" name="Object">Icon_MusicStatus</param>
@@ -129,16 +129,14 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="4837016364067963">
+                        <event-block disabled="1" sid="4837016364067963">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9491523304595008" type="Icon_MusicStatus">
-                                    <param id="0" name="Instance variable">MusicStatus</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="2" name="Is playing" sid="9491523304595008" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;ON&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="136732194938088" type="Icon_MusicStatus">
+                                <action disabled="1" id="-10" name="Set value" sid="136732194938088" type="Icon_MusicStatus">
                                     <param id="0" name="Instance variable">MusicStatus</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
@@ -147,13 +145,13 @@
                                     <param id="1" name="Layer">&quot;Game&quot;</param>
                                     <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="6985502192737945" type="Icon_MusicStatus">
+                                <action id="-9" name="Set value" sid="342617633310186" type="System">
+                                    <param id="0" name="Variable">MusicTogle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="4" name="Set animation" sid="6985502192737945" type="Icon_MusicStatus">
                                     <param id="0" name="Animation">&quot;OFF&quot;</param>
                                     <param id="1" name="From">1</param>
-                                </action>
-                                <action id="2" name="Set muted" sid="2462184001483791" type="Audio">
-                                    <param id="0" name="Tag">&quot;Music&quot;</param>
-                                    <param id="1" name="State">1</param>
                                 </action>
                                 <action id="9" name="Set scale" sid="1633914869402644" type="Icon_MusicStatus">
                                     <param id="0" name="Scale">1.08</param>
@@ -170,7 +168,42 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2899044703111809">
+                        <event-block disabled="1" sid="4601422357842825">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="4632394319870848" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="2528738156633908" type="Icon_MusicStatus">
+                                    <param id="0" name="Object">Music_Notes</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5341717225820165" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action disabled="1" id="4" name="Set animation" sid="9917577591585001" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4900997372409299" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1.08</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="9849712553931415" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="4992011476674665" type="Title_Music">
+                                    <param id="0" name="Animation">&quot;Off&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1813852491297055" type="System">
+                                    <param id="0" name="Variable">MusicTogle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="2899044703111809">
                             <conditions>
                                 <condition id="-22" name="Else" sid="5043091668666957" type="System" />
                             </conditions>
@@ -185,6 +218,51 @@
                                 </action>
                                 <action id="4" name="Set animation" sid="124134744080624" type="Title_Music">
                                     <param id="0" name="Animation">&quot;On&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3066730879788082" type="System">
+                                    <param id="0" name="Variable">MusicTogle</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="2433037721389964">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7626271284685418" type="Icon_MusicStatus">
+                                    <param id="0" name="Instance variable">MusicStatus</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="379288268692907" type="Icon_MusicStatus">
+                                    <param id="0" name="Instance variable">MusicStatus</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="7189283013905385" type="Icon_MusicStatus">
+                                    <param id="0" name="Object">Music_Notes</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="6823035997926054" type="Icon_MusicStatus">
+                                    <param id="0" name="Animation">&quot;OFF&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="2" name="Set muted" sid="9602472305953499" type="Audio">
+                                    <param id="0" name="Tag">&quot;BgMusic&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="820822703820438" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1.08</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="9065527091804806" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="825852208285778" type="Icon_MusicStatus">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="846788447312177" type="Title_Music">
+                                    <param id="0" name="Animation">&quot;Off&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
@@ -232,7 +310,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8428997519920965" title="MENUS">
+        <event-group collapsed="1" description="" sid="8428997519920965" title="MENUS">
             <sub-events>
                 <event-block collapsed="1" sid="9825124560921165">
                     <conditions>

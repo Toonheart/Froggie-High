@@ -13,7 +13,7 @@
                     <param id="0" name="Text">&quot;ActiveWorld&quot;&amp;ActiveWorld</param>
                 </action>
                 <action id="0" name="Set text" sid="429350303701982" type="Text_Debug">
-                    <param id="0" name="Text">&quot;DEBUG BUILD-122413&quot;</param>
+                    <param id="0" name="Text">&quot;DEBUG BUILD-010914&quot;</param>
                 </action>
                 <action id="1" name="Append text" sid="9397513936803637" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;HEALTH : Unlimited&quot;</param>
@@ -23,6 +23,12 @@
                 </action>
                 <action id="1" name="Append text" sid="8002087447422118" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;FPS  : &quot; &amp; fps&amp;newline &amp; &quot;RENDER : &quot; &amp; renderer  </param>
+                </action>
+                <action id="1" name="Append text" sid="3107651310070959" type="Text_Debug">
+                    <param id="0" name="Text">newline&amp;&quot;Platform Count - &quot; &amp;Counter_Floor</param>
+                </action>
+                <action id="1" name="Append text" sid="9009424481059994" type="Text_Debug">
+                    <param id="0" name="Text">newline&amp;&quot;World Section - &quot;&amp;WorldSection</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="7784350536530399" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;BG1_House.Y</param>
@@ -63,9 +69,6 @@
                 <action id="-10" name="Set value" sid="9918760989040105" type="Froggie">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">3</param>
-                </action>
-                <action disabled="1" id="1" name="Append text" sid="6107444727785404" type="Text_Debug">
-                    <param id="0" name="Text">dt</param>
                 </action>
             </actions>
             <sub-events>

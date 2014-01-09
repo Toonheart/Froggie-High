@@ -12,12 +12,12 @@
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
@@ -26,12 +26,12 @@
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -56,7 +56,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="Froggie" sid="2568297134087841">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1030,7 +1030,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Off" pingpong="0" repeatcount="1" repeatto="0" sid="3304668461106672" speed="5">
+                <animation framecount="1" loop="0" name="OFF" pingpong="0" repeatcount="1" repeatto="0" sid="3304668461106672" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.30625" y="0.30625" />
@@ -4970,9 +4970,9 @@
                 <animation framecount="1" loop="0" name="Locked" pingpong="0" repeatcount="1" repeatto="0" sid="1012764257910982" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.0195313" y="0.00390625" />
-                            <point x="0.898438" y="0" />
-                            <point x="0.910156" y="0.996094" />
+                            <point x="0" y="0.0078125" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
                             <point x="0.00390625" y="1" />
                         </collision-poly>
                     </frame>
@@ -5144,6 +5144,40 @@
                             <point x="0.136719" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Cat" pingpong="0" repeatcount="1" repeatto="0" sid="2993919285150759" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.337891" y="0.337891" />
+                            <point x="0.5" y="0.0566406" />
+                            <point x="0.683594" y="0.316406" />
+                            <point x="0.935547" y="0.5" />
+                            <point x="0.863281" y="0.863281" />
+                            <point x="0.5" y="0.873047" />
+                            <point x="0.351563" y="0.648438" />
+                            <point x="0.0957031" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Crock" pingpong="0" repeatcount="1" repeatto="0" sid="8969562289102854" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.330078" y="0.330078" />
+                            <point x="0.5" y="0.208984" />
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.865234" y="0.5" />
+                            <point x="0.804688" y="0.804688" />
+                            <point x="0.5" y="0.988281" />
+                            <point x="0.298828" y="0.701172" />
+                            <point x="0.130859" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="0" name="Turtle" pingpong="0" repeatcount="1" repeatto="0" sid="6828917478427552" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -7696,7 +7730,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CatWorldBoss" sid="9800807583964481">
+        <object-type name="Enemy_CatBoss" sid="9800807583964481">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2063476660769512" speed="5">
@@ -8712,6 +8746,45 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="Unlock430" pingpong="0" repeatcount="1" repeatto="0" sid="8785017863454153" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.300781" y="0.300781" />
+                            <point x="0.5" y="0.257813" />
+                            <point x="0.765625" y="0.234375" />
+                            <point x="0.902344" y="0.5" />
+                            <point x="0.765625" y="0.765625" />
+                            <point x="0.5" y="0.75" />
+                            <point x="0.28125" y="0.71875" />
+                            <point x="0.105469" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock460" pingpong="0" repeatcount="1" repeatto="0" sid="5626291416760303" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.355469" y="0.355469" />
+                            <point x="0.722656" y="0.277344" />
+                            <point x="0.886719" y="0.5" />
+                            <point x="0.683594" y="0.683594" />
+                            <point x="0.34375" y="0.65625" />
+                            <point x="0.0859375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Unlock490" pingpong="0" repeatcount="1" repeatto="0" sid="3003747990231791" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.234375" y="0.234375" />
+                            <point x="0.5" y="0.015625" />
+                            <point x="0.804688" y="0.195313" />
+                            <point x="0.707031" y="0.707031" />
+                            <point x="0.5" y="0.960938" />
+                            <point x="0.328125" y="0.671875" />
+                            <point x="0.261719" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Floor_TurtleBroken1" sid="6444282561352561">
@@ -9101,10 +9174,12 @@
         </family>
         <family name="EnemyBoss" plugin-id="Sprite" sid="9851460647910744">
             <members>
+                <member>Enemy_CatBoss</member>
                 <member>Enemy_ChickenBOSS</member>
                 <member>Enemy_ChimpBoss</member>
                 <member>Enemy_CrockWorldBoss</member>
                 <member>Enemy_OctoBOSS</member>
+                <member>Enemy_TurtleBoss</member>
             </members>
         </family>
         <family name="AllCollectibles" plugin-id="Sprite" sid="2079754843692308">

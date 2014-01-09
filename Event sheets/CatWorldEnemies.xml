@@ -144,14 +144,14 @@
                         <condition id="-4" name="Trigger once while true" sid="8076436631108778" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="2433113884465409" type="CatWorldBoss">
+                        <action id="-15" name="Set visible" sid="2433113884465409" type="Enemy_CatBoss">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-3" name="Create object" sid="802109659876656" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">CatWorldBoss.X-(random(-200,200))</param>
-                            <param id="3" name="Y">CatWorldBoss.Y-(random(-200,200))</param>
+                            <param id="2" name="X">Enemy_CatBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_CatBoss.Y-(random(-200,200))</param>
                         </action>
                         <action id="-16" name="Wait" sid="8823282435365821" type="System">
                             <param id="0" name="Seconds">0.2</param>
@@ -162,8 +162,8 @@
                         <action id="-3" name="Create object" sid="2594269518184418" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">CatWorldBoss.X-(random(-200,200))</param>
-                            <param id="3" name="Y">CatWorldBoss.Y-(random(-200,200))</param>
+                            <param id="2" name="X">Enemy_CatBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_CatBoss.Y-(random(-200,200))</param>
                         </action>
                         <action id="-16" name="Wait" sid="5636620243884119" type="System">
                             <param id="0" name="Seconds">0.2</param>
@@ -171,13 +171,13 @@
                         <action id="-3" name="Create object" sid="8976889711673579" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="X">CatWorldBoss.X-(random(-200,200))</param>
-                            <param id="3" name="Y">CatWorldBoss.Y-(random(-200,200))</param>
+                            <param id="2" name="X">Enemy_CatBoss.X-(random(-200,200))</param>
+                            <param id="3" name="Y">Enemy_CatBoss.Y-(random(-200,200))</param>
                         </action>
                         <action id="-16" name="Wait" sid="7188953766196968" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="6113139526267585" type="CatWorldBoss" />
+                        <action id="-9" name="Destroy" sid="6113139526267585" type="Enemy_CatBoss" />
                     </actions>
                     <sub-events>
                         <event-block sid="910844068256306">
@@ -309,7 +309,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="4187828375929926" title="Grumpy Cat - Attack">
+        <event-group collapsed="1" description="" sid="4187828375929926" title="Grumpy Cat - Attack">
             <sub-events>
                 <comment>Active when froggie is in range </comment>
                 <event-block sid="4534341947617387">
@@ -392,8 +392,8 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Move grummpy eyes upwards randomly changing the angle of movement</comment>
-                <event-block collapsed="1" sid="9569782986813337">
+                <comment>Move grumpy eyes upwards randomly changing the angle of movement</comment>
+                <event-block sid="9569782986813337">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="6788866370902191" type="GrumpyEyes" />
                     </conditions>
@@ -413,13 +413,13 @@
                         <event-block sid="733312017830818">
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="5629967185867331" type="System">
-                                    <param id="0" name="Interval (seconds)">0.5</param>
+                                    <param id="0" name="Interval (seconds)">1</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="6356393187941397" type="GrumpyEyes">
                                     <param id="0" name="Instance variable">MoveAngle</param>
-                                    <param id="1" name="Value">-round(random(60,120))</param>
+                                    <param id="1" name="Value">-round(random(50,130))</param>
                                 </action>
                             </actions>
                         </event-block>

@@ -10,15 +10,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>GraphicStore6</layout>
+        <layout>OctoWorld</layout>
+        <layout>CrocWorld</layout>
+        <layout>ChimpWorld</layout>
         <layout>TurtleWorld</layout>
-        <event-sheet>TurtleWorld_Events</event-sheet>
-        <event-sheet>TurtleWorld_JumpableFloors</event-sheet>
-        <event-sheet>Collectibles</event-sheet>
-        <event-sheet>TurtleWorld_Enemies</event-sheet>
-        <event-sheet>TurtleWold_generation</event-sheet>
-        <event-sheet>ChickenWorld_Generation</event-sheet>
-        <event-sheet active="1">Collisions</event-sheet>
+        <layout>WorldSelect</layout>
+        <event-sheet>SoundsCommon</event-sheet>
+        <event-sheet>Debug</event-sheet>
+        <event-sheet active="1">WorldSelect_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1">
+    <families-expanded root="0">
         <family expanded="0" name="Obstacles" />
         <family expanded="0" name="Enemy" />
         <family expanded="0" name="Floors" />

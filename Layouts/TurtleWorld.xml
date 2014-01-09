@@ -822,7 +822,7 @@
                             <properties>
                                 <max-speed>450</max-speed>
                                 <acceleration>1000</acceleration>
-                                <deceleration>1000</deceleration>
+                                <deceleration>250</deceleration>
                                 <jump-strength>1400</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
@@ -875,7 +875,7 @@
                             <properties>
                                 <max-speed>450</max-speed>
                                 <acceleration>1000</acceleration>
-                                <deceleration>1000</deceleration>
+                                <deceleration>250</deceleration>
                                 <jump-strength>1400</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
@@ -1347,7 +1347,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>642</x>
+                        <x>400</x>
                         <y>1113</y>
                         <z>0</z>
                         <width>384</width>
@@ -1421,45 +1421,6 @@
                     <world>
                         <x>1211.199951172</x>
                         <y>938.399963379</y>
-                        <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Collectible_Candy" uid="594">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimSelector>1</AnimSelector>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>250</max-speed>
-                                <acceleration>250</acceleration>
-                                <deceleration>0</deceleration>
-                                <directions>Up &amp; down</directions>
-                                <set-angle>No</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1235.199951172</x>
-                        <y>719.399963379</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>

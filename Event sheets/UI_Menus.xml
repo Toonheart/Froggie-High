@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>UI_Menus</name>
     <events>
+        <include>SoundsCommon</include>
         <include>FacebookIntegration</include>
         <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
             <sub-events>
@@ -373,7 +374,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
                 <event-block collapsed="1" sid="7442582905420583">
@@ -823,7 +824,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group collapsed="1" description="" sid="8162040209001448" title="Toggling Music and Sounds">
+                <event-group description="" disabled="1" sid="8162040209001448" title="Toggling Music and Sounds">
                     <sub-events>
                         <comment>Mute the sounds</comment>
                         <event-block disabled="1" sid="8829171707280856">
@@ -840,7 +841,7 @@
                             </actions>
                         </event-block>
                         <comment>Toggle music</comment>
-                        <event-block sid="6144716917881393">
+                        <event-block disabled="1" sid="6144716917881393">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="271020883865764" type="Touch">
                                     <param id="0" name="Object">Icon_MusicStatus</param>
@@ -855,7 +856,7 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="4837016364067963">
+                                <event-block disabled="1" sid="4837016364067963">
                                     <conditions>
                                         <condition id="-7" name="Compare instance variable" sid="9491523304595008" type="Icon_MusicStatus">
                                             <param id="0" name="Instance variable">MusicStatus</param>
@@ -892,7 +893,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="2899044703111809">
+                                <event-block disabled="1" sid="2899044703111809">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="5043091668666957" type="System" />
                                     </conditions>

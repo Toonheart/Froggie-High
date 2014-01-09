@@ -19,7 +19,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="3376688132381048" type="System">
                     <param id="0" name="Variable">HighestUnlockedWorld</param>
-                    <param id="1" name="Value">5</param>
+                    <param id="1" name="Value">6</param>
                 </action>
             </actions>
             <sub-events>
@@ -117,7 +117,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="3134027176522623">
+                        <event-block collapsed="1" sid="3134027176522623">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7275921469237513" type="Icon_WorldStatus">
                                     <param id="0" name="Instance variable">World</param>
@@ -154,7 +154,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="7155402727842797">
+                        <event-block collapsed="1" sid="7155402727842797">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="521262318189476" type="Icon_WorldStatus">
                                     <param id="0" name="Instance variable">World</param>
@@ -196,7 +196,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="9756692685581557">
+                        <event-block collapsed="1" sid="9756692685581557">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6913427379678373" type="Icon_WorldStatus">
                                     <param id="0" name="Instance variable">World</param>
@@ -232,6 +232,132 @@
                                     </conditions>
                                     <actions>
                                         <action id="5" name="Set frame" sid="1055690251994394" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="50687427354183">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7894742027667074" type="Icon_WorldStatus">
+                                    <param id="0" name="Instance variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6443059299888439" type="Icon_WorldStatus">
+                                    <param id="0" name="Animation">&quot;Cat&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="1578098759355749">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4126327804171175" type="Icon_WorldStatus">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">HighestUnlockedWorld</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="7611570918139021" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="5255486027666564" type="Icon_WorldStatus" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4224482690708757">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7663551182994747" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="9049377220674238" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="8607977765384145">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5391398578795638" type="Icon_WorldStatus">
+                                    <param id="0" name="Instance variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2428732626382386" type="Icon_WorldStatus">
+                                    <param id="0" name="Animation">&quot;Crock&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7397561004800617">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5726455753711449" type="Icon_WorldStatus">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">HighestUnlockedWorld</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="8551152141388435" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="8112706956040068" type="Icon_WorldStatus" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6032354856962174">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7581904452196599" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="5977360821711784" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="8887161111912455">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5701493094614387" type="Icon_WorldStatus">
+                                    <param id="0" name="Instance variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3278449492384318" type="Icon_WorldStatus">
+                                    <param id="0" name="Animation">&quot;Turtle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4534047287559535">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8028606583473555" type="Icon_WorldStatus">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">HighestUnlockedWorld</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="9496946444184016" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="9703241112484596" type="Icon_WorldStatus" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2686826240657411">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6794121850923252" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="1698332548254122" type="Icon_WorldStatus">
                                             <param id="0" name="Frame number">0</param>
                                         </action>
                                     </actions>
@@ -378,6 +504,24 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="8044702779762933">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5625006697390826" type="Icon_WorldSelector">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="3072224964818812" type="System">
+                                            <param id="0" name="Layout">TurtleWorld</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="5744851011613498" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -394,7 +538,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
+        <event-group description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
             <sub-events>
                 <event-block sid="2688740518192219">
                     <conditions>
