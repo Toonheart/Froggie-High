@@ -8,7 +8,7 @@
         <event-group description="" sid="5376503122712939" title="PAUSE/RESUME">
             <sub-events>
                 <comment>Create all PauseMenus On UI BG on paused</comment>
-                <event-block sid="9130341376091132">
+                <event-block collapsed="1" sid="9130341376091132">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="4312977658208201" type="Touch">
                             <param id="0" name="Object">Button_Pause</param>
@@ -122,7 +122,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9981650100327995">
+                <event-block collapsed="1" sid="9981650100327995">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="6146939189294523" type="Touch">
                             <param id="0" name="Object">Button_Resume</param>
@@ -374,7 +374,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
                 <event-block collapsed="1" sid="7442582905420583">
@@ -590,7 +590,6 @@
                                     <param id="1" name="Visibility">0</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="9396102042557026" type="System" />
-                                <action id="-21" name="Reset global variables" sid="7302841383722023" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>

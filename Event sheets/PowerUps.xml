@@ -109,12 +109,93 @@
                             <param id="0" name="Pin to">Froggie</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="4281736587911986" type="Achieve_Unlocked_Notice">
-                            <param id="0" name="Object">Unicorn_Ride</param>
-                            <param id="1" name="Layer">&quot;HUD&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5588881393042905">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5929769884679987" type="Unicorn">
+                                    <param id="0" name="Instance variable">AnimMax</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition disabled="1" id="-4" name="Trigger once while true" sid="3006088613720291" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="4281736587911986" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Object">RideNotes</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9624405722404579" type="RideNotes">
+                                    <param id="0" name="Animation">&quot;Plane&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3603389491138092">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1619744513610178" type="Unicorn">
+                                    <param id="0" name="Instance variable">AnimMax</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition disabled="1" id="-4" name="Trigger once while true" sid="4064168248724476" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="8755306751892497" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Object">RideNotes</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3560447529449344" type="RideNotes">
+                                    <param id="0" name="Animation">&quot;Unicorn&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9962471585528181">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5098822595907898" type="Unicorn">
+                                    <param id="0" name="Instance variable">AnimMax</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition disabled="1" id="-4" name="Trigger once while true" sid="2972018371798367" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="6309566409830531" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Object">RideNotes</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="3970649913165383" type="RideNotes">
+                                    <param id="0" name="Animation">&quot;SeaBird&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2572901054354605">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1435389055381746" type="Unicorn">
+                                    <param id="0" name="Instance variable">AnimMax</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                                <condition disabled="1" id="-4" name="Trigger once while true" sid="1728906422891083" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="3700762480257648" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Object">RideNotes</param>
+                                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2704261445861435" type="RideNotes">
+                                    <param id="0" name="Animation">&quot;Dragon&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
                 <event-block collapsed="1" sid="7812786490129375">
@@ -279,6 +360,21 @@
                     <actions>
                         <action id="4" name="Set animation" sid="7062161303316856" type="Unicorn">
                             <param id="0" name="Animation">&quot;Seabird&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1826894777334092">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1563502294300133" type="Unicorn">
+                            <param id="0" name="Instance variable">AnimMax</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2911532640788848" type="Unicorn">
+                            <param id="0" name="Animation">&quot;Dragon&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

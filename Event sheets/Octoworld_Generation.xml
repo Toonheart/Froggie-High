@@ -94,7 +94,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -1688,11 +1688,11 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7942370601644149" type="Floor_Wooden_Normal">
+                        <condition id="-7" name="Compare instance variable" sid="7942370601644149" type="Floor_Grass_Normal">
                             <param id="0" name="Instance variable">Mirror</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
@@ -1700,7 +1700,7 @@
                         <condition id="-4" name="Trigger once while true" sid="4649305990942145" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="2140757398022466" type="Floor_Wooden_Normal">
+                        <action id="7" name="Set mirrored" sid="2140757398022466" type="Floor_Grass_Normal">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -1710,7 +1710,7 @@
                         <condition id="-22" name="Else" sid="931793332342911" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="7582069738165256" type="Floor_Wooden_Normal">
+                        <action id="7" name="Set mirrored" sid="7582069738165256" type="Floor_Grass_Normal">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>

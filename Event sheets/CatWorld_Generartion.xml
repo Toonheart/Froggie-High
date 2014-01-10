@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>CatWorld_Generartion</name>
     <events>
-        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="3156986939454865" title="Initializing Global Variables">
+        <event-group description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="3156986939454865" title="Initializing Global Variables">
             <sub-events>
                 <event-block sid="4294993057486781">
                     <conditions>
@@ -76,7 +76,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7784815814034545" title="Initializing WebStorage">
+        <event-group collapsed="1" description="" sid="7784815814034545" title="Initializing WebStorage">
             <sub-events>
                 <comment>Creat aLocal storage for HighScore if doesn&apos;t Exist</comment>
                 <event-block sid="1047586958962689">
@@ -1401,7 +1401,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9309187683690117" title="BIG CANDY LETTER SET">
+        <event-group collapsed="1" description="" sid="9309187683690117" title="BIG CANDY LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>
@@ -1474,19 +1474,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1674363170482418" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group description="" sid="1674363170482418" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7942370601644149" type="Floor_Wooden_Normal">
+                        <condition id="-7" name="Compare instance variable" sid="7942370601644149" type="Floor_Box_Normal">
                             <param id="0" name="Instance variable">Mirror</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="4649305990942145" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="2140757398022466" type="Floor_Wooden_Normal">
+                        <action id="7" name="Set mirrored" sid="2140757398022466" type="Floor_Box_Normal">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -1496,7 +1495,7 @@
                         <condition id="-22" name="Else" sid="931793332342911" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="7582069738165256" type="Floor_Wooden_Normal">
+                        <action id="7" name="Set mirrored" sid="7582069738165256" type="Floor_Box_Normal">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>

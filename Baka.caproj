@@ -28,8 +28,8 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -56,7 +56,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="Froggie" sid="2568297134087841">
             <plugin id="Sprite" />
             <instance-variables>
@@ -469,10 +469,10 @@
                     <animation framecount="3" loop="1" name="Shoe" pingpong="0" repeatcount="1" repeatto="0" sid="5818111390240151" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.335938" y="0.1875" />
+                                <point x="0.390626" y="0.226563" />
                                 <point x="0.601563" y="0.210938" />
                                 <point x="0.648438" y="0.742188" />
-                                <point x="0.25" y="0.789063" />
+                                <point x="0.261719" y="0.753907" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -583,8 +583,8 @@
                             <image-point name="Imagepoint 1" x="0.796875" y="0.380859" />
                             <image-point name="Imagepoint 2" x="0.103516" y="0.386719" />
                             <collision-poly>
-                                <point x="0.101563" y="0.28125" />
-                                <point x="0.757813" y="0.28125" />
+                                <point x="0.070313" y="0.320313" />
+                                <point x="0.800782" y="0.332031" />
                                 <point x="0.570313" y="0.703125" />
                                 <point x="0.40625" y="0.734375" />
                             </collision-poly>
@@ -887,6 +887,11 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
                 <animation framecount="3" loop="1" name="Unicorn" pingpong="0" repeatcount="1" repeatto="0" sid="2098914628606451" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="0" name="Dragon" pingpong="0" repeatcount="1" repeatto="0" sid="396665028444537" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -6534,7 +6539,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Unicorn_Ride" sid="8048037803751931">
+        <object-type name="RideNotes" sid="8048037803751931">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Fade" sid="9890264220786483">
@@ -6542,7 +6547,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9584588309829176" speed="5">
+                <animation framecount="1" loop="0" name="Unicorn" pingpong="0" repeatcount="1" repeatto="0" sid="9584588309829176" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.232308" y="0.424157" />
@@ -6553,6 +6558,46 @@
                             <point x="0.5" y="0.935393" />
                             <point x="0.164615" y="0.699438" />
                             <point x="0.106154" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Plane" pingpong="0" repeatcount="1" repeatto="0" sid="3436201112250187" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.376923" y="0.688202" />
+                            <point x="0.5" y="0.140449" />
+                            <point x="0.650769" y="0.63764" />
+                            <point x="0.658462" y="0.5" />
+                            <point x="0.921538" y="0.856742" />
+                            <point x="0.5" y="0.952247" />
+                            <point x="0.14" y="0.744382" />
+                            <point x="0.329231" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="SeaBird" pingpong="0" repeatcount="1" repeatto="0" sid="9215956485392967" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.210769" y="0.384831" />
+                            <point x="0.5" y="0.219101" />
+                            <point x="0.684615" y="0.575843" />
+                            <point x="0.895385" y="0.808989" />
+                            <point x="0.5" y="0.831461" />
+                            <point x="0.149231" y="0.727528" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Dragon" pingpong="0" repeatcount="1" repeatto="0" sid="6396131742156668" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.113846" y="0.207865" />
+                            <point x="0.5" y="0.185393" />
+                            <point x="0.849231" y="0.275281" />
+                            <point x="0.553846" y="0.5" />
+                            <point x="0.641538" y="0.345506" />
+                            <point x="0.5" y="0.907303" />
+                            <point x="0.347692" y="0.365169" />
+                            <point x="0.513846" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
