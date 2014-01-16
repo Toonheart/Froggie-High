@@ -4,7 +4,7 @@
     <name>PowerUps</name>
     <events>
         <include>SoundsCommon</include>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -1328,6 +1328,95 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="7879878381526876" type="Bullet_Hitman" />
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1965138098169488" title="Temp Powerup Generation For big Bos test">
+            <sub-events>
+                <event-block sid="8134461955844272">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="6191074995254543" type="EnemyBoss" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5838951233664338">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="1080452953541448" type="System">
+                                    <param id="0" name="Interval (seconds)">10</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="1059086670364651" type="System">
+                                    <param id="0" name="First value">PowerUp_Multiple.Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4011639196466731" type="System">
+                                    <param id="0" name="Object to create">PowerUp_Multiple</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="X">random(200,600)</param>
+                                    <param id="3" name="Y">ViewportTop(&quot;Objects&quot;)+800</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="485434252940956" type="PowerUp_Multiple">
+                                    <param id="0" name="Instance variable">AnimSelctor</param>
+                                    <param id="1" name="Value">round(random(1,3))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="531018515849107">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3020263623918426" type="EnemyBoss">
+                            <param id="0" name="Instance variable">BossHealth</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6296934070435438" type="EnemyBoss" />
+                    </actions>
+                </event-block>
+                <event-block sid="2303900896821636">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="707950410695869" type="Froggie">
+                            <param id="0" name="Object">EnemyBoss</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2218744663532778">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="510209068760866" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="1055666631721724" type="EnemyBoss">
+                                    <param id="0" name="Instance variable">BossHealth</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="2473720602175675" type="EnemyBoss">
+                                    <param id="0" name="Object">EnemySmoke</param>
+                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6464147995939823">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="2888943168669819" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="9509503631525511" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

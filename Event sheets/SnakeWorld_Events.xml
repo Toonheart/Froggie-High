@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SnakeWorld_Events</name>
+    <events>
+        <include>SnakeWorld_Enemies</include>
+        <include>SnakeWorld_JumpableFloors</include>
+        <include>SnakeWorld_Generation</include>
+        <include>GameMusic</include>
+        <include>WorldSelect_Events</include>
+        <include>UI_Menus</include>
+        <include>Collectibles</include>
+        <include>Froggie_Events</include>
+        <include>FacebookIntegration</include>
+        <include>Collisions</include>
+        <include>PowerUps</include>
+        <include>Maintanence</include>
+        <include>HUD</include>
+        <include>Debug</include>
+        <event-block sid="5384980571514001">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="247349297169797" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8101295446142938" type="System">
+                    <param id="0" name="Variable">CurrentWorld</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="2014800212571192" type="System">
+                    <param id="0" name="Variable">PowerUpAnimMax</param>
+                    <param id="1" name="Value">CurrentWorld</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

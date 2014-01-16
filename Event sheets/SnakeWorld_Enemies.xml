@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ChimpWorld_Enemies</name>
+    <name>SnakeWorld_Enemies</name>
     <events>
-        <event-group collapsed="1" description="" sid="9659381547111084" title="PATRO Chicken - Movement">
+        <event-group collapsed="1" description="" sid="7364680240925313" title="PATRO Chicken - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block disabled="1" sid="3875944443072774">
@@ -70,7 +70,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="8590533814477774" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="3529711668237228" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
                 <event-block disabled="1" sid="117933790335297">
@@ -142,7 +142,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" disabled="1" sid="1098512604797543" title="BIGBOSS GamePlay">
+        <event-group collapsed="1" description="" disabled="1" sid="4615614407705384" title="BIGBOSS GamePlay">
             <sub-events>
                 <event-block disabled="1" sid="1261691158325619">
                     <conditions>
@@ -266,18 +266,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1845619134464778" title="Baboon-Attack">
+        <event-group collapsed="1" description="" sid="4557201591329361" title="Baboon-Attack">
             <sub-events>
                 <event-block sid="7045979661970518">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4812371768257794" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Baboon.X,Enemy_Chimp_Baboon.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld2.X,Enemy_SnakeWorld2.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="901071396260678" type="Enemy_Chimp_Baboon">
+                        <action id="4" name="Set animation" sid="901071396260678" type="Enemy_SnakeWorld2">
                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -288,7 +288,7 @@
                         <condition id="-22" name="Else" sid="4374947059634369" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="8184488862177587" type="Enemy_Chimp_Baboon">
+                        <action id="4" name="Set animation" sid="8184488862177587" type="Enemy_SnakeWorld2">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -298,7 +298,7 @@
                 <event-block sid="8251663016725631">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2191481988691802" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Baboon.X,Enemy_Chimp_Baboon.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld2.X,Enemy_SnakeWorld2.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">512</param>
                         </condition>
@@ -309,11 +309,11 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="8312383808141673" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_Chimp_Baboon.X</param>
+                                    <param id="1" name="X co-ordinate">Enemy_SnakeWorld2.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="4514081710072042" type="Enemy_Chimp_Baboon">
+                                <action id="7" name="Set mirrored" sid="4514081710072042" type="Enemy_SnakeWorld2">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -323,7 +323,7 @@
                                 <condition id="-22" name="Else" sid="163244624131354" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="3101325436316565" type="Enemy_Chimp_Baboon">
+                                <action id="7" name="Set mirrored" sid="3101325436316565" type="Enemy_SnakeWorld2">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -332,18 +332,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7118914620272484" title="BASH CHIMP-Attack">
+        <event-group description="" sid="7151614860403366" title="BASH CHIMP-Attack">
             <sub-events>
                 <event-block sid="1430496973057756">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="965085918764946" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Bash.X,Enemy_Chimp_Bash.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld1.X,Enemy_SnakeWorld1.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">256</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_Chimp_Bash">
+                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_SnakeWorld1">
                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -354,7 +354,7 @@
                         <condition id="-22" name="Else" sid="8374202881690389" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_Chimp_Bash">
+                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_SnakeWorld1">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -364,9 +364,9 @@
                 <event-block sid="6635825324160266">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5052079842968832" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Chimp_Bash.X,Enemy_Chimp_Bash.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld1.X,Enemy_SnakeWorld1.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">256</param>
+                            <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -375,11 +375,11 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="2199371275502027" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_Chimp_Bash.X</param>
+                                    <param id="1" name="X co-ordinate">Enemy_SnakeWorld1.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_Chimp_Bash">
+                                <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_SnakeWorld1">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -389,7 +389,7 @@
                                 <condition id="-22" name="Else" sid="6883867841065903" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_Chimp_Bash">
+                                <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_SnakeWorld1">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -398,226 +398,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block collapsed="1" sid="4177662279602175">
-            <conditions>
-                <condition id="2" name="Is playing" sid="9213990671151974" type="Enemy_Chimp_Baboon">
-                    <param id="0" name="Animation">&quot;Attack&quot;</param>
-                </condition>
-                <condition id="3" name="Compare frame" sid="9010259134165294" type="Enemy_Chimp_Baboon">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">5</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="6465041020232148" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="8334964721019399">
-                    <conditions>
-                        <condition id="7" name="Is mirrored" sid="8597282016762763" type="Enemy_Chimp_Baboon" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="1039289713780892" type="Enemy_Chimp_Baboon">
-                            <param id="0" name="Object">Weapon_Baboon</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">&quot;Weapon&quot;</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="3140499951119559" type="Weapon_Baboon">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7329544272594133">
-                    <conditions>
-                        <condition id="7" inverted="1" name="Is mirrored" sid="9774495276389758" type="Enemy_Chimp_Baboon" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="3217260493340581" type="Enemy_Chimp_Baboon">
-                            <param id="0" name="Object">Weapon_Baboon</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">&quot;Weapon&quot;</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="3249455613570569" type="Weapon_Baboon">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-group description="" sid="8734605614223451" title="GiftBox Effects">
-                    <sub-events>
-                        <event-block sid="4779730656366491">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
-                                    <param id="0" name="Instance variable">Scale</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">0.8</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="532585220994859" type="GiftRays">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1794108938290715">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8298210424733968" type="GiftRays">
-                                    <param id="0" name="Instance variable">Scale</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="8026352037039498" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="7576871854633069" type="GiftRays">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8363539136310204">
-                            <conditions>
-                                <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
-                                <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3612076594567225">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="9074974841573255" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="5931095776999492" type="GiftRays">
-                                            <param id="0" name="Scale">Self.Scale</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="7381684971212141">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="60461347689043" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Direction</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Scale</param>
-                                                    <param id="1" name="Value">Self.Scale-0.002</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="6758912167083795">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="4158155634027162" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Direction</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Scale</param>
-                                                    <param id="1" name="Value">Self.Scale+0.002</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-                <event-group description="" sid="3857624600723298" title="GiftBox Effects2">
-                    <sub-events>
-                        <event-block sid="4779730656366491">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
-                                    <param id="0" name="Instance variable">Scale</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">0.8</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="532585220994859" type="GiftRays">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1794108938290715">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8298210424733968" type="GiftRays">
-                                    <param id="0" name="Instance variable">Scale</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="8026352037039498" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="7576871854633069" type="GiftRays">
-                                    <param id="0" name="Instance variable">Direction</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8363539136310204">
-                            <conditions>
-                                <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
-                                <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3612076594567225">
-                                    <conditions>
-                                        <condition id="-1" name="Every tick" sid="9074974841573255" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="9" name="Set scale" sid="5931095776999492" type="GiftRays">
-                                            <param id="0" name="Scale">Self.Scale</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="7381684971212141">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="60461347689043" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Direction</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Scale</param>
-                                                    <param id="1" name="Value">Self.Scale-0.002</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="6758912167083795">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="4158155634027162" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Direction</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
-                                                    <param id="0" name="Instance variable">Scale</param>
-                                                    <param id="1" name="Value">Self.Scale+0.002</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-group>
-            </sub-events>
-        </event-block>
-        <event-group collapsed="1" description="" sid="7706126039329988" title="GiftBox Effects3">
+        <event-group collapsed="1" description="" sid="5083103538994658" title="GiftBox Effects3">
             <sub-events>
                 <event-block sid="4779730656366491">
                     <conditions>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SnakeWorld_JumpableFloors</name>
+    <events>
+        <event-group description="" sid="638303374468468" title="Breakable Floors">
+            <sub-events>
+                <event-block sid="2971582518321419">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9548549540568099" type="PlayerBox">
+                            <param id="0" name="Object">Floor_Broken_Snakeworld</param>
+                        </condition>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="3581205116937213" type="PlayerBox" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="5884298415862442" type="PlayerBox">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2873282795592217" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6226689874058136" type="Floor_Broken_Snakeworld">
+                            <param id="0" name="Object">Floor_Broken2_SnakeWorld</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Part2&quot;</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7457975497322726" type="Floor_Broken_Snakeworld">
+                            <param id="0" name="Object">Floor_Broken1_SnakeWorld</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">&quot;Part1&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8450168926386172" type="Floor_Broken_Snakeworld" />
+                        <action id="-19" name="Rotate counter-clockwise" sid="5186792587023621" type="Floor_Broken2_SnakeWorld">
+                            <param id="0" name="Degrees">10</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="7455995621438567" type="Floor_Broken1_SnakeWorld">
+                            <param id="0" name="Degrees">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3798632985560533" title="Moving Floors">
+            <sub-events>
+                <comment>Move the platforms Between 100 top side viewports</comment>
+                <event-block sid="753380288131946">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="3284366505933919" type="Floor_Wooden_Moving">
+                            <param id="0" name="Object">Border_Right_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4286216273993434" type="Floor_Wooden_Moving">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6785902080902279">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="3632457223310535" type="Floor_Wooden_Moving">
+                            <param id="0" name="Object">Border_Left_ViewPort</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="6318290771795834" type="Floor_Wooden_Moving">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
