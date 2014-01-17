@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>SnakeWorld_Generation</name>
+    <name>NinjaWorld_Generation</name>
     <events>
-        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="8250885035238418" title="Initializing Global Variables">
+        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="1720631369665113" title="Initializing Global Variables">
             <sub-events>
                 <event-block sid="4294993057486781">
                     <conditions>
@@ -76,7 +76,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="5788190685422862" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="7983844657513256" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block collapsed="1" sid="7564923252496036">
@@ -428,7 +428,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="6782070107427502" type="Floor_Normal_Snakeworld">
-                                                    <param id="0" name="Object">Enemy_SnakeWorld2</param>
+                                                    <param id="0" name="Object">Enemy_Ninja2</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
@@ -500,7 +500,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="0" name="Spawn another object" sid="6833049775857547" type="Floor_Normal_Snakeworld">
-                                                    <param id="0" name="Object">Enemy_SnakeWorld1</param>
+                                                    <param id="0" name="Object">Enemy_Ninja1</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
@@ -1416,7 +1416,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4563872697509889" title="Fruit Animation">
+        <event-group collapsed="1" description="" sid="2768486386838802" title="Fruit Animation">
             <sub-events>
                 <comment>Unlocking NEW candies for every 30 Floors</comment>
                 <event-block sid="2342628532777622">
@@ -1703,7 +1703,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Updating world section by Resetting Platformcount" sid="991847629694352" title="Updating Difficulty">
+        <event-group collapsed="1" description="Updating world section by Resetting Platformcount" sid="4035573950974409" title="Updating Difficulty">
             <sub-events>
                 <comment>Updating world section by Resetting Platformcount.&#x0D;&#x0A;Each Worldsection consists of 101 Floors counting from 0 to 100.</comment>
                 <event-block sid="3975665409276431">
@@ -1727,7 +1727,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3639897640460886" title="BIG Collectible LETTER SET">
+        <event-group collapsed="1" description="" sid="1025155778838292" title="BIG Collectible LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>
@@ -2004,7 +2004,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2732589272732281" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group collapsed="1" description="" sid="4274874620685035" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>
