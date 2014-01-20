@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>SnakeWorld_Enemies</name>
+    <name>NinjaWorld_Enimies</name>
     <events>
-        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="3529711668237228" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="5543627108249568" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
                 <event-block disabled="1" sid="117933790335297">
@@ -75,7 +75,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" disabled="1" sid="4615614407705384" title="BIGBOSS GamePlay">
+        <event-group collapsed="1" description="" disabled="1" sid="6333416413957403" title="BIGBOSS GamePlay">
             <sub-events>
                 <event-block disabled="1" sid="1261691158325619">
                     <conditions>
@@ -199,18 +199,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4557201591329361" title="EnenmySnake2-Attack">
+        <event-group description="" sid="7349775993199294" title="NinjaEnemy2-Attack">
             <sub-events>
                 <event-block sid="7045979661970518">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4812371768257794" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld2.X,Enemy_SnakeWorld2.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Ninja2.X,Enemy_Ninja2.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="901071396260678" type="Enemy_SnakeWorld2">
+                        <action id="4" name="Set animation" sid="901071396260678" type="Enemy_Ninja2">
                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -221,7 +221,7 @@
                         <condition id="-22" name="Else" sid="4374947059634369" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="8184488862177587" type="Enemy_SnakeWorld2">
+                        <action id="4" name="Set animation" sid="8184488862177587" type="Enemy_Ninja2">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -231,7 +231,7 @@
                 <event-block sid="8251663016725631">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="2191481988691802" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld2.X,Enemy_SnakeWorld2.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Ninja2.X,Enemy_Ninja2.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">512</param>
                         </condition>
@@ -242,11 +242,11 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="8312383808141673" type="Froggie">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_SnakeWorld2.X</param>
+                                    <param id="1" name="X co-ordinate">Enemy_Ninja2.X</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="4514081710072042" type="Enemy_SnakeWorld2">
+                                <action id="7" name="Set mirrored" sid="4514081710072042" type="Enemy_Ninja2">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -256,65 +256,8 @@
                                 <condition id="-22" name="Else" sid="163244624131354" type="System" />
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="3101325436316565" type="Enemy_SnakeWorld2">
+                                <action id="7" name="Set mirrored" sid="3101325436316565" type="Enemy_Ninja2">
                                     <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="9498749433327282">
-                    <conditions>
-                        <condition id="2" name="Is playing" sid="1198406029539424" type="Enemy_SnakeWorld2">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7844871612095847">
-                            <conditions>
-                                <condition id="3" name="Compare frame" sid="7395145482230695" type="Enemy_SnakeWorld2">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">3</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="9552459780202821" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="6051850842313668" type="Enemy_SnakeWorld2">
-                                    <param id="0" name="Object">Bullet_PoisonJar</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                    <param id="2" name="Image point">&quot;Bullet&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block collapsed="1" sid="1146406477826823">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="7693028394967047" type="Bullet_PoisonJar" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4886057671767372">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="3823691075830346" type="Froggie">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_SnakeWorld2.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3533350738240959" type="Bullet_PoisonJar">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="482551559729849">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="530333689422018" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5690936547636701" type="Bullet_PoisonJar">
-                                    <param id="0" name="Angle">180</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -322,18 +265,18 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7151614860403366" title="SnakeENeny1-Attack">
+        <event-group description="" sid="7340903173134758" title="NinjaENeny1-Attack">
             <sub-events>
                 <event-block sid="1430496973057756">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="965085918764946" type="System">
-                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SnakeWorld1.X,Enemy_SnakeWorld1.Y)</param>
+                            <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_Ninja1.X,Enemy_Ninja1.Y)</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">512</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_SnakeWorld1">
+                        <action id="4" name="Set animation" sid="9517536547929703" type="Enemy_Ninja1">
                             <param id="0" name="Animation">&quot;Attack&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -344,7 +287,7 @@
                         <condition id="-22" name="Else" sid="8374202881690389" type="System" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_SnakeWorld1">
+                        <action id="4" name="Set animation" sid="5623026292983862" type="Enemy_Ninja1">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -355,11 +298,11 @@
                     <conditions>
                         <condition id="-1" name="Compare X" sid="2199371275502027" type="Froggie">
                             <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">Enemy_SnakeWorld1.X</param>
+                            <param id="1" name="X co-ordinate">Enemy_Ninja1.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_SnakeWorld1">
+                        <action id="7" name="Set mirrored" sid="3747308061721408" type="Enemy_Ninja1">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -369,71 +312,14 @@
                         <condition id="-22" name="Else" sid="6883867841065903" type="System" />
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_SnakeWorld1">
+                        <action id="7" name="Set mirrored" sid="1412949922075644" type="Enemy_Ninja1">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5371107602860381">
-                    <conditions>
-                        <condition id="2" name="Is playing" sid="1352504958810127" type="Enemy_SnakeWorld1">
-                            <param id="0" name="Animation">&quot;Attack&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9049900252457938">
-                            <conditions>
-                                <condition id="3" name="Compare frame" sid="6703326957087664" type="Enemy_SnakeWorld1">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Number">3</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="2049320708025791" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="2517343252452579" type="Enemy_SnakeWorld1">
-                                    <param id="0" name="Object">Bullet_SnakeTeeth</param>
-                                    <param id="1" name="Layer">&quot;Objects&quot;</param>
-                                    <param id="2" name="Image point">&quot;Bullet&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="4860943743349962">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="8015993492755034" type="Bullet_SnakeTeeth" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7843439129894155">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="6063970667962596" type="Froggie">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_SnakeWorld1.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2251557434766468" type="Bullet_SnakeTeeth">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8285575085674712">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8302440794238827" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6131188270201562" type="Bullet_SnakeTeeth">
-                                    <param id="0" name="Angle">180</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5083103538994658" title="GiftBox Effects3">
+        <event-group collapsed="1" description="" sid="1738737829522135" title="GiftBox Effects3">
             <sub-events>
                 <event-block sid="4779730656366491">
                     <conditions>
@@ -520,15 +406,15 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2635845481565864" title="Flying Enemy - Movement">
+        <event-group collapsed="1" description="" sid="977808513615998" title="Flying Enemy - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block sid="3875944443072774">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_FlyingSnakeRight" />
+                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_FlyingNinjaRight" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_FlyingSnakeRight">
+                        <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_FlyingNinjaRight">
                             <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">-45</param>
                         </action>
@@ -536,10 +422,10 @@
                 </event-block>
                 <event-block sid="5350266795687805">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="4894410984139619" type="Enemy_FlyingSnakeLeft" />
+                        <condition id="-3" name="Is on-screen" sid="4894410984139619" type="Enemy_FlyingNinjaLeft" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_FlyingSnakeLeft">
+                        <action id="-10" name="Set value" sid="2522870522193898" type="Enemy_FlyingNinjaLeft">
                             <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">225</param>
                         </action>
@@ -547,7 +433,7 @@
                 </event-block>
                 <event-block sid="5417286064658381">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="6205112068656205" type="Enemy_FlyingSnakeLeft" />
+                        <condition id="-3" name="Is on-screen" sid="6205112068656205" type="Enemy_FlyingNinjaLeft" />
                         <condition id="2" inverted="1" name="Is pause" sid="672101216772371" type="Pause" />
                     </conditions>
                     <actions />
@@ -557,8 +443,8 @@
                                 <condition id="-1" name="Every tick" sid="7934311432927382" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="6750141553767162" type="Enemy_FlyingSnakeLeft">
-                                    <param id="0" name="Angle">Enemy_FlyingSnakeLeft.PatroAngle</param>
+                                <action id="-23" name="Move at angle" sid="6750141553767162" type="Enemy_FlyingNinjaLeft">
+                                    <param id="0" name="Angle">Enemy_FlyingNinjaLeft.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>
@@ -567,7 +453,7 @@
                 </event-block>
                 <event-block sid="8737799259032536">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="Enemy_FlyingSnakeRight" />
+                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="Enemy_FlyingNinjaRight" />
                         <condition id="2" inverted="1" name="Is pause" sid="6078132388000535" type="Pause" />
                     </conditions>
                     <actions />
@@ -577,8 +463,8 @@
                                 <condition id="-1" name="Every tick" sid="3227323828248411" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="9530465817258571" type="Enemy_FlyingSnakeRight">
-                                    <param id="0" name="Angle">Enemy_FlyingSnakeRight.PatroAngle</param>
+                                <action id="-23" name="Move at angle" sid="9530465817258571" type="Enemy_FlyingNinjaRight">
+                                    <param id="0" name="Angle">Enemy_FlyingNinjaRight.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>
@@ -587,14 +473,14 @@
                 </event-block>
                 <event-block sid="9271651653379959">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="9031834453506095" type="Enemy_FlyingSnakeRight">
+                        <condition id="3" name="Compare frame" sid="9031834453506095" type="Enemy_FlyingNinjaRight">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">4</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="6519387213643594" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="3544831490916642" type="Enemy_FlyingSnakeRight">
+                        <action id="0" name="Spawn another object" sid="3544831490916642" type="Enemy_FlyingNinjaRight">
                             <param id="0" name="Object">Bullet_Pumpkin</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">&quot;Pumpkin&quot;</param>
@@ -606,14 +492,14 @@
                 </event-block>
                 <event-block sid="2080336560736686">
                     <conditions>
-                        <condition id="3" name="Compare frame" sid="5364305408711735" type="Enemy_FlyingSnakeLeft">
+                        <condition id="3" name="Compare frame" sid="5364305408711735" type="Enemy_FlyingNinjaLeft">
                             <param id="0" name="Comparison">0</param>
                             <param id="1" name="Number">4</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="379353820776501" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="3259080624195106" type="Enemy_FlyingSnakeLeft">
+                        <action id="0" name="Spawn another object" sid="3259080624195106" type="Enemy_FlyingNinjaLeft">
                             <param id="0" name="Object">Bullet_Pumpkin</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="Image point">&quot;Pumpkin&quot;</param>

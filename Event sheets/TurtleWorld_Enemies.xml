@@ -181,10 +181,10 @@
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block sid="3875944443072774">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="EnemyTurtleFlyingRight" />
+                        <condition id="-3" name="Is on-screen" sid="4573241819183246" type="Enemy_TurtleFlyingRight" />
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="8351720853642246" type="EnemyTurtleFlyingRight">
+                        <action id="-10" name="Set value" sid="8351720853642246" type="Enemy_TurtleFlyingRight">
                             <param id="0" name="Instance variable">PatroAngle</param>
                             <param id="1" name="Value">-45</param>
                         </action>
@@ -223,7 +223,7 @@
                 </event-block>
                 <event-block collapsed="1" sid="8737799259032536">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="EnemyTurtleFlyingRight" />
+                        <condition id="-3" name="Is on-screen" sid="1559240088911821" type="Enemy_TurtleFlyingRight" />
                         <condition id="2" inverted="1" name="Is pause" sid="6078132388000535" type="Pause" />
                     </conditions>
                     <actions />
@@ -233,8 +233,8 @@
                                 <condition id="-1" name="Every tick" sid="3227323828248411" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-23" name="Move at angle" sid="9530465817258571" type="EnemyTurtleFlyingRight">
-                                    <param id="0" name="Angle">EnemyTurtleFlyingRight.PatroAngle</param>
+                                <action id="-23" name="Move at angle" sid="9530465817258571" type="Enemy_TurtleFlyingRight">
+                                    <param id="0" name="Angle">Enemy_TurtleFlyingRight.PatroAngle</param>
                                     <param id="1" name="Distance">5</param>
                                 </action>
                             </actions>

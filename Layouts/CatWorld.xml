@@ -416,8 +416,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>668</x>
-                        <y>640</y>
+                        <x>563</x>
+                        <y>912</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -513,8 +513,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1234</x>
-                        <y>-89</y>
+                        <x>790</x>
+                        <y>960</y>
                         <z>0</z>
                         <width>300</width>
                         <height>300</height>
@@ -690,6 +690,31 @@
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy_CatBoss" uid="767">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <BossHealth>3</BossHealth>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>316</x>
+                        <y>467</y>
+                        <z>0</z>
+                        <width>512</width>
+                        <height>512</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -999,8 +1024,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>684</x>
-                        <y>519</y>
+                        <x>548</x>
+                        <y>775</y>
                         <z>0</z>
                         <width>192</width>
                         <height>192</height>
@@ -1051,8 +1076,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>681</x>
-                        <y>540</y>
+                        <x>545</x>
+                        <y>796</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -1708,8 +1733,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1318</x>
-                        <y>1383</y>
+                        <x>1704</x>
+                        <y>1202</y>
                         <z>0</z>
                         <width>800</width>
                         <height>800</height>
@@ -1960,6 +1985,65 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="GrumpyEyes" uid="757">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <MoveAngle>-90</MoveAngle>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2103</x>
+                        <y>530</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>256</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bullet_Pumpkin" uid="758">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1850</x>
+                        <y>535</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>160</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Enemy_MadCat" uid="414">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1970,8 +2054,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1225</x>
-                        <y>483</y>
+                        <x>1028</x>
+                        <y>482</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>
@@ -1992,8 +2076,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1898</x>
-                        <y>568</y>
+                        <x>1323</x>
+                        <y>536</y>
                         <z>0</z>
                         <width>256</width>
                         <height>256</height>

@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Froggie_Events</name>
     <events>
-        <event-group collapsed="1" description="" sid="9939025668940154" title="FROGGIE JUMP">
+        <event-group collapsed="1" description="" disabled="1" sid="9939025668940154" title="FROGGIE JUMP">
             <sub-events>
                 <comment>Atomatically simulate Jump using platform behavior,when landed on pllatform and play the jump sound comparing JumpStrength i.e HyperJump has high strength</comment>
-                <event-block collapsed="1" sid="1939084024228619">
+                <event-block collapsed="1" disabled="1" sid="1939084024228619">
                     <conditions>
                         <condition behavior="Platform" id="2" name="Is on floor" sid="7630823709436066" type="PlayerBox" />
                         <condition id="-4" name="Trigger once while true" sid="4245657547037535" type="System" />
@@ -37,7 +37,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="3409310604494036">
+                        <event-block disabled="1" sid="3409310604494036">
                             <conditions>
                                 <condition id="2" name="Is playing" sid="1975684498933365" type="Froggie">
                                     <param id="0" name="Animation">&quot;Fall&quot;</param>
@@ -73,7 +73,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9863578900443388">
+                        <event-block disabled="1" sid="9863578900443388">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="9557167102313543" type="System">
                                     <param id="0" name="First value">PlayerBox.Platform.JumpStrength</param>
@@ -91,7 +91,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7040040430377983">
+                        <event-block disabled="1" sid="7040040430377983">
                             <conditions>
                                 <condition id="-22" name="Else" sid="5440273828668183" type="System" />
                             </conditions>
@@ -124,7 +124,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="8932928189052382">
+                <event-block disabled="1" sid="8932928189052382">
                     <conditions>
                         <condition behavior="Platform" id="4" name="Is falling" sid="9129367831480912" type="PlayerBox" />
                         <condition id="-4" name="Trigger once while true" sid="7013072353780702" type="System" />
@@ -174,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
+        <event-group description="" sid="1394128653897004" title="FROGGIE - Left/Right Control">
             <sub-events>
                 <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
                 <event-block any="1" sid="8686609532871634">
@@ -192,13 +192,28 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block any="1" sid="6646598826796567">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6582624944891302" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="7524824379443688" type="PlayerBox">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="1536906451308973" type="Froggie">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="539577925084524">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="5286654750739296" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="5232956090328499" type="System">
                             <param id="0" name="First value">Touch.X</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">PlayerBox.X</param>
+                            <param id="2" name="Second value">WindowWidth/2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -215,8 +230,8 @@
                         <condition id="2" name="Is in touch" sid="7722670599804897" type="Touch" />
                         <condition id="-8" name="Compare two values" sid="6699500027468567" type="System">
                             <param id="0" name="First value">Touch.X</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">PlayerBox.X</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">WindowWidth/2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -224,21 +239,6 @@
                             <param id="0" name="Control">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="9651185388909339" type="Froggie">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="6646598826796567">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="6582624944891302" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7524824379443688" type="PlayerBox">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="1536906451308973" type="Froggie">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -534,7 +534,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-group collapsed="1" description="" disabled="1" sid="6632129886773868" title="Using Alpha">
+                <event-group description="" disabled="1" sid="6632129886773868" title="Using Alpha">
                     <sub-events>
                         <comment>simulate left and right controlls by comparing current alpha with median Except the median is in between 356-6 </comment>
                         <event-block collapsed="1" disabled="1" sid="8734367776000234">
@@ -644,7 +644,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="4129762863618757">
+                        <event-block collapsed="1" disabled="1" sid="4129762863618757">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2656612979721753" type="System">
                                     <param id="0" name="First value">Dev_Cur_Alpha</param>
