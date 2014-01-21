@@ -204,7 +204,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8032745456789861" title="Flying Enemy - Movement">
+        <event-group description="" sid="8032745456789861" title="Flying Enemy - Movement">
             <sub-events>
                 <comment>Move the enemy Diagonally from both angles</comment>
                 <event-block sid="3875944443072774">
@@ -269,47 +269,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="9271651653379959">
-                    <conditions>
-                        <condition id="3" name="Compare frame" sid="9031834453506095" type="Enemy_FlyingCatRight">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">4</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="6519387213643594" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="3544831490916642" type="Enemy_FlyingCatRight">
-                            <param id="0" name="Object">Bullet_Pumpkin</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">&quot;Pumpkin&quot;</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8403235048885889" type="Bullet_Pumpkin">
-                            <param id="0" name="Angle">45</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2080336560736686">
-                    <conditions>
-                        <condition id="3" name="Compare frame" sid="5364305408711735" type="Enemy_FlyingCatLeft">
-                            <param id="0" name="Comparison">0</param>
-                            <param id="1" name="Number">4</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="379353820776501" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="3259080624195106" type="Enemy_FlyingCatLeft">
-                            <param id="0" name="Object">Bullet_Pumpkin</param>
-                            <param id="1" name="Layer">&quot;Objects&quot;</param>
-                            <param id="2" name="Image point">&quot;Pumpkin&quot;</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4643838762194192" type="Bullet_Pumpkin">
-                            <param id="0" name="Angle">135</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4187828375929926" title="Grumpy Cat - Attack">
+        <event-group description="" sid="4187828375929926" title="Grumpy Cat - Attack">
             <sub-events>
                 <comment>Active when froggie is in range </comment>
                 <event-block sid="4534341947617387">

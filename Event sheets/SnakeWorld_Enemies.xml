@@ -199,7 +199,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4557201591329361" title="EnenmySnake2-Attack">
+        <event-group description="" sid="4557201591329361" title="EnenmySnake2-Attack">
             <sub-events>
                 <event-block sid="7045979661970518">
                     <conditions>
@@ -285,40 +285,23 @@
                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                     <param id="2" name="Image point">&quot;Bullet&quot;</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="127029804077875" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="6759139888064183" type="Bullet_PoisonJar" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1146406477826823">
+                <event-block sid="1146406477826823">
                     <conditions>
                         <condition id="-18" name="On created" sid="7693028394967047" type="Bullet_PoisonJar" />
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4886057671767372">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="3823691075830346" type="Froggie">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Enemy_SnakeWorld2.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3533350738240959" type="Bullet_PoisonJar">
-                                    <param id="0" name="Angle">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="482551559729849">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="530333689422018" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5690936547636701" type="Bullet_PoisonJar">
-                                    <param id="0" name="Angle">180</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="632832143693623" type="Bullet_PoisonJar">
+                            <param id="0" name="Angle">-90</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

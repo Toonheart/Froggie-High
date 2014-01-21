@@ -117,7 +117,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7565199085067424" title="BG Music">
+        <event-group description="" sid="7565199085067424" title="BG Music">
             <sub-events>
                 <comment>Start playing the BGMusic when MusicTogler is enabled</comment>
                 <event-block sid="3648634334454674">
@@ -130,6 +130,9 @@
                         <condition id="-4" name="Trigger once while true" sid="3425840051743201" type="System" />
                     </conditions>
                     <actions>
+                        <action id="6" name="Stop" sid="6031795730409548" type="Audio">
+                            <param id="0" name="Tag">&quot;BgMusic&quot;</param>
+                        </action>
                         <action id="0" name="Play" sid="7986764973790711" type="Audio">
                             <param id="0" name="Audio file">BAKA Track 2</param>
                             <param id="2" name="Loop">0</param>

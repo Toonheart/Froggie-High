@@ -10,28 +10,28 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
@@ -2320,28 +2320,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="BG1_House" sid="1382380334942218">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="VisibilityStatus" sid="7370795445124616" type="number" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5940954910783183" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.328125" y="0.328125" />
-                            <point x="0.5" y="0.234375" />
-                            <point x="0.674479" y="0.325521" />
-                            <point x="0.747396" y="0.5" />
-                            <point x="0.625" y="0.625" />
-                            <point x="0.5" y="0.617188" />
-                            <point x="0.372396" y="0.627604" />
-                            <point x="0.265625" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Enemy_Flu_Chicken" sid="846807893697361">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -3406,50 +3384,6 @@
                             <point x="0.998643" y="0.9375" />
                             <point x="0.499322" y="1" />
                             <point x="0.00135685" y="0.9375" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BG_Tree2" sid="8080042333924407">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="VisisbilityStatus" sid="75801104185701" type="number" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4256393766168206" speed="5">
-                    <frame duration="1" hotspotX="0.464844" hotspotY="0.84375">
-                        <collision-poly>
-                            <point x="0.335938" y="0.335938" />
-                            <point x="0.5" y="0.132813" />
-                            <point x="0.695313" y="0.304688" />
-                            <point x="0.671875" y="0.5" />
-                            <point x="0.589844" y="0.589844" />
-                            <point x="0.5" y="0.859375" />
-                            <point x="0.417969" y="0.582031" />
-                            <point x="0.355469" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="BG_Tree1" sid="7246939068777078">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="VisibilityStatus" sid="9691131725483823" type="number" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="947737486470318" speed="5">
-                    <frame duration="1" hotspotX="0.445313" hotspotY="0.878906">
-                        <collision-poly>
-                            <point x="0.328125" y="0.328125" />
-                            <point x="0.5" y="0.164063" />
-                            <point x="0.675781" y="0.324219" />
-                            <point x="0.671875" y="0.5" />
-                            <point x="0.601563" y="0.601563" />
-                            <point x="0.5" y="0.636719" />
-                            <point x="0.390625" y="0.609375" />
-                            <point x="0.324219" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -6901,6 +6835,7 @@
                 <instance-variable name="CountDownTimer" sid="5005058468140748" type="number" />
                 <instance-variable name="ScaleToggle" sid="1113123298588265" type="number" />
                 <instance-variable name="ScaleCount" sid="9714651145308636" type="number" />
+                <instance-variable name="Activator" sid="7771779312186521" type="number" />
             </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8220897470997482" speed="5">
@@ -7797,7 +7732,11 @@
         <object-type name="Enemy_CatBoss" sid="9800807583964481">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2063476660769512" speed="5">
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2063476660769512" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -8441,11 +8380,15 @@
         <object-type name="Enemy_CrockWorldBoss" sid="6006248654977434">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3405394048345636" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.810547" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.810547" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.810547" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.810547" />
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3405394048345636" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -9052,7 +8995,11 @@
         <object-type name="Enemy_TurtleBoss" sid="7285274867969948">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9672412945440029" speed="5">
+                <animation framecount="9" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9672412945440029" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -9591,8 +9538,24 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1601493896700003" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.796875" y="0.296875" />
+                            <point x="0.898438" y="0.296875" />
+                            <point x="1" y="0.296875" />
+                            <point x="0.96875" y="0.578125" />
+                            <point x="0.71875" y="0.46875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.796875" y="0.296875" />
+                            <point x="0.898438" y="0.296875" />
+                            <point x="1" y="0.296875" />
+                            <point x="0.96875" y="0.578125" />
+                            <point x="0.71875" y="0.46875" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -9646,9 +9609,14 @@
         <object-type name="Enemy_SnakeBoss" sid="319183688507536">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4365558885481751" speed="5">
+                <animation framecount="15" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4365558885481751" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.513672" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -9994,17 +9962,15 @@
         <object-type name="Enemy_NinjaBoss" sid="5715519009280994">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="464731739335798" speed="5">
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="464731739335798" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
-                </animation>
-                <animation framecount="4" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="6554924581791607" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.882813" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
