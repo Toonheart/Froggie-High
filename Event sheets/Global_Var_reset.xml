@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Global_Var_reset</name>
+    <events>
+        <comment>THIS EVENT SHEET IS INCLUDED IN POWERUPS INSTEAD OF INCLUDING IN ALL THE WORLDS </comment>
+        <comment>This instructions resets the global variable at the start of layout to kill the previous value of the variables</comment>
+        <event-block sid="2022188568554851">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9049688860089129" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7763237828794401" type="System">
+                    <param id="0" name="Variable">Counter_Floor</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6137939627807171" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="3155242007358124" type="System">
+                    <param id="0" name="Variable">ScrollTo</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-9" name="Set value" sid="9852897175587446" type="System">
+                    <param id="0" name="Variable">FloorGap</param>
+                    <param id="1" name="Value">250</param>
+                </action>
+                <action id="-9" name="Set value" sid="9851588602836733" type="System">
+                    <param id="0" name="Variable">NextFloorPosition</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="3394554134725375" type="System">
+                    <param id="0" name="Variable">NextBackground</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7527164715250577" type="System">
+                    <param id="0" name="Variable">ScoreCounter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8142726235086225" type="System">
+                    <param id="0" name="Variable">NextBackground</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8297025027306612" type="System">
+                    <param id="0" name="Variable">BasketsCollected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1222327195873737" type="System">
+                    <param id="0" name="Variable">ScrollTo</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-9" name="Set value" sid="7189049470198189" type="System">
+                    <param id="0" name="Variable">NextFloorPosition</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8173461064902375" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2182366990489051" type="System">
+                    <param id="0" name="Variable">ComboCounter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="9901298733396277" type="System">
+                    <param id="0" name="Variable">Bonus_Random</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5742651110494252" type="System">
+                    <param id="0" name="Variable">WorldSection</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="188646164329037" type="System">
+                    <param id="0" name="Variable">CollectibleAnimMax</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
