@@ -5,7 +5,7 @@
     <events>
         <include>Global_Var_reset</include>
         <include>SoundsCommon</include>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -270,7 +270,7 @@
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
                 <comment>Pin Rocket and move some distance everytick</comment>
-                <event-block collapsed="1" sid="5775586601852508">
+                <event-block sid="5775586601852508">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="468487929353543" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -286,14 +286,49 @@
                     <sub-events>
                         <event-block sid="141032170757577">
                             <conditions>
-                                <condition id="-1" name="Every tick" sid="3585665314350443" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1295339319386461" type="Unicorn">
+                                    <param id="0" name="Instance variable">AnimMax</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="9604127375808253" type="PlayerBox">
-                                    <param id="0" name="Angle">-90</param>
-                                    <param id="1" name="Distance">1000*dt</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5629024044860803">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="3585665314350443" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="9604127375808253" type="PlayerBox">
+                                            <param id="0" name="Angle">-90</param>
+                                            <param id="1" name="Distance">1000*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3254512781723923">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="978858141309911" type="Unicorn">
+                                    <param id="0" name="Instance variable">AnimMax</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="658869583542778">
+                                    <conditions>
+                                        <condition id="-1" name="Every tick" sid="6832695231737034" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-23" name="Move at angle" sid="7085272410000161" type="PlayerBox">
+                                            <param id="0" name="Angle">260</param>
+                                            <param id="1" name="Distance">1000*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -302,7 +337,7 @@
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="2944785667557995" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
-                            <param id="1" name="Comparison">0</param>
+                            <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="4494758848503557" type="System" />
@@ -318,6 +353,10 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="-9" name="Destroy" sid="6296803670728335" type="Unicorn" />
+                        <action id="-10" name="Set value" sid="1307062245153351" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="1700924953659933">

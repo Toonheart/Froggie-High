@@ -65,7 +65,7 @@
         <event-group collapsed="1" description="Includes generation of all the objects in world" sid="7061283524286988" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block sid="7564923252496036">
+                <event-block collapsed="1" sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -80,7 +80,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block sid="5773070796798144">
+                        <event-block collapsed="1" sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -126,7 +126,7 @@
                             </actions>
                             <sub-events>
                                 <comment>A lot of stuff happens in this section of Code.&#x0D;&#x0A;- BIG COLLECTIBLE GENERATION SET that occurs at floor counts 90 to 100 or end of each worldsection.&#x0D;&#x0A;- ALL ENEMIES and POWERUP Collectibles&#x0D;&#x0A;- LOGIC for randomizing the number of candies that come in as normal collectibles on regular floors.&#x0D;&#x0A;- Types of FLOORS - Broken, Moving</comment>
-                                <event-block sid="7500555295788574">
+                                <event-block collapsed="1" sid="7500555295788574">
                                     <conditions>
                                         <condition id="-11" name="For Each" sid="4012553066238802" type="System">
                                             <param id="0" name="Object">FLoor_CrocWorldNormal</param>
@@ -655,7 +655,7 @@
                                                 <condition id="-8" name="Compare two values" sid="9394494178087452" type="System">
                                                     <param id="0" name="First value">WorldSection</param>
                                                     <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Second value">2</param>
+                                                    <param id="2" name="Second value">1</param>
                                                 </condition>
                                                 <condition id="-8" name="Compare two values" sid="4653758090600201" type="System">
                                                     <param id="0" name="First value">FLoor_CrocWorldNormal.PresentFloor</param>
