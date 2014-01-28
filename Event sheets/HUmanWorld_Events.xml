@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>ZombieWorld_Events</name>
+    <name>HUmanWorld_Events</name>
     <events>
-        <include>ZombieWorld_JumpableFloors</include>
-        <include>ZombieWorld_Enemies</include>
-        <include>ZombieWorld_Generation</include>
-        <include>ChimpWorld_BG_Generation</include>
+        <include>HumanWorld_Enemies</include>
+        <include>HumanWorld_Generation</include>
+        <include>Gyro_Events</include>
         <include>GameMusic</include>
         <include>WorldSelect_Events</include>
         <include>UI_Menus</include>
+        <include>Achieves_Common</include>
+        <include>OctoWorld_Background_Generation</include>
+        <include>OctoWorld_Jumpable_Floors</include>
         <include>Collectibles</include>
         <include>Froggie_Events</include>
         <include>FacebookIntegration</include>
@@ -18,17 +20,16 @@
         <include>Maintanence</include>
         <include>HUD</include>
         <include>Debug</include>
-        <comment>Set the  max Unlocked power up</comment>
-        <event-block sid="2841323594150346">
+        <event-block sid="1217966944952453">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="9030054861327621" type="System" />
+                <condition id="-2" name="On start of layout" sid="5656110541223851" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="1673610993109509" type="System">
+                <action id="-9" name="Set value" sid="3027896074512136" type="System">
                     <param id="0" name="Variable">CurrentWorld</param>
-                    <param id="1" name="Value">9</param>
+                    <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="4921260359476049" type="System">
+                <action id="-9" name="Set value" sid="7743821922896481" type="System">
                     <param id="0" name="Variable">PowerUpAnimMax</param>
                     <param id="1" name="Value">CurrentWorld</param>
                 </action>
