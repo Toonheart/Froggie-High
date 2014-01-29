@@ -7063,6 +7063,704 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group collapsed="1" description="" sid="2415758105636956" title="Human World Eneneis">
+            <sub-events>
+                <event-block collapsed="1" sid="2366190663407094">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
+                            <param id="0" name="Object">Enemy_Human2</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="7133134394160907" type="Froggie" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9259739563246526">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8800667209871847" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2067130992450425" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Add key" sid="9449588041096066" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set local value" sid="5064576030289316" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7027593979849098" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3257270753186528">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7717065615412353" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5881630092520938" type="Enemy_Human2">
+                                    <param id="0" name="Object">EnemySmoke</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4147901121358091" type="Enemy_Human2" />
+                                <action id="-3" name="Create object" sid="7417923243139829" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked_Notice.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked_Notice.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="5835899865113646" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3168863860133011" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="4816600304516203" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="8291071153032544">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="7192259174336942" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillBashChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="4305872478062186" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillBashChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="3219788531645538" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="5605917833611059" type="Achieve_Unlocked_Notice">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6297581256163167">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
+                                    <param id="0" name="Animation">&quot;JawBreak&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="6117124216128645" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="9616789108680579" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1741310487983323" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="8436225860675534" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6135224419075616" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2176243282133854" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6655419538687439" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5008457969315723" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="6898193730644271" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6732193608629257" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1651066830325225" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="167160853509318" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3907142912517023" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1195958450326166" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="6388982933524905" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="9712308569015303" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3186310164885051" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7886853245259435" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4715011499740902" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="8422964925041194" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3729341013604475" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3824793031475764" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="5212670082510636">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
+                            <param id="0" name="Object">Enemy_Human1</param>
+                        </condition>
+                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="3224374246931487" type="Froggie" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3373465311633384">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="8675538102240399" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5313375741958733" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6881710761536487" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Add key" sid="605023079173323" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;41_ByBashChimp&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set local value" sid="4163720586840933" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2698197725227986" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7717644868329403">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7572999317778496" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5336302376489891" type="Enemy_Human1">
+                                    <param id="0" name="Object">EnemySmoke</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="5469533709395458" type="Enemy_Human1" />
+                                <action id="-3" name="Create object" sid="7571602036371613" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked_Notice.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked_Notice.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="9218329025698868" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="648231566968259" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="180590380922337" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="6599699996476817">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="1732956245037085" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillBashChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="1666285069021592" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;29_KillBashChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="340892335782606" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="360797444591236" type="Achieve_Unlocked_Notice">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8102814192611625">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
+                                    <param id="0" name="Animation">&quot;JawBreak&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="1425127471552904" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4077548137378532" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8793110404391307" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="6173227656667808" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4240279638691456" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5682654505250115" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="9048651269469111" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4169786594494856" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2150017003894809" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3709503417400784" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5598908072706143" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8362927578214654" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3120703579740761" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6395252872685383" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2995973057382211" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="3383227104598144" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3846791588693187" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7224948976277319" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7513106871518432" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1063622770441831" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8740866273851882" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="9726553067591127" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="1668949320420401">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
+                            <param id="0" name="Object">Enenmy_Zombie3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8620350801035469">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="1270407905843375" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;44_ByFlyingChimp&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3105769941876905" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3362483954926425" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Add key" sid="7386121456378508" type="Dict_Achieves">
+                                    <param id="0" name="Key">&quot;43_ByBaboonweapon&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action disabled="1" id="0" name="Set local value" sid="696769769303017" type="WebStr_Common">
+                                    <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                    <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8940954790599795" type="Achieve_Unlocked_Notice">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block collapsed="1" sid="9192569426220203">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7945806560215736" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="5564160368028503" type="Enenmy_Zombie3">
+                                    <param id="0" name="Object">EnemySmoke</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4308519419490548" type="Enenmy_Zombie3" />
+                                <action id="-3" name="Create object" sid="3790199952641149" type="System">
+                                    <param id="0" name="Object to create">Text_ComboScore</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Achieve_Unlocked_Notice.X</param>
+                                    <param id="3" name="Y">Achieve_Unlocked_Notice.Y+250</param>
+                                </action>
+                                <action id="5" name="Set web font" sid="9468390856256343" type="Text_ComboScore">
+                                    <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="271876044630244" type="Text_ComboScore">
+                                    <param id="0" name="Text">&quot;+1000&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="5378538020549105" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4065267794373363">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has key" sid="5688985105784942" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;31_KillFlyingChimp&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9160366699005689" type="Dict_Achieves">
+                                            <param id="0" name="Key">&quot;31_KillFlyingChimp&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Set local value" sid="4945541788233762" type="WebStr_Common">
+                                            <param id="0" name="Key">&quot;SaveAwardDict&quot;</param>
+                                            <param id="1" name="Value">Dict_Achieves.AsJSON</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3084658691842227" type="Achieve_Unlocked_Notice">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4143323376114784">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
+                                    <param id="0" name="Animation">&quot;HeadBump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="205825033945862" type="Froggie">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1636412780749261" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4523604716184204" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7902629016167914" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="8596548432471511" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1468040906693896" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4482525618044571" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="9300711835718938" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7820181733597789" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7385134038271609" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7415145946232168" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="588580349604857" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="2576894304781871" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="2202407465674243" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="1015494939219419" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="5263757779296498" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1713262252453247" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="17318112476674" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3219368366349431" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="7682572312682057" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1.2</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="3992076730274455" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="4092337748432165" type="HUD_HealthIndicator">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Collisions with wepons</comment>
+                <event-block sid="3905475867103315">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3658066963750771" type="Froggie">
+                            <param id="0" name="Object">Bullet_HumanPowerstrip</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="2225343874086372" type="Bullet_HumanPowerstrip">
+                            <param id="0" name="Object">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5275348743004614" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">0.6</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6713835629679719" type="Bullet_HumanPowerstrip" />
+                        <action id="4" name="Set animation" sid="9032606118159538" type="Froggie">
+                            <param id="0" name="Animation">&quot;Sick&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="4375556058879351" type="Froggie">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="2024337056144741" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2509297576868633" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="4449320326642243" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7255378255786967" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4453599822251906" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5678670903405561" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="2189455606762077" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1591677984211733" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7639608573100999" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4213307295680622" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="640642122186927" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1934210826510505" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="9725124522998261" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="6436003377413029" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9942776760007591" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="8045419377226011" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="159477513959274" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5410850626226901" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3910464194581797" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="8611389187582806" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="48679250199278">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4159505807119348" type="Froggie">
+                            <param id="0" name="Object">Bullet_HumanBomb</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="89124719876392" type="Bullet_HumanBomb">
+                            <param id="0" name="Object">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="2583756632598182" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">0.6</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4700853563178346" type="Bullet_HumanBomb" />
+                        <action id="4" name="Set animation" sid="7936871395713178" type="Froggie">
+                            <param id="0" name="Animation">&quot;Sick&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="2514568767403756" type="Froggie">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7579213861528376" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2437354841601018" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="4273307911629137" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="8134203905674462" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="814616216741172" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5923939241211779" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="3550427403346632" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6697049973690155" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="5936846094585443" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6514618408928008" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="1955522301166288" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9939870855142532" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="6716957793558864" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="4532026397300978" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9501562514866065" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="2242493766849222" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2544016315698612" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="567146320468402" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1.2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7159991149879097" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="3784369919619551" type="HUD_HealthIndicator">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group collapsed="1" description="Hit man shots the enemies" sid="1155038130030058" title="Hitman Attack">
             <sub-events>
                 <event-block sid="491444830754185">

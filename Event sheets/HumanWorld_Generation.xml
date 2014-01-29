@@ -65,7 +65,7 @@
         <event-group collapsed="1" description="Includes generation of all the objects in world" sid="5350947277848182" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
-                <event-block sid="7564923252496036">
+                <event-block collapsed="1" sid="7564923252496036">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="6368562698250753" type="Froggie">
                             <param id="0" name="Comparison">2</param>
@@ -80,7 +80,7 @@
                     </actions>
                     <sub-events>
                         <comment>When  viewport reaches the nextfloorposition and if worldsection is still within decide worldlength,&#x0D;&#x0A; then create another floor at a random X an viewporttop-20 to avoid being visible to player.&#x0D;&#x0A;Add floorcount to local instance variable of floor - presentplatform to help us decide which floor to spawn powerups on for later use.&#x0D;&#x0A;Update nextfloorposition to a random of floorgap to some small seed value to make it look uneven. </comment>
-                        <event-block sid="5773070796798144">
+                        <event-block collapsed="1" sid="5773070796798144">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2255532067216024" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -1149,7 +1149,7 @@
                             </sub-events>
                         </event-block>
                         <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
-                        <event-block sid="8573108025996764">
+                        <event-block collapsed="1" sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>
@@ -1259,13 +1259,10 @@
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Create object" sid="3025836923098276" type="System">
-                                            <param id="0" name="Object to create">Enemy_OctoBOSS</param>
+                                            <param id="0" name="Object to create">Enemy_HumanBoss</param>
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="X">LayoutWidth/2</param>
                                             <param id="3" name="Y">Floor_Grass_Normal.Y-800</param>
-                                        </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="6660050806739039" type="Enemy_OctoBOSS">
-                                            <param id="0" name="State">1</param>
                                         </action>
                                         <action id="0" name="Spawn another object" sid="5430517718539529" type="Floor_Grass_Normal">
                                             <param id="0" name="Object">PowerUp_Multiple</param>
@@ -1274,9 +1271,6 @@
                                         </action>
                                         <action id="-15" name="Set visible" sid="8247200470575979" type="HUD_Cup">
                                             <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5290167715648836" type="Enemy_OctoBOSS">
-                                            <param id="0" name="Angle">180</param>
                                         </action>
                                     </actions>
                                 </event-block>

@@ -4,7 +4,7 @@
     <name>WorldSelect_Events</name>
     <events>
         <include>Debug</include>
-        <event-block collapsed="1" sid="1909276465668141">
+        <event-block sid="1909276465668141">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="5379913653334519" type="System" />
             </conditions>
@@ -18,7 +18,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="3376688132381048" type="System">
                     <param id="0" name="Variable">HighestUnlockedWorld</param>
-                    <param id="1" name="Value">8</param>
+                    <param id="1" name="Value">9</param>
                 </action>
             </actions>
             <sub-events>
@@ -48,7 +48,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group collapsed="1" description="" sid="420459411779005" title="Updating WorldSelector Icons">
+        <event-group description="" sid="420459411779005" title="Updating WorldSelector Icons">
             <sub-events>
                 <comment>Unlock the world butoon by comparing with highestunlocked var</comment>
                 <event-block collapsed="1" sid="9895106162001461">
@@ -103,7 +103,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Updating World status </comment>
-                <event-block sid="7411055268363587">
+                <event-block collapsed="1" sid="7411055268363587">
                     <conditions>
                         <condition id="-11" name="For Each" sid="717895481332878" type="System">
                             <param id="0" name="Object">Icon_WorldStatus</param>
@@ -447,10 +447,94 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block collapsed="1" sid="901220226339298">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3495917713727257" type="Icon_WorldStatus">
+                                    <param id="0" name="Instance variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2953276629432271" type="Icon_WorldStatus">
+                                    <param id="0" name="Animation">&quot;Zombie&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8880325620890271">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3892737713161919" type="Icon_WorldStatus">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">HighestUnlockedWorld</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="7502793281285395" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="862328921623539" type="Icon_WorldStatus" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4214395504647238">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1800669721075327" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="1653620563970223" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block collapsed="1" sid="4539621829162298">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9715907415153846" type="Icon_WorldStatus">
+                                    <param id="0" name="Instance variable">World</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4516461272287165" type="Icon_WorldStatus">
+                                    <param id="0" name="Animation">&quot;Human&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="887718425812213">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9436107943689851" type="Icon_WorldStatus">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">HighestUnlockedWorld</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="3392941186633477" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="3053622759177881" type="Icon_WorldStatus" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1458640944538099">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3027805330400989" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="2128838426859745" type="Icon_WorldStatus">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>On selecting world Buttons go to the world if it is unlocked and set currentworld to associated world(instance var)</comment>
-                <event-block sid="4128880818065891">
+                <event-block collapsed="1" sid="4128880818065891">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="6205326351807124" type="Touch">
                             <param id="0" name="Object">Icon_WorldSelector</param>
@@ -476,7 +560,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="6642381109295459">
+                        <event-block collapsed="1" sid="6642381109295459">
                             <conditions>
                                 <condition id="11" name="On Nth touch end" sid="3393897593528499" type="Touch">
                                     <param id="0" name="Touch number">0</param>
@@ -636,6 +720,42 @@
                                             <param id="0" name="Layout">NinjaWorld</param>
                                         </action>
                                         <action id="-9" name="Set value" sid="4316919056251489" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5481424015122945">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1503685541349389" type="Icon_WorldSelector">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">9</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="3574023395863394" type="System">
+                                            <param id="0" name="Layout">ZombieWorld</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3351567176555608" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Value">Icon_WorldSelector.World</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2874883233986104">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1306525085220915" type="Icon_WorldSelector">
+                                            <param id="0" name="Instance variable">World</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="1522713362467604" type="System">
+                                            <param id="0" name="Layout">HumanWorld</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="8730128286253159" type="System">
                                             <param id="0" name="Variable">CurrentWorld</param>
                                             <param id="1" name="Value">Icon_WorldSelector.World</param>
                                         </action>
@@ -901,7 +1021,7 @@
         </event-group>
         <event-group collapsed="1" description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
             <sub-events>
-                <event-block sid="8279651189686509">
+                <event-block collapsed="1" sid="8279651189686509">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7139573914149921" type="System" />
                     </conditions>
@@ -949,7 +1069,7 @@
                             <conditions>
                                 <condition id="-2" name="Compare Y" sid="5059447657573493" type="TouchFollowMe">
                                     <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">2550</param>
+                                    <param id="1" name="Y co-ordinate">4000</param>
                                 </condition>
                             </conditions>
                             <actions>

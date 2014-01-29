@@ -11,10 +11,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>HumanWorld</layout>
-        <event-sheet>HumanWorld_Generation</event-sheet>
-        <event-sheet active="1">HUmanWorld_Events</event-sheet>
-        <event-sheet>OctoWorld_Enemies</event-sheet>
-        <event-sheet>HumanWorld_Enemies</event-sheet>
+        <layout active="1">GraphicStore10</layout>
+        <layout>WorldSelect</layout>
+        <layout>GraphicStore9</layout>
+        <layout>ZombieWorld</layout>
+        <event-sheet>Collisions</event-sheet>
+        <event-sheet>WorldSelect_Events</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -22,7 +24,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="0">
+    <families-expanded root="1">
         <family expanded="0" name="Obstacles" />
         <family expanded="0" name="Enemy" />
         <family expanded="0" name="Floors" />
