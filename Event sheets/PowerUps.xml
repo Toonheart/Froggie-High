@@ -5,7 +5,7 @@
     <events>
         <include>Global_Var_reset</include>
         <include>SoundsCommon</include>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -87,7 +87,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="5442942397373558">
+                <event-block collapsed="1" sid="5442942397373558">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="679066288460733" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -199,7 +199,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
-                <event-block collapsed="1" sid="7812786490129375">
+                <event-block sid="7812786490129375">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8055733803766058" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -1363,6 +1363,36 @@
                     <actions>
                         <action id="4" name="Set animation" sid="2865190470274079" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Sage&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2420586255791233">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8662627306112068" type="PowerUp_Multiple">
+                            <param id="0" name="Instance variable">AnimSelctor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2655222946907681" type="PowerUp_Multiple">
+                            <param id="0" name="Animation">&quot;Hammer&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7304956140912885">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5304244298425473" type="PowerUp_Multiple">
+                            <param id="0" name="Instance variable">AnimSelctor</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1843741215452665" type="PowerUp_Multiple">
+                            <param id="0" name="Animation">&quot;Hitman&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

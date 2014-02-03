@@ -10,30 +10,29 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -944,16 +943,16 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9311404462176877" speed="5">
-                    <frame duration="1" hotspotX="0.502101" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0.334034" y="0.334034" />
-                            <point x="0.5" y="0.313025" />
-                            <point x="0.670168" y="0.329832" />
-                            <point x="0.932773" y="0.5" />
-                            <point x="0.672269" y="0.672269" />
-                            <point x="0.5" y="0.707983" />
-                            <point x="0.32563" y="0.67437" />
-                            <point x="0.113445" y="0.5" />
+                            <point x="0.20625" y="0.20625" />
+                            <point x="0.5" y="0.08125" />
+                            <point x="0.7875" y="0.2125" />
+                            <point x="0.9125" y="0.5" />
+                            <point x="0.7875" y="0.7875" />
+                            <point x="0.5" y="0.93125" />
+                            <point x="0.20625" y="0.79375" />
+                            <point x="0.075" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4731,12 +4730,12 @@
                         <collision-poly>
                             <point x="0.20625" y="0.20625" />
                             <point x="0.5" y="0.08125" />
-                            <point x="0.79375" y="0.20625" />
-                            <point x="0.925" y="0.5" />
+                            <point x="0.7875" y="0.2125" />
+                            <point x="0.9125" y="0.5" />
                             <point x="0.7875" y="0.7875" />
-                            <point x="0.5" y="0.91875" />
-                            <point x="0.21875" y="0.78125" />
-                            <point x="0.09375" y="0.5" />
+                            <point x="0.5" y="0.93125" />
+                            <point x="0.20625" y="0.79375" />
+                            <point x="0.075" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5392,10 +5391,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="SpriteFont" sid="6633642336141335">
-            <plugin id="Spritefont2" />
-            <texture />
         </object-type>
         <object-type name="MarkerScrollUp" sid="7153539132411071">
             <plugin id="Sprite" />
@@ -9882,18 +9877,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SpriteFont2" sid="3006291960484653">
-            <plugin id="Spritefont2" />
-            <texture />
-        </object-type>
-        <object-type name="Sprite" sid="6943743706235131">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9282690843241359" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Enemy_Ninja1" sid="6237568511298981">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -9927,10 +9910,6 @@
                     <frame duration="1" hotspotX="0.451172" hotspotY="0.919922" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="SpriteFont3" sid="3833321444452322">
-            <plugin id="Spritefont2" />
-            <texture />
         </object-type>
         <object-type name="Collectible_NinjaWorld" sid="7701982171571524">
             <plugin id="Sprite" />
@@ -11092,14 +11071,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="137232770576637">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7652555944652331" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Enemy_Human1" sid="3392664230411372">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -11213,6 +11184,102 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_Hitman" sid="7779463779139927">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7599464984761612" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.322917" y="0.322917" />
+                            <point x="0.666667" y="0.333333" />
+                            <point x="0.677083" y="0.5" />
+                            <point x="0.765625" y="0.765625" />
+                            <point x="0.234375" y="0.765625" />
+                            <point x="0.317708" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_Hammer" sid="6856597519298228">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1736612275396575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.208333" y="0.208333" />
+                            <point x="0.5" y="0.0729167" />
+                            <point x="0.697917" y="0.302083" />
+                            <point x="0.614583" y="0.5" />
+                            <point x="0.713542" y="0.713542" />
+                            <point x="0.5" y="0.598958" />
+                            <point x="0.46875" y="0.53125" />
+                            <point x="0.229167" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_Unicorn" sid="9372736460600416">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4309380159401029" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_Dragon" sid="4259543270416721">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2574885225878309" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_SeaBird" sid="2167362341915283">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4106160612416372" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_Sage" sid="9215580353629106">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7868342354124368" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.260417" y="0.260417" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.71875" y="0.28125" />
+                            <point x="0.546875" y="0.5" />
+                            <point x="0.5" y="0.838542" />
+                            <point x="0.421875" y="0.578125" />
+                            <point x="0.421875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Icon_IAP_SawBlade" sid="9860825124775248">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1162378131738747" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.322917" y="0.322917" />
+                            <point x="0.5" y="0.390625" />
+                            <point x="0.807292" y="0.192708" />
+                            <point x="0.796875" y="0.5" />
+                            <point x="0.614583" y="0.614583" />
+                            <point x="0.171875" y="0.828125" />
+                            <point x="0.239583" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -11463,7 +11530,7 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>OctoWorld.xml</layout>
         <layout>HumanWorld.xml</layout>
         <layout>CatWorld.xml</layout>
@@ -11496,8 +11563,9 @@
         <layout>GraphicStore8.xml</layout>
         <layout>GraphicStore9.xml</layout>
         <layout>GraphicStore10.xml</layout>
+        <layout>IAP.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>OctoWorld_Events.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>HUD.xml</event-sheet>
@@ -11567,6 +11635,7 @@
         <event-sheet>HumanWorld_Generation.xml</event-sheet>
         <event-sheet>HUmanWorld_Events.xml</event-sheet>
         <event-sheet>HumanWorld_Enemies.xml</event-sheet>
+        <event-sheet>IAP_Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">
