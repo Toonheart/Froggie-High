@@ -5,7 +5,7 @@
     <events>
         <include>Global_Var_reset</include>
         <include>SoundsCommon</include>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="MUSHROOM - RAINBOW">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -908,9 +908,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Counter is used to  avoid accidental activation of powertUp " sid="7828346241948737" title="Touch Time Counter For ATTACK BUTTON ">
+        <event-group description="Counter is used to  avoid accidental activation of powertUp " sid="7828346241948737" title="Touch Time Counter For ATTACK BUTTON ">
             <sub-events>
-                <event-block collapsed="1" sid="9296060953130143">
+                <event-block sid="9296060953130143">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="635941293465493" type="Touch">
                             <param id="0" name="Object">Button_Attack</param>
@@ -953,7 +953,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Using Attack Button" sid="7823920697448265" title="ActivatingPowerUps">
+        <event-group description="Using Attack Button" sid="7823920697448265" title="ActivatingPowerUps">
             <sub-events>
                 <comment>Activate the available power when touching the Attack Button</comment>
                 <comment>Destroy the power at the end of touch or if the powerup time exceeds</comment>
@@ -1178,6 +1178,33 @@
                             <param id="1" name="Value">5</param>
                         </action>
                         <action id="-10" name="Set value" sid="8845984207670379" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1491027187875362">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1438988589149313" type="Button_Attack">
+                            <param id="0" name="Instance variable">CountDownTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="7899358194162983" type="Touch">
+                            <param id="0" name="Object">Button_Attack</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="9702957971902205" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8012902808002113" type="Button_Attack">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2810208902648227" type="Button_Attack">
+                            <param id="0" name="Instance variable">CountDownTimer</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="9504760550897966" type="Button_Attack">
                             <param id="0" name="Instance variable">Status</param>
                             <param id="1" name="Value">0</param>
                         </action>
