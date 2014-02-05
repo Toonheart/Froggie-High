@@ -2,5 +2,30 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>IAP_Events</name>
-    <events />
+    <events>
+        <event-block sid="86421494398428">
+            <conditions>
+                <condition id="4" name="Is touching object" sid="5121099507273542" type="Touch">
+                    <param id="0" name="Object">IAP</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="5233205827128387" type="IAP">
+                    <param id="0" name="Scale">1.05</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9974078936277829">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="2572665011510945" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="4022503280437964" type="IAP">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
 </c2eventsheet>

@@ -10,29 +10,29 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
-        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -494,16 +494,16 @@
                     <animation framecount="2" loop="0" name="Boxing" pingpong="0" repeatcount="1" repeatto="0" sid="371328640107187" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.265625" y="0.3125" />
-                                <point x="0.570313" y="0.34375" />
+                                <point x="0.238281" y="0.294922" />
+                                <point x="0.609375" y="0.259766" />
                                 <point x="0.851563" y="0.804688" />
                                 <point x="0.4375" y="0.804688" />
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.265625" y="0.3125" />
-                                <point x="0.546875" y="0.148438" />
+                                <point x="0.314453" y="0.212891" />
+                                <point x="0.638672" y="0.222657" />
                                 <point x="0.890625" y="0.796875" />
                                 <point x="0.4375" y="0.804688" />
                             </collision-poly>
@@ -868,6 +868,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="AnimMax" sid="2347274509181659" type="number" />
+                <instance-variable name="PlaneAngle" sid="5686391395016534" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="35108253428713">
@@ -11142,7 +11143,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Icon_IAP_SawBlade" sid="9860825124775248">
+        <object-type name="IAP_Icon_SawBlade" sid="9860825124775248">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1162378131738747" speed="5">
@@ -11155,6 +11156,25 @@
                             <point x="0.614583" y="0.614583" />
                             <point x="0.171875" y="0.828125" />
                             <point x="0.239583" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IAP_Heart_Heart" sid="8251454690130569">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7261449770040434" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.257813" y="0.257813" />
+                            <point x="0.5" y="0.234375" />
+                            <point x="0.882813" y="0.117188" />
+                            <point x="0.960938" y="0.5" />
+                            <point x="0.765625" y="0.765625" />
+                            <point x="0.5" y="0.914063" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.046875" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -11407,6 +11427,18 @@
                 <member>Enemy_TurtleFlyingRight</member>
             </members>
         </family>
+        <family name="IAP" plugin-id="Sprite" sid="777025002365724">
+            <members>
+                <member>IAP_Heart_Heart</member>
+                <member>IAP_Icon_Dragon</member>
+                <member>IAP_Icon_Hammer</member>
+                <member>IAP_Icon_Hitman</member>
+                <member>IAP_Icon_Sage</member>
+                <member>IAP_Icon_SawBlade</member>
+                <member>IAP_Icon_SeaBird</member>
+                <member>IAP_Icon_Unicorn</member>
+            </members>
+        </family>
     </families>
     <layout-folder expanded="1">
         <layout>OctoWorld.xml</layout>
@@ -11443,7 +11475,7 @@
         <layout>GraphicStore10.xml</layout>
         <layout>IAP.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>OctoWorld_Events.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>HUD.xml</event-sheet>
