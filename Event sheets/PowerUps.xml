@@ -5,7 +5,7 @@
     <events>
         <include>Global_Var_reset</include>
         <include>SoundsCommon</include>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="Flying Objects">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="Flying Objects">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -270,7 +270,7 @@
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
                 <comment>Pin Rocket and move some distance everytick</comment>
-                <event-block sid="5775586601852508">
+                <event-block collapsed="1" sid="5775586601852508">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="468487929353543" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -284,6 +284,7 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <comment>For all ride objects except the Plane fly vertically up,add give controll left and right using both touch and keyboard inputs</comment>
                         <event-block sid="141032170757577">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1295339319386461" type="Unicorn">
@@ -305,7 +306,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="6998816906601566">
+                                <event-block any="1" sid="6998816906601566">
                                     <conditions>
                                         <condition id="2" name="Key is down" sid="3746435180086606" type="Keyboard">
                                             <param id="0" name="Key">39 (Right arrow)</param>
@@ -317,7 +318,7 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="1744748313746358">
+                                <event-block any="1" sid="1744748313746358">
                                     <conditions>
                                         <condition id="2" name="Key is down" sid="7596415399617688" type="Keyboard">
                                             <param id="0" name="Key">37 (Left arrow)</param>
@@ -328,6 +329,42 @@
                                             <param id="0" name="Control">0</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="6411493667616453">
+                                    <conditions>
+                                        <condition id="2" name="Is in touch" sid="2264995325029939" type="Touch" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="6676667888927774">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="330631161213442" type="System">
+                                                    <param id="0" name="First value">Touch.X</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">WindowWidth/2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="6859108578611756" type="PlayerBox">
+                                                    <param id="0" name="Control">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7430901164198746">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="2979464133418542" type="System">
+                                                    <param id="0" name="First value">Touch.X</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Second value">WindowWidth/2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="8Direction" id="7" name="Simulate control" sid="6576846337959577" type="PlayerBox">
+                                                    <param id="0" name="Control">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
