@@ -78,55 +78,13 @@
             <sub-events>
                 <comment>CUP EVENTS</comment>
                 <event-block sid="1356040382048035">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="5013445569127713" type="Froggie">
-                            <param id="0" name="Object">Collectible_GiftBox</param>
-                        </condition>
-                    </conditions>
+                    <conditions />
                     <actions>
-                        <action id="-9" name="Destroy" sid="2558176543355033" type="Collectible_GiftBox" />
                         <action id="-10" name="Add to" sid="2141186645294136" type="System">
                             <param id="0" name="Variable">CupsCollected</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="5375268433599084">
-                            <conditions>
-                                <condition id="1" name="Is overlapping another object" sid="2794655719009716" type="Collectible_GiftBox">
-                                    <param id="0" name="Object">GiftRays</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="5491846303721714" type="GiftRays" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="934377996312115">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="3310892476040926" type="System">
-                            <param id="0" name="Object">HUD_Cup</param>
-                        </condition>
-                        <condition id="-9" name="Is visible" sid="8368735524307445" type="HUD_Cup" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1014888929057725">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="3469652502613635" type="HUD_Cup">
-                                    <param id="0" name="Instance variable">CupNo</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">CupsCollected</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Set opacity" sid="9836648642252434" type="HUD_Cup">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="4046320463723904">
                     <conditions>
@@ -399,39 +357,18 @@
             <sub-events>
                 <event-block sid="4779730656366491">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="7511290204622424" type="GiftRays">
-                            <param id="0" name="Instance variable">Scale</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">0.8</param>
-                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="2027787000056583" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="532585220994859" type="GiftRays">
-                            <param id="0" name="Instance variable">Direction</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="1794108938290715">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8298210424733968" type="GiftRays">
-                            <param id="0" name="Instance variable">Scale</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="8026352037039498" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="7576871854633069" type="GiftRays">
-                            <param id="0" name="Instance variable">Direction</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="8363539136310204">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="8612474764562088" type="GiftRays" />
                         <condition id="2" inverted="1" name="Is pause" sid="5114664170135671" type="Pause" />
                     </conditions>
                     <actions />
@@ -440,43 +377,7 @@
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="9074974841573255" type="System" />
                             </conditions>
-                            <actions>
-                                <action id="9" name="Set scale" sid="5931095776999492" type="GiftRays">
-                                    <param id="0" name="Scale">Self.Scale</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="7381684971212141">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="60461347689043" type="GiftRays">
-                                            <param id="0" name="Instance variable">Direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="6322672315919675" type="GiftRays">
-                                            <param id="0" name="Instance variable">Scale</param>
-                                            <param id="1" name="Value">Self.Scale-0.002</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="6758912167083795">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="4158155634027162" type="GiftRays">
-                                            <param id="0" name="Instance variable">Direction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="9545320263191022" type="GiftRays">
-                                            <param id="0" name="Instance variable">Scale</param>
-                                            <param id="1" name="Value">Self.Scale+0.002</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>

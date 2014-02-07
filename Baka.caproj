@@ -10,29 +10,29 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
-        <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
-        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -2309,30 +2309,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Collectible_GiftBox" sid="3529911884979913">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="1109922631051446">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2394494894725044" speed="5">
-                    <frame duration="1" hotspotX="0.502513" hotspotY="0.502591">
-                        <collision-poly>
-                            <point x="0.236181" y="0.243523" />
-                            <point x="0.497487" y="0.160622" />
-                            <point x="0.763819" y="0.243523" />
-                            <point x="0.894472" y="0.497409" />
-                            <point x="0.78392" y="0.777202" />
-                            <point x="0.497487" y="0.875648" />
-                            <point x="0.211055" y="0.782383" />
-                            <point x="0.100503" y="0.497409" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Enemy_Flu_Chicken" sid="846807893697361">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -3435,50 +3411,6 @@
                             <point x="0.5" y="0.953125" />
                             <point x="0.203125" y="0.796875" />
                             <point x="0.183594" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="HUD_Basket" sid="5853397632936938">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="BasketNo" sid="8494240899442377" type="number" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6413353040243122" speed="5">
-                    <frame duration="1" hotspotX="0.502513" hotspotY="0.502591">
-                        <collision-poly>
-                            <point x="0.236181" y="0.243523" />
-                            <point x="0.497487" y="0.160622" />
-                            <point x="0.763819" y="0.243523" />
-                            <point x="0.894472" y="0.497409" />
-                            <point x="0.78392" y="0.777202" />
-                            <point x="0.497487" y="0.875648" />
-                            <point x="0.211055" y="0.782383" />
-                            <point x="0.100503" y="0.497409" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="HUD_Cup" sid="3348015936032866">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="CupNo" sid="9650700807791627" type="number" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3065179944991086" speed="5">
-                    <frame duration="1" hotspotX="0.502513" hotspotY="0.502591">
-                        <collision-poly>
-                            <point x="0.236181" y="0.243523" />
-                            <point x="0.497487" y="0.160622" />
-                            <point x="0.763819" y="0.243523" />
-                            <point x="0.894472" y="0.497409" />
-                            <point x="0.78392" y="0.777202" />
-                            <point x="0.497487" y="0.875648" />
-                            <point x="0.211055" y="0.782383" />
-                            <point x="0.100503" y="0.497409" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -6178,34 +6110,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="GiftRays" sid="8783531704030971">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Scale" sid="6276413558692881" type="number" />
-                <instance-variable name="Direction" sid="2768761137411471" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Pin" sid="7853989723665343">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="720689469412711" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.405556" y="0.405556" />
-                            <point x="0.5" y="0.402778" />
-                            <point x="0.641667" y="0.358333" />
-                            <point x="0.902778" y="0.5" />
-                            <point x="0.752778" y="0.752778" />
-                            <point x="0.5" y="0.427778" />
-                            <point x="0.233333" y="0.766667" />
-                            <point x="0.113889" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="World2_BG_ObjectsP1" sid="6225276761000726">
             <plugin id="Sprite" />
             <instance-variables>
@@ -6678,25 +6582,6 @@
                             <point x="0.499051" y="0.80829" />
                             <point x="0.191651" y="0.476684" />
                             <point x="0.0740038" y="0.497409" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Gift_Base" sid="7866403186962561">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8149954101185293" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.06" y="0.06" />
-                            <point x="0.5" y="0.03" />
-                            <point x="0.94" y="0.06" />
-                            <point x="0.96" y="0.5" />
-                            <point x="0.94" y="0.94" />
-                            <point x="0.5" y="0.97" />
-                            <point x="0.06" y="0.94" />
-                            <point x="0.02" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

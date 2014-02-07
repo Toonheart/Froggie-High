@@ -25,14 +25,6 @@
                             <param id="0" name="Layer">&quot;TopBlack&quot;</param>
                             <param id="1" name="Visibility">0</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="4257009360462523" type="GiftRays">
-                            <param id="0" name="Pin to">Gift_Base</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="1216923904478791" type="Collectible_GiftBox">
-                            <param id="0" name="Pin to">Gift_Base</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
                         <action id="4" name="Load" sid="689415574872478" type="Dict_Achieves">
                             <param id="0" name="JSON">WebStr_Common.LocalValue(&quot;SaveAwardDict&quot;)</param>
                         </action>
@@ -1269,9 +1261,6 @@
                                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                                             <param id="2" name="Image point">0</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="8247200470575979" type="HUD_Cup">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="8912091430752479">
@@ -1294,10 +1283,6 @@
                                         </action>
                                         <action id="9" name="Set scale" sid="4843604160466461" type="Floor_Grass_Normal">
                                             <param id="0" name="Scale">1</param>
-                                        </action>
-                                        <action id="-3" name="Set position" sid="3446719155424056" type="Gift_Base">
-                                            <param id="0" name="X">Floor_Grass_Normal.X</param>
-                                            <param id="1" name="Y">Floor_Grass_Normal.Y-600</param>
                                         </action>
                                         <action id="-3" name="Create object" sid="9917228416236487" type="System">
                                             <param id="0" name="Object to create">Floor_Grass_Normal</param>

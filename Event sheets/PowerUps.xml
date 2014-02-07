@@ -522,108 +522,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" disabled="1" sid="4004194865636154" title="UMBRELLA">
-            <sub-events>
-                <comment>Spawn Mushroom_Inv randomly</comment>
-                <event-block disabled="1" sid="7909195125855185">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="7542730028738721" type="System">
-                            <param id="0" name="Interval (seconds)">29</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <comment>Collecting mushroom and setting the status</comment>
-                <event-block sid="9301515454978652">
-                    <conditions />
-                    <actions>
-                        <action id="-10" name="Set value" sid="3946507190873963" type="Froggie">
-                            <param id="0" name="Instance variable">MushroomStatus</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Activate Mushroom on falling(acheived by decreasing the gravity),show a Mushroom to frog</comment>
-                <event-block sid="4011902002614064">
-                    <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="4736833150628064" type="Froggie" />
-                        <condition disabled="1" id="-8" name="Compare two values" sid="48481517849158" type="System">
-                            <param id="0" name="First value">Froggie.Y-Froggie.FallDistance</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">FloorGap</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9256167403507556">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9485816884265478" type="Froggie">
-                                    <param id="0" name="Instance variable">MushroomStatus</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="6446740122024098" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="5" name="Set gravity" sid="7038933424782512" type="Froggie">
-                                    <param id="0" name="Gravity">100</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="7799807699857842">
-                            <conditions>
-                                <condition id="-24" name="For Each (ordered)" sid="5282175238703128" type="System">
-                                    <param id="0" name="Object">Floor_Grass_Normal</param>
-                                    <param id="1" name="Expression">Floor_Grass_Normal.y&gt;Froggie.Y</param>
-                                    <param id="2" name="Order">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="1876342360344854">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="5103826836184907" type="System">
-                                            <param id="0" name="First value">Floor_Grass_Normal.X</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">Froggie.X-100</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions />
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>De-Activate the mushroom on landed</comment>
-                <event-block sid="1800989727512526">
-                    <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="8579573545810144" type="Froggie" />
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="3355311423869583" type="Froggie">
-                            <param id="0" name="Instance variable">MushroomStatus</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Reset the gravity and when mushroom de-Activated</comment>
-                <event-block sid="1954871998216346">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2684418301676299" type="Froggie">
-                            <param id="0" name="Instance variable">MushroomStatus</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="1624974601676791" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="5" name="Set gravity" sid="4918132697054397" type="Froggie">
-                            <param id="0" name="Gravity">1550</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group collapsed="1" description="" disabled="1" sid="1579389754065093" title="Shield">
             <sub-events>
                 <event-block disabled="1" sid="7688469084229928">
@@ -1205,7 +1103,7 @@
                             </actions>
                         </event-block>
                         <comment>Zoom effect for Attack button when player using the power</comment>
-                        <event-block collapsed="1" sid="7497402750660566">
+                        <event-block sid="7497402750660566">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="5139230834913364" type="Button_Attack">
                                     <param id="0" name="Instance variable">ScaleCount</param>
@@ -1283,6 +1181,17 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="7275065368534963">
+                            <conditions>
+                                <condition id="-7" name="Compare time" sid="8405282045697383" type="System">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Time (seconds)">1.0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="1491027187875362">
                     <conditions>
@@ -1332,7 +1241,7 @@
                     </actions>
                 </event-block>
                 <comment>While Sage power is using Just disable the Platform behaviour and move froggie in upward direction</comment>
-                <event-block sid="5535811351894709">
+                <event-block collapsed="1" sid="5535811351894709">
                     <conditions>
                         <condition id="2" name="Is playing" sid="1911248268642474" type="Froggie">
                             <param id="0" name="Animation">&quot;Sage&quot;</param>
@@ -1753,6 +1662,33 @@
                         <action id="4" name="Set animation" sid="1843741215452665" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Hitman&quot;</param>
                             <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="2477787007564583" title="Smoke Effect For Power Used">
+            <sub-events>
+                <comment>Spawn a smoke on attck button when poer is used</comment>
+                <comment>Add time to avoid spawn at the start of layout</comment>
+                <event-block sid="3586610816186233">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6605960112389919" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="239482626376083" type="System" />
+                        <condition id="-7" name="Compare time" sid="887904176449953" type="System">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Time (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="7048444086446446" type="Button_Attack">
+                            <param id="0" name="Object">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
