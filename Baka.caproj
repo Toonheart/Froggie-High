@@ -10,28 +10,28 @@
     <unique-id>14fir0wto7bt4</unique-id>
     <saved-with-version>15802</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
+        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
-        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Lance Locke" id="FBComplete" version="0.310000002">Facebook Complete</plugin>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
-        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Facebook" version="1">Facebook</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Rex.Rainbow" id="Rex_Pause" version="1">Pause</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
     </used-behaviors>
     <used-effects />
@@ -67,6 +67,7 @@
                 <instance-variable name="DoubleJump" sid="6126835022725318" type="number" />
                 <instance-variable name="CurrentPowerup" sid="8852103429157433" type="number" />
                 <instance-variable name="SageCount" sid="3331906486083367" type="number" />
+                <instance-variable comment="Triggers when first powerup is collected.used to solve the powerup button smoke problem." name="PowerUpCollected" sid="4664654421195012" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="6670962447208091">
@@ -6930,6 +6931,20 @@
         <object-type name="Icon_AchieveSpecial" sid="3959770528463487">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="BlackBerry" pingpong="0" repeatcount="1" repeatto="0" sid="4329782628605997" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.335938" y="0.335938" />
+                            <point x="0.5" y="0.265625" />
+                            <point x="0.667969" y="0.332031" />
+                            <point x="0.773438" y="0.5" />
+                            <point x="0.699219" y="0.699219" />
+                            <point x="0.5" y="0.789063" />
+                            <point x="0.3125" y="0.6875" />
+                            <point x="0.257813" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
                 <animation framecount="1" loop="0" name="Tizen" pingpong="0" repeatcount="1" repeatto="0" sid="3692983780002962" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
@@ -6945,20 +6960,6 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Android" pingpong="0" repeatcount="1" repeatto="0" sid="6459113455720976" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.335938" y="0.335938" />
-                            <point x="0.5" y="0.265625" />
-                            <point x="0.667969" y="0.332031" />
-                            <point x="0.773438" y="0.5" />
-                            <point x="0.699219" y="0.699219" />
-                            <point x="0.5" y="0.789063" />
-                            <point x="0.3125" y="0.6875" />
-                            <point x="0.257813" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="BlackBerry" pingpong="0" repeatcount="1" repeatto="0" sid="4329782628605997" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.335938" y="0.335938" />
@@ -11494,7 +11495,7 @@
             </properties>
         </global-instance>
     </global-instances>
-    <sounds-folder expanded="0">
+    <sounds-folder expanded="1">
         <file name="Jump.ogg" />
         <file name="Fall.ogg" />
         <file name="collectible.m4a" />

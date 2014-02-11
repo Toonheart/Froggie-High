@@ -34,7 +34,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="7289153256113193" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -1134,7 +1134,7 @@
                             </sub-events>
                         </event-block>
                         <comment>BIGBOSS&#x0D;&#x0A;Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then move the LETTER COLLECTIBLE SET.</comment>
-                        <event-block collapsed="1" sid="8573108025996764">
+                        <event-block sid="8573108025996764">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="1968320842692783" type="System">
                                     <param id="0" name="First value">NextFloorPosition</param>

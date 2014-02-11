@@ -5,7 +5,7 @@
     <events>
         <include>Global_Var_reset</include>
         <include>SoundsCommon</include>
-        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="Flying Objects">
+        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="Flying Objects">
             <sub-events>
                 <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
                     <sub-events>
@@ -199,7 +199,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Counting the time down:EverySecond substract 1 from rocketcountdown if it was set</comment>
-                <event-block collapsed="1" sid="7812786490129375">
+                <event-block sid="7812786490129375">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="8055733803766058" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -231,7 +231,7 @@
                             </actions>
                         </event-block>
                         <comment>Use left and right arrow keys to control the Frog or tilt the mobile. </comment>
-                        <event-block any="1" sid="6562957024535947">
+                        <event-block any="1" disabled="1" sid="6562957024535947">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="9903376255314575" type="Keyboard">
                                     <param id="0" name="Key">37 (Left arrow)</param>
@@ -243,7 +243,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="7615939102074993">
+                        <event-block any="1" disabled="1" sid="7615939102074993">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="2740732267990874" type="Keyboard">
                                     <param id="0" name="Key">39 (Right arrow)</param>
@@ -270,7 +270,7 @@
                 </event-block>
                 <comment>Disable Platform behavior when travelling on Rocket</comment>
                 <comment>Pin Rocket and move some distance everytick</comment>
-                <event-block collapsed="1" sid="5775586601852508">
+                <event-block sid="5775586601852508">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="468487929353543" type="Froggie">
                             <param id="0" name="Instance variable">RocketCountDown</param>
@@ -316,6 +316,9 @@
                                         <action behavior="8Direction" id="7" name="Simulate control" sid="5998330118463204" type="PlayerBox">
                                             <param id="0" name="Control">1</param>
                                         </action>
+                                        <action id="7" name="Set mirrored" sid="3816497074785262" type="Unicorn">
+                                            <param id="0" name="State">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block any="1" sid="1744748313746358">
@@ -327,6 +330,9 @@
                                     <actions>
                                         <action behavior="8Direction" id="7" name="Simulate control" sid="8368644192961479" type="PlayerBox">
                                             <param id="0" name="Control">0</param>
+                                        </action>
+                                        <action id="7" name="Set mirrored" sid="1399896800093996" type="Unicorn">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -348,6 +354,9 @@
                                                 <action behavior="8Direction" id="7" name="Simulate control" sid="6859108578611756" type="PlayerBox">
                                                     <param id="0" name="Control">1</param>
                                                 </action>
+                                                <action id="7" name="Set mirrored" sid="1554475018327221" type="Unicorn">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="7430901164198746">
@@ -362,13 +371,16 @@
                                                 <action behavior="8Direction" id="7" name="Simulate control" sid="6576846337959577" type="PlayerBox">
                                                     <param id="0" name="Control">0</param>
                                                 </action>
+                                                <action id="7" name="Set mirrored" sid="7947342734327375" type="Unicorn">
+                                                    <param id="0" name="State">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block collapsed="1" sid="3254512781723923">
+                        <event-block sid="3254512781723923">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="978858141309911" type="Unicorn">
                                     <param id="0" name="Instance variable">AnimMax</param>
@@ -522,31 +534,45 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" disabled="1" sid="1579389754065093" title="Shield">
+        <event-group collapsed="1" description="" sid="5915178067748355" title="Smoke Effect For Power Used">
             <sub-events>
-                <event-block disabled="1" sid="7688469084229928">
+                <comment>Spawn a smoke on attck button when poer is used</comment>
+                <event-block sid="3586610816186233">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="8845956592911194" type="System">
-                            <param id="0" name="Interval (seconds)">23</param>
+                        <condition id="-7" name="Compare instance variable" sid="6605960112389919" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-2" name="Compare Y" sid="1932503516059606" type="Froggie">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">ScrollTo</param>
+                        <condition id="-4" name="Trigger once while true" sid="7335078906512434" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="2323594860089026" type="Froggie">
+                            <param id="0" name="Instance variable">PowerUpCollected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <comment>Collecting shield and destroying it</comment>
-                <event-block disabled="1" sid="5209608158508144">
-                    <conditions>
-                        <condition behavior="Platform" disabled="1" id="2" name="Is on floor" sid="9102706431526808" type="Froggie" />
                     </conditions>
                     <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="7236433481647354" type="Froggie">
-                            <param id="0" name="Control">2</param>
+                        <action id="0" name="Spawn another object" sid="7048444086446446" type="Button_Attack">
+                            <param id="0" name="Object">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5886329042106079" type="Froggie">
-                            <param id="0" name="Instance variable">SheildStatus</param>
+                    </actions>
+                </event-block>
+                <event-block sid="6920045596686254">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1657554164781902" type="Froggie">
+                            <param id="0" name="Object">PowerUp_Multiple</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5109107129883145" type="Froggie">
+                            <param id="0" name="Instance variable">PowerUpCollected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3317770871832189" type="Froggie">
+                            <param id="0" name="Instance variable">PowerUpCollected</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -1181,17 +1207,6 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block sid="7275065368534963">
-                            <conditions>
-                                <condition id="-7" name="Compare time" sid="8405282045697383" type="System">
-                                    <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Time (seconds)">1.0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="1491027187875362">
                     <conditions>
@@ -1662,33 +1677,6 @@
                         <action id="4" name="Set animation" sid="1843741215452665" type="PowerUp_Multiple">
                             <param id="0" name="Animation">&quot;Hitman&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group collapsed="1" description="" sid="2477787007564583" title="Smoke Effect For Power Used">
-            <sub-events>
-                <comment>Spawn a smoke on attck button when poer is used</comment>
-                <comment>Add time to avoid spawn at the start of layout</comment>
-                <event-block sid="3586610816186233">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6605960112389919" type="Button_Attack">
-                            <param id="0" name="Instance variable">Status</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="239482626376083" type="System" />
-                        <condition id="-7" name="Compare time" sid="887904176449953" type="System">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Time (seconds)">1.0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="7048444086446446" type="Button_Attack">
-                            <param id="0" name="Object">EnemySmoke</param>
-                            <param id="1" name="Layer">&quot;HUD&quot;</param>
-                            <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>

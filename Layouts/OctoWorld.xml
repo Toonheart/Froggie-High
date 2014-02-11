@@ -786,6 +786,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PowerUp_Mushroom_Rainbow" uid="388">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <RotateTowards>-90</RotateTowards>
+                        <Gap>0</Gap>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>675</x>
+                        <y>473</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>192</height>
+                        <depth>0</depth>
+                        <hotspotX>0.546875</hotspotX>
+                        <hotspotY>0.786458313</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -819,6 +845,7 @@
                         <DoubleJump>0</DoubleJump>
                         <CurrentPowerup>0</CurrentPowerup>
                         <SageCount>0</SageCount>
+                        <PowerUpCollected>0</PowerUpCollected>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -1630,32 +1657,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PowerUp_Mushroom_Rainbow" uid="388">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <RotateTowards>-90</RotateTowards>
-                        <Gap>0</Gap>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1476</x>
-                        <y>367</y>
-                        <z>0</z>
-                        <width>192</width>
-                        <height>192</height>
-                        <depth>0</depth>
-                        <hotspotX>0.546875</hotspotX>
-                        <hotspotY>0.786458313</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Collectible_Marker_Bottom" uid="463">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1716,34 +1717,7 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="PowerUp_Mushroom_Rainbow" uid="893">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <RotateTowards>-90</RotateTowards>
-                        <Gap>0</Gap>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>633</x>
-                        <y>373</y>
-                        <z>0</z>
-                        <width>192</width>
-                        <height>192</height>
-                        <depth>0</depth>
-                        <hotspotX>0.546875</hotspotX>
-                        <hotspotY>0.786458313</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="UI" sid="4878978946171137">
