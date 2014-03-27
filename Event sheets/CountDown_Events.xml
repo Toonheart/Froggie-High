@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CountDown_Events</name>
+    <events>
+        <event-group description="" sid="7743060261375672" title="This event sheet iss included in UIEvents which is comonly included in all worlds" />
+        <event-block sid="4784769434819698">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3012417088276554" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="488663625320652" type="System">
+                    <param id="0" name="Object to create">CountDown</param>
+                    <param id="1" name="Layer">&quot;HUD&quot;</param>
+                    <param id="2" name="X">400</param>
+                    <param id="3" name="Y">640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7810168792122543">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="8278449553644899" type="CountDown" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="9856463784676275" type="PlayerBox">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9818817346185678">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="6657843098692156" type="CountDown" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="9686652898053127" type="PlayerBox">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7207482875357121">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="4411252550434814" type="CountDown">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7453750374491102" type="CountDown" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

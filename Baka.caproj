@@ -34,6 +34,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -56,7 +57,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="Froggie" sid="2568297134087841">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1563,6 +1564,9 @@
                 <behavior-type name="Bullet" sid="836168291004137">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="Solid" sid="5066496816706674">
+                    <behavior id="solid" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987500583089823" speed="6">
@@ -1657,7 +1661,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Beaten" pingpong="0" repeatcount="1" repeatto="0" sid="1182025344399613" speed="1">
+                <animation framecount="1" loop="0" name="Beaten" pingpong="0" repeatcount="3" repeatto="0" sid="1182025344399613" speed="1">
                     <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.302326" y="0.203125" />
@@ -6882,7 +6886,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682452433405063" speed="0.2">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682452433405063" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -11089,6 +11093,32 @@
         <object-type name="IntelXDK" sid="4721475574774426">
             <plugin id="appMobi" />
         </object-type>
+        <object-type name="StoryBoard_Status" sid="1404934783622383">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="CurrentFrame" sid="2045515665442576" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Passive" pingpong="0" repeatcount="1" repeatto="0" sid="5706306214414241" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Active" pingpong="0" repeatcount="1" repeatto="0" sid="5510134226265978" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CountDown" sid="2827991755826852">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9950677216721166" speed="1">
+                    <frame duration="1" hotspotX="0.501548" hotspotY="0.502128" />
+                    <frame duration="1" hotspotX="0.501548" hotspotY="0.502128" />
+                    <frame duration="1" hotspotX="0.501548" hotspotY="0.502128" />
+                    <frame duration="1" hotspotX="0.501548" hotspotY="0.502128" />
+                    <frame duration="1" hotspotX="0.501548" hotspotY="0.502128" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Obstacles" plugin-id="Sprite" sid="3424422287576847">
@@ -11349,7 +11379,7 @@
             </members>
         </family>
     </families>
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>OctoWorld.xml</layout>
         <layout>HumanWorld.xml</layout>
         <layout>CatWorld.xml</layout>
@@ -11455,6 +11485,7 @@
         <event-sheet>HUmanWorld_Events.xml</event-sheet>
         <event-sheet>HumanWorld_Enemies.xml</event-sheet>
         <event-sheet>IAP_Events.xml</event-sheet>
+        <event-sheet>CountDown_Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="23">
@@ -11500,7 +11531,7 @@
         </global-instance>
         <global-instance type="IntelXDK" uid="10" />
     </global-instances>
-    <sounds-folder expanded="1">
+    <sounds-folder expanded="0">
         <file name="Jump.ogg" />
         <file name="Fall.ogg" />
         <file name="collectible.m4a" />

@@ -13,16 +13,16 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="6869431248789643" type="Enemy_OctoBOSS">
+                        <action id="-10" name="Set value" sid="6869431248789643" type="Enemy_OctoBOSS">
                             <param id="0" name="Instance variable">MoveAngle</param>
-                            <param id="1" name="Value">-45</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="6111362022213214" type="Enemy_OctoBOSS">
-                            <param id="0" name="Angle">-45</param>
+                            <param id="0" name="Angle">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4933949180757778">
+                <event-block disabled="1" sid="4933949180757778">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="7295347921150158" type="Enemy_OctoBOSS">
                             <param id="0" name="Object">Border_Top_ViewPort</param>
@@ -58,18 +58,6 @@
                         <action behavior="Bullet" id="0" name="Set speed" sid="1817289250819806" type="Enemy_OctoBOSS">
                             <param id="0" name="Speed">100</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3865761674978195">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6869870457944287" type="Enemy_OctoBOSS">
-                            <param id="0" name="Instance variable">Health</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="9715720622303514" type="Enemy_OctoBOSS" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -283,7 +271,7 @@
                         <condition id="-8" name="Compare two values" sid="3627816815798224" type="System">
                             <param id="0" name="First value">distance(Froggie.X,Froggie.Y,Enemy_SpikyOcto.X,Enemy_SpikyOcto.Y)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">256</param>
+                            <param id="2" name="Second value">384</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -336,7 +324,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6326829394498091" title="GiftBox Effects">
+        <event-group description="" sid="6326829394498091" title="GiftBox Effects">
             <sub-events>
                 <event-block sid="4779730656366491">
                     <conditions>

@@ -4,16 +4,6 @@
     <name>StoryBoardEvents</name>
     <events>
         <variable constant="0" name="ScrollLX" sid="1302515590558257" static="0" type="number">400</variable>
-        <event-block sid="1840337952571113">
-            <conditions>
-                <condition id="1" name="On any touch end" sid="7786466704390558" type="Touch" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="9413782445117994" type="System">
-                    <param id="0" name="Layout">WorldSelect</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="404431609177298">
             <conditions>
                 <condition id="3" name="Compare frame" sid="8348872034748946" type="Story1">
@@ -25,6 +15,96 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="868419092606503" type="System">
                     <param id="0" name="Layout">WorldSelect</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="7348938299787009" title="User Interface">
+            <sub-events>
+                <event-block sid="9619504656154798">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="7471394295209905" type="Touch">
+                            <param id="0" name="Object">StoryBoard_Status</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="8828933704666787" type="StoryBoard_Status">
+                            <param id="0" name="Scale">1.02</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2213322528041307">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="6658361296304892" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="9426733205034547" type="StoryBoard_Status">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="6693587577226033" type="Story1">
+                                    <param id="0" name="Frame number">StoryBoard_Status.CurrentFrame</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4823649204029219">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5895991171655341" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="3802812978514507" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="3690813922611836" type="StoryBoard_Status">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block collapsed="1" sid="4314214657976841">
+            <conditions>
+                <condition id="-11" name="For Each" sid="1505893417164537" type="System">
+                    <param id="0" name="Object">StoryBoard_Status</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5675101112796413">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9464316733938623" type="StoryBoard_Status">
+                            <param id="0" name="Instance variable">CurrentFrame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Story1.AnimationFrame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1228724935134628" type="StoryBoard_Status">
+                            <param id="0" name="Animation">&quot;Active&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8347280324578595">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5509038790830458" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2337376194995358" type="StoryBoard_Status">
+                            <param id="0" name="Animation">&quot;Passive&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3202472865980072">
+            <conditions>
+                <condition id="2" name="Is pause" sid="3043639572361537" type="Pause" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="691084707169284" type="StoryBoard_Status">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>
