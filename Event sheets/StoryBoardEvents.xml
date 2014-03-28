@@ -4,21 +4,7 @@
     <name>StoryBoardEvents</name>
     <events>
         <variable constant="0" name="ScrollLX" sid="1302515590558257" static="0" type="number">400</variable>
-        <event-block sid="404431609177298">
-            <conditions>
-                <condition id="3" name="Compare frame" sid="8348872034748946" type="Story1">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">4</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="2807232155095822" type="System" />
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="868419092606503" type="System">
-                    <param id="0" name="Layout">WorldSelect</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-group collapsed="1" description="" sid="7348938299787009" title="User Interface">
+        <event-group description="" sid="7348938299787009" title="User Interface">
             <sub-events>
                 <event-block sid="9619504656154798">
                     <conditions>
@@ -98,15 +84,49 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3202472865980072">
+        <event-block collapsed="1" sid="9781946007190344">
             <conditions>
-                <condition id="2" name="Is pause" sid="3043639572361537" type="Pause" />
+                <condition id="4" name="Is touching object" sid="57830490682102" type="Touch">
+                    <param id="0" name="Object">Story1</param>
+                </condition>
+                <condition id="4" inverted="1" name="Is touching object" sid="8377935634123018" type="Touch">
+                    <param id="0" name="Object">StoryBoard_Status</param>
+                </condition>
             </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="691084707169284" type="StoryBoard_Status">
-                    <param id="0" name="Frame number">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="1717477315414053">
+                    <conditions>
+                        <condition id="11" name="On Nth touch end" sid="8077029744029462" type="Touch">
+                            <param id="0" name="Touch number">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="2782358090722416" type="System">
+                            <param id="0" name="First value">Story1.AnimationFrame</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="9677056204710734" type="Story1">
+                            <param id="0" name="Frame number">Self.AnimationFrame+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4180615417152554">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1829946605010518" type="System">
+                            <param id="0" name="First value">Story1.AnimationFrame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="868419092606503" type="System">
+                            <param id="0" name="Layout">WorldSelect</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

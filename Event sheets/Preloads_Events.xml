@@ -8,6 +8,10 @@
                 <condition id="-2" name="On start of layout" sid="3557076738408311" type="System" />
             </conditions>
             <actions>
+                <action id="-10" name="Set value" sid="8308305379620954" type="Preload_Baka">
+                    <param id="0" name="Instance variable">AnimSelector</param>
+                    <param id="1" name="Value">round(random(0,3))</param>
+                </action>
                 <action id="5" name="Set web font" sid="701520778099098" type="Text_NewsFeed">
                     <param id="0" name="Family name">&quot;flavorsregular&quot;</param>
                     <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
@@ -104,6 +108,146 @@
             <actions>
                 <action id="-2" name="Go to layout" sid="3243813741448408" type="System">
                     <param id="0" name="Layout">Title_Screen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="Custom fade effects for loading text" sid="8855967015283002" title="Loading Text Effects">
+            <sub-events>
+                <event-block sid="6673696553426505">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4036880457513491" type="Sprite">
+                            <param id="0" name="Instance variable">Fader</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7638645186943705">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="8679734230342694" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="6056731025177164" type="Sprite">
+                                    <param id="0" name="Opacity">Self.Opacity+50*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9221161421492241">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="478197880586436" type="Sprite">
+                            <param id="0" name="Instance variable">Fader</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4261892634369325">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="5383004871089919" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="1433797021410177" type="Sprite">
+                                    <param id="0" name="Opacity">Self.Opacity-50*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5151068878698267">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="6638289145291078" type="Sprite">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Opacity">95</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5535470448161835" type="Sprite">
+                            <param id="0" name="Instance variable">Fader</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8990214601510336">
+                    <conditions>
+                        <condition id="-10" name="Compare opacity" sid="7949486530488977" type="Sprite">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Opacity">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4248838574969536" type="Sprite">
+                            <param id="0" name="Instance variable">Fader</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="9380879233461961">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="148053330523665" type="Preload_Baka">
+                    <param id="0" name="Instance variable">AnimSelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="8253058675118684" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7393942149553482" type="Preload_Baka">
+                    <param id="0" name="Animation">&quot;Haammer&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6752771365068235">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="233072132524225" type="Preload_Baka">
+                    <param id="0" name="Instance variable">AnimSelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="8004943656828108" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6055975327293049" type="Preload_Baka">
+                    <param id="0" name="Animation">&quot;Sage&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1765964605919258">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3516755775905491" type="Preload_Baka">
+                    <param id="0" name="Instance variable">AnimSelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="8117816325673351" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7750969355993203" type="Preload_Baka">
+                    <param id="0" name="Animation">&quot;Hitman&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8527609872332938">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9859424980211505" type="Preload_Baka">
+                    <param id="0" name="Instance variable">AnimSelector</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="7809301873274948" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="6594105406421008" type="Preload_Baka">
+                    <param id="0" name="Animation">&quot;Unicorn&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

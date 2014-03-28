@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="BrashMonkey" id="Spriter" version="1">Scml</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
         <plugin author="Scirra/Intel" id="appMobi" version="1">Intel XDK</plugin>
@@ -57,7 +58,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">Never</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="Froggie" sid="2568297134087841">
             <plugin id="Sprite" />
             <instance-variables>
@@ -6422,20 +6423,30 @@
         </object-type>
         <object-type name="Preload_Baka" sid="7937740791359296">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="AnimSelector" sid="862695802364851" type="number" />
+            </instance-variables>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4953960874669314" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.345703" y="0.345703" />
-                            <point x="0.5" y="0.146484" />
-                            <point x="0.693359" y="0.306641" />
-                            <point x="0.701172" y="0.5" />
-                            <point x="0.65625" y="0.65625" />
-                            <point x="0.5" y="0.894531" />
-                            <point x="0.125" y="0.875" />
-                            <point x="0.332031" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="4" loop="1" name="Hammer" pingpong="0" repeatcount="1" repeatto="0" sid="4953960874669314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="4" loop="1" name="Sage" pingpong="0" repeatcount="1" repeatto="0" sid="7319778963659524" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="2" loop="1" name="Hitman" pingpong="0" repeatcount="1" repeatto="0" sid="1881877580763723" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="3" loop="1" name="Unicorn" pingpong="0" repeatcount="1" repeatto="0" sid="3319309733300196" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -6886,8 +6897,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682452433405063" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682452433405063" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -11118,6 +11128,63 @@
                     <frame duration="1" hotspotX="0.501548" hotspotY="0.502128" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="GiftRays" sid="5886765425634816">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Direction" sid="342045804753759" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="7438656531958742">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9110238779988697" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.405556" y="0.405556" />
+                            <point x="0.5" y="0.402778" />
+                            <point x="0.641667" y="0.358333" />
+                            <point x="0.902778" y="0.5" />
+                            <point x="0.752778" y="0.752778" />
+                            <point x="0.5" y="0.427778" />
+                            <point x="0.233333" y="0.766667" />
+                            <point x="0.113889" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="8308176659278985">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Fader" sid="4880774161599842" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1166482815064282" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506024">
+                        <collision-poly>
+                            <point x="0.0654008" y="0.373494" />
+                            <point x="0.5" y="0.144578" />
+                            <point x="0.981013" y="0.108434" />
+                            <point x="0.953587" y="0.73494" />
+                            <point x="0.5" y="0.722892" />
+                            <point x="0.0464135" y="0.73494" />
+                            <point x="0.021097" y="0.493976" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SplashFader" sid="2603585830515546">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Fade" sid="3990515186467563">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture />
         </object-type>
     </object-folder>
     <families>

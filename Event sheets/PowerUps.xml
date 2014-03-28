@@ -1409,7 +1409,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1965138098169488" title="Powerup Generation For big Bos Kill">
+        <event-group description="" sid="1965138098169488" title="Powerup Generation For big Bos Kill">
             <sub-events>
                 <event-block collapsed="1" sid="8134461955844272">
                     <conditions>
@@ -1450,34 +1450,53 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5296632842382187" type="System" />
                     </conditions>
                     <actions>
                         <action id="11" name="Set collisions enabled" sid="8769761823024071" type="EnemyBoss">
                             <param id="0" name="Collisions">0</param>
                         </action>
-                        <action id="-3" name="Create object" sid="4975187649398928" type="System">
+                        <action id="-3" name="Create object" sid="5915360835146712" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="X">EnemyBoss.X+random(-200,200)</param>
-                            <param id="3" name="Y">EnemyBoss.Y+random(-200,20)</param>
+                            <param id="3" name="Y">EnemyBoss.Y+random(-200,200)</param>
                         </action>
                         <action id="-16" name="Wait" sid="8571872073027899" type="System">
                             <param id="0" name="Seconds">0.3</param>
                         </action>
-                        <action id="-3" name="Create object" sid="4344069023746654" type="System">
+                        <action id="-3" name="Create object" sid="4244926474542733" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="X">EnemyBoss.X+random(-200,200)</param>
-                            <param id="3" name="Y">EnemyBoss.Y+random(-200,20)</param>
+                            <param id="3" name="Y">EnemyBoss.Y+random(-200,200)</param>
                         </action>
                         <action id="-16" name="Wait" sid="289131249960642" type="System">
                             <param id="0" name="Seconds">0.3</param>
                         </action>
-                        <action id="-3" name="Create object" sid="3945923545677612" type="System">
+                        <action id="-3" name="Create object" sid="4913297167772329" type="System">
                             <param id="0" name="Object to create">EnemySmoke</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
                             <param id="2" name="X">EnemyBoss.X+random(-200,200)</param>
-                            <param id="3" name="Y">EnemyBoss.Y+random(-200,20)</param>
+                            <param id="3" name="Y">EnemyBoss.Y+random(-200,200)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="890936925058891" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6159562839165693" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">EnemyBoss.X+random(-200,200)</param>
+                            <param id="3" name="Y">EnemyBoss.Y+random(-200,200)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="4512126090632868" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="122192066035579" type="System">
+                            <param id="0" name="Object to create">EnemySmoke</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">EnemyBoss.X+random(-200,200)</param>
+                            <param id="3" name="Y">EnemyBoss.Y+random(-200,200)</param>
                         </action>
                         <action id="-9" name="Destroy" sid="6296934070435438" type="EnemyBoss" />
                     </actions>

@@ -2243,6 +2243,16 @@
                         <condition id="-19" name="On destroyed" sid="1367774142389807" type="EnemyBoss" />
                     </conditions>
                     <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4804416612725817" type="GiftRays">
+                            <param id="0" name="Pin to">Collectible_Big</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="7036763482996974" type="System">
+                            <param id="0" name="Object to create">GiftRays</param>
+                            <param id="1" name="Layer">&quot;Objects&quot;</param>
+                            <param id="2" name="X">400</param>
+                            <param id="3" name="Y">ViewportTop(&quot;GAME&quot;)+100</param>
+                        </action>
                         <action id="-3" name="Create object" sid="3046364739122678" type="System">
                             <param id="0" name="Object to create">Collectible_Big</param>
                             <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -2277,5 +2287,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="5288446578049348" title="GiftBox Effects4" />
     </events>
 </c2eventsheet>
