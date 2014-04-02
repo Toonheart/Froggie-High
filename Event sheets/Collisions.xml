@@ -6,7 +6,7 @@
         <event-group collapsed="1" description="" sid="909091857750047" title="Octo World Enemies">
             <sub-events>
                 <comment>If Frog Landed on Spikes kill the frog</comment>
-                <event-block collapsed="1" sid="9786835711709051">
+                <event-block sid="9786835711709051">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3961149837030682" type="Froggie">
                             <param id="0" name="Object">Enemy_SpikyOcto</param>
@@ -2251,14 +2251,6 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4519634016169378">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1929793401282871" type="Froggie">
-                    <param id="0" name="Object">Enemy</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
         <event-group collapsed="1" description="" sid="6928592811737164" title="Cat World Enemies">
             <sub-events>
                 <comment>Grumpy Cat</comment>
@@ -7776,5 +7768,23 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4999523612465031">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9547137961755248" type="Froggie">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="2890065219642695" type="System">
+                    <param id="0" name="Time scale">0.2</param>
+                </action>
+                <action id="-16" name="Wait" sid="167548265676578" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="8052129367034708" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

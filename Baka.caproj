@@ -929,7 +929,7 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="981822620046338" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508333">
                         <collision-poly>
                             <point x="0.15625" y="0.154639" />
                             <point x="0.5" y="0" />
@@ -11084,7 +11084,35 @@
         <object-type name="Collectible_Big" sid="8187511757528505">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4843288638806192" speed="5">
+                <animation framecount="1" loop="0" name="Level1" pingpong="0" repeatcount="1" repeatto="0" sid="4843288638806192" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.402344" y="0.402344" />
+                            <point x="0.5" y="0.363281" />
+                            <point x="0.603516" y="0.396484" />
+                            <point x="0.677734" y="0.5" />
+                            <point x="0.611328" y="0.611328" />
+                            <point x="0.5" y="0.634766" />
+                            <point x="0.402344" y="0.597656" />
+                            <point x="0.367188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Level2" pingpong="0" repeatcount="1" repeatto="0" sid="209396514932631" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.402344" y="0.402344" />
+                            <point x="0.5" y="0.363281" />
+                            <point x="0.603516" y="0.396484" />
+                            <point x="0.677734" y="0.5" />
+                            <point x="0.611328" y="0.611328" />
+                            <point x="0.5" y="0.634766" />
+                            <point x="0.402344" y="0.597656" />
+                            <point x="0.367188" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Level3" pingpong="0" repeatcount="1" repeatto="0" sid="7710975293180467" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.402344" y="0.402344" />
@@ -11482,7 +11510,7 @@
         <layout>GraphicStore10.xml</layout>
         <layout>IAP.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>OctoWorld_Events.xml</event-sheet>
         <event-sheet>Debug.xml</event-sheet>
         <event-sheet>HUD.xml</event-sheet>
@@ -11632,6 +11660,12 @@
         <file name="ShoeJump.m4a" />
         <file name="ShoeJump.ogg" />
         <file name="ShoeJump.wav" />
+        <file name="Tap.m4a" />
+        <file name="Tap.ogg" />
+        <file name="Tap.wav" />
+        <file name="LockedLevl.m4a" />
+        <file name="LockedLevl.ogg" />
+        <file name="LockedLevl.wav" />
     </sounds-folder>
     <music-folder expanded="0">
         <file name="EMPTY [High quality].ogg" />

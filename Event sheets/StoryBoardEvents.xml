@@ -4,7 +4,7 @@
     <name>StoryBoardEvents</name>
     <events>
         <variable constant="0" name="ScrollLX" sid="1302515590558257" static="0" type="number">400</variable>
-        <event-group description="" sid="7348938299787009" title="User Interface">
+        <event-group collapsed="1" description="" sid="7348938299787009" title="User Interface">
             <sub-events>
                 <event-block sid="9619504656154798">
                     <conditions>
@@ -107,6 +107,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="3098051378921829" type="Audio">
+                            <param id="0" name="Audio file">Tap</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Tap&quot;</param>
+                        </action>
                         <action id="5" name="Set frame" sid="9677056204710734" type="Story1">
                             <param id="0" name="Frame number">Self.AnimationFrame+1</param>
                         </action>
@@ -121,6 +127,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="5973899801968179" type="Audio">
+                            <param id="0" name="Audio file">Tap</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Tap&quot;</param>
+                        </action>
                         <action id="-2" name="Go to layout" sid="868419092606503" type="System">
                             <param id="0" name="Layout">WorldSelect</param>
                         </action>

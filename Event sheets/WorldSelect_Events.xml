@@ -18,7 +18,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="3376688132381048" type="System">
                     <param id="0" name="Variable">HighestUnlockedWorld</param>
-                    <param id="1" name="Value">9</param>
+                    <param id="1" name="Value">3</param>
                 </action>
             </actions>
             <sub-events>
@@ -775,11 +775,77 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block collapsed="1" sid="4371373751621482">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="1796667450662382" type="Touch">
+                            <param id="0" name="Object">Icon_WorldSelector</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="7401723240938188" type="Icon_WorldSelector">
+                            <param id="0" name="Animation">&quot;Locked&quot;</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="4902217325138973" type="Touch">
+                            <param id="0" name="Object">Marker_ScrollDown</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="6997010308298383" type="Touch">
+                            <param id="0" name="Object">MarkerScrollUp</param>
+                        </condition>
+                        <condition id="-21" name="Is between values" sid="7917883429158046" type="System">
+                            <param id="0" name="Value">TouchFollowMe.DiffY</param>
+                            <param id="1" name="Lower bound">-4</param>
+                            <param id="2" name="Upper bound">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="1361919260731935" type="Icon_WorldSelector">
+                            <param id="0" name="Scale">1.05</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2598750989223259">
+                            <conditions>
+                                <condition id="11" name="On Nth touch end" sid="4696590844934457" type="Touch">
+                                    <param id="0" name="Touch number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="6705267445875663" type="Icon_WorldSelector">
+                                    <param id="0" name="Scale">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="7591305699856395" type="Audio">
+                                    <param id="0" name="Audio file">LockedLevl</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;LockedLevels&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="" sid="1646596382196649" title="UpdatingHighestUnlockedWorld">
             <sub-events>
-                <event-block sid="2688740518192219">
+                <event-block sid="2988681340592368">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="8601325011792592" type="Collectible_Big" />
+                        <condition id="-8" name="Compare two values" sid="1251286535463971" type="System">
+                            <param id="0" name="First value">CurrentWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">HighestUnlockedWorld</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="6296056251663934" type="WebStr_Common">
+                            <param id="0" name="Key">&quot;CompletedWorlds&quot;</param>
+                            <param id="1" name="Value">HighestUnlockedWorld</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9244355337445205" type="System">
+                            <param id="0" name="Variable">HighestUnlockedWorld</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="2688740518192219">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="6285562902347124" type="Enemy_OctoBOSS" />
                         <condition id="-8" name="Compare two values" sid="5144627530405765" type="System">
@@ -799,7 +865,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2860803231186881">
+                <event-block disabled="1" sid="2860803231186881">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="9242049855998384" type="Enemy_ChickenBOSS" />
                         <condition id="-8" name="Compare two values" sid="512953091179758" type="System">
@@ -819,7 +885,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1612693641236921">
+                <event-block disabled="1" sid="1612693641236921">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="4683485531506871" type="Enemy_ChimpBoss" />
                         <condition id="-8" name="Compare two values" sid="7071931545841343" type="System">

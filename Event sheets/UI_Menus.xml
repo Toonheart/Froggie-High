@@ -215,10 +215,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7132109060416404" title="GameOver">
+        <event-group description="" sid="7132109060416404" title="GameOver">
             <sub-events>
                 <comment>If game over update the high score And Show the GameOver menus on UI BG</comment>
-                <event-block collapsed="1" sid="3207011321876616">
+                <event-block sid="3207011321876616">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="2826568762651674" type="Froggie" />
                     </conditions>
@@ -440,7 +440,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
+        <event-group description="" sid="600859996812022" title="User Inputs for Both Pause Menus and GameOver Menus">
             <sub-events>
                 <comment>Go to levels screen</comment>
                 <event-block collapsed="1" sid="7442582905420583">
@@ -567,7 +567,7 @@
                     </actions>
                 </event-block>
                 <comment>What is this doing here?  Is there a button achieves on any of the UI?</comment>
-                <event-block sid="5411855955152589">
+                <event-block collapsed="1" sid="5411855955152589">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="736063994034212" type="Touch">
                             <param id="0" name="Object">Button_Achieves</param>
@@ -710,10 +710,55 @@
                                     <param id="0" name="Layer">&quot;TopBlack&quot;</param>
                                     <param id="1" name="Visibility">0</param>
                                 </action>
-                                <action id="-2" name="Go to layout" sid="1469788841747346" type="System">
-                                    <param id="0" name="Layout">WorldSelect</param>
+                                <action id="-9" name="Set value" sid="7035508340329808" type="System">
+                                    <param id="0" name="Variable">CurrentWorld</param>
+                                    <param id="1" name="Value">CurrentWorld+1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="5886462339608111">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="2012431804584459" type="System">
+                                            <param id="0" name="Variable">CurrentWorld</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">HighestUnlockedWorld</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1971682142043462">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="6368581197258166" type="System">
+                                                    <param id="0" name="Variable">CurrentWorld</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="7017212012722955" type="Froggie" />
+                                                <action id="-2" name="Go to layout" sid="1469788841747346" type="System">
+                                                    <param id="0" name="Layout">ChickenWorld</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5426963972170079">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="949577146549163" type="System">
+                                                    <param id="0" name="Variable">CurrentWorld</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="2783143825408659" type="Froggie" />
+                                                <action id="-2" name="Go to layout" sid="1977794530687238" type="System">
+                                                    <param id="0" name="Layout">ChimpWorld</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -732,7 +777,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1265948641350977">
+                <event-block collapsed="1" sid="1265948641350977">
                     <conditions>
                         <condition id="4" name="Is touching object" sid="1075856283837724" type="Touch">
                             <param id="0" name="Object">Button_GiveUp</param>
