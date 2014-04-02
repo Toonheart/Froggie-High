@@ -48,7 +48,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="420459411779005" title="Updating WorldSelector Icons">
+        <event-group collapsed="1" description="" sid="420459411779005" title="Updating WorldSelector Icons">
             <sub-events>
                 <comment>Unlock the world butoon by comparing with highestunlocked var</comment>
                 <event-block collapsed="1" sid="9895106162001461">
@@ -1085,9 +1085,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
+        <event-group description="Scrolling down and Up" sid="8590959296978492" title="Screen Scrooling">
             <sub-events>
-                <event-block collapsed="1" sid="8279651189686509">
+                <event-block sid="8279651189686509">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="7139573914149921" type="System" />
                     </conditions>
@@ -1110,7 +1110,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-6" name="Scroll to Y" sid="6036468926419245" type="System">
+                                        <action id="-2" name="Set Y" sid="6036468926419245" type="TouchFollowMe">
                                             <param id="0" name="Y">Icon_WorldSelector.Y</param>
                                         </action>
                                     </actions>
@@ -1195,7 +1195,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5530850457891574" title="SwipeScroll">
+        <event-group description="" sid="5530850457891574" title="SwipeScroll">
             <sub-events>
                 <event-block sid="7292333214088898">
                     <conditions>

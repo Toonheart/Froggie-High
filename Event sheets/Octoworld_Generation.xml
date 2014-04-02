@@ -36,7 +36,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3631647608001766" title="Initializing WebStorage">
+        <event-group description="" sid="3631647608001766" title="Initializing WebStorage">
             <sub-events>
                 <comment>Creat aLocal storage for HighScore if doesn&apos;t Exist</comment>
                 <event-block sid="1047586958962689">
@@ -54,7 +54,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -127,7 +127,7 @@
                                     <actions />
                                     <sub-events>
                                         <comment>- BIG COLLECTIBLE GENERATION SET.&#x0D;&#x0A;Considering, 90 to 100 floorcount as end of each worldsection and part of game where player should be rewarded.</comment>
-                                        <event-block collapsed="1" sid="3718600925621546">
+                                        <event-block sid="3718600925621546">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="5620971042716134" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor</param>
@@ -380,7 +380,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>ELECTRO OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 3.&#x0D;&#x0A;Appears 2 times for every world section after that.</comment>
-                                        <event-block collapsed="1" sid="5869404266771602">
+                                        <event-block sid="5869404266771602">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="650428344985507" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%Enemy_ElectroOctoGap</param>
@@ -452,7 +452,7 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>SPIKY OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 1.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block collapsed="1" sid="209666610400614">
+                                        <event-block sid="209666610400614">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="3920147378114607" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%Enemy_SpikyOctoGap</param>
@@ -524,7 +524,7 @@
                                             </sub-events>
                                         </event-block>
                                         <comment>FLYING OCTOPUS&#x0D;&#x0A;Gets unlocked after Worldsection 2.&#x0D;&#x0A;Appears 3 times for every worldsection after that.</comment>
-                                        <event-block collapsed="1" sid="4071968505375019">
+                                        <event-block sid="4071968505375019">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="4904365480821593" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%35</param>
@@ -655,6 +655,7 @@
                                                 <action id="9" name="Set scale" sid="1731358914165957" type="Floor_Grass_Normal">
                                                     <param id="0" name="Scale">1</param>
                                                 </action>
+                                                <action disabled="1" id="-9" name="Destroy" sid="2796877449252215" type="Floor_Grass_Normal" />
                                                 <action id="0" name="Spawn another object" sid="4821846726636839" type="Floor_Grass_Normal">
                                                     <param id="0" name="Object">PowerUp_Mushroom_Rainbow</param>
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
@@ -695,7 +696,6 @@
                                                     <param id="1" name="Layer">&quot;Objects&quot;</param>
                                                     <param id="2" name="Image point">&quot;PowerUp&quot;</param>
                                                 </action>
-                                                <action disabled="1" id="-9" name="Destroy" sid="2796877449252215" type="Floor_Grass_Normal" />
                                                 <action id="-10" name="Set value" sid="812508345334304" type="Floor_Grass_Normal">
                                                     <param id="0" name="Instance variable">Status</param>
                                                     <param id="1" name="Value">1</param>
@@ -707,7 +707,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>GENERATING CANDIES Randomly for every random(1,4) Floorcount gap.&#x0D;&#x0A;Checking if current floor number is divisible by sequence of 4 to 1.&#x0D;&#x0A;Depending on which condition gets true, we decide the number of candies that should be generated on that floor.&#x0D;&#x0A;Else, if it skips all numbers, then that must be a prime platform and our random seed isnt 1.. in which case no candy is available on it.</comment>
-                                        <event-block collapsed="1" sid="9132199170922339">
+                                        <event-block sid="9132199170922339">
                                             <conditions>
                                                 <condition id="-8" name="Compare two values" sid="9505388436923064" type="System">
                                                     <param id="0" name="First value">Floor_Grass_Normal.PresentFloor%round(random(1,4))</param>
@@ -1328,7 +1328,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
+        <event-group description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>
@@ -1605,7 +1605,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>
@@ -1658,7 +1658,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6635586928221191" title="CANDY - Animation">
+        <event-group description="" sid="6635586928221191" title="CANDY - Animation">
             <sub-events>
                 <comment>Unlocking NEW candies for every 30 Floors</comment>
                 <event-block sid="1720099121757819">
@@ -1946,7 +1946,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Randomly toggle visibility of placed objects at th start of the layout" sid="7794641183810189" title="Background Randomization">
+        <event-group description="Randomly toggle visibility of placed objects at th start of the layout" sid="7794641183810189" title="Background Randomization">
             <sub-events>
                 <comment>At the start of the layout randomly set the visibility status variable to random 0/1.If it is 0 set invissible or if 1 visible.</comment>
                 <event-block sid="9818632824397123">
@@ -1957,7 +1957,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="6372788852379151" title="BIGBOSS - Movement">
+        <event-group description="Movement pattern of boss " disabled="1" sid="6372788852379151" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
                 <event-block disabled="1" sid="117933790335297">
