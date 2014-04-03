@@ -6,7 +6,7 @@
         <event-group collapsed="1" description="" sid="909091857750047" title="Octo World Enemies">
             <sub-events>
                 <comment>If Frog Landed on Spikes kill the frog</comment>
-                <event-block sid="9786835711709051">
+                <event-block collapsed="1" sid="9786835711709051">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3961149837030682" type="Froggie">
                             <param id="0" name="Object">Enemy_SpikyOcto</param>
@@ -45,7 +45,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" collapsed="1" sid="7354485668556846">
+                        <event-block any="1" sid="7354485668556846">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4542055871652909" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
@@ -104,6 +104,11 @@
                         <event-block sid="1117018186742664">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9375780645860452" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="2405297484073995" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8634931368682401" type="Froggie">
@@ -221,7 +226,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="8644181953438045">
+                        <event-block any="1" collapsed="1" sid="8644181953438045">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="1777538890798052" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
@@ -280,6 +285,11 @@
                         <event-block sid="6999956239811167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1726037434611126" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="9920542735336656" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="4798784992415079" type="Froggie">
@@ -396,7 +406,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block any="1" sid="9323176089460651">
+                        <event-block any="1" collapsed="1" sid="9323176089460651">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="9854223366403851" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
@@ -455,6 +465,11 @@
                         <event-block sid="6972465305974262">
                             <conditions>
                                 <condition id="-22" name="Else" sid="17692764018893" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5194453326512485" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5618279254797601" type="Froggie">
@@ -629,6 +644,11 @@
                         <event-block sid="2825244825774401">
                             <conditions>
                                 <condition id="-22" name="Else" sid="5044889869075365" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1679996701006343" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="9983089119858758" type="Froggie">
@@ -708,9 +728,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6397730328085739" title="Chicken World Enemies">
+        <event-group description="" sid="6397730328085739" title="Chicken World Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="7020705298719823">
+                <event-block sid="7020705298719823">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1561724124942272" type="Froggie">
                             <param id="0" name="Object">Enemy_Flu_Chicken</param>
@@ -821,6 +841,11 @@
                         <event-block sid="480987907092414">
                             <conditions>
                                 <condition id="-22" name="Else" sid="4095252508792108" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="7494116274835737" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="7676985648833245" type="Froggie">
@@ -898,7 +923,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3088645526915661">
+                <event-block sid="3088645526915661">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
                             <param id="0" name="Object">EnemyBoxer_Chicken</param>
@@ -996,6 +1021,11 @@
                         <event-block sid="8052135461005291">
                             <conditions>
                                 <condition id="-22" name="Else" sid="4761028513079052" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="2591409006107835" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5099861288754855" type="Froggie">
@@ -1073,7 +1103,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="9805787308421112">
+                <event-block sid="9805787308421112">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3022495366874511" type="Froggie">
                             <param id="0" name="Object">Enemy_PatroChicken_Left</param>
@@ -1170,6 +1200,11 @@
                         <event-block sid="6152590351094441">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1067369060507648" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5007434216373537" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6947628963669015" type="Froggie">
@@ -1247,7 +1282,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3390121730289171">
+                <event-block sid="3390121730289171">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2652465807405978" type="Froggie">
                             <param id="0" name="Object">Enemy_PatroChicken_Right</param>
@@ -1344,6 +1379,11 @@
                         <event-block sid="7849425819618202">
                             <conditions>
                                 <condition id="-22" name="Else" sid="8516157630293646" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="9402354517490907" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="2314583276080543" type="Froggie">
@@ -1423,9 +1463,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7889971496850357" title="Chimp World Enemies">
+        <event-group description="" sid="7889971496850357" title="Chimp World Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="3088645526915661">
+                <event-block sid="3088645526915661">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4170452308773481" type="Froggie">
                             <param id="0" name="Object">Enemy_Chimp_Bash</param>
@@ -1523,6 +1563,11 @@
                         <event-block sid="8052135461005291">
                             <conditions>
                                 <condition id="-22" name="Else" sid="4761028513079052" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="9408656593636075" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5099861288754855" type="Froggie">
@@ -1600,7 +1645,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="7020705298719823">
+                <event-block sid="7020705298719823">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1561724124942272" type="Froggie">
                             <param id="0" name="Object">Enemy_Chimp_Baboon</param>
@@ -1639,7 +1684,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="5503750609885069">
+                        <event-block sid="5503750609885069">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7542413159649352" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
@@ -1702,6 +1747,11 @@
                         <event-block sid="5295139944222333">
                             <conditions>
                                 <condition id="-22" name="Else" sid="5520380914618959" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="3344370940292066" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8951716782808769" type="Froggie">
@@ -1876,6 +1926,11 @@
                         <event-block sid="6152590351094441">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1067369060507648" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="8527248473428544" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6947628963669015" type="Froggie">
@@ -1953,7 +2008,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="200638602498121">
+                <event-block sid="200638602498121">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5009733168748031" type="Froggie">
                             <param id="0" name="Object">Enemy_Chimp_Patro_Right</param>
@@ -2050,6 +2105,11 @@
                         <event-block sid="7443558414530456">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9151804150978978" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="6313065359043889" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5051692795201875" type="Froggie">
@@ -2136,10 +2196,15 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="3390121730289171">
+                <event-block sid="3390121730289171">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2652465807405978" type="Froggie">
                             <param id="0" name="Object">Weapon_Baboon</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9832649941749035" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -2251,10 +2316,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="6928592811737164" title="Cat World Enemies">
+        <event-group description="" sid="6928592811737164" title="Cat World Enemies">
             <sub-events>
                 <comment>Grumpy Cat</comment>
-                <event-block collapsed="1" sid="2366190663407094">
+                <event-block sid="2366190663407094">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
                             <param id="0" name="Object">Enemy_GrumpyCat</param>
@@ -2352,6 +2417,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="2968527206059631" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -2429,7 +2499,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Enemy_MadCat</param>
@@ -2527,6 +2597,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4011671746328136" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -2604,7 +2679,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enemy_FlyingCatLeft</param>
@@ -2642,7 +2717,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="9192569426220203">
+                        <event-block sid="9192569426220203">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7945806560215736" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
@@ -2701,6 +2776,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="6377091858258871" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -2778,7 +2858,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1372081272993377">
+                <event-block sid="1372081272993377">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6669181915691073" type="Froggie">
                             <param id="0" name="Object">Enemy_FlyingCatRight</param>
@@ -2875,6 +2955,11 @@
                         <event-block sid="2176257654717277">
                             <conditions>
                                 <condition id="-22" name="Else" sid="2399295821820965" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1016865403265285" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8209503361991802" type="Froggie">
@@ -2956,6 +3041,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2335900277715152" type="Froggie">
                             <param id="0" name="Object">Bullet_Pumpkin</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4843935494532396" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -3043,6 +3133,11 @@
                         <condition id="0" name="On collision with another object" sid="1371287305569555" type="Froggie">
                             <param id="0" name="Object">GrumpyEyes</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9327922143850098" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="4796999163902965" type="GrumpyEyes">
@@ -3129,6 +3224,11 @@
                         <condition id="0" name="On collision with another object" sid="545115234586963" type="Froggie">
                             <param id="0" name="Object">Lazer</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5157243448796159" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="4424452117215321" type="Lazer">
@@ -3212,10 +3312,10 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3509019601021966" title="Crok World Enemies">
+        <event-group description="" sid="3509019601021966" title="Crok World Enemies">
             <sub-events>
                 <comment>Grumpy Cat</comment>
-                <event-block collapsed="1" sid="2366190663407094">
+                <event-block sid="2366190663407094">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
                             <param id="0" name="Object">Enemy_CrocWorldChamelian</param>
@@ -3313,6 +3413,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="1217636589840096" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -3390,7 +3495,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Enemy_CrocWorldIguna</param>
@@ -3488,6 +3593,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5253684578267566" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -3565,7 +3675,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enemy_CrocWorldFlyingLeft</param>
@@ -3662,6 +3772,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4232461687277394" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -3739,7 +3854,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1372081272993377">
+                <event-block sid="1372081272993377">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6669181915691073" type="Froggie">
                             <param id="0" name="Object">Enemy_CrocWorldFlyingRight</param>
@@ -3836,6 +3951,11 @@
                         <event-block sid="2176257654717277">
                             <conditions>
                                 <condition id="-22" name="Else" sid="2399295821820965" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5614673004621152" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8209503361991802" type="Froggie">
@@ -3915,7 +4035,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5928286490214114" title="Turtle World Enemies">
+        <event-group description="" sid="5928286490214114" title="Turtle World Enemies">
             <sub-events>
                 <event-block sid="2366190663407094">
                     <conditions>
@@ -4012,6 +4132,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="7954782331943579" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -4089,7 +4214,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Ememy_TurtleMicheal</param>
@@ -4187,6 +4312,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="9340339688687841" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -4264,7 +4394,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enemy_TurtleFlyingLeft</param>
@@ -4361,6 +4491,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="669929677850772" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -4438,7 +4573,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1372081272993377">
+                <event-block sid="1372081272993377">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6669181915691073" type="Froggie">
                             <param id="0" name="Object">Enemy_TurtleFlyingRight</param>
@@ -4535,6 +4670,11 @@
                         <event-block sid="2176257654717277">
                             <conditions>
                                 <condition id="-22" name="Else" sid="2399295821820965" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5489947586892409" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8209503361991802" type="Froggie">
@@ -4704,6 +4844,11 @@
                         <condition id="0" name="On collision with another object" sid="4539359363752519" type="Froggie">
                             <param id="0" name="Object">Weapon_MichealTurtle</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="667368244670616" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="1411342189204658" type="Weapon_MichealTurtle">
@@ -4786,9 +4931,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="7828007896172924" title="SnakeWorld Enemies">
+        <event-group description="" sid="7828007896172924" title="SnakeWorld Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="2366190663407094">
+                <event-block sid="2366190663407094">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
                             <param id="0" name="Object">Enemy_SnakeWorld1</param>
@@ -4883,6 +5028,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="8772163538336313" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -4960,7 +5110,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Enemy_SnakeWorld2</param>
@@ -5058,6 +5208,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4168030238495603" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -5135,7 +5290,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enemy_TurtleFlyingLeft</param>
@@ -5232,6 +5387,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="6228844966899542" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -5575,6 +5735,11 @@
                         <condition id="0" name="On collision with another object" sid="4159505807119348" type="Froggie">
                             <param id="0" name="Object">Bullet_SnakeTeeth</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9112324457990066" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="89124719876392" type="Bullet_SnakeTeeth">
@@ -5658,9 +5823,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2397004944450105" title="NinjaWorld Enemies">
+        <event-group description="" sid="2397004944450105" title="NinjaWorld Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="2366190663407094">
+                <event-block sid="2366190663407094">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
                             <param id="0" name="Object">Enemy_Ninja1</param>
@@ -5755,6 +5920,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="2513138496923917" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -5832,7 +6002,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Enemy_Ninja2</param>
@@ -5930,6 +6100,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5888410232518488" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -6007,7 +6182,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enemy_FlyingNinjaLeft</param>
@@ -6104,6 +6279,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4403483313150817" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -6278,6 +6458,11 @@
                         <event-block sid="2176257654717277">
                             <conditions>
                                 <condition id="-22" name="Else" sid="2399295821820965" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="7520512743215554" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8209503361991802" type="Froggie">
@@ -6357,9 +6542,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4884002711058312" title="ZombieWorld Enemies">
+        <event-group description="" sid="4884002711058312" title="ZombieWorld Enemies">
             <sub-events>
-                <event-block collapsed="1" sid="2366190663407094">
+                <event-block sid="2366190663407094">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
                             <param id="0" name="Object">ENemy_Zombie2</param>
@@ -6454,6 +6639,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="211982731125287" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -6531,7 +6721,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Enemy_Zombie1</param>
@@ -6629,6 +6819,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="279211917266113" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -6706,7 +6901,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enenmy_Zombie3</param>
@@ -6803,6 +6998,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4303947799204096" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -6885,6 +7085,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3658066963750771" type="Froggie">
                             <param id="0" name="Object">Bullet_ZombieHead</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2116803667897731" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -6972,6 +7177,11 @@
                         <condition id="0" name="On collision with another object" sid="4159505807119348" type="Froggie">
                             <param id="0" name="Object">Bullet_Syrenge</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2880365137436827" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="89124719876392" type="Bullet_Syrenge">
@@ -7055,9 +7265,9 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2415758105636956" title="Human World Eneneis">
+        <event-group description="" sid="2415758105636956" title="Human World Eneneis">
             <sub-events>
-                <event-block collapsed="1" sid="2366190663407094">
+                <event-block sid="2366190663407094">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2774979780601967" type="Froggie">
                             <param id="0" name="Object">Enemy_Human2</param>
@@ -7152,6 +7362,11 @@
                         <event-block sid="6297581256163167">
                             <conditions>
                                 <condition id="-22" name="Else" sid="9775500836208502" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4430163004703475" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="5341121839658764" type="Froggie">
@@ -7229,7 +7444,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="5212670082510636">
+                <event-block sid="5212670082510636">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="6591216211404906" type="Froggie">
                             <param id="0" name="Object">Enemy_Human1</param>
@@ -7327,6 +7542,11 @@
                         <event-block sid="8102814192611625">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1470405953592438" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="5532501066587096" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="8314474378778774" type="Froggie">
@@ -7404,7 +7624,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="1668949320420401">
+                <event-block sid="1668949320420401">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="9036249008013241" type="Froggie">
                             <param id="0" name="Object">Enenmy_Zombie3</param>
@@ -7442,7 +7662,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block collapsed="1" sid="9192569426220203">
+                        <event-block sid="9192569426220203">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="7945806560215736" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
@@ -7501,6 +7721,11 @@
                         <event-block sid="4143323376114784">
                             <conditions>
                                 <condition id="-22" name="Else" sid="835585710527205" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4650547071227761" type="Froggie">
+                                    <param id="0" name="Instance variable">RocketCountDown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="6532610104953157" type="Froggie">
@@ -7583,6 +7808,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="3658066963750771" type="Froggie">
                             <param id="0" name="Object">Bullet_HumanPowerstrip</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4642608513123907" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -7669,6 +7899,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4159505807119348" type="Froggie">
                             <param id="0" name="Object">Bullet_HumanBomb</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9606324035538784" type="Froggie">
+                            <param id="0" name="Instance variable">RocketCountDown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -7768,6 +8003,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Slow Motion Effect on baka got hit by enemies</comment>
         <event-block sid="4999523612465031">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="9547137961755248" type="Froggie">
@@ -7784,6 +8020,31 @@
                 <action id="-13" name="Set time scale" sid="8052129367034708" type="System">
                     <param id="0" name="Time scale">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="543600206547066">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8332215000990032" type="Froggie">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5144406049978349" type="Froggie">
+                    <param id="0" name="Instance variable">RocketCountDown</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1731734044819185" type="Enemy" />
+            </actions>
+        </event-block>
+        <event-block sid="5730717358828435">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5014486596497304" type="Unicorn">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1732241024424862" type="Enemy" />
             </actions>
         </event-block>
     </events>
