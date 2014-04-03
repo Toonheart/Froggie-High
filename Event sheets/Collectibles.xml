@@ -2236,7 +2236,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="4757836670500082" title="Big COllectible">
+        <event-group description="" sid="4757836670500082" title="Big COllectible">
             <sub-events>
                 <event-block sid="6161727978136984">
                     <conditions>
@@ -2310,10 +2310,9 @@
                 </event-block>
                 <event-block sid="9302293704756264">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="5297676194698778" type="Collectible_Big" />
                         <condition id="-2" name="Compare Y" sid="4318255473128277" type="Collectible_Big">
                             <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">500</param>
+                            <param id="1" name="Y co-ordinate">ViewportTop(&quot;Objects&quot;)+500</param>
                         </condition>
                     </conditions>
                     <actions>
