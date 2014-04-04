@@ -8004,7 +8004,7 @@
             </sub-events>
         </event-group>
         <comment>Slow Motion Effect on baka got hit by enemies</comment>
-        <event-block sid="4999523612465031">
+        <event-block disabled="1" sid="4999523612465031">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="9547137961755248" type="Froggie">
                     <param id="0" name="Object">Enemy</param>
@@ -8047,5 +8047,50 @@
                 <action id="-9" name="Destroy" sid="1732241024424862" type="Enemy" />
             </actions>
         </event-block>
+        <event-group description="" sid="8885130533101788" title="Slow Motion Effect On Hit/Sick Playing">
+            <sub-events>
+                <event-block any="1" sid="1778950524544062">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="5328566876962926" type="Froggie">
+                            <param id="0" name="Animation">&quot;Kicked&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="7893073740240555" type="Froggie">
+                            <param id="0" name="Animation">&quot;Pinched&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="5516892305158178" type="Froggie">
+                            <param id="0" name="Animation">&quot;Shocked&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="4941483658911196" type="Froggie">
+                            <param id="0" name="Animation">&quot;JawBreak&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="5653650051150219" type="Froggie">
+                            <param id="0" name="Animation">&quot;Sick&quot;</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="5583526947610783" type="Froggie">
+                            <param id="0" name="Animation">&quot;HeadBump&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3190418325809733">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="5357219536272765" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set time scale" sid="2019989975426154" type="System">
+                                    <param id="0" name="Time scale">0.3</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7297456860663901" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="1754734352191122" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

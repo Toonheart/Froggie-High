@@ -2238,6 +2238,61 @@
         </event-group>
         <event-group description="" sid="4757836670500082" title="Big COllectible">
             <sub-events>
+                <comment>Different Boxes for diff levels</comment>
+                <event-block collapsed="1" sid="7132096169660446">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="5499182764977744" type="Collectible_Big" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3394680301061124">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7730315379379109" type="System">
+                                    <param id="0" name="Variable">CurrentWorld</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5088813066753746" type="Collectible_Big">
+                                    <param id="0" name="Animation">&quot;Level1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8203948578135465">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8918167672718021" type="System">
+                                    <param id="0" name="Variable">CurrentWorld</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4278903336570133" type="Collectible_Big">
+                                    <param id="0" name="Animation">&quot;Level2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="401211445181592">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8518311781809088" type="System">
+                                    <param id="0" name="Variable">CurrentWorld</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7642050636877704" type="Collectible_Big">
+                                    <param id="0" name="Animation">&quot;Level3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Generate gift box and rays on Boss killed and pinning rays to the box</comment>
                 <event-block sid="6161727978136984">
                     <conditions>
                         <condition id="-19" name="On destroyed" sid="1367774142389807" type="EnemyBoss" />
@@ -2261,6 +2316,7 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Celebration effect when Box is collected</comment>
                 <event-block sid="8454445115067263">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="7452535262474101" type="Froggie">
@@ -2281,8 +2337,8 @@
                         <action id="-3" name="Create object" sid="5540608568865077" type="System">
                             <param id="0" name="Object to create">Achieve_Bling</param>
                             <param id="1" name="Layer">&quot;HUD&quot;</param>
-                            <param id="2" name="X">200</param>
-                            <param id="3" name="Y">200</param>
+                            <param id="2" name="X">Froggie.X</param>
+                            <param id="3" name="Y">Froggie.Y</param>
                         </action>
                         <action id="-16" name="Wait" sid="1695335500176971" type="System">
                             <param id="0" name="Seconds">0.5</param>
@@ -2290,8 +2346,8 @@
                         <action id="-3" name="Create object" sid="3028437603725987" type="System">
                             <param id="0" name="Object to create">Achieve_Bling</param>
                             <param id="1" name="Layer">&quot;HUD&quot;</param>
-                            <param id="2" name="X">600</param>
-                            <param id="3" name="Y">400</param>
+                            <param id="2" name="X">round(random(500,600))</param>
+                            <param id="3" name="Y">round(random(300,400))</param>
                         </action>
                         <action id="-16" name="Wait" sid="6289555019496939" type="System">
                             <param id="0" name="Seconds">0.5</param>
@@ -2299,15 +2355,52 @@
                         <action id="-3" name="Create object" sid="7419524790480441" type="System">
                             <param id="0" name="Object to create">Achieve_Bling</param>
                             <param id="1" name="Layer">&quot;HUD&quot;</param>
-                            <param id="2" name="X">300</param>
-                            <param id="3" name="Y">600</param>
+                            <param id="2" name="X">round(random(250,350))</param>
+                            <param id="3" name="Y">round(random(400,600))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="8494951079525796" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="7101644754549394" type="System">
+                            <param id="0" name="Object to create">Achieve_Bling</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">round(random(400,600))</param>
+                            <param id="3" name="Y">round(random(600,800))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9865979458320962" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6133302466643843" type="System">
+                            <param id="0" name="Object to create">Achieve_Bling</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">round(random(300,500))</param>
+                            <param id="3" name="Y">round(random(500,800))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1543338411964668" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5957706193244012" type="System">
+                            <param id="0" name="Object to create">Achieve_Bling</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">round(random(200,600))</param>
+                            <param id="3" name="Y">round(random(300,600))</param>
                         </action>
                         <action id="-16" name="Wait" sid="8921360077186765" type="System">
                             <param id="0" name="Seconds">0.5</param>
                         </action>
+                        <action id="-16" name="Wait" sid="2918887953836124" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4534920265477736" type="System">
+                            <param id="0" name="Object to create">Achieve_Bling</param>
+                            <param id="1" name="Layer">&quot;HUD&quot;</param>
+                            <param id="2" name="X">round(random(600,800))</param>
+                            <param id="3" name="Y">round(random(500,600))</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="3291238495493292" type="Collectible_Big" />
                     </actions>
                 </event-block>
+                <comment>Moving the gift box downwards untill it reaches perticular position</comment>
                 <event-block sid="9302293704756264">
                     <conditions>
                         <condition id="-2" name="Compare Y" sid="4318255473128277" type="Collectible_Big">
@@ -2325,7 +2418,8 @@
         </event-group>
         <event-group collapsed="1" description="" sid="5288446578049348" title="GiftBox Effects4">
             <sub-events>
-                <event-block sid="8983301629263102">
+                <comment>Grow and shrink effect for gift rays</comment>
+                <event-block collapsed="1" sid="8983301629263102">
                     <conditions>
                         <condition id="-3" name="Is on-screen" sid="2853566264270948" type="GiftRays" />
                     </conditions>
@@ -2405,58 +2499,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="7132096169660446">
-            <conditions>
-                <condition id="-18" name="On created" sid="5499182764977744" type="Collectible_Big" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="3394680301061124">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="7730315379379109" type="System">
-                            <param id="0" name="Variable">CurrentWorld</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="5088813066753746" type="Collectible_Big">
-                            <param id="0" name="Animation">&quot;Level1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8203948578135465">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="8918167672718021" type="System">
-                            <param id="0" name="Variable">CurrentWorld</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="4278903336570133" type="Collectible_Big">
-                            <param id="0" name="Animation">&quot;Level2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="401211445181592">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="8518311781809088" type="System">
-                            <param id="0" name="Variable">CurrentWorld</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7642050636877704" type="Collectible_Big">
-                            <param id="0" name="Animation">&quot;Level3&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
     </events>
 </c2eventsheet>

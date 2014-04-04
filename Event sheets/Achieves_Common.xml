@@ -470,6 +470,10 @@
                 <condition id="-4" name="Trigger once while true" sid="2727866659550932" type="System" />
             </conditions>
             <actions>
+                <action id="4" name="Set animation" sid="3151379660366591" type="Achieve_Unlocked_Notice">
+                    <param id="0" name="Animation">&quot;Super&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action behavior="Fade" id="0" name="Restart fade" sid="7474938191933023" type="Achieve_Unlocked_Notice" />
                 <action id="-3" name="Create object" sid="6802137084962005" type="System">
                     <param id="0" name="Object to create">Multi_Blings</param>
@@ -510,15 +514,11 @@
                 <action id="-15" name="Set visible" sid="5467519698363383" type="Achieve_Unlocked_Notice">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="4" name="Set animation" sid="3151379660366591" type="Achieve_Unlocked_Notice">
-                    <param id="0" name="Animation">&quot;Super&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
             </actions>
         </event-block>
         <event-group description="" sid="404178271924051" title="Collectible-Unlocked">
             <sub-events>
-                <event-block collapsed="1" sid="8762506653956238">
+                <event-block sid="8762506653956238">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="3427554489489568" type="System">
                             <param id="0" name="First value">CurrentWorld</param>
@@ -630,7 +630,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block collapsed="1" sid="676519932464367">
+                <event-block sid="676519932464367">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="8205918041244669" type="System">
                             <param id="0" name="First value">CurrentWorld</param>

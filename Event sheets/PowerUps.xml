@@ -1415,7 +1415,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1965138098169488" title="Powerup Generation For big Bos Kill">
+        <event-group description="" sid="1965138098169488" title="Powerup Generation For big Bos Kill">
             <sub-events>
                 <event-block collapsed="1" sid="8134461955844272">
                     <conditions>
@@ -1601,6 +1601,81 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="1482273517938691">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9005056307063399" type="Froggie">
+                            <param id="0" name="Object">Enemy_OctoBOSS</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5982996516644143">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="342861336329483" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="4574233789945115" type="Froggie">
+                                    <param id="0" name="Animation">&quot;PInched&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6515784024884899">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6346951023678055" type="Froggie">
+                            <param id="0" name="Object">Enemy_ChickenBOSS</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9958965480620226">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7960165160796177" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="3596829576269985" type="Froggie">
+                                    <param id="0" name="Animation">&quot;Kicked&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4305815590253674">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8925552112179445" type="Froggie">
+                            <param id="0" name="Object">Enemy_ChimpBoss</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5259890639513749">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1566892983768746" type="Button_Attack">
+                                    <param id="0" name="Instance variable">Status</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1127030341946909" type="Froggie">
+                                    <param id="0" name="Animation">&quot;JawBreak&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group collapsed="1" description="To avoid Escaping from Boss" sid="6220285203673325" title="Limiting The PowerUps When Boss is on Screen">
@@ -1640,7 +1715,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Showing Unlocked PowerUps according to the PowerupAnimMax depending on currentworld" sid="1821045056287071" title="PowerUpAnimation">
+        <event-group collapsed="1" description="Showing Unlocked PowerUps according to the PowerupAnimMax depending on currentworld" sid="1821045056287071" title="PowerUpAnimation">
             <sub-events>
                 <event-block sid="5729629430778387">
                     <conditions>
