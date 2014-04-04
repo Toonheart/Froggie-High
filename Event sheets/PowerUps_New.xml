@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>PowerUps</name>
+    <name>PowerUps_New</name>
     <events>
         <include>Global_Var_reset</include>
         <include>SoundsCommon</include>
-        <event-group description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="1508290019819969" title="Flying Objects">
+        <event-group collapsed="1" description="Types of hallucinations the frog will have on collecting rainbow mushroom." sid="6247708730163644" title="Flying Objects2">
             <sub-events>
-                <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects ">
+                <event-group collapsed="1" description="" sid="7214016680302416" title="Unlocking the Ride objects 2">
                     <sub-events>
                         <event-block sid="4620973072520894">
                             <conditions>
@@ -534,7 +534,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5915178067748355" title="Smoke Effect For Power Used">
+        <event-group collapsed="1" description="" sid="9216460014063154" title="Smoke Effect For Power Used2">
             <sub-events>
                 <comment>Spawn a smoke on attck button when poer is used</comment>
                 <event-block sid="3586610816186233">
@@ -579,7 +579,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Gives Powers to frog" sid="5111261358297281" title="Collecting PowerUps">
+        <event-group collapsed="1" description="Gives Powers to frog" sid="32908208624394" title="Collecting PowerUps2">
             <sub-events>
                 <comment>Collecting the powerups and showing that Power on Attack button (zoom in effects to grab the atention of the player)</comment>
                 <event-block collapsed="1" sid="4013199515954371">
@@ -873,7 +873,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Adds life to frog" sid="636385349794851" title="Health">
+        <event-group collapsed="1" description="Adds life to frog" sid="7738940567478511" title="Health2">
             <sub-events>
                 <comment>Collect the health</comment>
                 <event-block sid="3148595361641771">
@@ -933,7 +933,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Counter is used to  avoid accidental activation of powertUp " sid="7828346241948737" title="Touch Time Counter For ATTACK BUTTON ">
+        <event-group collapsed="1" description="Counter is used to  avoid accidental activation of powertUp " sid="7413714796403893" title="Touch Time Counter For ATTACK BUTTON 2">
             <sub-events>
                 <event-block sid="9296060953130143">
                     <conditions>
@@ -978,7 +978,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Using Attack Button" sid="7823920697448265" title="ActivatingPowerUps">
+        <event-group collapsed="1" description="Using Attack Button" sid="9459095575824484" title="ActivatingPowerUps2">
             <sub-events>
                 <comment>Activate the available power when touching the Attack Button</comment>
                 <comment>Destroy the power at the end of touch or if the powerup time exceeds</comment>
@@ -1115,19 +1115,23 @@
                                 <condition id="1" name="On any touch end" sid="8376294315352932" type="Touch" />
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="1286397405427618" type="System">
-                                    <param id="0" name="Seconds">3</param>
+                                <action id="3" name="Start" sid="3231553311714175" type="Froggie">
+                                    <param id="0" name="From">1</param>
                                 </action>
-                                <action id="4" name="Set animation" sid="9947593511286629" type="Button_Attack">
+                                <action disabled="1" id="4" name="Set animation" sid="9947593511286629" type="Button_Attack">
                                     <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="2810322929864877" type="Button_Attack">
+                                <action disabled="1" id="-10" name="Set value" sid="2810322929864877" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="9" name="Set scale" sid="8262071525569518" type="Button_Attack">
+                                <action disabled="1" id="9" name="Set scale" sid="8262071525569518" type="Button_Attack">
                                     <param id="0" name="Scale">1</param>
+                                </action>
+                                <action disabled="1" id="-10" name="Set value" sid="2788901908841843" type="Button_Attack">
+                                    <param id="0" name="Instance variable">ScaleCount</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1170,23 +1174,6 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="3676442504184958">
-                            <conditions>
-                                <condition id="1" name="On any touch end" sid="6154651409032863" type="Touch" />
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="3" name="Start" sid="3231553311714175" type="Froggie">
-                                    <param id="0" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2788901908841843" type="Button_Attack">
-                                    <param id="0" name="Instance variable">ScaleCount</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="9" name="Set scale" sid="4938935316105978" type="Button_Attack">
-                                    <param id="0" name="Scale">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
                     </sub-events>
                 </event-block>
                 <comment>Destroying the power after Time exceeded</comment>
@@ -1214,7 +1201,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1491027187875362">
+                <event-block disabled="1" sid="1491027187875362">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="1438988589149313" type="Button_Attack">
                             <param id="0" name="Instance variable">CountDownTimer</param>
@@ -1361,9 +1348,43 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7188733174200784">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="1438224823484203" type="Froggie" />
+                        <condition id="-7" name="Compare instance variable" sid="2812620167766322" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="4084642164636586" type="Touch">
+                            <param id="0" name="Object">Button_Attack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6153378843986753" type="Button_Attack">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5741768937295263" type="Button_Attack">
+                            <param id="0" name="Instance variable">Status</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="2621869028151643" type="Button_Attack">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="154374033446086" type="Button_Attack">
+                            <param id="0" name="Instance variable">ScaleCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3808797532310325" type="Button_Attack">
+                            <param id="0" name="Instance variable">CountDownTimer</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Hitman Shoots bullets" sid="9493343708180783" title="HitMan Bullet">
+        <event-group collapsed="1" description="Hitman Shoots bullets" sid="8484777911491606" title="HitMan Bullet2">
             <sub-events>
                 <comment>When Hitman animation is playing always set the froggie not mirrored otheerwise the bullets directions changes since the imagepoints becomes mirrored</comment>
                 <event-block sid="5611418648548572">
@@ -1415,7 +1436,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1965138098169488" title="Powerup Generation For big Bos Kill">
+        <event-group description="" sid="2979810199210407" title="Powerup Generation For big Bos Kill2">
             <sub-events>
                 <event-block collapsed="1" sid="8134461955844272">
                     <conditions>
@@ -1601,24 +1622,24 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="1482273517938691">
+                <event-block sid="4285819133258865">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="9005056307063399" type="Froggie">
+                        <condition id="0" name="On collision with another object" sid="6154122836829519" type="Froggie">
                             <param id="0" name="Object">Enemy_OctoBOSS</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5982996516644143">
+                        <event-block sid="596584252503858">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="342861336329483" type="Button_Attack">
+                                <condition id="-7" name="Compare instance variable" sid="9880092995187922" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="4574233789945115" type="Froggie">
+                                <action id="4" name="Set animation" sid="7426949396374483" type="Froggie">
                                     <param id="0" name="Animation">&quot;PInched&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -1626,24 +1647,24 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="6515784024884899">
+                <event-block sid="6403559378050374">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="6346951023678055" type="Froggie">
+                        <condition id="0" name="On collision with another object" sid="3237744252809178" type="Froggie">
                             <param id="0" name="Object">Enemy_ChickenBOSS</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="9958965480620226">
+                        <event-block sid="4558574946565599">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7960165160796177" type="Button_Attack">
+                                <condition id="-7" name="Compare instance variable" sid="9712697530240432" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="3596829576269985" type="Froggie">
+                                <action id="4" name="Set animation" sid="924838355539275" type="Froggie">
                                     <param id="0" name="Animation">&quot;Kicked&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -1651,24 +1672,24 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4305815590253674">
+                <event-block sid="4248265416038674">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="8925552112179445" type="Froggie">
+                        <condition id="0" name="On collision with another object" sid="5370436045688227" type="Froggie">
                             <param id="0" name="Object">Enemy_ChimpBoss</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5259890639513749">
+                        <event-block sid="6354714538799826">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1566892983768746" type="Button_Attack">
+                                <condition id="-7" name="Compare instance variable" sid="7089025113286009" type="Button_Attack">
                                     <param id="0" name="Instance variable">Status</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="1127030341946909" type="Froggie">
+                                <action id="4" name="Set animation" sid="516431171701873" type="Froggie">
                                     <param id="0" name="Animation">&quot;JawBreak&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -1678,7 +1699,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="To avoid Escaping from Boss" sid="6220285203673325" title="Limiting The PowerUps When Boss is on Screen">
+        <event-group collapsed="1" description="To avoid Escaping from Boss" sid="128544982391254" title="Limiting The PowerUps When Boss is on Screen2">
             <sub-events>
                 <comment>When Animselector set foor shoe,and sage just reset it</comment>
                 <event-block sid="6864937864410401">
@@ -1715,7 +1736,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="Showing Unlocked PowerUps according to the PowerupAnimMax depending on currentworld" sid="1821045056287071" title="PowerUpAnimation">
+        <event-group collapsed="1" description="Showing Unlocked PowerUps according to the PowerupAnimMax depending on currentworld" sid="2238083533476069" title="PowerUpAnimation2">
             <sub-events>
                 <event-block sid="5729629430778387">
                     <conditions>
