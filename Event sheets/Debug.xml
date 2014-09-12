@@ -4,7 +4,7 @@
     <name>Debug</name>
     <events>
         <comment>DISABLED - to see art without debug. -Krish. 8 nov 2013. 0132am</comment>
-        <event-block collapsed="1" sid="7029130876728904">
+        <event-block sid="7029130876728904">
             <conditions>
                 <condition id="-1" name="Every tick" sid="9057920913956612" type="System" />
             </conditions>
@@ -12,28 +12,28 @@
                 <action disabled="1" id="0" name="Set text" sid="6807646680044225" type="Text_Debug">
                     <param id="0" name="Text">&quot;ActiveWorld&quot;&amp;ActiveWorld</param>
                 </action>
-                <action id="0" name="Set text" sid="429350303701982" type="Text_Debug">
+                <action disabled="1" id="0" name="Set text" sid="429350303701982" type="Text_Debug">
                     <param id="0" name="Text">&quot;DEBUG BUILD-270314&quot;</param>
                 </action>
-                <action id="1" name="Append text" sid="9397513936803637" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="9397513936803637" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;HEALTH : Unlimited&quot;</param>
                 </action>
-                <action id="1" name="Append text" sid="2208067646544389" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="2208067646544389" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;WARNING : This build doesn&apos;t contain all sound effects  &quot; </param>
                 </action>
-                <action id="1" name="Append text" sid="8002087447422118" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="8002087447422118" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;FPS  : &quot; &amp; fps&amp;newline &amp; &quot;RENDER : &quot; &amp; renderer  </param>
                 </action>
-                <action id="1" name="Append text" sid="3107651310070959" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="3107651310070959" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;Platform Count - &quot; &amp;Counter_Floor</param>
                 </action>
-                <action id="1" name="Append text" sid="9009424481059994" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="9009424481059994" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;World Section - &quot;&amp;WorldSection</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="2240138636657657" type="Text_Debug">
                     <param id="0" name="Text"> newline &amp;&quot;Music : &quot;&amp;MusicTogle</param>
                 </action>
-                <action id="1" name="Append text" sid="68665449264838" type="Text_Debug">
+                <action disabled="1" id="1" name="Append text" sid="68665449264838" type="Text_Debug">
                     <param id="0" name="Text">newline&amp;&quot;power - &quot; &amp;Froggie.PowerUpCollected</param>
                 </action>
                 <action disabled="1" id="1" name="Append text" sid="1873892544537227" type="Text_Debug">
@@ -64,11 +64,15 @@
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">3</param>
                 </action>
+                <action id="0" name="Set text" sid="7431006517635455" type="Text_Debug">
+                    <param id="0" name="Text">&quot;Counter Floor &quot; &amp; Counter_Floor&#x0D;&#x0A;&amp; newline &amp;&#x0D;&#x0A;&quot;World Section &quot; &amp; WorldSection</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="5341037647722931">
                     <conditions>
                         <condition id="2" name="Is pause" sid="1361205577830358" type="Pause" />
+                        <condition id="-4" name="Trigger once while true" sid="3009442160618756" type="System" />
                     </conditions>
                     <actions>
                         <action id="1" name="Append text" sid="5014803770893823" type="Text_Debug">

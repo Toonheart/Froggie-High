@@ -2,13 +2,13 @@
 <c2project>
     <name>Baka</name>
     <description>A froggie under effects of Esctasy!</description>
-    <version>1.0.2</version>
+    <version>0.5.1</version>
     <author>Toonheart Studios</author>
     <author-email>krish@toonheart.com</author-email>
     <author-website>www.toonheart.com</author-website>
     <app-id>com.toonheart.baka</app-id>
     <unique-id>14fir0wto7bt4</unique-id>
-    <saved-with-version>16300</saved-with-version>
+    <saved-with-version>17800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -24,7 +24,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
         <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
-        <plugin author="Scirra/Intel" id="appMobi" version="1">Intel XDK</plugin>
+        <plugin author="Scirra/Intel" id="appMobi" version="1">Intel AGI</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -46,6 +46,7 @@
         <height>1280</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
     <first-layout>SplashScreen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -779,14 +780,38 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="4716961432569534" speed="5">
-                    <frame duration="1" hotspotX="0.527344" hotspotY="0.675781">
+                <animation framecount="3" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="4716961432569534" speed="5">
+                    <frame duration="1" hotspotX="0.527344" hotspotY="0.675781" original-source="C:\Users\krish\Dropbox\Toonheart-Backups\Github-Art-Backups-n-Syncs\Art-Froggie-High\dev-art\PNG_SPRITE_EXPORTS\Worlds\Octopus-World\enemies\SPIKE OCTOPUS\SPIKES_OUT.png">
                         <collision-poly>
                             <point x="0.113281" y="0.226563" />
                             <point x="0.503906" y="0" />
                             <point x="0.914062" y="0.207032" />
                             <point x="0.898437" y="0.777344" />
                             <point x="0.0937502" y="0.730469" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.527344" hotspotY="0.675781" original-source="C:\Users\krish\Dropbox\Toonheart-Backups\Github-Art-Backups-n-Syncs\Art-Froggie-High\dev-art\PNG_SPRITE_EXPORTS\Worlds\Octopus-World\enemies\SPIKE OCTOPUS\SPIKY_1.png">
+                        <collision-poly>
+                            <point x="0.214844" y="0.214844" />
+                            <point x="0.5" y="0.109375" />
+                            <point x="0.785156" y="0.214844" />
+                            <point x="0.695313" y="0.5" />
+                            <point x="0.707031" y="0.707031" />
+                            <point x="0.5" y="0.824219" />
+                            <point x="0.261719" y="0.738281" />
+                            <point x="0.328125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.527344" hotspotY="0.675781" original-source="C:\Users\krish\Dropbox\Toonheart-Backups\Github-Art-Backups-n-Syncs\Art-Froggie-High\dev-art\PNG_SPRITE_EXPORTS\Worlds\Octopus-World\enemies\SPIKE OCTOPUS\SPIKY_2.png">
+                        <collision-poly>
+                            <point x="0.214844" y="0.214844" />
+                            <point x="0.5" y="0.109375" />
+                            <point x="0.785156" y="0.214844" />
+                            <point x="0.695313" y="0.5" />
+                            <point x="0.707031" y="0.707031" />
+                            <point x="0.5" y="0.824219" />
+                            <point x="0.261719" y="0.738281" />
+                            <point x="0.328125" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

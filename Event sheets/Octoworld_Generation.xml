@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Octoworld_Generation</name>
     <events>
-        <event-group description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="7131796227467265" title="Initializing Global Variables">
+        <event-group collapsed="1" description="Every time Loading the layout intialize the required GlobalVar&apos;s to default instead of setting all Globalvariables Defult" sid="7131796227467265" title="Initializing Global Variables">
             <sub-events>
                 <event-block sid="4294993057486781">
                     <conditions>
@@ -36,7 +36,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3631647608001766" title="Initializing WebStorage">
+        <event-group collapsed="1" description="" sid="3631647608001766" title="Initializing WebStorage">
             <sub-events>
                 <comment>Creat aLocal storage for HighScore if doesn&apos;t Exist</comment>
                 <event-block sid="1047586958962689">
@@ -54,7 +54,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
+        <event-group collapsed="1" description="Includes generation of all the objects in world" sid="8538807415756991" title="Generation MainLoop">
             <sub-events>
                 <comment>If the player is above the scroll position, scroll up to the player&apos;s position.</comment>
                 <event-block sid="7564923252496036">
@@ -82,7 +82,7 @@
                                 <condition id="-14" name="Compare variable" sid="7048107559489026" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -1151,7 +1151,7 @@
                                 <condition id="-14" name="Compare variable" sid="2772437121814374" type="System">
                                     <param id="0" name="Variable">WorldSection</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">6</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="6284013719495923" type="System">
                                     <param id="0" name="Variable">Counter_Floor</param>
@@ -1328,7 +1328,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
+        <event-group collapsed="1" description="" sid="7492026295239491" title="BIG CANDY LETTER SET">
             <sub-events>
                 <comment>Same as generating collectibles during normal gameplay but with changes to make it the SET CHARACTER COLLECTIBLE at end of Game.&#x0D;&#x0A;&#x0D;&#x0A;When  viewport reaches the nextfloorposition and if worldsection is the last, then create floors to left and right of the screen.&#x0D;&#x0A;Then generate the LETTER COLLECTIBLE SET.</comment>
                 <comment>Generating markers for Letter colletible Base</comment>
@@ -1605,7 +1605,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
+        <event-group collapsed="1" description="" sid="7651385845533402" title="NORMALFLOOR - Mirror/Unmirror">
             <sub-events>
                 <event-block sid="5971783001723428">
                     <conditions>
@@ -1634,7 +1634,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Updating world section by Resetting Platformcount" sid="1676578469343007" title="Updating Difficulty">
+        <event-group collapsed="1" description="Updating world section by Resetting Platformcount" sid="1676578469343007" title="Updating Difficulty">
             <sub-events>
                 <comment>Updating world section by Resetting Platformcount.&#x0D;&#x0A;Each Worldsection consists of 101 Floors counting from 0 to 100.</comment>
                 <event-block sid="3975665409276431">
@@ -1642,7 +1642,7 @@
                         <condition id="-14" name="Compare variable" sid="5075097462277805" type="System">
                             <param id="0" name="Variable">Counter_Floor</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">100</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1658,7 +1658,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6635586928221191" title="CANDY - Animation">
+        <event-group collapsed="1" description="" sid="6635586928221191" title="CANDY - Animation">
             <sub-events>
                 <comment>Unlocking NEW candies for every 30 Floors</comment>
                 <event-block sid="1720099121757819">
@@ -1946,7 +1946,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Randomly toggle visibility of placed objects at th start of the layout" sid="7794641183810189" title="Background Randomization">
+        <event-group collapsed="1" description="Randomly toggle visibility of placed objects at th start of the layout" sid="7794641183810189" title="Background Randomization">
             <sub-events>
                 <comment>At the start of the layout randomly set the visibility status variable to random 0/1.If it is 0 set invissible or if 1 visible.</comment>
                 <event-block sid="9818632824397123">
@@ -1957,7 +1957,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="Movement pattern of boss " disabled="1" sid="6372788852379151" title="BIGBOSS - Movement">
+        <event-group collapsed="1" description="Movement pattern of boss " disabled="1" sid="6372788852379151" title="BIGBOSS - Movement">
             <sub-events>
                 <comment>Moves in a traingle pattern</comment>
                 <event-block disabled="1" sid="117933790335297">
